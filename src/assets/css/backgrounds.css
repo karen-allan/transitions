@@ -1,0 +1,329 @@
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    .topic-left h1, .topic-left h2, .topic-left h3 {
+        font-size: var(--topic-banana-port-font-size);
+    }
+
+    .content-quote p, .content-quote span {
+        font-size:var(--quote-banana-mobile-port-font-size);
+    }
+
+    .energy-tip p {
+        font-size:var(--copy-banana-mobile-port-font-size);
+        padding:2em;
+    }
+
+    .content-videos {
+        height:var(--content-videos-banana-mobile-port-height);
+    }
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    .topic-left h1, .topic-left h2, .topic-left h3 {
+        font-size: var(--topic-banana-land-font-size);
+    }
+
+    .content-quote p, .content-quote span {
+        font-size:var(--quote-banana-mobile-land-font-size);
+    }
+
+    .energy-tip p {
+        font-size:var(--copy-banana-mobile-land-font-size);
+    }
+
+    .content-videos {
+        height:var(--content-videos-banana-mobile-land-height);
+    }
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    .topic-left h1, .topic-left h2, .topic-left h3 {
+        font-size: var(--topic-mobile-port-font-size);
+    }
+
+    .content-quote p, .content-quote span {
+        font-size:var(--quote-banana-mobile-port-font-size);
+    }
+
+    .energy-tip p {
+        font-size:var(--copy-banana-mobile-port-font-size);
+    }
+
+    .content-videos {
+        height:var(--content-videos-banana-mobile-port-height);
+    }
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    .topic-left h1, .topic-left h2, .topic-left h3 {
+        font-size: var(--topic-mobile-land-font-size);
+    }
+
+    .content-quote p, .content-quote span {
+        font-size:var(--quote-banana-mobile-land-font-size);
+    }
+
+    .energy-tip p {
+        font-size:var(--copy-banana-mobile-land-font-size);
+    }
+
+    .content-videos {
+        height:var(--content-videos-banana-mobile-land-height);
+    }
+
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    .topic-left h1, .topic-left h2, .topic-left h3 {
+        font-size: var(--topic-tablet-port-font-size);
+    }
+
+    .content-quote p, .content-quote span {
+        font-size:var(--quote-tablet-ipad-port-font-size);
+    }
+
+    .energy-tip p {
+        font-size:var(--copy-tablet-ipad-port-font-size);
+    }
+
+    .content-videos {
+        height:var(--content-videos-tablet-ipad-port-height);
+    }
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    .topic-left h1, .topic-left h2, .topic-left h3 {
+        font-size: var(--topic-tablet-land-font-size);
+    }
+
+    .content-quote p, .content-quote span {
+        font-size:var(--quote-tablet-ipad-land-font-size);
+    }
+
+    .energy-tip p {
+        font-size:var(--copy-tablet-ipad-land-font-size);
+    }
+
+    .content-videos {
+        height:var(--content-videos-tablet-ipad-land-height);
+    }
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    .topic-left h1, .topic-left h2, .topic-left h3 {
+        font-size: var(--topic-ipad-port-font-size);
+    }
+
+    .content-quote p, .content-quote span {
+        font-size:var(--quote-tablet-ipad-port-font-size);
+    }
+
+    .energy-tip p {
+        font-size:var(--copy-tablet-ipad-port-font-size);
+    }
+
+    .content-videos {
+        height:var(--content-videos-tablet-ipad-port-height);
+    }
+
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    .topic-left h1, .topic-left h2, .topic-left h3 {
+        font-size: var(--topic-ipad-land-font-size);
+    }
+
+    .content-quote p, .content-quote span {
+        font-size:var(--quote-tablet-ipad-land-font-size);
+    }
+
+    .energy-tip p {
+        font-size:var(--copy-tablet-ipad-land-font-size);
+    }
+
+    .content-videos {
+        height:var(--content-videos-tablet-ipad-land-height);
+    }
+
+}
+
+/* LAPTOPS *****************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width: 1919px) {
+
+    .topic-left h1, .topic-left h2, .topic-left h3 {
+        font-size: var(--topic-laptop-font-size);
+    }
+
+    .content-quote p, .content-quote span {
+        font-size:var(--quote-laptop-desktop-font-size);
+    }
+
+    .energy-tip p {
+        font-size:var(--copy-laptop-desktop-font-size);
+    }
+
+    .content-videos {
+        height:var(--content-videos-laptop-desktop-height);
+    }
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    .topic-block {
+        margin-top:1em;
+        margin-bottom:1em;
+    }
+
+    .topic-left h1, .topic-left h2, .topic-left h3 {
+        font-size: var(--topic-desktop-font-size);
+    }
+
+    .content-quote p, .content-quote span {
+        font-size:var(--quote-laptop-desktop-font-size);
+    }
+
+    .energy-tip p {
+        font-size:var(--copy-laptop-desktop-font-size);
+    }
+
+    .content-videos {
+        height:var(--content-videos-laptop-desktop-height);
+    }
+
+}
+
+/* GLOBAL ****************************************************************************************************/
+@media only screen {
+
+    .topic-block {
+        display:inline-grid;
+        grid-template-columns: 74% 26%;
+        width:100%;
+        max-width:1152px;
+        background-color: var(--color-darkest-purple);
+    }
+
+    .topic-left {
+        display:grid;
+        width:100%;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .topic-left h1, .topic-left h2, .topic-left h3 {
+        display:grid;
+        font-family: Monument-Valley;
+        color:var(--color-off-white);
+    }
+
+    .topic-right {
+        display:grid;
+        width:100%;
+        align-content: center;
+        justify-content: flex-end;
+        border-right:1px solid var(--color-darkest-purple);
+        border-top:1px solid var(--color-darkest-purple);
+        border-bottom:1px solid var(--color-darkest-purple);
+    }
+
+    .topic-right img {
+        max-width:100%;
+        height:auto;
+    }
+
+    /* QUOTES INSIDE CONTENT (as opposed to Headings quotes*/
+    .content-quote {
+        max-width:1152px;
+        display:grid;
+        float:left;
+        margin:1em auto;
+        align-content: center;
+        justify-content: center;
+        font-family: var(--family-script);
+        color:var(--color-dark-grey);
+    }
+
+    .content-quote p, .content-quote span {
+        display: inline-grid;
+    }
+
+    .content-quote p  {
+        font-weight: var(--quote-weight);
+        text-align:left;
+        line-height:var(--quote-p-line-height);
+    }
+
+    .content-quote span {
+        text-align:right;
+        line-height:var(--quote-span-line-height);
+    }
+
+    /* ENERGY TIPS */
+    .energy-tip {
+        display:grid;
+        max-width:1152px;
+        margin:1em auto;
+        background-color:var(--color-dark-blue);
+        align-content: center;
+        justify-content: center;
+        border-radius:20px;
+        border:thin solid gold;
+    }
+
+    .energy-tip p {
+        color:white;
+        padding:2em;
+        font-family: var(--family-data);
+        line-height: var(--copy-line-height);
+    }
+
+
+}
+

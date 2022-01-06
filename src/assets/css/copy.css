@@ -1,0 +1,298 @@
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    .headings-dark h1, .headings-clear h1, .headings-light h1 {
+        font-size: var(--h1-banana-mobile-port-font-size);
+    }
+
+    .headings-dark h2, .headings-clear h2, .headings-light h2 {
+        font-size: var(--h2-banana-mobile-port-font-size);
+    }
+
+    .headings-dark h3, .headings-clear h3, .headings-light h3  {
+        font-size: var(--h3-banana-mobile-port-font-size);
+    }
+
+    .text-dark, .text-light, .text-clear, .answers, .questions {
+        font-size: var(--copy-banana-mobile-port-font-size);
+    }
+
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    .headings-dark h1, .headings-clear h1, .headings-light h1 {
+        font-size: var(--h1-banana-mobile-land-font-size);
+    }
+
+    .headings-dark h2, .headings-clear h2, .headings-light h2 {
+        font-size: var(--h2-banana-mobile-land-font-size);
+    }
+
+    .headings-dark h3, .headings-clear h3, .headings-light h3  {
+        font-size: var(--h3-banana-mobile-land-font-size);
+    }
+
+    .text-dark, .text-light, .text-clear, .answers, .questions {
+        font-size: var(--copy-banana-mobile-land-font-size);
+    }
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    .headings-dark h1, .headings-clear h1, .headings-light h1 {
+        font-size: var(--h1-banana-mobile-port-font-size);
+    }
+
+    .headings-dark h2, .headings-clear h2, .headings-light h2 {
+        font-size: var(--h2-banana-mobile-port-font-size);
+    }
+
+    .headings-dark h3, .headings-clear h3, .headings-light h3  {
+        font-size: var(--h3-banana-mobile-port-font-size);
+    }
+
+    .text-dark, .text-light, .text-clear, .answers, .questions {
+        font-size: var(--copy-banana-mobile-port-font-size);
+    }
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    .headings-dark h1, .headings-clear h1, .headings-light h1 {
+        font-size: var(--h1-banana-mobile-land-font-size);
+    }
+
+    .headings-dark h2, .headings-clear h2, .headings-light h2 {
+        font-size: var(--h2-banana-mobile-land-font-size);
+    }
+
+    .headings-dark h3, .headings-clear h3, .headings-light h3  {
+        font-size: var(--h3-banana-mobile-land-font-size);
+    }
+
+    .text-dark, .text-light, .text-clear, .answers, .questions {
+        font-size: var(--copy-banana-mobile-land-font-size);
+    }
+}
+
+/* TABLETS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    .headings-dark h1, .headings-clear h1, .headings-light h1 {
+        font-size: var(--h1-tablet-ipad-port-font-size);
+    }
+
+    .headings-dark h2, .headings-clear h2, .headings-light h2 {
+        font-size: var(--h2-tablet-ipad-port-font-size);
+    }
+
+    .headings-dark h3, .headings-clear h3, .headings-light h3  {
+        font-size: var(--h3-tablet-ipad-port-font-size);
+    }
+
+    .text-dark, .text-light, .text-clear, .answers, .questions {
+        font-size: var(--copy-tablet-ipad-port-font-size);
+    }
+}
+
+/* TABLETS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    .headings-dark h1, .headings-clear h1, .headings-light h1 {
+        font-size: var(--h1-tablet-ipad-land-font-size);
+    }
+
+    .headings-dark h2, .headings-clear h2, .headings-light h2 {
+        font-size: var(--h2-tablet-ipad-land-font-size);
+    }
+
+    .headings-dark h3, .headings-clear h3, .headings-light h3  {
+        font-size: var(--h3-tablet-ipad-land-font-size);
+    }
+
+    .text-dark, .text-light, .text-clear, .answers, .questions {
+        font-size: var(--copy-tablet-ipad-land-font-size);
+    }
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    .headings-dark h1, .headings-clear h1, .headings-light h1 {
+        font-size: var(--h1-tablet-ipad-port-font-size);
+    }
+
+    .headings-dark h2, .headings-clear h2, .headings-light h2 {
+        font-size: var(--h2-tablet-ipad-port-font-size);
+    }
+
+    .headings-dark h3, .headings-clear h3, .headings-light h3  {
+        font-size: var(--h3-tablet-ipad-port-font-size);
+    }
+
+    .text-dark, .text-light, .text-clear, .answers, .questions {
+        font-size: var(--copy-tablet-ipad-port-font-size);
+    }
+
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    .headings-dark h1, .headings-clear h1, .headings-light h1 {
+        font-size: var(--h1-tablet-ipad-land-font-size);
+    }
+
+    .headings-dark h2, .headings-clear h2, .headings-light h2 {
+        font-size: var(--h2-tablet-ipad-land-font-size);
+    }
+
+    .headings-dark h3, .headings-clear h3, .headings-light h3  {
+        font-size: var(--h3-tablet-ipad-land-font-size);
+    }
+
+    .text-dark, .text-light, .text-clear. .answers, .questions {
+        font-size: var(--copy-tablet-ipad-land-font-size);
+    }
+
+}
+
+/* LAPTOPS *****************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width: 1919px) {
+
+    .headings-dark h1, .headings-clear h1, .headings-light h1 {
+        font-size: var(--h1-laptop-desktop-font-size);
+    }
+
+    .headings-dark h2, .headings-clear h2, .headings-light h2 {
+        font-size: var(--h2-laptop-desktop-font-size);
+    }
+
+    .headings-dark h3, .headings-clear h3, .headings-light h3  {
+        font-size: var(--h3-laptop-desktop-font-size);
+    }
+
+    .text-dark, .text-light, .text-clear, .answers, .questions {
+        font-size: var(--copy-laptop-desktop-font-size);
+    }
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    .headings-dark h1, .headings-clear h1, .headings-light h1 {
+        font-size: var(--h1-laptop-desktop-font-size);
+    }
+
+    .headings-dark h2, .headings-clear h2, .headings-light h2 {
+        font-size: var(--h2-laptop-desktop-font-size);
+    }
+
+    .headings-dark h3, .headings-clear h3, .headings-light h3  {
+        font-size: var(--h3-laptop-desktop-font-size);
+    }
+
+    .text-dark, .text-light, .text-clear. .answers, .questions {
+        font-size: var(--copy-laptop-desktop-font-size);
+    }
+
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .text-dark, .text-light, .text-clear,  .headings-dark, .headings-light, .headings-clear, .answers, .questions  {
+        display: block;
+        width:100%;
+        font-family: "Whitney SSm A", "Whitney SSm B", Arial, sans-serif;
+    }
+
+    .text-dark, .text-light, .text-clear,  .headings-dark, .headings-light, .headings-clear {
+        max-width:800px;
+        margin:.5em auto;
+    }
+
+    .questions  {
+        max-width: 600px;
+        margin:2em auto;
+    }
+
+    .answers  {
+        max-width: 600px;
+        margin:2em auto;
+    }
+
+    .headings, .headings-dark, .headings-light, .headings-clear {
+        margin:.5em auto;
+        font-weight: 700;
+    }
+
+    .headings-dark h1, .headings-clear h1, .headings-light h1 {
+        text-align:center;
+    }
+
+    .headings-dark h2, .headings-clear h2, .headings-light h2,
+    .headings-dark h3, .headings-clear h3, .headings-light h3 {
+        text-align: left;
+    }
+
+    .text-dark, .text-light, .text-clear, .answers {
+       line-height:var(--copy-line-height);
+       text-align: justify;
+    }
+
+    .questions {
+        font-style: italic;
+        font-weight:600;
+    }
+
+    .headings-dark, .text-dark, .text-dark a, .answers, .questions  {
+        color: var(--copy-color-dark);
+        background-color: white;
+    }
+
+    .headings-light, .text-light, .text-light a  {
+        color: var(--copy-color-light);
+    }
+
+    .text-dark img, .text-clear img, .text-light img {
+        max-width:100%;
+        height:auto;
+    }
+
+
+}

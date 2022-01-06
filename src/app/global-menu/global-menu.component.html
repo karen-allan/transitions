@@ -1,0 +1,88 @@
+<div id="headers">
+    <div class="header-large">
+        <div class="slogan"></div>
+        <div class="menu-large">
+            <div class="menu-items-large">
+                <div *ngFor="let menuItem of menuItems">
+                    <div *ngIf="menuItemId==menuItem.id">
+                        <div *ngIf="menuItemId==1">
+                            <div class="selectedItem">{{menuItem.title}}</div>
+                        </div>
+                        <div *ngIf="menuItemId > 1">
+                            <div class="selectedItem"><a routerLink='/{{menuItem.url}}'>{{menuItem.title}}</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="menuItemId!=menuItem.id">
+                        <div class="unselectedItem"><a routerLink='/{{menuItem.url}}'>{{menuItem.title}}</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-global-sub-menu [menuItemId]="menuItemId" [subMenuItemId]="subMenuItemId"></app-global-sub-menu>
+</div>
+
+<div class="header-mobile">
+    <div class="slogan"></div>
+    <div class="smart-menu">
+        <div class="mobile-menu">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger">
+                <div></div>
+            </div>
+            <div class="burst-menu">
+                <div>
+                    <div>
+                        <ul>
+                            <li *ngFor="let menuItem of menuItems">
+                                <ng-container
+                                    *ngIf="menuItem.children && menuItem.children.length > 0">
+                                    <ng-container *ngIf="menuItemId==menuItem.id">
+                                        <div class="selectedItem">{{menuItem.title}}&nbsp;&#9660;</div>
+                                    </ng-container>
+
+                                    <ng-container *ngIf="menuItemId!=menuItem.id">
+                                        <div class="unselectedItem"><a
+                                            routerLink='/{{menuItem.url}}'>{{menuItem.title}}&nbsp;&#9660;</a>
+                                        </div>
+                                    </ng-container>
+
+                                    <div class="submenu-auto-content">
+                                        <ng-container
+                                            *ngFor="let childItem of menuItem.children">
+                                            <ng-container
+                                                *ngIf="menuItemId==childItem.id">
+                                                <div class="selectedChild">{{childItem.title}}</div>
+                                            </ng-container>
+                                            <ng-container
+                                                *ngIf="menuItemId!=childItem.id">
+                                                <div class="unselectedChild">
+                                                    <a
+                                                        routerLink='/{{childItem.url}}'>{{childItem.title}}</a>
+                                                </div>
+                                            </ng-container>
+                                        </ng-container>
+                                    </div>
+                                </ng-container>
+
+                                <ng-container
+                                    *ngIf="!menuItem.children || menuItem.children.length == 0">
+                                    <ng-container *ngIf="menuItemId==menuItem.id">
+                                        <div class="selectedItem">{{menuItem.title}}</div>
+                                    </ng-container>
+                                    <ng-container *ngIf="menuItemId!=menuItem.id">
+                                        <div class="unselectedItem"><a
+                                            routerLink='/{{menuItem.url}}'>{{menuItem.title}}</a>
+                                        </div>
+                                    </ng-container>
+                                </ng-container>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

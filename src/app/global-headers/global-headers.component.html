@@ -1,0 +1,404 @@
+
+<div id="headers">
+  <!--    HOME   -->
+  <ng-container *ngIf="detailHeaderName === 'header-home'">
+    <div class="top-heading-home"> </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;The special theory of relativity states that mass and energy are
+        just different manifestations of the same thing.&#8220;
+      </p>
+
+      <span>Albert Einstein</span>
+
+      <div class="quote-end">
+        <img src="assets/images/backgrounds/quoteImage.jpg" alt="quote" title="quote">
+      </div>
+    </div>
+  </ng-container>
+
+  <!--    ABOUT   -->
+  <ng-container *ngIf="detailHeaderName === 'header-about'">
+    <div class="top-heading-details about">
+      <span class="vertical-heading">about<br>my<br>path</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;Don’t listen to the person who has the answers; listen to the person who has the questions.&#8220;
+      </p>
+
+      <span>Albert Einstein</span>
+    </div>
+  </ng-container>
+
+  <!--  SELF HELP   -->
+  <ng-container *ngIf="detailHeaderName === 'header-learn'">
+    <div class="top-heading-details self-help">
+      <span class="vertical-heading">help<br>your<br>self</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;The day science begins to study non-physical phenomena, it will make more progress in one decade than in all previous centuries.&#8220;
+      </p>
+
+      <span>Nicholas Tesla</span>
+    </div>
+  </ng-container>
+
+  <!-- SUB MENUS -->
+
+  <!--ABOUT ENERGY MEDICINE -->
+  <ng-container *ngIf="detailHeaderName === 'header-about-energy-medicine'">
+    <div class="top-heading-details help-anxiety">
+      <span class="vertical-heading">about<br>my<br>energy<br>journey</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;The nearer a man/woman comes to a calm mind, the closer he/she is to strength.&#8220;
+      </p>
+
+      <span>Marcus Aurelius</span>
+    </div>
+  </ng-container>
+
+  <!--ABOUT END OF LIFE DOULA CARE -->
+  <ng-container *ngIf="detailHeaderName === 'header-about-eol-doula-care'">
+    <div class="top-heading-details help-anxiety">
+      <span class="vertical-heading">about<br>end of<br>life<br>doula<br>care</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;The nearer a man/woman comes to a calm mind, the closer he/she is to strength.&#8220;
+      </p>
+
+      <span>Marcus Aurelius</span>
+    </div>
+  </ng-container>
+
+  <!--HELP WITH ANXIETY -->
+  <ng-container *ngIf="detailHeaderName === 'header-help-anxiety'">
+    <div class="top-heading-details help-anxiety">
+      <span class="vertical-heading">lower<br>your<br>anxiety</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;The nearer a man/woman comes to a calm mind, the closer he/she is to strength.&#8220;
+      </p>
+
+      <span>Marcus Aurelius</span>
+    </div>
+  </ng-container>
+
+  <!--HELP WITH BURNOUT -->
+  <ng-container *ngIf="detailHeaderName === 'header-help-burnout'">
+    <div class="top-heading-details help-burnout">
+      <span class="vertical-heading">prevent<br>adrenal<br>burnout</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;The spirit awakens, the soul revives.&#8220;
+      </p>
+
+      <span>Lailah Gifty Akita</span>
+    </div>
+  </ng-container>
+
+  <!--HELP WITH COLDS -->
+  <ng-container *ngIf="detailHeaderName === 'header-help-colds'">
+    <div class="top-heading-details help-cold">
+      <span class="vertical-heading">relieve<br>your<br>cold</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;Natural forces within us are the true healers of disease.&#8220;
+      </p>
+
+      <span>Socrates</span>
+    </div>
+  </ng-container>
+
+  <!--HELP WITH DENTAL -->
+  <ng-container *ngIf="detailHeaderName === 'header-help-dental'">
+    <div class="top-heading-details help-teeth">
+      <span class="vertical-heading">jaw and<br>dental<br>help</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>&#8220;
+        Be true to your teeth and they won't be false to you.&#8220;
+      </p>
+
+      <span>Soupy Sales</span>
+    </div>
+  </ng-container>
+
+  <!--HELP WITH DIGESTION -->
+  <ng-container *ngIf="detailHeaderName === 'header-help-digestion'">
+    <div class="top-heading-details help-digestion">
+      <span class="vertical-heading">help<br>digest<br>better</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;A good digestion turneth all to health.&#8220;
+      </p>
+
+      <span>George Herbert</span>
+    </div>
+  </ng-container>
+
+
+  <!--HELP WITH FERTILITY -->
+  <ng-container *ngIf="detailHeaderName === 'header-help-fertility'">
+    <div class="top-heading-details help-fertility">
+      <span class="vertical-heading">prepare<br>for<br>fertility</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;With the new day comes new strengths and new thoughts.&#8220;
+      </p>
+
+      <span>Eleanor Roosevelt</span>
+    </div>
+  </ng-container>
+
+  <!--HELP WITH HEADACHE -->
+  <ng-container *ngIf="detailHeaderName === 'header-help-headaches'">
+    <div class="top-heading-details help-headaches">
+      <span class="vertical-heading">relieve<br>your<br>headache</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;The first Practitioner of Energy Medicine is you.&#8220;
+      </p>
+
+      <span>Donna Eden</span>
+    </div>
+  </ng-container>
+
+  <!--HELP WITH JETLAG     -->
+  <ng-container *ngIf="detailHeaderName === 'header-help-jet-lag'">
+    <div class="top-heading-details help-jetlag">
+      <span class="vertical-heading">prevent<br>jet-lag</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;Still round the corner, there may wait, a new road or a secret gate.&#8220;
+      </p>
+
+      <span>J.R.R. Tolkien</span>
+    </div>
+  </ng-container>
+
+  <!--HELP WITH MENOPAUSE     -->
+  <ng-container *ngIf="detailHeaderName === 'header-help-menopause'">
+    <div class="top-heading-details help-menopause">
+      <span class="vertical-heading">help<br>for<br>changes</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;Where a wise woman is not valued, wisdom is lost.&#8220;
+      </p>
+
+      <span>Gift Gugu Mona</span>
+    </div>
+  </ng-container>
+
+  <!--HELP WITH PAIN     -->
+  <ng-container *ngIf="detailHeaderName === 'header-help-pain'">
+    <div class="top-heading-details help-pain">
+      <span class="vertical-heading">reduce<br>your<br>pain</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;The pain will leave you once it has finished teaching you.&#8220;
+      </p>
+
+      <span>Pavana</span>
+    </div>
+  </ng-container>
+
+  <!--HELP WITH PROTECTION     -->
+  <ng-container *ngIf="detailHeaderName === 'header-help-protect-self'">
+    <div class="top-heading-details help-protect">
+      <span class="vertical-heading">protect<br>your<br>aura</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;And the Aura of you remains, remains, remains...&#8220;
+      </p>
+
+      <span>Anne Sexton</span>
+    </div>
+  </ng-container>
+
+  <!--HELP WITH VISION     -->
+  <ng-container *ngIf="detailHeaderName === 'header-help-vision'">
+    <div class="top-heading-details help-vision">
+      <span class="vertical-heading">improve<br>your<br>vision</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;The voyage of discovery is not in seeking new landscapes but in having new eyes.&#8220;
+      </p>
+
+      <span>Marcel Proust</span>
+    </div>
+  </ng-container>
+
+  <!-- DISCOVER -->
+  <ng-container *ngIf="detailHeaderName === 'header-discover'">
+    <div class="top-heading-details discover">
+      <span class="vertical-heading">learn<br>about<br>energy</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;The more you worry, the more you throw off the delicate balance of hormones required for health.&#8220;
+      </p>
+
+      <span>Andrew J Bernstein</span>
+    </div>
+  </ng-container>
+
+  <!--DISCOVER THE DER  -->
+  <ng-container *ngIf="detailHeaderName === 'header-discover-der'">
+    <div class="top-heading-details discoverDER">
+      <span class="vertical-heading">energy<br>exercises</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;Life begins at the end of your comfort zone.&#8220;
+      </p>
+
+      <span>Unknown</span>
+    </div>
+  </ng-container>
+
+  <!--DISCOVER THE FIVE ELEMENTS  -->
+  <ng-container *ngIf="detailHeaderName === 'header-discover-elements'">
+    <div class="top-heading-details discoverElements">
+      <span class="vertical-heading">about<br>elements</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;The Five Elements are energies, not things.&#8220;
+      </p>
+
+      <span>Stefan Emunds</span>
+    </div>
+  </ng-container>
+
+  <!--DISCOVER THE MERIDIANS  -->
+  <ng-container *ngIf="detailHeaderName === 'header-discover-meridians'">
+    <div class="top-heading-details discoverMeridians">
+      <span class="vertical-heading">about<br>meridians</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;Where there is no movement there is pain. Where there is movement there is no pain.&#8220;
+      </p>
+
+      <span>Traditional Chinese Saying</span>
+    </div>
+  </ng-container>
+
+  <!--SESSIONS -->
+  <ng-container *ngIf="detailHeaderName === 'header-support'">
+    <div class="top-heading-details sessions">
+      <span class="vertical-heading">doula<br>help<br>and<br>energy<br>sessions</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;Before you heal someone, ask them if they're willing to give up the things that made them sick.&#8220;
+      </p>
+
+      <span>Hippocrates</span>
+    </div>
+  </ng-container>
+
+  <!--SESSIONS SUB MENU -->
+  <ng-container *ngIf="detailHeaderName === 'header-session-info'">
+    <div class="top-heading-details sessionInfo">
+      <span class="vertical-heading">some<br>session<br>info</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;Before you heal someone, ask them if they're willing to give up the things that made them sick.&#8220;
+      </p>
+
+      <span>Hippocrates</span>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="detailHeaderName === 'header-session-credentials'">
+    <div class="top-heading-details sessionCred">
+      <span class="vertical-heading">about<br>my<br>training</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;Learning never exhausts the mind.&#8220;
+      </p>
+
+      <span>Leonardo DaVinci</span>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="detailHeaderName === 'header-session-doula'">
+    <div class="top-heading-details sessionDoula">
+      <span class="vertical-heading">end of<br>life care</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;It is natural to die as to be born&#8220;
+      </p>
+
+      <span>Francis Bacon</span>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="detailHeaderName === 'header-session-faq'">
+    <div class="top-heading-details sessionFAQs">
+      <span class="vertical-heading">FAQs<br>and<br>answers</span>
+    </div>
+
+    <div class="top-heading-quotes">
+      <p>
+        &#8220;Be curious, not judgemental&#8220;
+      </p>
+
+      <span>Walt Whitman</span>
+    </div>
+  </ng-container>
+</div>
+
+
+<!--
+
+Albert Einstein-->
+<!--
+&#8220;The law of conservation of energy also known as the first law of thermodynamics,
+states that energy can neither be created nor destroyed - only converted from one form of energy to another.&#8220;-->
+
