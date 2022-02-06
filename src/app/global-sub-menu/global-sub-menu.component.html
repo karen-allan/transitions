@@ -3,7 +3,8 @@
     <div class="about-sub-menu">
       <div *ngFor="let subMenuItem of subMenuItems">
         <div *ngIf="subMenuItemId==subMenuItem.id">
-          <div class="selectedSubItem"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
+          <div class="selectedSubItem">{{subMenuItem.title}}</div>
+<!--          <div class="selectedSubItem"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>-->
         </div>
         <div *ngIf="subMenuItemId!=subMenuItem.id">
           <div class="unselectedSubItem"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
@@ -15,10 +16,11 @@
 
 <div *ngIf="menuItemId == 3">
   <div class="sub-header-desktop">
-    <div class="help-sub-menu">
+    <div class="support-sub-menu">
       <div *ngFor="let subMenuItem of subMenuItems">
         <div *ngIf="subMenuItemId==subMenuItem.id">
-          <div class="selectedSubItem"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
+          <div class="selectedSubItem">{{subMenuItem.title}}</div>
+<!--          <div class="selectedSubItem"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>-->
         </div>
         <div *ngIf="subMenuItemId!=subMenuItem.id">
           <div class="unselectedSubItem"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
@@ -28,7 +30,7 @@
   </div>
 </div>
 
-<div *ngIf="menuItemId == 4">
+<!--<div *ngIf="menuItemId == 4">
   <div class="sub-header-desktop">
     <div class="discover-sub-menu">
       <div *ngFor="let subMenuItem of subMenuItems">
@@ -55,7 +57,7 @@
 
 <div *ngIf="menuItemId == 5">
   <div class="sub-header-desktop">
-    <div class="sessions-sub-menu">
+    <div class="support-sub-menu">
       <div *ngFor="let subMenuItem of subMenuItems">
         <div *ngIf="subMenuItemId==subMenuItem.id">
           <div class="selectedSubItem">{{subMenuItem.title}}</div>
@@ -66,7 +68,7 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
 
 
 

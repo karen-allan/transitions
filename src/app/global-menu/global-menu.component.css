@@ -360,8 +360,6 @@ and (orientation: landscape) {
 
   /*cambria math to the left and berlin sans FB to the right text */
   .slogan {
-
-
     align-content: center;
     margin:auto;
     /*background: url("src/assets/images/headers/transitionsInEnergyHeader.jpg")  center no-repeat;*/
@@ -382,7 +380,7 @@ and (orientation: landscape) {
   }
 
   .unselectedItem a {
-    text-decoration: none;
+    text-decoration: underline;
     cursor: pointer;
     background-color: var(--color-darkest-blue);
   }

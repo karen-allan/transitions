@@ -1,0 +1,33 @@
+<div *ngIf="subMenuItemId ==  31">
+    <div class="topic-header-desktop">
+        <div class="energy-support-topic-menu">
+            <div *ngFor="let topicMenuItem of topicMenuItems">
+                <div *ngIf="topicMenuItemId==topicMenuItem.id">
+                    <div class="selectedTopicItem">{{topicMenuItem.title}}</div>
+                </div>
+                <div *ngIf="topicMenuItemId!=topicMenuItem.id">
+                    <div class="unselectedTopicItem"><a routerLink='/{{topicMenuItem.url}}'>{{topicMenuItem.title}}</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="subMenuItemId == 32">
+    <div class="topic-header-desktop">
+        <div class="doula-support-topic-menu">
+            <div *ngFor="let topicMenuItem of topicMenuItems">
+                <div *ngIf="topicMenuItemId==topicMenuItem.id">
+                    <div class="selectedTopicItem">{{topicMenuItem.title}}</div>
+                </div>
+                <div *ngIf="topicMenuItemId!=topicMenuItem.id">
+                    <div class="unselectedTopicItem"><a routerLink='/{{topicMenuItem.url}}'>{{topicMenuItem.title}}</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

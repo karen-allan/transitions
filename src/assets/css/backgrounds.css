@@ -248,6 +248,16 @@ and (min-width: 1920px) {
         width:100%;
         max-width:1152px;
         background-color: var(--color-darkest-purple);
+        color:var(--color-off-white);
+    }
+
+    .topic-white-block {
+        display:inline-grid;
+        grid-template-columns: 74% 26%;
+        width:100%;
+        max-width:1152px;
+        background-color: var(--color-off-white);
+        color:var(--color-darkest-purple);
     }
 
     .topic-left {
@@ -260,7 +270,7 @@ and (min-width: 1920px) {
     .topic-left h1, .topic-left h2, .topic-left h3 {
         display:grid;
         font-family: Monument-Valley;
-        color:var(--color-off-white);
+
     }
 
     .topic-right {
@@ -282,7 +292,6 @@ and (min-width: 1920px) {
     .content-quote {
         max-width:1152px;
         display:grid;
-        float:left;
         margin:1em auto;
         align-content: center;
         justify-content: center;

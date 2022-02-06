@@ -1,0 +1,125 @@
+<div class="content">
+    <div class="headings-dark">
+        <h3>The Current Time: {{now}} is {{currentTimeElement.name}} Time</h3>
+    </div>
+
+    <!-- WHEEL -->
+    <div class="element-wheel">
+        <div class="e-grid">
+            <!--  ROW  1-->
+            <div class="fire-element">
+                <div *ngIf="elementSelected != 'triggeredFireElement'">
+                    <a (click)="this.getElement(3)">
+                        <div class="element-name-button backcolor-fire-active">
+                            <span>FIRE</span>
+                            <br>
+                            <img src="assets/images/elements/fireElement.gif" title="FIRE" alt="FIRE" class="cursorPointer"/>
+                        </div>
+                    </a>
+                </div>
+
+                <div *ngIf="elementSelected === 'triggeredFireElement'">
+                    <div class="element-name-button backcolor-fire-selected">
+                        <span>FIRE</span>
+                        <br>
+                        <img src="assets/images/elements/fireElement.gif" title="FIRE" alt="FIRE" class="cursorPointer"/>
+                    </div>
+                </div>
+            </div>
+
+            <!--        ROW 2-->
+            <div class="wood-element">
+                <div *ngIf="elementSelected != 'triggeredWoodElement'">
+                    <a (click)="this.getElement(2)">
+                        <div class="element-name-button backcolor-wood-active">
+                            <span>WOOD</span>
+                            <br>
+                            <img src="assets/images/elements/woodElement.gif" title="WOOD" alt="WOOD" class="cursorPointer"/>
+                        </div>
+                    </a>
+                </div>
+
+                <div *ngIf="elementSelected === 'triggeredWoodElement'">
+                    <a (click)="this.getElement(2)">
+                        <div class="element-name-button backcolor-wood-selected">
+                            <span>WOOD</span>
+                            <br>
+                            <img src="assets/images/elements/woodElement.gif" title="WOOD" alt="WOOD" class="cursorPointer"/>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="center-element"><span>THE FIVE ELEMENT WHEEL</span></div>
+
+            <div class="earth-element">
+                <div *ngIf="elementSelected != 'triggeredEarthElement'">
+                    <a (click)="this.getElement(4)">
+                        <div class="element-name-button backcolor-earth-active">
+                            <span>EARTH</span>
+                            <br>
+                            <img src="assets/images/elements/earthElement.gif" title="EARTH" alt="EARTH" class="cursorPointer"/>
+                        </div>
+                    </a>
+                </div>
+
+                <div *ngIf="elementSelected === 'triggeredEarthElement'">
+                    <a (click)="this.getElement(4)">
+                        <div class="element-name-button backcolor-earth-selected">
+                            <span>EARTH</span>
+                            <br>
+                            <img src="assets/images/elements/earthElement.gif" title="EARTH" alt="EARTH" class="cursorPointer"/>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!--   ROW 3 -->
+            <div class="water-element">
+                <div *ngIf="elementSelected != 'triggeredWaterElement'">
+                    <a (click)="this.getElement(1)">
+                        <div class="element-name-button backcolor-water-active">
+                            <span>WATER</span>
+                            <br>
+                            <img src="assets/images/elements/waterElement.gif" title="WATER" alt="WATER" class="cursorPointer"/>
+                        </div>
+                    </a>
+                </div>
+
+                <div *ngIf="elementSelected === 'triggeredWaterElement'">
+                    <a (click)="this.getElement(1)">
+                        <div class="element-name-button backcolor-water-selected">
+                            <span>WATER</span>
+                            <br>
+                            <img src="assets/images/elements/waterElement.gif" title="WATER" alt="WATER" class="cursorPointer"/>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="metal-element">
+                <div *ngIf="elementSelected != 'triggeredMetalElement'">
+                    <a (click)="this.getElement(5)">
+                        <div class="element-name-button backcolor-metal-active">
+                            <span>METAL</span>
+                            <br>
+                            <img src="assets/images/elements/metalElement.gif" title="METAL" alt="METAL" class="cursorPointer">
+                        </div>
+                    </a>
+                </div>
+
+                <div *ngIf="elementSelected === 'triggeredMetalElement'">
+                    <a (click)="this.getElement(5)">
+                        <div class="element-name-button backcolor-metal-selected">
+                            <span>METAL</span>
+                            <br>
+                            <img src="assets/images/elements/metalElement.gif" title="METAL" alt="METAL" class="cursorPointer">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <app-selected-element [selectedElement]="selectedElement"></app-selected-element>
+</div>

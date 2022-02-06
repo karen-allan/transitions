@@ -237,9 +237,10 @@ and (min-width: 1920px) {
         line-height:var(--list-wide-item-line-height);
     }
 
-    .list-item-a, .list-wide-item a {
+    .list-item a, .list-wide-item a {
         text-decoration: underline;
         cursor:pointer;
+        color: var(--copy-color-dark);
     }
 
     .list-pre-line-item {

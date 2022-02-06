@@ -7,13 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuSupportComponent implements OnInit {
 
-  menuItemId = 5
-  subMenuItemId=0
-
-  detailHeaderName = "header-support"
-  detailListName = "list-support"
-  title = "Support and Care"
-
   constructor() { }
 
   ngOnInit(): void {

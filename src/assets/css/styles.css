@@ -28,6 +28,7 @@
   --color-gold:#ffd700;
   --color-light-gold:#f4c46c;
   --color-dark-gold:#f6bd54;
+  --color-darkest-gold:#e09304;
 
   --color-brown:#4a3f29;
   --color-black:#362f32;
@@ -235,13 +236,11 @@
   --vertical-heading-line-height:120%;
 
   /* DESKTOP MENU ROW HEIGHTS */
-
-
-
   --header-large-slogan-width:1024px;
   --header-large-slogan-height:110px;
   --header-large-menu-height:40px;
   --header-large-sub-menu-height:45px;
+  --header-large-topic-menu-height:40px;
 
   /* HOME TOP OF PAGE BACKGROUND IMAGE HEIGHTS*/
   --banana-port-home-image-height:122px; /* 240 x 122 */
@@ -300,10 +299,13 @@
   --ele-whl-ipad-port-rows: repeat(3, 240px);
   --ele-whl-ipad-port-button: 192px;
 
-  /* 1152 width and 900 height (max 90% for e-grid) */
-  --ele-whl-large-cols: repeat(3, 384px);
-  --ele-whl-large-rows: repeat(3, 300px);
-  --ele-whl-large-button: 240px;
+  /* 1152px GRID AREA WIDTH and CIRCLE BKGRND IS 930 x 930  */
+  /*--ele-whl-large-cols: repeat(3, 384px);*/
+  --ele-whl-large-cols: 1fr 1fr 1fr;
+  --ele-whl-large-rows: 200px 200px 250px;
+
+  /*--ele-whl-large-rows: repeat(3, 300px);*/
+  --ele-whl-large-button: 170px;
 
   /* MERIDIAN WHEEL USED FOR BOTH MERIDIAN DETAILS AND CYCLE */
 
@@ -617,6 +619,11 @@
 
 
   /* COLORS */
+
+  .color-white {
+    color:#ffffff;
+  }
+
   .background-blue {
     background-color: #5b89d5;
   }
@@ -709,6 +716,18 @@
     margin-bottom: 3em;
   }
 
+  .pad-all-1 {
+    padding:1em;
+  }
+
+  .pad-all-2 {
+    padding:2em;
+  }
+
+  .pad-all-3 {
+    padding:3em;
+  }
+
   .pad-top-1, .pad-top {
     padding-top: 1em;
   }
@@ -755,6 +774,8 @@
   .pad-left-3 {
     padding-left:3em;
   }
+
+
 
   /* CSS ICONS */
   .yin-yang {

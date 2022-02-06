@@ -1,0 +1,214 @@
+
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+}
+
+/* TABLETS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    /* 1024 is 80% of 1280 */
+  
+
+    .doula-support-topic-menu {
+        grid-template-columns: repeat(6, 170px);
+    }
+
+    .selectedTopicItem, .unselectedTopicItem a {
+        font-size:0.7em;;
+    }
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    /* 820 is 80% of 1024 */
+
+
+    .doula-support-topic-menu {
+        grid-template-columns: repeat(6, 136px);
+    }
+
+    .selectedTopicItem, .unselectedTopicItem a {
+        font-size:0.6em;;
+    }
+
+}
+
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    /* 956 is 70% of 1366 */
+    .help-sub-menu {
+        grid-template-columns:repeat(12, 79px);
+    }
+
+    .discover-sub-menu {
+        grid-template-columns: repeat(4, 239px);
+    }
+
+    .doula-support-topic-menu {
+        grid-template-columns: repeat(6, 159px);
+    }
+
+    .selectedTopicItem, .unselectedTopicItem a {
+        font-size:0.7em;;
+    }
+
+}
+
+/* LAPTOPS *****************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width: 1919px) {
+
+    /* 1008 is 70% of 1440 */
+   /* .help-sub-menu {
+        grid-template-columns:repeat(12, 84px);
+    }
+
+    .discover-sub-menu {
+        grid-template-columns: repeat(4, 252px);
+    }*/
+
+    .doula-support-topic-menu {
+        grid-template-columns: repeat(6, 168px);
+    }
+
+    .selectedTopicItem, .unselectedTopicItem a {
+        font-size:0.7em;;
+    }
+}
+
+/* DESKTOPS *****************************************************************************************************/
+@media only screen
+and (min-width: 1920px){
+
+    /* 1152 is 60% of 1920 */
+
+  /*  .about-sub-menu {
+        grid-template-columns:repeat(2, 576px);
+    }
+
+    .help-sub-menu {
+        grid-template-columns:repeat(12, 96px);
+    }
+
+    .discover-sub-menu {
+        grid-template-columns: repeat(4, 288px);
+    }*/
+
+    .doula-support-topic-menu {
+        grid-template-columns: repeat(7, 164px);
+    }
+
+    .energy-support-topic-menu {
+        grid-template-columns: repeat(7, 164px);
+    }
+
+    /*.selectedAnchorSubItem a, .selectedNoAnchorSubItem, .unselectedTopicItem a {*/
+    .selectedTopicItem, .unselectedTopicItem a {
+        font-size:0.7em;;
+    }
+}
+
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .topic-header-desktop {
+        display:grid;
+        width: 100%;
+        margin:auto;
+        height:var(--header-large-topic-menu-height);
+        background-color: var(--color-light-purple);
+        border-top:thin solid brown;
+        justify-content: center;
+    }
+
+    .doula-support-topic-menu, .energy-support-topic-menu {
+        width: 100%;
+        border-right:thin solid white;
+        display:inline-grid;
+        position: relative;
+        height:var(--header-large-topic-menu-height);
+        justify-content: center;
+        text-align: center;
+    }
+
+    .selectedTopicItem, .unselectedTopicItem a {
+        display:grid;
+        font-family: var(--family-global);
+        height:var(--header-large-topic-menu-height);
+        align-content: center;
+        font-weight:800;
+        border-left:thin solid white;
+    }
+
+    .selectedTopicItem {
+        color:var(--color-dark-grey);
+        background-color: var(--color-off-white);
+        border:1px solid var(--color-dark-blue);
+        cursor:default;
+        text-decoration: none;
+    }
+
+    .unselectedTopicItem a {
+        color:var(--color-off-white);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+
+}

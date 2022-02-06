@@ -193,7 +193,7 @@ and (min-width: 1440px)
 and (max-width: 1919px) {
 
     .headings-dark h1, .headings-clear h1, .headings-light h1 {
-        font-size: var(--h1-laptop-desktop-font-size);
+        font-size: var(--h1-laptop-font-size);
     }
 
     .headings-dark h2, .headings-clear h2, .headings-light h2 {
@@ -215,7 +215,7 @@ and (max-width: 1919px) {
 and (min-width: 1920px) {
 
     .headings-dark h1, .headings-clear h1, .headings-light h1 {
-        font-size: var(--h1-laptop-desktop-font-size);
+        font-size: var(--h1-desktop-font-size);
     }
 
     .headings-dark h2, .headings-clear h2, .headings-light h2 {

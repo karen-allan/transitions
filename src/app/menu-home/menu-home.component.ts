@@ -7,11 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuHomeComponent implements OnInit {
 
-  menuItemId = 1;
-  subMenuItemId=0;
 
-  detailHeaderName = 'header-home'
-  detailListName="list-home"
 
   constructor() { }
 

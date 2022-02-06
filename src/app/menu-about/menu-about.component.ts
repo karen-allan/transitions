@@ -7,12 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuAboutComponent implements OnInit {
 
-  menuItemId = 2
-  subMenuItemId=0;
 
-  detailHeaderName = 'header-about'
-  detailListName="list-about"
-  title= "My Meandering Journey"
 
   constructor() { }
 

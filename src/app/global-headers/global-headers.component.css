@@ -16,11 +16,11 @@ and (orientation: portrait){
     height:var(--banana-port-detail-image-height);
   }
 
-  .vertical-heading {
+  /*.vertical-heading {
     width:var(--vertical-banana-port-font-width);
     font-size:var(--vertical-banana-port-font-size);
     height:var(--banana-port-detail-image-height) ;
-  }
+  }*/
 
   .top-heading-quotes {
     width:90%;
@@ -53,11 +53,11 @@ and (orientation: landscape) {
     height:var(--banana-land-detail-image-height);
   }
 
-  .vertical-heading {
+  /*.vertical-heading {
     width:var(--vertical-banana-land-font-width);
     font-size:var(--vertical-banana-land-font-size);
     height:var(--banana-land-detail-image-height) ;
-  }
+  }*/
 
   .top-heading-quotes {
     width:90%;
@@ -90,11 +90,11 @@ and (orientation: portrait) {
     height:var(--mobile-port-detail-image-height);
   }
 
-  .vertical-heading {
+  /*.vertical-heading {
     width:var(--vertical-mobile-port-font-width);
     font-size:var(--vertical-mobile-port-font-size);
     height:var(--mobile-port-detail-image-height) ;
-  }
+  }*/
 
   .top-heading-quotes {
     width:90%;
@@ -127,11 +127,11 @@ and (orientation: landscape) {
     height:var(--mobile-land-detail-image-height);
   }
 
-  .vertical-heading {
+  /*.vertical-heading {
     width:var(--vertical-mobile-land-font-width);
     font-size:var(--vertical-mobile-land-font-size);
     height:var(--mobile-land-detail-image-height) ;
-  }
+  }*/
 
   .top-heading-quotes {
     width:90%;
@@ -163,11 +163,11 @@ and (orientation: portrait) {
     height:var(--tablet-port-detail-image-height);
   }
 
-  .vertical-heading {
+  /*.vertical-heading {
     width:var(--vertical-tablet-port-font-width);
     font-size:var(--vertical-tablet-port-font-size);
     height:var(--tablet-port-detail-image-height) ;
-  }
+  }*/
 
   .top-heading-quotes {
     width:90%;
@@ -200,11 +200,11 @@ and (orientation: landscape) {
     height:var(--tablet-land-detail-image-height);
   }
 
-  .vertical-heading {
+ /* .vertical-heading {
     width:var(--vertical-tablet-land-font-width);
     font-size:var(--vertical-tablet-land-font-size);
     height:var(--tablet-land-detail-image-height) ;
-  }
+  }*/
 
   .top-heading-quotes {
     width:100%;
@@ -236,11 +236,11 @@ and (orientation: portrait) {
     height:var(--ipad-port-detail-image-height);
   }
 
-  .vertical-heading {
+  /*.vertical-heading {
     width:var(--vertical-ipad-port-font-width);
     font-size:var(--vertical-ipad-port-font-size);
     height:var(--ipad-port-detail-image-height) ;
-  }
+  }*/
 
   .top-heading-quotes {
     width:90%;
@@ -271,11 +271,11 @@ and (orientation: landscape) {
     height:var(--ipad-land-detail-image-height);
   }
 
-  .vertical-heading{
+  /*.vertical-heading{
     width:var(--vertical-ipad-land-font-width);
     font-size:var(--vertical-ipad-land-font-size);
     height:var(--ipad-land-detail-image-height) ;
-  }
+  }*/
 
   .top-heading-quotes {
     width:100%;
@@ -306,11 +306,11 @@ and (max-width:1919px ){
     height:var(--laptop-detail-image-height);
   }
 
-  .vertical-heading {
+ /* .vertical-heading {
     font-size:var(--vertical-laptop-font-size);
     width:var(--vertical-laptop-font-width);
     height:var(--laptop-detail-image-height) ;
-  }
+  }*/
 
   .top-heading-quotes {
     width:100%;
@@ -340,11 +340,11 @@ and (min-width: 1920px) {
     height:var(--desktop-detail-image-height);
   }
 
-  .vertical-heading {
+  /*.vertical-heading {
     font-size:var(--vertical-desktop-font-size);
     width:var(--vertical-desktop-font-width);
     height:var(--desktop-detail-image-height) ;
-  }
+  }*/
 
   .top-heading-quotes {
     width:100%;
@@ -377,7 +377,7 @@ and (min-width: 1920px) {
     justify-content: flex-start;
   }
 
-  .vertical-heading {
+ /* .vertical-heading {
     display: grid;
     background-color: var(--color-darkest-purple);
     color: var(--color-off-white);
@@ -387,7 +387,7 @@ and (min-width: 1920px) {
     line-height: var(--vertical-heading-line-height);
     text-align: left;
     text-transform: uppercase;
-  }
+  }*/
 
   .top-heading-quotes {
     display: block;
@@ -431,145 +431,141 @@ and (min-width: 1920px) {
     background-size: cover;
   }
 
-  .self-help {
-    background: url("src/assets/images/backgrounds/backgroundSelfHelp.jpg") no-repeat;
+  .about-energy-med {
+    background: url("src/assets/images/backgrounds/backgroundAboutEnergyMedicine.jpg") no-repeat;
     background-size: cover;
   }
 
-  .help-anxiety {
+  .about-doula-care {
+    background: url("src/assets/images/backgrounds/backgroundAboutDoulaCare.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .support-all {
+    background: url("src/assets/images/backgrounds/backgroundSupportAll.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .support-energy-work {
+    background: url("src/assets/images/backgrounds/backgroundSupportEnergyWork.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .support-doula-work {
+    background: url("src/assets/images/backgrounds/backgroundSupportDoulaWork.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .eol-questions {
+    background: url("src/assets/images/backgrounds/backgroundEOLQuestions.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .eol-reps {
+    background: url("src/assets/images/backgrounds/backgroundEOLReps.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .eol-advocate {
+    background: url("src/assets/images/backgrounds/backgroundEOLAdvocate.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .eol-patient-care {
+    background: url("src/assets/images/backgrounds/backgroundEOLPatientCare.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .eol-caregiver-care {
+    background: url("src/assets/images/backgrounds/backgroundEOLCaregiverCare.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .eol-legacy {
+    background: url("src/assets/images/backgrounds/backgroundEOLLegacy.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .energy-help-anxiety {
     background: url("src/assets/images/backgrounds/backgroundHelpAnxiety.jpg") no-repeat;
     background-size: cover;
   }
 
-  .help-burnout {
+  .energy-help-burnout {
     background: url("src/assets/images/backgrounds/backgroundHelpBurnout.jpg") no-repeat;
     background-size: cover;
   }
 
-  .help-cold {
-    background: url("src/assets/images/backgrounds/backgroundHelpCold.jpg") no-repeat;
-    background-size: cover;
-  }
+   .energy-help-inflammation {
+     background: url("src/assets/images/backgrounds/backgroundHelpFertility.jpg") no-repeat;
+     background-size: cover;
+   }
 
-  .help-teeth {
-    background: url("src/assets/images/backgrounds/backgroundHelpTeeth.jpg") no-repeat;
-    background-size: cover;
-  }
+    .energy-help-pain {
+      background: url("src/assets/images/backgrounds/backgroundHelpPain.jpg") no-repeat;
+      background-size: cover;
+    }
 
-  .help-digestion {
-    background: url("src/assets/images/backgrounds/backgroundHelpDigestion.jpg") no-repeat;
-    background-size: cover;
-  }
+     .energy-help-exercises {
+       background: url("src/assets/images/backgrounds/backgroundHelpProtect.jpg") no-repeat;
+       background-size: cover;
+     }
 
-  .help-fertility {
-    background: url("src/assets/images/backgrounds/backgroundHelpFertility.jpg") no-repeat;
-    background-size: cover;
-  }
+    .energy-discover-element {
+      background: url("src/assets/images/backgrounds/backgroundDiscoverElements.jpg") no-repeat;
+      background-size: cover;
+    }
 
-  .help-headaches {
-    background: url("src/assets/images/backgrounds/backgroundHelpHeadaches.jpg") no-repeat;
-    background-size: cover;
-  }
+   /*
 
-  .help-jetlag {
-    background: url("src/assets/images/backgrounds/backgroundHelpJetlag.jpg") no-repeat;
-    background-size: cover;
-  }
 
-  .help-menopause {
-    background: url("src/assets/images/backgrounds/backgroundHelpMenopause.jpg") no-repeat;
-    background-size: cover;
-  }
 
-  .help-pain {
-    background: url("src/assets/images/backgrounds/backgroundHelpPain.jpg") no-repeat;
-    background-size: cover;
-  }
 
-  .help-protect {
-    background: url("src/assets/images/backgrounds/backgroundHelpProtect.jpg") no-repeat;
-    background-size: cover;
-  }
 
-  .help-vision {
-    background: url("src/assets/images/backgrounds/backgroundHelpVision.jpg") no-repeat;
-    background-size: cover;
-  }
 
-  .discover {
-    background: url("src/assets/images/backgrounds/backgroundDiscover.jpg") no-repeat;
-    background-size: cover;
-  }
 
-  .discoverDER {
-    background: url("src/assets/images/backgrounds/backgroundDiscoverDER.jpg") no-repeat;
-    background-size: cover;
-  }
 
-  .discoverElements {
-    background: url("src/assets/images/backgrounds/backgroundDiscoverElements.jpg") no-repeat;
-    background-size: cover;
-  }
+     .discoverElementAttributes {
+       background: url("src/assets/images/backgrounds/backgroundDiscoverElementsAttributes.jpg") no-repeat;
+       background-size: cover;
+     }
 
-  .discoverElementAttributes {
-    background: url("src/assets/images/backgrounds/backgroundDiscoverElementsAttributes.jpg") no-repeat;
-    background-size: cover;
-  }
+     .discoverElementUnbalanced {
+       background: url("src/assets/images/backgrounds/backgroundDiscoverElementsUnbalanced.jpg") no-repeat;
+       background-size: cover;
+     }
 
-  .discoverElementUnbalanced {
-    background: url("src/assets/images/backgrounds/backgroundDiscoverElementsUnbalanced.jpg") no-repeat;
-    background-size: cover;
-  }
 
-  .discoverElementCorrections {
-    background: url("src/assets/images/backgrounds/backgroundDiscoverElementsCorrections.jpg") no-repeat;
-    background-size: cover;
-  }
 
-  .discoverMeridians {
-    background: url("src/assets/images/backgrounds/backgroundDiscoverMeridians.jpg") no-repeat;
-    background-size: cover;
-  }
+     .discoverMeridians {
+       background: url("src/assets/images/backgrounds/backgroundDiscoverMeridians.jpg") no-repeat;
+       background-size: cover;
+     }
 
-  .discoverMeridianEffects {
-    background: url("src/assets/images/backgrounds/backgroundDiscoverMeridianImbalances.jpg") no-repeat;
-    background-size: cover;
-  }
+     .discoverMeridianEffects {
+       background: url("src/assets/images/backgrounds/backgroundDiscoverMeridianImbalances.jpg") no-repeat;
+       background-size: cover;
+     }
 
-  .discoverMeridianCorrections {
-    background: url("src/assets/images/backgrounds/backgroundDiscoverMeridianCorrections.jpg") no-repeat;
-    background-size: cover;
-  }
+     .discoverMeridianCorrections {
+       background: url("src/assets/images/backgrounds/backgroundDiscoverMeridianCorrections.jpg") no-repeat;
+       background-size: cover;
+     }
 
-  .discoverCycle {
-    background: url("src/assets/images/backgrounds/backgroundDiscoverCycle.jpg") no-repeat;
-    background-size: cover;
-  }
+     .discoverCycle {
+       background: url("src/assets/images/backgrounds/backgroundDiscoverCycle.jpg") no-repeat;
+       background-size: cover;
+     }
 
-  .sessions {
-    background: url("src/assets/images/backgrounds/backgroundSessions.jpg") no-repeat;
-    background-size: cover;
-  }
 
-  .sessionInfo {
-    background: url("src/assets/images/backgrounds/backgroundSessionInfo.jpg") no-repeat;
-    background-size: cover;
-  }
 
-  .sessionCred {
-    background: url("src/assets/images/backgrounds/backgroundSessionCredentials.jpg") no-repeat;
-    background-size: cover;
-  }
+     .sessionCred {
+       background: url("src/assets/images/backgrounds/backgroundSessionCredentials.jpg") no-repeat;
+       background-size: cover;
+     }*/
 
-  .sessionDoula {
-    background: url("src/assets/images/backgrounds/backgroundSessionsDoula.jpg") no-repeat;
-    background-size: cover;
-  }
 
-  .sessionFAQs {
-    background: url("src/assets/images/backgrounds/backgroundSessionsFAQs.jpg") no-repeat;
-    background-size: cover;
-  }
+
 }
 
 

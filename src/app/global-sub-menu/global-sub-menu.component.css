@@ -59,8 +59,8 @@ and (orientation: landscape) {
     grid-template-columns: repeat(4, 256px);
   }
 
-  .sessions-sub-menu {
-    grid-template-columns: repeat(4, 256px);
+  .support-sub-menu {
+    grid-template-columns: repeat(2, 512px);
   }
 
   .selectedSubItem, .unselectedSubItem a {
@@ -84,8 +84,8 @@ and (orientation: portrait) {
     grid-template-columns: repeat(4, 205px);
   }
 
-  .sessions-sub-menu {
-    grid-template-columns: repeat(4, 205px);
+  .support-sub-menu {
+    grid-template-columns: repeat(2, 410px);
   }
 
   .selectedSubItem, .unselectedSubItem a {
@@ -110,8 +110,8 @@ and (orientation: landscape) {
     grid-template-columns: repeat(4, 239px);
   }
 
-  .sessions-sub-menu {
-    grid-template-columns: repeat(4, 239px);
+  .support-sub-menu {
+    grid-template-columns: repeat(2, 478px);
   }
 
   .selectedSubItem, .unselectedSubItem a {
@@ -134,8 +134,8 @@ and (max-width: 1919px) {
     grid-template-columns: repeat(4, 252px);
   }
 
-  .sessions-sub-menu {
-    grid-template-columns: repeat(4, 252px);
+  .support-sub-menu {
+    grid-template-columns: repeat(2, 504px);
   }
 
   .selectedSubItem, .unselectedSubItem a {
@@ -150,7 +150,7 @@ and (min-width: 1920px){
   /* 1152 is 60% of 1920 */
 
   .about-sub-menu {
-    grid-template-columns:repeat(2, 576px);
+    grid-template-columns:repeat(3, 384px);
   }
 
   .help-sub-menu {
@@ -161,8 +161,8 @@ and (min-width: 1920px){
     grid-template-columns: repeat(4, 288px);
   }
 
-  .sessions-sub-menu {
-    grid-template-columns: repeat(4, 288px);
+  .support-sub-menu {
+    grid-template-columns:repeat(3, 384px);
   }
 
   /*.selectedAnchorSubItem a, .selectedNoAnchorSubItem, .unselectedSubItem a {*/
@@ -185,9 +185,8 @@ and (min-width: 1920px){
     justify-content: center;
   }
 
-  .about-sub-menu, .help-sub-menu, .discover-sub-menu, .sessions-sub-menu {
-    width: 60%;
-    margin:0 20%;
+  .about-sub-menu, .help-sub-menu, .discover-sub-menu, .support-sub-menu {
+    width: 100%;
     display:inline-grid;
     position: relative;
     height:var(--header-large-sub-menu-height);
@@ -206,21 +205,17 @@ and (min-width: 1920px){
 
   .selectedSubItem {
     color:var(--color-dark-blue);
-  }
-
-  .unselectedSubItem a {
-    color:var(--color-white);
-  }
-
-  .unselectedSubItem a {
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  /*.selectedNoAnchorSubItem  {*/
-  .selectedSubItem  {
     background-color: var(--color-off-white);
     border:1px solid var(--color-dark-blue);
     cursor:default;
+    text-decoration: none;
   }
+
+  .unselectedSubItem a {
+    text-decoration: underline;
+    cursor: pointer;
+    color:var(--color-white);
+  }
+
+
 }

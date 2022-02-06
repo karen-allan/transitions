@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-all-support-overview',
@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AllSupportOverviewComponent implements OnInit {
 
-  @Input() title:string = '';
+  @Input() title='';
 
   constructor() { }
 

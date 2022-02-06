@@ -1,0 +1,371 @@
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    /* GRID at 240 at 90% is 216 width and 169 height */
+    .e-grid {
+        grid-template-columns:var(--ele-whl-banana-port-cols);
+        grid-template-rows: var(--ele-whl-banana-port-rows);
+    }
+
+    .element-name-button {
+        width: var(--ele-whl-banana-port-button);
+        height: var(--ele-whl-banana-port-button);
+    }
+
+    .element-name-button img {
+        max-width: 40%;
+        height:auto;
+        margin:auto;
+    }
+
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    /* GRID at 568 px at 90% is 511 width and 399 height */
+    .e-grid {
+        grid-template-columns:var(--ele-whl-banana-land-cols);
+        grid-template-rows: var(--ele-whl-banana-land-rows);
+    }
+
+    .element-name-button {
+        width: var(--ele-whl-banana-land-button);
+        height: var(--ele-whl-banana-land-button);
+    }
+
+    .element-name-button img {
+        max-width: 60%;
+        height:auto;
+        margin:auto;
+    }
+
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    /* GRID at 360 px at 90% is 324 width and 253 height */
+    .e-grid {
+        grid-template-columns:var(--ele-whl-mobile-port-cols);
+        grid-template-rows: var(--ele-whl-mobile-port-rows);
+    }
+
+    .element-name-button {
+        width: var(--ele-whl-mobile-port-button);
+        height: var(--ele-whl-mobile-port-button);
+    }
+
+    .element-name-button img {
+        max-width: 50%;
+        height:auto;
+        margin:auto;
+    }
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    /* GRID at 896px at 90% is width 806 and 630 height */
+    .e-grid {
+        grid-template-columns:var(--ele-whl-mobile-land-cols);
+        grid-template-rows: var(--ele-whl-mobile-land-rows);
+    }
+
+    .element-name-button {
+        width: var(--ele-whl-mobile-land-button);
+        height: var(--ele-whl-mobile-land-button);
+    }
+
+    .element-name-button img {
+        max-width: 60%;
+        height:auto;
+        margin:auto;
+    }
+
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    /* GRID at 600px at 90% is 540 and 422 height */
+    .e-grid {
+        grid-template-columns:var(--ele-whl-tablet-port-cols);
+        grid-template-rows: var(--ele-whl-tablet-port-rows);
+    }
+
+    .element-name-button {
+        width: var(--ele-whl-tablet-port-button);
+        height: var(--ele-whl-tablet-port-button);
+    }
+
+    .element-name-button img {
+        max-width: 60%;
+        height:auto;
+        margin:auto;
+    }
+
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    /* GRID at 1280 at 90% is 1152 width by 900 height can use large */
+    .e-grid {
+        grid-template-columns:var(--ele-whl-large-cols);
+        grid-template-rows: var(--ele-whl-large-rows);
+    }
+
+    .element-name-button {
+        width: var(--ele-whl-large-button);
+        height: var(--ele-whl-large-button);
+    }
+
+    .element-name-button img {
+        max-width: 100%;
+        height:auto;
+        margin:auto;
+    }
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    /* GRID at 1024px at 90% is 921 width and 720 height */
+    .e-grid {
+        grid-template-columns:var(--ele-whl-ipad-port-cols);
+        grid-template-rows: var(--ele-whl-ipad-port-rows);
+    }
+
+    .element-name-button {
+        width: var(--ele-whl-ipad-port-button);
+        height: var(--ele-whl-ipad-port-button);
+    }
+
+    .element-name-button img {
+        max-width: 90%;
+        height:auto;
+        margin:auto;
+    }
+
+}
+
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    /* GRID at large size 1152px */
+    .e-grid {
+        grid-template-columns:var(--ele-whl-large-cols);
+        grid-template-rows: var(--ele-whl-large-rows);
+    }
+
+    .element-name-button {
+        width: var(--ele-whl-large-button);
+        height: var(--ele-whl-large-button);
+    }
+
+    .element-name-button img {
+        max-width: 100%;
+        height:auto;
+        margin:auto;
+    }
+
+}
+
+/* LAPTOPS ***********************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width: 1919px) {
+
+    /* TOP ELEMENT GRID at 1152px */
+    .e-grid {
+        grid-template-columns:var(--ele-whl-large-cols);
+        grid-template-rows: var(--ele-whl-large-rows);
+    }
+
+    .element-name-button {
+        width: var(--ele-whl-large-button);
+        height: var(--ele-whl-large-button);
+        border:thin solid #333;
+    }
+
+    .element-name-button img {
+        max-width: 100%;
+        height:auto;
+        margin:auto;
+    }
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    /* TOP - ELEMENT GRID at 1152px 90% of 1280 max content container */
+    .e-grid {
+        grid-template-columns:var(--ele-whl-large-cols);
+        grid-template-rows: var(--ele-whl-large-rows);
+    }
+
+    .element-name-button {
+        width: var(--ele-whl-large-button);
+        height: var(--ele-whl-large-button);
+        margin:auto;
+    }
+
+    .element-name-button span, .element-name-button span a {
+        color:white;
+        font-size:1em;
+        font-family: var(--family-global);
+        text-align: center;
+    }
+
+    .element-name-button span {
+        cursor: pointer;
+        /*text-decoration: underline;*/
+    }
+
+    .element-name-button  a span {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .element-name-button img {
+        max-width: 100%;
+        height:auto;
+    }
+
+ }
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    /* ------------------ THE TOP SIDE WHEEL ----------------*/
+    .element-wheel {
+        display:grid;
+        width:100%;
+        max-width:800px;
+        margin:1em auto 4em auto;
+    }
+
+    .e-grid {
+        display:inline-grid;
+        width:100%;
+        font-family: var(--family-script);
+        border:thin solid red;
+    }
+
+    /* ELEMENT WHEEL */
+
+
+
+    .element-name-button {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        border-radius: 50%;
+    }
+
+
+
+    /* --------------------- ROW   1        ----------------------------- */
+    .fire-element  {
+        display:grid;
+        grid-row:1;
+        border:thin solid gold;
+    }
+
+    .fire-element  {
+        display:grid;
+        grid-column:2;
+        justify-content: center;
+        align-content: center;
+    }
+
+
+    /* --------------------- ROW 2 ---------------------------- */
+    .wood-element, .center-element, .earth-element {
+        grid-row:2;
+        display:grid;
+        border:thin solid gold;
+    }
+
+    .wood-element {
+        display:grid;
+        grid-column: 1;
+        align-content:center;
+        justify-content: center;
+    }
+
+    .center-element {
+        display:grid;
+        grid-column: 2;
+        align-content:center;
+        justify-content: center;
+    }
+
+    .center-element span {
+        text-align: center;
+        font-size:2em;
+        color:var(--color-darkest-gold);
+    }
+
+    .earth-element {
+        display:grid;
+        grid-column:3;
+        align-content:center;
+        justify-content: center;
+    }
+
+    /* --------------------- ROW 3   ----------------------------- */
+    .water-element,  .metal-element {
+        display:grid;
+        grid-row:3;
+        border:thin solid gold;
+    }
+
+    .water-element {
+        display:grid;
+        grid-column:1;
+        align-content: center;
+        justify-content: flex-end;
+    }
+
+    .metal-element {
+        display:grid;
+        grid-column: 3;
+        align-content: center;
+        justify-content: flex-start;
+    }
+
+
+
+}
