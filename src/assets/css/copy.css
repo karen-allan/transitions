@@ -214,19 +214,19 @@ and (max-width: 1919px) {
 @media only screen
 and (min-width: 1920px) {
 
-    .headings-dark h1, .headings-clear h1, .headings-light h1 {
+    .dark-heading h1, .clear-heading h1, .light-heading h1 {
         font-size: var(--h1-desktop-font-size);
     }
 
-    .headings-dark h2, .headings-clear h2, .headings-light h2 {
+    .dark-heading h2, .clear-heading h2, .light-heading h2 {
         font-size: var(--h2-laptop-desktop-font-size);
     }
 
-    .headings-dark h3, .headings-clear h3, .headings-light h3  {
+    .dark-heading h3, .clear-heading h3, .light-heading h3  {
         font-size: var(--h3-laptop-desktop-font-size);
     }
 
-    .text-dark, .text-light, .text-clear. .answers, .questions {
+    .dark-copy, .light-copy, .clear-copy. .answers, .questions {
         font-size: var(--copy-laptop-desktop-font-size);
     }
 
@@ -235,44 +235,73 @@ and (min-width: 1920px) {
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-    .text-dark, .text-light, .text-clear,  .headings-dark, .headings-light, .headings-clear, .answers, .questions  {
+    .text, .headings, .images, .content-videos {
         display: block;
         width:100%;
-        font-family: "Whitney SSm A", "Whitney SSm B", Arial, sans-serif;
-    }
-
-    .text-dark, .text-light, .text-clear,  .headings-dark, .headings-light, .headings-clear {
         max-width:800px;
-        margin:.5em auto;
+        margin:1em auto;
     }
 
-    .questions  {
-        max-width: 600px;
-        margin:2em auto;
+    .dark-heading h1, .clear-heading h1, .light-heading h1 {
+        font-size: 1.4em;
+        text-align: center;
     }
 
-    .answers  {
-        max-width: 600px;
-        margin:2em auto;
-    }
-
-    .headings, .headings-dark, .headings-light, .headings-clear {
-        margin:.5em auto;
-        font-weight: 700;
-    }
-
-    .headings-dark h1, .headings-clear h1, .headings-light h1 {
-        text-align:center;
-    }
-
-    .headings-dark h2, .headings-clear h2, .headings-light h2,
-    .headings-dark h3, .headings-clear h3, .headings-light h3 {
+    .dark-heading h2, .clear-heading h2, .light-heading h2 {
+        font-size: var(--h2-laptop-desktop-font-size);
         text-align: left;
     }
 
-    .text-dark, .text-light, .text-clear, .answers {
-       line-height:var(--copy-line-height);
-       text-align: justify;
+    .dark-heading h3, .clear-heading h3, .light-heading h3  {
+        font-size: var(--h3-laptop-desktop-font-size);
+    }
+
+    .dark-copy, .light-copy, .clear-copy. .answers, .questions {
+        font-size: 1.4em;
+    }
+
+    .dark-heading h1, .dark-heading h2, .dark-heading h3, .dark-copy, .dark-copy a {
+        color: var(--copy-color-dark);
+        background-color: white;
+    }
+
+    .dark-copy a, .light-copy a, .clear-copy a  {
+        font-weight:800;
+    }
+
+    .light-heading, .light-copy, .light-copy a  {
+        color: var(--copy-color-light);
+    }
+
+    .dark-heading h1, .light-heading h1, .clear-heading h1,
+    .dark-heading h2, .light-heading h2, .clear-heading h2,
+    .dark-heading h3, .light-heading h3, .clear-heading h3 {
+        font-family: Whitney-Book;
+        letter-spacing: 3px;
+        font-style:normal;
+        line-height: 3em;
+        text-transform: uppercase;
+    }
+
+    .dark-copy, .light-copy, .clear-copy, .answers, .questions {
+        font-family: var(--family-open-sans);
+        line-height:var(--copy-line-height);
+        text-align: left;
+    }
+
+ /*   .tall-prompt {
+        display:block;
+        float:left;
+        font-size:4em;
+        text-align:center;
+        padding-top:1em;
+        font-family: "Monument-Valley";
+        width: 100%;
+    }*/
+
+    .answers, .questions  {
+        max-width: 600px;
+        margin:2em auto;
     }
 
     .questions {
@@ -280,16 +309,7 @@ and (min-width: 1920px) {
         font-weight:600;
     }
 
-    .headings-dark, .text-dark, .text-dark a, .answers, .questions  {
-        color: var(--copy-color-dark);
-        background-color: white;
-    }
-
-    .headings-light, .text-light, .text-light a  {
-        color: var(--copy-color-light);
-    }
-
-    .text-dark img, .text-clear img, .text-light img {
+    .images img {
         max-width:100%;
         height:auto;
     }

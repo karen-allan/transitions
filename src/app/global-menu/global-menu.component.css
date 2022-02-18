@@ -28,7 +28,7 @@ select all elements that is preceded by the former selector.
 and (min-width: 240px)
 and (max-width: 1279px) {
 
-  .header-large {
+  .header-desktop {
     display: none;
   }
 
@@ -314,10 +314,10 @@ and (orientation: landscape) {
   }
 
   /* header large has slogan on top and main-menu on bottom - cant be declared in global */
-  .header-large {
+  .header-desktop {
     display: inline-grid;
     grid-template-columns: 100%;
-    grid-template-rows:var(--header-large-slogan-height) var(--header-large-menu-height);
+    grid-template-rows:var(--header-desktop-slogan-height) var(--header-desktop-menu-height);
     width: 100%;
     background-color: white;
     border-top: 1px solid slategray;
@@ -332,26 +332,29 @@ and (orientation: landscape) {
     border-left: 1px solid #d7e0e7;
     border-right: 1px solid #d7e0e7;
     margin:auto;
-    width:var(--header-large-slogan-width);
-    height: var(--header-large-slogan-height);
+    width:var(--header-desktop-slogan-width);
+    height: var(--header-desktop-slogan-height);
     background: url("src/assets/images/headers/transitionsInEnergyHeader.jpg")  center no-repeat;
     background-size:auto;
   }
 
-  .menu-large {
+  .top-menu {
     display:grid;
     grid-row: 2;
     background-color: var(--color-darkest-blue);
   }
 
-  .menu-items-large {
+  .top-menu-items {
     display: inline-grid;
     margin:auto;
-    width:var(--header-large-slogan-width);
-    height: var(--header-large-menu-height);
+    width:var(--header-desktop-slogan-width);
+    height: var(--header-desktop-menu-height);
     grid-template-columns: repeat(5, 20%);
-  }
 
+  }
+  .selectedItem, .unselectedItem a {
+    font-size:0.85em;
+  }
 }
 
 
@@ -362,21 +365,18 @@ and (orientation: landscape) {
   .slogan {
     align-content: center;
     margin:auto;
-    /*background: url("src/assets/images/headers/transitionsInEnergyHeader.jpg")  center no-repeat;*/
   }
 
-  .selectedItem, .unselectedItem a, .selectedItem a {
+  /* header-desktop and header-mobile are not placed here as they are conditional not global */
+
+  .selectedItem, .unselectedItem a {
     display:grid;
     font-family: var(--family-global);
     color:whitesmoke;
     justify-content: center;
-    height:var(--header-large-menu-height);
+    height:var(--header-desktop-menu-height);
     align-content: center;
     font-weight:800;
-  }
-
-  .selectedItem, .unselectedItem a {
-    font-size:0.85em;
   }
 
   .unselectedItem a {
@@ -388,6 +388,7 @@ and (orientation: landscape) {
   .selectedItem {
     cursor: default;
     background-color: var(--color-light-blue);
+    border:thin solid var(--color-off-white);
   }
 }
 

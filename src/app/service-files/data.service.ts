@@ -138,9 +138,51 @@ export class DataService {
     return of(ELEMENTS.find(elem => elem.id === id));
   }
 
+  // ******************** GET MERIDIANS *************************
+  getMeridians(): Observable<Meridian[]> {
+    return of(MERIDIANS);
+  }
+
   // ******************** GET SELECTED MERIDIAN *************************
   getSelectedMeridian(id: number): Observable<Meridian> {
     // @ts-ignore
     return of(MERIDIANS.find(mer => mer.id == id));
+  }
+
+  // ******************** TRACE MERIDIAN CYCLE *************************
+  traceMeridianCycleStartAt(id: number): Observable<Meridian> {
+    // @ts-ignore
+    return of(MERIDIANS.find(meridian => meridian.id === id));
+  }
+
+  // ******************** GET CURRENT MERIDIAN  *************************
+  // @ts-ignore
+  getMeridianForCurrentHour(hour: number): Observable<Meridian> {
+    for (var meridian of MERIDIANS) {
+      // @ts-ignore
+      if (meridian.end_hour < meridian.start_hour) {
+        // The meridian's timeframe spans midnight
+        // Need to check 2 conditions:
+        // - start hour to midnight
+        // - zero hour (midnight) to end_hour
+        // @ts-ignore
+        if ((meridian.start_hour <= hour) && (hour <= 24)) {
+          // Hour between start hour and midnight
+          return of(meridian)
+        }
+        // @ts-ignore
+        if ((hour >= 0) && (hour < meridian.end_hour)) {
+          // Hour between midnight and end_hour
+          return of(meridian)
+        }
+      } else {
+        // The meridian's timeframe has a normal time span - start hour is less than end hour
+        // @ts-ignore
+        if ((meridian.start_hour <= hour) && (meridian.end_hour > hour)) {
+          //alert("selected meridian hour is " + meridian.name)
+          return of(meridian)
+        }
+      }
+    }
   }
 }

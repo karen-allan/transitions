@@ -16,12 +16,13 @@
   --color-dark-blue:#5a7d9f;
   --color-darkest-blue:#183552;
 
-  --color-off-white:#f5f5f5;
+  --color-off-white:#f7efef;
   --color-white:#FFFFFF;
 
   --color-grey:#666161;
   --color-dark-grey: #878787;
 
+  --color-lightest-pink:#fae8ed;
   --color-light-pink:#ffd1dc;
   --color-dark-pink:#d8699d;
 
@@ -50,14 +51,14 @@
   --copy-banana-mobile-land-font-size:.8em;
   --copy-tablet-ipad-port-font-size:.9em;
   --copy-tablet-ipad-land-font-size:1em;
-  --copy-laptop-desktop-font-size:1.1em;
+  --copy-laptop-desktop-font-size:1.8em;
 
   --h1-banana-mobile-port-font-size:1.1em;
   --h1-banana-mobile-land-font-size:1.2em;
   --h1-tablet-ipad-port-font-size:1.3em;
   --h1-tablet-ipad-land-font-size:1.4em;
   --h1-laptop-font-size:1.5em;
-  --h1-desktop-font-size:2.0em;
+  --h1-desktop-font-size:1.7em;
 
   --h2-banana-mobile-port-font-size:1em;
   --h2-banana-mobile-land-font-size:1.1em;
@@ -99,7 +100,7 @@
 
   --topic-laptop-font-size:3.3em;
 
-  --topic-desktop-font-size:3.0em;
+  --topic-desktop-font-size:2.0em;
 
   /* BELOW IS WITH FAMILY GLOBAL */
   --vertical-banana-port-font-size:.2em;
@@ -236,11 +237,12 @@
   --vertical-heading-line-height:120%;
 
   /* DESKTOP MENU ROW HEIGHTS */
-  --header-large-slogan-width:1024px;
-  --header-large-slogan-height:110px;
-  --header-large-menu-height:40px;
-  --header-large-sub-menu-height:45px;
-  --header-large-topic-menu-height:40px;
+  --header-desktop-slogan-width:1024px;
+  --header-desktop-slogan-height:110px;
+
+  --header-desktop-menu-height:40px;
+  --header-desktop-sub-menu-height:45px;
+  --header-desktop-topic-menu-height:50px;
 
   /* HOME TOP OF PAGE BACKGROUND IMAGE HEIGHTS*/
   --banana-port-home-image-height:122px; /* 240 x 122 */
@@ -302,7 +304,7 @@
   /* 1152px GRID AREA WIDTH and CIRCLE BKGRND IS 930 x 930  */
   /*--ele-whl-large-cols: repeat(3, 384px);*/
   --ele-whl-large-cols: 1fr 1fr 1fr;
-  --ele-whl-large-rows: 200px 200px 250px;
+  --ele-whl-large-rows: 180px 180px 150px 180px;
 
   /*--ele-whl-large-rows: repeat(3, 300px);*/
   --ele-whl-large-button: 170px;
@@ -440,15 +442,6 @@
     margin:auto;
   }
 
-  /* EXAMPLE OF LAYOUT
-      <app-global-menu [menuItemId]='menuItemId'></app-global-menu> (USES #HEADERS)
-      <app-global-headers [detailHeaderName]="detailHeaderName" [title]="title"></app-global-headers> (USES #HEADERS)
-      <div class="content-container"> (brings it into 1280 max)
-          <app-about-overview [title]="title">  </app-about-overview> (overviews start with content-inner)
-      </div>
-      <app-footer></app-footer> (USES #FOOTERS)
-  */
-
   /*the headers, footers and container fill the maximum width of 1920  */
   #headers, #footers, #container {
     display: block;
@@ -463,7 +456,6 @@
     width:100%;
     max-width:1280px;
     margin:auto;
-    /*background-color: gold;*/
   }
 
   /* The actual content is 1152 - 90% of 1280 max */
@@ -471,9 +463,10 @@
     display: block;
     float:left;
     max-width:1152px;
+    margin:1em auto;
     width: 90%;
     margin:1.5em 5%;
-    /*border:thin solid blue;*/
+    border:thick solid gold;
   }
 
   .content-no-margins {
@@ -482,35 +475,12 @@
     max-width:1152px;
     width: 90%;
     margin:0em 5%;
-    /*border:thin solid blue;*/
+    border:thick solid pink;
   }
 
-  .e-grid {
-    max-width:1152px;
-    margin:auto;
-  }
-
-  /* Images and videos sit inside text or other parent*/
-  .images, .content-videos  {
-    display:block;
-    width:100%;
-    float:none;
-    margin:1em auto;
-  }
-
-  .images img {
+  .content img {
     max-width:100%;
     height:auto;
-  }
-
-  /* QUESTION BREAK */
-  .line-break-block {
-    display:block;
-    background-color: white;
-    border-bottom:dotted thick var(--color-light-blue);
-    width:80%;
-    margin:auto;
-    height:1em;
   }
 
   /* LIST FORMATS */
@@ -556,6 +526,10 @@
 
   .text-center {
     text-align: center;
+  }
+
+  .text-left {
+    text-align: left;
   }
 
   /* GRID ALIGN VERTICALLY */
@@ -617,9 +591,7 @@
     text-align: right;
   }
 
-
   /* COLORS */
-
   .color-white {
     color:#ffffff;
   }
@@ -774,8 +746,6 @@
   .pad-left-3 {
     padding-left:3em;
   }
-
-
 
   /* CSS ICONS */
   .yin-yang {
@@ -1211,20 +1181,7 @@
     }
   }
 
-  @font-face {
-    font-family: Ostrich-Heavy;
-    src: url("../fonts/OstrichSans-Heavy.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: Alien-3D-Italic;
-    src: url("../fonts/AlienLeague3DItalic-nz4R.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: Alien-3D;
-    src: url("../fonts/AlienLeagueIi3D-2aB3.otf") format("opentype");
-  }
+  /* FONTS */
 
   @font-face {
     font-family: Green-Hostel;
@@ -1232,9 +1189,77 @@
   }
 
   @font-face {
+    font-family: High-Billion;
+    src: url("../fonts/HighBillionSans-eZ1Kx.otf") format("opentype");
+  }
+
+  @font-face {
     font-family: Monument-Valley;
     src: url("../fonts/MonumentValley12-X55o.otf") format("opentype");
   }
+
+  @font-face {
+    font-family: Ostrich-Heavy;
+    src: url("../fonts/OstrichSans-Heavy.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: ReneB-Book;
+    src: url("../fonts/ReneBiederMilliardBook.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: ReneB-Book-Italic;
+    src: url("../fonts/ReneBiederMilliardBookItalic.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: ReneB-Extra-Light;
+    src: url("../fonts/ReneBiederMilliardExtraLight.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: ReneB-Hairline;
+    src: url("../fonts/ReneBiederMilliardHairline.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: ReneB-Light;
+    src: url("../fonts/ReneBiederMilliardLight.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: ReneB-Medium;
+    src: url("../fonts/ReneBiederMilliardMedium.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: ReneB-Thin;
+    src: url("../fonts/ReneBiederMilliardThin.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: Whitney-Book;
+    src: url("../fonts/whitneybooksc.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: Whitney-Light;
+    src: url("../fonts/whitneylightsc.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: Whitney-Medium;
+    src: url("../fonts/whitneymediumsc.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: Whitney-Medium-Italic;
+    src: url("../fonts/whitneymediumitalicsc.otf") format("opentype");
+  }
+
+
+
 
   .sphere {
     width: 500px;

@@ -32,6 +32,7 @@
               "src/assets/css/copy.css",
               "src/assets/css/forms.css",
               "src/assets/css/lists.css",
+              "src/assets/css/element.css",
               "src/assets/css/template.css"
             ],
             "scripts": []
@@ -104,6 +105,7 @@
               "src/assets/css/copy.css",
               "src/assets/css/forms.css",
               "src/assets/css/lists.css",
+              "src/assets/css/element.css",
               "src/assets/css/template.css"
             ],
             "scripts": []

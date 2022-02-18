@@ -11,6 +11,7 @@ export interface Element {
     end_hour: number;
     start_hour_2?: number;
     end_hour_2?: number;
+    meridians: string;
     element_1?:string;
     element_2?:string;
     element_3?:string;
@@ -70,8 +71,7 @@ export interface Element {
 
     summary_yin?:string;
     summary_yang?:string;
-    yin:string;
-    yang:string;
+
     power_animals?: string;
     attributes: string;
     challenge?: string;

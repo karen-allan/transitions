@@ -1,28 +1,28 @@
 import { Meridian} from './meridian';
 
 import {SPInstruction, STInstruction, HTInstruction, SIInstruction, BLInstruction, KIInstruction, PCInstruction,
-        TWInstruction, GBInstruction, LRInstruction, LUInstruction, LIInstruction, CTInstruction, GVInstruction}
+        TWInstruction, GBInstruction, LRInstruction, LUInstruction, LIInstruction}
 from "./tracing-instructions";
 
-import {CentralMeridianBalance, GoverningMeridianBalance, StomachMeridianBalance, SpleenMeridianBalance, HeartMeridianBalance,
+import {StomachMeridianBalance, SpleenMeridianBalance, HeartMeridianBalance,
     SmallIntestineMeridianBalance, BladderMeridianBalance, KidneyMeridianBalance, PericardiumMeridianBalance, TripleWarmerMeridianBalance,
-    GallbladderMeridianBalance, LiverMeridianBalance, LungMeridianBalance, LargeIntestineMeridianBalance}
-    from "./meridian-balances";
+    GallbladderMeridianBalance, LiverMeridianBalance, LungMeridianBalance, LargeIntestineMeridianBalance
+} from "./meridian-balances";
 
 import {
     StomachMeridianImbalance, BladderMeridianImbalance, GallbladderMeridianImbalance, HeartMeridianImbalance, KidneyMeridianImbalance,
     LargeIntestineMeridianImbalance, LiverMeridianImbalance, LungMeridianImbalance, PericardiumMeridianImbalance, SmallIntestineMeridianImbalance,
-    SpleenMeridianImbalance, TripleWarmerMeridianImbalance, CentralMeridianImbalance, GoverningMeridianImbalance
+    SpleenMeridianImbalance, TripleWarmerMeridianImbalance
 } from "./meridian-physical-imbalances";
 
 import {StomachChineseMedicine, SpleenChineseMedicine, HeartChineseMedicine, SmallIntestineChineseMedicine, BladderChineseMedicine,
     KidneyChineseMedicine, PericardiumChineseMedicine, TripleWarmerChineseMedicine, GallbladderChineseMedicine, LiverChineseMedicine,
-    LungChineseMedicine, LargeIntestineChineseMedicine, CentralChineseMedicine, GoverningChineseMedicine}
+    LungChineseMedicine, LargeIntestineChineseMedicine}
     from "./chinese-medicine"
 
 import {StomachWesternMedicine, SpleenWesternMedicine, HeartWesternMedicine, SmallIntestineWesternMedicine, BladderWesternMedicine,
     KidneyWesternMedicine, PericardiumWesternMedicine, TripleWarmerWesternMedicine, GallbladderWesternMedicine, LiverWesternMedicine,
-    LungWesternMedicine, LargeIntestineWesternMedicine, CentralWesternMedicine, GoverningWesternMedicine}
+    LungWesternMedicine, LargeIntestineWesternMedicine}
     from "./westernMedicine";
 
 import {StomachAffirmation, SpleenAffirmation, HeartAffirmation, SmallIntestineAffirmation, BladderAffirmation, KidneyAffirmation,
@@ -1001,7 +1001,9 @@ export const MERIDIANS: Meridian[] = [
         acu_points_receiver_control_pic:'assets/images/meridians/bladder/acuPts-BL-CTR-SI.jpg',
 
 
-    },
+    }
+
+    /*,
 
     {id: 13,
         name: 'Central',
@@ -1047,7 +1049,7 @@ export const MERIDIANS: Meridian[] = [
         nl_pic:'assets/images/neuroLymphatics/neuroLymphaticsGV.jpg',
         meridian_element_pic: 'assets/images/elements/governing.jpg',
         cen_gov_icon: 'assets/images/meridians/noElement.png'
-    },
+    },*/
 
 ];
 

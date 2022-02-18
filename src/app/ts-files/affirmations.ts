@@ -1,6 +1,4 @@
 import {Affirmation} from "./affirmation";
-import {ElementPhysicalDeficient} from "./element-physical-deficient";
-
 
 let STAffirm: string[] = [
         'CENTRAL : I center myself in Spirit',

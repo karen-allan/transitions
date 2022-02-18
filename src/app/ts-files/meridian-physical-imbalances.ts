@@ -200,7 +200,8 @@ let BladderImbalance: string[] = [
     "Edema",
     "Retention of urine",
     'Stiff neck",' +
-    'Lower back and buttocks pain',
+    'Lower back pain',
+    'Buttock pain',
     "Impatient",
     "Can not relax",
     "Intolerant",

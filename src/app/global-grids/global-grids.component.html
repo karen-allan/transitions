@@ -5,7 +5,7 @@
             <div class="grid-2-cols-2-rows">
                 <div *ngFor="let subject of homeSubjects">
                     <div class="item-col">
-                        <a routerLink="{{subject.url}}">
+                        <a router="{{subject.url}}">
                             <p>{{subject.title}}</p>
                             <img src={{subject.picture}}/>
                         </a>
@@ -21,7 +21,39 @@
             <div class="grid-2-cols-1-row">
                 <div *ngFor="let subject of aboutSubjects">
                     <div class="item-col">
-                        <a routerLink="{{subject.url}}">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- ABOUT ENERGY -->
+    <ng-container *ngIf="detailListName === 'list-about-energy'">
+        <div class="linked-grid">
+            <div class="grid-2-cols-1-row">
+                <div *ngFor="let subject of aboutEnergySubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- ABOUT DOULA -->
+    <ng-container *ngIf="detailListName === 'list-about-doula'">
+        <div class="linked-grid">
+            <div class="grid-2-cols-1-row">
+                <div *ngFor="let subject of aboutDoulaSubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
                             <p>{{subject.title}}</p>
                             <img src={{subject.picture}}/>
                         </a>
@@ -37,7 +69,7 @@
             <div class="grid-2-cols-1-row">
                 <div *ngFor="let subject of supportSubjects">
                     <div class="item-col">
-                        <a routerLink="{{subject.url}}">
+                        <a router="{{subject.url}}">
                             <p>{{subject.title}}</p>
                             <img src={{subject.picture}}/>
                         </a>
@@ -53,7 +85,7 @@
             <div class="grid-3-cols-2-rows">
                 <div *ngFor="let subject of energySubjects">
                     <div class="item-col">
-                        <a routerLink="{{subject.url}}">
+                        <a router="{{subject.url}}">
                             <p>{{subject.title}}</p>
                             <img src={{subject.picture}}/>
                         </a>
@@ -62,7 +94,6 @@
             </div>
         </div>
     </ng-container>
-
 
     <!-- DOULA -->
     <ng-container *ngIf="detailListName === 'list-doula'">
@@ -70,7 +101,7 @@
             <div class="grid-3-cols-2-rows">
                 <div *ngFor="let subject of doulaSubjects">
                     <div class="item-col">
-                        <a routerLink="{{subject.url}}">
+                        <a router="{{subject.url}}">
                             <p>{{subject.title}}</p>
                             <img src={{subject.picture}}/>
                         </a>
@@ -80,15 +111,174 @@
         </div>
     </ng-container>
 
-    <!-- ELEMENT IMBALANCES AND CORRECTIONS
-    SELECTED ELEMENT LISTS ARE WITHIN THE SELECTED ELEMENT ATTR, STATE, CORR HTML for that ELEMENT -->
+    <!-- CHOOSE YOUR REPS -->
+    <ng-container *ngIf="detailListName === 'list-representative'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-2-rows">
+                <div *ngFor="let subject of repsSubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- ADVOCATE FOR YOURSELF -->
+    <ng-container *ngIf="detailListName === 'list-advocate'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-2-rows">
+                <div *ngFor="let subject of advocateSubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- PATIENT CARE -->
+    <ng-container *ngIf="detailListName === 'list-patient'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-2-rows">
+                <div *ngFor="let subject of patientSubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- CAREGIVER CARE -->
+    <ng-container *ngIf="detailListName === 'list-caregiver'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-2-rows">
+                <div *ngFor="let subject of caregiverSubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- LEGACY -->
+    <ng-container *ngIf="detailListName === 'list-legacy'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-2-rows">
+                <div *ngFor="let subject of legacySubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- CEREMONY -->
+    <ng-container *ngIf="detailListName === 'list-ceremony'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-2-rows">
+                <div *ngFor="let subject of ceremonySubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- ANXIETY -->
+    <ng-container *ngIf="detailListName === 'list-anxiety'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-1-row">
+                <div *ngFor="let subject of anxietySubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- ANXIETY -->
+    <ng-container *ngIf="detailListName === 'list-burnout'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-1-row">
+                <div *ngFor="let subject of burnoutSubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- PAIN -->
+    <ng-container *ngIf="detailListName === 'list-pain'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-1-row">
+                <div *ngFor="let subject of painSubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- MOVE ENERGY -->
+    <ng-container *ngIf="detailListName === 'list-move'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-1-row">
+                <div *ngFor="let subject of moveSubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- ELEMENT -->
     <ng-container *ngIf="detailListName === 'list-element'">
         <div class="linked-grid">
             <div class="grid-3-cols-1-row">
                 <div *ngFor="let subject of elementSubjects">
                     <div class="item-col">
-                        <a routerLink="[subject.url, selectedElement.id]">
-                            <p>{{subject.title}} {{selectedElement.name}}</p>
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
                             <img src={{subject.picture}}/>
                         </a>
                     </div>
@@ -97,33 +287,14 @@
         </div>
     </ng-container>
 
-    <!-- LEARN -->
-    <!--  <ng-container *ngIf="detailListName === 'list-help'">
-          <div class="linked-grid">
-              <div class="grid-3-cols-4-rows">
-                  <div *ngFor="let subject of helpSubjects">
-                      <div class="item-col">
-                          <a routerLink="{{subject.url}}">
-                              <p>{{subject.title}}</p>
-                              <img src={{subject.picture}}/>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </ng-container>-->
-
-
-
-
-    <!-- MERIDIAN IMBALANCES AND CORRECTIONS -->
-   <!-- <ng-container *ngIf="detailListName === 'list-meridian'">
+    <!-- MERIDIANS -->
+    <ng-container *ngIf="detailListName === 'list-meridian'">
         <div class="linked-grid">
             <div class="grid-3-cols-1-row">
                 <div *ngFor="let subject of meridianSubjects">
                     <div class="item-col">
-                        <a [routerLink]="[subject.url, selectedMeridian.id]">
-                            <p>{{subject.title}} {{selectedMeridian.name}}</p>
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
                             <img src={{subject.picture}}/>
                         </a>
                     </div>
@@ -131,7 +302,53 @@
             </div>
         </div>
     </ng-container>
--->
 
+    <!-- BOOK OVERVIEW -->
+    <ng-container *ngIf="detailListName === 'list-book'">
+        <div class="linked-grid">
+            <div class="grid-2-cols-1-row">
+                <div *ngFor="let subject of bookSubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- BOOK CONSULTATION -->
+    <ng-container *ngIf="detailListName === 'list-book-consult'">
+        <div class="linked-grid">
+            <div class="grid-2-cols-1-row">
+                <div *ngFor="let subject of bookConsultSubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+
+    <!-- BOOK SESSION -->
+    <ng-container *ngIf="detailListName === 'list-book-session'">
+        <div class="linked-grid">
+            <div class="grid-2-cols-1-row">
+                <div *ngFor="let subject of bookSessionSubjects">
+                    <div class="item-col">
+                        <a router="{{subject.url}}">
+                            <p>{{subject.title}}</p>
+                            <img src={{subject.picture}}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
 </div>
 

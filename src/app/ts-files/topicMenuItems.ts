@@ -1,8 +1,8 @@
 import {TopicMenuItem} from './topicMenuItem';
 
 export const TOPIC_MENU_ITEMS: TopicMenuItem[] = [
-    {id: 310, parent_id: 32, title: 'PLANNING AHEAD', url: 'doulaHelp'},
-    {id: 311, parent_id: 32, title: 'CHOOSE YOUR ADVOCATE', url: 'eolTopicRepresentatives'},
+    {id: 310, parent_id: 32, title: 'PLANNING AHEAD', url: 'eolDoulaHelp'},
+    {id: 311, parent_id: 32, title: 'PICK A REPRESENTATIVE', url: 'eolTopicRepresentatives'},
     {id: 312, parent_id: 32, title: 'ADVOCATE FOR YOURSELF', url: 'eolTopicAdvocate'},
     {id: 313, parent_id: 32, title: 'CARE AT BEDSIDE', url: 'eolTopicPatientCare'},
     {id: 314, parent_id: 32, title: 'HELP FOR CAREGIVERS', url: 'eolTopicCaregiverCare'},

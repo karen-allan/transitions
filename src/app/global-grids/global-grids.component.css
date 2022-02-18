@@ -110,7 +110,8 @@ and (min-width: 1920px) {
     .grid-2-cols-1-row, .grid-2-cols-2-rows, .grid-2-cols-3-rows, .grid-2-cols-6-rows,
     .grid-3-cols-1-row, .grid-3-cols-2-rows, .grid-3-cols-4-rows, .grid-4-cols-3-rows, .grid-6-cols-2-rows {
         width:100%;
-        font-family: var(--family-script);
+        /*font-family: var(--family-script);*/
+        font-family:ReneB-Thin;
         display:inline-grid;
     }
 
@@ -177,7 +178,7 @@ and (min-width: 1920px) {
     }
 
     .item-col p {
-        font-family:var(--family-slogan);
+        font-size:1.1em;
         color:var(--color-dark-purple);
         font-weight:800;
     }

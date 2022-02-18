@@ -1,17 +1,12 @@
 <div id="headers">
-    <div class="header-large">
+    <div class="header-desktop">
         <div class="slogan"></div>
-        <div class="menu-large">
-            <div class="menu-items-large">
+
+        <div class="top-menu">
+            <div class="top-menu-items">
                 <div *ngFor="let menuItem of menuItems">
                     <div *ngIf="menuItemId==menuItem.id">
-<!--                        <div *ngIf="menuItemId==1">-->
-                            <div class="selectedItem">{{menuItem.title}}</div>
-<!--                        </div>-->
-                      <!--  <div *ngIf="menuItemId > 1">
-                            <div class="selectedItem"><a routerLink='/{{menuItem.url}}'>{{menuItem.title}}</a>
-                            </div>
-                        </div>-->
+                        <div class="selectedItem">{{menuItem.title}}</div>
                     </div>
 
                     <div *ngIf="menuItemId!=menuItem.id">
@@ -27,6 +22,7 @@
 
 <div class="header-mobile">
     <div class="slogan"></div>
+
     <div class="smart-menu">
         <div class="mobile-menu">
             <input type="checkbox" class="toggler">

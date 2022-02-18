@@ -26,12 +26,12 @@ export const ELEMENTS: Element[] = [
 
         time_range_yang_1:'3:00 pm to 5:00 pm (Bladder)',
         time_range_yin_1:'5:00 pm to 7:00 pm (Kidney)',
-
+        meridians: 'Kidney (Yin) and Bladder (Yang)',
         element_1:'BLADDER (3:00pm-5:00pm)',
         element_2:'KIDNEY (5:00pm-7:00pm)',
 
         sedates:'WATER CALMS METAL',
-        sedates_metaphor:'Water takes excess Metals that serve to furthur enrich Water.',
+        sedates_metaphor:'Water takes excess Metals that serve to further enrich Water.',
 
         strengthens:'WATER TONES WOOD',
         strengthens_metaphor:'Water is essential for Wood to grow, it nourishes and feeds Wood.',
@@ -61,15 +61,13 @@ export const ELEMENTS: Element[] = [
 
         season:'winter',
 
-        summary_yin:'YIN Water is gentle and yielding when it flows over rocks in a stream',
-        summary_yang:'YANG Water with pressure can create dangerous (YANG) tsunamis and floods.',
+        summary_yin:'YIN WATER is gentle and yielding when it flows over rocks in a stream. It ' +
+            'is deep, cold, still and mysterious like the bottom of a well.',
+        summary_yang:'YANG WATER is dynamic like wild rapids and overflowing waterfalls. With pressure can create dangerous tsunamis and floods.',
 
-        yin:'YIN Water is deep, cold, still and mysterious like the bottom of a well.',
-        yang:'YANG Water is dynamic like wild rapids and overflowing waterfalls.',
-
-        power_animals:'Water\'s power animals are the Water Turtle (signifying longevity and strength) and the Deer (signifying sexual vigor and vitality).',
-        attributes:'Water element supports our genetic background, reproduction, instrinct, willpower, vision and dreams.',
-        challenge:'If we are honest with our emotions (Metal) we are free to be creative (Water).',
+        power_animals:'the Water Turtle (signifying longevity and strength) and the Deer (signifying sexual vigor and vitality).',
+        attributes:'our genetic background, reproduction, instinct, willpower, vision and dreams.',
+        challenge:'If we are honest with our emotions (METAL) we are free to be creative (WATER).',
         governs:'Bladder, Kidneys, bones, marrow, brain, fluids and teeth.',
         archetypes:'The Philosopher, The Thinker, The Prince or Princess',
 
@@ -146,6 +144,8 @@ export const ELEMENTS: Element[] = [
         time_range_yang_1:'11:00 pm to 1:00 am (Gallbladder)',
         time_range_yin_1:'1:00 am to 3:00 am (Liver)',
 
+        meridians: 'Liver (Yin) and Gallbladder (Yang)',
+
         element_1:'GALLBLADDER (11:00pm-1:00am)',
         element_2:'LIVER (1:OOam-3:00am)',
 
@@ -158,15 +158,15 @@ export const ELEMENTS: Element[] = [
         controls:'WOOD CONTROLS EARTH',
         controls_metaphor:'Wood anchors Earth',
 
-        sedates_meridian1:'Wood YIN Liver takes excess energy from Water YIN Kidney.',
+        sedates_meridian1:'WOOD YIN Liver takes excess energy from Water YIN Kidney.',
         sedates_meridian1_points:'Liver 1 (LR-1) sedates Kidney 1 (KI-1)',
 
-        sedates_meridian2:'Wood YANG Gallbladder takes excess energy from Water YANG Bladder.',
+        sedates_meridian2:'WOOD YANG Gallbladder takes excess energy from Water YANG Bladder.',
         sedates_meridian2_points:'Gallbladder 41 (GB-41) sedates Bladder 65 (BL-65)',
 
         element_wheel_diagram_sed:'assets/images/elements/woodSedWater.jpg',
 
-        strengthens_meridian1:'Wood YIN Liver sends energy to Fire YIN Heart.',
+        strengthens_meridian1:'WOOD YIN Liver sends energy to Fire YIN Heart.',
         strengthens_meridian1_points:'Liver 1 (LR-1) sends energy to Heart 9 (HT-9).',
 
         strengthens_meridian2:'Wood YIN Liver also sends energy to Fire YIN Pericardium.',
@@ -188,14 +188,15 @@ export const ELEMENTS: Element[] = [
 
         season:'spring',
 
-        summary_yin:'Wood can emerge from the Earth (YIN) as a new sapling struggling against the elements',
-        summary_yang:'Wood can also be powerful and ancestral like an old growth tree in an ancient forest.',
+        summary_yin:'WOOD YIN emerges from the Earth as a new sapling struggling against the elements. It is YIN WOOD is ' +
+            'a fallen tree that creates a bridge across a river, while sending down roots to replenish itself.',
+        summary_yang:'WOOD YANG is powerful and ancestral like an old growth tree in an ancient forest. It forcefully ' +
+            'reaches towards heaven while also powerfully spreading it\'s roots into the Earth.',
 
-        yin:'Yin Wood is a fallen tree that creates a bridge across a river, while sending down roots to replenish itself.',
-        yang:'Yang Wood forcefully reaches towards heaven while also powerfully spreading it\'s roots into the Earth.',
 
-        power_animals:'Wood\'s power animal is the Eastern mythical Dragon. Unlike western dragons, these dragons bring joy and good luck.',
-        attributes:'Wood element supports our intelligence, potential for new skills and growth.',
+
+        power_animals:'the Eastern mythical Dragon. Unlike western dragons, these dragons bring joy and good luck.',
+        attributes:'our intelligence, potential for new skills and growth.',
         challenge:'If we have creative ideas (Water) they can be put into plans of action (Wood).',
         governs:'Gallbladder, Liver, eyes, tendons, muscles, ligaments, nails.',
         archetypes:'The Pioneer, The Visionary, The Warrior',
@@ -281,6 +282,8 @@ export const ELEMENTS: Element[] = [
         time_range_yang_2:'7:00 pm to 9:00 pm (Pericardium)',
         time_range_yin_2:'9:00 pm to 11:00 am (Triple Warmer)',
 
+        meridians: 'Heart (Yin), Pericardium (Yin), Small Intestine (Yang) and Triple Warmer (Yang)',
+
         element_1:'HEART (11:00am-1:00pm)',
         element_2:'SMALL INTESTINE (1:00pm-3:00pm)',
         element_3:'PERICARDIUM (7:00pm-9:00pm)',
@@ -318,14 +321,16 @@ export const ELEMENTS: Element[] = [
 
         season:'summer',
 
-        summary_yin:'YIN Fire is like deeply dark embers going cold in a fireplace.',
-        summary_yang:'YANG Fire is the flickering sparks of a newly lighted crackling fire.',
+        summary_yin:'YIN Fire is the fluid layer of liquid iron and nickel living in the Earth\'s outer core. It is ' +
+            'the deeply dark embers going cold in a fireplace.',
 
-        yin:'YIN Fire is the fluid layer of liquid iron and nickel living in the Earth\'s outer core.',
-        yang:'YANG Fire is the volcanic lava, tephra, and steam that erupts on to the Earth\'s surface.',
 
-        power_animals:'Fire power animals are the mythical Phoenix, the Hummingbird, Grosbeak and other red-throated birds.',
-        attributes:'Fire element supports our spirit, consciousness, wisdom, intuition and ability to communicate effectively.',
+
+        summary_yang:'YANG Fire is the flickering sparks of a newly lighted crackling fire. It is the volcanic lava, ' +
+            'tephra, and steam that erupts on to the Earth\'s surface.',
+
+        power_animals:'the mythical Phoenix, the Hummingbird, Grosbeak and other red-throated birds.',
+        attributes:'our spirit, consciousness, wisdom, intuition and ability to communicate effectively.',
         challenge:'If we act on our dreams (Wood) we can be free to feel uplifted and joyful (Fire).',
         governs:'Heart, Small Intestine, blood circulation, veins, arteries and blood vessels.',
         archetypes:'The Wizard, The Joker, The Party Animal',
@@ -409,6 +414,8 @@ export const ELEMENTS: Element[] = [
         time_range_yang_1:'7:00 am to 9:00 am (Stomach)',
         time_range_yin_1:'9:00 am to 11:00 am (Spleen)',
 
+        meridians: 'Spleen (Yin) and Stomach (Yang)',
+
         element_1:'STOMACH (7:00am-9:00am)',
         element_2:'SPLEEN (9:00am-11:00am)',
 
@@ -449,14 +456,14 @@ export const ELEMENTS: Element[] = [
 
         season:'between spring-summer and summer-fall.',
 
-        summary_yin:'YIN Earth grows the grass that invites you to lay down upon it and rest.',
-        summary_yang:'YANG Earth moves itself ever upwards to create mountains.',
+        summary_yin:'YIN Earth supplies the nutrients to help newly planted seeds grow. It' +
+            ' grows the grass that invites you to lay down upon it and rest.',
+        summary_yang:'YANG Earth moves itself ever upwards to create mountains. It can tear itself apart creating deadly earthquakes.',
 
-        yin:'YIN Earth supplies the nutrients to help newly planted seeds grow.',
-        yang:'YANG Earth can tear itself apart creating deadly earthquakes.',
 
-        power_animals:'Earth\'s power animals are the Pheasant, Chicken, Turkey and other domestic farm animals.',
-        attributes:'Earth element supports our authenticity, our solidity, our adaptability and practicality.',
+
+        power_animals:'the Pheasant, Chicken, Turkey and other domestic farm animals.',
+        attributes:'our authenticity, our solidity, our adaptability and practicality.',
         challenge:'If we allow ourselves to live the spirited life we are meant to have (Fire) we then feel and supported (Earth).',
         governs:'Spleen, Pancreas, Stomach and blood.',
         archetypes:'The Mother, The Healer, The Teacher',
@@ -540,6 +547,8 @@ export const ELEMENTS: Element[] = [
         time_range_yang_1:'3:00 am to 5:00 am (Lung)',
         time_range_yin_1:'5:00 am to 7:00 am (Large Intestine)',
 
+        meridians: 'Lung (Yin) and Large Intestine (Yang)',
+
         element_1:'LUNG (3:00am - 5:00am) ',
         element_2:'LARGE INTESTINE (5:00am - 7:00am)',
 
@@ -576,15 +585,16 @@ export const ELEMENTS: Element[] = [
 
         season:'fall',
 
-        summary_yin:'YIN Metal can be a tool that is cold and lifeless when sitting on a shelf.',
-        summary_yang:'YANG Metal is the tool that when used creates magnificent and powerful works of art.',
+        summary_yin:'Yin Metal is like the intricate and magnificent inner workings of a grandfather clock. ' +
+            'It is a tool that is cold and lifeless when sitting on a shelf.',
+        summary_yang:'YANG Metal is the tool that when used creates magnificent and powerful works of art. It' +
+            'can produce great buildings and structures like the skyscrapers that tower over the city.',
 
-        yin:'Yin Metal is like the intricate and magnificent inner workings of a grandfather clock.',
-        yang:'Yang Metal can produce great buildings and structures like the skyscrapers that tower over the city.',
 
-        power_animals:'Metal\'s power animals are the White Tiger. Metal represents all felines, both wild jungle cats ' +
+
+        power_animals:'the White Tiger. Metal represents all felines, both wild jungle cats ' +
             'and playful domestic kittens.',
-        attributes:'Metal supports our refinement and love of aesthetics and our powers of alchemy, ingenuity and creativity. ' ,
+        attributes:'our refinement and love of aesthetics and our powers of alchemy, ingenuity and creativity. ' ,
         challenge:'MINE- CHECK If we can recognize our need for connection (Earth) we can put love into our creations (Metal).',
         governs:'Lungs, Large Intestine, skin and hair.',
         archetypes:'The Queen or King, The Yogi, The Alchemist',

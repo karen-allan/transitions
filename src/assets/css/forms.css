@@ -1114,14 +1114,14 @@ and (min-width: 1920px) {
     }
 
     /* CLIENT PROFILE FORM */
-    .client-profile-form {
+    .client-profile-form, .consultation-form {
         width: 100%;
         display: block;
         float: left;
         background: var(--color-white);
     }
 
-    .client-profile-form h1 {
+    .client-profile-form h1, .consultation-form h1 {
         color: var(--color-dark-blue);
         font-family: var(--family-data);
         text-align: center;

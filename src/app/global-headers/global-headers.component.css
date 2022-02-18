@@ -398,6 +398,7 @@ and (min-width: 1920px) {
     /*border:thin solid green;*/
   }
 
+
   .top-heading-quotes p {
     display:grid;
     width:100%;
@@ -516,53 +517,12 @@ and (min-width: 1920px) {
       background-size: cover;
     }
 
-   /*
+    .energy-know-meridians {
+      background: url("src/assets/images/backgrounds/backgroundKnowMeridians.jpg") no-repeat;
+      background-size: cover;
+    }
 
 
-
-
-
-
-
-
-     .discoverElementAttributes {
-       background: url("src/assets/images/backgrounds/backgroundDiscoverElementsAttributes.jpg") no-repeat;
-       background-size: cover;
-     }
-
-     .discoverElementUnbalanced {
-       background: url("src/assets/images/backgrounds/backgroundDiscoverElementsUnbalanced.jpg") no-repeat;
-       background-size: cover;
-     }
-
-
-
-     .discoverMeridians {
-       background: url("src/assets/images/backgrounds/backgroundDiscoverMeridians.jpg") no-repeat;
-       background-size: cover;
-     }
-
-     .discoverMeridianEffects {
-       background: url("src/assets/images/backgrounds/backgroundDiscoverMeridianImbalances.jpg") no-repeat;
-       background-size: cover;
-     }
-
-     .discoverMeridianCorrections {
-       background: url("src/assets/images/backgrounds/backgroundDiscoverMeridianCorrections.jpg") no-repeat;
-       background-size: cover;
-     }
-
-     .discoverCycle {
-       background: url("src/assets/images/backgrounds/backgroundDiscoverCycle.jpg") no-repeat;
-       background-size: cover;
-     }
-
-
-
-     .sessionCred {
-       background: url("src/assets/images/backgrounds/backgroundSessionCredentials.jpg") no-repeat;
-       background-size: cover;
-     }*/
 
 
 

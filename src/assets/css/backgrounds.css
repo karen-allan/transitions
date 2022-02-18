@@ -230,7 +230,8 @@ and (min-width: 1920px) {
     }
 
     .energy-tip p {
-        font-size:var(--copy-laptop-desktop-font-size);
+        font-size:0.9em;
+    /*var(--copy-laptop-desktop-font-size);*/
     }
 
     .content-videos {
@@ -244,20 +245,12 @@ and (min-width: 1920px) {
 
     .topic-block {
         display:inline-grid;
+        max-width:1152px;
         grid-template-columns: 74% 26%;
         width:100%;
-        max-width:1152px;
-        background-color: var(--color-darkest-purple);
-        color:var(--color-off-white);
-    }
-
-    .topic-white-block {
-        display:inline-grid;
-        grid-template-columns: 74% 26%;
-        width:100%;
-        max-width:1152px;
         background-color: var(--color-off-white);
         color:var(--color-darkest-purple);
+        font-family: Green-Hostel;
     }
 
     .topic-left {
@@ -269,8 +262,7 @@ and (min-width: 1920px) {
 
     .topic-left h1, .topic-left h2, .topic-left h3 {
         display:grid;
-        font-family: Monument-Valley;
-
+        letter-spacing: 3px;
     }
 
     .topic-right {
@@ -296,7 +288,7 @@ and (min-width: 1920px) {
         align-content: center;
         justify-content: center;
         font-family: var(--family-script);
-        color:var(--color-dark-grey);
+        color:var(--color-darkest-gold);
     }
 
     .content-quote p, .content-quote span {

@@ -1,9 +1,46 @@
 import { NgModule } from '@angular/core';
 import {DatePipe} from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
+/* ABOUT MENU FOLDER */
+import { AboutContainerComponent } from './about-menu/about-container/about-container.component';
+
+/* ABOUT DOULA FOLDER */
+import {AboutEolDoulaContainerComponent} from './about-menu/about-doula/about-eol-doula-container/about-eol-doula-container.component';
+import {AboutEolDoulaOverviewComponent} from './about-menu/about-doula/about-eol-doula-overview/about-eol-doula-overview.component';
+
+/* ABOUT ENERGY FOLDER */
+import {AboutEnergyPractContainerComponent} from './about-menu/about-energy/about-energy-pract-container/about-energy-pract-container.component';
+import {AboutEnergyPractOverviewComponent} from './about-menu/about-energy/about-energy-pract-overview/about-energy-pract-overview.component';
+
+import { AboutOverviewComponent } from './about-menu/about-overview/about-overview.component';
+
+/* BOOK MENU FOLDER */
+import { BookConsultContainerComponent } from './book-menu/book-consultation/book-consult-container/book-consult-container.component';
+import { BookConsultOverviewComponent } from './book-menu/book-consultation/book-consult-overview/book-consult-overview.component';
+
+import { BookContainerComponent } from './book-menu/book-container/book-container.component';
+import { BookOverviewComponent } from './book-menu/book-overview/book-overview.component';
+
+import { BookSessionContainerComponent } from './book-menu/book-session/book-session-container/book-session-container.component';
+import { BookSessionOverviewComponent } from './book-menu/book-session/book-session-overview/book-session-overview.component';
+
+/* FORMS */
+import { FormSideMenuComponent } from './book-menu/forms/form-side-menu/form-side-menu.component';
+import { SessionProfileComponent } from './book-menu/forms/form-session/session-profile/session-profile.component';
+import { ConsultProfileComponent } from './book-menu/forms/form-consult/consult-profile/consult-profile.component';
+import { CovidProfileComponent } from './book-menu/forms/form-covid/covid-profile/covid-profile.component';
+
+/* FAQ */
+import { FaqContainerComponent } from './faq-menu/faq-container/faq-container.component';
+import { FaqOverviewComponent } from './faq-menu/faq-overview/faq-overview.component';
+
+/* GLOBAL */
 import { GlobalFooterComponent } from './global-footer/global-footer.component';
 import { GlobalGridsComponent } from './global-grids/global-grids.component';
 import { GlobalHeadersComponent } from './global-headers/global-headers.component';
@@ -11,80 +48,110 @@ import { GlobalMenuComponent } from './global-menu/global-menu.component';
 import { GlobalSubMenuComponent } from './global-sub-menu/global-sub-menu.component';
 import { GlobalTopicMenuComponent } from './global-topic-menu/global-topic-menu.component';
 
-import { MenuAboutComponent } from './menu-about/menu-about.component';
-import { AboutPathContainerComponent } from './menu-about/about-path-container/about-path-container.component';
-import { AboutPathOverviewComponent } from './menu-about/about-path-overview/about-path-overview.component';
+/* HOME MENU FOLDER */
+import {HomeContainerComponent} from './home-menu/home-container/home-container.component';
+import {HomeOverviewComponent} from './home-menu/home-overview/home-overview.component';
 
-/* ABOUT DOULA PATH FOLDER */
-import {AboutEolDoulaContainerComponent} from './menu-about/doula-path/about-eol-doula-container/about-eol-doula-container.component';
-import {AboutEolDoulaOverviewComponent} from './menu-about/doula-path/about-eol-doula-overview/about-eol-doula-overview.component';
+/* SUPPORT MENU FOLDER */
+import {AllSupportContainerComponent} from './support-menu/all-support-container/all-support-container.component';
+import {AllSupportOverviewComponent} from './support-menu/all-support-overview/all-support-overview.component';
 
-/* ABOUT ENERGY PATH FOLDER */
-import {AboutEnergyPractContainerComponent} from './menu-about/energy-path/about-energy-pract-container/about-energy-pract-container.component';
-import {AboutEnergyPractOverviewComponent} from './menu-about/energy-path/about-energy-pract-overview/about-energy-pract-overview.component';
+/* SUPPORT DOULA FOLDER*/
+import {DoulaHelpContainerComponent} from './support-menu/support-doula/doula-help-container/doula-help-container.component';
+import {DoulaHelpOverviewComponent} from './support-menu/support-doula/doula-help-overview/doula-help-overview.component';
 
-import {MenuHomeComponent} from './menu-home/menu-home.component';
-import {HomeContainerComponent} from './menu-home/home-container/home-container.component';
-import {HomeOverviewComponent} from './menu-home/home-overview/home-overview.component';
+/* DOULA TOPICS */
 
-import {MenuSupportComponent} from './menu-support/menu-support.component';
-import {AllSupportContainerComponent} from './menu-support/all-support-container/all-support-container.component';
-import {AllSupportOverviewComponent} from './menu-support/all-support-overview/all-support-overview.component';
+/* ADVOCATE ADVANCED CARE PLANNING */
+import {TopicAdvocateContainerComponent} from './support-menu/support-doula/doula-topics/advocate/topic-advocate-container/topic-advocate-container.component';
+import {TopicAdvocateOverviewComponent} from './support-menu/support-doula/doula-topics/advocate/topic-advocate-overview/topic-advocate-overview.component';
 
-/* DOULA HELP */
-import {DoulaHelpContainerComponent} from './menu-support/doula-support/doula-help-container/doula-help-container.component';
-import {DoulaHelpOverviewComponent} from './menu-support/doula-support/doula-help-overview/doula-help-overview.component';
+/* CAREGIVER CARE */
+import {TopicCaregiverCareContainerComponent} from './support-menu/support-doula/doula-topics/caregiver/topic-caregiver-care-container/topic-caregiver-care-container.component';
+import {TopicCaregiverCareOverviewComponent} from './support-menu/support-doula/doula-topics/caregiver/topic-caregiver-care-overview/topic-caregiver-care-overview.component';
 
-/* DOULA SUPPORT TOPICS */
-import {TopicAdvocateContainerComponent} from './menu-support/doula-support/doula-support-topics/topic-advocate/topic-advocate-container/topic-advocate-container.component';
-import {TopicAdvocateOverviewComponent} from './menu-support/doula-support/doula-support-topics/topic-advocate/topic-advocate-overview/topic-advocate-overview.component';
+/* CEREMONY */
+import {TopicCeremonyContainerComponent} from './support-menu/support-doula/doula-topics/ceremony/topic-ceremony-container/topic-ceremony-container.component';
+import {TopicCeremonyOverviewComponent} from './support-menu/support-doula/doula-topics/ceremony/topic-ceremony-overview/topic-ceremony-overview.component';
 
-import {TopicCaregiverCareContainerComponent} from './menu-support/doula-support/doula-support-topics/topic-caregiver-care/topic-caregiver-care-container/topic-caregiver-care-container.component';
-import {TopicCaregiverCareOverviewComponent} from './menu-support/doula-support/doula-support-topics/topic-caregiver-care/topic-caregiver-care-overview/topic-caregiver-care-overview.component';
+/* LEGACY */
+import {TopicLegacyContainerComponent} from './support-menu/support-doula/doula-topics/legacy/topic-legacy-container/topic-legacy-container.component';
+import {TopicLegacyOverviewComponent} from './support-menu/support-doula/doula-topics/legacy/topic-legacy-overview/topic-legacy-overview.component';
 
-import {TopicLegacyContainerComponent} from './menu-support/doula-support/doula-support-topics/topic-legacy/topic-legacy-container/topic-legacy-container.component';
-import {TopicLegacyOverviewComponent} from './menu-support/doula-support/doula-support-topics/topic-legacy/topic-legacy-overview/topic-legacy-overview.component';
+/* PATIENT */
+import {TopicPatientCareContainerComponent} from './support-menu/support-doula/doula-topics/patient/topic-patient-care-container/topic-patient-care-container.component';
+import {TopicPatientCareOverviewComponent} from './support-menu/support-doula/doula-topics/patient/topic-patient-care-overview/topic-patient-care-overview.component';
 
-import {TopicPatientCareContainerComponent} from './menu-support/doula-support/doula-support-topics/topic-patient-care/topic-patient-care-container/topic-patient-care-container.component';
-import {TopicPatientCareOverviewComponent} from './menu-support/doula-support/doula-support-topics/topic-patient-care/topic-patient-care-overview/topic-patient-care-overview.component';
+/* REPRESENTATIVE */
+import {TopicRepresentativeContainerComponent} from './support-menu/support-doula/doula-topics/representative/topic-representative-container/topic-representative-container.component';
+import {TopicRepresentativeOverviewComponent} from './support-menu/support-doula/doula-topics/representative/topic-representative-overview/topic-representative-overview.component';
 
-import {TopicRepresentativeContainerComponent} from './menu-support/doula-support/doula-support-topics/topic-representative/topic-representative-container/topic-representative-container.component';
-import {TopicRepresentativeOverviewComponent} from './menu-support/doula-support/doula-support-topics/topic-representative/topic-representative-overview/topic-representative-overview.component';
+/* SUPPORT ENERGY */
+import { EnergyHelpContainerComponent } from './support-menu/support-energy/energy-help-container/energy-help-container.component';
+import { EnergyHelpOverviewComponent } from './support-menu/support-energy/energy-help-overview/energy-help-overview.component';
 
-/* ENERGY MEDICINE HELP */
-import {EnergyMedicineHelpContainerComponent} from './menu-support/energy-support/energy-medicine-help-container/energy-medicine-help-container.component';
-import {EnergyMedicineHelpOverviewComponent} from './menu-support/energy-support/energy-medicine-help-overview/energy-medicine-help-overview.component';
+/* ENERGY TOPICS */
 
-/* ENERGY SUPPORT TOPICS */
-import {TopicHelpAnxietyContainerComponent} from './menu-support/energy-support/energy-support-topics/topic-help-anxiety/topic-help-anxiety-container/topic-help-anxiety-container.component';
-import {TopicHelpAnxietyOverviewComponent} from './menu-support/energy-support/energy-support-topics/topic-help-anxiety/topic-help-anxiety-overview/topic-help-anxiety-overview.component';
+/* ANXIETY */
+import {TopicHelpAnxietyContainerComponent} from './support-menu/support-energy/energy-topics/anxiety/topic-help-anxiety-container/topic-help-anxiety-container.component';
+import {TopicHelpAnxietyOverviewComponent} from './support-menu/support-energy/energy-topics/anxiety/topic-help-anxiety-overview/topic-help-anxiety-overview.component';
 
-import {TopicHelpBurnoutContainerComponent} from './menu-support/energy-support/energy-support-topics/topic-help-burnout/topic-help-burnout-container/topic-help-burnout-container.component';
-import {TopicHelpBurnoutOverviewComponent} from './menu-support/energy-support/energy-support-topics/topic-help-burnout/topic-help-burnout-overview/topic-help-burnout-overview.component';
+/* BURNOUT */
+import {TopicHelpBurnoutContainerComponent} from './support-menu/support-energy/energy-topics/burnout/topic-help-burnout-container/topic-help-burnout-container.component';
+import {TopicHelpBurnoutOverviewComponent} from './support-menu/support-energy/energy-topics/burnout/topic-help-burnout-overview/topic-help-burnout-overview.component';
 
-import {TopicHelpPainContainerComponent} from './menu-support/energy-support/energy-support-topics/topic-help-pain/topic-help-pain-container/topic-help-pain-container.component';
-import {TopicHelpPainOverviewComponent} from './menu-support/energy-support/energy-support-topics/topic-help-pain/topic-help-pain-overview/topic-help-pain-overview.component';
+/* ELEMENTS */
+import {ElementWheelComponent} from './support-menu/support-energy/energy-topics/elements/element-wheel/element-wheel.component';
+import { SelectedElementComponent } from './support-menu/support-energy/energy-topics/elements/selected-element/selected-element.component';
+import {TopicDiscoverElementContainerComponent} from './support-menu/support-energy/energy-topics/elements/topic-discover-element-container/topic-discover-element-container.component';
+import {TopicDiscoverElementOverviewComponent} from './support-menu/support-energy/energy-topics/elements/topic-discover-element-overview/topic-discover-element-overview.component';
 
-import {TopicMoveEnergyContainerComponent} from './menu-support/energy-support/energy-support-topics/topic-move-energy/topic-move-energy-container/topic-move-energy-container.component';
-import {TopicMoveEnergyOverviewComponent} from './menu-support/energy-support/energy-support-topics/topic-move-energy/topic-move-energy-overview/topic-move-energy-overview.component';
+/* MERIDIANS */
+import { MeridianTracingVideosComponent } from './support-menu/support-energy/energy-topics/meridians/meridian-tracing-videos/meridian-tracing-videos.component';
+import { MeridianWheelComponent } from './support-menu/support-energy/energy-topics/meridians/meridian-wheel/meridian-wheel.component';
+import { SelectedMeridianComponent } from './support-menu/support-energy/energy-topics/meridians/selected-meridian/selected-meridian.component';
+import {TopicKnowMeridiansContainerComponent} from './support-menu/support-energy/energy-topics/meridians/topic-know-meridians-container/topic-know-meridians-container.component';
+import {TopicKnowMeridiansOverviewComponent} from './support-menu/support-energy/energy-topics/meridians/topic-know-meridians-overview/topic-know-meridians-overview.component';
 
-import {TopicDiscoverElementContainerComponent} from './menu-support/energy-support/energy-support-topics/topic-discover-element/topic-discover-element-container/topic-discover-element-container.component';
-import {TopicDiscoverElementOverviewComponent} from './menu-support/energy-support/energy-support-topics/topic-discover-element/topic-discover-element-overview/topic-discover-element-overview.component';
+/* MOVE EXERCISES */
+import {TopicMoveEnergyContainerComponent} from './support-menu/support-energy/energy-topics/move/topic-move-energy-container/topic-move-energy-container.component';
+import {TopicMoveEnergyOverviewComponent} from './support-menu/support-energy/energy-topics/move/topic-move-energy-overview/topic-move-energy-overview.component';
 
-import {TopicKnowMeridiansOverviewComponent} from './menu-support/energy-support/energy-support-topics/topic-know-meridians/topic-know-meridians-overview/topic-know-meridians-overview.component';
-import {TopicKnowMeridiansContainerComponent} from './menu-support/energy-support/energy-support-topics/topic-know-meridians/topic-know-meridians-container/topic-know-meridians-container.component';
+/* PAIN */
+import {TopicHelpPainContainerComponent} from './support-menu/support-energy/energy-topics/pain/topic-help-pain-container/topic-help-pain-container.component';
+import {TopicHelpPainOverviewComponent} from './support-menu/support-energy/energy-topics/pain/topic-help-pain-overview/topic-help-pain-overview.component';
 
-import {TopicCeremonyContainerComponent} from './menu-support/doula-support/doula-support-topics/topic-ceremony/topic-ceremony-container/topic-ceremony-container.component';
-import {TopicCeremonyOverviewComponent} from './menu-support/doula-support/doula-support-topics/topic-ceremony/topic-ceremony-overview/topic-ceremony-overview.component';
+import { FormsContainerComponent } from './book-menu/forms/forms-container/forms-container.component';
 
-import {ElementWheelComponent} from './menu-support/energy-support/energy-support-topics/topic-discover-element/element-wheel/element-wheel.component';
-import { SelectedElementComponent } from './menu-support/energy-support/energy-support-topics/topic-discover-element/selected-element/selected-element.component';
+
+
+
+
 
 
 @NgModule({
     declarations: [
         AppComponent,
 
+        /* ABOUT */
+        AboutContainerComponent,
+
+        /* ABOUT DOULA */
+        AboutEolDoulaContainerComponent,
+        AboutEolDoulaOverviewComponent,
+
+        /* ABOUT ENERGY */
+        AboutEnergyPractContainerComponent,
+        AboutEnergyPractOverviewComponent,
+
+        /* ABOUT */
+        AboutOverviewComponent,
+
+        /* BOOK */
+        BookContainerComponent,
+        BookOverviewComponent,
+
+        /* GLOBALS */
         GlobalFooterComponent,
         GlobalGridsComponent,
         GlobalHeadersComponent,
@@ -92,83 +159,77 @@ import { SelectedElementComponent } from './menu-support/energy-support/energy-s
         GlobalSubMenuComponent,
         GlobalTopicMenuComponent,
 
-        MenuAboutComponent,
-        /* ABOUT ME */
-        AboutPathOverviewComponent,
-        AboutPathContainerComponent,
-
-        /* ENERGY WORK FOLDER */
-        AboutEnergyPractContainerComponent,
-        AboutEnergyPractOverviewComponent,
-
-        /* DOULA WORK FOLDER */
-        AboutEolDoulaContainerComponent,
-        AboutEolDoulaOverviewComponent,
-
-        MenuHomeComponent,
+        /* HOME */
+        HomeContainerComponent,
         HomeOverviewComponent,
 
-        MenuSupportComponent,
-        /* ALL SUPPORT */
+        /* SUPPORT */
         AllSupportContainerComponent,
         AllSupportOverviewComponent,
 
-        /* DOULA SUPPORT */
+        /* SUPPORT DOULA */
+        DoulaHelpContainerComponent,
+        DoulaHelpOverviewComponent,
 
-        /* ENERGY SUPPORT */
+        /* DOULA TOPICS*/
+        TopicAdvocateContainerComponent,
+        TopicAdvocateOverviewComponent,
 
+        TopicCaregiverCareContainerComponent,
+        TopicCaregiverCareOverviewComponent,
+
+        TopicCeremonyContainerComponent,
+        TopicCeremonyOverviewComponent,
+
+        TopicLegacyContainerComponent,
+        TopicLegacyOverviewComponent,
 
         TopicPatientCareContainerComponent,
         TopicPatientCareOverviewComponent,
-        TopicCaregiverCareContainerComponent,
-        TopicCaregiverCareOverviewComponent,
-        TopicAdvocateContainerComponent,
-        TopicAdvocateOverviewComponent,
-        TopicLegacyContainerComponent,
-        TopicLegacyOverviewComponent,
 
         TopicRepresentativeContainerComponent,
         TopicRepresentativeOverviewComponent,
 
+        /* SUPPORT ENERGY */
+        EnergyHelpContainerComponent,
+        EnergyHelpOverviewComponent,
+
+        /* ENERGY TOPICS*/
         TopicHelpAnxietyContainerComponent,
         TopicHelpAnxietyOverviewComponent,
 
         TopicHelpBurnoutContainerComponent,
         TopicHelpBurnoutOverviewComponent,
 
-        TopicHelpPainContainerComponent,
-        TopicHelpPainOverviewComponent,
-
-
-        HomeContainerComponent,
-
-        TopicCeremonyContainerComponent,
-        TopicCeremonyOverviewComponent,
-        EnergyMedicineHelpContainerComponent,
-        EnergyMedicineHelpOverviewComponent,
-        DoulaHelpContainerComponent,
-        DoulaHelpOverviewComponent,
-        TopicMoveEnergyContainerComponent,
-        TopicMoveEnergyOverviewComponent,
+        ElementWheelComponent,
+        SelectedElementComponent,
         TopicDiscoverElementContainerComponent,
         TopicDiscoverElementOverviewComponent,
+
+        MeridianTracingVideosComponent,
+        MeridianWheelComponent,
+        SelectedMeridianComponent,
         TopicKnowMeridiansOverviewComponent,
         TopicKnowMeridiansContainerComponent,
 
+        TopicMoveEnergyContainerComponent,
+        TopicMoveEnergyOverviewComponent,
 
+        TopicHelpPainContainerComponent,
+        TopicHelpPainOverviewComponent,
+        FormSideMenuComponent,
+        BookConsultOverviewComponent,
+        BookConsultContainerComponent,
+        BookSessionOverviewComponent,
+        BookSessionContainerComponent,
 
-        ElementWheelComponent,
+        FaqContainerComponent,
+        FaqOverviewComponent,
+        SessionProfileComponent,
+        ConsultProfileComponent,
+        CovidProfileComponent,
 
-
-            SelectedElementComponent,
-
-
-        
-
-
-
-
-
+        FormsContainerComponent,
 
 
 
@@ -178,6 +239,8 @@ import { SelectedElementComponent } from './menu-support/energy-support/energy-s
   imports: [
     BrowserModule,
     AppRoutingModule,
+      FormsModule,
+      ReactiveFormsModule,
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

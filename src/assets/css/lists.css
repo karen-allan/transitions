@@ -4,17 +4,15 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-    .list-dark, .list-light, .list-clear, .list-wide-dark, .list-wide-light, .list-wide-clear {
+    .dark-list, .light-list, .clear-list, .list-item-3-cols span {
         padding-left:.2em;
     }
 
-    .list-item, .list-wide-item, .list-pre-line-item {
+    .list-item  {
         font-size:var(--list-banana-mobile-port-font-size);
     }
 
-    .list-3-cols span {
-        padding-left:1em;
-    }
+
 }
 
 /* BANANA LANDSCAPE ****************************************************************************************************/
@@ -23,17 +21,15 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-    .list-dark, .list-light, .list-clear, .list-wide-dark, .list-wide-light, .list-wide-clear {
+    .dark-list, .light-list, .clear-list, .list-item-3-cols span {
         padding-left:.4em;
     }
 
-    .list-item, .list-wide-item, .list-pre-line-item {
+    .list-item  {
         font-size:var(--list-banana-mobile-land-font-size);
     }
 
-    .list-3-cols span {
-        padding-left:1em;
-    }
+
 
 }
 
@@ -43,17 +39,14 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-    .list-dark, .list-light, .list-clear, .list-wide-dark, .list-wide-light, .list-wide-clear {
+    .dark-list, .light-list, .clear-list, .list-item-3-cols span {
         padding-left:.2em;
     }
 
-    .list-item, .list-wide-item, .list-pre-line-item {
+    .list-item  {
         font-size:var(--list-banana-mobile-port-font-size);
     }
 
-    .list-3-cols span {
-        padding-left:1em;
-    }
 }
 
 /*  MOBILES LANDSCAPE **************************************************************************************************/
@@ -62,17 +55,14 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-    .list-dark, .list-light, .list-clear, .list-wide-dark, .list-wide-light, .list-wide-clear {
+    .dark-list, .light-list, .clear-list, .list-item-3-cols span {
         padding-left:.5em;
     }
 
-    .list-item, .list-wide-item, .list-pre-line-item {
+    .list-item  {
         font-size:var(--list-banana-mobile-land-font-size);
     }
 
-    .list-3-cols span {
-        padding-left:1em;
-    }
 
 }
 
@@ -82,17 +72,15 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-    .list-dark, .list-light, .list-clear, .list-wide-dark, .list-wide-light, .list-wide-clear {
+    .dark-list, .light-list, .clear-list, .list-item-3-cols span {
         padding-left:.5em;
     }
 
-    .list-item, .list-wide-item, .list-pre-line-item {
+    .list-item  {
         font-size:var(--list-tablet-ipad-port-font-size);
     }
 
-    .list-3-cols span {
-        padding-left:1em;
-    }
+
 }
 
 /*  TABLETS LANDSCAPE *******************************************************************************************/
@@ -101,17 +89,14 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
-    .list-dark, .list-light, .list-clear, .list-wide-dark, .list-wide-light, .list-wide-clear {
+    .dark-list, .light-list, .clear-list, .list-item-3-cols span {
         padding-left:1.5em;
     }
 
-    .list-item, .list-wide-item, .list-pre-line-item {
+    .list-item {
         font-size:var(--list-tablet-ipad-land-font-size);
     }
 
-    .list-3-cols span {
-        padding-left:2em;
-    }
 }
 
 /* IPADS PORTRAIT ****************************************************************************************************/
@@ -120,17 +105,14 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    .list-dark, .list-light, .list-clear, .list-wide-dark, .list-wide-light, .list-wide-clear {
+    .dark-list, .light-list, .clear-list, .list-item-3-cols span {
         padding-left:1.3em;
     }
 
-    .list-item, .list-wide-item, .list-pre-line-item {
+    .list-item  {
         font-size:var(--list-tablet-ipad-port-font-size);
     }
 
-    .list-3-cols span {
-        padding-left:1em;
-    }
 }
 
 /* IPADS LANDSCAPE ***************************************************************************************************/
@@ -139,17 +121,14 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-    .list-dark, .list-light, .list-clear, .list-wide-dark, .list-wide-light, .list-wide-clear {
+    .dark-list, .light-list, .clear-list, .list-item-3-cols span {
         padding-left:1.7em;
     }
 
-    .list-item, .list-wide-item, .list-pre-line-item {
+    .list-item {
         font-size:var(--list-tablet-ipad-land-font-size);
     }
 
-    .list-3-cols span {
-        padding-left:2em;
-    }
 }
 
 /* LAPTOP ****************************************************************************************************/
@@ -157,160 +136,95 @@ and (orientation: landscape) {
 and (min-width: 1440px)
 and (max-width:1919px){
 
-    .list-dark, .list-light, .list-clear, .list-wide-dark, .list-wide-light, .list-wide-clear {
+    .dark-list, .light-list, .clear-list, .list-item-3-cols span {
         padding-left:2em;
     }
 
-    .list-item, .list-wide-item, .list-pre-line-item {
+    .list-item {
         font-size:var(--list-laptop-desktop-font-size);
     }
 
-    .list-3-cols span {
-        padding-left:2em;
-    }
 }
 
 /* DESKTOPS ***********************************************************************************************************/
 @media only screen
 and (min-width: 1920px) {
 
-    .list-dark, .list-light, .list-clear, .list-wide-dark, .list-wide-light, .list-wide-clear {
+    .dark-list, .light-list, .clear-list, .list-item-3-cols span {
         padding-left:2em;
     }
 
-    .list-item, .list-wide-item, .list-pre-line-item {
+    .list-item {
         font-size:var(--list-laptop-desktop-font-size);
     }
 
-    .list-3-cols span {
-        padding-left:2em;
+    .list-big-item {
+        font-size:1.2em;
     }
 }
 
 /* GLOBAL *************************************************************************************************************/
 @media screen {
 
-    /* LISTS */
-    .list-dark, .list-light, .list-clear, .list-wide-dark, .list-wide-light, .list-wide-clear, .list-pre-line {
+    .list {
         display: block;
         width:100%;
-        list-style: none inside none;
-        font-family: "Whitney SSm A", "Whitney SSm B", Arial, sans-serif;
-        padding:.5em 0 .5em .5em;
-    }
-
-    /* This is used when a pre-line is used as with tracing instructions */
-    .list-pre-line  {
-        margin:2em auto;
-        color:var(--color-white);
-        padding:1.5em 0 1.5em 2em;
         max-width:800px;
-    }
-
-    .list-dark, .list-light, .list-clear {
         margin:1em auto;
-        max-width:800px;
     }
 
-    .list-wide-dark, .list-wide-light, .list-wide-clear {
-        margin:auto;
-        /*margin:1em auto;*/
-        max-width:1152px;
+    .dark-list, .light-list, .clear-list {
+        list-style: none inside none;
+        padding:.5em 0 .5em .5em;
+        border:thin solid gold;
     }
 
-    .list-dark, .list-wide-dark {
+    .dark-list, .dark-list a {
         color: var(--copy-color-dark);
+        background-color: white;
     }
 
-    .list-light, .list-wide-light {
+    .dark-list a, .light-list a, .clear-list a  {
+        font-weight:800;
+    }
+
+    .light-list, .light-list a  {
         color: var(--copy-color-light);
     }
 
-    /* ONE COLOUMN LIST ITEMS */
     .list-item {
+        font-family: var(--family-open-sans);
+        text-align: left;
         line-height:var(--list-item-line-height);
         padding-bottom:.5em;
     }
 
-    .list-wide-item  {
-        padding-left:0;
-        line-height:var(--list-wide-item-line-height);
+    .list-big-item {
+        font-family: Whitney-Book;
+        line-height:var(--copy-line-height);
+        text-align: left;
+        padding-bottom:.5em;
     }
 
-    .list-item a, .list-wide-item a {
-        text-decoration: underline;
-        cursor:pointer;
-        color: var(--copy-color-dark);
-    }
-
-    .list-pre-line-item {
-        line-height:var(--list-pre-line-item-line-height);
-    }
-
-    /* VARIOUS MULTI COLOUMN LIST ITEMS */
-    .list-2-cols, .list-3-cols, .list-4-cols {
-        font-family: var(--family-global);
+     /* VARIOUS MULTI COLOUMN LIST ITEMS */
+    .list-item-2-cols, .list-item-3-cols, .list-item-4-cols {
+        font-family: var(--family-open-sans);
         display:inline-block;
         line-height: 180%;
     }
 
-    .list-2-cols {
+    .list-item-2-cols {
         width:50%;
     }
 
-    .list-3-cols {
+    .list-item-3-cols {
         width:33.3%;
     }
 
-    .list-4-cols {
+    .list-item-4-cols {
         width:25%;
     }
 
-    /* used for element and meridian sibling links */
-    .content-menu {
-        display: grid;
-        width:100%;
-        max-width:1152px;
-        margin:1em auto;
-        background-color: var(--color-white);
-    }
-
-    .menu-2-columns {
-        display:inline-grid;
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: 100%;
-        width:100%;
-        font-family: var(--family-script);
-        border:thin solid gold;
-    }
-
-    /* COLUMNS */
-
-    .menu-item:first-child {
-        border-right:thin solid gold;
-    }
-
-    .menu-item {
-        display:grid;
-        width:100%;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .menu-item a {
-        text-decoration: underline;
-    }
-
-    .menu-item p {
-        font-family:var(--family-slogan);
-        color:var(--color-dark-purple);
-        font-weight:800;
-    }
-
-    .menu-item a img  {
-        max-width: 100%;
-        height: auto;
-    }
 
 
 }
