@@ -42,6 +42,7 @@
 
         <div class="book-detail-select-form">
             <app-session-profile *ngIf="showSessionForm"></app-session-profile>
+            <app-print-session-profile *ngIf="showSessionForm"></app-print-session-profile>
             <app-consult-profile *ngIf="showConsultationForm"></app-consult-profile>
 <!--          NEED TO BRING THIS OVER FROM MWEnergy  <app-print-client-profile *ngIf="showProfileEditor"></app-print-client-profile>-->
             <app-covid-profile *ngIf="showAssessmentForm"></app-covid-profile>
@@ -49,4 +50,3 @@
     </div>
 
 </div>
-

@@ -17,5 +17,4 @@ export const TOPIC_MENU_ITEMS: TopicMenuItem[] = [
     {id: 325, parent_id: 31, title: 'DISCOVER YOUR ELEMENT', url: 'energyDiscoverElement'},
     {id: 326, parent_id: 31, title: 'KNOW YOUR MERIDIANS', url: 'energyKnowMeridians'},
 
-
 ];
