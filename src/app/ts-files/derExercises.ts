@@ -1,6 +1,7 @@
 import { DerExercise} from './derExercise';
 
 export const DER_EXERCISES: DerExercise[] = [
+    { id: 0, name: ''},
     { id: 1, name: 'The Five Taps'},
     { id: 2, name: 'The Cross Crawl' },
     { id: 3, name: 'The Homo-lateral Crossover' },

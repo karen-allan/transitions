@@ -55,8 +55,12 @@ export const ELEMENTS: Element[] = [
         element_wheel_diagram_str:'assets/images/elements/waterStrWood.jpg',
 
         verb:'I dream',
-        icon:'assets/images/elements/waterElement.png',
-        bkgrd_image:'assets/images/elements/waterElementLarge.jpg',
+
+        icon:'assets/images/support/practitioner/elements/water/waterElement.png',
+        bkgrd_image:'assets/images/support/practitioner/elements/water/waterElementLarge.jpg',
+        nl_pic:'assets/images/support/practitioner/elements/water/nlWater.jpg',
+        nv_pic:'assets/images/support/practitioner/elements/water/nvWater.jpg',
+
         overall:'yin',
 
         season:'winter',
@@ -126,11 +130,12 @@ export const ELEMENTS: Element[] = [
             '(Yin Kidney) and fear of the world (Yang Bladder). When you are feeling fearful try giving your Water Neurolymphatics a deep massage',
         nl_points:'Your Kidney Neurolymphatics are where your Kidneys lie. Reach back with your hands, thumbs upwards. Rub deeply up and down ' +
             'this Kidney line. Bladder NLs are found just above your pubic area, give these a deep massage as well',
-        nl_pic:'assets/images/element/nlWater.jpg',
+
 
         nv_points:'Water\'s Neurovascular points are found on both sides at the back of the head, directly behind the center of the eyes, about ' +
             '3 inches apart.',
-        nv_pic:'assets/images/element/nvWater.jpg',
+
+
 
         yin_pic:'assets/images/meridians/elementKI.jpg',
         yang_pic:'assets/images/meridians/elementBL.jpg',
@@ -180,8 +185,11 @@ export const ELEMENTS: Element[] = [
 
         element_wheel_diagram_str:'assets/images/elements/woodStrFire.jpg',
 
-        icon:'assets/images/elements/woodElement.png',
-        bkgrd_image:'assets/images/elements/woodElementLarge.jpg',
+
+        icon:'assets/images/support/practitioner/elements/wood/woodElement.png',
+        bkgrd_image:'assets/images/support/practitioner/elements/wood/woodElementLarge.jpg',
+        nl_pic:'assets/images/support/practitioner/elements/wood/nlWood.jpg',
+        nv_pic:'assets/images/support/practitioner/elements/wood/nvWood.jpg',
 
         verb:'I think',
         overall:'yang',
@@ -258,11 +266,11 @@ export const ELEMENTS: Element[] = [
         nl_points:'Your Liver Neurolymphatics are found just under your right breast, where you physical organ lies. Rub deeply ' +
             'along the arc, from outer side to sternum. Rub along your sternum to massage your Gallbladder points. As well an easy ' +
             'area to get to is where your fingers lay on your thighs when you are at attention.',
-        nl_pic:'assets/images/element/nlWood.jpg',
+
 
         nv_points:'Woods\'s Neurovascular points are found on both sides at the edge of your outer eye corners ' +
             'at the indentation.',
-        nv_pic:'assets/images/element/nvWood.jpg',
+
 
         yin_pic:'assets/images/meridians/elementLR.jpg',
         yang_pic:'assets/images/meridians/elementGB.jpg',
@@ -313,8 +321,11 @@ export const ELEMENTS: Element[] = [
         strengthens_meridian2_points:'Small Intestine 5 (SI-5) strengthens Stomach 41 (ST-41).',
 
         element_wheel_diagram_str:'assets/images/elements/fireStrEarth.jpg',
-        icon:'assets/images/elements/fireElement.png',
-        bkgrd_image:'assets/images/elements/fireElementLarge.jpg',
+
+        nl_pic:'assets/images/support/practitioner/elements/fire/nlFire.jpg',
+        nv_pic:'assets/images/support/practitioner/elements/fire/nvFire.jpg',
+        icon:'assets/images/support/practitioner/elements/fire/fireElement.png',
+        bkgrd_image:'assets/images/support/practitioner/elements/fire/fireElementLarge.jpg',
 
         verb:'I know',
         overall:'yang',
@@ -391,11 +402,12 @@ export const ELEMENTS: Element[] = [
         nl_points:'Small Intestine meridian runs all along the bottom of your ribs, in an upside U shape. Rub all along your inner and front' +
             'thighs to get at Pericardium and Small Intestine meridians. Rubbing directly behind your breasts at nipple level can help ' +
             'with and overheated Heart meridian.',
-        nl_pic:'assets/images/element/nlFire.jpg',
+
 
         nv_points:'Fires\'s Neurovascular points are found at the back of head about 3 inches apart, directly in line ' +
             'with the eyebrows.',
-        nv_pic:'assets/images/element/nvFire.jpg',
+
+
 
         yin_pic:'assets/images/meridians/elementHT.jpg',
         yang_pic:'assets/images/meridians/elementSI.jpg',
@@ -447,9 +459,10 @@ export const ELEMENTS: Element[] = [
 
         element_wheel_diagram_str:'assets/images/elements/earthStrMetal.jpg',
 
-
-        icon:'assets/images/elements/earthElement.png',
-        bkgrd_image:'assets/images/elements/earthElementLarge.jpg',
+        nl_pic:'assets/images/support/practitioner/elements/earth/nlEarth.jpg',
+        nv_pic:'assets/images/support/practitioner/elements/earth/nvEarth.jpg',
+        icon:'assets/images/support/practitioner/elements/earth/earthElement.png',
+        bkgrd_image:'assets/images/support/practitioner/elements/earth/earthElementLarge.jpg',
 
         verb:'I do',
         overall:'yin-yang',
@@ -527,11 +540,12 @@ export const ELEMENTS: Element[] = [
             '        points that are located directly under your breasts on your left. (Liver is on the right and could' +
             '        certainly enjoy a rub as well!) Spleen NeuroLymphatics are found just under these points on both sides.',
 
-        nl_pic:'assets/images/element/nlEarth.jpg',
+
 
         nv_points:'Earths\'s Neurovascular points are found on both sides of the face at the bottom ' +
             'of the cheekbones.',
-        nv_pic:'assets/images/element/nvEarth.jpg',
+
+
 
         yin_pic:'assets/images/meridians/elementSP.jpg',
         yang_pic:'assets/images/meridians/elementST.jpg',
@@ -577,8 +591,10 @@ export const ELEMENTS: Element[] = [
 
         element_wheel_diagram_str:'assets/images/elements/metalStrWater.jpg',
 
-        icon:'assets/images/elements/metalElement.png',
-        bkgrd_image:'assets/images/elements/metalElementLarge.jpg',
+        icon:'assets/images/support/practitioner/elements/metal/metalElement.png',
+        bkgrd_image:'assets/images/support/practitioner/elements/metal/metalElementLarge.jpg',
+        nl_pic:'assets/images/support/practitioner/elements/metal/nlMetal.jpg',
+        nv_pic:'assets/images/support/practitioner/elements/metal/nvMetal.jpg',
 
         verb:'I feel',
         overall:'yin',
@@ -657,10 +673,10 @@ export const ELEMENTS: Element[] = [
         nl_points:'Your Lung meridian Neurolymphatics run along your sternum or breast-bone. If I feel like I am catching a cold with a cough ' +
             'I vigorously rub this area. Large Intestine meridian NLs are at the outside of your thighs. Rub deeply and then push the energy off your legs,' +
             'down your feet and off your toes.',
-        nl_pic:'assets/images/element/nlMetal.jpg',
+
 
         nv_points:'Metal\'s Neurovascular points are found on the very top of the head in the center.',
-        nv_pic:'assets/images/element/nvMetal.jpg',
+
 
         yin_pic:'assets/images/meridians/elementLU.jpg',
         yang_pic:'assets/images/meridians/elementLI.jpg',

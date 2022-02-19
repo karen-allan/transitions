@@ -17,7 +17,7 @@ export class GlobalGridsComponent implements OnInit {
 
     homeSubjects = SUBJECTS;
     homeMin = 10;
-    homeMax = 11;
+    homeMax = 13;
 
     aboutSubjects = SUBJECTS;
     aboutMin = 21;

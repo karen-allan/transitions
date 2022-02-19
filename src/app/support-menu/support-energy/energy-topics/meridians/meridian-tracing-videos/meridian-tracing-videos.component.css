@@ -1,0 +1,136 @@
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    /* 216 is 90% of 240  */
+    .tracing-video-size {
+        width: var(--tracing-video-banana-port-width);
+        height: var(--tracing-video-banana-port-height);
+    }
+
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    /* 568 x 90% = 511 */
+    .tracing-video-size {
+        width: var(--tracing-video-banana-land-width);
+        height: var(--tracing-video-banana-land-height);
+    }
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    /* 324 x90% is 360 */
+    .tracing-video-size {
+        width: var(--tracing-video-mobile-port-width);
+        height: var(--tracing-video-mobile-port-height);
+    }
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    .tracing-video-size {
+        width: var(--tracing-video-over-max-width);
+        height: var(--tracing-video-over-max-height);
+    }
+
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    /* 600 x90% is 540 */
+    .tracing-video-size {
+        width: var(--tracing-video-tab-port-width);
+        height: var(--tracing-video-tab-port-height);
+    }
+
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    .tracing-video-size {
+        width: var(--tracing-video-over-max-width);
+        height: var(--tracing-video-over-max-height);
+    }
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    .tracing-video-size {
+        width: var(--tracing-video-over-max-width);
+        height: var(--tracing-video-over-max-height);
+    }
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    .tracing-video-size {
+        width: var(--tracing-video-over-max-width);
+        height: var(--tracing-video-over-max-height);
+    }
+}
+
+/* LAPTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width:1919px){
+
+    .tracing-video-size {
+        width: var(--tracing-video-over-max-width);
+        height: var(--tracing-video-over-max-height);
+    }
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    .tracing-video-size {
+        width: var(--tracing-video-over-max-width);
+        height: var(--tracing-video-over-max-height);
+    }
+
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .tracing-video-size {
+        display:block;
+        max-width:800px;
+        margin:2em auto;
+    }
+}

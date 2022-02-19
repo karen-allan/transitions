@@ -1,0 +1,52 @@
+
+<div class ="content-no-margins">
+    <div class="book-detail-container">
+        <div class="book-detail-menu">
+            <h1>CLIENT INTAKE</h1>
+
+            <p>
+                Please enter your info into these 2 forms. One is the initial intake form.
+                The other is the Covid-19 clearance form that ensures that you
+                are not showing any symptoms of the virus.
+            </p>
+
+            <ul class="book-detail-forms">
+                <div class="basic">
+                    <li *ngIf="showSessionForm">
+                        <span>BOOK AN ENERGY SESSION</span>
+                    </li>
+                    <li *ngIf ="!showSessionForm">
+                        <a (click)="toggleEditor('session')">BOOK AN ENERGY SESSION</a>
+                    </li>
+                </div>
+
+                <div class="basic">
+                    <li *ngIf="showConsultationForm">
+                        <span>BOOK A DOULA CONSULTATION</span>
+                    </li>
+                    <li *ngIf ="!showConsultationForm">
+                        <a (click)="toggleEditor('consult')">BOOK A DOULA CONSULTATION</a>
+                    </li>
+                </div>
+
+                <div class="assess">
+                    <li *ngIf="showAssessmentForm">
+                        <span>COVID-19 CLEARANCE</span>
+                    </li>
+                    <li *ngIf ="!showAssessmentForm">
+                        <a (click)="toggleEditor('assessment')">COVID-19 CLEARANCE</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+
+        <div class="book-detail-select-form">
+            <app-session-profile *ngIf="showSessionForm"></app-session-profile>
+            <app-consult-profile *ngIf="showConsultationForm"></app-consult-profile>
+<!--          NEED TO BRING THIS OVER FROM MWEnergy  <app-print-client-profile *ngIf="showProfileEditor"></app-print-client-profile>-->
+            <app-covid-profile *ngIf="showAssessmentForm"></app-covid-profile>
+        </div>
+    </div>
+
+</div>
+

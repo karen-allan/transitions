@@ -5,7 +5,7 @@
         </div>
 
         <div class="topic-right">
-            <img src="../../../../../../assets/images/der/derIntro.jpg" alt="Energy Movement Exercises" title="Energy Movement Exercises">
+            <img src="assets/images/support/practitioner/move/moveIntro.jpg" alt="Energy Movement Exercises" title="Energy Movement Exercises">
         </div>
     </div>
 
@@ -260,11 +260,16 @@
         </div>
 
         <div class="exercise-video-block">
-            <ng-container *ngIf="!selectedExercise">
-                <img src= "../../../../../../assets/images/der/defaultDERExercises.jpg">
+            <ng-container *ngIf="selectedExercise.id==0">
+                <img src= "assets/images/support/practitioner/move/defaultDERExercises.jpg">
             </ng-container>
 
             <div *ngIf="selectedExercise">
+                <!-- FULL ROUTINE -->
+                <div *ngIf="selectedExercise.id===11">
+                    <iframe class="exercise-video" src="https://www.youtube-nocookie.com/embed/nN2uq78Y2bE" frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <!-- 5 TAPS -->
                 <div *ngIf="selectedExercise.id===1">
                     <iframe class="exercise-video" src="https://www.youtube-nocookie.com/embed/XU4nyiZvOCc?start=2" frameborder="0"
@@ -315,11 +320,7 @@
                     <iframe class="exercise-video" src="https://www.youtube-nocookie.com/embed/zIu25FPFA1w?start=2" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <!-- FULL ROUTINE -->
-                <div *ngIf="selectedExercise.id===11">
-                    <iframe class="exercise-video" src="https://www.youtube-nocookie.com/embed/nN2uq78Y2bE" frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+
             </div>
         </div>
 

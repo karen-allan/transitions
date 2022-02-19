@@ -55,7 +55,7 @@ export interface Meridian {
     nv_points?:string;
     nv_pic?:string;
 
-    acu_points_sender_sedate?:string;
+  /*  acu_points_sender_sedate?:string;
     acu_points_sender_sedate_acu?:string;
     acu_points_sender_sedate_desc?:string;
     acu_points_sender_sedate_pic?:string;
@@ -74,8 +74,8 @@ export interface Meridian {
     acu_points_sender_strengthen_acu2?:string;
     acu_points_sender_strengthen_desc2?:string;
     acu_points_sender_strengthen_pic2?:string;
-
-    acu_points_sender_control?:string;
+*/
+  /*  acu_points_sender_control?:string;
     acu_points_sender_control_acu?:string;
     acu_points_sender_control_desc?:string;
     acu_points_sender_control_pic?:string;
@@ -83,7 +83,7 @@ export interface Meridian {
     acu_points_sender_control2?:string;
     acu_points_sender_control_acu2?:string;
     acu_points_sender_control_desc2?:string;
-    acu_points_sender_control_pic2?:string;
+    acu_points_sender_control_pic2?:string;*/
 
     acu_points_receiver_sedate?:string;
     acu_points_receiver_sedate_desc?:string;

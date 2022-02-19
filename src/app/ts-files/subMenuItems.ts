@@ -13,8 +13,6 @@ export const SUB_MENU_ITEMS: SubMenuItem[] = [
     {id: 41, parent_id: 4, title: 'AN ENERGY SESSION', url: 'bookEnergySessions'},
     {id: 42, parent_id: 4, title: 'AN END OF LIFE CONSULT', url: 'bookEOLConsult'},
 
-
-
 ];
 
 
