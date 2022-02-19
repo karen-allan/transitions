@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Client } from '../../../ts-files/client';
-
-// import { PrintClientProfileComponent } from '../print-client-profile/print-client-profile.component';
+import { PrintSessionProfileComponent } from '../print-session-profile/print-session-profile.component';
 
 export type EditorType = 'assessment' | 'session'  | 'consult';
 @Component({
@@ -13,7 +12,7 @@ export class FormSideMenuComponent {
 
   editor: EditorType = 'session';
 
-  // @ViewChild(PrintClientProfileComponent) printProfile: PrintClientProfileComponent;
+  @ViewChild(PrintSessionProfileComponent) printProfile: PrintSessionProfileComponent;
 
   get showAssessmentForm() {
     return this.editor === 'assessment';
@@ -31,7 +30,7 @@ export class FormSideMenuComponent {
     this.editor = type;
   }
 
- /* copyModelToPrintComponent(model: Client) {
+ copyModelToPrintComponent(model: Client) {
     this.printProfile.setModel(model);
 
     // Bug-fix: window.setTimeout()
@@ -42,6 +41,6 @@ export class FormSideMenuComponent {
     // The idea is that the copyModelToPrintComponent javascript function
     // is still running so the HTML hasn't been loaded until the method finishes
     window.setTimeout(function printClientData(){window.print();}, 0);
-  }*/
+  }
 
 }

@@ -122,6 +122,7 @@ import {TopicHelpPainContainerComponent} from './support-menu/support-energy/ene
 import {TopicHelpPainOverviewComponent} from './support-menu/support-energy/energy-topics/pain/topic-help-pain-overview/topic-help-pain-overview.component';
 
 import { FormsContainerComponent } from './book-menu/forms/forms-container/forms-container.component';
+import { PrintSessionProfileComponent } from './book-menu/forms/print-session-profile/print-session-profile.component';
 
 
 
@@ -230,6 +231,7 @@ import { FormsContainerComponent } from './book-menu/forms/forms-container/forms
         CovidProfileComponent,
 
         FormsContainerComponent,
+         PrintSessionProfileComponent,
 
 
 

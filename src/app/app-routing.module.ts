@@ -29,6 +29,7 @@ import { BookConsultContainerComponent } from './book-menu/book-consultation/boo
 import { BookSessionContainerComponent } from './book-menu/book-session/book-session-container/book-session-container.component';
 import { FaqContainerComponent } from './faq-menu/faq-container/faq-container.component';
 import { FormsContainerComponent } from './book-menu/forms/forms-container/forms-container.component';
+import { PrintSessionProfileComponent } from './book-menu/forms/print-session-profile/print-session-profile.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -70,6 +71,8 @@ const routes: Routes = [
     {path: 'eolTopicCeremony', component: TopicCeremonyContainerComponent},
 
     {path: 'faq', component: FaqContainerComponent},
+
+    {path: 'printSessionProfile', component: PrintSessionProfileComponent},
 ];
 
 const routerOptions: ExtraOptions = {
