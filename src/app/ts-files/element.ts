@@ -11,11 +11,8 @@ export interface Element {
     end_hour: number;
     start_hour_2?: number;
     end_hour_2?: number;
+
     meridians: string;
-    element_1?:string;
-    element_2?:string;
-    element_3?:string;
-    element_4?:string;
 
     time_range_yin_1?: string;
     time_range_yang_1?:string;
@@ -23,51 +20,14 @@ export interface Element {
     time_range_yin_2?: string;
     time_range_yang_2?: string;
 
-    sedates:string;
-    sedates_metaphor:string;
-
-    sedates_meridian1?:string;
-    sedates_meridian1_points?:string;
-
-    sedates_meridian2?:string;
-    sedates_meridian2_points?:string;
-
-    sedates_meridian3?:string;
-    sedates_meridian3_points?:string;
-
-    sedates_meridian4?:string;
-    sedates_meridian4_points?:string;
-
-    element_wheel_diagram_sed?:string;
-
-    strengthens_meridian1?:string;
-    strengthens_meridian1_points?:string;
-
-    strengthens_meridian2?:string;
-    strengthens_meridian2_points?:string;
-
-    strengthens_meridian3?:string;
-    strengthens_meridian3_points?:string;
-
-    strengthens_meridian4?:string;
-    strengthens_meridian4_points?:string;
-
-    element_wheel_diagram_str?:string;
-
-    element_wheel_diagram_ctr?:string;
-
-    strengthens:string;
-    strengthens_metaphor:string;
-
-    controls:string;
-    controls_metaphor:string;
-
-    icon: string;
-    bkgrd_image:string;
-
     verb: string;
     overall:string;
     season:string;
+
+    icon: string;
+    bkgrd_image:string;
+    nl_pic:string;
+    nv_pic:string;
 
     summary_yin?:string;
     summary_yang?:string;
@@ -77,8 +37,6 @@ export interface Element {
     challenge?: string;
     governs: string;
     archetypes:string;
-
-
 
     direction?:string;
     weather?:string;
@@ -90,6 +48,7 @@ export interface Element {
     focus?:string;
     body_type:string;
     stress_emotion:string;
+
     positive_traits1?: string;
     negative_traits1?: string;
     positive_traits2?: string;
@@ -98,6 +57,7 @@ export interface Element {
     negative_traits3?: string;
     positive_traits4?: string;
     negative_traits4?: string;
+
     vital_function?:string;
     arts?:string;
     occupations?:string;
@@ -122,15 +82,11 @@ export interface Element {
 
     nl_overview:string;
     nl_points:string;
-    nl_pic:string;
-
     nv_points:string;
-    nv_pic:string;
 
-    yang_pic: string;
-    yang_pic_2?: string;
-    yin_pic:string;
-    yin_pic_2?:string;
+
+
+
 
 
 }
