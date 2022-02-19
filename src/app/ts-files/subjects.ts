@@ -40,7 +40,7 @@ export const SUBJECTS: Subject[] = [
     {id: 326, title: 'Understanding Meridians', picture:'assets/images/support/practitioner/grid/gridKnowMeridians.jpg', url:'/energyKnowMeridians'},
 
     /* DOULA - REPRESENTATIVE */
-    {id: 3000, title: 'Planning Ahead', picture:'assets/images/support/doula/grid/planningAhead.jpg', url:'/doulaHelp'},
+    {id: 3000, title: 'Planning Ahead', picture:'assets/images/support/doula/grid/planningAhead.jpg', url:'/eolDoulaHelp'},
     /* ON CHOOSE A REP PAGE */
     {id: 3001, title: 'Advocating for Yourself', picture:'assets/images/support/doula/grid/advocateForSelf.jpg', url:'/eolTopicAdvocate'},
     {id: 3002, title: 'Doula Care at the Bedside', picture:'assets/images/support/doula/grid/patientSupport.jpg', url:'/eolTopicPatientCare'},
@@ -49,7 +49,7 @@ export const SUBJECTS: Subject[] = [
     {id: 3005, title: 'Ceremony Options', picture:'assets/images/support/doula/grid/ceremony.jpg', url:'/eolTopicCeremony'},
 
     /* DOULA - ADVOCATE */
-    {id: 3010, title: 'Planning Ahead', picture:'assets/images/support/doula/grid/planningAhead.jpg', url:'/doulaHelp'},
+    {id: 3010, title: 'Planning Ahead', picture:'assets/images/support/doula/grid/planningAhead.jpg', url:'/eolDoulaHelp'},
     {id: 3011, title: 'Choosing Your Representatives', picture:'assets/images/support/doula/grid/choosingAdvocate.jpg',url:'/eolTopicRepresentatives'},
     /* ON ADVOCATE ADV CARE PAGE  */
     {id: 3012, title: 'Doula Care at the Bedside', picture:'assets/images/support/doula/grid/patientSupport.jpg', url:'/eolTopicPatientCare'},
@@ -58,7 +58,7 @@ export const SUBJECTS: Subject[] = [
     {id: 3015, title: 'Ceremony Options', picture:'assets/images/support/doula/grid/ceremony.jpg', url:'/eolTopicCeremony'},
 
     /* DOULA - FOR PATIENT CARE  */
-    {id: 3020, title: 'Planning Ahead', picture:'assets/images/support/doula/grid/planningAhead.jpg', url:'/doulaHelp'},
+    {id: 3020, title: 'Planning Ahead', picture:'assets/images/support/doula/grid/planningAhead.jpg', url:'/eolDoulaHelp'},
     {id: 3021, title: 'Choosing Your Representatives', picture:'assets/images/support/doula/grid/choosingAdvocate.jpg',url:'/eolTopicRepresentatives'},
     {id: 3022, title: 'Advocating for Yourself', picture:'assets/images/support/doula/grid/advocateForSelf.jpg', url:'/eolTopicAdvocate'},
     /* ON PATIENT CARE PAGE */
@@ -67,7 +67,7 @@ export const SUBJECTS: Subject[] = [
     {id: 3025, title: 'Ceremony Options', picture:'assets/images/support/doula/grid/ceremony.jpg', url:'/eolTopicCeremony'},
 
     /* DOULA - FOR CAREGIVER CARE  */
-    {id: 3030, title: 'Planning Ahead', picture:'assets/images/support/doula/grid/planningAhead.jpg', url:'/doulaHelp'},
+    {id: 3030, title: 'Planning Ahead', picture:'assets/images/support/doula/grid/planningAhead.jpg', url:'/eolDoulaHelp'},
     {id: 3031, title: 'Choosing Your Representatives', picture:'assets/images/support/doula/grid/choosingAdvocate.jpg',url:'/eolTopicRepresentatives'},
     {id: 3032, title: 'Advocating for Yourself', picture:'assets/images/support/doula/grid/advocateForSelf.jpg', url:'/eolTopicAdvocate'},
     {id: 3033, title: 'Doula Care at the Bedside', picture:'assets/images/support/doula/grid/patientSupport.jpg', url:'/eolTopicPatientCare'},
@@ -76,7 +76,7 @@ export const SUBJECTS: Subject[] = [
     {id: 3035, title: 'Ceremony Options', picture:'assets/images/support/doula/grid/ceremony.jpg', url:'/eolTopicCeremony'},
 
     /* DOULA - LEGACY  */
-    {id: 3040, title: 'Planning Ahead', picture:'assets/images/support/doula/grid/planningAhead.jpg', url:'/doulaHelp'},
+    {id: 3040, title: 'Planning Ahead', picture:'assets/images/support/doula/grid/planningAhead.jpg', url:'/eolDoulaHelp'},
     {id: 3041, title: 'Choosing Your Representatives', picture:'assets/images/support/doula/grid/choosingAdvocate.jpg',url:'/eolTopicRepresentatives'},
     {id: 3042, title: 'Advocating for Yourself', picture:'assets/images/support/doula/grid/advocateForSelf.jpg', url:'/eolTopicAdvocate'},
     {id: 3043, title: 'Doula Care at the Bedside', picture:'assets/images/support/doula/grid/patientSupport.jpg', url:'/eolTopicPatientCare'},
@@ -85,7 +85,7 @@ export const SUBJECTS: Subject[] = [
     {id: 3045, title: 'Ceremony Options', picture:'assets/images/support/doula/grid/ceremony.jpg', url:'/eolTopicCeremony'},
 
     /* DOULA - CEREMONY  */
-    {id: 3050, title: 'Planning Ahead', picture:'assets/images/support/doula/grid/planningAhead.jpg', url:'/doulaHelp'},
+    {id: 3050, title: 'Planning Ahead', picture:'assets/images/support/doula/grid/planningAhead.jpg', url:'/eolDoulaHelp'},
     {id: 3051, title: 'Choosing Your Representatives', picture:'assets/images/support/doula/grid/choosingAdvocate.jpg',url:'/eolTopicRepresentatives'},
     {id: 3052, title: 'Advocating for Yourself', picture:'assets/images/support/doula/grid/advocateForSelf.jpg', url:'/eolTopicAdvocate'},
     {id: 3053, title: 'Doula Care at the Bedside', picture:'assets/images/support/doula/grid/patientSupport.jpg', url:'/eolTopicPatientCare'},
@@ -149,14 +149,14 @@ export const SUBJECTS: Subject[] = [
 
     /* ON MAIN BOOK PAGE */
     // {id: 40, title: 'My Energy Medicine Journey', picture:'assets/images/about/gridEnergyMedicine.jpg', url:'/aboutEnergyMedicine'},
-    {id: 41, title: 'Book a Consultation', picture:'assets/images/book/gridConsult.jpg', url:'/bookEOLConsult'},
-    {id: 42, title: 'Book a Session', picture:'assets/images/book/gridSession.jpg', url:'/bookEnergySessions'},
+    {id: 41, title: 'Book a Consultation', picture:'assets/images/book/grid/gridConsult.jpg', url:'/bookEOLConsult'},
+    {id: 42, title: 'Book a Session', picture:'assets/images/book/grid/gridSession.jpg', url:'/bookEnergySessions'},
 
     /* ON CONSULT BOOK PAGE */
-    {id: 43, title: 'Info Overview', picture:'assets/images/book/gridInfo.jpg', url:'/bookAll'},
-    {id: 44, title: 'Book a Session', picture:'assets/images/book/gridSession.jpg', url:'/bookEnergySessions'},
+    {id: 43, title: 'Info Overview', picture:'assets/images/book/grid/gridInfo.jpg', url:'/bookAll'},
+    {id: 44, title: 'Book a Session', picture:'assets/images/book/grid/gridSession.jpg', url:'/bookEnergySessions'},
 
     /* ON SESSION BOOK PAGE */
-    {id: 45, title: 'Info Overview', picture:'assets/images/book/gridInfo.jpg', url:'/bookAll'},
-    {id: 46, title: 'Book a Consultation', picture:'assets/images/book/gridConsult.jpg', url:'/bookEOLConsult'},
+    {id: 45, title: 'Info Overview', picture:'assets/images/book/grid/gridInfo.jpg', url:'/bookAll'},
+    {id: 46, title: 'Book a Consultation', picture:'assets/images/book/grid/gridConsult.jpg', url:'/bookEOLConsult'},
 ]

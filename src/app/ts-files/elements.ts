@@ -23,47 +23,19 @@ export const ELEMENTS: Element[] = [
         name: 'Water',
         start_hour:15,
         end_hour:19,
-
         time_range_yang_1:'3:00 pm to 5:00 pm (Bladder)',
         time_range_yin_1:'5:00 pm to 7:00 pm (Kidney)',
-        meridians: 'Kidney (Yin) and Bladder (Yang)',
-        element_1:'BLADDER (3:00pm-5:00pm)',
-        element_2:'KIDNEY (5:00pm-7:00pm)',
-
-        sedates:'WATER CALMS METAL',
-        sedates_metaphor:'Water takes excess Metals that serve to further enrich Water.',
-
-        strengthens:'WATER TONES WOOD',
-        strengthens_metaphor:'Water is essential for Wood to grow, it nourishes and feeds Wood.',
-
-        controls:'WATER CONTROLS FIRE',
-        controls_metaphor:'Water douses out Fire',
-
-        sedates_meridian1:'Water YIN Kidney takes excess energy from Metal YIN Lung.',
-        sedates_meridian1_points:'Kidney 10 (KI-10) sedates Lung 5 (LU-5)',
-        sedates_meridian2:'Water YANG Bladder takes excess energy from Metal YANG Large Intestine.',
-        sedates_meridian2_points:'Bladder 66 (BL-66) sedates Large Intestine 2 (LI-2)',
-
-        element_wheel_diagram_sed:'assets/images/elements/waterSedMetal.jpg',
-
-        strengthens_meridian1:'Water YIN Kidney sends energy to Wood YIN Liver.',
-        strengthens_meridian1_points:'Kidney 10 (KI-10) strengthens Liver 8 (LR-8)',
-
-        strengthens_meridian2:'Water YANG Bladder sends energy to Water YANG GallBladder.',
-        strengthens_meridian2_points:'Bladder 66 (BL-66) strengthens Gallbladder 43 (GB-43)',
-
-        element_wheel_diagram_str:'assets/images/elements/waterStrWood.jpg',
 
         verb:'I dream',
+        overall:'yin',
+        season:'winter',
+
+        meridians: 'Kidney (Yin) and Bladder (Yang)',
 
         icon:'assets/images/support/practitioner/elements/water/waterElement.png',
         bkgrd_image:'assets/images/support/practitioner/elements/water/waterElementLarge.jpg',
         nl_pic:'assets/images/support/practitioner/elements/water/nlWater.jpg',
         nv_pic:'assets/images/support/practitioner/elements/water/nvWater.jpg',
-
-        overall:'yin',
-
-        season:'winter',
 
         summary_yin:'YIN WATER is gentle and yielding when it flows over rocks in a stream. It ' +
             'is deep, cold, still and mysterious like the bottom of a well.',
@@ -131,14 +103,12 @@ export const ELEMENTS: Element[] = [
         nl_points:'Your Kidney Neurolymphatics are where your Kidneys lie. Reach back with your hands, thumbs upwards. Rub deeply up and down ' +
             'this Kidney line. Bladder NLs are found just above your pubic area, give these a deep massage as well',
 
-
         nv_points:'Water\'s Neurovascular points are found on both sides at the back of the head, directly behind the center of the eyes, about ' +
             '3 inches apart.',
 
 
 
-        yin_pic:'assets/images/meridians/elementKI.jpg',
-        yang_pic:'assets/images/meridians/elementBL.jpg',
+
     },
 
     {
@@ -149,52 +119,16 @@ export const ELEMENTS: Element[] = [
         time_range_yang_1:'11:00 pm to 1:00 am (Gallbladder)',
         time_range_yin_1:'1:00 am to 3:00 am (Liver)',
 
+        verb:'I think',
+        overall:'yang',
+        season:'spring',
+
         meridians: 'Liver (Yin) and Gallbladder (Yang)',
-
-        element_1:'GALLBLADDER (11:00pm-1:00am)',
-        element_2:'LIVER (1:OOam-3:00am)',
-
-        sedates:'WOOD CALMS WATER',
-        sedates_metaphor:'Wood takes in overflowing Water.',
-
-        strengthens:'WOOD TONES FIRE',
-        strengthens_metaphor:'Wood is used to fuel Fire\'s heat.',
-
-        controls:'WOOD CONTROLS EARTH',
-        controls_metaphor:'Wood anchors Earth',
-
-        sedates_meridian1:'WOOD YIN Liver takes excess energy from Water YIN Kidney.',
-        sedates_meridian1_points:'Liver 1 (LR-1) sedates Kidney 1 (KI-1)',
-
-        sedates_meridian2:'WOOD YANG Gallbladder takes excess energy from Water YANG Bladder.',
-        sedates_meridian2_points:'Gallbladder 41 (GB-41) sedates Bladder 65 (BL-65)',
-
-        element_wheel_diagram_sed:'assets/images/elements/woodSedWater.jpg',
-
-        strengthens_meridian1:'WOOD YIN Liver sends energy to Fire YIN Heart.',
-        strengthens_meridian1_points:'Liver 1 (LR-1) sends energy to Heart 9 (HT-9).',
-
-        strengthens_meridian2:'Wood YIN Liver also sends energy to Fire YIN Pericardium.',
-        strengthens_meridian2_points:'Liver 1 (LR-1) strengthens Pericardium 9 (PC-9).',
-
-        strengthens_meridian3:'Wood YANG Gallbladder sends energy to Fire YANG Small Intestine.',
-        strengthens_meridian3_points:'Gallbladder 41 (GB-41) strengthens Small Intestine 3 (SI-3).',
-
-        strengthens_meridian4:'Wood YANG Gallbladder also sends energy to Fire YANG Triple Warmer.',
-        strengthens_meridian4_points:'Gallbladder 41 (GB-41) strengthens Triple Warmer 3 (TW-3).',
-
-        element_wheel_diagram_str:'assets/images/elements/woodStrFire.jpg',
-
 
         icon:'assets/images/support/practitioner/elements/wood/woodElement.png',
         bkgrd_image:'assets/images/support/practitioner/elements/wood/woodElementLarge.jpg',
         nl_pic:'assets/images/support/practitioner/elements/wood/nlWood.jpg',
         nv_pic:'assets/images/support/practitioner/elements/wood/nvWood.jpg',
-
-        verb:'I think',
-        overall:'yang',
-
-        season:'spring',
 
         summary_yin:'WOOD YIN emerges from the Earth as a new sapling struggling against the elements. It is YIN WOOD is ' +
             'a fallen tree that creates a bridge across a river, while sending down roots to replenish itself.',
@@ -272,8 +206,7 @@ export const ELEMENTS: Element[] = [
             'at the indentation.',
 
 
-        yin_pic:'assets/images/meridians/elementLR.jpg',
-        yang_pic:'assets/images/meridians/elementGB.jpg',
+
 
     },
 
@@ -284,58 +217,24 @@ export const ELEMENTS: Element[] = [
         end_hour:15,
         start_hour_2:19,
         end_hour_2:23,
-
         time_range_yang_1:'11:00 am to 1:00 pm (Heart)',
         time_range_yin_1:'1:00 pm to 3:00 pm (Small Intestine)',
         time_range_yang_2:'7:00 pm to 9:00 pm (Pericardium)',
         time_range_yin_2:'9:00 pm to 11:00 am (Triple Warmer)',
 
+        verb:'I know',
+        overall:'yang',
+        season:'summer',
+
         meridians: 'Heart (Yin), Pericardium (Yin), Small Intestine (Yang) and Triple Warmer (Yang)',
-
-        element_1:'HEART (11:00am-1:00pm)',
-        element_2:'SMALL INTESTINE (1:00pm-3:00pm)',
-        element_3:'PERICARDIUM (7:00pm-9:00pm)',
-        element_4:'TRIPLE WARMER (9:00pm-11:00pm)',
-
-        sedates:'FIRE CALMS WOOD',
-        sedates_metaphor:'When there is too much Wood, Fire burns up Wood\'s excess.',
-
-        strengthens:'FIRE TONES EARTH',
-        strengthens_metaphor:'Fire ashes enrich Earth\s soil with nutrients that build up Earth',
-
-        controls:'FIRE CONTROLS METAL',
-        controls_metaphor:'Fire burns down into embers that create Metal',
-
-        sedates_meridian1:'Fire YIN Heart takes excess energy from Wood YIN Liver.',
-        sedates_meridian1_points:'Heart 8 (HT-8) sedates Liver 2 (LR-2).',
-
-        sedates_meridian2:'Fire YANG Small Intestine takes excess energy from Wood YANG Gallbladder.',
-        sedates_meridian2_points:'Small Intestine 5 (SI-5) sedates Gallbladder 38 (GB-38).',
-
-        element_wheel_diagram_sed:'assets/images/elements/fireSedWood.jpg',
-
-        strengthens_meridian1:'Fire YIN Heart sends energy to Earth YIN Spleen.',
-        strengthens_meridian1_points:'Heart 8 (HT-8) strengthens Spleen 2 (SP-2).',
-
-        strengthens_meridian2:'Fire YANG Small Intestine sends energy to Earth YANG Stomach.',
-        strengthens_meridian2_points:'Small Intestine 5 (SI-5) strengthens Stomach 41 (ST-41).',
-
-        element_wheel_diagram_str:'assets/images/elements/fireStrEarth.jpg',
 
         nl_pic:'assets/images/support/practitioner/elements/fire/nlFire.jpg',
         nv_pic:'assets/images/support/practitioner/elements/fire/nvFire.jpg',
         icon:'assets/images/support/practitioner/elements/fire/fireElement.png',
         bkgrd_image:'assets/images/support/practitioner/elements/fire/fireElementLarge.jpg',
 
-        verb:'I know',
-        overall:'yang',
-
-        season:'summer',
-
         summary_yin:'YIN Fire is the fluid layer of liquid iron and nickel living in the Earth\'s outer core. It is ' +
             'the deeply dark embers going cold in a fireplace.',
-
-
 
         summary_yang:'YANG Fire is the flickering sparks of a newly lighted crackling fire. It is the volcanic lava, ' +
             'tephra, and steam that erupts on to the Earth\'s surface.',
@@ -409,11 +308,6 @@ export const ELEMENTS: Element[] = [
 
 
 
-        yin_pic:'assets/images/meridians/elementHT.jpg',
-        yang_pic:'assets/images/meridians/elementSI.jpg',
-
-        yin_pic_2:'assets/images/meridians/elementPC.jpg',
-        yang_pic_2:'assets/images/meridians/elementTW.jpg',
 
     },
 
@@ -422,58 +316,23 @@ export const ELEMENTS: Element[] = [
         name: 'Earth',
         start_hour:7,
         end_hour:11,
-
         time_range_yang_1:'7:00 am to 9:00 am (Stomach)',
         time_range_yin_1:'9:00 am to 11:00 am (Spleen)',
 
+        verb:'I do',
+        overall:'yin-yang',
+        season:'between spring-summer and summer-fall.',
+
         meridians: 'Spleen (Yin) and Stomach (Yang)',
-
-        element_1:'STOMACH (7:00am-9:00am)',
-        element_2:'SPLEEN (9:00am-11:00am)',
-
-        sedates:'EARTH CALMS FIRE',
-        sedates_metaphor:'Earth accepts and decomposes excess ashes from Fire.',
-
-        strengthens:'EARTH TONES METAL',
-        strengthens_metaphor:'Earth decomposes organic matter and compresses it into Metals.',
-
-        controls:'EARTH CONTROLS WATER',
-        controls_metaphor:'Earth surrounds and contains Water',
-
-        sedates_meridian1:'Earth YIN Spleen takes excess energy from Fire YIN Pericardium.',
-        sedates_meridian1_points:'Spleen 3 (SP-3) sedates Pericardium 7 (PC-7).',
-
-        sedates_meridian2:'Earth YANG Stomach takes excess energy from Fire YANG Small Intestine.',
-        sedates_meridian2_points:'Stomach 36 (ST-36) sedates Small Intestine 8 (SI-8).',
-
-        sedates_meridian3:'Earth YANG Stomach also takes excess energy from Fire YANG Triple Warmer.',
-        sedates_meridian3_points:'Stomach 36 (ST-36) sedates Triple Warmer 8 (TW-8).',
-
-        element_wheel_diagram_sed:'assets/images/elements/earthSedFire.jpg',
-
-        strengthens_meridian1:'Earth YIN Spleen sends energy to Metal YIN Lungs.',
-        strengthens_meridian1_points:'Spleen 3 (SP-3) strengthens Lung 9 (LU-9).',
-
-        strengthens_meridian2:'Earth YANG Stomach sends energy to Metal YANG Large Intestine.',
-        strengthens_meridian2_points:'Stomach 36 (ST-36) strengthens Large Intestine 11 (LI-11).',
-
-        element_wheel_diagram_str:'assets/images/elements/earthStrMetal.jpg',
 
         nl_pic:'assets/images/support/practitioner/elements/earth/nlEarth.jpg',
         nv_pic:'assets/images/support/practitioner/elements/earth/nvEarth.jpg',
         icon:'assets/images/support/practitioner/elements/earth/earthElement.png',
         bkgrd_image:'assets/images/support/practitioner/elements/earth/earthElementLarge.jpg',
 
-        verb:'I do',
-        overall:'yin-yang',
-
-        season:'between spring-summer and summer-fall.',
-
         summary_yin:'YIN Earth supplies the nutrients to help newly planted seeds grow. It' +
             ' grows the grass that invites you to lay down upon it and rest.',
         summary_yang:'YANG Earth moves itself ever upwards to create mountains. It can tear itself apart creating deadly earthquakes.',
-
-
 
         power_animals:'the Pheasant, Chicken, Turkey and other domestic farm animals.',
         attributes:'our authenticity, our solidity, our adaptability and practicality.',
@@ -547,8 +406,7 @@ export const ELEMENTS: Element[] = [
 
 
 
-        yin_pic:'assets/images/meridians/elementSP.jpg',
-        yang_pic:'assets/images/meridians/elementST.jpg',
+
 
     },
 
@@ -557,56 +415,24 @@ export const ELEMENTS: Element[] = [
         name: 'Metal',
         start_hour:3,
         end_hour:7,
-
         time_range_yang_1:'3:00 am to 5:00 am (Lung)',
         time_range_yin_1:'5:00 am to 7:00 am (Large Intestine)',
 
+        verb:'I feel',
+        overall:'yin',
+        season:'fall',
+
         meridians: 'Lung (Yin) and Large Intestine (Yang)',
-
-        element_1:'LUNG (3:00am - 5:00am) ',
-        element_2:'LARGE INTESTINE (5:00am - 7:00am)',
-
-        sedates:'METAL CALMS EARTH',
-        sedates_metaphor:'Metal is created from an abundance of overflowing Earth.',
-
-        strengthens:'METAL TONES WATER',
-        strengthens_metaphor:'Mineral deposits from Metal enrich the composition of Water.',
-
-        controls:'METAL CONTROLS WOOD',
-        controls_metaphor:'Metal chops Wood',
-
-        sedates_meridian1:'Metal YIN Lung takes excess energy from Earth YIN Spleen.',
-        sedates_meridian1_points:'Lung 8 (LU-8) sedates Spleen 5 (SP-5).',
-
-        sedates_meridian2:'Metal YANG Large Intestine takes excess energy from Earth YANG Stomach.',
-        sedates_meridian2_points:'Large Intestine 1 (LI-1) sedates Stomach 45 (ST-45).',
-
-        element_wheel_diagram_sed:'assets/images/elements/metalSedEarth.jpg',
-
-        strengthens_meridian1:'Metal YIN Lung sends energy to Water YIN Kidney.',
-        strengthens_meridian1_points:'Lung 8 (LU-8) strengthens Kidney 7 (KI-7).',
-
-        strengthens_meridian2:'Metal YANG Large Intestine sends energy to Water YANG Bladder.',
-        strengthens_meridian2_points:'Large Intestine 1 (LI-1) strenthens Bladder 67 (BL-67).',
-
-        element_wheel_diagram_str:'assets/images/elements/metalStrWater.jpg',
 
         icon:'assets/images/support/practitioner/elements/metal/metalElement.png',
         bkgrd_image:'assets/images/support/practitioner/elements/metal/metalElementLarge.jpg',
         nl_pic:'assets/images/support/practitioner/elements/metal/nlMetal.jpg',
         nv_pic:'assets/images/support/practitioner/elements/metal/nvMetal.jpg',
 
-        verb:'I feel',
-        overall:'yin',
-
-        season:'fall',
-
         summary_yin:'Yin Metal is like the intricate and magnificent inner workings of a grandfather clock. ' +
             'It is a tool that is cold and lifeless when sitting on a shelf.',
         summary_yang:'YANG Metal is the tool that when used creates magnificent and powerful works of art. It' +
             'can produce great buildings and structures like the skyscrapers that tower over the city.',
-
-
 
         power_animals:'the White Tiger. Metal represents all felines, both wild jungle cats ' +
             'and playful domestic kittens.',
@@ -614,12 +440,10 @@ export const ELEMENTS: Element[] = [
         challenge:'MINE- CHECK If we can recognize our need for connection (Earth) we can put love into our creations (Metal).',
         governs:'Lungs, Large Intestine, skin and hair.',
         archetypes:'The Queen or King, The Yogi, The Alchemist',
-
         direction:'Metal\'s direction is west.',
         weather:'dry',
         color:'white, silver and blue-silver',
         taste:'spicy',
-
         sensory_organ:'nose',
         aspect:'introverted',
         time_day:'late afternoon, evening',
@@ -678,8 +502,7 @@ export const ELEMENTS: Element[] = [
         nv_points:'Metal\'s Neurovascular points are found on the very top of the head in the center.',
 
 
-        yin_pic:'assets/images/meridians/elementLU.jpg',
-        yang_pic:'assets/images/meridians/elementLI.jpg',
+
 
     },
 ]

@@ -323,9 +323,9 @@
         <div class="dark-copy">
             <b>To Send Energy to a Weakened {{selectedMeridian.name}} Meridian</b>
             <br><br>
-            <i><b>{{selectedMeridian.acu_points_receiver_strengthen}}</b></i>
+            <i><b>{{selectedMeridian.acu_points_strengthen}}</b></i>
             <br><br>
-            {{selectedMeridian.acu_points_receiver_strengthen_desc}}
+            {{selectedMeridian.acu_points_strengthen_desc}}
             <br>
             Hold the {{selectedMeridian.name}} strengthening points on one side for a few minutes
             <br>
@@ -334,7 +334,7 @@
     </div>
 
     <div class="images">
-        <img src="{{selectedMeridian.acu_points_receiver_strengthen_pic}}">
+        <img src="{{selectedMeridian.acu_points_strengthen_pic}}">
     </div>
 
     <div *ngIf="selectedMeridian.id != 11">
@@ -350,9 +350,9 @@
             <div *ngIf="selectedMeridian.id != 11">
                 <b>To take energy away from an over-active {{selectedMeridian.name}} Meridian</b>
                 <br><br>
-                <i><b>{{selectedMeridian.acu_points_receiver_sedate}}</b></i>
+                <i><b>{{selectedMeridian.acu_points_sedate}}</b></i>
                 <br><br>
-                {{selectedMeridian.acu_points_receiver_sedate_desc}}
+                {{selectedMeridian.acu_points_sedate_desc}}
                 <br>
                 Hold the {{selectedMeridian.name}} strengthening points on one side for a few minutes
                 <br>
@@ -362,6 +362,6 @@
     </div>
 
     <div class="images">
-        <img src="{{selectedMeridian.acu_points_receiver_sedate_pic}}">
+        <img src="{{selectedMeridian.acu_points_sedate_pic}}">
     </div>
 </div>
