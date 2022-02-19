@@ -43,7 +43,7 @@ and (max-width: 1279px) {
     display:grid;
     grid-row:1;
     grid-column:1/2;
-    background: url("src/assets/images/headers/transitionsInEnergyHeader.jpg")  left no-repeat;
+    background: url("src/assets/images/extras/headers/transitionsInEnergyHeader.jpg")  left no-repeat;
     background-size:contain;
     width:100%;
   }
@@ -334,7 +334,7 @@ and (orientation: landscape) {
     margin:auto;
     width:var(--header-desktop-slogan-width);
     height: var(--header-desktop-slogan-height);
-    background: url("src/assets/images/headers/transitionsInEnergyHeader.jpg")  center no-repeat;
+    background: url("src/assets/images/extras/headers/transitionsInEnergyHeader.jpg")  center no-repeat;
     background-size:auto;
   }
 

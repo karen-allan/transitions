@@ -26,8 +26,6 @@ export class SessionProfileComponent implements OnInit {
   }
 
   printProfile() {
-
-    alert('Pass Client info to print profile');
     this._parent.copyModelToPrintComponent(this.model);
   }
 }
