@@ -4,10 +4,7 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-    /* BOOK DETAIL */
-    .book-detail-container {
-        grid-template-columns: 100%;
-    }
+
 
 }
 
@@ -17,225 +14,88 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-    /* BOOK DETAIL */
-    .book-detail-container {
-        grid-template-columns: 100%;
-        margin-top: 46px;
-    }
+
 
 }
-
 /* MOBILES PORTRAIT ****************************************************************************************************/
 @media only screen
 and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-      /* BOOK DETAIL */
-    .book-detail-container {
-        grid-template-columns: 100%;
-    }
-
-    .book-detail-menu h1 {
-        font-size:1.5em;
-    }
-
-    .book-detail-menu h1 {
-        font-size:1.2em;
-    }
-
-    .book-detail-menu p {
-        font-size:1.2em;
-    }
-
-    .book-detail-forms {
-        font-size:1.2em;
-        margin: .8em 0;
-    }
-
     /* CLIENT PROFILES */
-    .client-profile-form h1 {
-        margin-top: 1em;
-        font-size:1.8em;
-    }
-
-    .cpf-group {
+    .forms-desktop {
         display: none;
     }
 
-    .cpf-group-mobile {
-        display:block;
-        width:100%;
-        margin:auto;
-        border-top:thin dashed var(--color-dark-blue);
+    .forms-mobile {
+        display: block;
+        width: 100%;
+        border-top: thin dashed var(--color-dark-blue);
     }
 
-    .cpf-group-mobile p:first-child {
-        margin:0;
+    .full-width-grid h2 {
+        font-size: 0.9em;
+
+        padding: .5em 0;
     }
 
-    .cpf-group-mobile p {
-        display:block;
-        margin:1em 0;
-        padding: .2em 0 .2em 0;
-        background-color: var(--color-dark-blue);
-        border:solid thin var(--color-dark-blue);
-        text-align: center;
-        font-size: 1.3em;
-    }
-
-    .cpfm-label, .cpfm-text {
-        display:block;
-        margin:auto;
-        width:90%;
-        padding:.5em 0;
-        color: var(--color-dark-blue);
-        font-family:var(--family-data);
-    }
-
-    .cpfm-label {
+    .full-width-grid p {
+        padding: .5em 0;
         font-size: 1.0em;
     }
 
-    .cpfm-text {
-        font-size: 0.9em;
+    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col,
+    .last-two-grid-cols, .all-grid-cols        {
+        font-size: 1.0em;
+        padding-top: 1em;
     }
 
-    /* CLIENT ASSESSMENT */
-    .self-assessment-form h1  {
-        font-size: 1.2em;
+    .first-inline-col, .second-inline-col, .third-inline-col {
+        font-size: 0.8em;
+        padding:1em 0;
     }
 
-    .saf-question span, .saf-treatment-consent p {
-        font-size: 1.2em;
+    .first-inline-col {
+        padding-left:2em;
     }
 
-    .saf-question li  {
-        font-size: 1.2em;
+
+
+
+
+ /*   .full-width-grid label {
+        font-size: 1.0em;
+        padding:1em 0 .2em 0em;
+    }*/
+
+    .disclaimer h3 {
+        font-size: 1.1em;
+        padding: 1em 0;
     }
 
-    .saf-answer, .saf-sign  {
-        font-size: 1.2em;
+    .disclaimer span {
+        font-size: var(--global-mobile-port-font-size);
     }
 
-    .saf-sign {
-        display:inline-grid;
-        grid-template-columns: 55% 45%;
-        grid-template-rows: repeat(2, 100%);
+    .sig-date-prompt {
+        font-size: 1em;
     }
 
     /* PRINT FORMS */
     .print-forms-button {
-        padding: .5em 1em;
-        font-size: 0.8em;
+        padding: 1em 1.5em;
+        font-size: 0.9em;
     }
 }
 
+
 /* MOBILES LANDSCAPE ****************************************************************************************************/
 @media only screen
-and (min-width:896px )
+and (min-width: 896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-
-    /* BOOK DETAIL */
-    .book-detail-container {
-        grid-template-columns: 100%;
-    }
-
-    .book-detail-menu h1 {
-        font-size:1.5em;
-    }
-
-    .book-detail-menu h1 {
-        font-size:1.2em;
-    }
-
-    .book-detail-menu p {
-        font-size:1.2em;
-    }
-
-    .book-detail-forms {
-        font-size:1.2em;
-        margin: .8em 0;
-    }
-
-    /* CLIENT PROFILES */
-    .client-profile-form h1 {
-        margin-top: 1em;
-        font-size:1.8em;
-    }
-
-    .cpf-group {
-        display: none;
-    }
-
-    .cpf-group-mobile {
-        display:block;
-        width:100%;
-        margin:auto;
-        border-top:thin dashed var(--color-dark-blue);
-    }
-
-    .cpf-group-mobile p:first-child {
-        margin:0;
-    }
-
-    .cpf-group-mobile p {
-        display:block;
-        margin:1em 0;
-        padding: .2em 0 .2em 0;
-        background-color: var(--color-dark-blue);
-        border:solid thin var(--color-dark-blue);
-        text-align: center;
-        font-size: 1.3em;
-    }
-
-    .cpfm-label, .cpfm-text {
-        display:block;
-        margin:auto;
-        width:90%;
-        padding:.5em 0;
-        color: var(--color-dark-blue);
-        font-family:var(--family-data);
-    }
-
-    .cpfm-label {
-        font-size: 1.0em;
-    }
-
-    .cpfm-text {
-        font-size: 0.9em;
-    }
-
-    /* CLIENT ASSESSMENT */
-    .self-assessment-form h1  {
-        font-size: 1.2em;
-    }
-
-    .saf-question span, .saf-treatment-consent p {
-        font-size: 1.2em;
-    }
-
-    .saf-question li  {
-        font-size: 1.2em;
-    }
-
-    .saf-answer, .saf-sign  {
-        font-size: 1.2em;
-    }
-
-    .saf-sign {
-        display:inline-grid;
-        grid-template-columns: 55% 45%;
-        grid-template-rows: repeat(2, 100%);
-    }
-
-    /* PRINT FORMS */
-    .print-forms-button {
-        padding: .5em 1em;
-        font-size: 0.8em;
-    }
 }
 
 /* TABLETS PORTRAIT ****************************************************************************************************/
@@ -244,104 +104,7 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-    /* BOOK DETAIL */
-    .book-detail-container {
-        grid-template-columns: 100%;
-    }
 
-    .book-detail-menu h1 {
-        font-size:1.6em;
-    }
-
-    .book-detail-menu p {
-        font-size:1.3em;
-    }
-
-    .book-detail-forms {
-        font-size: 1.1em;
-        margin: 1em 0;
-    }
-
-    /* CLIENT PROFILES */
-    .client-profile-form h1 {
-        margin-top: 1em;
-        font-size:1.8em;
-    }
-
-    .cpf-group {
-        display: none;
-    }
-
-    .cpf-group-mobile {
-        display:block;
-        width:100%;
-        margin:auto;
-        border-top:thin dashed var(--color-dark-blue);
-    }
-
-    .cpf-group-mobile p:first-child {
-        margin:0;
-    }
-
-    .cpf-group-mobile p {
-        display:block;
-        margin:1em 0;
-        padding: .2em 0 .2em 0;
-        background-color: var(--color-dark-blue);
-        border:solid thin var(--color-dark-blue);
-        text-align: center;
-        font-size: 1.3em;
-    }
-
-    .cpfm-label, .cpfm-text {
-        display:block;
-        margin:auto;
-        width:90%;
-        padding:.5em 0;
-        color: var(--color-dark-blue);
-        font-family:var(--family-data);
-    }
-
-    .cpfm-label {
-        font-size: 1.0em;
-    }
-
-    .cpfm-text {
-        font-size: 0.9em;
-    }
-
-    /* CLIENT ASSESSMENT */
-    .self-assessment-form h1  {
-        font-size: 1.6em;
-    }
-
-    .saf-question span, .saf-treatment-consent p {
-        font-size: 1.2em;
-    }
-
-    .saf-question li  {
-        font-size: 1.1em;
-    }
-
-    .saf-answer  {
-        font-size: 1.0em;
-    }
-
-    .saf-sign  {
-        font-size: 0.9em;
-    }
-
-    .saf-sign {
-        grid-template-columns: 55% 45%;
-        grid-template-rows: repeat(2, 100%);
-    }
-
-    /* PRINT FORMS */
-    .print-forms-button {
-        padding: .5em 1em;
-        font-size: 0.9em;
-        margin-top:1em;
-    }
 }
 
 /* TABLETS LANDSCAPE ***************************************************************************************************/
@@ -349,106 +112,8 @@ and (orientation: portrait) {
 and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
-
-    /* BOOK DETAIL */
-    .book-detail-container {
-        grid-template-columns: 100%;
-    }
-
-    .book-detail-menu h1 {
-        font-size:1.6em;
-    }
-
-    .book-detail-menu p {
-        font-size:1.3em;
-    }
-
-    .book-detail-forms {
-        font-size:1.2em;
-        margin: 1em 0;
-    }
-
-    /* CLIENT PROFILES */
-    .client-profile-form h1 {
-        margin-top: 1em;
-        font-size:1.8em;
-    }
-
-    .cpf-group {
-        display: none;
-    }
-
-    .cpf-group-mobile {
-        display:block;
-        width:100%;
-        margin:auto;
-        border-top:thin dashed var(--color-dark-blue);
-    }
-
-    .cpf-group-mobile p:first-child {
-        margin:0;
-    }
-
-    .cpf-group-mobile p {
-        display:block;
-        margin:1em 0;
-        padding: .2em 0 .2em 0;
-        background-color: var(--color-dark-blue);
-        border:solid thin var(--color-dark-blue);
-        text-align: center;
-        font-size: 1.3em;
-    }
-
-    .cpfm-label, .cpfm-text {
-        display:block;
-        margin:auto;
-        width:90%;
-        padding:.5em 0;
-        color: var(--color-dark-blue);
-        font-family:var(--family-data);
-    }
-
-    .cpfm-label {
-        font-size: 1.0em;
-    }
-
-    .cpfm-text {
-        font-size: 0.9em;
-    }
-
-    /* CLIENT ASSESSMENT */
-    .self-assessment-form h1  {
-        font-size: 1.6em;
-    }
-
-    .saf-question span, .saf-treatment-consent p {
-        font-size: 1.4em;
-    }
-
-    .saf-question li  {
-        font-size: 1.2em;
-    }
-
-    .saf-answer  {
-        font-size: 1.0em;
-    }
-
-    .saf-sign  {
-        font-size: 1.0em;
-    }
-
-    .saf-sign {
-        grid-template-columns: 55% 45%;
-        grid-template-rows: repeat(2, 100%);
-    }
-
-    /* PRINT FORMS */
-    .print-forms-button {
-        padding: .5em 1em;
-        font-size: 0.9em;
-        margin-top:1em;
-    }
 }
+
 
 
 /* IPADS PORTRAIT ****************************************************************************************************/
@@ -457,105 +122,66 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    /* BOOK DETAIL */
-    /* BOOK DETAIL */
-    .book-detail-container {
-        grid-template-columns: 33% 67%;
-    }
-
-    .book-detail-menu h1 {
-        font-size:1.6em;
-    }
-
-    .book-detail-menu p {
-        font-size:1.3em;
-    }
-
-    .book-detail-forms {
-        font-size: 1.1em;
-        margin: 1em 0;
-    }
-
     /* CLIENT PROFILES */
-    .client-profile-form h1 {
-        margin-top: 1em;
-        font-size:1.8em;
-    }
-
-    .cpf-group {
+    .forms-desktop {
         display: none;
     }
 
-    .cpf-group-mobile {
-        display:block;
-        width:100%;
-        margin:auto;
-        border-top:thin dashed var(--color-dark-blue);
+    .forms-mobile {
+        display: block;
+        width: 100%;
+        border-top: thin dashed var(--color-dark-blue);
     }
 
-    .cpf-group-mobile p:first-child {
-        margin:0;
+    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col,
+    .last-two-grid-cols, .all-grid-cols        {
+        font-size: 1.0em;
+        padding-top: 1em;
     }
 
-    .cpf-group-mobile p {
-        display:block;
-        margin:1em 0;
-        padding: .2em 0 .2em 0;
-        background-color: var(--color-dark-blue);
-        border:solid thin var(--color-dark-blue);
-        text-align: center;
+    .first-inline-col, .second-inline-col, .third-inline-col {
+        font-size: 1.0em;
+        padding:1em 0;
+    }
+
+    .first-inline-col {
+        padding-left:2em;
+    }
+
+    .full-width-grid h2 {
         font-size: 1.3em;
+        line-height: 3em;
     }
 
-    .cpfm-label, .cpfm-text {
-        display:block;
-        margin:auto;
-        width:90%;
-        padding:.5em 0;
-        color: var(--color-dark-blue);
-        font-family:var(--family-data);
-    }
-
-    .cpfm-label {
+    .full-width-grid p {
+        padding: .5em 0;
         font-size: 1.0em;
     }
 
-    .cpfm-text {
-        font-size: 0.9em;
+    .full-width-grid label {
+        font-size: 1.0em;
+        padding:1em 0 .2em 0em;
     }
 
-    /* CLIENT ASSESSMENT */
-    .self-assessment-form h1  {
-        font-size: 1.6em;
-    }
-
-    .saf-question span, .saf-treatment-consent p {
-        font-size: 1.2em;
-    }
-
-    .saf-question li  {
+    .disclaimer h3 {
         font-size: 1.1em;
+        padding: 1em 0;
     }
 
-    .saf-answer  {
-        font-size: 1.0em;
+    .disclaimer span {
+        font-size: var(--malgun-laptop-desktop-font-size);
     }
 
-    .saf-sign  {
-        font-size: 0.9em;
-    }
-
-    .saf-sign {
-        grid-template-columns: 55% 45%;
-        grid-template-rows: repeat(2, 100%);
+    .sig-date-prompt {
+        font-size: 1em;
     }
 
     /* PRINT FORMS */
     .print-forms-button {
-        padding: .5em 1em;
+        padding: 1em 1.5em;
         font-size: 0.9em;
-        margin-top:1em;
     }
+
 }
 
 /* IPADS LANDSCAPE ***************************************************************************************************/
@@ -564,255 +190,13 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-    /* BOOK DETAIL */
-    .book-detail-container {
-        grid-template-columns: 33% 67%;
-    }
 
-    /* BOOK DETAIL */
-    .book-detail-menu h1 {
-        font-size:1.6em;
-    }
-
-    .book-detail-menu p {
-        font-size:1.3em;
-    }
-
-    .book-detail-forms {
-        font-size:1.2em;
-        margin: 1em 0;
-    }
-
-    /* CLIENT PROFILES */
-    .client-profile-form h1 {
-        margin-top: 1em;
-        font-size:1.8em;
-    }
-
-    .cpf-group {
-        display: none;
-    }
-
-    .cpf-group-mobile {
-        display:block;
-        width:100%;
-        margin:auto;
-        border-top:thin dashed var(--color-dark-blue);
-    }
-
-    .cpf-group-mobile p:first-child {
-        margin:0;
-    }
-
-    .cpf-group-mobile p {
-        display:block;
-        margin:1em 0;
-        padding: .2em 0 .2em 0;
-        background-color: var(--color-dark-blue);
-        border:solid thin var(--color-dark-blue);
-        text-align: center;
-        font-size: 1.3em;
-    }
-
-    .cpfm-label, .cpfm-text {
-        display:block;
-        margin:auto;
-        width:90%;
-        padding:.5em 0;
-        color: var(--color-dark-blue);
-        font-family:var(--family-data);
-    }
-
-    .cpfm-label {
-        font-size: 1.0em;
-    }
-
-    .cpfm-text {
-        font-size: 0.9em;
-    }
-
-    /* CLIENT ASSESSMENT */
-    .self-assessment-form h1  {
-        font-size: 1.6em;
-    }
-
-    .saf-question span, .saf-treatment-consent p {
-        font-size: 1.4em;
-    }
-
-    .saf-question li  {
-        font-size: 1.2em;
-    }
-
-    .saf-answer  {
-        font-size: 1.0em;
-    }
-
-    .saf-sign  {
-        font-size: 1.0em;
-    }
-
-    .saf-sign {
-        grid-template-columns: 55% 45%;
-        grid-template-rows: repeat(2, 100%);
-    }
-
-    /* PRINT FORMS */
-    .print-forms-button {
-        padding: .5em 1em;
-        font-size: 0.9em;
-        margin-top:1em;
-    }
 }
 
 /* LAPTOPS *****************************************************************************************************/
 @media only screen
 and (min-width: 1440px)
 and (max-width: 1919px) {
-
-    /* BOOK DETAIL */
-    .book-detail-container {
-        grid-template-columns: 33% 67%;
-    }
-
-    .book-detail-menu h1 {
-        font-size:1.8em;
-    }
-
-    .book-detail-menu p {
-        font-size:1.1em;
-        line-height: 210%;
-    }
-
-    .book-detail-forms {
-        font-size:1.2em;
-        padding:1em 0;
-        margin-top:2.5em;
-    }
-
-    .client-profile-form h1 {
-        font-size:1.8em;
-        margin: 1em 0;
-    }
-
-    .cpf-group-mobile {
-        display: none;
-    }
-
-    .cpf-group {
-        display: inline-grid;
-        width: 99%;
-        grid-template-columns: 30%  20% 26% 23%;
-        background-color: var(--color-white);
-        padding: 1em 0 1em 1%;
-    }
-
-    .cpf-group p {
-        padding:.5em 0;
-        grid-column: 1 / -1;
-        background-color: var(--color-dark-blue);
-        border:solid thin #878787;
-        text-align: center;
-        font-family: var(--family-data);
-        color: var(--color-white);
-        font-size: 1.3em;
-    }
-
-    .cpf-first-col-only, .cpf-second-col-only, .cpf-third-col-only, .cpf-fourth-col-only, .cpf-first-three-col,
-    .cpf-all-col, .cpf-privacy-clause, .cpf-last-two-col {
-        font-family: var(--family-data);
-        color: var(--color-dark-blue);
-        padding-top: 1em;
-        font-size: 1.0em;
-    }
-
-    .cpf-first-col-only {
-        grid-column: 1 / 2;
-    }
-
-    .cpf-second-col-only {
-        grid-column: 2 / 3;
-    }
-
-    .cpf-third-col-only {
-        grid-column: 3 / 4;
-    }
-
-    .cpf-fourth-col-only {
-        grid-column: 4 / -1;
-    }
-
-    .cpf-first-three-col {
-        grid-column: 1 / 4;
-    }
-
-    .cpf-all-col {
-        grid-column: 1 / -1;
-    }
-
-    .cpf-last-two-col {
-        grid-column: 3 / -1;
-    }
-
-    /* SELF ASSESSMENT */
-    .self-assessment-form h1  {
-        font-size: 1.8em;
-    }
-
-    .saf-question span, .saf-treatment-consent p {
-        font-size: 1.2em;
-    }
-
-    .saf-question li  {
-        font-size: 1.1em;
-    }
-
-    .saf-answer, .saf-sign  {
-        font-size: 1em;
-    }
-
-    .saf-sign {
-        grid-template-columns: 14% 36% 5% 45%;
-        grid-template-rows: repeat(1, 100%);
-    }
-
-    .saf-sign-here-text, .saf-sign-here-line, .saf-dated-text, .saf-dated-line {
-        grid-row: 1 / -1;
-    }
-
-    .saf-sign-here-text {
-        grid-column: 1 / 2;
-        padding-left:1em;
-    }
-
-    .saf-sign-here-line {
-        grid-column: 2 / 3;
-        margin-top:.4em;
-        margin-right:1em;
-        background: url("../images/book/line.jpg") right repeat-x;
-    }
-
-    .saf-dated-text {
-        grid-column: 3 / 4;
-    }
-
-    .saf-dated-line  {
-        grid-column: 4 / -1;
-        background: url("../images/book/line.jpg") right repeat-x;
-        margin-top:.4em;
-        margin-right:1em;
-    }
-
-    .print-forms-button {
-        padding: 1em 1.5em;
-        font-size: 1.0em;
-    }
-
-    /* PRINT FORMS */
-    .print-forms-button {
-        padding: 1em 1.5em;
-        font-size: 0.9em;
-    }
 
 }
 
@@ -821,409 +205,233 @@ and (max-width: 1919px) {
 @media only screen
 and (min-width: 1920px) {
 
-    /* BOOK DETAIL */
-    .book-detail-container {
-        grid-template-columns: 33% 67%;
-    }
-
-    .book-detail-menu h1 {
-        font-size:1.8em;
-    }
-
-    .book-detail-menu p {
-        font-size:1.1em;
-        line-height: 210%;
-    }
-
-    .book-detail-forms {
-        font-size:1.2em;
-        padding:1em 0;
-        margin-top:2.5em;
-    }
-
-    .client-profile-form h1 {
-        font-size:1.8em;
-        margin: 1em 0;
-    }
-
-    .cpf-group-mobile {
+    .forms-mobile {
         display: none;
     }
 
-    .cpf-group {
-        display: inline-grid;
-        width: 99%;
-        grid-template-columns: 30%  20% 26% 23%;
-        background-color: var(--color-white);
-        padding: 1em 0 1em 1%;
-        border:thin solid pink;
+    .forms-desktop {
+        display: block;
+        width: 100%;
+        max-width:1152px;
+        margin:auto;
+        border:thin solid var(--color-grey);
     }
 
-    .cpf-group p  {
-        padding:.5em 0;
-        grid-column: 1 / -1;
-        background-color: var(--color-dark-blue);
-        border:solid thin #878787;
-        text-align: center;
-        font-family: var(--family-data);
-        color: var(--color-white);
-        font-size: 1.3em;
+    .menu-item span, .menu-item a {
+        font-size: var(--small-whitney-desktop-font-size);
     }
 
-    .disclaimer {
-        display:block;
-        width:80%;
-        margin:1em 10%;
-        font-family: var(--family-global);
-        color: var(--color-dark-blue);
-    }
-
-    .disclaimer-heading {
-        font-size: 1.1em;
-        padding:1em 0;
-        color: var(--color-dark-blue);
-        font-weight: 800;
-    }
-
-    .disclaimer span {
-        font-size: 0.9em;
-    }
-
-    .disclaimer-signature {
-        font-size: 1em;
-        padding:1em 0 0 0;
-        color: var(--color-dark-blue);
-        font-weight: 800;
-    }
-
-
-    .cpf-first-col-only, .cpf-second-col-only, .cpf-third-col-only, .cpf-fourth-col-only,
-    .cpf-first-three-col, .cpf-middle-two-col, .cpf-last-two-col,  .cpf-last-three-col,
-    .cpf-all-col, .cpf-all-col-with-pad-3, .cpf-privacy-clause,
-    .cpf-first-radio, .cpf-second-radio, .cpf-third-radio,
-    .cpf-first-check, .cpf-second-check, .cpf-third-check {
-        display:grid;
-        font-family: var(--family-data);
-        color: var(--color-dark-blue);
-        font-size: 1.0em;
-    }
-
-    .cpf-first-col-only, .cpf-second-col-only, .cpf-third-col-only, .cpf-fourth-col-only,
-    .cpf-first-three-col, .cpf-middle-two-col, .cpf-last-two-col, .cpf-last-three-col,
-    .cpf-all-col, .cpf-privacy-clause  {
+    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col, all-grid-columns,
+    .last-two-grid-cols, .all-grid-cols, .first-inline-col, .second-inline-col, .third-inline-col        {
+        font-size: var(--global-med-laptop-desktop-font-size);
         padding-top: 1em;
     }
 
-    .cpf-all-col-with-pad-3 {
-        grid-column: 1 / -1;
-        padding-top: 3em;
+    .first-inline-col {
+        padding-left:2em;
     }
 
-    .cpf-first-col-only {
-        grid-column: 1 / 2;
+    .first-inline-col, .second-inline-col, .third-inline-col {
+        padding-bottom:1em;
+        margin-bottom:1em;
     }
 
-    .cpf-second-col-only {
-        grid-column: 2 / 3;
+    .form-heading {
+        font-size: var(--med-whitney-desktop-font-size);
+        line-height: 3em;
+        margin-top:2em;
+        margin-bottom:1em;
+        padding:.5em 0;
     }
 
-    .cpf-third-col-only {
-        grid-column: 3 / 4;
+    .form-prompt {
+        padding:1em 0 1em 1em;
+        font-size: var(--small-whitney-desktop-font-size);
     }
 
-    .cpf-fourth-col-only {
-        grid-column: 4 / -1;
+    .disclaimer p {
+        font-size: var(--global-big-laptop-desktop-font-size);
+        padding: 1em 0;
     }
 
-    .cpf-first-three-col {
-        grid-column: 1 / 4;
+    .disclaimer span, .sig-date-prompt {
+        font-size: var(--global-med-laptop-desktop-font-size);
     }
 
-    .cpf-middle-two-col {
-        grid-column: 2 / 4;
+    .sig-date-prompt {
+        padding: 1em 0 0 0;
+        margin: .5em 0;
     }
 
-    .cpf-last-two-col {
-        grid-column: 3 / -1;
-    }
-
-    .cpf-all-col {
-        grid-column: 1 / -1;
-    }
-
-    .cpf-last-three-col {
-        background: url("../images/book/line.jpg") right repeat-x;
-    }
-
-    .cpf-three-radio , .cpf-three-checkbox {
-        display:inline-grid;
-        width:100%;
-        grid-template-columns: repeat(3, 33%);
-        margin-top: 1em;
-    }
-
-    .cpf-first-radio, .cpf-second-radio, .cpf-third-radio, .cpf-first-check, .cpf-second-check, .cpf-third-check{
-        justify-content: flex-start;
-        border:thin solid red;
-    }
-
-    .cpf-first-radio, .cpf-first-check {
-        grid-column: 1;
-        align-content: center;
-    }
-
-    .cpf-second-radio, .cpf-second-check  {
-        grid-column: 2;
-        align-content: center;
-    }
-
-    .cpf-third-radio, .cpf-third-check  {
-        grid-column: 3;
-        align-content: center;
-    }
-
-    /* SELF ASSESSMENT */
-    .self-assessment-form h1  {
-        font-size: 1.8em;
-    }
-
-    .saf-question span, .saf-treatment-consent p {
-        font-size: 1.2em;
-    }
-
-    .saf-question li  {
-        font-size: 1.1em;
-    }
-
-    .saf-answer, .saf-sign  {
-        font-size: 1em;
-    }
-
-    .saf-sign {
-        grid-template-columns: 14% 36% 5% 45%;
-        grid-template-rows: repeat(1, 100%);
-    }
-
-    .saf-sign-here-text, .saf-sign-here-line, .saf-dated-text, .saf-dated-line {
-        grid-row: 1 / -1;
-    }
-
-    .saf-sign-here-text {
-        grid-column: 1 / 2;
-        padding-left:1em;
-    }
-
-    .saf-sign-here-line {
-        grid-column: 2 / 3;
-        margin-top:.4em;
-        margin-right:1em;
-        background: url("../images/book/line.jpg") right repeat-x;
-    }
-
-    .saf-dated-text {
-        grid-column: 3 / 4;
-    }
-
-    .saf-dated-line  {
-        grid-column: 4 / -1;
-        background: url("../images/book/line.jpg") right repeat-x;
-        margin-top:.4em;
-        margin-right:1em;
-    }
-
-    .print-forms-button {
-        padding: 1em 1.5em;
-        font-size: 1.0em;
+    .sig-date-line  {
+        margin:.4em 1em 0 0;
     }
 
     /* PRINT FORMS */
     .print-forms-button {
         padding: 1em 1.5em;
-        font-size: 0.9em;
+        font-size: var(--global-small-laptop-desktop-font-size);
     }
 }
 
-
-
-/* GLOBAL *************************************************************************************************************/
+/* GLOBAL ************************************************************************************************************* */
 @media only screen {
 
-    /* BOOK DETAIL */
-    .book-detail-container {
-        display: inline-grid;
-        width: 100%;
-        background: var(--color-dark-blue);
-    }
-
-    .book-detail-menu {
-        display: flex;
-        margin: 0 auto;
-        flex-direction: column;
-        font-family: var(--family-global);
-        color: var(--color-white);
-        width: 80%;
-    }
-
-    .book-detail-menu h1 {
-        padding: 1.5em 0 1em 0;
-        text-align: center;
-    }
-
-    .book-detail-menu p {
-        text-align: justify;
-        line-height: 140%;
-    }
-
-    .book-detail-forms {
-        cursor: pointer;
-    }
-
-    .basic-form {
-        display:inline-block;
-        float:left;
-    }
-
-    .assessment-form {
-        display:inline-block;
-        float:right;
-    }
-
-    .basic-form li a, .assessment-form li a {
-        text-decoration: underline;
-        cursor:pointer;
-    }
-
-    .basic-form li a:hover, .assessment-form li a:hover {
-        color: var(--color-purple);
-    }
-
-    .basic-form li span, .assessment-form li span, .basic-form li a, .assessment-form li a {
-        font-family: var(--family-global);
-        list-style-type:none;
-        color: var(--color-white);
-        line-height:190%;
-        font-weight: bold;
-    }
-
-    .book-detail-select-form {
-        width:100%;
-        background-color: white;
+    /* for overall form menu on top */
+    .forms-menu-block {
         display: block;
-        float:left;
-        border:thin solid var(--color-dark-blue);
-    }
-
-    /* CLIENT PROFILE FORM */
-    .client-profile-form, .consultation-form {
         width: 100%;
-        display: block;
-        float: left;
-        background: var(--color-white);
-    }
-
-    .client-profile-form h1, .consultation-form h1 {
-        color: var(--color-dark-blue);
-        font-family: var(--family-data);
-        text-align: center;
-        margin: 1em 0;
-    }
-
-    .client-profile-form p {
-        color: var(--color-white);
-    }
-
-    /* ASSESSMENT FORM */
-    .self-assessment-form {
-        background-color: var(--color-white);
-        width:100%;
-        display:block;
-        float:left;
-    }
-
-    .self-assessment-form h1  {
-        color:var(--color-dark-blue);
-        text-align: center;
-        margin: 1em 0;
-        font-family:var(--family-data);
-    }
-
-    .saf-group {
-        width:90%;
-        padding:2em 5%;
-        display:block;
-        float:left;
-        background-color: var(--color-white);
-        border:thin dashed #878787;
-    }
-
-    .saf-question {
-        display: flex;
-        flex-direction:column;
-    }
-
-    .saf-question span {
-        padding-bottom: .8em;
-    }
-
-    .saf-question li {
-        line-height: 180%;
-        margin-left: 3em;
-        list-style-type: circle;
-    }
-
-    .saf-answer {
-        display:block;
-        margin-left: 2.1em;
-        float:left;
-        margin-top: 1em;
-        border:thick solid green;
-    }
-
-    .saf-treatment-consent {
-        display:block;
-        float:left;
-        width:95%;
+        max-width:1152px;
         margin:auto;
-        background-color:white;
+        border:thin solid var(--color-grey);
     }
 
-    .saf-treatment-consent p {
-        margin: 1em;
-        text-align: left;
-    }
-
-    .saf-sign {
-        display:inline-grid;
+    .forms-menu  {
         width:100%;
-        padding-top: 1em;
-        padding-bottom:1em;
-        line-height: 150%;
+        color: var(--copy-color-dark);
+        border:thin solid gold;
     }
 
-    .saf-item {
-        display:grid;
-    }
-
-    .saf-question span, .saf-question li, .saf-answer, .saf-treatment-consent p, .saf-sign   {
-        color:var(--color-dark-blue);
-        font-family: var(--family-data);
+    .menu-item span, .menu-item a {
+        font-family: Whitney-Book;
         text-align: left;
+        line-height:var(--list-wide-item-line-height);
+    }
+
+    .menu-item a {
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--color-dark-blue);
+    }
+
+    .menu-item span {
+        cursor: default;
+        color: var(--color-dark-purple);
+        font-weight:800;
+    }
+
+    /* the forms for client session and client consult */
+    .two-equal-inline-grid, .two-inline-grid, .three-inline-grid, .four-inline-grid, .full-width-grid {
+        width: 90%;
+        margin:0em 5%;
+        font-family: var(--family-global);
+        color: var(--color-dark-blue);
+    }
+
+    .two-equal-inline-grid, .two-inline-grid, .three-inline-grid, .four-inline-grid {
+        display: inline-grid;
+    }
+
+    .full-width-grid {
+        display: grid;
+    }
+
+    /* used by mobile forms */
+    .two-inline-grid {
+        grid-template-columns: 60% 40%;
+    }
+
+    .two-equal-inline-grid {
+        grid-template-columns: 50% 50%;
+    }
+
+    .three-inline-grid {
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+    .four-inline-grid {
+        grid-template-columns: 30%  20% 26% 23%;
+    }
+
+    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col,
+    .last-two-grid-cols, .all-grid-cols,
+    .first-inline-col, .second-inline-col, .third-inline-col {
+        display: grid;
+    }
+
+    .first-inline-col, .second-inline-col, .third-inline-col {
+        display:inline;
+        border:1px dashed var(--color-light-blue);
+    }
+
+    .first-grid-col {
+        grid-column: 1;
+    }
+
+    .second-grid-col {
+        grid-column: 2;
+    }
+
+    .third-grid-col {
+        grid-column: 3;
+    }
+
+    .fourth-grid-col {
+        grid-column: 4;
+    }
+
+    .last-two-grid-cols {
+        grid-column: 3 / -1;
+    }
+
+    .all-grid-cols {
+        grid-column: 1 / -1;
+    }
+
+    .form-heading, .form-prompt {
+        font-family: Whitney-Book;
+        text-transform: uppercase;
+    }
+
+    .form-heading:first-child {
+        margin-top:0;
+    }
+
+    .form-heading {
+        width:100%;
+        border: solid thin var(--color-light-blue);
+        letter-spacing: 3px;
+        background-color: var(--color-dark-blue);
+        color: var(--color-white);
+        text-align: center;
+    }
+
+    .form-prompt {
+        color: var(--color-dark-blue);
+        background-color:white;
+        text-align: left;
+    }
+
+    .disclaimer {
+        display: block;
+        width: 80%;
+        margin: 1em 10%;
+        color: var(--color-dark-blue);
+    }
+
+    .disclaimer span, .sig-date-prompt, .print-forms-button {
+        font-family: var(--family-global);
+    }
+
+    .disclaimer p {
+        font-family: Whitney-Book;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+    .sig-date-prompt {
+        font-weight: 800;
+    }
+
+    .sig-date-line  {
+        background: url("src/assets/images/book/line.jpg") right repeat-x;
     }
 
     /* PRINT */
-    .print-cpfm-forms-grid {
+    .print-forms-grid {
         display: grid;
         width: 95%;
-        margin:0 5% 1em 0;
-        align-content: flex-end;
-        justify-items: flex-end;
-    }
-
-    .print-saf-forms-grid {
-        display: grid;
-        width: 95%;
-        margin:0 5% 1em 0;
-        background-color: white;
+        margin: 0 5% 1em 0;
         align-content: flex-end;
         justify-items: flex-end;
     }
@@ -1231,8 +439,8 @@ and (min-width: 1920px) {
     /* FOR BOTH PRINT FORMS */
     .print-forms-button {
         color: var(--color-white);
-        font-style: var(--family-data);
-        background-color: var(--color-dark-blue);
+        letter-spacing: 3px;
+        background-color: var(--color-light-blue);
         border-radius: 1.0em;
     }
 
@@ -1240,23 +448,23 @@ and (min-width: 1920px) {
 }
 
 @media print {
-  app-print-client-profile {
-    display: block;
-  }
+    /*app-print-client-profile {
+        display: block;
+    }
 
-  app-client-profile {
-    display: none;
-  }
+    app-client-profile {
+        display: none;
+    }
 
-  app-global-menu {
-    display: none;
-  }
+    app-global-menu {
+        display: none;
+    }
 
-  app-global-headers {
-    display: none;
-  }
+    app-global-headers {
+        display: none;
+    }
 
-  .book-detail-menu {
-    display: none !important;
-  }
+    .book-detail-menu {
+        display: none !important;
+    }*/
 }

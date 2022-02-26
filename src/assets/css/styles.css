@@ -34,398 +34,199 @@
   --color-brown:#4a3f29;
   --color-black:#362f32;
 
-  /* FONT FAMILY STYLES */
-  --family-script:'gabriola';                /* , meridian wheel, five elements wheel, italicized emphasis */
-  --family-global:'malgun gothic';         /* copy */
-  --family-slogan: 'microsoft JhengHei';   /* for self help grid menu */
-  --family-quote:'hypativa-sans-pro';       /* for quotes */
-  --family-data:arial;                    /* footer, reports font */
-  --family-berlin:'berlin sans FB';            /* for home header overlay text */
-  --family-whitney:'Whitney SSm A", "Whitney SSm B", Arial';
-  --family-open-sans: 'Open Sans';
   /* FONT SIZES  */
 
-  /*"FAMILY Whitney SSm A", "Whitney SSm B", Arial, sans-serif;*/
-  /* BELOW IS WITH FAMILY WHITNEY */
-  --copy-banana-mobile-port-font-size:.7em;
-  --copy-banana-mobile-land-font-size:.8em;
-  --copy-tablet-ipad-port-font-size:.9em;
-  --copy-tablet-ipad-land-font-size:1em;
-  --copy-laptop-desktop-font-size:1.8em;
+  /* WITH MALGUN GOTHIC */
+  --family-menu:'Segoe UI Symbol';
 
-  --h1-banana-mobile-port-font-size:1.1em;
-  --h1-banana-mobile-land-font-size:1.2em;
-  --h1-tablet-ipad-port-font-size:1.3em;
-  --h1-tablet-ipad-land-font-size:1.4em;
-  --h1-laptop-font-size:1.5em;
-  --h1-desktop-font-size:1.7em;
+  --menu-topic-mobile-port-font-size:.7em;
+  --menu-topic-mobile-land-font-size:.8em;
+  --menu-topic-tablet-ipad-port-font-size:.6em;
+  --menu-topic-tablet-ipad-land-font-size:7em;
+  --menu-topic-laptop-desktop-font-size:.8em;
 
-  --h2-banana-mobile-port-font-size:1em;
-  --h2-banana-mobile-land-font-size:1.1em;
-  --h2-tablet-ipad-port-font-size:1.2em;
-  --h2-tablet-ipad-land-font-size:1.3em;
-  --h2-laptop-desktop-font-size:1.4em;
+  /* WITH OPEN SANS */
+  --family-open-sans: 'Open Sans';
 
-  --h3-banana-mobile-port-font-size:.9em;
-  --h3-banana-mobile-land-font-size:1em;
-  --h3-tablet-ipad-port-font-size:1.1em;
-  --h3-tablet-ipad-land-font-size:1.2em;
-  --h3-laptop-desktop-font-size:1.3em;
+  --open-sans-mobile-port-font-size:.7em;
+  --open-sans-mobile-land-font-size:.8em;
+  --open-sans-tablet-ipad-port-font-size:.9em;
+  --open-sans-tablet-ipad-land-font-size:1em;
+  --open-sans-laptop-desktop-font-size:1.8em;
 
-  --list-banana-mobile-port-font-size:.6em;
-  --list-banana-mobile-land-font-size:.7em;
-  --list-tablet-ipad-port-font-size:.8em;
-  --list-tablet-ipad-land-font-size:.9em;
-  --list-laptop-desktop-font-size:1.0em;
+  --list-open-sans-mobile-port-font-size:.6em;
+  --list-open-sans-mobile-land-font-size:.7em;
+  --list-open-sans-tablet-ipad-port-font-size:.8em;
+  --list-open-sans-tablet-ipad-land-font-size:.9em;
+  --list-open-sans-laptop-desktop-font-size:1.0em;
+
+  /* WITH MALGUN GOTHIC */
+  --family-global:'malgun gothic';         /*  */
+
+  --global-big-mobile-port-font-size:.7em;
+  --global-big-mobile-land-font-size:.8em;
+  --global-big-tablet-ipad-port-font-size:.9em;
+  --global-big-tablet-ipad-land-font-size:1em;
+  --global-big-laptop-desktop-font-size:1.1em;
+
+  --global-med-mobile-port-font-size:.6em;
+  --global-med-mobile-land-font-size:.7em;
+  --global-med-tablet-ipad-port-font-size:.8em;
+  --global-med-tablet-ipad-land-font-size:.9em;
+  --global-med-laptop-desktop-font-size:1.0em;
+
+  --global-small-mobile-port-font-size:.5em;
+  --global-small-mobile-land-font-size:.6em;
+  --global-small-tablet-ipad-port-font-size:.7em;
+  --global-small-tablet-ipad-land-font-size:.8em;
+  --global-small-laptop-desktop-font-size:.9em;
 
   /* BELOW IS WITH FAMILY SCRIPT */
-  --quote-banana-mobile-port-font-size:1.1em;
-  --quote-banana-mobile-land-font-size:1.2em;
-  --quote-tablet-ipad-port-font-size:1.25em;
-  --quote-tablet-ipad-land-font-size:1.3em;
-  --quote-laptop-desktop-font-size:1.4em;
+  --family-script:'gabriola';                /*  */
 
-  /* BELOW IS WITH FAMILY MONUMENT VALLEY */
-  --topic-banana-port-font-size:1.3em;
-  --topic-banana-land-font-size:1.9em;
+  --script-banana-mobile-port-font-size:1.1em;
+  --script-banana-mobile-land-font-size:1.2em;
+  --script-tablet-ipad-port-font-size:1.25em;
+  --script-tablet-ipad-land-font-size:1.3em;
+  --script-laptop-desktop-font-size:1.4em;
 
-  --topic-mobile-port-font-size:1.5em;
-  --topic-mobile-land-font-size:2.2em;
+  /* BELOW IS WITH HOSTEL */
+  --hostel-banana-port-font-size:0.5em;
+  --hostel-mobile-port-font-size:0.7em;
+  --hostel-tablet-port-font-size:1.3em;
+  --hostel-ipad-port-font-size:1.5em;
 
-  --topic-tablet-port-font-size:2.6em;
-  --topic-tablet-land-font-size:3em;
+  --hostel-banana-land-font-size:1.1em;
+  --hostel-mobile-land-font-size:1.3em;
+  --hostel-tablet-land-font-size:1.5em;
+  --hostel-ipad-land-font-size:1.7em;
 
-  --topic-ipad-port-font-size:2.8em;
-  --topic-ipad-land-font-size:3em;
-
-  --topic-laptop-font-size:3.3em;
-
-  --topic-desktop-font-size:2.0em;
-
-  /* BELOW IS WITH FAMILY GLOBAL */
-  --vertical-banana-port-font-size:.2em;
-  --vertical-banana-port-font-width:20px;
-
-  --vertical-banana-land-font-size:.4em;
-  --vertical-banana-land-font-width:40px;
-
-  --vertical-mobile-port-font-size:.3em;
-  --vertical-mobile-port-font-width:30px;
-
-  --vertical-mobile-land-font-size:.5em;
-  --vertical-mobile-land-font-width:50px;
-
-  --vertical-tablet-port-font-size:.4em;
-  --vertical-tablet-port-font-width:40px;
-
-  --vertical-tablet-land-font-size:.7em;
-  --vertical-tablet-land-font-width:70px;
-
-  --vertical-ipad-port-font-size:.6em;
-  --vertical-ipad-port-font-width:60px;
-
-  --vertical-ipad-land-font-size:.7em;
-  --vertical-ipad-land-font-width:70px;
-
-  --vertical-laptop-font-size:.8em;
-  --vertical-laptop-font-width:80px;
-
-  --vertical-desktop-font-size:.9em;
-  --vertical-desktop-font-width:90px;
+  --hostel-laptop-font-size:1.9em;
+  --hostel-desktop-font-size:2.1em;
 
   /* BELOW IS WITH FAMILY DATA */
-  --data-banana-port-font-p-size:.6em;
-  --data-banana-port-font-span-size:.4em;
+  --family-data:arial;
 
-  --data-banana-land-font-p-size:.9em;
-  --data-banana-land-font-span-size:.8em;
-
-  --data-mobile-port-font-p-size:.8em;
-  --data-mobile-port-font-span-size:.5em;
-
-  --data-mobile-land-font-p-size:1.1em;
-  --data-mobile-land-font-span-size:.8em;
-
+  /* p bigger than span (energy tips p) */
+  --data-banana-port-font-p-size:.5em;
+  --data-mobile-port-font-p-size:.7em;
   --data-tablet-port-font-p-size:.9em;
+  --data-ipad-port-font-p-size:1.1em;
+
+  --data-banana-land-font-p-size:.6em;
+  --data-mobile-land-font-p-size:.8em;
+  --data-tablet-land-font-p-size:1em;
+  --data-ipad-land-font-p-size:1.2em;
+
+  --data-laptop-desktop-font-p-size:1.3em;
+
+  /* span footer*/
+  --data-banana-port-font-span-size:.4em;
+  --data-mobile-port-font-span-size:.5em;
   --data-tablet-port-font-span-size:.8em;
-
-  --data-tablet-land-font-p-size:1.2em;
-  --data-tablet-land-font-span-size:1em;
-
-  --data-ipad-port-font-p-size:1.2em;
   --data-ipad-port-font-span-size:1.1em;
 
-  --data-ipad-land-font-p-size:1.3em;
+  --data-banana-land-font-span-size:.8em;
+  --data-mobile-land-font-span-size:.8em;
+  --data-tablet-land-font-span-size:1em;
   --data-ipad-land-font-span-size:1.1em;
 
-  --data-laptop-desktop-font-p-size:1.4em;
   --data-laptop-desktop-font-span-size:1em;
 
-  /* BELOW IS WITH FAMILY MONUMENT VALLEY */
-  --action-menu-banana-port-font-header-size:.6em;
-  --action-menu-banana-port-font-menu-size:.6em;
-  --action-menu-banana-port-font-sub-menu-size:.5em;
+  /* BELOW IS WITH WHITNEY BOOK */
+  /* H1 */
+  --h1-whitney-banana-port-font-size:0.8em;
+  --h1-whitney-mobile-port-font-size:0.9em;
+  --h1-whitney-tablet-port-font-size:1.0em;
+  --h1-whitney-ipad-port-font-size:1.3em;
 
-  --action-menu-banana-land-font-header-size:1.7em;
-  --action-menu-banana-land-font-menu-size:1.2em;
-  --action-menu-banana-land-font-sub-menu-size:.9em;
+  --h1-whitney-banana-land-font-size:1.0em;
+  --h1-whitney-mobile-land-font-size:1.1em;
+  --h1-whitney-tablet-land-font-size:1.2em;
+  --h1-whitney-ipad-land-font-size:1.4em;
 
-  --action-menu-mobile-port-font-header-size:1em;
-  --action-menu-mobile-port-font-menu-size:.9em;
-  --action-menu-mobile-port-font-sub-menu-size:.8em;
+  --h1-whitney-laptop-font-size:1.5em;
+  --h1-whitney-desktop-font-size:1.6em;
 
-  --action-menu-mobile-land-font-header-size:2.0em;
-  --action-menu-mobile-land-font-menu-size:1.8em;
-  --action-menu-mobile-land-font-sub-menu-size:1.6em;
+  /* H2 */
+  --h2-whitney-banana-port-font-size:.7em;
+  --h2-whitney-mobile-port-font-size:.8em;
+  --h2-whitney-tablet-port-font-size:.9em;
+  --h2-whitney-ipad-port-font-size:1.1em;
 
-  --action-menu-tablet-port-font-header-size:1.9em;
-  --action-menu-tablet-port-font-menu-size:1.4em;
-  --action-menu-tablet-port-font-sub-menu-size:1.1em;
+  --h2-whitney-banana-land-font-size:.9em;
+  --h2-whitney-mobile-land-font-size:1.0em;
+  --h2-whitney-tablet-land-font-size:1.1em;
+  --h2-whitney-ipad-land-font-size:1.3em;
 
-  --action-menu-tablet-land-font-header-size:2.2em;
-  --action-menu-tablet-land-font-menu-size:2em;
-  --action-menu-tablet-land-font-sub-menu-size:1.8em;
+  --h2-whitney-laptop-font-size:1.4em;
+  --h2-whitney-desktop-font-size:1.5em;
 
-  --action-menu-ipad-port-font-header-size:2.4em;
-  --action-menu-ipad-port-font-menu-size:2.2em;
-  --action-menu-ipad-port-font-sub-menu-size:1.9em;
+  /* H3 */
+  --h3-whitney-banana-port-font-size:.6em;
+  --h3-whitney-mobile-port-font-size:.7em;
+  --h3-whitney-tablet-port-font-size:1.0em;
+  --h3-whitney-ipad-port-font-size:1.3em;
 
-  --action-menu-ipad-land-font-header-size:2.8em;
-  --action-menu-ipad-land-font-menu-size:2.2em;
-  --action-menu-ipad-land-font-sub-menu-size:2.1em;
+  --h3-whitney-banana-land-font-size:.8em;
+  --h3-whitney-mobile-land-font-size:.9em;
+  --h3-whitney-tablet-land-font-size:1.0em;
+  --h3-whitney-ipad-land-font-size:1.2em;
 
-  --action-menu-laptop-desktop-font-header-size:3em;
-  --action-menu-laptop-desktop-font-menu-size:2.5em;
-  --action-menu-laptop-desktop-font-sub-menu-size:2.2em;
+  --h3-whitney-laptop-font-size:1.3em;
+  --h3-whitney-desktop-font-size:1.4em;
 
-  /* ELEMENT ACTION MENU */
-  --action-menu-banana-header-height:50px;
-  --action-menu-banana-sub-header-height:30px;
-  --action-menu-banana-bottom-header-height:20px;
+  --big-whitney-mobile-port-font-size:0.8em;
+  --big-whitney-mobile-land-font-size:0.9em;
+  --big-whitney-tablet-ipad-port-font-size:1em;
+  --big-whitney-tablet-ipad-land-font-size:1.1em;
+  --big-whitney-laptop-font-size:1.2em;
+  --big-whitney-desktop-font-size:1.3em;
 
-  --action-menu-mobile-header-height:60px;
-  --action-menu-mobile-sub-header-height:50px;
-  --action-menu-mobile-bottom-header-height:30px;
+  --med-whitney-mobile-port-font-size:0.7em;
+  --med-whitney-mobile-land-font-size:0.8em;
+  --med-whitney-tablet-ipad-port-font-size:0.9em;
+  --med-whitney-tablet-ipad-land-font-size:1em;
+  --med-whitney-laptop-font-size:1.1em;
+  --med-whitney-desktop-font-size:1.2em;
 
-  --action-menu-tablet-header-height:70px;
-  --action-menu-tablet-sub-header-height:60px;
-  --action-menu-tablet-bottom-header-height:40px;
+  --small-whitney-mobile-port-font-size:0.6em;
+  --small-whitney-mobile-land-font-size:0.7em;
+  --small-whitney-tablet-ipad-port-font-size:0.8em;
+  --small-whitney-tablet-ipad-land-font-size:0.9em;
+  --small-whitney-laptop-font-size:1em;
+  --small-whitney-desktop-font-size:1.1em;
 
-  --action-menu-ipad-header-height:80px;
-  --action-menu-ipad-sub-header-height:70px;
-  --action-menu-ipad-bottom-header-height:50px;
+  --tiny-whitney-mobile-port-font-size:.4em;
+  --tiny-whitney-mobile-land-font-size:.5em;
+  --tiny-whitney-tablet-ipad-port-font-size:.6em;
+  --tiny-whitney-tablet-ipad-land-font-size:.7em;
+  --tiny-whitney-laptop-font-size:.8em;
+  --tiny-whitney-desktop-font-size:.9em;
 
-  --action-menu-laptop-desktop-header-height:90px;
-  --action-menu-laptop-desktop-sub-header-height:80px;
-  --action-menu-laptop-desktop-bottom-header-height:60px;
+  /* BELOW IS WITH MONUMENT */
+  --monument-mobile-port-font-size:.9em;
+  --monument-mobile-land-font-size:1em;
+  --monument-tablet-ipad-port-font-size:2em;
+  --monument-tablet-ipad-land-font-size:3em;
+  --monument-laptop-desktop-font-size:4em;
+
+  --monument-med-mobile-port-font-size:.8em;
+  --monument-med-mobile-land-font-size:1em;
+  --monument-med-tablet-ipad-port-font-size:1.5em;
+  --monument-med-tablet-ipad-land-font-size:2em;
+  --monument-med-laptop-desktop-font-size:2.5em;
+
 
   /* LINE HEIGHTS */
-  --copy-line-height-small: 120%;
-  --copy-line-height-medium: 150%;
   --copy-line-height:170%;
-  --copy-color-dark: #5a7d9f;
-  --copy-color-light: #ffffff;
-
-  --list-pre-line-item-line-height:100%;
   --list-item-line-height:180%;
-  --list-wide-item-line-height:210%;
-
+  --list-wide-item-line-height:200%;
   --quote-p-line-height:130%;
   --quote-span-line-height:100%;
-  --quote-weight:400;
 
-  --vertical-heading-line-height:120%;
-
-  /* DESKTOP MENU ROW HEIGHTS */
-  --header-desktop-slogan-width:1024px;
-  --header-desktop-slogan-height:110px;
-
-  --header-desktop-menu-height:40px;
-  --header-desktop-sub-menu-height:45px;
-  --header-desktop-topic-menu-height:50px;
-
-  /* HOME TOP OF PAGE BACKGROUND IMAGE HEIGHTS*/
-  --banana-port-home-image-height:122px; /* 240 x 122 */
-  --banana-land-home-image-height:289px;/* 568 x 289 */
-  --mobile-port-home-image-height:183px;/* 360 x 183 */
-  --mobile-land-home-image-height:456px;/* 896 x 456 */
-  --tablet-port-home-image-height:306px;/* 600 x 306 */
-  --tablet-land-home-image-height:652px;/* 1280 x 652 */
-  --ipad-port-home-image-height:522px;/* 1024 x 522 */
-  --ipad-land-home-image-height:696px;/* 1366 x 696 */
-  --laptop-home-image-height:734px;/* 1440 x 734 */
-  --desktop-home-image-height:978px;/* 1920 x 978 */
-
-  /* DETAIL TOP OF PAGE BACKGROUND IMAGE HEIGHTS*/
-  --banana-port-detail-image-height:56px;/* 240 x 56 */
-  --banana-land-detail-image-height:133px; /* 568 x 133 */
-  --mobile-port-detail-image-height:84px;/* 360 x 84 */
-  --mobile-land-detail-image-height:210px;/* 896 x 210  */
-  --tablet-port-detail-image-height:141px;/* 600 x 141 */
-  --tablet-land-detail-image-height:300px;/* 1280 x 300 h */
-  --ipad-port-detail-image-height:240px;/* 1024 x 240 */
-  --ipad-land-detail-image-height:320px;/* 1366 x 320 h */
-  --laptop-detail-image-height:338px;/* 1440 x 338 */
-  --desktop-detail-image-height:450px;/* 1920 x  450 */
-
-  --sidebar-heading-laptop-desktop-width:130px; /* 6.25% of screen width */
-
-  /* LEARN ELEMENT WHEEL max size of 1152 CHECKED nov. 3, 2021 */
-  /* 216 width and 169 height */
-  --ele-whl-banana-port-cols: repeat(3, 72px);
-  --ele-whl-banana-port-rows: repeat(3, 56px);
-  --ele-whl-banana-port-button: 45px;
-
-  /* 511 width and 399 height */
-  --ele-whl-banana-land-cols: repeat(3, 170px);
-  --ele-whl-banana-land-rows: repeat(3, 133px);
-  --ele-whl-banana-land-button: 106px;
-
-  /* 324 width and 253 height */
-  --ele-whl-mobile-port-cols: repeat(3, 108px);
-  --ele-whl-mobile-port-rows: repeat(3, 84px);
-  --ele-whl-mobile-port-button: 67px;
-
-  /* 806 width  and 630 height */
-  --ele-whl-mobile-land-cols: repeat(3, 268px);
-  --ele-whl-mobile-land-rows: repeat(3, 210px);
-  --ele-whl-mobile-land-button: 168px;
-
-  /* 540 width and 422 height */
-  --ele-whl-tablet-port-cols: repeat(3, 180px);
-  --ele-whl-tablet-port-rows: repeat(3, 140px);
-  --ele-whl-tablet-port-button: 112px;
-
-  /* 921 width and 720 height */
-  --ele-whl-ipad-port-cols: repeat(3, 307px);
-  --ele-whl-ipad-port-rows: repeat(3, 240px);
-  --ele-whl-ipad-port-button: 192px;
-
-  /* 1152px GRID AREA WIDTH and CIRCLE BKGRND IS 930 x 930  */
-  /*--ele-whl-large-cols: repeat(3, 384px);*/
-  --ele-whl-large-cols: 1fr 1fr 1fr;
-  --ele-whl-large-rows: 180px 180px 150px 180px;
-
-  /*--ele-whl-large-rows: repeat(3, 300px);*/
-  --ele-whl-large-button: 170px;
-
-  /* MERIDIAN WHEEL USED FOR BOTH MERIDIAN DETAILS AND CYCLE */
-
-  /* 800x800 FOR ALL DEVICES THAT ARE LARGER THAN 800 wide both ways */
-  --mer-wheel-over-max-height:800px;
-  --mer-wheel-over-max-columns:80px 150px 100px 140px 100px 150px 80px;
-  /* ratio 80/800 = .1 etc:    .1   .1875 .125 .175 .125 .1875 .1 */
-
-  --mer-wheel-over-max-row-1: 60px;       /* .075   - empty */
-  --mer-wheel-over-max-row-2: 100px;      /* .125   - heart */
-  --mer-wheel-over-max-row-3: 80px;       /* .1     - spleen, small intestine */
-  --mer-wheel-over-max-row-4: 100px;      /* .125   - stomach, bladder */
-  --mer-wheel-over-max-row-5: 110px;      /* .1375  - large intestine, kidney */
-  --mer-wheel-over-max-row-6: 100px;      /* .125   - lungs, pericardium */
-  --mer-wheel-over-max-row-7: 80px;       /* .1     - liver, triple warmer */
-  --mer-wheel-over-max-row-8:170px;       /* .2125  - gallbladder */
-
-  /* FOR TABLET PORTRAIT THAT IS AT 600 x 90% = 540 wide */
-  --mer-wheel-tab-port-height:540px;
-  --mer-wheel-tab-port-columns:54px 101px 68px 94px 68px 101px 54px;
-  /* ration values .1x540 etc: .1   .1875 .125 .175 .125 .1875 .1 */
-
-  --mer-wheel-tab-port-row-1: 40px;       /* .075   - empty */
-  --mer-wheel-tab-port-row-2: 68px;       /* .125   - heart */
-  --mer-wheel-tab-port-row-3: 54px;       /* .1     - spleen, small intestine */
-  --mer-wheel-tab-port-row-4: 68px;       /* .125   - stomach, bladder */
-  --mer-wheel-tab-port-row-5: 74px;       /* .1375  - large intestine, kidney */
-  --mer-wheel-tab-port-row-6: 68px;       /* .125   - lungs, pericardium */
-  --mer-wheel-tab-port-row-7: 54px;       /* .1     - liver, triple warmer */
-  --mer-wheel-tab-port-row-8:114px;       /* .2125  - gallbladder */
-
-  /* THE FOR MOBILE PORTRAIT THAT IS AT 360 x 90% = 324 wide */
-  --mer-wheel-mobile-port-height:324px;
-  --mer-wheel-mobile-port-columns:33px 61px 40px 56px 40px 61px 33px;
-  /* ration values .1x324 etc:    .1   .1875 .125 .175 .125 .1875 .1 */
-
-  --mer-wheel-mobile-port-row-1: 24px;       /* .075   - empty */
-  --mer-wheel-mobile-port-row-2: 41px;       /* .125   - heart */
-  --mer-wheel-mobile-port-row-3: 32px;       /* .1     - spleen, small intestine */
-  --mer-wheel-mobile-port-row-4: 41px;       /* .125   - stomach, bladder */
-  --mer-wheel-mobile-port-row-5: 44px;       /* .1375  - large intestine, kidney */
-  --mer-wheel-mobile-port-row-6: 41px;       /* .125   - lungs, pericardium */
-  --mer-wheel-mobile-port-row-7: 32px;       /* .1     - liver, triple warmer */
-  --mer-wheel-mobile-port-row-8:69px;       /* .2125  - gallbladder */
-
-  /* THE FOR BANANA LAND THAT IS AT 568 x 90% = 511 wide */
-  --mer-wheel-banana-land-height:511px;
-  --mer-wheel-banana-land-columns:51px 96px 64px 89px 64px 96px 51px;
-  /* ration values .1x511 etc:    .1   .1875 .125 .175 .125 .1875 .1 */
-
-  --mer-wheel-banana-land-row-1: 38px;       /* .075   - empty */
-  --mer-wheel-banana-land-row-2: 64px;       /* .125   - heart */
-  --mer-wheel-banana-land-row-3: 51px;       /* .1     - spleen, small intestine */
-  --mer-wheel-banana-land-row-4: 64px;       /* .125   - stomach, bladder */
-  --mer-wheel-banana-land-row-5: 70px;       /* .1375  - large intestine, kidney */
-  --mer-wheel-banana-land-row-6: 64px;       /* .125   - lungs, pericardium */
-  --mer-wheel-banana-land-row-7: 51px;       /* .1     - liver, triple warmer */
-  --mer-wheel-banana-land-row-8:109px;       /* .2125  - gallbladder */
-
-
-  /* FOR BANANA PORT THAT IS AT 216 is 90% of 240  */
-  --mer-wheel-banana-port-height:216px;
-
-  --mer-wheel-banana-port-columns:22px 41px 27px 38px 27px 41px 22px;
-  /* ration values .1x216 etc:    .1   .1875 .125 .175 .125 .1875 .1 */
-
-  --mer-wheel-banana-port-row-1: 16px;       /* .075   - empty */
-  --mer-wheel-banana-port-row-2: 27px;       /* .125   - heart */
-  --mer-wheel-banana-port-row-3: 20px;       /* .1     - spleen, small intestine */
-  --mer-wheel-banana-port-row-4: 27px;       /* .125   - stomach, bladder */
-  --mer-wheel-banana-port-row-5: 30px;       /* .1375  - large intestine, kidney */
-  --mer-wheel-banana-port-row-6: 27px;       /* .125   - lungs, pericardium */
-  --mer-wheel-banana-port-row-7: 20px;       /* .1     - liver, triple warmer */
-  --mer-wheel-banana-port-row-8:49px;       /* .2125  - gallbladder */
-
-  /* TRACING MERIDIAN VIDEOS */
-  --tracing-video-over-max-width:800px;
-  --tracing-video-over-max-height:400px;
-
-  --tracing-video-tab-port-width:540px;
-  --tracing-video-tab-port-height:270px;
-
-  --tracing-video-mobile-port-width:324px;
-  --tracing-video-mobile-port-height:162px;
-
-  --tracing-video-banana-land-width:511px;
-  --tracing-video-banana-land-height:256px;
-
-  --tracing-video-banana-port-width:216px;
-  --tracing-video-banana-port-height:108px;
-
-  /* DER Video sizes */
-  --der-video-over-max-width:576px; /* 1152 max divided by 2 desktops, laptops, ipads and tablets land */
-  --der-video-over-max-height:576px;
-
-  --der-video-ipad-port-width:460px; /* 1024 x 90% = 921 / 2 = 460 */
-  --der-video-ipad-port-height:460px;
-
-  --der-video-tablet-port-width:540px;  /* video and text are rows now 600 x.9 = 540 */
-  --der-video-tablet-port-height:540px;
-
-  --der-video-mobile-land-width: 806px; /* video and text are rows now 896 x.9 =  806 */
-  --der-video-mobile-land-height:402px;
-
-  --der-video-mobile-port-width:324px;  /* 360 x.9 =  324 */
-  --der-video-mobile-port-height:324px;
-
-  --der-video-banana-land-width:511px;  /* 568 x.9 =  511 */
-  --der-video-banana-land-height:255px;
-
-  --der-video-banana-port-width:216px; /* 240 x.9 =  216 */
-  --der-video-banana-port-height:216px;
-
-  --content-videos-banana-mobile-port-height:150px;
-  --content-videos-banana-mobile-land-height:250px;
-  --content-videos-tablet-ipad-port-height:300px;
-  --content-videos-tablet-ipad-land-height:350px;
-  --content-videos-laptop-desktop-height:400px;
+  --copy-color-dark: #5a7d9f;
+  --copy-color-light: #ffffff;
 
 
 
@@ -459,26 +260,43 @@
   }
 
   /* The actual content is 1152 - 90% of 1280 max */
-  .content {
+  .content, .content-no-margins {
     display: block;
     float:left;
     max-width:1152px;
-    margin:1em auto;
     width: 90%;
+  }
+
+  .content {
     margin:1.5em 5%;
-    border:thick solid gold;
+    /*border:thick solid gold;*/
   }
 
   .content-no-margins {
-    display: block;
-    float:left;
-    max-width:1152px;
-    width: 90%;
     margin:0em 5%;
-    border:thick solid pink;
+    /*border:thick solid pink;*/
   }
 
   .content img {
+    max-width:100%;
+    height:auto;
+  }
+
+  .inner-content {
+    display: block;
+    width:100%;
+    max-width:800px;
+    margin:1em auto;
+  }
+
+  .images, .content-videos {
+    display: block;
+    width:100%;
+    max-width:800px;
+    margin:1em auto;
+  }
+
+  .images img {
     max-width:100%;
     height:auto;
   }
@@ -602,6 +420,14 @@
 
   .background-white {
     background-color: #ffffff;
+  }
+
+  .background-dark-blue {
+    background-color: #5a7d9f;
+  }
+
+  .background-dark-purple {
+    background-color: #623061;
   }
 
   /* WATER */
@@ -1188,30 +1014,23 @@
     src: url("../fonts/GreenHostel-2OLr3.otf") format("opentype");
   }
 
-  @font-face {
+ /* @font-face {
     font-family: High-Billion;
     src: url("../fonts/HighBillionSans-eZ1Kx.otf") format("opentype");
-  }
+  }*/
 
   @font-face {
     font-family: Monument-Valley;
     src: url("../fonts/MonumentValley12-X55o.otf") format("opentype");
   }
 
-  @font-face {
-    font-family: Ostrich-Heavy;
-    src: url("../fonts/OstrichSans-Heavy.otf") format("opentype");
-  }
 
   @font-face {
     font-family: ReneB-Book;
     src: url("../fonts/ReneBiederMilliardBook.otf") format("opentype");
   }
 
-  @font-face {
-    font-family: ReneB-Book-Italic;
-    src: url("../fonts/ReneBiederMilliardBookItalic.otf") format("opentype");
-  }
+
 
   @font-face {
     font-family: ReneB-Extra-Light;

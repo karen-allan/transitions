@@ -216,7 +216,7 @@ and (min-width: 1920px) {
   }
 
   .footer-top p, .footer-top p a, .footer-bottom p, .footer-bottom span {
-    line-height: var(--copy-line-height-small);
+    line-height: 120%;
     font-family: var(--family-data);
     text-align: center;
   }

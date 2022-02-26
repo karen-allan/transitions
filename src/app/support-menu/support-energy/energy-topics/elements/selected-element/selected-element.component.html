@@ -1,12 +1,9 @@
 <div class="content">
-    <div class="headings">
+    <div class="inner-content">
         <div class="clear-heading" style="{{selectedElement.font_color_selected}}">
             <h2>ARE YOU A {{selectedElement.name.toUpperCase()}}?</h2>
         </div>
-    </div>
-
     <!-- ATTRIBUTES -->
-    <div class="list">
         <ul class="dark-list" style="{{selectedElement.copy_font_color}}">
             <li class="list-item">Is your favorite season {{selectedElement.season}}?</li>
             <li class="list-item">Is your favorite color {{selectedElement.color}}?</li>
@@ -31,87 +28,63 @@
             <li class="list-item">{{selectedElement.occupations}}?</li>
             <li class="list-item">{{selectedElement.relationship}}?</li>
         </ul>
-    </div>
 
     <!-- STATE -->
-    <div class="headings">
         <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
             <h3>PHYSICAL SYMPTOMS FOR AN EXCESS OF {{selectedElement.name.toUpperCase()}}:</h3>
         </div>
-    </div>
 
-    <div class="list">
         <div class="light-list" style="{{selectedElement.background_color_selected}}">
             <li class="list-item-3-cols" *ngFor="let line of selectedElement.excess_physio.physicalExcess">
                 <span>{{line}}</span>
             </li>
         </div>
-    </div>
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
             <h3>PHYSICAL SYMPTOMS FOR A DEFICIENCY OF {{selectedElement.name.toUpperCase()}}:</h3>
         </div>
-    </div>
 
-    <div class="list">
         <div class="light-list" style="{{selectedElement.background_color_selected}}">
             <li class="list-item-3-cols" *ngFor="let line of selectedElement.deficient_physio.physicalDeficient">
                 <span>{{line}}</span>
             </li>
         </div>
-    </div>
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
             <h3>PSYCHOLOGICAL SYMPTOMS FOR AN EXCESS OF {{selectedElement.name.toUpperCase()}}:</h3>
         </div>
-    </div>
 
-    <div class="list">
         <div class="light-list" style="{{selectedElement.background_color_selected}}">
             <li class="list-item-3-cols" *ngFor="let line of selectedElement.excess_psych.psychExcess">
                 <span>{{line}}</span>
             </li>
         </div>
-    </div>
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
             <h3>PSYCHOLOGICAL SYMPTOMS FOR A DEFICIENCY OF {{selectedElement.name.toUpperCase()}}:</h3>
         </div>
-    </div>
 
-    <div class="list">
         <div class="light-list" style="{{selectedElement.background_color_selected}}">
             <li class="list-item-3-cols" *ngFor="let line of selectedElement.deficient_psych.psychDeficient">
                 <span>{{line}}</span>
             </li>
         </div>
-    </div>
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
             <h3>A BALANCED {{selectedElement.name.toUpperCase()}} ELEMENT:</h3>
         </div>
-    </div>
 
-    <div class="list">
         <div class="light-list" style="{{selectedElement.background_color_selected}}">
             <li class="list-item-3-cols" *ngFor="let line of selectedElement.balanced_psych.psychBalance">
                 <span>{{line}}</span>
             </li>
         </div>
-    </div>
 
     <!-- CORRECTIONS -->
-    <div class="headings">
         <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
             <h1>{{selectedElement.name.toUpperCase()}} ELEMENT: CORRECTIONS</h1>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             If in looking through the lists of imbalances you see symptoms that are chronic for you, you can try
             some simple methods to bring this energy back into balance. While we as practitioners delve very much deeper
@@ -123,9 +96,7 @@
             corrections, or you can pick one or more of the meridians that belong to that element and follow the corrections
             for them.
         </div>
-    </div>
 
-    <div class="list">
         <ul class="light-list" style="{{selectedElement.background_color_selected}}">
             <li class="list-item">&#x262f;&nbsp;
                 Hold Neuro-Vasculars:Bring energy to {{selectedElement.name}}'s via its' NeuroVascular Points.
@@ -137,15 +108,11 @@
                 Help {{selectedElement.name}} with sound and movement exercises.
             </li>
         </ul>
-    </div>
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
             <h2>&#x262f;&nbsp;Reduce Stress with Neuro-Vascular Stimulation</h2>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             Many of {{selectedElement.name}}'s imbalances are psychological and deal with unresolved issues or
             problems in your life.
@@ -163,58 +130,40 @@
             {{selectedElement.nv_points}}
             Hold these points along with the Main NVs above your eyes, where you can feel a slight protrubence.
         </div>
-    </div>
 
-    <div class="images">
-        <img src="{{selectedElement.nv_pic}}">
-    </div>
+        <img class="images" src="{{selectedElement.nv_pic}}">
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
             <h3>&#x262f;&nbsp;Neurolymphatic Massage for an Unbalanced {{selectedElement.name}}</h3>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             {{selectedElement.nl_overview}}
             <br><br>
             {{selectedElement.nl_points}}
         </div>
-    </div>
 
-    <div class="images">
-        <img src="{{selectedElement.nl_pic}}">
-    </div>
+        <img class="images" src="{{selectedElement.nl_pic}}">
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
             <h3>&#x262f;&nbsp;Activities for an Unbalanced {{selectedElement.name}} Element</h3>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             {{selectedElement.treating_emotion}}
         </div>
-    </div>
 
-    <div class="headings">
         <div class="headings-dark" style="{{selectedElement.heading_font_color}}">
             <h3>Exercises for {{selectedElement.name}} Element</h3>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             Combining sound and movement can assist {{selectedElement.name}} element to rebalance. Add these
             exercises to your <a routerLink="/energyMoveEnergy">Daily Energy Routine</a> and note any changes in your mood or
             energy levels.
         </div>
-    </div>
 
-    <div *ngIf="selectedElement.id==1">
-        <div class="text">
+        <div *ngIf="selectedElement.id==1">
             <div class="clear-copy" style="{{selectedElement.heading_font_color}}">
                 <b>WATER: Blowing out the Candle (by Donna Eden - Energy Medicine)</b>
             </div>
@@ -226,9 +175,7 @@
                 You can also picture all of your fears, worries, concerns, guilty feelings, everything inside
                 this flame. On blowing out the candle you are burning up these negative thoughts and feelings. This will help dispel fear.
             </div>
-        </div>
 
-        <div class="text">
             <div class="clear-copy" style="{{selectedElement.heading_font_color}}">
                 <b>WATER: Releasing Toxins (by Donna Eden - Energy Medicine)</b>
             </div>
@@ -239,10 +186,8 @@
                 Inhale and then on the exhale bend forward as far as you can.
             </div>
         </div>
-    </div>
 
-    <div *ngIf="selectedElement.id==2">
-        <div class="text">
+        <div *ngIf="selectedElement.id==2">
             <div class="clear-copy" style="{{selectedElement.heading_font_color}}">
                 <b>Expelling the Venom (By Donna Eden - Eden Energy Medicine)</b>
             </div>
@@ -256,10 +201,8 @@
                 Reach them up to the sky and on the exhale, lay them on your heart.
             </div>
         </div>
-    </div>
 
-    <div *ngIf="selectedElement.id==3">
-        <div class="text">
+        <div *ngIf="selectedElement.id==3">
             <div class="clear-copy" style="{{selectedElement.heading_font_color}}">
                 <b>Taking down the Flame (BY Donna Eden – Eden Energy Medicine)</b>
             </div>
@@ -276,10 +219,8 @@
                 feet and then trace back up along the inner legs and the very center of your trunk. Land on your heart and exhale.
             </div>
         </div>
-    </div>
 
-    <div *ngIf="selectedElement.id==4">
-        <div class="text">
+        <div *ngIf="selectedElement.id==4">
             <div class="clear-copy" style="{{selectedElement.heading_font_color}}">
                 <b>Cradling the Baby (by Donna Eden – Energy Medicine)</b>
             </div>
@@ -294,16 +235,12 @@
                 At the pelvis swing out to your sides and trace up your sides and rub the area at the edges of your rib cage sides.
             </div>
         </div>
-    </div>
 
-    <div *ngIf="selectedElement.id==5">
-        <div class="text">
+        <div *ngIf="selectedElement.id==5">
             <div class="clear-copy" style="{{selectedElement.heading_font_color}}">
                 <b>Humans Touching the Divine (by Donna Eden – Energy Medicine)</b>
             </div>
-        </div>
 
-        <div class="text">
             <div class="dark-copy">
                 Stand with your hands on your outer thighs. Exhale, inhale and as you do so raise your arms to
                 your sides and looking up, reach up to the heavens. Think of reaching out to your loved ones as well as the whole world. As you

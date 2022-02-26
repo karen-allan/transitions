@@ -1,34 +1,34 @@
 
-<div class="headings">
+
     <div class="dark-heading">
         <h2>Meridian Affirmations for Tracing {{selectedMeridian.name}}</h2>
     </div>
-</div>
 
-<div class="text">
+
+
     <div class="dark-copu">
         As you trace your meridians you may wish to silently or say aloud the following affirmations.
     </div>
-</div>
+
 
 <div *ngIf="selectedMeridian.affirmations_list != null">
-    <div class="list">
+
         <div class="clear-list" style="{{selectedMeridian.font_color}}">
             <li class="list-item" *ngFor="let line of selectedMeridian.affirmations_list.merAffirmations">
                 <span>{{line}}</span>
             </li>
         </div>
-    </div>
+
 </div>
 
 <div *ngIf="selectedMeridian.tracingText != null">
-    <div class="list">
+
         <div class="clear-list" style="{{selectedMeridian.font_color}}">
             <li class="list-item" *ngFor="let line of selectedMeridian.tracingText.instruction">
                 <span>{{line}}</span>
             </li>
         </div>
-    </div>
+
 </div>
 
 <!-- Starts with Bladder -->

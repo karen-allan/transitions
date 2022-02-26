@@ -202,6 +202,10 @@ and (orientation: portrait){
   .mobile-menu .hamburger {
     margin-top:13px;
   }
+
+  .selectedSubItem, .unselectedSubItem a {
+    font-size:var(--menu-topic-mobile-port-font-size);
+  }
 }
 
 /* BANANA LANDSCAPE  *****************************************************************************/
@@ -220,6 +224,10 @@ and (orientation: landscape) {
 
   .mobile-menu .hamburger {
     margin-top:30px;
+  }
+
+  .selectedSubItem, .unselectedSubItem a {
+    font-size:var(--menu-topic-mobile-land-font-size);
   }
 
 }
@@ -242,6 +250,11 @@ and (orientation: portrait) {
     margin-top:20px;
   }
 
+  .selectedSubItem, .unselectedSubItem a {
+    font-size:var(--menu-topic-mobile-port-font-size);
+  }
+
+
 }
 
 /*  MOBILES LANDSCAPE **************************************************************************************************/
@@ -261,6 +274,10 @@ and (orientation: landscape) {
   .mobile-menu .hamburger {
     margin-top:48px;
   }
+
+  .selectedSubItem, .unselectedSubItem a {
+    font-size:var(--menu-topic-mobile-land-font-size);
+  }
 }
 
 /* TABLETS PORTRAIT ****************************************************************************************************/
@@ -279,6 +296,10 @@ and (orientation: portrait) {
 
   .mobile-menu .hamburger {
     margin-top:48px;
+  }
+
+  .selectedSubItem, .unselectedSubItem a {
+    font-size:var(--menu-topic-tablet-ipad-port-font-size);
   }
 
 }
@@ -301,6 +322,10 @@ and (orientation: portrait) {
     margin-top:55px;
   }
 
+  .selectedSubItem, .unselectedSubItem a {
+    font-size:var(--menu-topic-tablet-ipad-port-font-size);
+  }
+
 }
 
 
@@ -317,7 +342,7 @@ and (orientation: landscape) {
   .header-desktop {
     display: inline-grid;
     grid-template-columns: 100%;
-    grid-template-rows:var(--header-desktop-slogan-height) var(--header-desktop-menu-height);
+    grid-template-rows:110px 50px;
     width: 100%;
     background-color: white;
     border-top: 1px solid slategray;
@@ -332,28 +357,28 @@ and (orientation: landscape) {
     border-left: 1px solid #d7e0e7;
     border-right: 1px solid #d7e0e7;
     margin:auto;
-    width:var(--header-desktop-slogan-width);
-    height: var(--header-desktop-slogan-height);
+    width:1024px;
+    height: 110px;
     background: url("src/assets/images/extras/headers/transitionsInEnergyHeader.jpg")  center no-repeat;
     background-size:auto;
   }
 
-  .top-menu {
+  .menu {
     display:grid;
     grid-row: 2;
     background-color: var(--color-darkest-blue);
   }
 
-  .top-menu-items {
+  .menu-items {
     display: inline-grid;
     margin:auto;
-    width:var(--header-desktop-slogan-width);
-    height: var(--header-desktop-menu-height);
+    width:1024px;
+    height: 50px;
     grid-template-columns: repeat(5, 20%);
-
   }
+
   .selectedItem, .unselectedItem a {
-    font-size:0.85em;
+    font-size:var(--menu-topic-laptop-desktop-font-size);
   }
 }
 
@@ -361,35 +386,34 @@ and (orientation: landscape) {
 /* GLOBAL *************************************************************************************************************/
 @media screen {
 
-  /*cambria math to the left and berlin sans FB to the right text */
-  .slogan {
-    align-content: center;
-    margin:auto;
-  }
+      /*cambria math to the left and berlin sans FB to the right text */
+      .slogan {
+        align-content: center;
+        margin:auto;
+      }
 
-  /* header-desktop and header-mobile are not placed here as they are conditional not global */
+      /* header-desktop and header-mobile are not placed here as they are conditional not global */
+      .selectedItem, .unselectedItem a {
+        display:grid;
+        font-family: var(--family-menu);
+        color:whitesmoke;
+        justify-content: center;
+        height:50px;
+        align-content: center;
+        font-weight:400;
+      }
 
-  .selectedItem, .unselectedItem a {
-    display:grid;
-    font-family: var(--family-global);
-    color:whitesmoke;
-    justify-content: center;
-    height:var(--header-desktop-menu-height);
-    align-content: center;
-    font-weight:800;
-  }
+      .unselectedItem a {
+        text-decoration: none;
+        cursor: pointer;
+        background-color: var(--color-darkest-blue);
+      }
 
-  .unselectedItem a {
-    text-decoration: underline;
-    cursor: pointer;
-    background-color: var(--color-darkest-blue);
-  }
-
-  .selectedItem {
-    cursor: default;
-    background-color: var(--color-light-blue);
-    border:thin solid var(--color-off-white);
-  }
+      .selectedItem {
+        cursor: default;
+        background-color: var(--color-light-blue);
+        border:thin solid var(--color-off-white);
+      }
 }
 
 @media print {

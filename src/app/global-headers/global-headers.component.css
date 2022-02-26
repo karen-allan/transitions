@@ -8,12 +8,12 @@ and (orientation: portrait){
 
   /* use min width 240 to get 122 height and cover  */
   .top-heading-home {
-    height:var(--banana-port-home-image-height);
+    height:122px;
   }
 
   /* use min width 240 to get 56 height and cover  */
   .top-heading-details {
-    height:var(--banana-port-detail-image-height);
+    height:56px;
   }
 
   /*.vertical-heading {
@@ -28,7 +28,7 @@ and (orientation: portrait){
 
   /* allow for 2 lines on banana both, mobile portrait and tablet portrait */
   .top-heading-quotes p, .top-heading-quotes span {
-    font-size:var(--h1-banana-mobile-port-font-size);
+    font-size:var(--h1-whitney-mobile-port-font-size);
   }
 
   .quote-end img {
@@ -45,12 +45,12 @@ and (orientation: landscape) {
 
   /* use min width 568 to get 289 height and cover  */
   .top-heading-home {
-    height:var(--banana-land-home-image-height);
+    height:289px;
   }
 
   /* use min width 568 to get 133 height and cover  */
   .top-heading-details {
-    height:var(--banana-land-detail-image-height);
+    height:133px;
   }
 
   /*.vertical-heading {
@@ -65,7 +65,7 @@ and (orientation: landscape) {
 
   /* allow for 2 lines on banana both, mobile portrait and tablet portrait */
   .top-heading-quotes p, .top-heading-quotes span {
-    font-size:var(--h1-banana-mobile-land-font-size);
+    font-size:var(--h1-whitney-mobile-land-font-size);
   }
 
   .quote-end img {
@@ -82,12 +82,12 @@ and (orientation: portrait) {
 
   /* use min width 360 to get 183 height and cover  */
   .top-heading-home {
-    height:var(--mobile-port-home-image-height);
+    height:183px;
   }
 
   /* use min width 360 to get 84 height and cover  */
   .top-heading-details {
-    height:var(--mobile-port-detail-image-height);
+    height:84px;
   }
 
   /*.vertical-heading {
@@ -102,7 +102,7 @@ and (orientation: portrait) {
 
   /* allow for 2 lines on banana, mobile portrait and tablet portrait */
   .top-heading-quotes p, .top-heading-quotes span {
-    font-size:var(--h1-banana-mobile-port-font-size);
+    font-size:var(--h1-whitney-mobile-port-font-size);
   }
 
   .quote-end img {
@@ -119,12 +119,12 @@ and (orientation: landscape) {
 
   /* use min size 896 to get 456 height and cover */
   .top-heading-home {
-    height:var(--mobile-land-home-image-height);
+    height:456px;
   }
 
   /* use min width 896 to get 210 height and cover  */
   .top-heading-details {
-    height:var(--mobile-land-detail-image-height);
+    height:210px;
   }
 
   /*.vertical-heading {
@@ -138,7 +138,7 @@ and (orientation: landscape) {
   }
 
   .top-heading-quotes p, .top-heading-quotes span {
-    font-size:var(--h1-banana-mobile-land-font-size);
+    font-size:var(--h1-whitney-mobile-land-font-size);
   }
 
   .quote-end img {
@@ -155,12 +155,12 @@ and (orientation: portrait) {
 
   /* use min size 600 to get 306 height and cover */
   .top-heading-home {
-    height:var(--tablet-port-home-image-height);
+    height:456px;
   }
 
   /* use min width 600 to get 141 height and cover  */
   .top-heading-details {
-    height:var(--tablet-port-detail-image-height);
+    height:141px;
   }
 
   /*.vertical-heading {
@@ -175,7 +175,7 @@ and (orientation: portrait) {
 
   /* allow for 2 lines on banana both, mobile portrait and tablet portrait */
   .top-heading-quotes p, .top-heading-quotes span {
-    font-size:var(--h1-tablet-ipad-port-font-size);
+    font-size:var(--h1-whitney-tablet-ipad-port-font-size);
   }
 
   .quote-end img {
@@ -192,12 +192,12 @@ and (orientation: landscape) {
 
   /* use min size 1280 to get 652 height and cover */
   .top-heading-home {
-    height:var(--tablet-land-home-image-height);
+    height:652px;
   }
 
   /* use min width 1280 to get 300 height and cover  */
   .top-heading-details {
-    height:var(--tablet-land-detail-image-height);
+    height:300px;
   }
 
  /* .vertical-heading {
@@ -211,7 +211,7 @@ and (orientation: landscape) {
   }
 
   .top-heading-quotes p, .top-heading-quotes span {
-    font-size:var(--h1-tablet-ipad-land-font-size);
+    font-size:var(--h1-whitney-tablet-ipad-land-font-size);
   }
 
   .quote-end img {
@@ -228,12 +228,12 @@ and (orientation: portrait) {
 
   /* use min size 1024 to get 522 height and cover */
   .top-heading-home {
-    height:var(--ipad-port-home-image-height);
+    height:522px;
   }
 
   /* use min width 1024 to get 240 height and cover  */
   .top-heading-details {
-    height:var(--ipad-port-detail-image-height);
+    height:240px;
   }
 
   /*.vertical-heading {
@@ -247,7 +247,7 @@ and (orientation: portrait) {
   }
 
   .top-heading-quotes p,  .top-heading-quotes span  {
-    font-size:var(--h1-tablet-ipad-port-font-size);
+    font-size:var(--h1-whitney-tablet-ipad-port-font-size);
   }
 
   .quote-end img {
@@ -263,12 +263,12 @@ and (orientation: landscape) {
 
   /* 1366 x 696 */
   .top-heading-home {
-    height: var(--ipad-land-home-image-height);
+    height: 696px;
   }
 
   /* 1366 x 320 */
   .top-heading-details {
-    height:var(--ipad-land-detail-image-height);
+    height:320px;
   }
 
   /*.vertical-heading{
@@ -282,7 +282,7 @@ and (orientation: landscape) {
   }
 
   .top-heading-quotes p,  .top-heading-quotes span  {
-    font-size:var(--h1-tablet-ipad-land-font-size);
+    font-size:var(--h1-whitney-tablet-ipad-land-font-size);
   }
 
   .quote-end img {
@@ -298,12 +298,12 @@ and (max-width:1919px ){
 
   /* 1440 x 734 */
   .top-heading-home {
-    height: var(--laptop-home-image-height);
+    height:734px;
   }
 
   /* 1440 x 338 */
   .top-heading-details {
-    height:var(--laptop-detail-image-height);
+    height:338px;
   }
 
  /* .vertical-heading {
@@ -317,7 +317,7 @@ and (max-width:1919px ){
   }
 
   .top-heading-quotes p,  .top-heading-quotes span  {
-    font-size:var(--h1-laptop-font-size);
+    font-size:var(--h1-whitney-laptop-font-size);
   }
 
   .quote-end img {
@@ -332,12 +332,12 @@ and (min-width: 1920px) {
 
   /* 1920 x 978 */
   .top-heading-home {
-    height: var(--desktop-home-image-height);
+    height: 978px;
   }
 
   /* 1920 x 450   */
   .top-heading-details {
-    height:var(--desktop-detail-image-height);
+    height:450px;
   }
 
   /*.vertical-heading {
@@ -351,7 +351,7 @@ and (min-width: 1920px) {
   }
 
   .top-heading-quotes p,  .top-heading-quotes span  {
-    font-size:var(--h1-desktop-font-size);
+    font-size:var(--h1-whitney-desktop-font-size);
   }
 
   .quote-end img {

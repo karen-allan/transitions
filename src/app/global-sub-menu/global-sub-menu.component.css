@@ -5,6 +5,10 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
+  .selectedSubItem, .unselectedSubItem a {
+    font-size: var(--menu-topic-mobile-port-font-size);
+  }
+
 }
 
 /* BANANA LANDSCAPE ****************************************************************************************************/
@@ -12,6 +16,10 @@ and (orientation: portrait) {
 and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
+
+  .selectedSubItem, .unselectedSubItem a {
+    font-size: var(--menu-topic-mobile-land-font-size);
+  }
 
 }
 
@@ -21,6 +29,10 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
+  .selectedSubItem, .unselectedSubItem a {
+    font-size: var(--menu-topic-mobile-port-font-size);
+  }
+
 }
 
 /*  MOBILES LANDSCAPE **************************************************************************************************/
@@ -29,6 +41,10 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
+  .selectedSubItem, .unselectedSubItem a {
+    font-size: var(--menu-topic-mobile-land-font-size);
+  }
+
 }
 
 /*  TABLETS PORTRAIT *******************************************************************************************/
@@ -36,6 +52,10 @@ and (orientation: landscape) {
 and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
+
+  .selectedSubItem, .unselectedSubItem a {
+    font-size: var(--menu-topic-tablet-ipad-port-font-size);
+  }
 
 }
 
@@ -46,7 +66,7 @@ and (max-width: 1365px)
 and (orientation: landscape) {
 
   .selectedSubItem, .unselectedSubItem a {
-    font-size:0.7em;;
+    font-size:var(--menu-topic-tablet-ipad-land-font-size);
   }
 
 }
@@ -58,7 +78,7 @@ and (max-width: 1366px)
 and (orientation: portrait) {
 
   .selectedSubItem, .unselectedSubItem a {
-    font-size:0.6em;;
+    font-size:var(--menu-topic-tablet-ipad-port-font-size);
   }
 
 }
@@ -71,7 +91,7 @@ and (max-width: 1439px)
 and (orientation: landscape) {
 
   .selectedSubItem, .unselectedSubItem a {
-    font-size:0.7em;;
+    font-size:var(--menu-topic-tablet-ipad-land-font-size);
   }
 
 }
@@ -82,31 +102,22 @@ and (min-width: 1440px)
 and (max-width: 1919px) {
 
   .selectedSubItem, .unselectedSubItem a {
-    font-size:0.7em;;
+    font-size:var(--menu-topic-laptop-desktop-font-size);
   }
 }
 
+/* *****************************************************************************************************/
 /* ALL THAT SHOW BIG MENU TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP ********************************/
 @media only screen
 and (min-width: 1280px)
 and (orientation: landscape) {
 
   /* 1152 is 60% of 1920 */
-
-  .selectedSubItem, .unselectedSubItem a {
-    font-size:0.8em;;
-  }
-}
-
-
-/* GLOBAL *************************************************************************************************************/
-@media only screen {
-
   .sub-menu {
     display:grid;
     width: 100%;
     margin:auto;
-    height:var(--header-desktop-sub-menu-height);
+    height:45px;
     background-color: var(--color-darkest-purple);
     justify-content: center;
   }
@@ -114,31 +125,40 @@ and (orientation: landscape) {
   .sub-menu-items {
     display:inline-grid;
     margin:auto;
-    height:var(--header-desktop-sub-menu-height);
+    height:45px;
     grid-template-columns:repeat(3, 384px);
     justify-content: center;
     text-align: center;
-
   }
 
   .selectedSubItem, .unselectedSubItem a {
+    font-size:var(--menu-topic-laptop-desktop-font-size);
+  }
+}
+
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+
+
+  .selectedSubItem, .unselectedSubItem a {
     display:grid;
-    font-family: var(--family-global);
-    height:var(--header-desktop-sub-menu-height);
+    font-family: var(--family-menu);
+    height:45px;
     align-content: center;
-    font-weight:800;
+    font-weight:400;
     color:whitesmoke;
   }
 
   .selectedSubItem {
     background-color: var(--color-light-blue);
     cursor:default;
-    text-decoration: none;
     border:thin solid var(--color-off-white);
   }
 
   .unselectedSubItem a {
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
   }
 

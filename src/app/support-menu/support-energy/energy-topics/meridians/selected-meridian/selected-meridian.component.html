@@ -1,16 +1,12 @@
 <div class="content">
-    <div class="headings">
+    <div class="inner-content">
         <div class="dark-heading">
             <h1>{{selectedMeridian.name.toUpperCase()}}</h1>
         </div>
-    </div>
 
-    <!-- ATTRIBUTES -->
-    <div class="images">
-        <img src="{{selectedMeridian.meridian_attribute_pic}}" title="Meridian Attributes">
-    </div>
+        <!-- ATTRIBUTES -->
+        <img src="{{selectedMeridian.meridian_attribute_pic}}" class="images" title="Meridian Attributes">
 
-    <div class="text">
         <div class="dark-copy">
             <div class="meridians-element">
                 <div class="element-icon">
@@ -35,15 +31,11 @@
                 <p>{{selectedMeridian.name}} is most active (at high tide) between {{selectedMeridian.time_range}}.</p>
             </div>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             {{selectedElement.power_animals}}.
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             <div *ngIf="selectedMeridian.id == 3 || selectedMeridian.id == 4 || selectedMeridian.id == 11 || selectedMeridian.id == 12">
                 <img src="{{selectedMeridian.meridian_animal_pic}}" class="images">
@@ -53,26 +45,18 @@
                 <img src="{{selectedMeridian.meridian_animal_pic}}" class="images">
             </div>
         </div>
-    </div>
 
-    <div class="headings">
         <div class="dark-heading">
             <h3>{{selectedMeridian.name}}'s Pathway</h3>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             {{selectedMeridian.meridian_path_copy}}
         </div>
-    </div>
 
-    <div class="images">
-        <img src="{{selectedMeridian.meridian_path_pic}}" class="images">.
-    </div>
+        <img src="{{selectedMeridian.meridian_path_pic}}" class="images">
 
-    <!-- STATE -->
-    <div class="text">
+        <!-- STATE -->
         <div class="dark-copy">
             Physical and psychological imbalances can arise from an over-abundance of energy or a lack of energy in a Meridian.
             If on browsing the lists of common symptoms you see that some are a chronic problem for you, you may want to test yourself as to
@@ -80,15 +64,11 @@
             is over energized (OE) or under energized (UE). But you may be able to tell whether the meridian is OE or UE
             by how you feel psychologically or the state your body is in physically.
         </div>
-    </div>
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedMeridian.font_color}}">
             <h2>Unbalanced Physical and Psychological Effects</h2>
         </div>
-    </div>
 
-    <div class="list">
         <div class="light-list" style="{{selectedMeridian.background_color}}">
             <div *ngIf="selectedMeridian.meridian_imbalances != null">
                 <li class="list-item-3-cols" *ngFor="let line of selectedMeridian.meridian_imbalances.imbalances">
@@ -96,15 +76,11 @@
                 </li>
             </div>
         </div>
-    </div>
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedMeridian.font_color}}">
             <h2>Balanced Physical and Psychological Effects</h2>
         </div>
-    </div>
 
-    <div class="list">
         <div class="light-list" style="{{selectedMeridian.background_color}}">
             <div *ngIf="selectedMeridian.meridian_balance != null">
                 <li class="list-item-3-cols" *ngFor="let line of selectedMeridian.meridian_balance.balances">
@@ -112,16 +88,12 @@
                 </li>
             </div>
         </div>
-    </div>
 
-    <!-- CORRECTIONS -->
-    <div class="headings">
+        <!-- CORRECTIONS -->
         <div class="clear-heading" style="{{selectedMeridian.font_color}}">
             <h1>{{selectedMeridian.name.toUpperCase()}} MERIDIAN CORRECTIONS</h1>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             If in looking through the lists of imbalances you see symptoms that are chronic for you, you can try some simple
             methods to bring this energy back into balance. While we as practitioners delve very much deeper into testing
@@ -141,7 +113,7 @@
         </p>
     </div>
 
-    <div class="list">
+    <div class="inner-content">
         <div class="light-list" style="{{selectedMeridian.background_color}}">
             <div *ngIf="selectedMeridian.id != 11">
                 <div class="list-item">&#x262f;&nbsp;<b>Source Points:</b> Bring energy to specific organs via {{selectedMeridian.name}}'s Source Point.</div>
@@ -165,19 +137,13 @@
                 <div class="list-item">&#x262f;&nbsp;<b>Hold Acupressure Points:</b>Strengthen {{selectedMeridian.name}}'s Acupressure points.</div>
             </div>
         </div>
-    </div>
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedMeridian.font_color}}">
             <h2>&#x262f;&nbsp;The {{selectedMeridian.name}}'s Source Point</h2>
         </div>
-    </div>
 
-    <div class="images">
-        <img title="Source Points" src="{{selectedMeridian.source_pic}}">
-    </div>
+        <img title="Source Points" class="images" src="{{selectedMeridian.source_pic}}">
 
-    <div class="text">
         <div class="dark-copy">
             {{selectedMeridian.name}}'s source point is {{selectedMeridian.source_point}}
             Every meridian (except Central and Governing) has a Source Point that stores a reservoir of energy for the organ
@@ -191,15 +157,11 @@
             This mimics a magnet, in that your palm has a South polarity and the back of your hand
             has a North polarity. Flipping them helps to realign the cells to follow their natural polarity.
         </div>
-    </div>
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedMeridian.font_color}}">
             <h2>&#x262f;&nbsp;Neuro-Lymphatic Massage for {{selectedMeridian.name}}</h2>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             Massaging the Neurolymphatics (NLs) is a great way to move accumulated Lymph from the body. Unlike blood that
             gets circulated via the muscles and valves of the Heart, the Lymphatic system relys on us to get up and move
@@ -210,19 +172,13 @@
             <br><br>
             {{selectedMeridian.nl_points}}
         </div>
-    </div>
 
-    <div class="images">
-        <img src="{{selectedMeridian.nl_pic}}">
-    </div>
+        <img class="images" src="{{selectedMeridian.nl_pic}}">
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedMeridian.font_color}}">
             <h2>&#x262f;&nbsp;Neuro-Vascular Massage for {{selectedMeridian.name}}</h2>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             When we are stressed our bodies and brain go into fight or flight. Blood travels down to your legs to allow
             you to run away from danger. Your heart starts to beat faster to get that blood down there ASAP. Your Stomach
@@ -244,19 +200,13 @@
             Try holding them for about 3 minutes or until you can feel them pulsing together. Blood is coming back up to
             your brain, hopefully allowing for more centered thinking.
         </div>
-    </div>
 
-    <div class="images">
         <img class="images" src="{{selectedMeridian.nv_pic}}">
-    </div>
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedMeridian.font_color}}">
             <h2>&#x262f;&nbsp;Tracing {{selectedMeridian.name}}</h2>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             Tracing your Meridians is fast once you get the hang of it. If you have analyzed your conditions and have
             intuited that {{selectedMeridian.name}} is under energy (UE) you can trace it forward three times.
@@ -284,19 +234,15 @@
                 and on the dorsal (top) sides of the feet and hands.
             </div>
         </div>
-    </div>
 
-    <div *ngIf="selectedMeridian!= null">
-        <app-meridian-tracing-videos [selectedMeridian]="selectedMeridian"></app-meridian-tracing-videos>
-    </div>
+        <div *ngIf="selectedMeridian!= null">
+            <app-meridian-tracing-videos [selectedMeridian]="selectedMeridian"></app-meridian-tracing-videos>
+        </div>
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedMeridian.font_color}}">
             <h2>&#x262f;&nbsp;Holding {{selectedMeridian.name}}'s Acupressure Points</h2>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             The most detailed but still easy enough to follow method is to hold our Acu-pressure points. These are the same
             points Acupuncturists work with but with Energy Medicine, we don't use needles, just our fingers. Chinese Medicine has been working
@@ -311,15 +257,11 @@
                 then stop the process by holding the control points for a minute. Do both sides and re-test yourself.
             </div>
         </div>
-    </div>
 
-    <div class="headings">
         <div class="clear-heading" style="{{selectedMeridian.font_color}}">
             <h3>Strengthening {{selectedMeridian.name}} Meridian</h3>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             <b>To Send Energy to a Weakened {{selectedMeridian.name}} Meridian</b>
             <br><br>
@@ -331,21 +273,15 @@
             <br>
             Hold the {{selectedMeridian.name}} strengthening points on the other side for a few minutes
         </div>
-    </div>
 
-    <div class="images">
-        <img src="{{selectedMeridian.acu_points_strengthen_pic}}">
-    </div>
+        <img class="images" src="{{selectedMeridian.acu_points_strengthen_pic}}">
 
-    <div *ngIf="selectedMeridian.id != 11">
-        <div class="headings">
+        <div *ngIf="selectedMeridian.id != 11">
             <div class="clear-heading" style="{{selectedMeridian.font_color}}">
                 <h2>Sedating {{selectedMeridian.name}} Meridian</h2>
             </div>
         </div>
-    </div>
 
-    <div class="text">
         <div class="dark-copy">
             <div *ngIf="selectedMeridian.id != 11">
                 <b>To take energy away from an over-active {{selectedMeridian.name}} Meridian</b>
@@ -359,9 +295,6 @@
                 Hold the {{selectedMeridian.name}} strengthening points on the other side for a few minutes
             </div>
         </div>
-    </div>
-
-    <div class="images">
-        <img src="{{selectedMeridian.acu_points_sedate_pic}}">
+        <img class="images" src="{{selectedMeridian.acu_points_sedate_pic}}">
     </div>
 </div>

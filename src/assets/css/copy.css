@@ -5,20 +5,20 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-    .headings-dark h1, .headings-clear h1, .headings-light h1 {
-        font-size: var(--h1-banana-mobile-port-font-size);
+    .dark-heading h1, .clear-heading h1, .light-heading h1 {
+        font-size: var(--h1-whitney-banana-port-font-size);
     }
 
-    .headings-dark h2, .headings-clear h2, .headings-light h2 {
-        font-size: var(--h2-banana-mobile-port-font-size);
+    .dark-heading h2, .clear-heading h2, .light-heading h2 {
+        font-size: var(--h2-whitney-banana-port-font-size);
     }
 
-    .headings-dark h3, .headings-clear h3, .headings-light h3  {
-        font-size: var(--h3-banana-mobile-port-font-size);
+    .dark-heading h3, .clear-heading h3, .light-heading h3  {
+        font-size: var(--h3-whitney-banana-port-font-size);
     }
 
-    .text-dark, .text-light, .text-clear, .answers, .questions {
-        font-size: var(--copy-banana-mobile-port-font-size);
+    .dark-copy, .light-copy, .text-clear, .answers, .questions {
+        font-size: var(--open-sans-mobile-port-font-size);
     }
 
 }
@@ -29,20 +29,20 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-    .headings-dark h1, .headings-clear h1, .headings-light h1 {
-        font-size: var(--h1-banana-mobile-land-font-size);
+    .dark-heading h1, .clear-heading h1, .light-heading h1 {
+        font-size: var(--h1-whitney-banana-land-font-size);
     }
 
-    .headings-dark h2, .headings-clear h2, .headings-light h2 {
-        font-size: var(--h2-banana-mobile-land-font-size);
+    .dark-heading h2, .clear-heading h2, .light-heading h2 {
+        font-size: var(--h2-whitney-banana-land-font-size);
     }
 
-    .headings-dark h3, .headings-clear h3, .headings-light h3  {
-        font-size: var(--h3-banana-mobile-land-font-size);
+    .dark-heading h3, .clear-heading h3, .light-heading h3  {
+        font-size: var(--h3-whitney-banana-land-font-size);
     }
 
-    .text-dark, .text-light, .text-clear, .answers, .questions {
-        font-size: var(--copy-banana-mobile-land-font-size);
+    .dark-copy, .light-copy, .text-clear, .answers, .questions {
+        font-size: var(--open-sans-mobile-land-font-size);
     }
 }
 
@@ -52,20 +52,20 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-    .headings-dark h1, .headings-clear h1, .headings-light h1 {
-        font-size: var(--h1-banana-mobile-port-font-size);
+    .dark-heading h1, .clear-heading h1, .light-heading h1 {
+        font-size: var(--h1-whitney-mobile-port-font-size);
     }
 
-    .headings-dark h2, .headings-clear h2, .headings-light h2 {
-        font-size: var(--h2-banana-mobile-port-font-size);
+    .dark-heading h2, .clear-heading h2, .light-heading h2 {
+        font-size: var(--h2-whitney-mobile-port-font-size);
     }
 
-    .headings-dark h3, .headings-clear h3, .headings-light h3  {
-        font-size: var(--h3-banana-mobile-port-font-size);
+    .dark-heading h3, .clear-heading h3, .light-heading h3  {
+        font-size: var(--h3-whitney-mobile-port-font-size);
     }
 
-    .text-dark, .text-light, .text-clear, .answers, .questions {
-        font-size: var(--copy-banana-mobile-port-font-size);
+    .dark-copy, .light-copy, .text-clear, .answers, .questions {
+        font-size: var(--open-sans-mobile-port-font-size);
     }
 
 }
@@ -76,20 +76,20 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-    .headings-dark h1, .headings-clear h1, .headings-light h1 {
-        font-size: var(--h1-banana-mobile-land-font-size);
+    .dark-heading h1, .clear-heading h1, .light-heading h1 {
+        font-size: var(--h1-whitney-mobile-land-font-size);
     }
 
-    .headings-dark h2, .headings-clear h2, .headings-light h2 {
-        font-size: var(--h2-banana-mobile-land-font-size);
+    .dark-heading h2, .clear-heading h2, .light-heading h2 {
+        font-size: var(--h2-whitney-mobile-land-font-size);
     }
 
-    .headings-dark h3, .headings-clear h3, .headings-light h3  {
-        font-size: var(--h3-banana-mobile-land-font-size);
+    .dark-heading h3, .clear-heading h3, .light-heading h3  {
+        font-size: var(--h3-whitney-mobile-land-font-size);
     }
 
-    .text-dark, .text-light, .text-clear, .answers, .questions {
-        font-size: var(--copy-banana-mobile-land-font-size);
+    .dark-copy, .light-copy, .text-clear, .answers, .questions {
+        font-size: var(--open-sans-mobile-land-font-size);
     }
 }
 
@@ -99,20 +99,20 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-    .headings-dark h1, .headings-clear h1, .headings-light h1 {
-        font-size: var(--h1-tablet-ipad-port-font-size);
+    .dark-heading h1, .clear-heading h1, .light-heading h1 {
+        font-size: var(--h1-whitney-tablet-port-font-size);
     }
 
-    .headings-dark h2, .headings-clear h2, .headings-light h2 {
-        font-size: var(--h2-tablet-ipad-port-font-size);
+    .dark-heading h2, .clear-heading h2, .light-heading h2 {
+        font-size: var(--h2-whitney-tablet-port-font-size);
     }
 
-    .headings-dark h3, .headings-clear h3, .headings-light h3  {
-        font-size: var(--h3-tablet-ipad-port-font-size);
+    .dark-heading h3, .clear-heading h3, .light-heading h3  {
+        font-size: var(--h3-whitney-tablet-port-font-size);
     }
 
-    .text-dark, .text-light, .text-clear, .answers, .questions {
-        font-size: var(--copy-tablet-ipad-port-font-size);
+    .dark-copy, .light-copy, .text-clear, .answers, .questions {
+        font-size: var(--open-sans-tablet-ipad-port-font-size);
     }
 }
 
@@ -122,20 +122,20 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
-    .headings-dark h1, .headings-clear h1, .headings-light h1 {
-        font-size: var(--h1-tablet-ipad-land-font-size);
+    .dark-heading h1, .clear-heading h1, .light-heading h1 {
+        font-size: var(--h1-whitney-tablet-land-font-size);
     }
 
-    .headings-dark h2, .headings-clear h2, .headings-light h2 {
-        font-size: var(--h2-tablet-ipad-land-font-size);
+    .dark-heading h2, .clear-heading h2, .light-heading h2 {
+        font-size: var(--h2-whitney-tablet-land-font-size);
     }
 
-    .headings-dark h3, .headings-clear h3, .headings-light h3  {
-        font-size: var(--h3-tablet-ipad-land-font-size);
+    .dark-heading h3, .clear-heading h3, .light-heading h3  {
+        font-size: var(--h3-whitney-tablet-land-font-size);
     }
 
-    .text-dark, .text-light, .text-clear, .answers, .questions {
-        font-size: var(--copy-tablet-ipad-land-font-size);
+    .dark-copy, .light-copy, .text-clear, .answers, .questions {
+        font-size: var(--open-sans-tablet-ipad-land-font-size);
     }
 }
 
@@ -145,20 +145,20 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    .headings-dark h1, .headings-clear h1, .headings-light h1 {
-        font-size: var(--h1-tablet-ipad-port-font-size);
+    .dark-heading h1, .clear-heading h1, .light-heading h1 {
+        font-size: var(--h1-whitney-ipad-port-font-size);
     }
 
-    .headings-dark h2, .headings-clear h2, .headings-light h2 {
-        font-size: var(--h2-tablet-ipad-port-font-size);
+    .dark-heading h2, .clear-heading h2, .light-heading h2 {
+        font-size: var(--h2-whitney-ipad-port-font-size);
     }
 
-    .headings-dark h3, .headings-clear h3, .headings-light h3  {
-        font-size: var(--h3-tablet-ipad-port-font-size);
+    .dark-heading h3, .clear-heading h3, .light-heading h3  {
+        font-size: var(--h3-whitney-ipad-port-font-size);
     }
 
-    .text-dark, .text-light, .text-clear, .answers, .questions {
-        font-size: var(--copy-tablet-ipad-port-font-size);
+    .dark-copy, .light-copy, .text-clear, .answers, .questions {
+        font-size: var(--open-sans-tablet-ipad-port-font-size);
     }
 
 }
@@ -169,65 +169,42 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-    .headings-dark h1, .headings-clear h1, .headings-light h1 {
-        font-size: var(--h1-tablet-ipad-land-font-size);
-    }
-
-    .headings-dark h2, .headings-clear h2, .headings-light h2 {
-        font-size: var(--h2-tablet-ipad-land-font-size);
-    }
-
-    .headings-dark h3, .headings-clear h3, .headings-light h3  {
-        font-size: var(--h3-tablet-ipad-land-font-size);
-    }
-
-    .text-dark, .text-light, .text-clear. .answers, .questions {
-        font-size: var(--copy-tablet-ipad-land-font-size);
-    }
-
-}
-
-/* LAPTOPS *****************************************************************************************************/
-@media only screen
-and (min-width: 1440px)
-and (max-width: 1919px) {
-
-    .headings-dark h1, .headings-clear h1, .headings-light h1 {
-        font-size: var(--h1-laptop-font-size);
-    }
-
-    .headings-dark h2, .headings-clear h2, .headings-light h2 {
-        font-size: var(--h2-laptop-desktop-font-size);
-    }
-
-    .headings-dark h3, .headings-clear h3, .headings-light h3  {
-        font-size: var(--h3-laptop-desktop-font-size);
-    }
-
-    .text-dark, .text-light, .text-clear, .answers, .questions {
-        font-size: var(--copy-laptop-desktop-font-size);
-    }
-
-}
-
-/* DESKTOPS ****************************************************************************************************/
-@media only screen
-and (min-width: 1920px) {
-
     .dark-heading h1, .clear-heading h1, .light-heading h1 {
-        font-size: var(--h1-desktop-font-size);
+        font-size: var(--h1-whitney-ipad-land-font-size);
     }
 
     .dark-heading h2, .clear-heading h2, .light-heading h2 {
-        font-size: var(--h2-laptop-desktop-font-size);
+        font-size: var(--h2-whitney-ipad-land-font-size);
     }
 
     .dark-heading h3, .clear-heading h3, .light-heading h3  {
-        font-size: var(--h3-laptop-desktop-font-size);
+        font-size: var(--h3-whitney-ipad-land-font-size);
+    }
+
+    .dark-copy, .light-copy, .text-clear. .answers, .questions {
+        font-size: var(--open-sans-tablet-ipad-land-font-size);
+    }
+
+}
+
+/* DESKTOPS AND LAPTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    .dark-heading h1, .clear-heading h1, .light-heading h1 {
+        font-size: var(--h1-whitney-desktop-font-size);
+    }
+
+    .dark-heading h2, .clear-heading h2, .light-heading h2 {
+        font-size: var(--h2-whitney-desktop-font-size);
+    }
+
+    .dark-heading h3, .clear-heading h3, .light-heading h3  {
+        font-size: var(--h3-whitney-desktop-font-size);
     }
 
     .dark-copy, .light-copy, .clear-copy. .answers, .questions {
-        font-size: var(--copy-laptop-desktop-font-size);
+        font-size: var(--open-sans-laptop-desktop-font-size);
     }
 
 }
@@ -235,29 +212,16 @@ and (min-width: 1920px) {
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-    .text, .headings, .images, .content-videos {
-        display: block;
-        width:100%;
-        max-width:800px;
-        margin:1em auto;
-    }
-
     .dark-heading h1, .clear-heading h1, .light-heading h1 {
-        font-size: 1.4em;
         text-align: center;
     }
 
     .dark-heading h2, .clear-heading h2, .light-heading h2 {
-        font-size: var(--h2-laptop-desktop-font-size);
         text-align: left;
     }
 
     .dark-heading h3, .clear-heading h3, .light-heading h3  {
-        font-size: var(--h3-laptop-desktop-font-size);
-    }
-
-    .dark-copy, .light-copy, .clear-copy. .answers, .questions {
-        font-size: 1.4em;
+        text-align: left;
     }
 
     .dark-heading h1, .dark-heading h2, .dark-heading h3, .dark-copy, .dark-copy a {
@@ -279,29 +243,14 @@ and (min-width: 1920px) {
         font-family: Whitney-Book;
         letter-spacing: 3px;
         font-style:normal;
-        line-height: 3em;
+        padding:1em 0 .5em 0;
         text-transform: uppercase;
     }
 
     .dark-copy, .light-copy, .clear-copy, .answers, .questions {
         font-family: var(--family-open-sans);
         line-height:var(--copy-line-height);
-        text-align: left;
-    }
-
- /*   .tall-prompt {
-        display:block;
-        float:left;
-        font-size:4em;
-        text-align:center;
-        padding-top:1em;
-        font-family: "Monument-Valley";
-        width: 100%;
-    }*/
-
-    .answers, .questions  {
-        max-width: 600px;
-        margin:2em auto;
+        text-align: justify;
     }
 
     .questions {
@@ -309,10 +258,6 @@ and (min-width: 1920px) {
         font-weight:600;
     }
 
-    .images img {
-        max-width:100%;
-        height:auto;
-    }
 
 
 }

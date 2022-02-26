@@ -31,10 +31,10 @@ import { BookSessionContainerComponent } from './book-menu/book-session/book-ses
 import { BookSessionOverviewComponent } from './book-menu/book-session/book-session-overview/book-session-overview.component';
 
 /* FORMS */
-import { FormSideMenuComponent } from './book-menu/forms/form-side-menu/form-side-menu.component';
-import { SessionProfileComponent } from './book-menu/forms/form-session/session-profile/session-profile.component';
-import { ConsultProfileComponent } from './book-menu/forms/form-consult/consult-profile/consult-profile.component';
-import { CovidProfileComponent } from './book-menu/forms/form-covid/covid-profile/covid-profile.component';
+import { FormsOverviewComponent } from './global-forms/forms-overview/forms-overview.component';
+import { SessionProfileComponent } from './global-forms/session-profile/session-profile.component';
+import { ConsultProfileComponent } from './global-forms/consult-profile/consult-profile.component';
+import { CovidProfileComponent } from './global-forms/covid-profile/covid-profile.component';
 
 /* FAQ */
 import { FaqContainerComponent } from './faq-menu/faq-container/faq-container.component';
@@ -42,9 +42,18 @@ import { FaqOverviewComponent } from './faq-menu/faq-overview/faq-overview.compo
 
 /* GLOBAL */
 import { GlobalFooterComponent } from './global-footer/global-footer.component';
+/* GLOBAL FORMS FOLDER */
+import { FormsContainerComponent } from './global-forms/forms-container/forms-container.component';
+
+
+
 import { GlobalGridsComponent } from './global-grids/global-grids.component';
 import { GlobalHeadersComponent } from './global-headers/global-headers.component';
 import { GlobalMenuComponent } from './global-menu/global-menu.component';
+
+/* GLOBAL PRINT FOLDER */
+import { PrintSessionComponent } from './global-print/print-session/print-session.component';
+
 import { GlobalSubMenuComponent } from './global-sub-menu/global-sub-menu.component';
 import { GlobalTopicMenuComponent } from './global-topic-menu/global-topic-menu.component';
 
@@ -120,9 +129,6 @@ import {TopicMoveEnergyOverviewComponent} from './support-menu/support-energy/en
 /* PAIN */
 import {TopicHelpPainContainerComponent} from './support-menu/support-energy/energy-topics/pain/topic-help-pain-container/topic-help-pain-container.component';
 import {TopicHelpPainOverviewComponent} from './support-menu/support-energy/energy-topics/pain/topic-help-pain-overview/topic-help-pain-overview.component';
-
-import { FormsContainerComponent } from './book-menu/forms/forms-container/forms-container.component';
-import { PrintSessionProfileComponent } from './book-menu/forms/print-session-profile/print-session-profile.component';
 
 
 
@@ -218,7 +224,7 @@ import { PrintSessionProfileComponent } from './book-menu/forms/print-session-pr
 
         TopicHelpPainContainerComponent,
         TopicHelpPainOverviewComponent,
-        FormSideMenuComponent,
+
         BookConsultOverviewComponent,
         BookConsultContainerComponent,
         BookSessionOverviewComponent,
@@ -230,8 +236,10 @@ import { PrintSessionProfileComponent } from './book-menu/forms/print-session-pr
         ConsultProfileComponent,
         CovidProfileComponent,
 
-        FormsContainerComponent,
-         PrintSessionProfileComponent,
+         FormsOverviewComponent,
+
+         PrintSessionComponent,
+         FormsContainerComponent,
 
 
 

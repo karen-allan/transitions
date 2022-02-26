@@ -1,0 +1,233 @@
+<div class="content">
+    <div class="inner-content">
+        <div class="dark-heading">
+            <h1>BOOK AN ENERGY SESSION</h1>
+        </div>
+    </div>
+
+    <form (ngSubmit)="onSubmit()">
+        <div class="forms-desktop">
+            <div class="form-heading">
+                Your Contact Information
+            </div>
+
+            <div class="two-inline-grid">
+                <label class="first-grid-col" for="name">Your Name:</label>
+
+                <label class="second-grid-col" for="cellPhone">Phone:</label>
+
+                <input type="text" class="first-grid-col" [(ngModel)]="model.name" name="name" id="name">
+
+                <input type="text" class="second-grid-col" [(ngModel)]="model.cellPhone" name="cellPhone" id="cellphone">
+
+                <label class="all-grid-cols" for="email">Email:</label>
+
+                <input type="text" class="all-grid-cols" [(ngModel)]="model.email" name="email" id="email">
+
+                <label class="all-grid-cols" for="address">Home Address:</label>
+
+                <textarea class="all-grid-cols" [(ngModel)]="model.address" rows=2 name="address" id="address"> </textarea>
+            </div>
+
+            <div class="four-inline-grid">
+                <label class="first-grid-col" for="city">City/Town:</label>
+
+                <label class="second-grid-col" for="provState">Prov/State:</label>
+
+                <label class="third-grid-col" for="pc">Postal/Zip:</label>
+
+                <label class="fourth-grid-col" for="country">Country:</label>
+
+                <input type="text" class="first-grid-col" id="city" [(ngModel)]="model.city" name="city">
+
+                <input type="text" class="second-grid-col" id="provState" [(ngModel)]="model.provState" name="provState">
+
+                <input type="text" class="third-grid-col" id="pc" [(ngModel)]="model.pc" name="pc">
+
+                <input type="text" class="fourth-grid-col" id="country" [(ngModel)]="model.country" name="country">
+            </div>
+
+            <div class="form-heading">
+                Emergency Contact
+            </div>
+
+            <div class="four-inline-grid">
+                <label class="first-grid-col" for="emergName">Contact:</label>
+
+                <label class="second-grid-col" for="emergPhone">Phone:</label>
+
+                <label class="last-two-grid-cols" for="emergRelation">Relationship:</label>
+
+                <input type="text" class="first-grid-col" id="emergName" [(ngModel)]="model.emergName" name="emergName">
+
+                <input type="text" class="second-grid-col" id="emergPhone" [(ngModel)]="model.emergPhone" name="emergPhone">
+
+                <input type="text" class="last-two-grid-cols" id="emergRelation" [(ngModel)]="model.emergRelation" name="emergRelation">
+            </div>
+
+            <div class="form-heading">
+                Optional Details
+            </div>
+
+            <div class="four-inline-grid">
+                <label class="first-grid-col" for="referredBy">Referred By:</label>
+
+                <label class="second-grid-col" for="birthdate">Birthdate:</label>
+
+                <label class="last-two-grid-cols" for="occupation">Occupation:</label>
+
+                <input type="text" class="form-control first-grid-col" id="referredBy" [(ngModel)]="model.referredBy" name="referredBy">
+
+                <input type="text" class="form-control second-grid-col" id="birthdate" [(ngModel)]="model.birthdate" name="birthdate">
+
+                <input type="text" class="form-control last-two-grid-cols" id="occupation" [(ngModel)]="model.occupation" name="occupation">
+            </div>
+
+            <div class="form-heading">
+                Your Concerns and Goals
+            </div>
+
+            <div class="form-prompt">
+                What would you say is your level of knowledge about Energy Medicine (circle one)?
+            </div>
+
+            <div class="three-inline-grid">
+                <div class="first-inline-col">
+                    <input type="radio" value="knowledgeLevel1" [(ngModel)]="model.knowledgeLevel" name="primaryFocus">No Knowledge
+                </div>
+
+                <div class="second-inline-col">
+                    <input type="radio" value="knowledgeLevel2" [(ngModel)]="model.knowledgeLevel" name="primaryFocus">Some Knowledge
+                </div>
+
+                <div class="third-inline-col">
+                    <input type="radio" value="knowledgeLevel3" [(ngModel)]="model.knowledgeLevel" name="primaryFocus">Extensive Knowledge
+                </div>
+            </div>
+
+            <div class="form-prompt">
+                What benefits do you hope to receive from getting Energy Medicine sessions?
+            </div>
+
+            <div class="full-width-grid">
+                <textarea rows=5 id="mainBenefit" [(ngModel)]="model.mainBenefit" name="mainBenefit"> </textarea>
+            </div>
+
+            <div class="form-heading">
+                (Optional) Medical History
+            </div>
+
+            <div class="form-prompt">
+                Please describe any treatments or protocols you have tried and their effectiveness.
+            </div>
+
+            <div class="full-width-grid">
+                <textarea rows=5 id="mainIssues" [(ngModel)]="model.mainIssues" name="mainIssues"> </textarea>
+            </div>
+
+            <div class="form-prompt">
+                Please list medications and supplements that your are currently taking.
+            </div>
+
+            <div class="full-width-grid">
+                <textarea rows=5 id="mainTreatments" [(ngModel)]="model.mainTreatments" name="mainTreatments"> </textarea>
+            </div>
+
+            <div class="form-prompt">
+                Please select any health conditions you have been diagnosed with:
+            </div>
+
+            <div class="three-inline-grid">
+                <div class="first-inline-col">
+                    <input type="checkbox" [(ngModel)]="model.heartDisease" name="heartDisease">Heart Disease
+                </div>
+
+                <div class="second-inline-col">
+                    <input type="checkbox" [(ngModel)]="model.cancer" name="cancer">Cancer
+                </div>
+
+                <div class="third-inline-col">
+                    <input type="checkbox" [(ngModel)]="model.stroke" name="stroke">Stroke
+                </div>
+
+                <div class="first-inline-col">
+                    <input type="checkbox" [(ngModel)]="model.highBloodPressure" name="highBloodPressure">High Blood Pressure
+                </div>
+
+                <div class="second-inline-col">
+                    <input type="checkbox" [(ngModel)]="model.diabetes" name="diabetes">Diabetes
+                </div>
+
+                <div class="third-inline-col">
+                    <input type="checkbox" [(ngModel)]="model.mentalIllness" name="mentalIllness">Emotional Illness
+                </div>
+
+                <div class="first-inline-col">
+                    <input type="checkbox" [(ngModel)]="model.seizures" name="seizures">Seizures
+                </div>
+
+                <div class="second-inline-col">
+                    <input type="checkbox" [(ngModel)]="model.autoImmuneDisease" name="autoImmuneDisease">Auto-immune Disease
+                </div>
+
+                <div class="third-inline-col">
+                    <input type="checkbox" [(ngModel)]="model.other" name="other">Other
+                </div>
+            </div>
+
+            <div class="form-prompt">
+                Please describe your situation, condition and or illness, if applicable:
+            </div>
+
+            <div class="full-width-grid">
+                <textarea rows=5 id="conditions" [(ngModel)]="model.conditions" name="conditions"> </textarea>
+            </div>
+
+            <div class="form-prompt">
+                Please select any that apply:
+            </div>
+
+            <div class="three-inline-grid">
+                <div class="first-inline-col">
+                    <input type="checkbox" [(ngModel)]="model.paceMaker" name="paceMaker">I have a pace-maker
+                </div>
+
+                <div class="second-inline-col">
+                    <input type="checkbox" [(ngModel)]="model.hearingAids" name="hearingAids">I wear hearing aids
+                </div>
+
+                <div class="third-inline-col">
+                    <input type="checkbox" [(ngModel)]="model.aromatherapy" name="aromatherapy">I am sensitive to aromatherapy
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <p>Please Read Carefully:</p>
+                <span>
+                    I understand that the Eden Energy Medicine sessions I receive are provided for the basic purpose of harmonizing
+                    my body's energies. It can bring about physical improvements by impacting the electromagnetic and your more subtle
+                    energy fields.
+                    <br><br>
+                    But I further understand that Eden Energy Medicine should not be construed as a substitute for
+                    needed medical attention and that practitioners do not diagnose, treat or prescribe for medical conditions.
+                    <br><br>
+                    I agree to provide 24 hours notice if I want to cancel an appointment.
+                    <br><br>
+                    I agree to bring proof of my double vaccination in the form of the vaccine passport.
+                    By signing below I agree and accept the above conditions.
+                </span>
+
+                <div class="sig-date-prompt">Signature:</div>
+                <div class="sig-date-line">&nbsp;</div>
+                <div class="sig-date-prompt">Date:</div>
+                <div class="sig-date-line">&nbsp;</div>
+            </div>
+
+            <div class="print-forms-grid">
+                <button class="print-forms-button"(click)="printProfile()">PRINT</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>

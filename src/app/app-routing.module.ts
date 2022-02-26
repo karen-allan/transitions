@@ -28,8 +28,8 @@ import { BookContainerComponent } from './book-menu/book-container/book-containe
 import { BookConsultContainerComponent } from './book-menu/book-consultation/book-consult-container/book-consult-container.component';
 import { BookSessionContainerComponent } from './book-menu/book-session/book-session-container/book-session-container.component';
 import { FaqContainerComponent } from './faq-menu/faq-container/faq-container.component';
-import { FormsContainerComponent } from './book-menu/forms/forms-container/forms-container.component';
-import { PrintSessionProfileComponent } from './book-menu/forms/print-session-profile/print-session-profile.component';
+import { FormsContainerComponent } from './global-forms/forms-container/forms-container.component';
+import { PrintSessionComponent } from './global-print/print-session/print-session.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -72,7 +72,7 @@ const routes: Routes = [
 
     {path: 'faq', component: FaqContainerComponent},
 
-    {path: 'printSessionProfile', component: PrintSessionProfileComponent},
+    {path: 'printSessionProfile', component: PrintSessionComponent},
 ];
 
 const routerOptions: ExtraOptions = {

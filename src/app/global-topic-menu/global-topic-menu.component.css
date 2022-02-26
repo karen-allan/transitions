@@ -42,6 +42,8 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
+
+
 }
 
 /* TABLETS LANDSCAPE ***************************************************************************************************/
@@ -51,15 +53,7 @@ and (max-width: 1365px)
 and (orientation: landscape) {
 
     /* 1024 is 80% of 1280 */
-  
 
-    .doula-support-topic-menu {
-        grid-template-columns: repeat(6, 170px);
-    }
-
-    .selectedTopicItem, .unselectedTopicItem a {
-        font-size:0.7em;;
-    }
 
 }
 
@@ -69,16 +63,6 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    /* 820 is 80% of 1024 */
-
-
-    .doula-support-topic-menu {
-        grid-template-columns: repeat(6, 136px);
-    }
-
-    .selectedTopicItem, .unselectedTopicItem a {
-        font-size:0.6em;;
-    }
 
 }
 
@@ -89,22 +73,7 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-    /* 956 is 70% of 1366 */
-    .help-sub-menu {
-        grid-template-columns:repeat(12, 79px);
-    }
 
-    .discover-sub-menu {
-        grid-template-columns: repeat(4, 239px);
-    }
-
-    .doula-support-topic-menu {
-        grid-template-columns: repeat(6, 159px);
-    }
-
-    .selectedTopicItem, .unselectedTopicItem a {
-        font-size:0.7em;;
-    }
 
 }
 
@@ -113,45 +82,21 @@ and (orientation: landscape) {
 and (min-width: 1440px)
 and (max-width: 1919px) {
 
-    /* 1008 is 70% of 1440 */
-   /* .help-sub-menu {
-        grid-template-columns:repeat(12, 84px);
-    }
 
-    .discover-sub-menu {
-        grid-template-columns: repeat(4, 252px);
-    }*/
-
-    .doula-support-topic-menu {
-        grid-template-columns: repeat(6, 168px);
-    }
-
-    .selectedTopicItem, .unselectedTopicItem a {
-        font-size:0.7em;;
-    }
 }
 
-/* DESKTOPS *****************************************************************************************************/
+/* ALL THAT SHOW BIG MENU TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP ********************************/
 @media only screen
-and (min-width: 1920px){
+and (min-width: 1280px)
+and (orientation: landscape) {
 
     /* 1152 is 60% of 1920 */
-
-    /*.selectedAnchorSubItem a, .selectedNoAnchorSubItem, .unselectedTopicItem a {*/
-    .selectedTopicItem, .unselectedTopicItem a {
-        font-size:0.72em;;
-    }
-}
-
-
-/* GLOBAL *************************************************************************************************************/
-@media only screen {
 
     .topic-menu {
         display:grid;
         width: 100%;
         margin:auto;
-        height:var(--header-desktop-topic-menu-height);
+        height:40px;
         background-color: var(--color-light-purple);
         justify-content: center;
     }
@@ -159,31 +104,42 @@ and (min-width: 1920px){
     .topic-menu-items {
         display:inline-grid;
         margin:auto;
-        height:var(--header-desktop-topic-menu-height);
+        height:40px;
         grid-template-columns: repeat(7, 164px);
         justify-content: center;
         text-align: center;
     }
 
+    /*.selectedAnchorSubItem a, .selectedNoAnchorSubItem, .unselectedTopicItem a {*/
+    .selectedTopicItem, .unselectedTopicItem a {
+        font-size:var(--menu-topic-laptop-desktop-font-size);
+    }
+}
+
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+
+
     .selectedTopicItem, .unselectedTopicItem a {
         display:grid;
-        font-family: var(--family-global);
-        height:var(--header-desktop-topic-menu-height);
+        font-family: var(--family-menu);
+        height:40px;
         align-content: center;
-        font-weight:800;
+        font-weight:400;
         color:whitesmoke;
-        /*border:1px solid var(--color-light-blue);*/
     }
 
     .selectedTopicItem {
         background-color: var(--color-light-blue);
         cursor:default;
-        text-decoration: none;
+        /*text-decoration: none;*/
         border:thin solid var(--color-off-white);
     }
 
     .unselectedTopicItem a {
-        text-decoration: underline;
+        text-decoration: none;
         cursor: pointer;
     }
 

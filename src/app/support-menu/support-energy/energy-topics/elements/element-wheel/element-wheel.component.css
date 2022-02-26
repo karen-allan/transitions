@@ -7,13 +7,13 @@ and (orientation: portrait) {
 
     /* GRID at 240 at 90% is 216 width and 169 height */
     .e-grid {
-        grid-template-columns:var(--ele-whl-banana-port-cols);
-        grid-template-rows: var(--ele-whl-banana-port-rows);
+        grid-template-columns:repeat(3, 72px);
+        grid-template-rows:repeat(3, 56px);
     }
 
     .element-name-button {
-        width: var(--ele-whl-banana-port-button);
-        height: var(--ele-whl-banana-port-button);
+        width: 45px;
+        height: 45px;
     }
 
     .element-name-button img {
@@ -22,6 +22,13 @@ and (orientation: portrait) {
         margin:auto;
     }
 
+    .element-title {
+        font-size:var(--monument-mobile-port-font-size);
+    }
+
+    .element-verb, .element-overall  {
+        font-size:var(--monument-mobile-port-font-size);
+    }
 }
 
 /* BANANA LANDSCAPE ****************************************************************************************************/
@@ -32,19 +39,27 @@ and (orientation: landscape) {
 
     /* GRID at 568 px at 90% is 511 width and 399 height */
     .e-grid {
-        grid-template-columns:var(--ele-whl-banana-land-cols);
-        grid-template-rows: var(--ele-whl-banana-land-rows);
+        grid-template-columns:repeat(3, 170px);
+        grid-template-rows: repeat(3, 133px);
     }
 
     .element-name-button {
-        width: var(--ele-whl-banana-land-button);
-        height: var(--ele-whl-banana-land-button);
+        width: 106px;
+        height: 106px;
     }
 
     .element-name-button img {
         max-width: 60%;
         height:auto;
         margin:auto;
+    }
+
+    .element-title {
+        font-size:var(--monument-mobile-land-font-size);
+    }
+
+    .element-verb, .element-overall  {
+        font-size:var(--monument-mobile-land-font-size);
     }
 
 }
@@ -57,19 +72,27 @@ and (orientation: portrait) {
 
     /* GRID at 360 px at 90% is 324 width and 253 height */
     .e-grid {
-        grid-template-columns:var(--ele-whl-mobile-port-cols);
-        grid-template-rows: var(--ele-whl-mobile-port-rows);
+        grid-template-columns:repeat(3, 108px);
+        grid-template-rows:repeat(3, 84px);
     }
 
     .element-name-button {
-        width: var(--ele-whl-mobile-port-button);
-        height: var(--ele-whl-mobile-port-button);
+        width: 67px;
+        height: 67px;
     }
 
     .element-name-button img {
         max-width: 50%;
         height:auto;
         margin:auto;
+    }
+
+    .element-title {
+        font-size:var(--monument-mobile-port-font-size);
+    }
+
+    .element-verb, .element-overall  {
+        font-size:var(--monument-mobile-port-font-size);
     }
 
 }
@@ -82,19 +105,27 @@ and (orientation: landscape) {
 
     /* GRID at 896px at 90% is width 806 and 630 height */
     .e-grid {
-        grid-template-columns:var(--ele-whl-mobile-land-cols);
-        grid-template-rows: var(--ele-whl-mobile-land-rows);
+        grid-template-columns:repeat(3, 268px);
+        grid-template-rows: repeat(3, 210px);
     }
 
     .element-name-button {
-        width: var(--ele-whl-mobile-land-button);
-        height: var(--ele-whl-mobile-land-button);
+        width: 168px;
+        height:168px;
     }
 
     .element-name-button img {
         max-width: 60%;
         height:auto;
         margin:auto;
+    }
+
+    .element-title {
+        font-size:var(--monument-mobile-land-font-size);
+    }
+
+    .element-verb, .element-overall  {
+        font-size:var(--monument-mobile-land-font-size);
     }
 
 }
@@ -107,19 +138,27 @@ and (orientation: portrait) {
 
     /* GRID at 600px at 90% is 540 and 422 height */
     .e-grid {
-        grid-template-columns:var(--ele-whl-tablet-port-cols);
-        grid-template-rows: var(--ele-whl-tablet-port-rows);
+        grid-template-columns:repeat(3, 180px);
+        grid-template-rows: repeat(3, 140px);
     }
 
     .element-name-button {
-        width: var(--ele-whl-tablet-port-button);
-        height: var(--ele-whl-tablet-port-button);
+        width: 112px;
+        height: 112px;
     }
 
     .element-name-button img {
         max-width: 60%;
         height:auto;
         margin:auto;
+    }
+
+    .element-title {
+        font-size:var(--monument-tablet-ipad-port-font-size);
+    }
+
+    .element-verb, .element-overall  {
+        font-size:var(--monument-tablet-ipad-port-font-size);
     }
 
 }
@@ -132,19 +171,27 @@ and (orientation: landscape) {
 
     /* GRID at 1280 at 90% is 1152 width by 900 height can use large */
     .e-grid {
-        grid-template-columns:var(--ele-whl-large-cols);
-        grid-template-rows: var(--ele-whl-large-rows);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 180px 180px 150px 180px;
     }
 
     .element-name-button {
-        width: var(--ele-whl-large-button);
-        height: var(--ele-whl-large-button);
+        width: 170px;
+        height: 170px;
     }
 
     .element-name-button img {
         max-width: 100%;
         height:auto;
         margin:auto;
+    }
+
+    .element-title {
+        font-size:var(--monument-tablet-ipad-land-font-size);
+    }
+
+    .element-verb, .element-overall  {
+        font-size:var(--monument-tablet-ipad-land-font-size);
     }
 
 }
@@ -157,13 +204,13 @@ and (orientation: portrait) {
 
     /* GRID at 1024px at 90% is 921 width and 720 height */
     .e-grid {
-        grid-template-columns:var(--ele-whl-ipad-port-cols);
-        grid-template-rows: var(--ele-whl-ipad-port-rows);
+        grid-template-columns:repeat(3, 307px);
+        grid-template-rows: repeat(3, 240px);
     }
 
     .element-name-button {
-        width: var(--ele-whl-ipad-port-button);
-        height: var(--ele-whl-ipad-port-button);
+        width:192px;
+        height:192px;
     }
 
     .element-name-button img {
@@ -172,6 +219,13 @@ and (orientation: portrait) {
         margin:auto;
     }
 
+    .element-title {
+        font-size:var(--monument-tablet-ipad-port-font-size);
+    }
+
+    .element-verb, .element-overall  {
+        font-size:var(--monument-tablet-ipad-port-font-size);
+    }
 }
 
 
@@ -183,13 +237,13 @@ and (orientation: landscape) {
 
     /* GRID at large size 1152px */
     .e-grid {
-        grid-template-columns:var(--ele-whl-large-cols);
-        grid-template-rows: var(--ele-whl-large-rows);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 180px 180px 150px 180px;
     }
 
     .element-name-button {
-        width: var(--ele-whl-large-button);
-        height: var(--ele-whl-large-button);
+        width: 170px;
+        height: 170px;
     }
 
     .element-name-button img {
@@ -198,6 +252,13 @@ and (orientation: landscape) {
         margin:auto;
     }
 
+    .element-title {
+        font-size:var(--monument-tablet-ipad-land-font-size);
+    }
+
+    .element-verb, .element-overall  {
+        font-size:var(--monument-tablet-ipad-land-font-size);
+    }
 }
 
 /* LAPTOPS ***********************************************************************************************************/
@@ -207,13 +268,13 @@ and (max-width: 1919px) {
 
     /* TOP ELEMENT GRID at 1152px */
     .e-grid {
-        grid-template-columns:var(--ele-whl-large-cols);
-        grid-template-rows: var(--ele-whl-large-rows);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 180px 180px 150px 180px;
     }
 
     .element-name-button {
-        width: var(--ele-whl-large-button);
-        height: var(--ele-whl-large-button);
+        width: 170px;
+        height: 170px;
         border:thin solid #333;
     }
 
@@ -223,6 +284,13 @@ and (max-width: 1919px) {
         margin:auto;
     }
 
+    .element-title {
+        font-size:var(--monument-laptop-desktop-font-size);
+    }
+
+    .element-verb, .element-overall  {
+        font-size:var(--monument-laptop-desktop-font-size);
+    }
 }
 
 /* DESKTOPS ****************************************************************************************************/
@@ -231,13 +299,13 @@ and (min-width: 1920px) {
 
     /* TOP - ELEMENT GRID at 1152px 90% of 1280 max content container */
     .e-grid {
-        grid-template-columns:var(--ele-whl-large-cols);
-        grid-template-rows: var(--ele-whl-large-rows);
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 180px 180px 150px 180px;
     }
 
     .element-name-button {
-        width: var(--ele-whl-large-button);
-        height: var(--ele-whl-large-button);
+        width: 170px;
+        height: 170px;
         margin:auto;
     }
 
@@ -260,6 +328,14 @@ and (min-width: 1920px) {
     .element-name-button img {
         max-width: 100%;
         height:auto;
+    }
+
+    .element-title {
+        font-size:var(--monument-laptop-desktop-font-size);
+    }
+
+    .element-verb, .element-overall  {
+        font-size:var(--monument-med-laptop-desktop-font-size);
     }
 
 }
@@ -412,7 +488,7 @@ and (min-width: 1920px) {
     .element-title {
         display:block;
         float:left;
-        font-size:4em;
+        /*font-size:4em;*/
         text-align:center;
         font-family: "Monument-Valley";
         width: 100%;
@@ -436,7 +512,7 @@ and (min-width: 1920px) {
     .element-verb, .element-overall  {
         display:grid;
         font-weight: bold;
-        font-size:2em;
+        /*font-size:2em;*/
         align-content: center;
     }
 

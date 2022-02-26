@@ -12,7 +12,7 @@ and (orientation: portrait) {
 
     .exercise-name {
         grid-row:1;
-        font-size:var(--h1-banana-mobile-land-font-size);
+        font-size:var(--h1-whitney-mobile-land-font-size);
     }
 
     .exercise-video-block {
@@ -21,8 +21,8 @@ and (orientation: portrait) {
 
     /* 240 x.9 =  216 */
     .exercise-video {
-        width: var(--der-video-banana-port-width);
-        height: var(--der-video-banana-port-height);
+        width: 216px;
+        height: 216px;
     }
 
     .exercise-copy-block {
@@ -32,7 +32,7 @@ and (orientation: portrait) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--copy-banana-mobile-land-font-size);
+        font-size:var(--open-sans-mobile-land-font-size);
     }
 
     .exercise-copy {
@@ -57,7 +57,7 @@ and (orientation: landscape) {
 
     .exercise-name {
         grid-row:1;
-        font-size:var(--h1-banana-mobile-land-font-size);
+        font-size:var(--h1-whitney-mobile-land-font-size);
     }
 
     .exercise-video-block {
@@ -66,8 +66,8 @@ and (orientation: landscape) {
 
     /* 568 x.9 =  511 */
     .exercise-video {
-        width: var(--der-video-banana-land-width);
-        height: var(--der-video-banana-land-height);
+        width: 511px;
+        height: 255px;
     }
 
     .exercise-copy-block {
@@ -77,7 +77,7 @@ and (orientation: landscape) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--copy-banana-mobile-land-font-size);
+        font-size:var(--global-big-mobile-land-font-size);
     }
 
     .exercise-copy {
@@ -102,7 +102,7 @@ and (orientation: portrait) {
 
     .exercise-name {
         grid-row:1;
-        font-size:var(--h1-banana-mobile-land-font-size);
+        font-size:var(--h1-whitney-mobile-land-font-size);
     }
 
     .exercise-video-block {
@@ -111,8 +111,8 @@ and (orientation: portrait) {
 
     /* 360 x.9 =  324 */
     .exercise-video {
-        width: var(--der-video-mobile-port-width);
-        height: var(--der-video-mobile-port-height);
+        width: 324px;
+        height: 324px;
     }
 
     .exercise-copy-block {
@@ -122,7 +122,7 @@ and (orientation: portrait) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--copy-banana-mobile-land-font-size);
+        font-size:var(--global-big-mobile-land-font-size);
     }
 
     .exercise-copy {
@@ -147,7 +147,7 @@ and (orientation: landscape) {
 
     .exercise-name {
         grid-row:1;
-        font-size:var(--h1-banana-mobile-land-font-size);
+        font-size:var(--h1-whitney-mobile-land-font-size);
     }
 
     .exercise-video-block {
@@ -156,8 +156,8 @@ and (orientation: landscape) {
 
     /* 896 x.9 =  806 */
     .exercise-video {
-        width: var(--der-video-mobile-land-width);
-        height: var(--der-video-mobile-land-height);
+        width: 806px;
+        height: 402px;
     }
 
     .exercise-copy-block {
@@ -167,7 +167,7 @@ and (orientation: landscape) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--copy-banana-mobile-land-font-size);
+        font-size:var(--global-big-mobile-land-font-size);
     }
 
     .exercise-copy {
@@ -193,7 +193,7 @@ and (orientation: portrait) {
 
     .exercise-name {
         grid-row:1;
-        font-size:var(--h1-tablet-ipad-port-font-size);
+        font-size:var(--h1-whitney-tablet-ipad-port-font-size);
     }
 
     .exercise-video-block {
@@ -202,8 +202,8 @@ and (orientation: portrait) {
 
     /* 600 x.9 = 540 */
     .exercise-video {
-        width: var(--der-video-tablet-port-width);
-        height: var(--der-video-tablet-port-height);
+        width: 540px;
+        height: 540px;
     }
 
     .exercise-copy-block {
@@ -213,7 +213,7 @@ and (orientation: portrait) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--copy-tablet-ipad-port-font-size);
+        font-size:var(--global-big-tablet-ipad-port-font-size);
     }
 
     .exercise-copy {
@@ -238,7 +238,7 @@ and (orientation: landscape) {
     }
 
     .exercise-name {
-        font-size:var(--h1-tablet-ipad-land-font-size);
+        font-size:var(--h1-whitney-tablet-ipad-land-font-size);
     }
 
     .exercise-video-block {
@@ -246,8 +246,8 @@ and (orientation: landscape) {
     }
 
     .exercise-video {
-        width: var(--der-video-over-max-width);
-        height: var(--der-video-over-max-height);
+        width: 576px;
+        height: 576px;
     }
 
     .exercise-copy-block {
@@ -256,7 +256,7 @@ and (orientation: landscape) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--copy-tablet-ipad-land-font-size);
+        font-size:var(--global-big-tablet-ipad-land-font-size);
     }
 
     .exercise-copy {
@@ -281,7 +281,7 @@ and (orientation: portrait) {
     }
 
     .exercise-name {
-        font-size:var(--h1-tablet-ipad-port-font-size);
+        font-size:var(--h1-whitney-tablet-ipad-port-font-size);
     }
 
     .exercise-video-block {
@@ -290,8 +290,8 @@ and (orientation: portrait) {
 
     /* 1024 x 90% = 921 / 2 = 460 */
     .exercise-video {
-        width: var(--der-video-ipad-port-width);
-        height: var(--der-video-ipad-port-height);
+        width: 460px;
+        height: 460px;
     }
 
     .exercise-copy-block {
@@ -300,7 +300,7 @@ and (orientation: portrait) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--copy-tablet-ipad-port-font-size);
+        font-size:var(--global-big-tablet-ipad-port-font-size);
     }
 
     .exercise-copy {
@@ -325,7 +325,7 @@ and (orientation: landscape) {
     }
 
     .exercise-name {
-        font-size:var(--h1-tablet-ipad-land-font-size);
+        font-size:var(--h1-whitney-tablet-ipad-land-font-size);
     }
 
     .exercise-video-block {
@@ -333,8 +333,8 @@ and (orientation: landscape) {
     }
 
     .exercise-video {
-        width: var(--der-video-over-max-width);
-        height: var(--der-video-over-max-height);
+        width: 576px;
+        height: 576px;
     }
 
     .exercise-copy-block {
@@ -343,7 +343,7 @@ and (orientation: landscape) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--copy-tablet-ipad-land-font-size);
+        font-size:var(--global-big-tablet-ipad-land-font-size);
     }
 
     .exercise-copy {
@@ -367,7 +367,7 @@ and (max-width: 1919px) {
     }
 
     .exercise-name {
-        font-size:1.4em;
+        font-size:var(--h1-whitney-laptop-font-size);
     }
 
     .exercise-video-block {
@@ -375,8 +375,8 @@ and (max-width: 1919px) {
     }
 
     .exercise-video {
-        width: var(--der-video-over-max-width);
-        height: var(--der-video-over-max-height);
+        width: 576px;
+        height: 576px;
     }
 
     .exercise-copy-block {
@@ -385,7 +385,7 @@ and (max-width: 1919px) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--copy-laptop-desktop-font-size);
+        font-size:var(--global-big-laptop-desktop-font-size);
     }
 
     .exercise-copy {
@@ -408,7 +408,7 @@ and (min-width: 1920px) {
     }
 
     .exercise-name {
-        font-size:1.6em;
+        font-size:var(--h1-whitney-desktop-font-size);
     }
 
     .exercise-video-block {
@@ -416,8 +416,8 @@ and (min-width: 1920px) {
     }
 
     .exercise-video {
-        width: var(--der-video-over-max-width);
-        height: var(--der-video-over-max-height);
+        width: 576px;
+        height: 576px;
     }
 
     .exercise-copy-block {
@@ -426,7 +426,7 @@ and (min-width: 1920px) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:1.1em;
+        font-size: var(--global-big-laptop-desktop-font-size);
     }
 
     .exercise-copy {

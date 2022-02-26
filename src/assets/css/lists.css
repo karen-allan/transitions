@@ -8,11 +8,13 @@ and (orientation: portrait) {
         padding-left:.2em;
     }
 
-    .list-item  {
-        font-size:var(--list-banana-mobile-port-font-size);
+    .list-item, .list-item a  {
+        font-size:var(--list-open-sans-mobile-port-font-size);
     }
 
-
+    .list-big-item, .list-big-item a {
+        font-size:var(--small-whitney-mobile-port-font-size);
+    }
 }
 
 /* BANANA LANDSCAPE ****************************************************************************************************/
@@ -25,11 +27,13 @@ and (orientation: landscape) {
         padding-left:.4em;
     }
 
-    .list-item  {
-        font-size:var(--list-banana-mobile-land-font-size);
+    .list-item, .list-item a  {
+        font-size:var(--list-open-sans-mobile-land-font-size);
     }
 
-
+    .list-big-item, .list-big-item a {
+        font-size:var(--small-whitney-mobile-land-font-size);
+    }
 
 }
 
@@ -43,10 +47,13 @@ and (orientation: portrait) {
         padding-left:.2em;
     }
 
-    .list-item  {
-        font-size:var(--list-banana-mobile-port-font-size);
+    .list-item, .list-item a  {
+        font-size:var(--list-open-sans-mobile-port-font-size);
     }
 
+    .list-big-item, .list-big-item a {
+        font-size:var(--small-whitney-mobile-port-font-size);
+    }
 }
 
 /*  MOBILES LANDSCAPE **************************************************************************************************/
@@ -59,11 +66,13 @@ and (orientation: landscape) {
         padding-left:.5em;
     }
 
-    .list-item  {
-        font-size:var(--list-banana-mobile-land-font-size);
+    .list-item, .list-item a  {
+        font-size:var(--list-open-sans-mobile-land-font-size);
     }
 
-
+    .list-big-item, .list-big-item a {
+        font-size:var(--small-whitney-mobile-land-font-size);
+    }
 }
 
 /*  TABLETS PORTRAIT *******************************************************************************************/
@@ -76,11 +85,13 @@ and (orientation: portrait) {
         padding-left:.5em;
     }
 
-    .list-item  {
-        font-size:var(--list-tablet-ipad-port-font-size);
+    .list-item, .list-item a  {
+        font-size:var(--list-open-sans-tablet-ipad-port-font-size);
     }
 
-
+    .list-big-item, .list-big-item a {
+        font-size:var(--small-whitney-tablet-ipad-port-font-size);
+    }
 }
 
 /*  TABLETS LANDSCAPE *******************************************************************************************/
@@ -93,10 +104,13 @@ and (orientation: landscape) {
         padding-left:1.5em;
     }
 
-    .list-item {
-        font-size:var(--list-tablet-ipad-land-font-size);
+    .list-item, .list-item a  {
+        font-size:var(--list-open-sans-tablet-ipad-land-font-size);
     }
 
+    .list-big-item, .list-big-item a {
+        font-size:var(--small-whitney-tablet-ipad-land-font-size);
+    }
 }
 
 /* IPADS PORTRAIT ****************************************************************************************************/
@@ -109,8 +123,12 @@ and (orientation: portrait) {
         padding-left:1.3em;
     }
 
-    .list-item  {
-        font-size:var(--list-tablet-ipad-port-font-size);
+    .list-item, .list-item a  {
+        font-size:var(--list-open-sans-tablet-ipad-port-font-size);
+    }
+
+    .list-big-item, .list-big-item a {
+        font-size:var(--small-whitney-tablet-ipad-port-font-size);
     }
 
 }
@@ -125,8 +143,12 @@ and (orientation: landscape) {
         padding-left:1.7em;
     }
 
-    .list-item {
-        font-size:var(--list-tablet-ipad-land-font-size);
+    .list-item, .list-item a {
+        font-size:var(--list-open-sans-tablet-ipad-land-font-size);
+    }
+
+    .list-big-item, .list-big-item a {
+        font-size:var(--small-whitney-tablet-ipad-land-font-size);
     }
 
 }
@@ -140,8 +162,12 @@ and (max-width:1919px){
         padding-left:2em;
     }
 
-    .list-item {
-        font-size:var(--list-laptop-desktop-font-size);
+    .list-item, .list-item a {
+        font-size:var(--list-open-sans-laptop-desktop-font-size);
+    }
+
+    .list-big-item, .list-big-item a {
+        font-size:var(--small-whitney-laptop-font-size);
     }
 
 }
@@ -154,56 +180,63 @@ and (min-width: 1920px) {
         padding-left:2em;
     }
 
-    .list-item {
-        font-size:var(--list-laptop-desktop-font-size);
+    .list-item, .list-item a {
+        font-size:var(--list-open-sans-laptop-desktop-font-size);
     }
 
-    .list-big-item {
-        font-size:1.2em;
+    .list-big-item, .list-big-item a {
+        font-size:var(--small-whitney-desktop-font-size);
+    }
+
+    .list-med-item, .list-med-item a {
+        font-size:var(--tiny-whitney-desktop-font-size);
     }
 }
 
 /* GLOBAL *************************************************************************************************************/
 @media screen {
 
-    .list {
+
+
+    .wide-list {
         display: block;
         width:100%;
-        max-width:800px;
+        max-width:1152px;
         margin:1em auto;
     }
 
     .dark-list, .light-list, .clear-list {
         list-style: none inside none;
-        padding:.5em 0 .5em .5em;
+        /*padding:.5em 0 .5em .5em;*/
         border:thin solid gold;
     }
 
-    .dark-list, .dark-list a {
+    .dark-list {
         color: var(--copy-color-dark);
         background-color: white;
     }
 
-    .dark-list a, .light-list a, .clear-list a  {
-        font-weight:800;
-    }
-
-    .light-list, .light-list a  {
+    .light-list  {
         color: var(--copy-color-light);
     }
 
-    .list-item {
+    .list-item, .list-item a {
         font-family: var(--family-open-sans);
         text-align: left;
         line-height:var(--list-item-line-height);
         padding-bottom:.5em;
     }
 
-    .list-big-item {
+    .list-big-item, .list-big-item a, .list-med-item, .list-med-item a {
         font-family: Whitney-Book;
-        line-height:var(--copy-line-height);
         text-align: left;
         padding-bottom:.5em;
+        line-height:var(--list-wide-item-line-height);
+    }
+
+    .list-item a, .list-big-item a  {
+        text-decoration: underline;
+        cursor:pointer;
     }
 
      /* VARIOUS MULTI COLOUMN LIST ITEMS */
