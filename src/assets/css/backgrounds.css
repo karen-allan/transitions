@@ -5,17 +5,16 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-    .topic-left h1, .topic-left h2, .topic-left h3 {
-        font-size: var(--hostel-banana-port-font-size);
+    .topic-left h1, .topic-left h2 {
+        font-size: var(--hostel-heading-banana-port-font-size);
     }
 
     .content-quote p, .content-quote span {
-        font-size:var(--script-banana-mobile-port-font-size);
+        font-size:var(--script-banana-port-font-size);
     }
 
     .energy-tip p {
         font-size:var(--data-banana-port-font-p-size);
-
     }
 
     .content-videos {
@@ -29,12 +28,12 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-    .topic-left h1, .topic-left h2, .topic-left h3 {
-        font-size: var(--hostel-banana-land-font-size);
+    .topic-left h1, .topic-left h2 {
+        font-size: var(--hostel-heading-banana-land-font-size);
     }
 
     .content-quote p, .content-quote span {
-        font-size:var(--script-banana-mobile-land-font-size);
+        font-size:var(--script-banana-land-font-size);
     }
 
     .energy-tip p {
@@ -52,12 +51,12 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-    .topic-left h1, .topic-left h2, .topic-left h3 {
-        font-size: var(--hostel-mobile-port-font-size);
+    .topic-left h1, .topic-left h2 {
+        font-size: var(--hostel-heading-mobile-port-font-size);
     }
 
     .content-quote p, .content-quote span {
-        font-size:var(--script-banana-mobile-port-font-size);
+        font-size:var(--script-mobile-port-font-size);
     }
 
     .energy-tip p {
@@ -76,12 +75,12 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-    .topic-left h1, .topic-left h2, .topic-left h3 {
-        font-size: var(--hostel-mobile-land-font-size);
+    .topic-left h1, .topic-left h2 {
+        font-size: var(--hostel-heading-mobile-land-font-size);
     }
 
     .content-quote p, .content-quote span {
-        font-size:var(--script-banana-mobile-land-font-size);
+        font-size:var(--script-mobile-land-font-size);
     }
 
     .energy-tip p {
@@ -100,12 +99,12 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-    .topic-left h1, .topic-left h2, .topic-left h3 {
-        font-size: var(--hostel-tablet-port-font-size);
+    .topic-left h1, .topic-left h2 {
+        font-size: var(--hostel-heading-tablet-port-font-size);
     }
 
     .content-quote p, .content-quote span {
-        font-size:var(--script-tablet-ipad-port-font-size);
+        font-size:var(--script-tablet-port-font-size);
     }
 
     .energy-tip p {
@@ -123,12 +122,12 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
-    .topic-left h1, .topic-left h2, .topic-left h3 {
-        font-size: var(--hostel-tablet-land-font-size);
+    .topic-left h1, .topic-left h2 {
+        font-size: var(--hostel-heading-tablet-land-font-size);
     }
 
     .content-quote p, .content-quote span {
-        font-size:var(--script-tablet-ipad-land-font-size);
+        font-size:var(--script-tablet-land-font-size);
     }
 
     .energy-tip p {
@@ -147,12 +146,12 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    .topic-left h1, .topic-left h2, .topic-left h3 {
-        font-size: var(--hostel-ipad-port-font-size);
+    .topic-left h1, .topic-left h2 {
+        font-size: var(--hostel-heading-ipad-port-font-size);
     }
 
     .content-quote p, .content-quote span {
-        font-size:var(--script-tablet-ipad-port-font-size);
+        font-size:var(--script-ipad-port-font-size);
     }
 
     .energy-tip p {
@@ -171,12 +170,12 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-    .topic-left h1, .topic-left h2, .topic-left h3 {
-        font-size: var(--hostel-ipad-land-font-size);
+    .topic-left h1, .topic-left h2 {
+        font-size: var(--hostel-heading-ipad-land-font-size);
     }
 
     .content-quote p, .content-quote span {
-        font-size:var(--script-tablet-ipad-land-font-size);
+        font-size:var(--script-ipad-land-font-size);
     }
 
     .energy-tip p {
@@ -194,12 +193,8 @@ and (orientation: landscape) {
 and (min-width: 1440px)
 and (max-width: 1919px) {
 
-    .topic-block {
-        margin:1em 0;
-    }
-
-    .topic-left h1, .topic-left h2, .topic-left h3 {
-        font-size: var(--hostel-laptop-font-size);
+    .topic-left h1, .topic-left h2 {
+        font-size: var(--hostel-heading-laptop-font-size);
     }
 
     .content-quote p, .content-quote span {
@@ -220,8 +215,8 @@ and (max-width: 1919px) {
 @media only screen
 and (min-width: 1920px) {
 
-    .topic-left h1, .topic-left h2, .topic-left h3 {
-        font-size: var(--hostel-desktop-font-size);
+    .topic-left h1, .topic-left h2 {
+        font-size: var(--hostel-heading-desktop-font-size);
     }
 
     .content-quote p, .content-quote span {
@@ -297,7 +292,7 @@ and (min-width: 1920px) {
 
     .content-quote p  {
         font-weight: 400;
-        text-align:left;
+        text-align:justify;
         line-height:var(--quote-p-line-height);
     }
 
@@ -317,7 +312,7 @@ and (min-width: 1920px) {
     }
 
     .energy-tip p {
-        padding:2em;
+        padding:1em;
         line-height: var(--copy-line-height);
     }
 

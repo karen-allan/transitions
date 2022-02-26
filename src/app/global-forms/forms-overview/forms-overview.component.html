@@ -1,0 +1,46 @@
+<div class="content">
+    <div class="inner-content">
+        <div class="dark-heading">
+            <h1>CLIENT INTAKE FORMS</h1>
+        </div>
+    </div>
+
+    <div class="forms-menu-block">
+        <ul class="forms-menu">
+            <li class="menu-item">
+                <div *ngIf="showConsultationForm">
+                    <span>BOOK A DOULA CONSULTATION</span>
+                </div>
+
+                <div *ngIf="!showConsultationForm">
+                    <a (click)="toggleEditor('consult')">BOOK A DOULA CONSULTATION</a>
+                </div>
+            </li>
+
+            <li class="menu-item">
+                <div *ngIf="showAssessmentForm">
+                    <span>COVID-19 CLEARANCE</span>
+                </div>
+                <div *ngIf="!showAssessmentForm">
+                    <a (click)="toggleEditor('assessment')">COVID-19 CLEARANCE</a>
+                </div>
+            </li>
+
+            <li class="menu-item">
+                <div *ngIf="showSessionForm">
+                    <span>BOOK AN ENERGY SESSION</span>
+                </div>
+                <div *ngIf="!showSessionForm">
+                    <a (click)="toggleEditor('session')">BOOK AN ENERGY SESSION</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<app-covid-profile *ngIf="showAssessmentForm"></app-covid-profile>
+<app-session-profile *ngIf="showSessionForm"></app-session-profile>
+<app-consult-profile *ngIf="showConsultationForm"></app-consult-profile>
+
+<!--<app-print-session *ngIf="showSessionForm"></app-print-session>-->
+

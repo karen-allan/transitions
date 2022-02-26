@@ -84,14 +84,34 @@
   /* BELOW IS WITH FAMILY SCRIPT */
   --family-script:'gabriola';                /*  */
 
-  --script-banana-mobile-port-font-size:1.1em;
-  --script-banana-mobile-land-font-size:1.2em;
-  --script-tablet-ipad-port-font-size:1.25em;
-  --script-tablet-ipad-land-font-size:1.3em;
-  --script-laptop-desktop-font-size:1.4em;
+  --script-banana-port-font-size:0.9em;
+  --script-mobile-port-font-size:1.1em;
+  --script-tablet-port-font-size:1.25em;
+  --script-ipad-port-font-size:1.25em;
+
+  --script-banana-land-font-size:1.1em;
+  --script-mobile-land-font-size:1.2em;
+  --script-tablet-land-font-size:1.6em;
+  --script-ipad-land-font-size:1.7em;
+
+  --script-laptop-desktop-font-size:1.8em;
 
   /* BELOW IS WITH HOSTEL */
-  --hostel-banana-port-font-size:0.5em;
+  --hostel-heading-banana-port-font-size:0.5em;
+  --hostel-heading-mobile-port-font-size:0.7em;
+  --hostel-heading-tablet-port-font-size:1.3em;
+  --hostel-heading-ipad-port-font-size:1.5em;
+
+  --hostel-heading-banana-land-font-size:1.1em;
+  --hostel-heading-mobile-land-font-size:1.3em;
+  --hostel-heading-tablet-land-font-size:1.5em;
+  --hostel-heading-ipad-land-font-size:1.7em;
+
+  --hostel-heading-laptop-font-size:1.9em;
+  --hostel-heading-desktop-font-size:2.1em;
+
+
+  /*--hostel-banana-port-font-size:0.5em;
   --hostel-mobile-port-font-size:0.7em;
   --hostel-tablet-port-font-size:1.3em;
   --hostel-ipad-port-font-size:1.5em;
@@ -102,7 +122,7 @@
   --hostel-ipad-land-font-size:1.7em;
 
   --hostel-laptop-font-size:1.9em;
-  --hostel-desktop-font-size:2.1em;
+  --hostel-desktop-font-size:2.1em;*/
 
   /* BELOW IS WITH FAMILY DATA */
   --family-data:arial;

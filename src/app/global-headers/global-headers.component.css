@@ -6,34 +6,22 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait){
 
-  /* use min width 240 to get 122 height and cover  */
-  .top-heading-home {
-    height:122px;
-  }
+      /* use min width 240 to get 122 height and cover  */
+      .top-heading-home {
+        height:122px;
+      }
 
-  /* use min width 240 to get 56 height and cover  */
-  .top-heading-details {
-    height:56px;
-  }
+      /* use min width 240 to get 56 height and cover  */
+      .sub-heading-backgrounds {
+        height:56px;
+      }
 
-  /*.vertical-heading {
-    width:var(--vertical-banana-port-font-width);
-    font-size:var(--vertical-banana-port-font-size);
-    height:var(--banana-port-detail-image-height) ;
-  }*/
+      /* allow for 2 lines on banana both, mobile portrait and tablet portrait */
+      .top-heading-quotes p, .top-heading-quotes span {
+        font-size:var(--h1-whitney-mobile-port-font-size);
+      }
 
-  .top-heading-quotes {
-    width:90%;
-  }
 
-  /* allow for 2 lines on banana both, mobile portrait and tablet portrait */
-  .top-heading-quotes p, .top-heading-quotes span {
-    font-size:var(--h1-whitney-mobile-port-font-size);
-  }
-
-  .quote-end img {
-    height:10px;
-  }
 
 }
 
@@ -43,34 +31,22 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-  /* use min width 568 to get 289 height and cover  */
-  .top-heading-home {
-    height:289px;
-  }
+      /* use min width 568 to get 289 height and cover  */
+      .top-heading-home {
+        height:289px;
+      }
 
-  /* use min width 568 to get 133 height and cover  */
-  .top-heading-details {
-    height:133px;
-  }
+      /* use min width 568 to get 133 height and cover  */
+      .sub-heading-backgrounds {
+        height:133px;
+      }
 
-  /*.vertical-heading {
-    width:var(--vertical-banana-land-font-width);
-    font-size:var(--vertical-banana-land-font-size);
-    height:var(--banana-land-detail-image-height) ;
-  }*/
+      /* allow for 2 lines on banana both, mobile portrait and tablet portrait */
+      .top-heading-quotes p, .top-heading-quotes span {
+        font-size:var(--h1-whitney-mobile-land-font-size);
+      }
 
-  .top-heading-quotes {
-    width:90%;
-  }
 
-  /* allow for 2 lines on banana both, mobile portrait and tablet portrait */
-  .top-heading-quotes p, .top-heading-quotes span {
-    font-size:var(--h1-whitney-mobile-land-font-size);
-  }
-
-  .quote-end img {
-    height:20px;
-  }
 
 }
 
@@ -80,34 +56,22 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-  /* use min width 360 to get 183 height and cover  */
-  .top-heading-home {
-    height:183px;
-  }
+      /* use min width 360 to get 183 height and cover  */
+      .top-heading-home {
+        height:183px;
+      }
 
-  /* use min width 360 to get 84 height and cover  */
-  .top-heading-details {
-    height:84px;
-  }
+      /* use min width 360 to get 84 height and cover  */
+      .sub-heading-backgrounds {
+        height:84px;
+      }
 
-  /*.vertical-heading {
-    width:var(--vertical-mobile-port-font-width);
-    font-size:var(--vertical-mobile-port-font-size);
-    height:var(--mobile-port-detail-image-height) ;
-  }*/
+      /* allow for 2 lines on banana, mobile portrait and tablet portrait */
+      .top-heading-quotes p, .top-heading-quotes span {
+        font-size:var(--h1-whitney-mobile-port-font-size);
+      }
 
-  .top-heading-quotes {
-    width:90%;
-  }
 
-  /* allow for 2 lines on banana, mobile portrait and tablet portrait */
-  .top-heading-quotes p, .top-heading-quotes span {
-    font-size:var(--h1-whitney-mobile-port-font-size);
-  }
-
-  .quote-end img {
-    height:10px;
-  }
 
 }
 
@@ -117,33 +81,21 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-  /* use min size 896 to get 456 height and cover */
-  .top-heading-home {
-    height:456px;
-  }
+      /* use min size 896 to get 456 height and cover */
+      .top-heading-home {
+        height:456px;
+      }
 
-  /* use min width 896 to get 210 height and cover  */
-  .top-heading-details {
-    height:210px;
-  }
+      /* use min width 896 to get 210 height and cover  */
+      .sub-heading-backgrounds {
+        height:210px;
+      }
 
-  /*.vertical-heading {
-    width:var(--vertical-mobile-land-font-width);
-    font-size:var(--vertical-mobile-land-font-size);
-    height:var(--mobile-land-detail-image-height) ;
-  }*/
+      .top-heading-quotes p, .top-heading-quotes span {
+        font-size:var(--h1-whitney-mobile-land-font-size);
+      }
 
-  .top-heading-quotes {
-    width:90%;
-  }
 
-  .top-heading-quotes p, .top-heading-quotes span {
-    font-size:var(--h1-whitney-mobile-land-font-size);
-  }
-
-  .quote-end img {
-    height:20px;
-  }
 
 }
 
@@ -153,34 +105,22 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-  /* use min size 600 to get 306 height and cover */
-  .top-heading-home {
-    height:456px;
-  }
+      /* use min size 600 to get 306 height and cover */
+      .top-heading-home {
+        height:456px;
+      }
 
-  /* use min width 600 to get 141 height and cover  */
-  .top-heading-details {
-    height:141px;
-  }
+      /* use min width 600 to get 141 height and cover  */
+      .sub-heading-backgrounds {
+        height:141px;
+      }
 
-  /*.vertical-heading {
-    width:var(--vertical-tablet-port-font-width);
-    font-size:var(--vertical-tablet-port-font-size);
-    height:var(--tablet-port-detail-image-height) ;
-  }*/
+      /* allow for 2 lines on banana both, mobile portrait and tablet portrait */
+      .top-heading-quotes p, .top-heading-quotes span {
+        font-size:var(--h1-whitney-tablet-ipad-port-font-size);
+      }
 
-  .top-heading-quotes {
-    width:90%;
-  }
 
-  /* allow for 2 lines on banana both, mobile portrait and tablet portrait */
-  .top-heading-quotes p, .top-heading-quotes span {
-    font-size:var(--h1-whitney-tablet-ipad-port-font-size);
-  }
-
-  .quote-end img {
-    height:20px;
-  }
 
 }
 
@@ -190,33 +130,21 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
-  /* use min size 1280 to get 652 height and cover */
-  .top-heading-home {
-    height:652px;
-  }
+      /* use min size 1280 to get 652 height and cover */
+      .top-heading-home {
+        height:652px;
+      }
 
-  /* use min width 1280 to get 300 height and cover  */
-  .top-heading-details {
-    height:300px;
-  }
+      /* use min width 1280 to get 300 height and cover  */
+      .sub-heading-backgrounds {
+        height:300px;
+      }
 
- /* .vertical-heading {
-    width:var(--vertical-tablet-land-font-width);
-    font-size:var(--vertical-tablet-land-font-size);
-    height:var(--tablet-land-detail-image-height) ;
-  }*/
+      .top-heading-quotes p, .top-heading-quotes span {
+        font-size:var(--h1-whitney-tablet-ipad-land-font-size);
+      }
 
-  .top-heading-quotes {
-    width:100%;
-  }
 
-  .top-heading-quotes p, .top-heading-quotes span {
-    font-size:var(--h1-whitney-tablet-ipad-land-font-size);
-  }
-
-  .quote-end img {
-    height:40px;
-  }
 
 }
 
@@ -226,33 +154,21 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-  /* use min size 1024 to get 522 height and cover */
-  .top-heading-home {
-    height:522px;
-  }
+      /* use min size 1024 to get 522 height and cover */
+      .top-heading-home {
+        height:522px;
+      }
 
-  /* use min width 1024 to get 240 height and cover  */
-  .top-heading-details {
-    height:240px;
-  }
+      /* use min width 1024 to get 240 height and cover  */
+      .sub-heading-backgrounds {
+        height:240px;
+      }
 
-  /*.vertical-heading {
-    width:var(--vertical-ipad-port-font-width);
-    font-size:var(--vertical-ipad-port-font-size);
-    height:var(--ipad-port-detail-image-height) ;
-  }*/
+      .top-heading-quotes p,  .top-heading-quotes span  {
+        font-size:var(--h1-whitney-tablet-ipad-port-font-size);
+      }
 
-  .top-heading-quotes {
-    width:90%;
-  }
 
-  .top-heading-quotes p,  .top-heading-quotes span  {
-    font-size:var(--h1-whitney-tablet-ipad-port-font-size);
-  }
-
-  .quote-end img {
-    height:30px;
-  }
 }
 
 /* IPADS LANDSCAPE ***************************************************************************************************/
@@ -261,33 +177,24 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-  /* 1366 x 696 */
-  .top-heading-home {
-    height: 696px;
-  }
+      /* 1366 x 696 */
+      .top-heading-home {
+        height: 696px;
+      }
 
-  /* 1366 x 320 */
-  .top-heading-details {
-    height:320px;
-  }
+      /* 1366 x 320 */
+      .sub-heading-backgrounds {
+        height:320px;
+      }
 
-  /*.vertical-heading{
-    width:var(--vertical-ipad-land-font-width);
-    font-size:var(--vertical-ipad-land-font-size);
-    height:var(--ipad-land-detail-image-height) ;
-  }*/
+      .top-heading-quotes p,  .top-heading-quotes span  {
+        font-size:var(--h1-whitney-tablet-ipad-land-font-size);
+      }
 
-  .top-heading-quotes {
-    width:100%;
-  }
-
-  .top-heading-quotes p,  .top-heading-quotes span  {
-    font-size:var(--h1-whitney-tablet-ipad-land-font-size);
-  }
-
-  .quote-end img {
-    height:40px;
-  }
+    .icon img {
+        max-width:100%;
+        height:50px;
+    }
 
 }
 
@@ -296,33 +203,24 @@ and (orientation: landscape) {
 and (min-width: 1440px)
 and (max-width:1919px ){
 
-  /* 1440 x 734 */
-  .top-heading-home {
-    height:734px;
-  }
+      /* 1440 x 734 */
+      .top-heading-home {
+        height:734px;
+      }
 
-  /* 1440 x 338 */
-  .top-heading-details {
-    height:338px;
-  }
+      /* 1440 x 338 */
+      .sub-heading-backgrounds {
+        height:338px;
+      }
 
- /* .vertical-heading {
-    font-size:var(--vertical-laptop-font-size);
-    width:var(--vertical-laptop-font-width);
-    height:var(--laptop-detail-image-height) ;
-  }*/
+      .top-heading-quotes p,  .top-heading-quotes span  {
+        font-size:var(--h1-whitney-laptop-font-size);
+      }
 
-  .top-heading-quotes {
-    width:100%;
-  }
-
-  .top-heading-quotes p,  .top-heading-quotes span  {
-    font-size:var(--h1-whitney-laptop-font-size);
-  }
-
-  .quote-end img {
-    height:40px;
-  }
+    .icon img {
+        max-width:100%;
+        height:50px;
+    }
 
 }
 
@@ -330,201 +228,166 @@ and (max-width:1919px ){
 @media only screen
 and (min-width: 1920px) {
 
-  /* 1920 x 978 */
-  .top-heading-home {
-    height: 978px;
-  }
+      /* 1920 x 978 */
+      .top-heading-background {
+            height: 978px;
+      }
 
-  /* 1920 x 450   */
-  .top-heading-details {
-    height:450px;
-  }
+      /* 1920 x 450   */
+      .sub-heading-backgrounds {
+            height:450px;
+      }
 
-  /*.vertical-heading {
-    font-size:var(--vertical-desktop-font-size);
-    width:var(--vertical-desktop-font-width);
-    height:var(--desktop-detail-image-height) ;
-  }*/
+      .top-heading-quotes p,  .top-heading-quotes span  {
+            font-size:var(--h1-whitney-desktop-font-size);
+      }
 
-  .top-heading-quotes {
-    width:100%;
-  }
+    .icon img {
+        max-width:100%;
+        height:50px;
+    }
 
-  .top-heading-quotes p,  .top-heading-quotes span  {
-    font-size:var(--h1-whitney-desktop-font-size);
-  }
-
-  .quote-end img {
-    height:40px;
-  }
 }
 
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-  /* HOME PAGE HEADING */
-  .top-heading-home {
-    display: block;
-    width:100%;
-    float:left;
-    background: url("src/assets/images/backgrounds/backgroundHomeImage.jpg") no-repeat;
-    background-size: contain;
-  }
+      .top-heading-background, .sub-heading-backgrounds {
+          display: grid;
+          width: 100%;
+          justify-content: flex-start;
+      }
 
-  .top-heading-details {
-    display: grid;
-    width:100%;
-    justify-content: flex-start;
-  }
+      .top-heading-quotes {
+          display: block;
+          max-width: 1152px;
+          width:100%;
+          margin: auto;
+          font-family: var(--family-script);
+          color: var(--color-dark-blue);
+      }
 
- /* .vertical-heading {
-    display: grid;
-    background-color: var(--color-darkest-purple);
-    color: var(--color-off-white);
-    font-family: var(--family-global);
-    align-content: center;
-    justify-content: center;
-    line-height: var(--vertical-heading-line-height);
-    text-align: left;
-    text-transform: uppercase;
-  }*/
+      .top-heading-quotes p, .top-heading-quotes span  {
+          display: grid;
+          width: 100%;
+      }
 
-  .top-heading-quotes {
-    display: block;
-    max-width:1152px;
-    margin:auto;
-    font-family: var(--family-script);
-    color:var(--color-dark-blue);
-    /*border:thin solid green;*/
-  }
+      .top-heading-quotes p {
+          align-content: center;
+          justify-content: center;
+          font-weight: 400;
+          padding-top: 1em;
+      }
 
+      .top-heading-quotes span {
+          align-content: flex-start;
+          justify-content: flex-end;
+      }
 
-  .top-heading-quotes p {
-    display:grid;
-    width:100%;
-    align-content: center;
-    justify-content: center;
-    font-weight: 400;
-    line-height:100%;
-    padding-top:1em;
-  }
+      .icon {
+          display: grid;
+          justify-content: center;
+      }
 
-  .top-heading-quotes span {
-    display:grid;
-    width:100%;
-    align-content: center;
-    justify-content: flex-end;
-    line-height:90%;
-  }
+      .home {
+          background: url("src/assets/images/backgrounds/backgroundHomeImage.jpg") no-repeat;
+          background-size: contain;
+      }
 
-  .quote-end {
-    display:grid;
-    width:100%;
-    justify-content: center;
-  }
+      .about {
+          background: url("src/assets/images/backgrounds/backgroundAbout.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .quote-end img {
-    max-width:100%;
-  }
+      .about-energy-med {
+          background: url("src/assets/images/backgrounds/backgroundAboutEnergyMedicine.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .about {
-    background: url("src/assets/images/backgrounds/backgroundAbout.jpg") no-repeat;
-    background-size: cover;
-  }
+      .about-doula-care {
+          background: url("src/assets/images/backgrounds/backgroundAboutDoulaCare.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .about-energy-med {
-    background: url("src/assets/images/backgrounds/backgroundAboutEnergyMedicine.jpg") no-repeat;
-    background-size: cover;
-  }
+      .support-all {
+          background: url("src/assets/images/backgrounds/backgroundSupportAll.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .about-doula-care {
-    background: url("src/assets/images/backgrounds/backgroundAboutDoulaCare.jpg") no-repeat;
-    background-size: cover;
-  }
+      .support-energy-work {
+          background: url("src/assets/images/backgrounds/backgroundSupportEnergyWork.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .support-all {
-    background: url("src/assets/images/backgrounds/backgroundSupportAll.jpg") no-repeat;
-    background-size: cover;
-  }
+      .support-doula-work {
+          background: url("src/assets/images/backgrounds/backgroundSupportDoulaWork.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .support-energy-work {
-    background: url("src/assets/images/backgrounds/backgroundSupportEnergyWork.jpg") no-repeat;
-    background-size: cover;
-  }
+      .eol-questions {
+          background: url("src/assets/images/backgrounds/backgroundEOLQuestions.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .support-doula-work {
-    background: url("src/assets/images/backgrounds/backgroundSupportDoulaWork.jpg") no-repeat;
-    background-size: cover;
-  }
+      .eol-reps {
+          background: url("src/assets/images/backgrounds/backgroundEOLReps.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .eol-questions {
-    background: url("src/assets/images/backgrounds/backgroundEOLQuestions.jpg") no-repeat;
-    background-size: cover;
-  }
+      .eol-advocate {
+          background: url("src/assets/images/backgrounds/backgroundEOLAdvocate.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .eol-reps {
-    background: url("src/assets/images/backgrounds/backgroundEOLReps.jpg") no-repeat;
-    background-size: cover;
-  }
+      .eol-patient-care {
+          background: url("src/assets/images/backgrounds/backgroundEOLPatientCare.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .eol-advocate {
-    background: url("src/assets/images/backgrounds/backgroundEOLAdvocate.jpg") no-repeat;
-    background-size: cover;
-  }
+      .eol-caregiver-care {
+          background: url("src/assets/images/backgrounds/backgroundEOLCaregiverCare.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .eol-patient-care {
-    background: url("src/assets/images/backgrounds/backgroundEOLPatientCare.jpg") no-repeat;
-    background-size: cover;
-  }
+      .eol-legacy {
+          background: url("src/assets/images/backgrounds/backgroundEOLLegacy.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .eol-caregiver-care {
-    background: url("src/assets/images/backgrounds/backgroundEOLCaregiverCare.jpg") no-repeat;
-    background-size: cover;
-  }
+      .energy-help-anxiety {
+          background: url("src/assets/images/backgrounds/backgroundHelpAnxiety.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .eol-legacy {
-    background: url("src/assets/images/backgrounds/backgroundEOLLegacy.jpg") no-repeat;
-    background-size: cover;
-  }
+      .energy-help-burnout {
+          background: url("src/assets/images/backgrounds/backgroundHelpBurnout.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .energy-help-anxiety {
-    background: url("src/assets/images/backgrounds/backgroundHelpAnxiety.jpg") no-repeat;
-    background-size: cover;
-  }
+      .energy-help-inflammation {
+          background: url("src/assets/images/backgrounds/backgroundHelpFertility.jpg") no-repeat;
+          background-size: cover;
+      }
 
-  .energy-help-burnout {
-    background: url("src/assets/images/backgrounds/backgroundHelpBurnout.jpg") no-repeat;
-    background-size: cover;
-  }
+      .energy-help-pain {
+          background: url("src/assets/images/backgrounds/backgroundHelpPain.jpg") no-repeat;
+          background-size: cover;
+      }
 
-   .energy-help-inflammation {
-     background: url("src/assets/images/backgrounds/backgroundHelpFertility.jpg") no-repeat;
-     background-size: cover;
-   }
+      .energy-help-exercises {
+          background: url("src/assets/images/backgrounds/backgroundHelpProtect.jpg") no-repeat;
+          background-size: cover;
+      }
 
-    .energy-help-pain {
-      background: url("src/assets/images/backgrounds/backgroundHelpPain.jpg") no-repeat;
-      background-size: cover;
-    }
+      .energy-discover-element {
+          background: url("src/assets/images/backgrounds/backgroundDiscoverElements.jpg") no-repeat;
+          background-size: cover;
+      }
 
-     .energy-help-exercises {
-       background: url("src/assets/images/backgrounds/backgroundHelpProtect.jpg") no-repeat;
-       background-size: cover;
-     }
-
-    .energy-discover-element {
-      background: url("src/assets/images/backgrounds/backgroundDiscoverElements.jpg") no-repeat;
-      background-size: cover;
-    }
-
-    .energy-know-meridians {
-      background: url("src/assets/images/backgrounds/backgroundKnowMeridians.jpg") no-repeat;
-      background-size: cover;
-    }
-
-
-
-
+      .energy-know-meridians {
+          background: url("src/assets/images/backgrounds/backgroundKnowMeridians.jpg") no-repeat;
+          background-size: cover;
+      }
 
 }
 

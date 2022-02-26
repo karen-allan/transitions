@@ -1,38 +1,40 @@
 <div id="headers">
     <!--    HOME   -->
     <ng-container *ngIf="detailHeaderName === 'header-home'">
-        <div class="top-heading-home"></div>
+        <div class="top-heading-background home"></div>
 
         <div class="top-heading-quotes">
             <p>
                 &#8220;The special theory of relativity states that mass and energy are
                 just different manifestations of the same thing.&#8220;
             </p>
-
             <span>Albert Einstein</span>
 
-            <div class="quote-end">
+            <div class="icon">
                 <img src="assets/images/backgrounds/quoteImage.jpg" alt="quote" title="quote">
             </div>
+
         </div>
     </ng-container>
 
     <!--    ABOUT   -->
     <!--ABOUT ME -->
     <ng-container *ngIf="detailHeaderName === 'header-about'">
-        <div class="top-heading-details about"></div>
+        <div class="sub-heading-backgrounds about"></div>
 
         <div class="top-heading-quotes">
             <p>
                 &#8220;Don’t listen to the person who has the answers; listen to the person who has the questions.&#8220;
             </p>
             <span>Albert Einstein</span>
+
+
         </div>
     </ng-container>
 
     <!--ABOUT ENERGY MEDICINE -->
     <ng-container *ngIf="detailHeaderName === 'header-about-energy-medicine'">
-        <div class="top-heading-details about-energy-med"></div>
+        <div class="sub-heading-backgrounds about-energy-med"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -46,7 +48,7 @@
 
     <!--ABOUT END OF LIFE DOULA CARE -->
     <ng-container *ngIf="detailHeaderName === 'header-about-eol-doula-care'">
-        <div class="top-heading-details about-doula-care"></div>
+        <div class="sub-heading-backgrounds about-doula-care"></div>
 
         <div class="top-heading-quotes">
             <div class="top-heading-quotes">
@@ -62,7 +64,7 @@
     <!--SUPPORT -->
     <!-- SUPPORT FOR ALL -->
     <ng-container *ngIf="detailHeaderName === 'header-support'">
-        <div class="top-heading-details support-all"></div>
+        <div class="sub-heading-backgrounds support-all"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -75,7 +77,7 @@
 
     <!-- SUPPORT FOR ENERGY TREATMENTS -->
     <ng-container *ngIf="detailHeaderName === 'header-support-energy-work'">
-        <div class="top-heading-details support-energy-work"></div>
+        <div class="sub-heading-backgrounds support-energy-work"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -88,7 +90,7 @@
 
     <!-- SUPPORT FOR DOULA HELP -->
     <ng-container *ngIf="detailHeaderName === 'header-support-doula-help'">
-        <div class="top-heading-details support-doula-work"></div>
+        <div class="sub-heading-backgrounds support-doula-work"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -101,7 +103,7 @@
 
     <!--DOULA QUESTIONS -->
     <ng-container *ngIf="detailHeaderName === 'header-topic-eol-questions'">
-        <div class="top-heading-details eol-questions"></div>
+        <div class="sub-heading-backgrounds eol-questions"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -114,7 +116,7 @@
 
     <!--DOULA REPS -->
     <ng-container *ngIf="detailHeaderName === 'header-topic-eol-reps'">
-        <div class="top-heading-details eol-reps"></div>
+        <div class="sub-heading-backgrounds eol-reps"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -127,7 +129,7 @@
 
     <!--DOULA ADVOCATE FOR YOURSELF-->
     <ng-container *ngIf="detailHeaderName === 'header-topic-eol-advocate'">
-        <div class="top-heading-details eol-advocate"></div>
+        <div class="sub-heading-backgrounds eol-advocate"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -140,7 +142,7 @@
 
     <!--DOULA PATIENT CARE -->
     <ng-container *ngIf="detailHeaderName === 'header-topic-eol-patient-care'">
-        <div class="top-heading-details eol-patient-care"></div>
+        <div class="sub-heading-backgrounds eol-patient-care"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -153,7 +155,7 @@
 
     <!--DOULA CAREGIVER CARE -->
     <ng-container *ngIf="detailHeaderName === 'header-topic-eol-caregiver-care'">
-        <div class="top-heading-details eol-caregiver-care"></div>
+        <div class="sub-heading-backgrounds eol-caregiver-care"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -166,7 +168,7 @@
 
     <!--DOULA LEAVING A LEGACY -->
     <ng-container *ngIf="detailHeaderName === 'header-topic-eol-legacy'">
-        <div class="top-heading-details eol-legacy"></div>
+        <div class="sub-heading-backgrounds eol-legacy"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -179,7 +181,7 @@
 
     <!--DOULA CEREMONY -->
     <ng-container *ngIf="detailHeaderName === 'header-topic-eol-ceremony'">
-        <div class="top-heading-details eol-legacy"></div>
+        <div class="sub-heading-backgrounds eol-legacy"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -192,7 +194,7 @@
 
     <!--ENERGY HELP ALL -->
     <ng-container *ngIf="detailHeaderName === 'header-topic-energy-help-all'">
-        <div class="top-heading-details energy-help-anxiety"></div>
+        <div class="sub-heading-backgrounds energy-help-anxiety"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -205,7 +207,7 @@
 
     <!--ENERGY HELP ANXIETY -->
     <ng-container *ngIf="detailHeaderName === 'header-topic-energy-help-anxiety'">
-        <div class="top-heading-details energy-help-anxiety"></div>
+        <div class="sub-heading-backgrounds energy-help-anxiety"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -218,7 +220,7 @@
 
     <!--ENERGY HELP BURNOUT -->
     <ng-container *ngIf="detailHeaderName === 'header-topic-energy-help-burnout'">
-        <div class="top-heading-details energy-help-burnout"></div>
+        <div class="sub-heading-backgrounds energy-help-burnout"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -231,7 +233,7 @@
 
     <!--ENERGY HELP INFLAMMATION -->
     <ng-container *ngIf="detailHeaderName === 'header-topic-energy-help-inflammation'">
-        <div class="top-heading-details energy-help-inflammation"></div>
+        <div class="sub-heading-backgrounds energy-help-inflammation"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -244,7 +246,7 @@
 
     <!--ENERGY HELP PAIN -->
     <ng-container *ngIf="detailHeaderName === 'header-topic-energy-help-pain'">
-        <div class="top-heading-details energy-help-pain"></div>
+        <div class="sub-heading-backgrounds energy-help-pain"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -257,7 +259,7 @@
 
     <!--ENERGY HELP EXERCISES -->
     <ng-container *ngIf="detailHeaderName === 'header-topic-energy-help-exercises'">
-        <div class="top-heading-details energy-help-exercises"></div>
+        <div class="sub-heading-backgrounds energy-help-exercises"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -270,7 +272,7 @@
 
     <!--ENERGY HELP KNOW ELEMENT -->
     <ng-container *ngIf="detailHeaderName === 'discover-element'">
-        <div class="top-heading-details energy-discover-element"></div>
+        <div class="sub-heading-backgrounds energy-discover-element"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -283,7 +285,7 @@
 
     <!--ENERGY HELP KNOW MERIDIANS -->
     <ng-container *ngIf="detailHeaderName === 'know-meridians'">
-        <div class="top-heading-details energy-know-meridians"></div>
+        <div class="sub-heading-backgrounds energy-know-meridians"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -297,7 +299,7 @@
     <!--    BOOK   -->
     <!--GENERAL BOOKING INFO -->
     <ng-container *ngIf="detailHeaderName === 'header-book'">
-        <div class="top-heading-details about"></div>
+        <div class="sub-heading-backgrounds about"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -309,7 +311,7 @@
 
     <!--DOULA BOOKING INFO -->
     <ng-container *ngIf="detailHeaderName === 'header-consult'">
-        <div class="top-heading-details about"></div>
+        <div class="sub-heading-backgrounds about"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -321,7 +323,7 @@
 
     <!--ENERGY BOOKING INFO -->
     <ng-container *ngIf="detailHeaderName === 'header-session'">
-        <div class="top-heading-details about"></div>
+        <div class="sub-heading-backgrounds about"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -333,7 +335,7 @@
 
     <!--ENERGY BOOKING INFO -->
     <ng-container *ngIf="detailHeaderName === 'header-forms'">
-        <div class="top-heading-details about"></div>
+        <div class="sub-heading-backgrounds about"></div>
 
         <div class="top-heading-quotes">
             <p>
@@ -345,7 +347,7 @@
 
     <!--    FAQs   -->
     <ng-container *ngIf="detailHeaderName === 'header-faq'">
-        <div class="top-heading-details about"></div>
+        <div class="sub-heading-backgrounds about"></div>
 
         <div class="top-heading-quotes">
             <p>
