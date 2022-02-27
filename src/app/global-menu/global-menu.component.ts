@@ -15,12 +15,21 @@ export class GlobalMenuComponent implements OnInit {
 
   menuItems = MENU_ITEMS;
 
-  constructor() {
+  mobileMenuDisplay = 'displayNone';
 
+  constructor() {
   }
 
   ngOnInit(): void {
+  }
 
+  toggleMenu() {
+    if (this.mobileMenuDisplay == 'displayNone') {
+      this.mobileMenuDisplay = 'displayBlock';
+    }
+    else {
+      this.mobileMenuDisplay = 'displayNone';
+    }
   }
 
 }

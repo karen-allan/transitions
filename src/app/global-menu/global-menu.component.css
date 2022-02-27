@@ -33,8 +33,7 @@ and (max-width: 1279px) {
   }
 
   .header-mobile {
-
-    display: inline-grid;
+    display: block;
     width: 100%;
     background-color: white;
   }
@@ -239,7 +238,8 @@ and (max-width: 599px)
 and (orientation: portrait) {
 
   .header-mobile {
-    grid-template-columns: 85% 15%;
+    /*grid-template-columns: 85% 15%;*/
+    grid-template-columns: 75% 25%;
   }
 
   .slogan, .mobile-menu {
@@ -414,6 +414,39 @@ and (orientation: landscape) {
         background-color: var(--color-light-blue);
         border:thin solid var(--color-off-white);
       }
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav-top-row {
+  display: grid;
+  grid-template-columns: 95% 5%;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.hamburger-icon {
+  display: grid;
+  grid-column: 2;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
+  width: 100%
 }
 
 @media print {
