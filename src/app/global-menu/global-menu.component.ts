@@ -1,10 +1,30 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {MENU_ITEMS} from "../ts-files/menuItems";
 
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
+
 @Component({
   selector: 'app-global-menu',
   templateUrl: './global-menu.component.html',
-  styleUrls: ['./global-menu.component.css']
+  styleUrls: ['./global-menu.component.css'],
+  animations: [
+    trigger('popOverState', [
+      state('show', style({
+        height: '*'
+      })),
+      state('hide',   style({
+        height: 0
+      })),
+      transition('show => hide', animate('600ms ease-out')),
+      transition('hide => show', animate('1000ms ease-in'))
+    ])
+  ]
 })
 
 export class GlobalMenuComponent implements OnInit {
@@ -15,23 +35,20 @@ export class GlobalMenuComponent implements OnInit {
 
   menuItems = MENU_ITEMS;
 
-  mobileMenuDisplay = 'displayNone';
+  show = false;
 
   constructor() {
   }
 
-  ngOnInit(): void {
+  get showMenu() {
+    return this.show ? 'show' : 'hide'
   }
 
-  toggleMenu() {
-    if (this.mobileMenuDisplay == 'displayNone') {
-      this.mobileMenuDisplay = 'displayBlock';
-      // alert(this.mobileMenuDisplay);
-    }
-    else {
-      this.mobileMenuDisplay = 'displayNone';
-      // alert(this.mobileMenuDisplay);
-    }
+  toggle() {
+    this.show = !this.show;
+  }
+
+  ngOnInit(): void {
   }
 
 }

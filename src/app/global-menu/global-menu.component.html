@@ -24,12 +24,12 @@
         <div class="topnav-top-row">
             <div class="slogan"></div>
             <div class="hamburger-icon">
-                <button class="fa fa-bars" (click)="toggleMenu()"></button>
+                <button class="fa fa-bars" (click)="toggle()"></button>
             </div>
         </div>
 
         <div class="topnav">
-            <div [ngClass]="mobileMenuDisplay">
+            <div [@popOverState]="showMenu">
                 <ng-container
                     *ngIf="!subMenuItemId || subMenuItemId == 0">
                     <div *ngFor="let menuItem of menuItems">
