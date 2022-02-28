@@ -26,9 +26,11 @@ export class GlobalMenuComponent implements OnInit {
   toggleMenu() {
     if (this.mobileMenuDisplay == 'displayNone') {
       this.mobileMenuDisplay = 'displayBlock';
+      // alert(this.mobileMenuDisplay);
     }
     else {
       this.mobileMenuDisplay = 'displayNone';
+      // alert(this.mobileMenuDisplay);
     }
   }
 

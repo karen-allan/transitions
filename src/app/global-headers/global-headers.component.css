@@ -16,10 +16,13 @@ and (orientation: portrait){
         height:56px;
       }
 
-      /* allow for 2 lines on banana both, mobile portrait and tablet portrait */
-      .top-heading-quotes p, .top-heading-quotes span {
-        font-size:var(--h1-whitney-mobile-port-font-size);
+      .top-heading-quotes p {
+        font-size:var(--script-p-banana-port-font-size);
       }
+
+    .top-heading-quotes span {
+        font-size:var(--script-span-banana-port-font-size);
+    }
 
 
 
@@ -41,12 +44,17 @@ and (orientation: landscape) {
         height:133px;
       }
 
-      /* allow for 2 lines on banana both, mobile portrait and tablet portrait */
-      .top-heading-quotes p, .top-heading-quotes span {
-        font-size:var(--h1-whitney-mobile-land-font-size);
+      .top-heading-quotes p {
+        font-size:var(--script-p-banana-land-font-size);
       }
 
+    .top-heading-quotes span {
+        font-size:var(--script-span-banana-land-font-size);
+    }
 
+    .icon img {
+        height:30px;
+    }
 
 }
 
@@ -66,12 +74,17 @@ and (orientation: portrait) {
         height:84px;
       }
 
-      /* allow for 2 lines on banana, mobile portrait and tablet portrait */
-      .top-heading-quotes p, .top-heading-quotes span {
-        font-size:var(--h1-whitney-mobile-port-font-size);
+      .top-heading-quotes p {
+        font-size:var(--script-p-mobile-port-font-size);
       }
 
+    .top-heading-quotes span {
+        font-size:var(--script-span-mobile-port-font-size);
+    }
 
+    .icon img {
+        height:20px;
+    }
 
 }
 
@@ -91,11 +104,17 @@ and (orientation: landscape) {
         height:210px;
       }
 
-      .top-heading-quotes p, .top-heading-quotes span {
-        font-size:var(--h1-whitney-mobile-land-font-size);
+      .top-heading-quotes p{
+        font-size:var(--script-p-mobile-land-font-size);
       }
 
+    .top-heading-quotes span {
+        font-size:var(--script-span-mobile-land-font-size);
+    }
 
+    .icon img {
+        height:30px;
+    }
 
 }
 
@@ -115,12 +134,17 @@ and (orientation: portrait) {
         height:141px;
       }
 
-      /* allow for 2 lines on banana both, mobile portrait and tablet portrait */
-      .top-heading-quotes p, .top-heading-quotes span {
-        font-size:var(--h1-whitney-tablet-ipad-port-font-size);
+      .top-heading-quotes p {
+        font-size:var(--script-p-tablet-port-font-size);
       }
 
+    .top-heading-quotes span {
+        font-size:var(--script-span-tablet-port-font-size);
+    }
 
+    .icon img {
+        height:30px;
+    }
 
 }
 
@@ -140,11 +164,17 @@ and (orientation: landscape) {
         height:300px;
       }
 
-      .top-heading-quotes p, .top-heading-quotes span {
-        font-size:var(--h1-whitney-tablet-ipad-land-font-size);
+      .top-heading-quotes p {
+        font-size:var(--script-p-tablet-land-font-size);
       }
 
+    .top-heading-quotes span {
+        font-size:var(--script-span-tablet-land-font-size);
+    }
 
+    .icon img {
+        height:30px;
+    }
 
 }
 
@@ -164,11 +194,17 @@ and (orientation: portrait) {
         height:240px;
       }
 
-      .top-heading-quotes p,  .top-heading-quotes span  {
-        font-size:var(--h1-whitney-tablet-ipad-port-font-size);
+      .top-heading-quotes p  {
+        font-size:var(--script-p-ipad-port-font-size);
       }
 
+    .top-heading-quotes span  {
+        font-size:var(--script-span-ipad-port-font-size);
+    }
 
+    .icon img {
+        height:40px;
+    }
 }
 
 /* IPADS LANDSCAPE ***************************************************************************************************/
@@ -187,12 +223,15 @@ and (orientation: landscape) {
         height:320px;
       }
 
-      .top-heading-quotes p,  .top-heading-quotes span  {
-        font-size:var(--h1-whitney-tablet-ipad-land-font-size);
+      .top-heading-quotes p  {
+        font-size:var(--script-p-ipad-land-font-size);
       }
 
+    .top-heading-quotes span  {
+        font-size:var(--script-span-ipad-land-font-size);
+    }
+
     .icon img {
-        max-width:100%;
         height:50px;
     }
 
@@ -213,12 +252,15 @@ and (max-width:1919px ){
         height:338px;
       }
 
-      .top-heading-quotes p,  .top-heading-quotes span  {
-        font-size:var(--h1-whitney-laptop-font-size);
+      .top-heading-quotes p  {
+        font-size:var(--script-p-laptop-desktop-font-size);
       }
 
+    .top-heading-quotes span  {
+        font-size:var(--script-span-laptop-desktop-font-size);
+    }
+
     .icon img {
-        max-width:100%;
         height:50px;
     }
 
@@ -238,12 +280,15 @@ and (min-width: 1920px) {
             height:450px;
       }
 
-      .top-heading-quotes p,  .top-heading-quotes span  {
-            font-size:var(--h1-whitney-desktop-font-size);
+      .top-heading-quotes p   {
+            font-size:var(--script-p-laptop-desktop-font-size);
       }
 
+    .top-heading-quotes span  {
+        font-size:var(--script-span-laptop-desktop-font-size);
+    }
+
     .icon img {
-        max-width:100%;
         height:50px;
     }
 
@@ -260,34 +305,35 @@ and (min-width: 1920px) {
 
       .top-heading-quotes {
           display: block;
-          max-width: 1152px;
-          width:100%;
-          margin: auto;
-          font-family: var(--family-script);
-          color: var(--color-dark-blue);
+          width: 80%;
+          margin:auto;
       }
 
       .top-heading-quotes p, .top-heading-quotes span  {
           display: grid;
           width: 100%;
+          font-weight: 400;
+          line-height:100%;
+          font-family: var(--family-script);
+          color: var(--color-dark-blue);
       }
 
       .top-heading-quotes p {
           align-content: center;
           justify-content: center;
-          font-weight: 400;
           padding-top: 1em;
       }
 
       .top-heading-quotes span {
           align-content: flex-start;
           justify-content: flex-end;
+          font-weight:800;
       }
 
       .icon {
-          display: grid;
-          justify-content: center;
-      }
+            background: url("src/assets/images/backgrounds/endQuote.gif") no-repeat center;
+            height:25px;
+        }
 
       .home {
           background: url("src/assets/images/backgrounds/backgroundHomeImage.jpg") no-repeat;

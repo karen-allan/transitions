@@ -5,7 +5,7 @@ and (max-width: 359px)
 and (orientation: portrait) {
 
     .item-col p {
-        font-size:.4em;
+        font-size: var(--monument-med-mobile-port-font-size);
     }
 }
 
@@ -16,7 +16,7 @@ and (max-width: 895px)
 and (orientation: landscape) {
 
     .item-col p {
-        font-size:.9em;
+        font-size: var(--monument-med-mobile-land-font-size);
     }
 
 }
@@ -28,7 +28,7 @@ and (max-width: 599px)
 and (orientation: portrait) {
 
     .item-col p {
-        font-size:.6em;
+        font-size: var(--monument-med-mobile-port-font-size);
     }
 }
 
@@ -39,7 +39,7 @@ and (max-width: 1279px)
 and (orientation: landscape) {
 
     .item-col p {
-        font-size:1em;
+        font-size: var(--monument-med-mobile-land-font-size);
     }
 
 }
@@ -51,7 +51,7 @@ and (max-width: 1023px)
 and (orientation: portrait) {
 
     .item-col p {
-        font-size:1em;
+        font-size: var(--monument-med-tablet-ipad-port-font-size);
     }
 }
 
@@ -61,6 +61,9 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
+    .item-col p {
+        font-size: var(--monument-med-tablet-ipad-land-font-size);
+    }
 
 }
 
@@ -70,6 +73,9 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
+    .item-col p {
+        font-size: var(--monument-med-tablet-ipad-port-font-size);
+    }
 }
 
 /* IPADS LANDSCAPE ***************************************************************************************************/
@@ -78,6 +84,9 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
+    .item-col p {
+        font-size: var(--monument-med-tablet-ipad-land-font-size);
+    }
 }
 
 /* LAPTOP ****************************************************************************************************/
@@ -85,12 +94,18 @@ and (orientation: landscape) {
 and (min-width: 1440px)
 and (max-width:1919px){
 
+    .item-col p {
+        font-size: var(--monument-med-laptop-desktop-font-size);
+    }
 }
 
 /* DESKTOPS ***********************************************************************************************************/
 @media only screen
 and (min-width: 1920px) {
 
+    .item-col p {
+        font-size: var(--monument-med-laptop-desktop-font-size);
+    }
 
 }
 
@@ -103,15 +118,16 @@ and (min-width: 1920px) {
         width:100%;
         margin:auto;
         max-width:1152px;
-        background-color: var(--color-light-gold);
+        background-color: var(--color-off-white);
     }
 
     /* VARIOUS GRID ITEMS */
     .grid-2-cols-1-row, .grid-2-cols-2-rows, .grid-2-cols-3-rows, .grid-2-cols-6-rows,
     .grid-3-cols-1-row, .grid-3-cols-2-rows, .grid-3-cols-4-rows, .grid-4-cols-3-rows, .grid-6-cols-2-rows {
         width:100%;
-        /*font-family: var(--family-script);*/
-        font-family:ReneB-Thin;
+        font-family: "Monument-Valley";
+        letter-spacing: 3px;
+        line-height:100%;
         display:inline-grid;
     }
 
@@ -174,12 +190,12 @@ and (min-width: 1920px) {
         display:grid;
         width:100%;
         text-align: center;
-        border:thin solid gold;
     }
 
     .item-col p {
-        font-size:1.1em;
-        color:var(--color-dark-purple);
+        /*font-size:1.1em;*/
+        color:var(--color-dark-blue);
+        text-transform: uppercase;
         font-weight:800;
     }
 

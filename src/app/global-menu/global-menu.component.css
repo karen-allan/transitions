@@ -41,9 +41,8 @@ and (max-width: 1279px) {
   .slogan {
     display:grid;
     grid-row:1;
-    grid-column:1/2;
-    background: url("src/assets/images/extras/headers/transitionsInEnergyHeader.jpg")  left no-repeat;
-    background-size:contain;
+    grid-column:1;
+    border-bottom:1px solid #d7e0e7;
     width:100%;
   }
 
@@ -51,9 +50,8 @@ and (max-width: 1279px) {
     display:grid;
     width:100%;
     position: relative;
-    grid-column:2/-1;
-    background-color: white;
-    align-content: center;border:thin solid red;
+    grid-column:2;
+    align-content: center;
   }
 
   /* top, height, width and right changes relative to the device size */
@@ -150,7 +148,7 @@ and (max-width: 1279px) {
     left: 0;
     width: 100%;
     height: 100%;
-    visiblity: hidden;
+    /*visiblity: hidden;*/
     overflow: hidden;
     cursor: pointer;
     z-index: 0;
@@ -161,7 +159,7 @@ and (max-width: 1279px) {
   /* This is the burst menu background  */
   .mobile-menu .burst-menu > div {
     background: var(--overlay-color);
-    border-radius: 0%;
+    border-radius: 0;
     /*was 50* now more square */
     display: flex;
     flex: none;
@@ -190,12 +188,18 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait){
 
-  .header-mobile {
+  /*.header-mobile {
     grid-template-columns: 85% 15%;
-  }
+  }*/
 
-  .slogan, .mobile-menu {
+  /*.slogan, .mobile-menu {
     height: 26px;
+  }*/
+
+  .slogan {
+    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
+    background-size: contain;
+    height:43px;
   }
 
   .mobile-menu .hamburger {
@@ -217,8 +221,10 @@ and (orientation: landscape) {
     grid-template-columns: 90% 10%;
   }
 
-  .slogan, .mobile-menu {
-    height: 61px;
+  .slogan {
+    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
+    background-size: contain;
+    height:110px;
   }
 
   .mobile-menu .hamburger {
@@ -242,8 +248,10 @@ and (orientation: portrait) {
     grid-template-columns: 75% 25%;
   }
 
-  .slogan, .mobile-menu {
-    height: 39px;
+  .slogan {
+    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
+    background-size: contain;
+    height:70px;
   }
 
   .mobile-menu .hamburger {
@@ -267,8 +275,10 @@ and (orientation: landscape) {
     grid-template-columns: 95% 5%;
   }
 
-  .slogan, .mobile-menu {
-    height: 96px;
+  .slogan {
+    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
+    background-size: contain;
+    height:110px;
   }
 
   .mobile-menu .hamburger {
@@ -290,8 +300,11 @@ and (orientation: portrait) {
     grid-template-columns: 93% 7%;
   }
 
-  .slogan, .mobile-menu {
-    height: 96px;
+  .slogan {
+    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
+    background-size: contain;
+    height:110px;
+
   }
 
   .mobile-menu .hamburger {
@@ -314,8 +327,11 @@ and (orientation: portrait) {
     grid-template-columns: 93% 7%;
   }
 
-  .slogan, .mobile-menu {
-    height: 110px;
+  .slogan {
+    background: url("src/assets/images/headers/transitionsInEnergyDesktopHeader.jpg")  left no-repeat;
+    background-size: contain;
+    height:110px;
+    border-bottom:1px solid #d7e0e7;
   }
 
   .mobile-menu .hamburger {
@@ -353,13 +369,14 @@ and (orientation: landscape) {
   .slogan {
     display:grid;
     grid-row:1;
-    grid-column: 1/-1;
+    grid-column: 1;
     border-left: 1px solid #d7e0e7;
     border-right: 1px solid #d7e0e7;
+    border-bottom:1px solid #d7e0e7;
     margin:auto;
-    width:1024px;
+    width:100%;
     height: 110px;
-    background: url("src/assets/images/extras/headers/transitionsInEnergyHeader.jpg")  center no-repeat;
+    background: url("src/assets/images/headers/transitionsInEnergyDesktopHeader.jpg")  center no-repeat;
     background-size:auto;
   }
 
@@ -423,8 +440,10 @@ and (orientation: landscape) {
 }
 
 .topnav-top-row {
-  display: grid;
-  grid-template-columns: 95% 5%;
+  display: inline-grid;
+  width:100%;
+  /*display: grid;*/
+  grid-template-columns: 90% 10%;
 }
 
 .topnav a {
