@@ -48,10 +48,16 @@
   /* WITH OPEN SANS */
   --family-open-sans: 'Open Sans';
 
+  --open-sans-banana-port-font-size:.6em;
   --open-sans-mobile-port-font-size:.7em;
-  --open-sans-mobile-land-font-size:.8em;
-  --open-sans-tablet-ipad-port-font-size:.9em;
-  --open-sans-tablet-ipad-land-font-size:1em;
+  --open-sans-tablet-port-font-size:.9em;
+  --open-sans-ipad-port-font-size:1em;
+
+  --open-sans-banana-land-font-size:.8em;
+  --open-sans-mobile-land-font-size:.9em;
+  --open-sans-tablet-land-font-size:1em;
+  --open-sans-ipad-land-font-size:1.1em;
+
   --open-sans-laptop-desktop-font-size:1.8em;
 
   --list-open-sans-mobile-port-font-size:.6em;
@@ -203,32 +209,64 @@
   --h3-whitney-mobile-land-font-size:.9em;
   --h3-whitney-tablet-land-font-size:1.0em;
   --h3-whitney-ipad-land-font-size:1.2em;
-
   --h3-whitney-laptop-font-size:1.3em;
   --h3-whitney-desktop-font-size:1.4em;
 
+  /* H4 */
+  --h4-whitney-banana-port-font-size:.3em;
+  --h4-whitney-mobile-port-font-size:.6em;
+  --h4-whitney-tablet-port-font-size:.9em;
+  --h4-whitney-ipad-port-font-size:1.2em;
+
+  --h4-whitney-banana-land-font-size:.7em;
+  --h4-whitney-mobile-land-font-size:.8em;
+  --h4-whitney-tablet-land-font-size:.9em;
+  --h4-whitney-ipad-land-font-size:1.0em;
+
+  --h4-whitney-laptop-font-size:1.2em;
+  --h4-whitney-desktop-font-size:0.9em;
+
+  /* TEXT */
+  --big-whitney-banana-port-font-size:0.7em;
   --big-whitney-mobile-port-font-size:0.8em;
+  --big-whitney-tablet-port-font-size:.9em;
+  --big-whitney-ipad-port-font-size:1em;
+
+  --big-whitney-banana-land-font-size:0.8em;
   --big-whitney-mobile-land-font-size:0.9em;
-  --big-whitney-tablet-ipad-port-font-size:1em;
-  --big-whitney-tablet-ipad-land-font-size:1.1em;
+  --big-whitney-tablet-land-font-size:1.0em;
+  --big-whitney-ipad-land-font-size:1.1em;
+
   --big-whitney-laptop-font-size:1.2em;
   --big-whitney-desktop-font-size:1.3em;
 
+  --med-whitney-banana-port-font-size:0.5em;
   --med-whitney-mobile-port-font-size:0.7em;
+  --med-whitney-tablet-port-font-size:0.8em;
+  --med-whitney-ipad-port-font-size:0.9em;
+
+  --med-whitney-banana-land-font-size:0.7em;
   --med-whitney-mobile-land-font-size:0.8em;
-  --med-whitney-tablet-ipad-port-font-size:0.9em;
-  --med-whitney-tablet-ipad-land-font-size:1em;
+  --med-whitney-tablet-land-font-size:.9em;
+  --med-whitney-ipad-land-font-size:1em;
+
   --med-whitney-laptop-font-size:1.1em;
   --med-whitney-desktop-font-size:1.2em;
 
+  --small-whitney-banana-port-font-size:0.5em;
   --small-whitney-mobile-port-font-size:0.6em;
-  --small-whitney-mobile-land-font-size:0.7em;
-  --small-whitney-tablet-ipad-port-font-size:0.8em;
-  --small-whitney-tablet-ipad-land-font-size:0.9em;
+  --small-whitney-tablet-port-font-size:0.7em;
+  --small-whitney-ipad-port-font-size:0.8em;
+
+  --small-whitney-banana-land-font-size:0.7em;
+  --small-whitney-mobile-land-font-size:0.8em;
+  --small-whitney-tablet-land-font-size:0.9em;
+  --small-whitney-ipad-land-font-size:1em;
+
   --small-whitney-laptop-font-size:1em;
   --small-whitney-desktop-font-size:1.1em;
 
-  --tiny-whitney-mobile-port-font-size:.4em;
+  --tiny-whitney-mobile-port-font-size:.6em;
   --tiny-whitney-mobile-land-font-size:.5em;
   --tiny-whitney-tablet-ipad-port-font-size:.6em;
   --tiny-whitney-tablet-ipad-land-font-size:.7em;
@@ -414,6 +452,14 @@
 
   .with-border {
     border: thin solid gold;
+  }
+
+  .top-border {
+    border-top: thin solid gold;
+  }
+
+  .bottom-border {
+    border-bottom: thin solid gold;
   }
 
   .border-radius-left-only {
@@ -1000,7 +1046,7 @@
     clear: both;
   }
 
-  
+
 
   /* FONTS */
 

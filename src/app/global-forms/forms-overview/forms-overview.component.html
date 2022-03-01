@@ -36,11 +36,64 @@
             </li>
         </ul>
     </div>
-</div>
 
-<app-covid-profile *ngIf="showAssessmentForm"></app-covid-profile>
-<app-session-profile *ngIf="showSessionForm"></app-session-profile>
-<app-consult-profile *ngIf="showConsultationForm"></app-consult-profile>
+    <app-covid-profile *ngIf="showAssessmentForm"></app-covid-profile>
+    <app-session-profile *ngIf="showSessionForm"></app-session-profile>
+    <app-consult-profile *ngIf="showConsultationForm"></app-consult-profile>
 
 <!--<app-print-session *ngIf="showSessionForm"></app-print-session>-->
+
+    <div class="disclaimer">
+        <p>Please Read Carefully:</p>
+        <span>
+            <div *ngIf="showConsultationForm">
+                I understand that the Doula consultations and care do not replace medical treatments but act as
+                a support to any medical treatments. I understand that End of Life Doulas can not advise on
+                medications or medical procedures and do not prescribe or distribute any medicines or herbal supplements.
+                <br><br>
+                I understand that Doulas can provide me with care planning and plans, can sit vigil with me if I request it
+                and can provide support and comfort to me and my family and friends if requested. I also understand that I can
+                receive information related to funeral plans, life celebrations and setting up legacy projects.
+                I understand that Doulas can act as liaisons between me and the medical community for clear and honest communications.
+                <br><br>
+                I agree to provide 24 hours notice if I want to cancel an appointment. As well, I agree to bring proof of
+                my Covid vaccination in the form of the vaccine passport. By signing below I agree and accept the above conditions.
+            </div>
+
+            <div *ngIf="showSessionForm">
+                I understand that the Eden Energy Medicine sessions I receive are provided for the basic purpose of harmonizing
+                my body's energies. It can bring about physical improvements by impacting the electromagnetic and your more subtle
+                energy fields.
+                <br><br>
+                But I further understand that Eden Energy Medicine should not be construed as a substitute for
+                needed medical attention and that practitioners do not diagnose, treat or prescribe for medical conditions.
+                <br><br>
+                I agree to provide 24 hours notice if I want to cancel an appointment. As well, I agree to bring proof of
+                my Covid vaccination in the form of the vaccine passport. By signing below I agree and accept the above conditions.
+            </div>
+
+            <div *ngIf="showAssessmentForm">
+                I understand that I must have proof of up-to-date Covid vaccinations in order to meet with you in person.
+                If I have not been vaccinated I can still see you via a remote call, for example a Zoom or phone meeting.
+                <br><br>
+                If I want to meet you in person then I agree to bring this form along with proof of my Covid vaccination
+                status in the form of the vaccine passport.
+                <br><br>
+                I agree to provide 24 hours notice if I want to cancel an appointment. As well, I agree to bring proof of
+                my Covid vaccination in the form of the vaccine passport. By signing below I agree and accept the above conditions.
+            </div>
+        </span>
+
+        <div class="sig-date-prompt">Signature:</div>
+        <div class="sig-date-line">&nbsp;</div>
+        <div class="sig-date-prompt">Date:</div>
+        <div class="sig-date-line">&nbsp;</div>
+    </div>
+
+    <div class="print-forms-grid">
+        <!--    <button class="print-forms-button"(click)="printProfile()">PRINT</button>-->
+        <button class="print-forms-button">PRINT</button>
+    </div>
+</div>
+
 

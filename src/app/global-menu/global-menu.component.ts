@@ -21,8 +21,8 @@ import {
       state('hide',   style({
         height: 0
       })),
-      transition('show => hide', animate('600ms ease-out')),
-      transition('hide => show', animate('1000ms ease-in'))
+      transition('show => hide', animate('400ms ease-out')),
+      transition('hide => show', animate('400ms ease-in'))
     ])
   ]
 })

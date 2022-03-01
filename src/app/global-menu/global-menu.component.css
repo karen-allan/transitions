@@ -180,6 +180,10 @@ and (max-width: 1279px) {
     margin-left:4em;
   }
 
+  .selectedSubItem, .unselectedSubItem a {
+    height: 40px;
+    justify-content: flex-start;
+  }
 }
 
 /* BANANA PORTRAIT  *****************************************************************************/
@@ -207,6 +211,7 @@ and (orientation: portrait){
   }
 
   .selectedSubItem, .unselectedSubItem a {
+    height:40px;
     font-size:var(--menu-topic-mobile-port-font-size);
   }
 }
@@ -390,11 +395,13 @@ and (orientation: landscape) {
     display: inline-grid;
     margin:auto;
     width:1024px;
-    height: 50px;
+
     grid-template-columns: repeat(5, 20%);
   }
 
   .selectedItem, .unselectedItem a {
+    height:50px;
+    justify-content: center;
     font-size:var(--menu-topic-laptop-desktop-font-size);
   }
 }
@@ -402,6 +409,31 @@ and (orientation: landscape) {
 
 /* GLOBAL *************************************************************************************************************/
 @media screen {
+
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+      }
+
+      .topnav-top-row {
+        display: inline-grid;
+        width:100%;
+        grid-template-columns: 90% 10%;
+      }
+
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+
+      .hamburger-icon {
+        display: grid;
+        grid-column: 2;
+      }
 
       /*cambria math to the left and berlin sans FB to the right text */
       .slogan {
@@ -414,10 +446,12 @@ and (orientation: landscape) {
         display:grid;
         font-family: var(--family-menu);
         color:whitesmoke;
-        justify-content: center;
-        height:50px;
+
+        height: 50px;
+        /**/
+
         align-content: center;
-        font-weight:400;
+        /*font-weight:400;*/
       }
 
       .unselectedItem a {
@@ -433,31 +467,7 @@ and (orientation: landscape) {
       }
 }
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-}
 
-.topnav-top-row {
-  display: inline-grid;
-  width:100%;
-  /*display: grid;*/
-  grid-template-columns: 90% 10%;
-}
-
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-.hamburger-icon {
-  display: grid;
-  grid-column: 2;
-}
 
 @media print {
   .header, .menu,  .smart-menu {

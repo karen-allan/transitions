@@ -26,8 +26,8 @@ export class CovidProfileComponent implements OnInit {
     this.submitted = true;
   }
 
-  printProfile() {
+ /* printProfile() {
     this._parent.copyModelToPrintComponent(this.model);
-  }
+  }*/
 
 }

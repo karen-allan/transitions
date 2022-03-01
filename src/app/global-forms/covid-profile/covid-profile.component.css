@@ -5,7 +5,9 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-
+    .question-item, .question-radio label.radio {
+        font-size: var(--list-open-sans-mobile-port-font-size);
+    }
 
 }
 
@@ -15,7 +17,9 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-
+    .question-item, .question-radio label.radio {
+        font-size: var(--list-open-sans-mobile-land-font-size);
+    }
 
 }
 /* MOBILES PORTRAIT ****************************************************************************************************/
@@ -24,17 +28,10 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-
-    /* CLIENT ASSESSMENT */
-
-
-
-
-    .saf-sign {
-        display:inline-grid;
-        grid-template-columns: 55% 45%;
-        grid-template-rows: repeat(2, 100%);
+    .question-item, .question-radio label.radio {
+        font-size: var(--list-open-sans-mobile-port-font-size);
     }
+
 }
 
 
@@ -45,14 +42,8 @@ and (min-width: 896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-    /* CLIENT ASSESSMENT */
-
-
-
-    .saf-sign {
-        display:inline-grid;
-        grid-template-columns: 55% 45%;
-        grid-template-rows: repeat(2, 100%);
+    .question-item, .question-radio label.radio {
+        font-size: var(--list-open-sans-mobile-land-font-size);
     }
 }
 
@@ -62,17 +53,8 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-    /* CLIENT ASSESSMENT */
-
-
-
-    .saf-sign  {
-        font-size: 0.9em;
-    }
-
-    .saf-sign {
-        grid-template-columns: 55% 45%;
-        grid-template-rows: repeat(2, 100%);
+    .question-item, .question-radio label.radio {
+        font-size: var(--list-open-sans-tablet-ipad-port-font-size);
     }
 }
 
@@ -82,19 +64,10 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
-    /* CLIENT ASSESSMENT */
-
-
-
-
-    .saf-sign  {
-        font-size: 1.0em;
+    .question-item, .question-radio label.radio {
+        font-size: var(--list-open-sans-tablet-ipad-land-font-size);
     }
 
-    .saf-sign {
-        grid-template-columns: 55% 45%;
-        grid-template-rows: repeat(2, 100%);
-    }
 }
 
 
@@ -105,20 +78,9 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    /* CLIENT ASSESSMENT */
-
-
-
-
-    .saf-sign  {
-        font-size: 0.9em;
+    .question-item, .question-radio label.radio {
+        font-size: var(--list-open-sans-tablet-ipad-port-font-size);
     }
-
-    .saf-sign {
-        grid-template-columns: 55% 45%;
-        grid-template-rows: repeat(2, 100%);
-    }
-
 }
 
 /* IPADS LANDSCAPE ***************************************************************************************************/
@@ -127,144 +89,68 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-    /* CLIENT ASSESSMENT */
-
-
-
-
-    .saf-sign  {
-        font-size: 1.0em;
+    .question-item, .question-radio label.radio {
+        font-size: var(--list-open-sans-tablet-ipad-land-font-size);
     }
-
-    .saf-sign {
-        grid-template-columns: 55% 45%;
-        grid-template-rows: repeat(2, 100%);
-    }
-}
-
-/* LAPTOPS *****************************************************************************************************/
-@media only screen
-and (min-width: 1440px)
-and (max-width: 1919px) {
-
-
-
-    /* SELF ASSESSMENT */
-
-
-
-    .saf-sign {
-        grid-template-columns: 14% 36% 5% 45%;
-        grid-template-rows: repeat(1, 100%);
-    }
-
-    .saf-sign-here-text, .saf-sign-here-line, .saf-dated-text, .saf-dated-line {
-        grid-row: 1 / -1;
-    }
-
-    .saf-sign-here-text {
-        grid-column: 1 / 2;
-        padding-left:1em;
-    }
-
-    .saf-sign-here-line {
-        grid-column: 2 / 3;
-        margin-top:.4em;
-        margin-right:1em;
-        /*background: url("images/book/line.jpg") right repeat-x;*/
-    }
-
-    .saf-dated-text {
-        grid-column: 3 / 4;
-    }
-
-    .saf-dated-line  {
-        grid-column: 4 / -1;
-        /*background: url("images/book/line.jpg") right repeat-x;*/
-        margin-top:.4em;
-        margin-right:1em;
-    }
-
 }
 
 
 
     /* DESKTOPS ****************************************************************************************************/
 @media only screen
-and (min-width: 1920px) {
+and (min-width: 1440px) {
 
-    /* SELF ASSESSMENT */
-
-
-
-    .saf-sign {
-        grid-template-columns: 14% 36% 5% 45%;
-        grid-template-rows: repeat(1, 100%);
+    .question-item, .question-radio label.radio {
+        font-size: var(--list-open-sans-laptop-desktop-font-size);
     }
 
-    .saf-sign-here-text, .saf-sign-here-line, .saf-dated-text, .saf-dated-line {
-        grid-row: 1 / -1;
-    }
-
-    .saf-sign-here-text {
-        grid-column: 1 / 2;
-        padding-left:1em;
-    }
-
-    .saf-sign-here-line {
-        grid-column: 2 / 3;
-        margin-top:.4em;
-        margin-right:1em;
-        background: url("src/assets/images/book/line.jpg") right repeat-x;
-    }
-
-    .saf-dated-text {
-        grid-column: 3 / 4;
-    }
-
-    .saf-dated-line  {
-        grid-column: 4 / -1;
-        background: url("src/assets/images/book/line.jpg") right repeat-x;
-        margin-top:.4em;
-        margin-right:1em;
-    }
 }
 
 
 /* GLOBAL ************************************************************************************************************* */
 @media only screen {
 
-
-
-
-    .saf-treatment-consent {
+    .form-assessment {
         display: block;
-        float: left;
-        width: 95%;
-        margin: auto;
-        background-color: white;
+        width: 90%;
+        max-width:1152px;
+        margin:0 auto;
+        color: var(--copy-color-dark);
+        font-family: var(--family-open-sans);
     }
 
-    .saf-treatment-consent p {
-        margin: 1em;
+    .forms-mobile {
+        display: none;
+    }
+
+    .forms-desktop {
+        display: none;
+    }
+
+
+
+    .question-list {
+        padding-left:2%;
+        width:98%;
+        list-style: none inside none;
+    }
+
+    .question-item {
+        width:100%;
+        line-height: 160%;
         text-align: left;
     }
 
-    .saf-sign {
-        display: inline-grid;
-        width: 100%;
-        padding-top: 1em;
-        padding-bottom: 1em;
-        line-height: 150%;
+    /* this is the radio button */
+    .question-radio input[type=radio] {
     }
 
-    .saf-item {
-        display: grid;
+    /* this is yes and no labels */
+    .question-radio label.radio {
+        display: inline!important;
+        margin-left: 2px;
     }
 
-    .saf-question span, .saf-question li, .saf-answer, .saf-treatment-consent p, .saf-sign {
-        color: var(--color-dark-blue);
-        font-family: var(--family-data);
-        text-align: left;
-    }
+
+
 }

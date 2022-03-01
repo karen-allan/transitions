@@ -12,7 +12,7 @@ export type EditorType = 'assessment' | 'session'  | 'consult';
 })
 export class FormsOverviewComponent  {
 
-  editor: EditorType = 'assessment';
+  editor: EditorType = 'session';
 
   @ViewChild(PrintSessionComponent) printProfile: PrintSessionComponent;
 

@@ -17,9 +17,16 @@ and (orientation: portrait) {
         font-size: var(--h3-whitney-banana-port-font-size);
     }
 
-    .dark-copy, .light-copy, .text-clear, .answers, .questions {
-        font-size: var(--open-sans-mobile-port-font-size);
+    .dark-heading h4, .clear-heading h4, .light-heading h4  {
+        padding: 0;
+        font-size: var(--h4-whitney-desktop-font-size);
     }
+
+    .dark-copy, .light-copy, .text-clear, .answers, .questions {
+        font-size: var(--open-sans-banana-port-font-size);
+    }
+
+
 
 }
 
@@ -41,9 +48,16 @@ and (orientation: landscape) {
         font-size: var(--h3-whitney-banana-land-font-size);
     }
 
+    .dark-heading h4, .clear-heading h4, .light-heading h4  {
+        padding:.5em 0 .5em 0;
+        font-size: var(--h4-whitney-desktop-font-size);
+    }
+
     .dark-copy, .light-copy, .text-clear, .answers, .questions {
         font-size: var(--open-sans-mobile-land-font-size);
     }
+
+
 }
 
 /* MOBILES PORTRAIT ****************************************************************************************************/
@@ -64,9 +78,16 @@ and (orientation: portrait) {
         font-size: var(--h3-whitney-mobile-port-font-size);
     }
 
+    .dark-heading h4, .clear-heading h4, .light-heading h4  {
+        padding:.5em 0 .5em 0;
+        font-size: var(--h4-whitney-desktop-font-size);
+    }
+
     .dark-copy, .light-copy, .text-clear, .answers, .questions {
         font-size: var(--open-sans-mobile-port-font-size);
     }
+
+
 
 }
 
@@ -88,9 +109,16 @@ and (orientation: landscape) {
         font-size: var(--h3-whitney-mobile-land-font-size);
     }
 
+    .dark-heading h4, .clear-heading h4, .light-heading h4  {
+        padding:.5em 0 .5em 0;
+        font-size: var(--h4-whitney-desktop-font-size);
+    }
+
     .dark-copy, .light-copy, .text-clear, .answers, .questions {
         font-size: var(--open-sans-mobile-land-font-size);
     }
+
+
 }
 
 /* TABLETS PORTRAIT ****************************************************************************************************/
@@ -111,9 +139,16 @@ and (orientation: portrait) {
         font-size: var(--h3-whitney-tablet-port-font-size);
     }
 
-    .dark-copy, .light-copy, .text-clear, .answers, .questions {
-        font-size: var(--open-sans-tablet-ipad-port-font-size);
+    .dark-heading h4, .clear-heading h4, .light-heading h4  {
+        padding:.5em 0 .5em 0;
+        font-size: var(--h4-whitney-desktop-font-size);
     }
+
+    .dark-copy, .light-copy, .text-clear, .answers, .questions {
+        font-size: var(--open-sans-ipad-port-font-size);
+    }
+
+
 }
 
 /* TABLETS LANDSCAPE ***************************************************************************************************/
@@ -134,9 +169,16 @@ and (orientation: landscape) {
         font-size: var(--h3-whitney-tablet-land-font-size);
     }
 
-    .dark-copy, .light-copy, .text-clear, .answers, .questions {
-        font-size: var(--open-sans-tablet-ipad-land-font-size);
+    .dark-heading h4, .clear-heading h4, .light-heading h4  {
+        padding:.5em 0 .5em 0;
+        font-size: var(--h4-whitney-desktop-font-size);
     }
+
+    .dark-copy, .light-copy, .text-clear, .answers, .questions {
+        font-size: var(--open-sans-tablet-land-font-size);
+    }
+
+
 }
 
 /* IPADS PORTRAIT ****************************************************************************************************/
@@ -157,9 +199,16 @@ and (orientation: portrait) {
         font-size: var(--h3-whitney-ipad-port-font-size);
     }
 
-    .dark-copy, .light-copy, .text-clear, .answers, .questions {
-        font-size: var(--open-sans-tablet-ipad-port-font-size);
+    .dark-heading h4, .clear-heading h4, .light-heading h4  {
+        padding:.5em 0 .5em 0;
+        font-size: var(--h4-whitney-desktop-font-size);
     }
+
+    .dark-copy, .light-copy, .text-clear, .answers, .questions {
+        font-size: var(--open-sans-ipad-port-font-size);
+    }
+
+
 
 }
 
@@ -181,9 +230,16 @@ and (orientation: landscape) {
         font-size: var(--h3-whitney-ipad-land-font-size);
     }
 
-    .dark-copy, .light-copy, .text-clear. .answers, .questions {
-        font-size: var(--open-sans-tablet-ipad-land-font-size);
+    .dark-heading h4, .clear-heading h4, .light-heading h4  {
+        padding:.5em 0 .5em 0;
+        font-size: var(--h4-whitney-desktop-font-size);
     }
+
+    .dark-copy, .light-copy, .text-clear. .answers, .questions {
+        font-size: var(--open-sans-tablet-land-font-size);
+    }
+
+
 
 }
 
@@ -192,20 +248,30 @@ and (orientation: landscape) {
 and (min-width: 1440px) {
 
     .dark-heading h1, .clear-heading h1, .light-heading h1 {
+        padding:1em 0 .5em 0;
         font-size: var(--h1-whitney-desktop-font-size);
     }
 
     .dark-heading h2, .clear-heading h2, .light-heading h2 {
+        padding:1em 0 .5em 0;
         font-size: var(--h2-whitney-desktop-font-size);
     }
 
     .dark-heading h3, .clear-heading h3, .light-heading h3  {
+        padding:1em 0 .5em 0;
         font-size: var(--h3-whitney-desktop-font-size);
+    }
+
+    .dark-heading h4, .clear-heading h4, .light-heading h4  {
+        padding:.5em 0 .5em 0;
+        font-size: var(--h4-whitney-desktop-font-size);
     }
 
     .dark-copy, .light-copy, .clear-copy. .answers, .questions {
         font-size: var(--open-sans-laptop-desktop-font-size);
     }
+
+
 
 }
 
@@ -216,15 +282,13 @@ and (min-width: 1440px) {
         text-align: center;
     }
 
-    .dark-heading h2, .clear-heading h2, .light-heading h2 {
+    .dark-heading h2, .clear-heading h2, .light-heading h2,
+    .dark-heading h3, .clear-heading h3, .light-heading h3,
+    .dark-heading h4, .clear-heading h4, .light-heading h4 {
         text-align: left;
     }
 
-    .dark-heading h3, .clear-heading h3, .light-heading h3  {
-        text-align: left;
-    }
-
-    .dark-heading h1, .dark-heading h2, .dark-heading h3, .dark-copy, .dark-copy a {
+    .dark-heading h1, .dark-heading h2, .dark-heading h3, .dark-heading h4, .dark-copy, .dark-copy a {
         color: var(--copy-color-dark);
         background-color: white;
     }
@@ -239,11 +303,11 @@ and (min-width: 1440px) {
 
     .dark-heading h1, .light-heading h1, .clear-heading h1,
     .dark-heading h2, .light-heading h2, .clear-heading h2,
-    .dark-heading h3, .light-heading h3, .clear-heading h3 {
+    .dark-heading h3, .light-heading h3, .clear-heading h3,
+    .dark-heading h4, .light-heading h4, .clear-heading h4 {
         font-family: Whitney-Book;
         letter-spacing: 3px;
         font-style:normal;
-        padding:1em 0 .5em 0;
         text-transform: uppercase;
     }
 

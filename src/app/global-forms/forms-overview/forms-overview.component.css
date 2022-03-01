@@ -1,0 +1,439 @@
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    /* TOP REPORT MENU ITEMS */
+    .menu-item span, .menu-item a {
+        font-size: var(--big-whitney-banana-port-font-size);
+    }
+
+
+
+    /* DISCLAIMER TEXT */
+    .disclaimer p {
+        font-size: var(--global-big-mobile-port-font-size);
+        padding: 1em 0;
+    }
+
+    .disclaimer span, .sig-date-prompt {
+        font-size: var(--global-med-mobile-port-font-size);
+    }
+
+    .sig-date-prompt {
+        padding: 1em 0 0 0;
+        margin: .5em 0;
+    }
+
+    .sig-date-line  {
+        margin:.4em 1em 0 0;
+    }
+
+    /* PRINT FORMS */
+    .print-forms-button {
+        padding: 1em 1.5em;
+        font-size: var(--global-small-mobile-port-font-size);
+    }
+
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    /* TOP REPORT MENU ITEMS */
+    .menu-item span, .menu-item a {
+        font-size: var(--big-whitney-banana-land-font-size);
+    }
+
+
+    .disclaimer p {
+        font-size: var(--global-big-mobile-land-font-size);
+        padding: 1em 0;
+    }
+
+    .disclaimer span, .sig-date-prompt {
+        font-size: var(--global-med-mobile-land-font-size);
+    }
+
+    .sig-date-prompt {
+        padding: 1em 0 0 0;
+        margin: .5em 0;
+    }
+
+    .sig-date-line  {
+        margin:.4em 1em 0 0;
+    }
+
+    /* PRINT FORMS */
+    .print-forms-button {
+        padding: 1em 1.5em;
+        font-size: var(--global-small-mobile-land-font-size);
+    }
+
+}
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    /* TOP REPORT MENU ITEMS */
+    .menu-item span, .menu-item a {
+        font-size: var(--small-whitney-mobile-port-font-size);
+    }
+
+    /* REPORTS DETAILS */
+
+    .disclaimer p {
+        font-size: var(--global-big-mobile-port-font-size);
+        padding: 1em 0;
+    }
+
+    .disclaimer span, .sig-date-prompt {
+        font-size: var(--global-med-mobile-port-font-size);
+    }
+
+    .sig-date-prompt {
+        padding: 1em 0 0 0;
+        margin: .5em 0;
+    }
+
+    .sig-date-line  {
+        margin:.4em 1em 0 0;
+    }
+
+    /* PRINT FORMS */
+    .print-forms-button {
+        padding: 1em 1.5em;
+        font-size: var(--global-small-mobile-port-font-size);
+    }
+}
+
+
+
+/* MOBILES LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    /* TOP REPORT MENU ITEMS */
+    .menu-item span, .menu-item a {
+        font-size: var(--small-whitney-mobile-land-font-size);
+    }
+
+
+
+    .disclaimer p {
+        font-size: var(--global-big-mobile-land-font-size);
+        padding: 1em 0;
+    }
+
+    .disclaimer span, .sig-date-prompt {
+        font-size: var(--global-med-mobile-land-font-size);
+    }
+
+    .sig-date-prompt {
+        padding: 1em 0 0 0;
+        margin: .5em 0;
+    }
+
+    .sig-date-line  {
+        margin:.4em 1em 0 0;
+    }
+
+    /* PRINT FORMS */
+    .print-forms-button {
+        padding: 1em 1.5em;
+        font-size: var(--global-small-mobile-land-font-size);
+    }
+}
+
+/* TABLETS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    /* TOP REPORT MENU ITEMS */
+    .menu-item span, .menu-item a {
+        font-size: var(--small-whitney-tablet-port-font-size);
+    }
+
+    /* TOP REPORT MENU ITEMS */
+    .menu-item span, .menu-item a {
+        font-size: var(--small-whitney-tablet-port-font-size);
+    }
+
+
+
+    .disclaimer p {
+        font-size: var(--global-big-tablet-ipad-port-font-size);
+        padding: 1em 0;
+    }
+
+    .disclaimer span, .sig-date-prompt {
+        font-size: var(--global-med-tablet-ipad-port-font-size);
+    }
+
+    .sig-date-prompt {
+        padding: 1em 0 0 0;
+        margin: .5em 0;
+    }
+
+    .sig-date-line  {
+        margin:.4em 1em 0 0;
+    }
+
+    /* PRINT FORMS */
+    .print-forms-button {
+        padding: 1em 1.5em;
+        font-size: var(--global-small-tablet-ipad-port-font-size);
+    }
+
+}
+
+/* TABLETS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    /* TOP REPORT MENU ITEMS */
+    .menu-item span, .menu-item a {
+        font-size: var(--small-whitney-tablet-land-font-size);
+    }
+
+    /* TOP REPORT MENU ITEMS */
+    .menu-item span, .menu-item a {
+        font-size: var(--small-whitney-tablet-land-font-size);
+    }
+
+
+    .disclaimer p {
+        font-size: var(--global-big-tablet-ipad-land-font-size);
+        padding: 1em 0;
+    }
+
+    .disclaimer span, .sig-date-prompt {
+        font-size: var(--global-med-tablet-ipad-land-font-size);
+    }
+
+    .sig-date-prompt {
+        padding: 1em 0 0 0;
+        margin: .5em 0;
+    }
+
+    .sig-date-line  {
+        margin:.4em 1em 0 0;
+    }
+
+    /* PRINT FORMS */
+    .print-forms-button {
+        padding: 1em 1.5em;
+        font-size: var(--global-small-tablet-ipad-land-font-size);
+    }
+
+}
+
+
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    /* TOP REPORT MENU ITEMS */
+    .menu-item span, .menu-item a {
+        font-size: var(--small-whitney-ipad-port-font-size);
+    }
+
+
+
+    .disclaimer p {
+        font-size: var(--global-big-tablet-ipad-port-font-size);
+        padding: 1em 0;
+    }
+
+    .disclaimer span, .sig-date-prompt {
+        font-size: var(--global-med-tablet-ipad-port-font-size);
+    }
+
+    .sig-date-prompt {
+        padding: 1em 0 0 0;
+        margin: .5em 0;
+    }
+
+    .sig-date-line  {
+        margin:.4em 1em 0 0;
+    }
+
+    /* PRINT FORMS */
+    .print-forms-button {
+        padding: 1em 1.5em;
+        font-size: var(--global-small-tablet-ipad-port-font-size);
+    }
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    /* TOP REPORT MENU ITEMS */
+    .menu-item span, .menu-item a {
+        font-size: var(--small-whitney-ipad-land-font-size);
+    }
+
+
+
+    .disclaimer p {
+        font-size: var(--global-big-tablet-ipad-land-font-size);
+        padding: 1em 0;
+    }
+
+    .disclaimer span, .sig-date-prompt {
+        font-size: var(--global-med-tablet-ipad-land-font-size);
+    }
+
+    .sig-date-prompt {
+        padding: 1em 0 0 0;
+        margin: .5em 0;
+    }
+
+    .sig-date-line  {
+        margin:.4em 1em 0 0;
+    }
+
+    /* PRINT FORMS */
+    .print-forms-button {
+        padding: 1em 1.5em;
+        font-size: var(--global-small-tablet-ipad-land-font-size);
+    }
+}
+
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    /* REPORTS MENU */
+    .menu-item span, .menu-item a {
+        font-size: var(--small-whitney-desktop-font-size);
+    }
+
+    .disclaimer p {
+        font-size: var(--global-big-laptop-desktop-font-size);
+        padding: 1em 0;
+    }
+
+    .disclaimer span, .sig-date-prompt {
+        font-size: var(--global-med-laptop-desktop-font-size);
+    }
+
+    .sig-date-prompt {
+        padding: 1em 0 0 0;
+        margin: .5em 0;
+    }
+
+    .sig-date-line  {
+        margin:.4em 1em 0 0;
+    }
+
+    /* PRINT FORMS */
+    .print-forms-button {
+        padding: 1em 1.5em;
+        font-size: var(--global-small-laptop-desktop-font-size);
+    }
+
+}
+
+
+/* GLOBAL ************************************************************************************************************* */
+@media only screen {
+
+    /* for overall form menu on top */
+    .forms-menu-block {
+        display: block;
+        width: 100%;
+        max-width:1152px;
+        margin:auto;
+        border:thin solid var(--color-grey);
+    }
+
+    .forms-menu  {
+        color: var(--copy-color-dark);
+    }
+
+    .menu-item span, .menu-item a {
+        font-family: Whitney-Book;
+        text-align: left;
+        line-height:var(--list-wide-item-line-height);
+    }
+
+    .menu-item a {
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--color-dark-blue);
+    }
+
+    .menu-item span {
+        cursor: default;
+        color: var(--color-dark-purple);
+        font-weight:800;
+    }
+
+
+
+    .disclaimer {
+        display: block;
+        width: 80%;
+        margin: 1em 10%;
+    }
+
+    .disclaimer span, .sig-date-prompt, .print-forms-button {
+        font-family: var(--family-global);
+        color: var(--color-dark-blue);
+        text-align:left
+    }
+
+    .disclaimer p {
+        font-family: Whitney-Book;
+        font-weight: 800;
+        color: var(--color-dark-blue);
+        text-transform: uppercase;
+    }
+
+    .sig-date-prompt {
+        font-weight: 800;
+    }
+
+    .sig-date-line  {
+        background: url("src/assets/images/book/line.jpg") right repeat-x;
+    }
+
+    /* PRINT */
+    .print-forms-grid {
+        display: grid;
+        width: 95%;
+        margin: 0 5% 1em 0;
+        align-content: flex-end;
+        justify-items: flex-end;
+    }
+
+    /* FOR BOTH PRINT FORMS */
+    .print-forms-button {
+        color: var(--color-white);
+        letter-spacing: 3px;
+        background-color: var(--color-light-blue);
+        border-radius: 1.0em;
+    }
+
+}
