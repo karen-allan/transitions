@@ -77,7 +77,7 @@ and (orientation: portrait) {
   .mobile-selectedSubItem, .mobile-unselectedSubItem a {
     font-family: var(--family-menu);
     color:whitesmoke;
-    font-size: var(--menu-sub-topic-mobile-port-font-size);
+    /*font-size: var(--menu-sub-topic-mobile-port-font-size);*/
   }
 
   .mobile-unselectedSubItem a {
