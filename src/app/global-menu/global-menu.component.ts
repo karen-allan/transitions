@@ -23,7 +23,13 @@ import {
       })),
       transition('show => hide', animate('400ms ease-out')),
       transition('hide => show', animate('400ms ease-in'))
-    ])
+    ]),
+    trigger('rotatedState', [
+        state('default', style({ transform: 'rotate(0)' })),
+        state('rotated', style({ transform: 'rotate(-135deg)' })),
+        transition('rotated => default', animate('400ms ease-out')),
+        transition('default => rotated', animate('400ms ease-in'))
+      ])
   ]
 })
 
@@ -42,6 +48,10 @@ export class GlobalMenuComponent implements OnInit {
 
   get showMenu() {
     return this.show ? 'show' : 'hide'
+  }
+
+  get rotated() {
+    return this.show ? 'rotated' : 'default'
   }
 
   toggle() {

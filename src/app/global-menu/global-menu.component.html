@@ -28,7 +28,9 @@
         <div class="mobile-top-row">
             <div class="slogan"></div>
             <div class="hamburger-icon">
-                <button class="fa fa-bars" (click)="toggle()"></button>
+                <button class="rotate-button" (click)="toggle()">
+                  <div [@rotatedState]="rotated" class="plus"></div>
+                </button>
             </div>
         </div>
 

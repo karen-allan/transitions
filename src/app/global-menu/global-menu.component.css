@@ -439,6 +439,8 @@ and (orientation: landscape) {
       .hamburger-icon {
         display: grid;
         grid-column: 2;
+        align-content: center;
+        justify-content: center;
       }
 
       /*cambria math to the left and berlin sans FB to the right text */
@@ -494,6 +496,22 @@ and (orientation: landscape) {
         border:thin solid var(--color-off-white);
       }
 
+      .plus {
+        display:inline-block;
+        width:20px;
+        height:20px;
+
+        background:
+          linear-gradient(#000 0 0),
+          linear-gradient(#000 0 0);
+        background-position:center;
+        background-size: 90% 2px,2px 90%;
+        background-repeat:no-repeat;
+      }
+
+      .rotate-button {
+        height: 40px;
+      }
 }
 
 
