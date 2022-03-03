@@ -1,0 +1,345 @@
+<div class="clear-heading color-dark-purple">
+    <h1>PLANNING FOR MY FUTURE CARE</h1>
+</div>
+
+<form (ngSubmit)="onSubmit()">
+    <div class="forms-desktop">
+
+        <app-demographics></app-demographics>
+
+        <div class="form-heading">
+            Your Concerns and Goals
+        </div>
+
+        <div class="text-prompt">
+            What would be your main areas of focus for seeking a consultation?
+        </div>
+
+        <div class="two-equal-inline-grid">
+            <div class="first-inline-col">
+                <input type="checkbox" id="primaryFocus1" [(ngModel)]="model.primaryFocus" value="planFocus1">
+                <label for="primaryFocus1">
+                    I want to name a Representative for my future care
+                </label>
+            </div>
+
+            <div class="second-inline-col">
+                <input type="checkbox" id="primaryFocus2" [(ngModel)]="model.primaryFocus" value="planFocus2">
+                <label for="primaryFocus2">
+                    I want to make an in-depth advanced care plan
+                </label>
+            </div>
+        </div>
+
+        <div class="two-equal-inline-grid">
+            <div class="first-inline-col">
+                <input type="checkbox" id="primaryFocus3" [(ngModel)]="model.primaryFocus" value="planFocus3">
+                <label for="primaryFocus3">
+                    I want to arrange my own ceremonies and legacy projects
+                </label>
+            </div>
+
+            <div class="second-inline-col">
+                <input type="checkbox" id="primaryFocus4" [(ngModel)]="model.primaryFocus" value="planFocus4">
+                <label for="primaryFocus4">
+                    I want to know about the logistics of staying home to die
+                </label>
+            </div>
+        </div>
+
+        <div class="two-equal-inline-grid">
+            <div class="first-inline-col">
+                <input type="checkbox" id="primaryFocus5" [(ngModel)]="model.primaryFocus" value="planFocus5">
+                <label for="primaryFocus5">
+                    I want to ensure my financial and estate plans are in order
+                </label>
+            </div>
+
+            <div class="second-inline-col">
+                <input type="checkbox" id="primaryFocus6" [(ngModel)]="model.primaryFocus" value="planFocus6">
+                <label for="primaryFocus6">
+                    I want to know about medically assisted death laws in Canada
+                </label>
+            </div>
+        </div>
+
+        <div class="two-equal-inline-grid">
+            <div class="first-inline-col">
+                <input type="checkbox" id="primaryFocus7" [(ngModel)]="model.primaryFocus" value="planFocus7">
+                <label for="primaryFocus7">
+                    I need to discuss these issues with an impartial advocate
+                </label>
+            </div>
+
+            <div class="second-inline-col">
+                <input type="checkbox" id="primaryFocus8" [(ngModel)]="model.primaryFocus" value="planFocus8">
+                <label for="primaryFocus8">
+                    I want to know more about care plan safe-keeping and sharing
+                </label>
+            </div>
+        </div>
+
+        <div class="text-prompt">
+            Can you expand on what you are looking for related to the above answer?
+        </div>
+
+        <div class="full-width-grid">
+            <textarea rows=6 id="mainIssues" [(ngModel)]="model.mainIssues"> </textarea>
+        </div>
+
+        <div class="text-prompt">
+            Please select the one statement that applies to you on the Frailty scale?
+        </div>
+
+        <div class="full-width-grid">
+            <div class="first-inline-col">
+                <input type="radio" id="ageCondition1" [(ngModel)]="model.frailty" value="frailtyChart1" name="frailty">
+                <label for="ageCondition1">
+                    You are under 65 and in good health and fitness.
+                </label>
+            </div>
+        </div>
+
+        <div class="full-width-grid">
+            <div class="first-inline-col">
+                <input type="radio" id="ageCondition2"  [(ngModel)]="model.frailty" value="frailtyChart2" name="frailty">
+                <label for="ageCondition2">
+                    You have one or more chronic conditions, at any age
+                </label>
+            </div>
+        </div>
+
+        <div class="full-width-grid">
+            <div class="first-inline-col">
+                <input type="radio" id="ageCondition3" [(ngModel)]="model.frailty" value="frailtyChart3" name="frailty">
+                <label for="ageCondition3">
+                    You have a life-threatening illness and your life-expectancy is less than one to two years, at any age:
+                </label>
+            </div>
+        </div>
+
+        <div class="full-width-grid">
+            <div class="first-inline-col">
+                <input type="radio" id="ageCondition4" [(ngModel)]="model.aromatherapy" value="frailtyChart4" name="frailty">
+                <label for="ageCondition4">
+                    You are over 65 and relatively healthy
+                </label>
+            </div>
+        </div>
+
+        <div class="full-width-grid">
+            <div class="first-inline-col">
+                <input type="radio" id="ageCondition5" [(ngModel)]="model.aromatherapy" value="frailtyChart5" name="frailty">
+                <label for="ageCondition5">
+                    You are over 65 and having trouble managing your day-to-day affairs and the activities of daily living
+                </label>
+            </div>
+        </div>
+
+        <div class="full-width-grid">
+            <div class="first-inline-col">
+                <input type="radio" id="ageCondition6" [(ngModel)]="model.aromatherapy" value="frailtyChart6" name="frailty">
+                <label for="ageCondition6">
+                    You are over 75, no matter your state of health
+                </label>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- MOBILE -->
+<!-- <div class="forms-mobile">
+     <div class="form-heading">
+         Your Contact Information
+     </div>
+
+     <div class="two-inline-grid">
+         <label class="first-grid-col" for="name">Your Name:</label>
+
+         <label class="second-grid-col" for="cellPhone">Phone:</label>
+
+         <input type="text" class="first-grid-col"
+                [(ngModel)]="model.name" name="name" id="m-name">
+
+         <input type="text" class="second-grid-col"
+                [(ngModel)]="model.cellPhone" name="cellPhone" id="m-cellphone">
+
+         <label class="all-grid-cols" for="email">Email:</label>
+
+         <input type="text" class="all-grid-cols" [(ngModel)]="model.email" name="email" id="m-email">
+
+         <label class="all-grid-cols" for="address">Home Address:</label>
+
+         <textarea class="all-grid-cols" [(ngModel)]="model.address" rows=2 name="address" id="m-address"> </textarea>
+     </div>
+
+     <div class="four-inline-grid">
+         <label class="first-grid-col" for="city">City/Town:</label>
+
+         <label class="second-grid-col" for="provState">Prov/State:</label>
+
+         <label class="third-grid-col" for="pc">Postal/Zip:</label>
+
+         <label class="fourth-grid-col" for="country">Country:</label>
+
+         <input type="text" class="first-grid-col" id="m-city" [(ngModel)]="model.city" name="city">
+
+         <input type="text" class="second-grid-col" id="m-provState" [(ngModel)]="model.provState" name="provState">
+
+         <input type="text" class="third-grid-col" id="m-pc" [(ngModel)]="model.pc" name="pc">
+
+         <input type="text" class="fourth-grid-col" id="m-country" [(ngModel)]="model.country" name="country">
+     </div>
+
+     <div class="form-heading">
+         Emergency Contact
+     </div>
+
+     <div class="four-inline-grid">
+         <label class="first-grid-col" for="emergName">Contact:</label>
+
+         <label class="second-grid-col" for="emergPhone">Phone:</label>
+
+         <label class="last-two-grid-cols" for="emergRelation">Relationship:</label>
+
+         <input type="text" class="first-grid-col" id="m-emergName" [(ngModel)]="model.emergName" name="emergName">
+
+         <input type="text" class="second-grid-col" id="m-emergPhone" [(ngModel)]="model.emergPhone" name="emergPhone">
+
+         <input type="text" class="last-two-grid-cols" id="m-emergRelation" [(ngModel)]="model.emergRelation" name="emergRelation">
+     </div>
+
+     <div class="form-heading">
+         Optional Details
+     </div>
+
+     <div class="four-inline-grid">
+         <label class="first-grid-col" for="referredBy">Referred By:</label>
+
+         <label class="second-grid-col" for="birthdate">Birthdate:</label>
+
+         <label class="last-two-grid-cols" for="occupation">Occupation:</label>
+
+         <input type="text" class="form-control first-grid-col" id="m-referredBy" [(ngModel)]="model.referredBy" name="referredBy">
+
+         <input type="text" class="form-control second-grid-col" id="m-birthdate" [(ngModel)]="model.birthdate" name="birthdate">
+
+         <input type="text" class="form-control last-two-grid-cols" id="m-occupation" [(ngModel)]="model.occupation" name="occupation">
+     </div>
+
+     <div class="form-heading">
+         Your Concerns and Goals
+     </div>
+
+     <div class="text-prompt">
+         What would be your main area of focus for seeking a consultation?
+     </div>
+
+     <div class="three-inline-grid">
+         <div class="first-inline-col">
+             <input type="radio" value="primaryFocus1" [(ngModel)]="model.primaryFocus" name="primaryFocus">I Want to Plan Ahead
+         </div>
+
+         <div class="second-inline-col">
+             <input type="radio" value="primaryFocus2" [(ngModel)]="model.primaryFocus" name="primaryFocus">I Want End of Life Care/Support
+         </div>
+
+         <div class="third-inline-col">
+             <input type="radio" value="primaryFocus3" [(ngModel)]="model.primaryFocus" name="primaryFocus">I Want Caregiver Support
+         </div>
+     </div>
+
+     <div class="text-prompt">
+         Can you expand on what you are looking for related to the above answer?
+     </div>
+
+     <div class="full-width-grid">
+         <textarea rows=5 id="m-primaryFocus" [(ngModel)]="model.primaryFocus" name="primaryFocus"> </textarea>
+     </div>
+
+     <div class="form-heading">
+         (Optional) Medical History if Seeking End of Life Care
+     </div>
+
+     <div class="text-prompt">
+         Please describe your health issues and any treatments you have tried and their effectiveness.
+     </div>
+
+     <div class="full-width-grid">
+         <textarea rows=5 id="m-medicalHistory" [(ngModel)]="model.medicalHistory" name="medicalHistory"> </textarea>
+     </div>
+
+     <div class="text-prompt">
+         Please list medications and supplements that your are currently taking.
+     </div>
+
+     <div class="full-width-grid">
+         <textarea rows=5 id="m-treatments" [(ngModel)]="model.treatments" name="treatments"> </textarea>
+     </div>
+
+     <div class="text-prompt">
+         Please select any health conditions you have been diagnosed with:
+     </div>
+
+     <div class="three-inline-grid">
+         <div class="first-inline-col">
+             <input type="checkbox" [(ngModel)]="model.heartDisease" name="heartDisease">Heart Disease
+         </div>
+
+         <div class="second-inline-col">
+             <input type="checkbox" [(ngModel)]="model.cancer" name="cancer">Cancer
+         </div>
+
+         <div class="third-inline-col">
+             <input type="checkbox" [(ngModel)]="model.stroke" name="stroke">Stroke
+         </div>
+
+         <div class="first-inline-col">
+             <input type="checkbox" [(ngModel)]="model.highBloodPressure" name="highBloodPressure">High Blood Pressure
+         </div>
+
+         <div class="second-inline-col">
+             <input type="checkbox" [(ngModel)]="model.diabetes" name="diabetes">Diabetes
+         </div>
+
+         <div class="third-inline-col">
+             <input type="checkbox" [(ngModel)]="model.mentalIllness" name="mentalIllness">Emotional Illness
+         </div>
+
+         <div class="first-inline-col">
+             <input type="checkbox" [(ngModel)]="model.seizures" name="seizures">Seizures
+         </div>
+
+         <div class="second-inline-col">
+             <input type="checkbox" [(ngModel)]="model.autoImmuneDisease" name="autoImmuneDisease">Auto-immune Disease
+         </div>
+
+         <div class="third-inline-col">
+             <input type="checkbox" [(ngModel)]="model.other" name="other">Other
+         </div>
+     </div>
+
+     <div class="text-prompt">
+         Please describe your situation, condition and or illness, if applicable:
+     </div>
+
+     <div class="full-width-grid">
+         <textarea rows=5 id="m-conditions" [(ngModel)]="model.conditions" name="conditions"> </textarea>
+     </div>
+ </div>
+</form>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

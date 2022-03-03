@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SessionProfileComponent } from './session-profile.component';
+import { IntakeMakePlanComponent } from './intake-make-plan.component';
 
-describe('SessionProfileComponent', () => {
-  let component: SessionProfileComponent;
-  let fixture: ComponentFixture<SessionProfileComponent>;
+describe('IntakeMakePlanComponent', () => {
+  let component: IntakeMakePlanComponent;
+  let fixture: ComponentFixture<IntakeMakePlanComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SessionProfileComponent ]
+      declarations: [ IntakeMakePlanComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SessionProfileComponent);
+    fixture = TestBed.createComponent(IntakeMakePlanComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

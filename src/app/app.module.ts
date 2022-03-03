@@ -34,9 +34,8 @@ import { BookSessionOverviewComponent } from './book-menu/book-session/book-sess
 
 /* FORMS */
 import { FormsOverviewComponent } from './global-forms/forms-overview/forms-overview.component';
-import { SessionProfileComponent } from './global-forms/session-profile/session-profile.component';
-import { ConsultProfileComponent } from './global-forms/consult-profile/consult-profile.component';
-import { CovidProfileComponent } from './global-forms/covid-profile/covid-profile.component';
+
+
 
 /* FAQ */
 import { FaqContainerComponent } from './faq-menu/faq-container/faq-container.component';
@@ -131,6 +130,15 @@ import {TopicMoveEnergyOverviewComponent} from './support-menu/support-energy/en
 /* PAIN */
 import {TopicHelpPainContainerComponent} from './support-menu/support-energy/energy-topics/pain/topic-help-pain-container/topic-help-pain-container.component';
 import {TopicHelpPainOverviewComponent} from './support-menu/support-energy/energy-topics/pain/topic-help-pain-overview/topic-help-pain-overview.component';
+
+
+import { IntakeMakePlanComponent } from './global-forms/intake-make-plan/intake-make-plan.component';
+import { IntakeCaregiverSupportComponent } from './global-forms/intake-caregiver-support/intake-caregiver-support.component';
+import { IntakePatientSupportComponent } from './global-forms/intake-patient-support/intake-patient-support.component';
+import { IntakeClientSessionComponent } from './global-forms/intake-client-session/intake-client-session.component';
+import { DemographicsComponent } from './global-forms/common-intake-fields/demographics/demographics.component';
+import { MedicalComponent } from './global-forms/common-intake-fields/medical/medical.component';
+import { IntakeCovidComponent } from './global-forms/intake-covid/intake-covid.component';
 
 
 
@@ -234,14 +242,22 @@ import {TopicHelpPainOverviewComponent} from './support-menu/support-energy/ener
 
         FaqContainerComponent,
         FaqOverviewComponent,
-        SessionProfileComponent,
-        ConsultProfileComponent,
-        CovidProfileComponent,
+
+
 
          FormsOverviewComponent,
 
          PrintSessionComponent,
          FormsContainerComponent,
+
+
+         IntakeMakePlanComponent,
+           IntakeCaregiverSupportComponent,
+           IntakePatientSupportComponent,
+           IntakeClientSessionComponent,
+           DemographicsComponent,
+           MedicalComponent,
+           IntakeCovidComponent,
 
 
 

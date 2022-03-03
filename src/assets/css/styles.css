@@ -73,7 +73,7 @@
   --global-big-mobile-land-font-size:.8em;
   --global-big-tablet-ipad-port-font-size:.9em;
   --global-big-tablet-ipad-land-font-size:1em;
-  --global-big-laptop-desktop-font-size:1.1em;
+  --global-big-laptop-desktop-font-size:1.2em;
 
   --global-med-mobile-port-font-size:.6em;
   --global-med-mobile-land-font-size:.7em;
@@ -224,7 +224,7 @@
   --h4-whitney-ipad-land-font-size:1.0em;
 
   --h4-whitney-laptop-font-size:1.2em;
-  --h4-whitney-desktop-font-size:0.9em;
+  --h4-whitney-desktop-font-size:1.2em;
 
   /* TEXT */
   --big-whitney-banana-port-font-size:0.7em;
@@ -491,6 +491,10 @@
     color:#ffffff;
   }
 
+  .color-dark-purple {
+    color:var(--color-dark-purple);
+  }
+
   .background-blue {
     background-color: #5b89d5;
   }
@@ -648,6 +652,10 @@
 
   .pad-left-3 {
     padding-left:3em;
+  }
+
+  .pad-left-6 {
+    padding-left:6em;
   }
 
   /* CSS ICONS */

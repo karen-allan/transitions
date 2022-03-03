@@ -1,52 +1,74 @@
 <div class="content">
     <div class="inner-content">
         <div class="dark-heading">
-            <h1>CLIENT INTAKE FORMS</h1>
+            <h1>MEET AND GREET INTAKE FORMS</h1>
         </div>
     </div>
 
     <div class="forms-menu-block">
-        <ul class="forms-menu">
+        <ul class="forms-menu dark-heading"><h4>I WOULD LIKE TO DISCUSS:</h4>
             <li class="menu-item">
-                <div *ngIf="showConsultationForm">
-                    <span>BOOK A DOULA CONSULTATION</span>
+                <div *ngIf="showPlanningForm">
+                    <span>HOW TO PLAN FOR MY FUTURE CARE</span>
                 </div>
 
-                <div *ngIf="!showConsultationForm">
-                    <a (click)="toggleEditor('consult')">BOOK A DOULA CONSULTATION</a>
+                <div *ngIf="!showPlanningForm">
+                    <a (click)="toggleEditor('planning')">HOW TO PLAN FOR MY FUTURE CARE</a>
                 </div>
             </li>
 
             <li class="menu-item">
-                <div *ngIf="showAssessmentForm">
-                    <span>COVID-19 CLEARANCE</span>
+                <div *ngIf="showCaregiverForm">
+                    <span>MY NEED FOR SUPPORT AS CAREGIVER</span>
                 </div>
-                <div *ngIf="!showAssessmentForm">
-                    <a (click)="toggleEditor('assessment')">COVID-19 CLEARANCE</a>
+
+                <div *ngIf="!showCaregiverForm">
+                    <a (click)="toggleEditor('caregiver')">MY NEED FOR SUPPORT AS CAREGIVER</a>
+                </div>
+            </li>
+
+            <li class="menu-item">
+                <div *ngIf="showPatientForm">
+                    <span>MY NEED FOR SUPPORT AS PATIENT</span>
+                </div>
+
+                <div *ngIf="!showPatientForm">
+                    <a (click)="toggleEditor('patient')">MY NEED FOR SUPPORT AS PATIENT</a>
                 </div>
             </li>
 
             <li class="menu-item">
                 <div *ngIf="showSessionForm">
-                    <span>BOOK AN ENERGY SESSION</span>
+                    <span>BOOKING AN ENERGY MEDICINE SESSION</span>
                 </div>
                 <div *ngIf="!showSessionForm">
-                    <a (click)="toggleEditor('session')">BOOK AN ENERGY SESSION</a>
+                    <a (click)="toggleEditor('session')">BOOKING AN ENERGY MEDICINE SESSION</a>
+                </div>
+            </li>
+
+            <li class="menu-item">
+                <div *ngIf="showAssessmentForm">
+                    <span>SHOW COVID-19 CLEARANCE PROOF</span>
+                </div>
+                <div *ngIf="!showAssessmentForm">
+                    <a (click)="toggleEditor('assessment')">SHOW COVID-19 CLEARANCE PROOF</a>
                 </div>
             </li>
         </ul>
     </div>
 
-    <app-covid-profile *ngIf="showAssessmentForm"></app-covid-profile>
-    <app-session-profile *ngIf="showSessionForm"></app-session-profile>
-    <app-consult-profile *ngIf="showConsultationForm"></app-consult-profile>
+    <app-intake-make-plan *ngIf="showPlanningForm"></app-intake-make-plan>
+    <app-intake-caregiver-support *ngIf="showCaregiverForm"></app-intake-caregiver-support>
+    <app-intake-patient-support *ngIf="showPatientForm"></app-intake-patient-support>
+    <app-intake-client-session *ngIf="showSessionForm"></app-intake-client-session>
+    <app-intake-covid *ngIf="showAssessmentForm"></app-intake-covid>
 
 <!--<app-print-session *ngIf="showSessionForm"></app-print-session>-->
 
     <div class="disclaimer">
         <p>Please Read Carefully:</p>
         <span>
-            <div *ngIf="showConsultationForm">
+            <div *ngIf="showPatientForm || showCaregiverForm || showPlanningForm">
                 I understand that the Doula consultations and care do not replace medical treatments but act as
                 a support to any medical treatments. I understand that End of Life Doulas can not advise on
                 medications or medical procedures and do not prescribe or distribute any medicines or herbal supplements.

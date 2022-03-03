@@ -360,15 +360,31 @@ and (min-width: 1440px) {
 @media only screen {
 
     /* for overall form menu on top */
-    .forms-menu-block {
+    .forms-menu-block, .forms-disclaimer {
         display: block;
         width: 100%;
         max-width:1152px;
         margin:auto;
+    }
+
+    .forms-menu-block {
         border:thin solid var(--color-grey);
     }
 
+     .forms-disclaimer {
+          display: block;
+          width: 100%;
+          max-width:1152px;
+          margin:auto;
+          border-left:thin solid var(--color-grey);
+          border-right:thin solid var(--color-grey);
+          border-bottom:thin solid var(--color-grey);
+      }
+
     .forms-menu  {
+        width:98%;
+        padding-left:2%;
+        margin:0;
         color: var(--copy-color-dark);
     }
 
@@ -389,8 +405,6 @@ and (min-width: 1440px) {
         color: var(--color-dark-purple);
         font-weight:800;
     }
-
-
 
     .disclaimer {
         display: block;
