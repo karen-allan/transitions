@@ -39,6 +39,7 @@
   /* WITH MALGUN GOTHIC */
   --family-menu:'Segoe UI Symbol';
 
+  --menu-sub-topic-mobile-port-font-size:.6em;
   --menu-topic-mobile-port-font-size:.7em;
   --menu-topic-mobile-land-font-size:.8em;
   --menu-topic-tablet-ipad-port-font-size:.6em;
@@ -1134,11 +1135,4 @@
       );
   }
 
-
-
 }
-
-
-
-
-

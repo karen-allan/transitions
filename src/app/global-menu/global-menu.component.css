@@ -80,6 +80,7 @@ and (max-width: 1279px) {
   }
 
   /* the horizontal lines of the menu setting the red backcolour and full width */
+  /*
   .mobile-menu .hamburger > div {
     position: relative;
     width: 100%;
@@ -92,8 +93,10 @@ and (max-width: 1279px) {
   .mobile-menu .hamburger > div:after {
     height:.083em;
   }
+  */
 
   /* top and bottom lines in hamburger design take backcolour, transition and width from parent hamburger div  */
+  /*
   .mobile-menu .hamburger > div:before,
   .mobile-menu .hamburger > div:after {
     content: '';
@@ -110,18 +113,23 @@ and (max-width: 1279px) {
   .mobile-menu .hamburger > div:after {
     top:.313em;
   }
+  */
 
   /* toggler animate to move all 3 lines 135 degrees up and to right */
+  /*
   .mobile-menu .toggler:checked + .hamburger > div {
     transform: rotate(135deg);
   }
+  */
 
   /* turn upper and lower lines into X */
+  /*
   .mobile-menu .toggler:checked + .hamburger > div:before,
   .mobile-menu .toggler:checked + .hamburger > div:after {
     top: 0;
     transform: rotate(90deg);
   }
+  */
 
   /* when checkbox is checked it makes the burst menu visible and fixed */
   .mobile-menu .toggler:checked ~ .burst-menu {
@@ -129,6 +137,7 @@ and (max-width: 1279px) {
     position: fixed;
   }
 
+/*
   .mobile-menu .toggler:checked ~ .burst-menu > div {
     transform: scale(1);
     transition-duration: var(--menu-speed);
@@ -138,6 +147,7 @@ and (max-width: 1279px) {
     opacity: 1;
     transition: opacity 0.4s ease;
   }
+  */
 
   /*  BURST MENU DESIGN
       this div covers the whole device area - is the device background, not visible (without backcolour)
@@ -157,10 +167,10 @@ and (max-width: 1279px) {
   }
 
   /* This is the burst menu background  */
+  /*
   .mobile-menu .burst-menu > div {
     background: var(--overlay-color);
     border-radius: 0;
-    /*was 50* now more square */
     display: flex;
     flex: none;
     width:100vw;
@@ -168,13 +178,16 @@ and (max-width: 1279px) {
     transform: scale(0);
     transition: all 0.4s ease;
   }
+  /*
 
   /* These is boundary area for the menu - gave it a margin top of 3 em as centering crops some of the menu */
+  /*
   .mobile-menu .burst-menu > div > div {
     display:grid;
     opacity: 0;
     transition: opacity 0.4s ease;
   }
+  */
 
   .submenu-auto-content {
     margin-left:4em;
@@ -184,6 +197,7 @@ and (max-width: 1279px) {
     height: 40px;
     justify-content: flex-start;
   }
+
 }
 
 /* BANANA PORTRAIT  *****************************************************************************/
@@ -191,14 +205,6 @@ and (max-width: 1279px) {
 and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait){
-
-  /*.header-mobile {
-    grid-template-columns: 85% 15%;
-  }*/
-
-  /*.slogan, .mobile-menu {
-    height: 26px;
-  }*/
 
   .slogan {
     background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
@@ -222,10 +228,6 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-  .header-mobile {
-    grid-template-columns: 90% 10%;
-  }
-
   .slogan {
     background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
     background-size: contain;
@@ -248,11 +250,6 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-  .header-mobile {
-    /*grid-template-columns: 85% 15%;*/
-    grid-template-columns: 75% 25%;
-  }
-
   .slogan {
     background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
     background-size: contain;
@@ -263,8 +260,17 @@ and (orientation: portrait) {
     margin-top:20px;
   }
 
+  .unselectedItem a {
+    height:50px;
+    padding-left: 40px;
+    justify-content: flex-start;
+    font-size:var(--menu-topic-laptop-desktop-font-size);
+  }
+
   .selectedSubItem, .unselectedSubItem a {
     font-size:var(--menu-topic-mobile-port-font-size);
+    border-color: white;
+    border-width: 1px;
   }
 
 
@@ -275,10 +281,6 @@ and (orientation: portrait) {
 and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
-
-  .header-mobile {
-    grid-template-columns: 95% 5%;
-  }
 
   .slogan {
     background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
@@ -300,10 +302,6 @@ and (orientation: landscape) {
 and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
-
-  .header-mobile {
-    grid-template-columns: 93% 7%;
-  }
 
   .slogan {
     background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
@@ -327,10 +325,6 @@ and (orientation: portrait) {
 and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
-
-  .header-mobile {
-    grid-template-columns: 93% 7%;
-  }
 
   .slogan {
     background: url("src/assets/images/headers/transitionsInEnergyDesktopHeader.jpg")  left no-repeat;
@@ -430,6 +424,18 @@ and (orientation: landscape) {
         display: block;
       }
 
+      .mobile-nav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+      }
+
+      .mobile-top-row {
+        display: grid;
+        width:100%;
+        grid-template-columns: 90% 10%;
+      }
+
       .hamburger-icon {
         display: grid;
         grid-column: 2;
@@ -465,8 +471,30 @@ and (orientation: landscape) {
         background-color: var(--color-light-blue);
         border:thin solid var(--color-off-white);
       }
-}
 
+      .mobile-selectedItem, .mobile-unselectedItem a {
+        display:grid;
+        font-family: var(--family-menu);
+        color:whitesmoke;
+        height: 50px;
+        align-content: center;
+      }
+
+      .mobile-unselectedItem a {
+        padding-left: 10px;
+        text-decoration: none;
+        cursor: pointer;
+        background-color: var(--color-darkest-blue);
+      }
+
+      .mobile-selectedItem {
+        padding-left: 10px;
+        cursor: default;
+        background-color: var(--color-light-blue);
+        border:thin solid var(--color-off-white);
+      }
+
+}
 
 
 @media print {

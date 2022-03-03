@@ -24,6 +24,49 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
+  .topic-menu {
+    display: none;
+  }
+
+  .mobile-topic-menu {
+    display: grid;
+    width: 100%
+  }
+
+  .mobile-selectedTopicItem {
+    display: grid;
+    width: 100%;
+    align-content: center;
+    justify-content: flex-start;
+    padding-left: 50px;
+    height: 40px;
+    cursor: default;
+    background-color: var(--color-light-blue);
+    border:thin solid var(--color-off-white);
+  }
+
+  .mobile-unselectedTopicItem {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: flex-start;
+    padding-left: 50px;
+    height: 40px;
+    background-color: var(--color-darkest-blue);
+  }
+
+  .mobile-selectedTopicItem, .mobile-unselectedTopicItem a {
+    font-family: var(--family-menu);
+    color:whitesmoke;
+    font-size: var(--menu-sub-topic-mobile-port-font-size);
+  }
+
+  .mobile-unselectedTopicItem a {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--color-darkest-blue);
+  }
 
 }
 
@@ -53,6 +96,10 @@ and (max-width: 1365px)
 and (orientation: landscape) {
 
     /* 1024 is 80% of 1280 */
+    .mobile-topic-menu {
+      display: none;
+    }
+
 
 
 }
@@ -62,6 +109,10 @@ and (orientation: landscape) {
 and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
+
+  .mobile-topic-menu {
+    display: none;
+  }
 
 
 }
@@ -73,6 +124,10 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
+  .mobile-topic-menu {
+    display: none;
+  }
+
 
 
 }
@@ -81,6 +136,10 @@ and (orientation: landscape) {
 @media only screen
 and (min-width: 1440px)
 and (max-width: 1919px) {
+
+  .mobile-topic-menu {
+    display: none;
+  }
 
 
 }
@@ -91,6 +150,10 @@ and (min-width: 1280px)
 and (orientation: landscape) {
 
     /* 1152 is 60% of 1920 */
+
+    .mobile-topic-menu {
+      display: none;
+    }
 
     .topic-menu {
         display:grid;
@@ -119,8 +182,6 @@ and (orientation: landscape) {
 
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
-
-
 
     .selectedTopicItem, .unselectedTopicItem a {
         display:grid;
