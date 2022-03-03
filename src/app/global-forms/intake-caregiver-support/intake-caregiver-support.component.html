@@ -1,0 +1,150 @@
+<div class="dark-heading">
+    <h1>CAREGIVER SUPPORT AND ASSISTANCE</h1>
+</div>
+
+<form (ngSubmit)="onSubmit()">
+    <div class="forms-desktop">
+
+        <app-demographics></app-demographics>
+
+        <div class="form-heading">
+            Your Concerns and Goals
+        </div>
+
+        <div class="text-prompt">
+            As Caregiver, what are your main areas of focus for seeking a consultation?
+        </div>
+
+        <div class="two-equal-inline-grid">
+            <div class="first-inline-col">
+                <input type="checkbox" id="primaryFocus1" [(ngModel)]="model.primaryFocus" value="caregiverFocus1">
+                <label for="primaryFocus1">
+                    I am overwhelmed with all the decisions I need to make
+                </label>
+            </div>
+
+            <div class="second-inline-col">
+                <input type="checkbox" id="primaryFocus2" [(ngModel)]="model.primaryFocus" value="caregiverFocus2">
+                <label for="primaryFocus2">
+                    I am exhausted and burned out and need emotional support
+                </label>
+            </div>
+        </div>
+
+        <div class="two-equal-inline-grid">
+            <div class="first-inline-col">
+                <input type="checkbox" id="primaryFocus3" [(ngModel)]="model.primaryFocus" value="caregiverFocus3">
+                <label for="primaryFocus3">
+                    I am physically unable to care for my loved one adequately
+                </label>
+            </div>
+
+            <div class="second-inline-col">
+                <input type="checkbox" id="primaryFocus4" [(ngModel)]="model.primaryFocus" value="caregiverFocus4">
+                <label for="primaryFocus4">
+                    My loved one is angry and lashing out at me
+                </label>
+            </div>
+        </div>
+
+        <div class="two-equal-inline-grid">
+            <div class="first-inline-col">
+                <input type="checkbox" id="primaryFocus5" [(ngModel)]="model.primaryFocus" value="caregiverFocus5">
+                <label for="primaryFocus5">
+                    I am having conflicts with my extended family
+                </label>
+            </div>
+
+            <div class="second-inline-col">
+                <input type="checkbox" id="primaryFocus6" [(ngModel)]="model.primaryFocus" value="caregiverFocus6">
+                <label for="primaryFocus6">
+                    I need to ensure their last wishes and requests are respected
+                </label>
+            </div>
+        </div>
+
+        <div class="two-equal-inline-grid">
+            <div class="first-inline-col">
+                <input type="checkbox" id="primaryFocus7" [(ngModel)]="model.primaryFocus" value="caregiverFocus7">
+                <label for="primaryFocus7">
+                    I need to discuss these issues with an impartial advocate
+                </label>
+            </div>
+
+            <div class="second-inline-col">
+                <input type="checkbox" id="primaryFocus8" [(ngModel)]="model.primaryFocus" value="caregiverFocus8">
+                <label for="primaryFocus8">
+                    I am having difficulties with my loved ones health care team
+                </label>
+            </div>
+        </div>
+
+        <div class="text-prompt">
+            Can you expand on what you are looking for related to the above answer?
+        </div>
+
+        <div class="full-width-grid">
+            <textarea rows=6 id="mainIssues" [(ngModel)]="model.mainIssues"> </textarea>
+        </div>
+
+        <div class="text-prompt">
+            Are their special considerations in caring for your loved one?
+        </div>
+
+        <div class="two-inline-grid-desktop">
+            <div class="first-inline-col">
+                Do you act as their interpreter?
+            </div>
+            <div class="second-inline-col">
+                <input type="radio" value="yes" name="interpreter" id="interp_1">
+                <label for="interp_1">Yes</label>
+                <input type="radio" value="no" name="interpreter" id="interp_2" checked="checked">
+                <label for="interp_2">No</label>
+            </div>
+        </div>
+
+        <div class="two-inline-grid-desktop">
+            <div class="first-inline-col">
+                Do you feel safe in your situation?
+            </div>
+            <div class="second-inline-col">
+                <input type="radio"  value="yes" name="safety" id="safety_1">
+                <label for="safety_1">Yes</label>
+                <input type="radio" value="no" name="safety" id="safety_2" checked="checked">
+                <label for="safety_2">No</label>
+            </div>
+        </div>
+
+        <div class="two-inline-grid-desktop">
+            <div class="first-inline-col">
+                Are you able to support them physically?
+            </div>
+            <div class="second-inline-col">
+                <input type="radio" value="yes" name="physical" id="physical_1">
+                <label for="safety_1">Yes</label>
+                <input type="radio" value="no" name="physical" id="physical_2" checked="checked">
+                <label for="safety_2">No</label>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!-- MOBILE -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+<div class="dark-heading">
+    <h1>BOOK AN ENERGY MEDICINE SESSION</h1>
+</div>
+
+<form (ngSubmit)="onSubmit()">
+    <div class="forms-desktop">
+
+        <app-demographics></app-demographics>
+
+        <div class="form-heading">
+            Your Concerns and Goals
+        </div>
+
+        <div class="text-prompt">
+            What would you say is your level of knowledge about Energy Medicine (circle one)?
+        </div>
+
+        <div class="three-inline-grid">
+            <div class="first-inline-col">
+                <input type="radio" value="knowledgeLevel1" [(ngModel)]="model.knowledgeLevel" id="knowledge1" name="knowledge" checked="checked">
+                <label for="knowledge1">No Knowledge</label>
+            </div>
+
+            <div class="second-inline-col">
+                <input type="radio" value="knowledgeLevel2" [(ngModel)]="model.knowledgeLevel" id="knowledge2" name="knowledge">
+                <label for="knowledge2">Some Knowledge</label>
+            </div>
+
+            <div class="third-inline-col">
+                <input type="radio" value="knowledgeLevel3" [(ngModel)]="model.knowledgeLevel" id="knowledge3" name="knowledge">
+                <label for="knowledge3">Extensive Knowledge</label>
+            </div>
+        </div>
+
+        <div class="text-prompt">
+            What benefits do you hope to receive from getting Energy Medicine sessions?
+        </div>
+
+        <div class="full-width-grid">
+            <textarea rows=5 id="mainBenefit" [(ngModel)]="model.mainBenefit" name="mainBenefit"> </textarea>
+        </div>
+
+        <div class="text-prompt">
+            Please describe any other non-traditional treatments or protocols you have tried and their effectiveness.
+        </div>
+
+        <div class="full-width-grid">
+            <textarea rows=5 id="mainIssues" [(ngModel)]="model.mainIssues" name="mainIssues"> </textarea>
+        </div>
+
+        <app-medical></app-medical>
+    </div>
+</form>
+
