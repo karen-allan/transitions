@@ -1,20 +1,22 @@
-<div *ngIf="subMenuItemId ==  31 || subMenuItemId == 32">
-    <div class="topic-menu">
-        <div class="topic-menu-items">
-            <div *ngFor="let topicMenuItem of topicMenuItems">
-                <div *ngIf="topicMenuItemId==topicMenuItem.id">
-                    <div class="selectedTopicItem">{{topicMenuItem.title}}</div>
-                </div>
-                <div *ngIf="topicMenuItemId!=topicMenuItem.id">
-                    <div class="unselectedTopicItem"><a routerLink='/{{topicMenuItem.url}}'>{{topicMenuItem.title}}</a></div>
-                </div>
+<div class="topic-menu">
+    <div class="topic-menu-items">
+        <div *ngFor="let topicMenuItem of topicMenuItems">
+            <div *ngIf="topicMenuItemId==topicMenuItem.id">
+                <div class="selectedTopicItem">{{topicMenuItem.title}}</div>
+            </div>
+            <div *ngIf="topicMenuItemId!=topicMenuItem.id">
+                <div class="unselectedTopicItem"><a routerLink='/{{topicMenuItem.url}}'>{{topicMenuItem.title}}</a></div>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
-
-
+<div class="mobile-topic-menu">
+  <ng-container *ngFor="let topicMenuItem of topicMenuItems">
+      <ng-container *ngIf="topicMenuItemId==topicMenuItem.id">
+          <div class="mobile-selectedTopicItem">{{topicMenuItem.title}}</div>
+      </ng-container>
+      <ng-container *ngIf="topicMenuItemId!=topicMenuItem.id">
+          <div class="mobile-unselectedTopicItem"><a routerLink='/{{topicMenuItem.url}}'>{{topicMenuItem.title}}</a></div>
+      </ng-container>
+  </ng-container>
+</div>

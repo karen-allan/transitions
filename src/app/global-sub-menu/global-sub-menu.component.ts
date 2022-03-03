@@ -11,6 +11,7 @@ export class GlobalSubMenuComponent implements OnInit {
 
   @Input() menuItemId: number = 0;
   @Input() subMenuItemId: number = 0;
+  @Input() topicMenuItemId: number = 0;
 
   subMenuItems = SUB_MENU_ITEMS;
 
