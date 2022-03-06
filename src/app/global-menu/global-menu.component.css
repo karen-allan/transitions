@@ -54,141 +54,6 @@ and (max-width: 1279px) {
     align-content: center;
   }
 
-  /* top, height, width and right changes relative to the device size */
-  .mobile-menu {
-    display:grid;
-    z-index: 1;
-  }
-
-  /* This way the objects sit on top of each other, otherwise they move under */
-  .mobile-menu .toggler, .mobile-menu .hamburger  {
-    grid-column: 1/-1;
-    grid-row: 1/-1;
-  }
-
-  /* checkbox automatically centers within its parent */
-  .mobile-menu .toggler {
-    z-index: 2;
-    cursor: pointer;
-    opacity: 0;
-  }
-
-  /* push the hamburger menu down to sit within the checkbox */
-  .mobile-menu .hamburger {
-    margin-top:0.9em;
-    z-index: 1;
-  }
-
-  /* the horizontal lines of the menu setting the red backcolour and full width */
-  /*
-  .mobile-menu .hamburger > div {
-    position: relative;
-    width: 100%;
-    transition: all 0.4s ease;
-    background-color: var(--color-purple);
-  }
-
-  .mobile-menu .hamburger > div,
-  .mobile-menu .hamburger > div:before,
-  .mobile-menu .hamburger > div:after {
-    height:.083em;
-  }
-  */
-
-  /* top and bottom lines in hamburger design take backcolour, transition and width from parent hamburger div  */
-  /*
-  .mobile-menu .hamburger > div:before,
-  .mobile-menu .hamburger > div:after {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    width: inherit;
-    background: inherit;
-  }
-
-  .mobile-menu .hamburger > div:before {
-    top:-.313em;
-  }
-
-  .mobile-menu .hamburger > div:after {
-    top:.313em;
-  }
-  */
-
-  /* toggler animate to move all 3 lines 135 degrees up and to right */
-  /*
-  .mobile-menu .toggler:checked + .hamburger > div {
-    transform: rotate(135deg);
-  }
-  */
-
-  /* turn upper and lower lines into X */
-  /*
-  .mobile-menu .toggler:checked + .hamburger > div:before,
-  .mobile-menu .toggler:checked + .hamburger > div:after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  */
-
-  /* when checkbox is checked it makes the burst menu visible and fixed */
-  .mobile-menu .toggler:checked ~ .burst-menu {
-    visibility: visible;
-    position: fixed;
-  }
-
-/*
-  .mobile-menu .toggler:checked ~ .burst-menu > div {
-    transform: scale(1);
-    transition-duration: var(--menu-speed);
-  }
-
-  .mobile-menu .toggler:checked ~ .burst-menu > div > div {
-    opacity: 1;
-    transition: opacity 0.4s ease;
-  }
-  */
-
-  /*  BURST MENU DESIGN
-      this div covers the whole device area - is the device background, not visible (without backcolour)
-      But it sets up the burst menu to know its boundaries
-  */
-  .mobile-menu .burst-menu {
-    position: static;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /*visiblity: hidden;*/
-    overflow: hidden;
-    cursor: pointer;
-    z-index: 0;
-    display:flex;
-    flex-direction:column;
-  }
-
-  /* This is the burst menu background  */
-  /*
-  .mobile-menu .burst-menu > div {
-    background: var(--overlay-color);
-    border-radius: 0;
-    display: flex;
-    flex: none;
-    width:100vw;
-    height:100vh;
-    transform: scale(0);
-    transition: all 0.4s ease;
-  }
-  /*
-
-  /* These is boundary area for the menu - gave it a margin top of 3 em as centering crops some of the menu */
-  /*
-  .mobile-menu .burst-menu > div > div {
-    display:grid;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-  */
-
   .submenu-auto-content {
     margin-left:4em;
   }
@@ -212,10 +77,6 @@ and (orientation: portrait){
     height:43px;
   }
 
-  .mobile-menu .hamburger {
-    margin-top:13px;
-  }
-
   .selectedSubItem, .unselectedSubItem a {
     height:40px;
     font-size:var(--menu-topic-mobile-port-font-size);
@@ -234,10 +95,6 @@ and (orientation: landscape) {
     height:110px;
   }
 
-  .mobile-menu .hamburger {
-    margin-top:30px;
-  }
-
   .selectedSubItem, .unselectedSubItem a {
     font-size:var(--menu-topic-mobile-land-font-size);
   }
@@ -254,10 +111,6 @@ and (orientation: portrait) {
     background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
     background-size: contain;
     height:70px;
-  }
-
-  .mobile-menu .hamburger {
-    margin-top:20px;
   }
 
   .unselectedItem a {
@@ -288,10 +141,6 @@ and (orientation: landscape) {
     height:110px;
   }
 
-  .mobile-menu .hamburger {
-    margin-top:48px;
-  }
-
   .selectedSubItem, .unselectedSubItem a {
     font-size:var(--menu-topic-mobile-land-font-size);
   }
@@ -308,10 +157,6 @@ and (orientation: portrait) {
     background-size: contain;
     height:110px;
 
-  }
-
-  .mobile-menu .hamburger {
-    margin-top:48px;
   }
 
   .selectedSubItem, .unselectedSubItem a {
@@ -331,10 +176,6 @@ and (orientation: portrait) {
     background-size: contain;
     height:110px;
     border-bottom:1px solid #d7e0e7;
-  }
-
-  .mobile-menu .hamburger {
-    margin-top:55px;
   }
 
   .selectedSubItem, .unselectedSubItem a {
@@ -424,7 +265,7 @@ and (orientation: landscape) {
         display: block;
       }
 
-      .mobile-nav {
+      .mobile-menu {
         overflow: hidden;
         background-color: #333;
         position: relative;
@@ -436,7 +277,7 @@ and (orientation: landscape) {
         grid-template-columns: 90% 10%;
       }
 
-      .hamburger-icon {
+      .mobile-menu-icon {
         display: grid;
         grid-column: 2;
         align-content: center;
@@ -500,7 +341,6 @@ and (orientation: landscape) {
         display:inline-block;
         width:20px;
         height:20px;
-
         background:
           linear-gradient(#000 0 0),
           linear-gradient(#000 0 0);

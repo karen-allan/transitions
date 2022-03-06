@@ -27,14 +27,15 @@
     <div class="header-mobile">
         <div class="mobile-top-row">
             <div class="slogan"></div>
-            <div class="hamburger-icon">
+            <div class="mobile-menu-icon">
                 <button class="rotate-button" (click)="toggle()">
-                  <div [@rotatedState]="rotated" class="plus"></div>
+                  <div [@rotatedState]="rotated" class="plus">
+                  </div>
                 </button>
             </div>
         </div>
 
-        <div class="mobile-nav">
+        <div class="mobile-menu">
             <div [@popOverState]="showMenu">
                 <ng-container *ngFor="let menuItem of menuItems">
                     <ng-container *ngIf="menuItemId==menuItem.id">

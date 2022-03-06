@@ -6,6 +6,7 @@ import {
   state,
   style,
   animate,
+  query,
   transition
 } from '@angular/animations';
 
@@ -25,8 +26,10 @@ import {
       transition('hide => show', animate('400ms ease-in'))
     ]),
     trigger('rotatedState', [
-        state('default', style({ transform: 'rotate(0)' })),
-        state('rotated', style({ transform: 'rotate(-135deg)' })),
+        state('default', style({
+          transform: 'rotate(0)'})),
+        state('rotated', style({
+          transform: 'rotate(-135deg)'})),
         transition('rotated => default', animate('400ms ease-out')),
         transition('default => rotated', animate('400ms ease-in'))
       ])
