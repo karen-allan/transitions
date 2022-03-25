@@ -36,11 +36,10 @@ export class Client {
 
         public mainBenefit:string,
         public mainIssues:string,
-
         public mainTreatments:string,
 
         public primaryFocus:string,
-        public medicalHistory:string,
+        public mainConcerns:string,
         public treatments:string,
         public frailty:boolean)
     {}

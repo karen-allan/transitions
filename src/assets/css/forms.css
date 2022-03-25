@@ -1,12 +1,9 @@
+
 /*  BANANA PORTRAIT *******************************************************************************************/
 @media only screen
 and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
-
-    .forms-desktop {
-        display: none;
-    }
 
     .forms-mobile {
         display: block;
@@ -14,23 +11,32 @@ and (orientation: portrait) {
         margin:auto;
     }
 
-    /* REPORTS DETAILS */
-    .form-heading, .form-heading-top {
-        font-size: var(--small-whitney-banana-port-font-size);
+    .forms-desktop {
+        display: none;
     }
 
-    .text-prompt, .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-mobile-port-font-size);
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
+    .full-line p   {
+        font-size: var(--global-big-banana-port-font-size);
     }
 
-    .two-equal-inline-grid, .two-inline-grid-mobile, .two-inline-grid-desktop, .three-inline-grid, .four-inline-grid, .full-width-grid {
-        width: 100%;
-        margin: 0;
+    .text-area {
+        font-size: var(--global-med-banana-port-font-size);
     }
 
-    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col,
-    .last-two-grid-cols, .all-grid-cols, .first-inline-col, .first-inline-mobile-col,.second-inline-col, .third-inline-col        {
-        font-size: var(--global-med-mobile-port-font-size);
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, SESSION MEDICAL */
+    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
+        font-size: var(--global-med-banana-port-font-size);
+        padding:1em .2em;
+    }
+
+    /* DEMOGRAPHICS */
+    .full-text-column {
+        font-size: var(--global-big-banana-port-font-size);
+    }
+
+    .title-background, .title-background-top {
+        font-size: var(--med-whitney-banana-port-font-size);
     }
 
 }
@@ -41,153 +47,173 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-    .forms-desktop {
-        display: none;
-    }
-
     .forms-mobile {
         display: block;
         width: 100%;
         margin:auto;
     }
 
-    /* REPORTS DETAILS */
-    .form-heading, .form-heading-top {
-        font-size: var(--small-whitney-banana-land-font-size);
+    .forms-desktop {
+        display: none;
     }
 
-    .text-prompt, .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-mobile-land-font-size);
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
+    .full-line p   {
+        font-size: var(--global-big-banana-land-font-size);
     }
 
-    .two-equal-inline-grid, .two-inline-grid-mobile, .two-inline-grid-desktop, .three-inline-grid, .four-inline-grid, .full-width-grid {
-        width: 100%;
-        margin: 0;
+    .text-area {
+        font-size: var(--global-med-banana-land-font-size);
     }
 
-    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col,
-    .last-two-grid-cols, .all-grid-cols, .first-inline-col,.first-inline-mobile-col,.second-inline-col, .third-inline-col        {
-        font-size: var(--global-med-mobile-land-font-size);
+    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
+        font-size: var(--global-med-banana-land-font-size);
+        padding:1em 2em 1em 2em;
+    }
+
+    /* DEMOGRAPHICS */
+    .full-text-column {
+        font-size: var(--global-big-banana-land-font-size);
+    }
+
+    .title-background, .title-background-top {
+        font-size: var(--med-whitney-banana-land-font-size);
     }
 
 }
+
 /* MOBILES PORTRAIT ****************************************************************************************************/
 @media only screen
 and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
+    .forms-mobile {
+        display: block;
+        width: 100%;
+        margin:auto;
+    }
+
     .forms-desktop {
         display: none;
     }
 
-    .forms-mobile {
-        display: block;
-        width: 100%;
-        margin: auto;
-    }
-
-    .form-heading, .form-heading-top {
-        font-size: var(--med-whitney-mobile-port-font-size);
-
-    }
-
-    .text-prompt, .top-prompt, .list-prompt, .question-prompt  {
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
+    .full-line p   {
         font-size: var(--global-big-mobile-port-font-size);
     }
 
-    .two-equal-inline-grid, .two-inline-grid-mobile, .two-inline-grid-desktop, .three-inline-grid, .four-inline-grid, .full-width-grid {
-        width: 100%;
-        margin: 0;
-    }
-
-    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col,
-    .last-two-grid-cols, .all-grid-cols, .first-inline-col, .first-inline-mobile-col,.second-inline-col, .third-inline-col        {
+    .text-area  {
         font-size: var(--global-med-mobile-port-font-size);
     }
 
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, SESSION MEDICAL */
+    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
+        font-size: var(--global-med-mobile-port-font-size);
+        padding:1em;
+    }
+
+    /* DEMOGRAPHICS */
+    .full-text-column {
+        font-size: var(--global-big-mobile-port-font-size);
+    }
+
+    .title-background, .title-background-top {
+        font-size: var(--med-whitney-mobile-port-font-size);
+    }
 }
 
-/* MOBILES LANDSCAPE ****************************************************************************************************/
+/*  MOBILES LANDSCAPE **************************************************************************************************/
 @media only screen
-and (min-width: 896px )
+and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
+
+    .forms-mobile {
+        display: block;
+        width: 100%;
+        margin:auto;
+    }
 
     .forms-desktop {
         display: none;
     }
 
-    .forms-mobile {
-        display: block;
-        width: 90%;
-        margin:auto 5%;
-    }
-
-    .form-heading, .form-heading-top {
-        font-size: var(--med-whitney-mobile-land-font-size);
-    }
-
-    .text-prompt, .top-prompt, .list-prompt, .question-prompt  {
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
+    .full-line p   {
         font-size: var(--global-big-mobile-land-font-size);
     }
 
-    .two-equal-inline-grid, .two-inline-grid-mobile, .two-inline-grid-desktop, .three-inline-grid, .four-inline-grid, .full-width-grid {
-        width: 100%;
-        margin: 0;
+    .text-area {
+        font-size: var(--global-med-mobile-land-font-size);
     }
 
-    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col,
-    .last-two-grid-cols, .all-grid-cols, .first-inline-col,.first-inline-mobile-col, .second-inline-col, .third-inline-col        {
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, SESSION MEDICAL */
+    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
         font-size: var(--global-med-mobile-land-font-size);
+        padding:1em;
+    }
+
+    /* DEMOGRAPHICS */
+    .full-text-column {
+        font-size: var(--global-big-mobile-land-font-size);
+    }
+
+    .title-background, .title-background-top {
+        font-size: var(--med-whitney-mobile-land-font-size);
     }
 
 }
 
-/* TABLETS PORTRAIT ****************************************************************************************************/
+/*  TABLETS PORTRAIT *******************************************************************************************/
 @media only screen
 and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
     .forms-mobile {
-        display: none;
+        display: block;
+        width: 100%;
+        margin:auto;
     }
 
     .forms-desktop {
-        display: block;
-        width: 100%;
-        max-width:1152px;
-        margin:auto;
-        border:thin solid var(--color-darkest-blue);
+        display: none;
     }
 
-    /* REPORTS DETAILS */
-    .form-heading, .form-heading-top {
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
+    .full-line p   {
+        font-size: var(--global-big-tablet-port-font-size);
+    }
+
+    .text-area {
+        font-size: var(--global-med-tablet-port-font-size);
+    }
+
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, SESSION MEDICAL */
+    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
+        font-size: var(--global-med-tablet-port-font-size);
+        padding:1em;
+    }
+
+    /* DEMOGRAPHICS */
+    .full-text-column {
+        font-size: var(--global-big-tablet-port-font-size);
+    }
+
+    .title-background, .title-background-top {
         font-size: var(--med-whitney-tablet-port-font-size);
-    }
-
-    .text-prompt, .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-tablet-ipad-port-font-size);
-    }
-
-    .two-equal-inline-grid, .two-inline-grid-mobile, .two-inline-grid-desktop, .three-inline-grid, .four-inline-grid, .full-width-grid {
-        width: 100%;
-        margin: 0;
-    }
-
-    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col,
-    .last-two-grid-cols, .all-grid-cols, .first-inline-col, .first-inline-mobile-col,.second-inline-col, .third-inline-col        {
-        font-size: var(--global-med-tablet-ipad-port-font-size);
     }
 
 }
 
-/* TABLETS LANDSCAPE ***************************************************************************************************/
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
 @media only screen
 and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
+
 
     .forms-mobile {
         display: none;
@@ -196,28 +222,31 @@ and (orientation: landscape) {
     .forms-desktop {
         display: block;
         width: 100%;
-        max-width:1152px;
         margin:auto;
-        border:thin solid var(--color-darkest-blue);
     }
 
-    /* REPORTS DETAILS */
-    .form-heading, .form-heading-top {
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
+    .full-line p   {
+        font-size: var(--global-big-tablet-land-font-size);
+    }
+
+    .text-area {
+        font-size: var(--global-med-tablet-land-font-size);
+    }
+
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT SESSION, SESSION MEDICAL */
+    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
+        font-size: var(--global-med-tablet-land-font-size);
+        padding:1em;
+    }
+
+    /* DEMOGRAPHICS */
+    .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
+        font-size: var(--global-big-tablet-land-font-size);
+    }
+
+    .title-background, .title-background-top {
         font-size: var(--med-whitney-tablet-land-font-size);
-    }
-
-    .text-prompt, .top-prompt, .list-prompt, .question-prompt    {
-        font-size: var(--global-big-tablet-ipad-land-font-size);
-    }
-
-    .two-equal-inline-grid, .two-inline-grid-mobile, .two-inline-grid-desktop, .three-inline-grid, .four-inline-grid, .full-width-grid {
-        width: 90%;
-        margin: 0 5%;
-    }
-
-    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col,
-    .last-two-grid-cols, .all-grid-cols, .first-inline-col, .first-inline-mobile-col,.second-inline-col, .third-inline-col        {
-        font-size: var(--global-med-tablet-ipad-land-font-size);
     }
 
 }
@@ -235,28 +264,31 @@ and (orientation: portrait) {
     .forms-desktop {
         display: block;
         width: 100%;
-        max-width:1152px;
         margin:auto;
-        /*border:thin solid var(--color-darkest-blue);*/
     }
 
-    /* REPORTS DETAILS */
-    .form-heading, .form-heading-top {
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
+    .full-line p   {
+        font-size: var(--global-big-ipad-port-font-size);
+    }
+
+    .text-area {
+        font-size: var(--global-med-ipad-port-font-size);
+    }
+
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT SESSION, SESSION MEDICAL */
+    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
+        font-size: var(--global-med-ipad-port-font-size);
+        padding:1em;
+    }
+
+    /* DEMOGRAPHICS */
+    .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
+        font-size: var(--global-big-ipad-port-font-size);
+    }
+
+    .title-background, .title-background-top {
         font-size: var(--med-whitney-ipad-port-font-size);
-    }
-
-    .two-equal-inline-grid, .two-inline-grid-mobile, .two-inline-grid-desktop, .three-inline-grid, .four-inline-grid, .full-width-grid {
-        width: 100%;
-        margin: 0;
-    }
-
-    .text-prompt, .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-tablet-ipad-port-font-size);
-    }
-
-    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col,
-    .last-two-grid-cols, .all-grid-cols, .first-inline-col, .first-inline-mobile-col,.second-inline-col, .third-inline-col        {
-        font-size: var(--global-med-tablet-ipad-port-font-size);
     }
 
 }
@@ -274,29 +306,32 @@ and (orientation: landscape) {
     .forms-desktop {
         display: block;
         width: 100%;
-        max-width:1152px;
         margin:auto;
-        border:thin solid var(--color-darkest-blue);
     }
 
-    .form-heading, .form-heading-top {
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
+    .full-line p   {
+        font-size: var(--global-big-ipad-land-font-size);
+    }
+
+    .text-area {
+        font-size: var(--global-med-ipad-land-font-size);
+    }
+
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT SESSION, SESSION MEDICAL */
+    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
+        font-size: var(--global-med-ipad-land-font-size);
+        padding:1em;
+    }
+
+    /* DEMOGRAPHICS */
+    .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
+        font-size: var(--global-big-ipad-land-font-size);
+    }
+
+    .title-background, .title-background-top {
         font-size: var(--med-whitney-ipad-land-font-size);
     }
-
-    .text-prompt, .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-tablet-ipad-land-font-size);
-    }
-
-    .two-equal-inline-grid, .two-inline-grid-mobile, .two-inline-grid-desktop, .three-inline-grid, .four-inline-grid, .full-width-grid {
-        width: 90%;
-        margin: 0 5%;
-    }
-
-    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col,
-    .last-two-grid-cols, .all-grid-cols, .first-inline-col, .first-inline-mobile-col,.second-inline-col, .third-inline-col        {
-        font-size: var(--global-med-tablet-ipad-land-font-size);
-    }
-
 }
 
 /* DESKTOPS ****************************************************************************************************/
@@ -310,37 +345,132 @@ and (min-width: 1440px) {
     .forms-desktop {
         display: block;
         width: 100%;
-        max-width:1152px;
         margin:auto;
-        border:thin solid var(--color-darkest-blue);
     }
 
-    .form-heading, .form-heading-top {
-        font-size: var(--big-whitney-desktop-font-size);
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
+    .full-line p   {
+        font-size: var(--global-big-desktop-font-size);
     }
 
-    .text-prompt, .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-laptop-desktop-font-size);
+    .text-area {
+        font-size: var(--global-med-desktop-font-size);
     }
 
-    .two-equal-inline-grid, .two-inline-grid-mobile, .two-inline-grid-desktop, .three-inline-grid, .four-inline-grid, .full-width-grid {
-        width: 90%;
-        margin: 0 5%;
+    /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT SESSION, SESSION MEDICAL */
+    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
+        font-size: var(--global-med-desktop-font-size);
+        padding:1em;
     }
 
-    .first-inline-col, .first-inline-mobile-col, .second-inline-col, .third-inline-col,
-    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col, .all-grid-cols, .last-two-grid-cols {
-        font-size: var(--global-med-laptop-desktop-font-size);
+    /* DEMOGRAPHICS */
+    .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
+        font-size: var(--global-big-desktop-font-size);
     }
 
-
+    .title-background, .title-background-top {
+        font-size: var(--med-whitney-desktop-font-size);
+    }
 }
 
-/* GLOBAL ************************************************************************************************************* */
+/* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-    /* for all forms */
-    .form-heading, .form-heading-top {
+    .forms-desktop, .form-mobile {
+        border-left: thin solid var(--color-grey);
+        border-right: thin solid var(--color-grey);
+        border-bottom: thin solid var(--color-grey);
+    }
+
+    /* THESE ARE THE GRID WRAPPERS FOR THE FORM CONTENT */
+    .full-line {
+        width: 100%;
+        display: grid;
+    }
+
+    .two-even-columns-block {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .three-columns-block {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+    .two-unequal-columns-block {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .four-columns {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 30%  20% 26% 24%;
+    }
+
+    /* THESE ARE THE CONTENT ELEMENTS */
+    .first-text-column, .first-radio-check-column {
+        grid-column: 1;
+    }
+
+    .second-text-column, .second-radio-check-column {
+        grid-column: 2;
+    }
+
+    .third-text-column, .third-radio-check-column {
+        grid-column: 3;
+    }
+
+    .third-fourth-text-column {
+        grid-column: 3/-1;
+    }
+
+    .fourth-text-column {
+        grid-column: 4;
+    }
+
+    .full-text-column, .full-radio-check-column {
+        display: grid;
+        grid-column: 1/-1;
+    }
+
+    /* THESE ARE FOR CONTENT  */
+    .full-line p, .text-area {
+        padding-top: .5em;
+        font-family: var(--family-global);
+        color: var(--color-dark-blue);
+        text-align: left;
+    }
+
+    .full-line p {
+        font-style: italic;
+        padding-left:1em;
+        font-weight:800;
+    }
+
+    .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
+        display:grid;
+        padding-top:1em;
+        font-family: var(--family-global);
+        color: var(--color-dark-blue);
+        text-align:left;
+    }
+    
+    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
+        display:inline;
+        border:1px dashed var(--color-light-blue);
+        font-family: var(--family-global);
+        color: var(--color-dark-blue);
+        text-align:left;
+        margin-bottom:1em;
+    }
+
+    /* for the dark background on all forms */
+    .title-background, .title-background-top {
         display:grid;
         width:100%;
         height: 50px;
@@ -352,122 +482,9 @@ and (min-width: 1440px) {
         color: var(--color-white);
         justify-content: center;
         align-content: center;
-        margin-bottom:1em;
-    }
 
-    .form-heading-top {
-        margin-top:1em;
-    }
-
-    .top-prompt, .list-prompt, .text-prompt, .question-prompt  {
-        width:100%;
-        font-family: var(--family-global);
-        color: var(--color-dark-blue);
-        text-align:left;
-    }
-
-    .top-prompt {
-        padding:0;
-    }
-
-    .list-prompt {
-        padding-top:1em;
-    }
-
-    .text-prompt {
-        padding:1em 0 1em 1em;
-    }
-
-    .question-prompt {
-        padding:1em 0;
-        border-top:thin solid gold;
-    }
-
-    /* the forms for client session and eol consults */
-    .two-equal-inline-grid, .two-inline-grid-mobile, .two-inline-grid-desktop, .three-inline-grid, .four-inline-grid {
-        display: inline-grid;
-    }
-
-    .full-width-grid {
-        display: grid;
-    }
-
-    /* used by mobile forms */
-    .two-inline-grid-mobile {
-        grid-template-columns: 20% 80%;
-    }
-
-    .two-inline-grid-desktop {
-        grid-template-columns: 70% 30%;
-    }
-
-    .two-equal-inline-grid {
-        grid-template-columns: 50% 50%;
-    }
-
-    .three-inline-grid {
-        grid-template-columns: repeat(3, 33.3%);
-    }
-
-    .four-inline-grid {
-        grid-template-columns: 30%  20% 26% 24%;
-    }
-
-    .first-inline-col, .first-inline-mobile-col, .second-inline-col, .third-inline-col,
-    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col, .all-grid-cols, .last-two-grid-cols {
-        padding-top: 1em;
-        font-family: var(--family-global);
-        color: var(--color-dark-blue);
-    }
-
-    .first-grid-col, .second-grid-col, .third-grid-col, .fourth-grid-col, .all-grid-cols, .last-two-grid-cols        {
-        display: grid;
-    }
-
-    .first-grid-col {grid-column:1;}
-    .second-grid-col {grid-column:2;}
-    .third-grid-col {grid-column:3;}
-    .fourth-grid-col {grid-column:4;}
-    .last-two-grid-cols {grid-column:3/-1;}
-    .all-grid-cols {grid-column:1/-1;}
-
-    .first-inline-col, .first-inline-mobile-col, .second-inline-col, .third-inline-col {
-        display:inline;
-        border:1px dashed var(--color-light-blue);
-        padding-bottom:1em;
-        margin-bottom:1em;
-    }
-
-    .first-inline-col {
-        padding-left:2em;
-    }
-
-    .first-inline-mobile-col {
-        padding-left:0;
     }
 
 
 
-}
-
-@media print {
-    /*app-print-client-profile {
-        display: block;
-    }
-
-    app-client-profile {
-        display: none;
-    }
-
-    app-global-menu {
-        display: none;
-    }
-
-    app-global-headers {
-        display: none;
-    }
-
-    .book-detail-menu {
-        display: none !important;
-    }*/
 }

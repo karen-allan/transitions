@@ -1,0 +1,217 @@
+/***************************************************************************************/
+HTML PAGE
+/***************************************************************************************/
+<div class="topic-menu">
+    <div class="topic-menu-items">
+        <div *ngFor="let topicMenuItem of topicMenuItems">
+            <div *ngIf="topicMenuItemId==topicMenuItem.id">
+                <div class="selectedTopicItem">{{topicMenuItem.title}}</div>
+            </div>
+            <div *ngIf="topicMenuItemId!=topicMenuItem.id">
+                <div class="unselectedTopicItem"><a routerLink='/{{topicMenuItem.url}}'>{{topicMenuItem.title}}</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mobile-topic-menu">
+  <ng-container *ngFor="let topicMenuItem of topicMenuItems">
+      <ng-container *ngIf="topicMenuItemId==topicMenuItem.id">
+          <div class="mobile-selectedTopicItem">{{topicMenuItem.title}}</div>
+      </ng-container>
+      <ng-container *ngIf="topicMenuItemId!=topicMenuItem.id">
+          <div class="mobile-unselectedTopicItem"><a routerLink='/{{topicMenuItem.url}}'>{{topicMenuItem.title}}</a></div>
+      </ng-container>
+  </ng-container>
+</div>
+
+/***************************************************************************************/
+TS PAGE
+/***************************************************************************************/
+
+import {Component, Input, OnInit} from '@angular/core';
+import {TOPIC_MENU_ITEMS} from "../ts-files/topicMenuItems";
+import {DataService} from "../service-files/data.service";
+
+
+@Component({
+  selector: 'app-global-topic-menu',
+  templateUrl: './global-topic-menu.component.html',
+  styleUrls: ['./global-topic-menu.component.css']
+})
+export class GlobalTopicMenuComponent implements OnInit {
+
+  @Input() menuItemId: number = 0;
+  @Input() subMenuItemId: number = 0;
+  @Input() topicMenuItemId: number =0;
+
+  topicMenuItems = TOPIC_MENU_ITEMS;
+
+  constructor(private dataService: DataService) { }
+
+  ngOnInit(): void {
+    this.getTopicMenuItems();
+  }
+
+  /***************************************************************************************/
+  getTopicMenuItems(): void {
+    this.dataService.getTopicMenuItems(this.subMenuItemId)
+        .subscribe(itemList => this.topicMenuItems = itemList);
+  }
+
+}
+
+/***************************************************************************************/
+CSS
+/***************************************************************************************/
+
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+  .topic-menu {
+    display: none;
+  }
+
+  .mobile-topic-menu {
+    display: grid;
+    width: 100%
+  }
+
+  .mobile-selectedTopicItem {
+    display: grid;
+    width: 100%;
+    align-content: center;
+    justify-content: flex-start;
+    padding-left: 50px;
+    height: 40px;
+    cursor: default;
+    background-color: var(--color-light-blue);
+    border:thin solid var(--color-off-white);
+  }
+
+  .mobile-unselectedTopicItem {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    align-content: center;
+    justify-content: flex-start;
+    padding-left: 50px;
+    height: 40px;
+    background-color: var(--color-darkest-blue);
+  }
+
+  .mobile-selectedTopicItem, .mobile-unselectedTopicItem a {
+    font-family: var(--family-menu);
+    color:whitesmoke;
+    font-size: var(--menu-sub-topic-mobile-port-font-size);
+  }
+
+  .mobile-unselectedTopicItem a {
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--color-darkest-blue);
+  }
+
+}
+
+
+/* LAPTOPS *****************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width: 1919px) {
+
+  .mobile-topic-menu {
+    display: none;
+  }
+
+}
+
+/* ALL THAT SHOW BIG MENU TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP ********************************/
+@media only screen
+and (min-width: 1280px)
+and (orientation: landscape) {
+
+    /* 1152 is 60% of 1920 */
+
+    .mobile-topic-menu {
+      display: none;
+    }
+
+    .topic-menu {
+        display:grid;
+        width: 100%;
+        margin:auto;
+        height:40px;
+        background-color: var(--color-light-purple);
+        justify-content: center;
+    }
+
+    .topic-menu-items {
+        display:inline-grid;
+        margin:auto;
+        height:40px;
+        grid-template-columns: repeat(6, 192px);
+        justify-content: center;
+        text-align: center;
+    }
+
+    /*.selectedAnchorSubItem a, .selectedNoAnchorSubItem, .unselectedTopicItem a {*/
+    .selectedTopicItem, .unselectedTopicItem a {
+        font-size:var(--menu-topic-laptop-desktop-font-size);
+    }
+}
+
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .selectedTopicItem, .unselectedTopicItem a {
+        display:grid;
+        font-family: var(--family-menu);
+        height:40px;
+        align-content: center;
+        font-weight:400;
+        color:whitesmoke;border:thin solid var(--color-off-white);
+        /*border-left:thin solid var(--color-off-white);*/
+    }
+
+    .selectedTopicItem {
+        background-color: var(--color-light-blue);
+        cursor:default;
+
+    }
+
+    .unselectedTopicItem a {
+        text-decoration: none;
+        cursor: pointer;
+
+    }
+
+
+}
+
+import {TopicMenuItem} from './topicMenuItem';
+
+export const TOPIC_MENU_ITEMS: TopicMenuItem[] = [
+
+  /*  {id: 300, parent_id: 31, title: 'HELP FOR ANXIETY', url: 'energyHelpAnxiety'},
+    {id: 301, parent_id: 31, title: 'HELP FOR BURNOUT', url: 'energyHelpBurnout'},
+    {id: 302, parent_id: 31, title: 'REDUCE PAIN', url: 'energyHelpPain'},
+    {id: 303, parent_id: 31, title: 'MOVE YOUR ENERGY', url: 'energyMoveEnergy'},
+    {id: 304, parent_id: 31, title: 'DISCOVER YOUR ELEMENT', url: 'energyDiscoverElement'},
+    {id: 305, parent_id: 31, title: 'KNOW YOUR MERIDIANS', url: 'energyKnowMeridians'},*/
+
+   /* {id: 310, parent_id: 32, title: 'ADVOCATE FOR YOURSELF', url: 'eolTopicAdvocate'},
+    {id: 311, parent_id: 32, title: 'PICK A REPRESENTATIVE', url: 'eolTopicRepresentatives'},
+    {id: 312, parent_id: 32, title: 'CARE AT BEDSIDE', url: 'eolTopicPatientCare'},
+    {id: 313, parent_id: 32, title: 'HELP FOR CAREGIVERS', url: 'eolTopicCaregiverCare'},
+    {id: 314, parent_id: 32, title: 'LEAVING A LEGACY', url: 'eolTopicLegacy'},
+    {id: 315, parent_id: 32, title: 'CEREMONIAL CHOICES', url: 'eolTopicCeremony'},*/
+
+
+
+];

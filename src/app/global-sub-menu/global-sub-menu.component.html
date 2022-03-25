@@ -1,28 +1,76 @@
-<div class="sub-menu">
-  <div class="sub-menu-items">
-    <div *ngFor="let subMenuItem of subMenuItems">
-      <div *ngIf="subMenuItemId==subMenuItem.id">
-        <div class="selectedSubItem">{{subMenuItem.title}}</div>
-      </div>
-
-      <div *ngIf="subMenuItemId!=subMenuItem.id">
-        <div class="unselectedSubItem"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
-      </div>
+<!-- HOME OR FAQ -->
+<ng-container *ngIf="menuItemId==1 || menuItemId==6">
+    <div class="sub-menu">
+        <div class="sub-menu-items-four">
+            <div class="left-social left-social-icon">
+                <span>Find me:&nbsp;&nbsp;<a href="https://www.instagram.com/karenallan0717" target="_blank">@karenallan0717 on instagram</a></span>
+            </div>
+            <div class="right-social right-social-icon">
+                <span>Email me:&nbsp;&nbsp;<a href="mailto:karen@mindworksEnergyMedicine.com">karen@transitionsInEnergy.com</a></span>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
+</ng-container>
 
-<div class="mobile-sub-menu">
-  <ng-container *ngFor="let subMenuItem of subMenuItems">
-    <ng-container *ngIf="subMenuItemId==subMenuItem.id">
-      <div class="mobile-selectedSubItem">{{subMenuItem.title}}</div>
-      <ng-container *ngIf="topicMenuItemId && topicMenuItemId > 0">
-        <app-global-topic-menu [subMenuItemId]="subMenuItemId" [topicMenuItemId]="topicMenuItemId"></app-global-topic-menu>
+      <!-- ABOUT -->
+      <ng-container *ngIf="menuItemId==2">
+          <div class="sub-menu">
+            <div class="sub-menu-items-three">
+              <div *ngFor="let subMenuItem of subMenuItems">
+                <div *ngIf="subMenuItemId==subMenuItem.id">
+                  <div class="selectedSubItem">{{subMenuItem.title}}</div>
+                </div>
+
+                <div *ngIf="subMenuItemId!=subMenuItem.id">
+                  <div class="unselectedSubItem"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
       </ng-container>
-    </ng-container>
 
-    <div *ngIf="subMenuItemId!=subMenuItem.id">
-      <div class="mobile-unselectedSubItem"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
-    </div>
-  </ng-container>
-</div>
+      <!-- SESSIONS and PLANS-->
+      <ng-container *ngIf="menuItemId==3 || menuItemId==4">
+        <div class="sub-menu">
+          <div class="sub-menu-items-six">
+            <div *ngFor="let subMenuItem of subMenuItems">
+              <div *ngIf="subMenuItemId==subMenuItem.id">
+                <div class="selectedSubItem">{{subMenuItem.title}}</div>
+              </div>
+
+              <div *ngIf="subMenuItemId!=subMenuItem.id">
+                <div class="unselectedSubItem"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- BOOK -->
+      <ng-container *ngIf="menuItemId==5">
+        <div class="sub-menu">
+          <div class="sub-menu-items-two">
+            <div *ngFor="let subMenuItem of subMenuItems">
+              <div *ngIf="subMenuItemId==subMenuItem.id">
+                <div class="selectedSubItem">{{subMenuItem.title}}</div>
+              </div>
+
+              <div *ngIf="subMenuItemId!=subMenuItem.id">
+                <div class="unselectedSubItem"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+      <div class="mobile-sub-menu">
+        <ng-container *ngFor="let subMenuItem of subMenuItems">
+          <ng-container *ngIf="subMenuItemId==subMenuItem.id">
+            <div class="mobile-selectedSubItem">{{subMenuItem.title}}</div>
+          </ng-container>
+
+          <div *ngIf="subMenuItemId!=subMenuItem.id">
+            <div class="mobile-unselectedSubItem"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
+          </div>
+        </ng-container>
+      </div>

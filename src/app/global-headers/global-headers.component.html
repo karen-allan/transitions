@@ -1,301 +1,197 @@
 <div id="headers">
-    <!--    HOME   -->
-    <ng-container *ngIf="detailHeaderName === 'header-home'">
-        <div class="top-heading-background home"></div>
 
-        <div class="top-heading-quotes">
-            <p>&#8220;The special theory of relativity states that mass and energy are just different manifestations of the same thing.&#8220;</p>
-            <span>Albert Einstein</span>
-            <div class="icon"></div>
+<!--    ABOUT   -->
+    <!--ABOUT ENERGY PRACTITIONER -->
+    <ng-container *ngIf="detailHeaderName === 'header-about-energy-practitioner'">
+        <div class="background-images header-about-energy-practitioner">
+            <div class="background-text">
+                <p>&#8220;The day science begins to study non-physical phenomena, it will make more progress in one decade than in all previous centuries.&#8220;
+                    <br>Nicholas Tesla</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--    ABOUT   -->
+    <!--ABOUT END OF LIFE DOULA -->
+    <ng-container *ngIf="detailHeaderName === 'header-about-eol-doula'">
+        <div class="background-images header-about-eol-doula">
+            <div class="background-text">
+                <p>&#8220;Still round the corner, there may wait, a new road or a secret gate.&#8220;
+                    <br>J.R.R. Tolkien</p>
+            </div>
+        </div>
+    </ng-container>
+
     <!--ABOUT ME -->
-    <ng-container *ngIf="detailHeaderName === 'header-about'">
-        <div class="sub-heading-backgrounds about"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Don’t listen to the person who has the answers; listen to the person who has the questions.&#8220;</p>
-            <span>Albert Einstein</span>
-            <div class="icon"></div>
+    <ng-container *ngIf="detailHeaderName === 'header-about-me'">
+        <div class="background-images header-about-me">
+            <div class="background-text">
+                <p>&#8220;Two roads diverged in a wood, and I took the one less traveled by - and that has made all the difference.&#8220;
+                    <br>Robert Frost</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--ABOUT ENERGY MEDICINE -->
-    <ng-container *ngIf="detailHeaderName === 'header-about-energy-medicine'">
-        <div class="sub-heading-backgrounds about-energy-med"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;The day science begins to study non-physical phenomena, it will make more progress in one decade than in all previous centuries.&#8220;</p>
-            <span>Nicholas Tesla</span>
-            <div class="icon"></div>
+<!-- BOOK -->
+    <!-- BOOK CONSULTATION -->
+    <ng-container *ngIf="detailHeaderName === 'header-book-consultation'">
+        <div class="background-images header-book-consultation">
+            <div class="background-text">
+                <p>&#8220;Sometimes the greatest adventure is simply a conversation.&#8220;
+                    <br>Amadeus Wolfe</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--ABOUT END OF LIFE DOULA CARE -->
-    <ng-container *ngIf="detailHeaderName === 'header-about-eol-doula-care'">
-        <div class="sub-heading-backgrounds about-doula-care"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Still round the corner, there may wait, a new road or a secret gate.&#8220;</p>
-            <span>J.R.R. Tolkien</span>
-            <div class="icon"></div>
+    <!--BOOK ENERGY SESSION -->
+    <ng-container *ngIf="detailHeaderName === 'header-book-session'">
+        <div class="background-images header-book-session">
+            <div class="background-text">
+                <p>&#8220;You can't stay in your corner of the forest waiting for others to come to you. You have to go to them sometimes.&#8220;
+                    <br>A. Milne</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--SUPPORT -->
-    <!-- SUPPORT FOR ALL -->
-    <ng-container *ngIf="detailHeaderName === 'header-support'">
-        <div class="sub-heading-backgrounds support-all"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;The nearer a man/woman comes to a calm mind, the closer he/she is to strength.&#8220;</p>
-            <span>Marcus Aurelius</span>
-            <div class="icon"></div>
+<!--DOULA WORK -->
+    <!--CARE FOR PATIENTS -->
+    <ng-container *ngIf="detailHeaderName === 'header-care-for-patients'">
+        <div class="background-images header-care-for-patients">
+            <div class="background-text">
+                <p>&#8220;There is no real ending. It's just a place where you stop the story.&#8220;
+                    <br>Frank Herbert</p>
+            </div>
         </div>
     </ng-container>
 
-    <!-- SUPPORT FOR ENERGY TREATMENTS -->
-    <ng-container *ngIf="detailHeaderName === 'header-support-energy-work'">
-        <div class="sub-heading-backgrounds support-energy-work"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Before you heal someone, ask them if they're willing to give up the things that made them sick.&#8220;</p>
-            <span>Hippocrates</span>
-            <div class="icon"></div>
+    <!--CHOOSE CEREMONY -->
+    <ng-container *ngIf="detailHeaderName === 'header-choose-memorial'">
+        <div class="background-images header-choose-memorial">
+            <div class="background-text">
+                <p>&#8220;Graves cannot contain my spirit; death is not the end of time, though my body turns to ashes, I will rest in peace sublime.&#8220;
+                    <br>Greta Zwaan</p>
+            </div>
         </div>
     </ng-container>
 
-    <!-- SUPPORT FOR DOULA HELP -->
-    <ng-container *ngIf="detailHeaderName === 'header-support-doula-help'">
-        <div class="sub-heading-backgrounds support-doula-work"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;It is natural to die as to be born&#8220;</p>
-            <span>Francis Bacon</span>
-            <div class="icon"></div>
+    <!-- CHOOSE REPRESENTATIVE -->
+    <ng-container *ngIf="detailHeaderName === 'header-choose-representative'">
+        <div class="background-images header-choose-representative">
+            <div class="background-text">
+                <p>&#8220;In the End, we will remember not the words of our enemies, but the silence of our friends .&#8220;
+                    <br>Martin Luther King, Jr.</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--DOULA QUESTIONS -->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-eol-questions'">
-        <div class="sub-heading-backgrounds eol-questions"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;With the new day comes new strengths and new thoughts.&#8220;</p>
-            <span>Eleanor Roosevelt</span>
-            <div class="icon"></div>
+    <!-- CREATE LEGACY -->
+    <ng-container *ngIf="detailHeaderName === 'header-create-legacy'">
+        <div class="background-images header-create-legacy">
+            <div class="background-text">
+                <p>&#8220;To live in the hearts we leave behind is not to die.&#8220;
+                    <br>Thomas Campbell</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--DOULA REPS -->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-eol-reps'">
-        <div class="sub-heading-backgrounds eol-reps"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;The voyage of discovery is not in seeking new landscapes but in having new eyes.&#8220;</p>
-            <span>Marcel Proust</span>
-            <div class="icon"></div>
+    <!--PLAN AHEAD -->
+    <ng-container *ngIf="detailHeaderName === 'header-plan-ahead'">
+        <div class="background-images header-plan-ahead">
+            <div class="background-text">
+                <p>&#8220;By failing to prepare, you are preparing to fail.&#8220;
+                    <br>Benjamin Franklin</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--DOULA ADVOCATE FOR YOURSELF-->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-eol-advocate'">
-        <div class="sub-heading-backgrounds eol-advocate"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Knowledge allows you to be an advocate for yourself.&#8220;</p>
-            <span>Unknown</span>
-            <div class="icon"></div>
+    <!--SUPPORT CAREGIVERS -->
+    <ng-container *ngIf="detailHeaderName === 'header-caregiver-care'">
+        <div class="background-images header-support-caregivers">
+            <div class="background-text">
+                <p>&#8220;Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.&#8220;
+                    <br>Lao Tzu</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--DOULA PATIENT CARE -->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-eol-patient-care'">
-        <div class="sub-heading-backgrounds eol-patient-care"></div>
 
-        <div class="top-heading-quotes">
-            <p>&#8220;Life begins at the end of your comfort zone.&#8220;</p>
-            <span>Unknown</span>
-            <div class="icon"></div>
+<!--ENERGY MEDICINE -->
+    <!--DISCOVER ELEMENT -->
+    <ng-container *ngIf="detailHeaderName === 'header-discover-element'">
+        <div class="background-images header-discover-element">
+            <div class="background-text">
+                <p>&#8220;The voyage of discovery is not in seeking new landscapes but in having new eyes.&#8220;
+                    <br>Marcel Proust</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--DOULA CAREGIVER CARE -->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-eol-caregiver-care'">
-        <div class="sub-heading-backgrounds eol-caregiver-care"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Care for yourself - only then can you care for others.&#8220;</p>
-            <span>Unknown</span>
-            <div class="icon"></div>
+    <!--DO ENERGY EXERCISES -->
+    <ng-container *ngIf="detailHeaderName === 'header-do-energy-exercises'">
+        <div class="background-images header-do-energy-exercises">
+            <div class="background-text">
+                <p>&#8220;It is health that is real wealth and not pieces of gold and silver.&#8220;
+                    <br>Mahatma Gandhi</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--DOULA LEAVING A LEGACY -->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-eol-legacy'">
-        <div class="sub-heading-backgrounds eol-legacy"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Move the energy out of the painful areas to find relief.&#8220;</p>
-            <span>Unknown</span>
-            <div class="icon"></div>
+    <!--LEARN MERIDIANS -->
+    <ng-container *ngIf="detailHeaderName === 'header-trace-meridians'">
+        <div class="background-images header-trace-meridians">
+            <div class="background-text">
+                <p>&#8220;Every moment of our lives we are creating the images and pattens that give our future energy and shape.&#8220;
+                    <br>Edgar Cayce</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--DOULA CEREMONY -->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-eol-ceremony'">
-        <div class="sub-heading-backgrounds eol-legacy"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;CEREMONY Move the energy out of the painful areas to find relief.&#8220;</p>
-            <span>Unknown</span>
-            <div class="icon"></div>
+    <!--REDUCE ANXIETY -->
+    <ng-container *ngIf="detailHeaderName === 'header-reduce-anxiety'">
+        <div class="background-images header-reduce-anxiety">
+            <div class="background-text">
+                <p>&#8220;The nearer a man/woman comes to a calm mind, the closer he/she is to strength.&#8220;
+                    <br>Marcus Aurelius</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--ENERGY HELP ALL -->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-energy-help-all'">
-        <div class="sub-heading-backgrounds energy-help-anxiety"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;The nearer a man/woman comes to a calm mind, the closer he/she is to strength.&#8220;</p>
-            <span>Marcus Aurelius</span>
-            <div class="icon"></div>
+    <!--REDUCE PAIN -->
+    <ng-container *ngIf="detailHeaderName === 'header-decrease-pain'">
+        <div class="background-images header-decrease-pain">
+            <div class="background-text">
+                <p>&#8220;Behind every beautiful thing, there is some kind of pain.&#8220;
+                    <br>Bob Dylan</p>
+            </div>
         </div>
     </ng-container>
 
-    <!--ENERGY HELP ANXIETY -->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-energy-help-anxiety'">
-        <div class="sub-heading-backgrounds energy-help-anxiety"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;The nearer a man/woman comes to a calm mind, the closer he/she is to strength.&#8220;</p>
-            <span>Marcus Aurelius</span>
-            <div class="icon"></div>
-        </div>
-    </ng-container>
-
-    <!--ENERGY HELP BURNOUT -->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-energy-help-burnout'">
-        <div class="sub-heading-backgrounds energy-help-burnout"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;The spirit awakens, the soul revives.&#8220;</p>
-            <span>Lailah Gifty Akita</span>
-            <div class="icon"></div>
-        </div>
-    </ng-container>
-
-    <!--ENERGY HELP INFLAMMATION -->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-energy-help-inflammation'">
-        <div class="sub-heading-backgrounds energy-help-inflammation"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Natural forces within us are the true healers of disease.&#8220;</p>
-            <span>Socrates</span>
-            <div class="icon"></div>
-        </div>
-    </ng-container>
-
-    <!--ENERGY HELP PAIN -->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-energy-help-pain'">
-        <div class="sub-heading-backgrounds energy-help-pain"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Natural forces within us are the true healers of disease.&#8220;</p>
-            <span>Socrates</span>
-            <div class="icon"></div>
-        </div>
-    </ng-container>
-
-    <!--ENERGY HELP EXERCISES -->
-    <ng-container *ngIf="detailHeaderName === 'header-topic-energy-help-exercises'">
-        <div class="sub-heading-backgrounds energy-help-exercises"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Natural forces within us are the true healers of disease.&#8220;</p>
-            <span>Socrates</span>
-            <div class="icon"></div>
-        </div>
-    </ng-container>
-
-    <!--ENERGY HELP KNOW ELEMENT -->
-    <ng-container *ngIf="detailHeaderName === 'discover-element'">
-        <div class="sub-heading-backgrounds energy-discover-element"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Natural forces within us are the true healers of disease.&#8220;</p>
-            <span>Socrates</span>
-            <div class="icon"></div>
-        </div>
-    </ng-container>
-
-    <!--ENERGY HELP KNOW MERIDIANS -->
-    <ng-container *ngIf="detailHeaderName === 'know-meridians'">
-        <div class="sub-heading-backgrounds energy-know-meridians"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;MERIDIANS Natural forces within us are the true healers of disease.&#8220;</p>
-            <span>Socrates</span>
-            <div class="icon"></div>
-        </div>
-    </ng-container>
-
-    <!--    BOOK   -->
-    <!--GENERAL BOOKING INFO -->
-    <ng-container *ngIf="detailHeaderName === 'header-book'">
-        <div class="sub-heading-backgrounds about"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Don’t listen to the person who has the answers; listen to the person who has the questions.&#8220;</p>
-            <span>Albert Einstein</span>
-            <div class="icon"></div>
-        </div>
-    </ng-container>
-
-    <!--DOULA BOOKING INFO -->
-    <ng-container *ngIf="detailHeaderName === 'header-consult'">
-        <div class="sub-heading-backgrounds about"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Don’t listen to the person who has the answers; listen to the person who has the questions.&#8220;</p>
-            <span>Albert Einstein</span>
-            <div class="icon"></div>
-        </div>
-    </ng-container>
-
-    <!--ENERGY BOOKING INFO -->
-    <ng-container *ngIf="detailHeaderName === 'header-session'">
-        <div class="sub-heading-backgrounds about"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Don’t listen to the person who has the answers; listen to the person who has the questions.&#8220;</p>
-            <span>Albert Einstein</span>
-            <div class="icon"></div>
-        </div>
-    </ng-container>
-
-    <!--ENERGY BOOKING INFO -->
-    <ng-container *ngIf="detailHeaderName === 'header-forms'">
-        <div class="sub-heading-backgrounds about"></div>
-
-        <div class="top-heading-quotes">
-            <p>&#8220;Don’t listen to the person who has the answers; listen to the person who has the questions.&#8220;</p>
-            <span>Albert Einstein</span>
-            <div class="icon"></div>
+    <!--RELIEVE BURNOUT -->
+    <ng-container *ngIf="detailHeaderName === 'header-relieve-burnout'">
+        <div class="background-images header-relieve-burnout">
+            <div class="background-text">
+                <p>&#8220;The spirit awakens, the soul revives.&#8220;
+                    <br>Lailah Gifty Akita</p>
+            </div>
         </div>
     </ng-container>
 
     <!--    FAQs   -->
     <ng-container *ngIf="detailHeaderName === 'header-faq'">
-        <div class="sub-heading-backgrounds about"></div>
+        <div class="background-images faqs">
+            <div class="background-text">
+                <p>&#8220;Don’t listen to the person who has the answers; listen to the person who has the questions.&#8220;
+                    <br>Albert Einstein</p>
+            </div>
+        </div>
+    </ng-container>
 
-        <div class="top-heading-quotes">
-            <p>&#8220;Don’t listen to the person who has the answers; listen to the person who has the questions.&#8220;</p>
-            <span>Albert Einstein</span>
-            <div class="icon"></div>
+    <!--    HOME   -->
+    <ng-container *ngIf="detailHeaderName === 'header-home'">
+        <div class="background-images header-home">
+            <div class="background-text">
+                <p>&#8220;The special theory of relativity states that mass and energy are just different manifestations of the same thing.&#8220;
+                    <br>Albert Einstein</p>
+            </div>
         </div>
     </ng-container>
 </div>

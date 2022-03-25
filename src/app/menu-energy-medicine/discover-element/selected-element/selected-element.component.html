@@ -1,0 +1,262 @@
+<div class="content">
+    <div class="inner-content">
+        <div class="clear-heading text-center" style="{{selectedElement.font_color_selected}}">
+            <h4>ARE YOU A {{selectedElement.name.toUpperCase()}}?</h4>
+        </div>
+    <!-- ATTRIBUTES -->
+        <ul class="dark-list " style="{{selectedElement.copy_font_color}}">
+            <li class="list-item">Is your favorite season {{selectedElement.season}}?</li>
+            <li class="list-item">Is your favorite color {{selectedElement.color}}?</li>
+            <li class="list-item">Do you like when the weather is {{selectedElement.weather}}?</li>
+            <li class="list-item">Do you enjoy food that tastes {{selectedElement.taste}}?</li>
+            <li class="list-item">Is your main sense organ your {{selectedElement.sensory_organ}}?</li>
+            <li class="list-item">Would you define yourself as {{selectedElement.aspect}}?</li>
+            <li class="list-item">Is your favorite time {{selectedElement.time_day}}?</li>
+            <li class="list-item">Are your mainly focused &quot;{{selectedElement.focus}}&quot;?</li>
+            <li class="list-item">{{selectedElement.body_type}}?</li>
+            <li class="list-item">{{selectedElement.stress_emotion}}?</li>
+            <li class="list-item">{{selectedElement.positive_traits1}}?</li>
+            <li class="list-item">{{selectedElement.negative_traits1}}?</li>
+            <li class="list-item">{{selectedElement.positive_traits2}}?</li>
+            <li class="list-item">{{selectedElement.negative_traits2}}?</li>
+            <li class="list-item">{{selectedElement.positive_traits3}}?</li>
+            <li class="list-item">{{selectedElement.negative_traits3}}?</li>
+            <li class="list-item">{{selectedElement.positive_traits4}}?</li>
+            <li class="list-item">{{selectedElement.negative_traits4}}?</li>
+            <li class="list-item">{{selectedElement.vital_function}}?</li>
+            <li class="list-item">{{selectedElement.arts}}?</li>
+            <li class="list-item">{{selectedElement.occupations}}?</li>
+            <li class="list-item">{{selectedElement.relationship}}?</li>
+        </ul>
+
+    <!-- STATE -->
+        <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
+            <h4>PHYSICAL SYMPTOMS FOR AN EXCESS OF {{selectedElement.name.toUpperCase()}}:</h4>
+        </div>
+
+        <div class="list-symptoms" style="{{selectedElement.background_color_selected}}">
+            <div *ngFor="let line of selectedElement.excess_physio.physicalExcess">
+                <div class="symptom">
+                    <span>{{line}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
+            <h4>PHYSICAL SYMPTOMS FOR A DEFICIENCY OF {{selectedElement.name.toUpperCase()}}:</h4>
+        </div>
+
+        <div class="list-symptoms" style="{{selectedElement.background_color_selected}}">
+            <div *ngFor="let line of selectedElement.deficient_physio.physicalDeficient">
+                <div class="symptom">
+                    <span>{{line}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
+            <h4>PSYCHOLOGICAL SYMPTOMS FOR AN EXCESS OF {{selectedElement.name.toUpperCase()}}:</h4>
+        </div>
+
+        <div class="list-symptoms" style="{{selectedElement.background_color_selected}}">
+            <div *ngFor="let line of selectedElement.excess_psych.psychExcess">
+                <div class="symptom">
+                    <span>{{line}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
+            <h4>PSYCHOLOGICAL SYMPTOMS FOR A DEFICIENCY OF {{selectedElement.name.toUpperCase()}}:</h4>
+        </div>
+
+        <div class="list-symptoms" style="{{selectedElement.background_color_selected}}">
+            <div *ngFor="let line of selectedElement.deficient_psych.psychDeficient">
+                <div class="symptom">
+                    <span>{{line}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
+            <h4>A BALANCED {{selectedElement.name.toUpperCase()}} ELEMENT:</h4>
+        </div>
+
+        <div class="list-symptoms" style="{{selectedElement.background_color_selected}}">
+            <div *ngFor="let line of selectedElement.balanced_psych.psychBalance">
+                <div class="symptom">
+                    <span>{{line}}</span>
+                </div>
+            </div>
+        </div>
+
+    <!-- CORRECTIONS -->
+        <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
+            <h3>{{selectedElement.name.toUpperCase()}} ELEMENT: CORRECTIONS</h3>
+        </div>
+
+        <div class="dark-copy">
+            If in looking through the lists of imbalances you see symptoms that are chronic for you, you can try
+            some simple methods to bring this energy back into balance. While we as practitioners delve very much deeper
+            into testing and correcting meridian and element imbalances, these methods are used extensively. I hope that in
+            providing these methods, you can also learn how to help balance your energies. And I encourage you
+            go deeper <a routerLink="/intakeClient"> with a 90 minute distance session :).</a>
+            But in the end, you and your own body are the healers so why not start now to learn any or all of
+            these correction methods. You can correct directly for an out of balance element with the following
+            corrections, or you can pick one or more of the meridians that belong to that element and follow the corrections
+            for them.
+        </div>
+
+        <ul class="light-list" style="{{selectedElement.background_color_selected}}">
+            <li class="list-item pad-top">{{selectedElement.name.toUpperCase()}}'S NEURO-VASCULARS.</li>
+            <li class="list-item">{{selectedElement.name.toUpperCase()}} NEUROLYMPHATICS.</li>
+            <li class="list-item  pad-bottom-2">EXERCISES FOR {{selectedElement.name.toUpperCase()}}</li>
+        </ul>
+
+        <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
+            <h4>&#x262f;&nbsp;Reduce Stress with {{selectedElement.name}}'s Neuro-Vasculars</h4>
+        </div>
+
+        <div class="dark-copy">
+            Many of {{selectedElement.name}}'s imbalances are psychological and deal with unresolved issues or
+            problems in your life.
+            There are Neurovascular points that are directly linked to the {{selectedElement.name}} element.
+            Simply hold these
+            points and think about a problem you are experiencing while you breathe and hold. Holding your
+            Neuro-Vasculars for
+            about 5 minutes can help bring blood and Cerebral Spinal Fluid to the Neuro-Vascular points in
+            your head and face. With your fingers acting as magnets you can draw the blood and CSF back up to
+            your Brain. Eventually you
+            will feel the areas start to pulse. As you start to feel the pulsing try to use this added blood
+            volume to re-think
+            your problem. You may find that logic overcomes emotion and solutions may present to you.
+            <br><br>
+            {{selectedElement.nv_points}}
+            Hold these points along with the Main NVs above your eyes, where you can feel a slight protrubence.
+        </div>
+
+        <img alt="Element NVs" class="images" src="{{selectedElement.nv_pic}}">
+
+        <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
+            <h4>&#x262f;&nbsp;Neurolymphatic Massage for {{selectedElement.name}}</h4>
+        </div>
+
+        <div class="dark-copy">
+            {{selectedElement.nl_overview}}
+            <br><br>
+            {{selectedElement.nl_points}}
+        </div>
+
+        <img alt="Element NLs" class="images" src="{{selectedElement.nl_pic}}">
+
+        <div class="clear-heading" style="{{selectedElement.heading_font_color}}">
+            <h4>&#x262f;&nbsp;Exercises for an Unbalanced {{selectedElement.name}}</h4>
+        </div>
+
+        <div class="dark-copy">
+            {{selectedElement.treating_emotion}}
+        </div>
+
+        <div class="dark-copy">
+            Combining sound and movement can assist {{selectedElement.name}} element to rebalance. Add these
+            exercises to your <a routerLink="/energyMoveEnergy">Daily Energy Routine</a> and note any changes in your mood or
+            energy levels.
+        </div>
+
+        <div *ngIf="selectedElement.id==1">
+            <div class="clear-copy pad-top-2" style="{{selectedElement.heading_font_color}}">
+                <b>WATER: Blowing out the Candle (by Donna Eden - Energy Medicine)</b>
+            </div>
+
+            <div class="dark-copy">
+                Sit on the floor and bend your knees so you can circle your arms around them or just cross your
+                arms and place your fingers underneath your armpits. While you look ahead and up at an imaginary or real candle, picture of look at the
+                blue flame. As you do, rock gently back and forth while inhaling deeply and blowing out with an audible WOOOOHH sound.
+                You can also picture all of your fears, worries, concerns, guilty feelings, everything inside
+                this flame. On blowing out the candle you are burning up these negative thoughts and feelings. This will help dispel fear.
+            </div>
+
+            <div class="clear-copy pad-top-2" style="{{selectedElement.heading_font_color}}">
+                <b>WATER: Releasing Toxins (by Donna Eden - Energy Medicine)</b>
+            </div>
+
+            <div class="dark-copy">
+                Again sit on the floor with the soles of your feet touching each other and hold your toes around
+                the outsides of your feet. Holding on, lean back so you are arching your back and stretching your neck.
+                Inhale and then on the exhale bend forward as far as you can.
+            </div>
+        </div>
+
+        <div *ngIf="selectedElement.id==2">
+            <div class="clear-copy pad-top-2" style="{{selectedElement.heading_font_color}}">
+                <b>Expelling the Venom (By Donna Eden - Eden Energy Medicine)</b>
+            </div>
+
+            <div class="dark-copy">
+                Stand with your feet apart. Inhale and lift your arms straight up over your head and make a fist
+                with each hand. Swing your arms down in front of you and as you do, open up your hands and forcefully say
+                SHHHHHHHHH as you swing your arms down to the floor. Repeat again a few times. On the fourth swing move with
+                intensity and intent, letting all of your anger out as you tell the world - SSSSHHHHHHHHH!!!!!
+                As you rise back up, draw your hands up the middle of your trunk to your lips as you inhale.
+                Reach them up to the sky and on the exhale, lay them on your heart.
+            </div>
+        </div>
+
+        <div *ngIf="selectedElement.id==3">
+            <div class="clear-copy pad-top-2" style="{{selectedElement.heading_font_color}}">
+                <b>Taking down the Flame (BY Donna Eden – Eden Energy Medicine)</b>
+            </div>
+
+            <div class="dark-copy">
+                Stand with your hands on your thighs. Inhale as you circle your arms up over your head. Touch
+                your thumbs together as they point down. Exhale, inhale and exhale again all while making a HHAAAAAAA sound. As you exhale
+                slowly move your thumbs down to the top of your head, at the Crown Chakra.
+                Inhale again and on the exhale move your thumbs to your Third Eye Chakra, just between your
+                eyebrows at the center of your forehead. Exhale and HAAAAAAA.
+                Inhale and move to your Heart Chakra and repeat. I like to continue down all chakras, the Solar
+                Plexus (from the bottom ribs to the navel) the Sacral (from the navel to the pubis) and the Root Chakra (from pubis to
+                top of thighs). Once there flatten your hands and smooth them down your inner thighs all while saying HAAA. Trace to the
+                feet and then trace back up along the inner legs and the very center of your trunk. Land on your heart and exhale.
+            </div>
+        </div>
+
+        <div *ngIf="selectedElement.id==4">
+            <div class="clear-copy pad-top-2" style="{{selectedElement.heading_font_color}}">
+                <b>Cradling the Baby (by Donna Eden – Energy Medicine)</b>
+            </div>
+
+            <div class="dark-copy">
+                While standing put your hands over your belly. Pretend your belly is a tender infant that you
+                are cradling. Show it the love. As you cradle yourself, breathe in through the back of your throat and on the out breath make an
+                EHHHHH sound with your throat. Don’t worry about sounding like Darth Vador!
+                Raise your arms up over your head and reach for the sky, one arm and then the other twice on
+                both sides while holding your breath. On the exhale bend over and touch the insides of each foot. Give them a good stretch so your
+                bottom is pointing upwards. Breathing in again trace your hands up the insides of your legs and up the center of your trunk.
+                At the pelvis swing out to your sides and trace up your sides and rub the area at the edges of your rib cage sides.
+            </div>
+        </div>
+
+        <div *ngIf="selectedElement.id==5">
+            <div class="clear-copy pad-top-2" style="{{selectedElement.heading_font_color}}">
+                <b>Humans Touching the Divine (by Donna Eden – Energy Medicine)</b>
+            </div>
+
+            <div class="dark-copy">
+                Stand with your hands on your outer thighs. Exhale, inhale and as you do so raise your arms to
+                your sides and looking up, reach up to the heavens. Think of reaching out to your loved ones as well as the whole world. As you
+                exhale make the SSSSSSSSS sound and draw your arms inward and round yourself, not quite touching, as you ‘hug the world’. Release
+                your sorrow and grief with each out breath. As you inhale, again stretch out your arms as you invite the world into them while making the
+                SSSSS sound again. Exhale and again, fold yourself under to accept the world and all of it’s grief.
+                When you feel ready touch your fingers together on the exhale movement and then trace them up
+                your chest to your Heart Chakra.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+

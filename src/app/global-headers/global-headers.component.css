@@ -6,25 +6,18 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait){
 
-      /* use min width 240 to get 122 height and cover  */
-      .top-heading-home {
-        height:122px;
-      }
-
-      /* use min width 240 to get 56 height and cover  */
-      .sub-heading-backgrounds {
-        height:56px;
-      }
-
-      .top-heading-quotes p {
-        font-size:var(--script-p-banana-port-font-size);
-      }
-
-    .top-heading-quotes span {
-        font-size:var(--script-span-banana-port-font-size);
+    .background-images {
+        height:88px;
     }
 
+    .background-text {
+        width:100%;
+    }
 
+    .background-text p {
+        font-size:var(--quotes-p-banana-port-font-size);
+
+    }
 
 }
 
@@ -34,26 +27,17 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-      /* use min width 568 to get 289 height and cover  */
-      .top-heading-home {
-        height:289px;
-      }
-
-      /* use min width 568 to get 133 height and cover  */
-      .sub-heading-backgrounds {
-        height:133px;
-      }
-
-      .top-heading-quotes p {
-        font-size:var(--script-p-banana-land-font-size);
-      }
-
-    .top-heading-quotes span {
-        font-size:var(--script-span-banana-land-font-size);
+    .background-images {
+        height:207px;
     }
 
-    .icon img {
-        height:30px;
+    .background-text {
+        width:80%;
+    }
+
+    .background-text p {
+        font-size:var(--quotes-p-banana-land-font-size);
+
     }
 
 }
@@ -64,26 +48,17 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-      /* use min width 360 to get 183 height and cover  */
-      .top-heading-home {
-        height:183px;
-      }
-
-      /* use min width 360 to get 84 height and cover  */
-      .sub-heading-backgrounds {
-        height:84px;
-      }
-
-      .top-heading-quotes p {
-        font-size:var(--script-p-mobile-port-font-size);
-      }
-
-    .top-heading-quotes span {
-        font-size:var(--script-span-mobile-port-font-size);
+    .background-images {
+        height:131px;
     }
 
-    .icon img {
-        height:20px;
+    .background-text {
+        width:100%;
+    }
+
+    .background-text p {
+        font-size:var(--quotes-p-mobile-port-font-size);
+
     }
 
 }
@@ -94,26 +69,17 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-      /* use min size 896 to get 456 height and cover */
-      .top-heading-home {
-        height:456px;
-      }
-
-      /* use min width 896 to get 210 height and cover  */
-      .sub-heading-backgrounds {
-        height:210px;
-      }
-
-      .top-heading-quotes p{
-        font-size:var(--script-p-mobile-land-font-size);
-      }
-
-    .top-heading-quotes span {
-        font-size:var(--script-span-mobile-land-font-size);
+    .background-images {
+        height:327px;
     }
 
-    .icon img {
-        height:30px;
+    .background-text {
+        width:80%;
+    }
+
+    .background-text p {
+        font-size:var(--quotes-p-mobile-land-font-size);
+
     }
 
 }
@@ -124,26 +90,17 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-      /* use min size 600 to get 306 height and cover */
-      .top-heading-home {
-        height:456px;
-      }
-
-      /* use min width 600 to get 141 height and cover  */
-      .sub-heading-backgrounds {
-        height:141px;
-      }
-
-      .top-heading-quotes p {
-        font-size:var(--script-p-tablet-port-font-size);
-      }
-
-    .top-heading-quotes span {
-        font-size:var(--script-span-tablet-port-font-size);
+    .background-images {
+        height:219px;
     }
 
-    .icon img {
-        height:30px;
+    .background-text {
+        width:80%;
+    }
+
+    .background-text p {
+        font-size:var(--quotes-p-tablet-port-font-size);
+
     }
 
 }
@@ -154,26 +111,17 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
-      /* use min size 1280 to get 652 height and cover */
-      .top-heading-home {
-        height:652px;
-      }
-
-      /* use min width 1280 to get 300 height and cover  */
-      .sub-heading-backgrounds {
-        height:300px;
-      }
-
-      .top-heading-quotes p {
-        font-size:var(--script-p-tablet-land-font-size);
-      }
-
-    .top-heading-quotes span {
-        font-size:var(--script-span-tablet-land-font-size);
+    .background-images {
+        height:467px;
     }
 
-    .icon img {
-        height:30px;
+    .background-text {
+        width:80%;
+    }
+
+    .background-text p {
+        font-size:var(--quotes-p-tablet-land-font-size);
+
     }
 
 }
@@ -184,27 +132,18 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-      /* use min size 1024 to get 522 height and cover */
-      .top-heading-home {
-        height:522px;
-      }
-
-      /* use min width 1024 to get 240 height and cover  */
-      .sub-heading-backgrounds {
-        height:240px;
-      }
-
-      .top-heading-quotes p  {
-        font-size:var(--script-p-ipad-port-font-size);
-      }
-
-    .top-heading-quotes span  {
-        font-size:var(--script-span-ipad-port-font-size);
+    .background-images {
+        height:373px;
     }
 
-    .icon img {
-        height:40px;
+    .background-text {
+        width:80%;
     }
+
+    .background-text p {
+        font-size:var(--quotes-p-ipad-port-font-size);
+    }
+
 }
 
 /* IPADS LANDSCAPE ***************************************************************************************************/
@@ -213,26 +152,16 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-      /* 1366 x 696 */
-      .top-heading-home {
-        height: 696px;
-      }
-
-      /* 1366 x 320 */
-      .sub-heading-backgrounds {
-        height:320px;
-      }
-
-      .top-heading-quotes p  {
-        font-size:var(--script-p-ipad-land-font-size);
-      }
-
-    .top-heading-quotes span  {
-        font-size:var(--script-span-ipad-land-font-size);
+    .background-images {
+        height:498px;
     }
 
-    .icon img {
-        height:50px;
+    .background-text {
+        width:80%;
+    }
+
+    .background-text p {
+        font-size:var(--quotes-p-ipad-land-font-size);
     }
 
 }
@@ -242,26 +171,17 @@ and (orientation: landscape) {
 and (min-width: 1440px)
 and (max-width:1919px ){
 
-      /* 1440 x 734 */
-      .top-heading-home {
-        height:734px;
-      }
-
-      /* 1440 x 338 */
-      .sub-heading-backgrounds {
-        height:338px;
-      }
-
-      .top-heading-quotes p  {
-        font-size:var(--script-p-laptop-desktop-font-size);
-      }
-
-    .top-heading-quotes span  {
-        font-size:var(--script-span-laptop-desktop-font-size);
+    /* 525 plus sub-menu height 45 */
+    .background-images {
+        height:525px;
     }
 
-    .icon img {
-        height:50px;
+    .background-text {
+        width:80%;
+    }
+
+    .background-text p {
+        font-size:var(--quotes-p-desktop-font-size);
     }
 
 }
@@ -270,171 +190,168 @@ and (max-width:1919px ){
 @media only screen
 and (min-width: 1920px) {
 
-      /* 1920 x 978 */
-      .top-heading-background {
-            height: 978px;
-      }
+    /* 48 is default p and span height plus padding at top of 30 = 78 px PLUS MENUS at 225*
+     700 - 136 */
+        .background-images {
+            height:700px;
+        }
 
-      /* 1920 x 450   */
-      .sub-heading-backgrounds {
-            height:450px;
-      }
+        .background-text {
+            width:80%;
+        }
 
-      .top-heading-quotes p   {
-            font-size:var(--script-p-laptop-desktop-font-size);
-      }
-
-    .top-heading-quotes span  {
-        font-size:var(--script-span-laptop-desktop-font-size);
-    }
-
-    .icon img {
-        height:50px;
-    }
+        .background-text p {
+            font-size:var(--quotes-p-desktop-font-size);
+        }
 
 }
 
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-      .top-heading-background, .sub-heading-backgrounds {
-          display: grid;
-          width: 100%;
-          justify-content: flex-start;
-      }
-
-      .top-heading-quotes {
-          display: block;
-          width: 80%;
-          margin:auto;
-      }
-
-      .top-heading-quotes p, .top-heading-quotes span  {
-          display: grid;
-          width: 100%;
-          font-weight: 400;
-          line-height:100%;
-          font-family: var(--family-script);
-          color: var(--color-dark-blue);
-      }
-
-      .top-heading-quotes p {
-          align-content: center;
-          justify-content: center;
-          padding-top: 1em;
-      }
-
-      .top-heading-quotes span {
-          align-content: flex-start;
-          justify-content: flex-end;
-          font-weight:800;
-      }
-
-      .icon {
-            background: url("src/assets/images/backgrounds/endQuote.gif") no-repeat center;
-            height:25px;
+        .background-images {
+            display:grid;
+            width: 100%;
+            align-content: flex-end;
+            max-width:1920px;
         }
 
-      .home {
-          background: url("src/assets/images/backgrounds/backgroundHomeImage.jpg") no-repeat;
-          background-size: contain;
-      }
+        .background-text {
+            margin:0 auto .5em auto;
+            text-align: center;
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: var(--color-white);
+            z-index: 2;
+            border: 1px solid #f1f1f1;
+         }
 
-      .about {
-          background: url("src/assets/images/backgrounds/backgroundAbout.jpg") no-repeat;
-          background-size: cover;
-      }
+        /* 48 px is the height of the font without padding */
+        .background-text p {
+            font-family: var(--family-mono);
+            font-weight: 400;
+            line-height:150%;
+        }
 
-      .about-energy-med {
-          background: url("src/assets/images/backgrounds/backgroundAboutEnergyMedicine.jpg") no-repeat;
-          background-size: cover;
-      }
+        /* HEADER BACKGROUND IMAGES */
+        .header-home {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/home/home.jpg');
+        }
 
-      .about-doula-care {
-          background: url("src/assets/images/backgrounds/backgroundAboutDoulaCare.jpg") no-repeat;
-          background-size: cover;
-      }
+        /* ABOUT BACKGROUND IMAGES */
+        .header-about-me {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/about/me.jpg');
+        }
 
-      .support-all {
-          background: url("src/assets/images/backgrounds/backgroundSupportAll.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-about-energy-practitioner {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/about/energyPractitioner.jpg');
+        }
 
-      .support-energy-work {
-          background: url("src/assets/images/backgrounds/backgroundSupportEnergyWork.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-about-eol-doula {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/about/eolDoula.jpg');
+        }
 
-      .support-doula-work {
-          background: url("src/assets/images/backgrounds/backgroundSupportDoulaWork.jpg") no-repeat;
-          background-size: cover;
-      }
+        /* ENERGY MEDICINE */
+        .header-reduce-anxiety {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/energyMedicine/reduceAnxiety.jpg');
+        }
 
-      .eol-questions {
-          background: url("src/assets/images/backgrounds/backgroundEOLQuestions.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-relieve-burnout {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/energyMedicine/relieveBurnout.jpg');
+        }
 
-      .eol-reps {
-          background: url("src/assets/images/backgrounds/backgroundEOLReps.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-decrease-pain {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/energyMedicine/decreasePain.jpg');
+        }
 
-      .eol-advocate {
-          background: url("src/assets/images/backgrounds/backgroundEOLAdvocate.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-do-energy-exercises {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/energyMedicine/doEnergyExercises.jpg');
+        }
 
-      .eol-patient-care {
-          background: url("src/assets/images/backgrounds/backgroundEOLPatientCare.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-discover-element {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/energyMedicine/discoverElement.jpg');
+        }
 
-      .eol-caregiver-care {
-          background: url("src/assets/images/backgrounds/backgroundEOLCaregiverCare.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-trace-meridians {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/energyMedicine/traceMeridians.jpg');
+        }
 
-      .eol-legacy {
-          background: url("src/assets/images/backgrounds/backgroundEOLLegacy.jpg") no-repeat;
-          background-size: cover;
-      }
+        /* DOULA WORK */
+        .header-plan-ahead {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/eolDoulaHelp/planAhead.jpg');
+        }
 
-      .energy-help-anxiety {
-          background: url("src/assets/images/backgrounds/backgroundHelpAnxiety.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-choose-representative {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/eolDoulaHelp/chooseRepresentative.jpg');
+        }
 
-      .energy-help-burnout {
-          background: url("src/assets/images/backgrounds/backgroundHelpBurnout.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-support-caregivers {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/eolDoulaHelp/supportCaregivers.jpg');
+        }
 
-      .energy-help-inflammation {
-          background: url("src/assets/images/backgrounds/backgroundHelpFertility.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-care-for-patients {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/eolDoulaHelp/careForPatients.jpg');
+        }
 
-      .energy-help-pain {
-          background: url("src/assets/images/backgrounds/backgroundHelpPain.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-create-legacy {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/eolDoulaHelp/createLegacy.jpg');
+        }
 
-      .energy-help-exercises {
-          background: url("src/assets/images/backgrounds/backgroundHelpProtect.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-choose-memorial {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/eolDoulaHelp/chooseMemorial.jpg');
+        }
 
-      .energy-discover-element {
-          background: url("src/assets/images/backgrounds/backgroundDiscoverElements.jpg") no-repeat;
-          background-size: cover;
-      }
+        /* BOOK */
+        .header-book-session {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/book/session.jpg');
+        }
 
-      .energy-know-meridians {
-          background: url("src/assets/images/backgrounds/backgroundKnowMeridians.jpg") no-repeat;
-          background-size: cover;
-      }
+        .header-book-consultation {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/book/consultation.jpg');
+        }
 
+        /* FREQUENTLY ASKED QUESTIONS */
+        .faqs {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/faq/faqs.jpg');
+        }
 }
 
 

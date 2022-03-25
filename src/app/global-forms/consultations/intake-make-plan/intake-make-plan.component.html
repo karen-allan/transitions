@@ -1,0 +1,375 @@
+<div class="forms-content-block">
+    <form (ngSubmit)="onSubmit()">
+        <div class="forms-desktop">
+            <div class="title-background">
+                Your Concerns and Goals
+            </div>
+
+            <div class="full-line">
+                <p>What would be your main areas of focus for seeking a consultation?</p>
+            </div>
+
+            <div class="two-even-columns-block">
+                <div class="first-radio-check-column">
+                    <input type="checkbox" id="primaryFocus1" [(ngModel)]="model.primaryFocus" value="planFocus1">
+                    <label for="primaryFocus1">
+                        I want to name a Representative for my future care
+                    </label>
+                </div>
+
+                <div class="second-radio-check-column">
+                    <input type="checkbox" id="primaryFocus2" [(ngModel)]="model.primaryFocus" value="planFocus2">
+                    <label for="primaryFocus2">
+                        I want to make an in-depth advanced care plan
+                    </label>
+                </div>
+            </div>
+
+            <div class="two-even-columns-block">
+                <div class="first-radio-check-column">
+                    <input type="checkbox" id="primaryFocus3" [(ngModel)]="model.primaryFocus" value="planFocus3">
+                    <label for="primaryFocus3">
+                        I want to arrange my own ceremonies and legacy projects
+                    </label>
+                </div>
+
+                <div class="second-radio-check-column">
+                    <input type="checkbox" id="primaryFocus4" [(ngModel)]="model.primaryFocus" value="planFocus4">
+                    <label for="primaryFocus4">
+                        I want to know about the logistics of staying home to die
+                    </label>
+                </div>
+            </div>
+
+            <div class="two-even-columns-block">
+                <div class="first-radio-check-column">
+                    <input type="checkbox" id="primaryFocus5" [(ngModel)]="model.primaryFocus" value="planFocus5">
+                    <label for="primaryFocus5">
+                        I want to ensure my financial and estate plans are in order
+                    </label>
+                </div>
+
+                <div class="second-radio-check-column">
+                    <input type="checkbox" id="primaryFocus6" [(ngModel)]="model.primaryFocus" value="planFocus6">
+                    <label for="primaryFocus6">
+                        I want to know about medically assisted death laws in Canada
+                    </label>
+                </div>
+            </div>
+
+            <div class="two-even-columns-block">
+                <div class="first-radio-check-column">
+                    <input type="checkbox" id="primaryFocus7" [(ngModel)]="model.primaryFocus" value="planFocus7">
+                    <label for="primaryFocus7">
+                        I need to discuss these issues with an impartial advocate
+                    </label>
+                </div>
+
+                <div class="second-radio-check-column">
+                    <input type="checkbox" id="primaryFocus8" [(ngModel)]="model.primaryFocus" value="planFocus8">
+                    <label for="primaryFocus8">
+                        I want to know more about care plan safe-keeping and sharing
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <p>Can you expand on what you are looking for related to the above answer?</p>
+            </div>
+
+            <div class="full-line">
+                <textarea rows=6 class="text-area" id="mainConcerns" [(ngModel)]="model.mainIssues"> </textarea>
+            </div>
+
+            <div class="full-line">
+                <p>Please select the one statement that applies to you on the Frailty scale?</p>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="radio" id="ageCondition1" [(ngModel)]="model.frailty" value="frailtyChart1" name="frailty">
+                    <label for="ageCondition1">
+                        You are under 65 and in good health and fitness.
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="radio" id="ageCondition2" [(ngModel)]="model.frailty" value="frailtyChart2" name="frailty">
+                    <label for="ageCondition2">
+                        You have one or more chronic conditions, at any age
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="radio" id="ageCondition3" [(ngModel)]="model.frailty" value="frailtyChart3" name="frailty">
+                    <label for="ageCondition3">
+                        You have a life-threatening illness and your life-expectancy is less than one to two years, at any age:
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="radio" id="ageCondition4" [(ngModel)]="model.aromatherapy" value="frailtyChart4" name="frailty">
+                    <label for="ageCondition4">
+                        You are over 65 and relatively healthy
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="radio" id="ageCondition5" [(ngModel)]="model.aromatherapy" value="frailtyChart5" name="frailty">
+                    <label for="ageCondition5">
+                        You are over 65 and having trouble managing your day-to-day affairs and the activities of daily living
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="radio" id="ageCondition6" [(ngModel)]="model.aromatherapy" value="frailtyChart6" name="frailty">
+                    <label for="ageCondition6">
+                        You are over 75, no matter your state of health
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <p>Do you have certain your wishes and hopes while planning for your future care?</p>
+            </div>
+
+            <div class="full-line">
+                <textarea rows=6 class="text-area" id="mainIssues" [(ngModel)]="model.mainIssues"> </textarea>
+            </div>
+
+            <div class="two-unequal-columns-block">
+                <div class="first-radio-check-column">
+                    Have you designated an Executor and do you have a Will that is up-to-date?
+                </div>
+                <div class="second-radio-check-column">
+                    <input type="radio" value="yes" name="question1" id="question1_yes">
+                    <label for="question1_yes">Yes</label>
+                    <input type="radio" value="no" name="question1" id="question1_no" checked="checked">
+                    <label for="question1_no">No</label>
+                </div>
+            </div>
+
+            <div class="two-unequal-columns-block">
+                <div class="first-radio-check-column">
+                    Do you have your finances in order, know where your life insurance policies are?
+                </div>
+                <div class="second-radio-check-column">
+                    <input type="radio"  value="yes" name="question2" id="question2_yes">
+                    <label for="question2_yes">Yes</label>
+                    <input type="radio" value="no" name="question2" id="question2_no" checked="checked">
+                    <label for="question2_no">No</label>
+                </div>
+            </div>
+
+            <div class="two-unequal-columns-block">
+                <div class="first-radio-check-column">
+                    Have you considered and written down your wishes and beliefs?
+                </div>
+                <div class="second-radio-check-column">
+                    <input type="radio" value="yes" name="question3" id="question3_yes">
+                    <label for="question3_yes">Yes</label>
+                    <input type="radio" value="no" name="question3" id="question3_no" checked="checked">
+                    <label for="question3_no">No</label>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- MOBILE -->
+    <form (ngSubmit)="onSubmit()">
+        <div class="forms-mobile">
+            <div class="title-background margin-top-2">
+                Your Concerns and Goals
+            </div>
+
+            <div class="full-line">
+                <p>What would be your main areas of focus for seeking a consultation?</p>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="checkbox" id="mprimaryFocus1" [(ngModel)]="model.primaryFocus" value="planFocus1">
+                    <label for="mprimaryFocus1">
+                        <span>I want to name a Representative for my future care</span>
+                    </label>
+                </div>
+
+                <div class="first-radio-check-column">
+                    <input type="checkbox" id="mprimaryFocus2" [(ngModel)]="model.primaryFocus" value="planFocus2">
+                    <label for="mprimaryFocus2">
+                        I want to make an in-depth advanced care plan
+                    </label>
+                </div>
+
+                <div class="first-radio-check-column">
+                    <input type="checkbox" id="mprimaryFocus3" [(ngModel)]="model.primaryFocus" value="planFocus3">
+                    <label for="mprimaryFocus3">
+                        I want to arrange my own ceremonies and legacy projects
+                    </label>
+                </div>
+
+                <div class="first-radio-check-column">
+                    <input type="checkbox" id="mprimaryFocus4" [(ngModel)]="model.primaryFocus" value="planFocus4">
+                    <label for="mprimaryFocus4">
+                        I want to know about the logistics of staying home to die
+                    </label>
+                </div>
+
+                <div class="first-radio-check-column">
+                    <input type="checkbox" id="mprimaryFocus5" [(ngModel)]="model.primaryFocus" value="planFocus5">
+                    <label for="mprimaryFocus5">
+                        I want to ensure my financial and estate plans are in order
+                    </label>
+                </div>
+
+                <div class="first-radio-check-column">
+                    <input type="checkbox" id="mprimaryFocus6" [(ngModel)]="model.primaryFocus" value="planFocus6">
+                    <label for="primaryFocus6">
+                        I want to know about medically assisted death laws in Canada
+                    </label>
+                </div>
+
+                <div class="first-radio-check-column">
+                    <input type="checkbox" id="mprimaryFocus7" [(ngModel)]="model.primaryFocus" value="planFocus7">
+                    <label for="primaryFocus7">
+                        I need to discuss these issues with an impartial advocate
+                    </label>
+                </div>
+
+                <div class="first-radio-check-column">
+                    <input type="checkbox" id="mprimaryFocus8" [(ngModel)]="model.primaryFocus" value="planFocus8">
+                    <label for="primaryFocus8">
+                        I want to know more about care plan safe-keeping and sharing
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <p>Can you expand on what you are looking for related to the above answer?</p>
+            </div>
+
+            <div class="full-line">
+                <textarea rows=6 class = "text-area" id="mmainConcerns" [(ngModel)]="model.mainIssues"> </textarea>
+            </div>
+
+            <div class="full-line">
+                <p>Please select the one statement that applies to you on the Frailty scale?</p>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="radio" id="mageCondition1" [(ngModel)]="model.frailty" value="frailtyChart1" name="frailty">
+                    <label for="ageCondition1">
+                        You are under 65 and in good health and fitness.
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="radio" id="mageCondition2" [(ngModel)]="model.frailty" value="frailtyChart2" name="frailty">
+                    <label for="ageCondition2">
+                        You have one or more chronic conditions, at any age
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="radio" id="mageCondition3" [(ngModel)]="model.frailty" value="frailtyChart3" name="frailty">
+                    <label for="ageCondition3">
+                        You have a life-threatening illness and your life-expectancy is less than one to two years, at any age:
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="radio" id="mageCondition4" [(ngModel)]="model.aromatherapy" value="frailtyChart4" name="frailty">
+                    <label for="ageCondition4">
+                        You are over 65 and relatively healthy
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="radio" id="mageCondition5" [(ngModel)]="model.aromatherapy" value="frailtyChart5" name="frailty">
+                    <label for="ageCondition5">
+                        You are over 65 and having trouble managing your day-to-day affairs and the activities of daily living
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    <input type="radio" id="mageCondition6" [(ngModel)]="model.aromatherapy" value="frailtyChart6" name="frailty">
+                    <label for="ageCondition6">
+                        You are over 75, no matter your state of health
+                    </label>
+                </div>
+            </div>
+
+            <div class="full-line">
+                <p>Do you have certain your wishes and hopes while planning for your future care?</p>
+            </div>
+
+            <div class="full-line">
+                <textarea rows=6 class="text-area" id="mmainIssues" [(ngModel)]="model.mainIssues"> </textarea>
+            </div>
+
+            <div class="full-line">
+                <div class="first-radio-check-column">
+                    Have you designated an Executor and do you have a Will that is up-to-date?
+                    <br><br>
+                    <input type="radio" value="yes" name="question1" id="m-question1_yes">
+                    <label for="m-question1_yes">Yes</label>
+                    <input type="radio" value="no" name="question1" id="m-question1_no" checked="checked">
+                    <label for="m-question1_no">No</label>
+                </div>
+
+                <div class="first-radio-check-column">
+                    Do you have your finances in order, know where your life insurance policies are?
+                    <br><br>
+                    <input type="radio"  value="yes" name="question2" id="m-question2_yes">
+                    <label for="m-question2_yes">Yes</label>
+                    <input type="radio" value="no" name="question2" id="m-question2_no" checked="checked">
+                    <label for="m-question2_no">No</label>
+                </div>
+
+                <div class="first-radio-check-column">
+                    Have you considered and written down your wishes and beliefs?
+                    <br><br>
+                    <input type="radio" value="yes" name="question3" id="m-question3_yes">
+                    <label for="m-question3_yes">Yes</label>
+                    <input type="radio" value="no" name="question3" id="m-question3_no" checked="checked">
+                    <label for="m-question3_no">No</label>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -6,7 +6,7 @@ import {
   state,
   style,
   animate,
-  query,
+  //query,
   transition
 } from '@angular/animations';
 
@@ -22,16 +22,16 @@ import {
       state('hide',   style({
         height: 0
       })),
-      transition('show => hide', animate('400ms ease-out')),
-      transition('hide => show', animate('400ms ease-in'))
+      transition('show => hide', animate('300ms ease-out')),
+      transition('hide => show', animate('300ms ease-in'))
     ]),
     trigger('rotatedState', [
         state('default', style({
           transform: 'rotate(0)'})),
         state('rotated', style({
           transform: 'rotate(-135deg)'})),
-        transition('rotated => default', animate('400ms ease-out')),
-        transition('default => rotated', animate('400ms ease-in'))
+        transition('rotated => default', animate('300ms ease-out')),
+        transition('default => rotated', animate('300ms ease-in'))
       ])
   ]
 })
@@ -57,7 +57,15 @@ export class GlobalMenuComponent implements OnInit {
     return this.show ? 'rotated' : 'default'
   }
 
+ /* toggle(x) {
+    alert('am in myfuncito');
+
+    x.classList.toggle("change");
+    this.show = !this.show;
+  }*/
+
   toggle() {
+  //  alert('am in myfuncito');
     this.show = !this.show;
   }
 

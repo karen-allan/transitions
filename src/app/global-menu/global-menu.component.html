@@ -2,35 +2,63 @@
     <div class="header-desktop">
         <div class="slogan"></div>
 
-        <div class="menu">
-            <div class="menu-items">
+        <div class="desktop-menu">
+            <div class="desktop-menu-items">
                 <div *ngFor="let menuItem of menuItems">
                     <div *ngIf="menuItemId==menuItem.id">
-                        <div class="selectedItem">{{menuItem.title}}</div>
+                        <div class="desktop-selected-item">{{menuItem.title}}</div>
                     </div>
 
                     <div *ngIf="menuItemId!=menuItem.id">
-                        <div class="unselectedItem"><a routerLink='/{{menuItem.url}}'>{{menuItem.title}}</a></div>
+                        <div class="desktop-unselected-item"><a routerLink='/{{menuItem.url}}'>{{menuItem.title}}</a></div>
                     </div>
                 </div>
             </div>
         </div>
-        <ng-container *ngIf="subMenuItemId && subMenuItemId > 0">
-          <app-global-sub-menu [menuItemId]="menuItemId" [subMenuItemId]="subMenuItemId" [topicMenuItemId]="topicMenuItemId"></app-global-sub-menu>
-          <ng-container *ngIf="topicMenuItemId && topicMenuItemId > 0">
-            <app-global-topic-menu [subMenuItemId]="subMenuItemId" [topicMenuItemId]="topicMenuItemId"></app-global-topic-menu>
-          </ng-container>
-        </ng-container>
+
+        <app-global-sub-menu [menuItemId]="menuItemId" [subMenuItemId]="subMenuItemId" [topicMenuItemId]="topicMenuItemId"></app-global-sub-menu>
     </div>
 
+     <div class="header-mobile">
+       <div class="header-mobile-grid">
+           <div class="slogan"></div>
+           <div class="mobile-menu-icon">
+               <a (click)="toggle()">
+                   <div class="bar1"></div>
+                   <div class="bar2"></div>
+                   <div class="bar3"></div>
+               </a>
+           </div>
+       </div>
 
+
+        <div class="mobile-menu">
+            <div [@popOverState]="showMenu">
+                <ng-container *ngFor="let menuItem of menuItems">
+                    <ng-container *ngIf="menuItemId==menuItem.id">
+                      <div class="mobile-selected-item">
+                        {{menuItem.title}}
+                      </div>
+                      <ng-container *ngIf="subMenuItemId && subMenuItemId > 0">
+                        <app-global-sub-menu [menuItemId]="menuItemId" [subMenuItemId]="subMenuItemId" [topicMenuItemId]="topicMenuItemId"></app-global-sub-menu>
+                      </ng-container>
+                    </ng-container>
+
+                    <div *ngIf="menuItemId!=menuItem.id" class="mobile-unselected-item">
+                      <a routerLink='/{{menuItem.url}}'>{{menuItem.title}}</a>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+     </div>
+    <!--
     <div class="header-mobile">
         <div class="mobile-top-row">
             <div class="slogan"></div>
             <div class="mobile-menu-icon">
                 <button class="rotate-button" (click)="toggle()">
-                  <div [@rotatedState]="rotated" class="plus">
-                  </div>
+                    <div [@rotatedState]="rotated" class="plus">
+                    </div>
                 </button>
             </div>
         </div>
@@ -39,20 +67,21 @@
             <div [@popOverState]="showMenu">
                 <ng-container *ngFor="let menuItem of menuItems">
                     <ng-container *ngIf="menuItemId==menuItem.id">
-                      <div class="mobile-selectedItem">
-                        {{menuItem.title}}
-                      </div>
-                      <ng-container *ngIf="subMenuItemId && subMenuItemId > 0">
-                        <app-global-sub-menu [menuItemId]="menuItemId" [subMenuItemId]="subMenuItemId" [topicMenuItemId]="topicMenuItemId"></app-global-sub-menu>
-                      </ng-container>
+                        <div class="mobile-selectedItem">
+                            {{menuItem.title}}
+                        </div>
+                        <ng-container *ngIf="subMenuItemId && subMenuItemId > 0">
+                            <app-global-sub-menu [menuItemId]="menuItemId" [subMenuItemId]="subMenuItemId" [topicMenuItemId]="topicMenuItemId"></app-global-sub-menu>
+                        </ng-container>
                     </ng-container>
 
                     <div *ngIf="menuItemId!=menuItem.id" class="mobile-unselectedItem">
-                      <a routerLink='/{{menuItem.url}}'>{{menuItem.title}}</a>
+                        <a routerLink='/{{menuItem.url}}'>{{menuItem.title}}</a>
                     </div>
                 </ng-container>
             </div>
         </div>
-
     </div>
+
+    -->
 </div>

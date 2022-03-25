@@ -1,0 +1,202 @@
+
+<div class="content">
+    <div class="dark-heading text-center">
+        <h3>The Current Time: {{now}} is {{currentTimeElement.name}} Time</h3>
+    </div>
+
+    <!-- WHEEL -->
+    <div class="inner-content">
+        <div class="element-wheel">
+            <div class="element-grid">
+                <div class="element-inline-grid">
+    <!--    ROW 1 -->
+                    <div class="wood-to-fire-arrow">
+                        <img src="../../../../assets/images/energyMedicine/elements/wood/woodToFire.gif" title="Wood Strengthens Fire" alt="Wood Strengthens Fire" class="cursorPointer"/>
+                    </div>
+
+                    <div class="fire-element">
+                        <div *ngIf="elementSelected != 'triggeredFireElement'">
+                            <a (click)="this.getElement(3)">
+                                <div class="element-name-button backcolor-fire-active">
+                                    <span>FIRE</span>
+                                    <br>
+                                    <img src="../../../../assets/images/energyMedicine/elements/fire/fireElement.gif" title="FIRE" alt="FIRE" class="cursorPointer"/>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div *ngIf="elementSelected === 'triggeredFireElement'">
+                            <div class="element-name-button backcolor-fire-selected">
+                                <span>FIRE</span>
+                                <br>
+                                <img src="../../../../assets/images/energyMedicine/elements/fire/fireElement.gif" title="FIRE" alt="FIRE" class="cursorPointer"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fire-to-earth-arrow">
+                        <img src="../../../../assets/images/energyMedicine/elements/fire/fireToEarth.gif" title="FIRE" alt="FIRE" class="cursorPointer"/>
+                    </div>
+
+    <!--            ROW 2-->
+                    <div class="wood-element">
+                        <div *ngIf="elementSelected != 'triggeredWoodElement'">
+                            <a (click)="this.getElement(2)">
+                                <div class="element-name-button backcolor-wood-active">
+                                    <span>WOOD</span>
+                                    <br>
+                                    <img src="../../../../assets/images/energyMedicine/elements/wood/woodElement.gif" title="WOOD" alt="WOOD" class="cursorPointer"/>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div *ngIf="elementSelected === 'triggeredWoodElement'">
+                            <a (click)="this.getElement(2)">
+                                <div class="element-name-button backcolor-wood-selected">
+                                    <span>WOOD</span>
+                                    <br>
+                                    <img src="../../../../assets/images/energyMedicine/elements/wood/woodElement.gif" title="WOOD" alt="WOOD" class="cursorPointer"/>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="center-element"><span>THE FIVE ELEMENT WHEEL</span></div>
+
+                    <div class="earth-element">
+                        <div *ngIf="elementSelected != 'triggeredEarthElement'">
+                            <a (click)="this.getElement(4)">
+                                <div class="element-name-button backcolor-earth-active">
+                                    <span>EARTH</span>
+                                    <br>
+                                    <img src="../../../../assets/images/energyMedicine/elements/earth/earthElement.gif" title="EARTH" alt="EARTH" class="cursorPointer"/>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div *ngIf="elementSelected === 'triggeredEarthElement'">
+                            <a (click)="this.getElement(4)">
+                                <div class="element-name-button backcolor-earth-selected">
+                                    <span>EARTH</span>
+                                    <br>
+                                    <img src="../../../../assets/images/energyMedicine/elements/earth/earthElement.gif" title="EARTH" alt="EARTH" class="cursorPointer"/>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+    <!--                 ROW 3 -->
+                    <div class="water-to-wood-arrow">
+                        <img src="../../../../assets/images/energyMedicine/elements/water/waterToWood.gif" title="Water Strengthens Wood" alt="Water Strengthens Wood" class="cursorPointer"/>
+                    </div>
+
+                    <div class="earth-to-metal-arrow">
+                        <img src="../../../../assets/images/energyMedicine/elements/earth/earthToMetal.gif" title="Earth Strengthens Metal" alt="Earth Strengthens Metal"
+                             class="cursorPointer"/>
+                    </div>
+
+    <!--                ROW 4 -->
+                    <div class="water-element">
+                        <div *ngIf="elementSelected != 'triggeredWaterElement'">
+                            <a (click)="this.getElement(1)">
+                                <div class="element-name-button backcolor-water-active">
+                                    <span>WATER</span>
+                                    <br>
+                                    <img src="../../../../assets/images/energyMedicine/elements/water/waterElement.gif" title="WATER" alt="WATER" class="cursorPointer"/>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div *ngIf="elementSelected === 'triggeredWaterElement'">
+                            <a (click)="this.getElement(1)">
+                                <div class="element-name-button backcolor-water-selected">
+                                    <span>WATER</span>
+                                    <br>
+                                    <img src="../../../../assets/images/energyMedicine/elements/water/waterElement.gif" title="WATER" alt="WATER" class="cursorPointer"/>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="metal-to-water-arrow">
+                        <img src="../../../../assets/images/energyMedicine/elements/metal/metalToWater.gif" title="Metal Strengthens Water" alt="Metal Strengthens Water"
+                             class="cursorPointer"/>
+                    </div>
+
+                    <div class="metal-element">
+                        <div *ngIf="elementSelected != 'triggeredMetalElement'">
+                            <a (click)="this.getElement(5)">
+                                <div class="element-name-button backcolor-metal-active">
+                                    <span>METAL</span>
+                                    <br>
+                                    <img src="../../../../assets/images/energyMedicine/elements/metal/metalElement.gif" title="METAL" alt="METAL" class="cursorPointer">
+                                </div>
+                            </a>
+                        </div>
+
+                        <div *ngIf="elementSelected === 'triggeredMetalElement'">
+                            <a (click)="this.getElement(5)">
+                                <div class="element-name-button backcolor-metal-selected">
+                                    <span>METAL</span>
+                                    <br>
+                                    <img src="../../../../assets/images/energyMedicine/elements/metal/metalElement.gif" title="METAL" alt="METAL" class="cursorPointer">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="element-block">
+            <div class = "element-title" style="{{selectedElement.font_color_selected}}">
+                THE NATURE OF {{selectedElement.name.toUpperCase()}}
+            </div>
+
+            <div class="element-inline-header" style="{{selectedElement.background_color_selected}}">
+                <div class="element-icon">
+                    <img alt="Element Icon" src={{selectedElement.icon}}>&nbsp;&nbsp;&nbsp;
+                </div>
+
+                <div class="element-verb">
+                    {{selectedElement.name}}: {{selectedElement.verb}} - Energy:{{selectedElement.overall}}
+                </div>
+            </div>
+
+            <div class="element-image">
+                <img alt="Element Image" src={{selectedElement.bkgrd_image}}>
+            </div>
+
+            <div class="element-time" style="{{selectedElement.copy_font_color}}">
+                <p>THE {{selectedElement.name.toUpperCase()}} ELEMENT IS ACTIVE DURING:</p>
+
+                <div class="time-range">
+                    <div *ngIf="elementSelected != 'triggeredFireElement'">
+                        {{selectedElement.time_range_yang_1}}
+                        <br>
+                        {{selectedElement.time_range_yin_1}}
+                    </div>
+                    <div *ngIf="elementSelected === 'triggeredFireElement'">
+                        {{selectedElement.time_range_yang_1}} and
+                        {{selectedElement.time_range_yin_1}}
+                        <br> AND
+                        {{selectedElement.time_range_yang_2}} and
+                        {{selectedElement.time_range_yin_2}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="element-meridian-intro"  style="{{selectedElement.copy_font_color}}">
+                <p><b>{{selectedElement.overall.toUpperCase()}} {{selectedElement.name.toUpperCase()}}:</b>&nbsp;{{selectedElement.summary_yin}}</p>
+                <p><b>{{selectedElement.overall.toUpperCase()}} {{selectedElement.name.toUpperCase()}}:</b>&nbsp;{{selectedElement.summary_yang}}</p>
+                <p><b>{{selectedElement.name.toUpperCase()}} POWER ANIMALS:</b>&nbsp;{{selectedElement.power_animals}}</p>
+                <p><b>{{selectedElement.name.toUpperCase()}} SUPPORTS:</b>&nbsp;{{selectedElement.attributes}}</p>
+                <p><b>{{selectedElement.name.toUpperCase()}} GOVERNS:</b>&nbsp;{{selectedElement.governs}}</p>
+                <p><b>{{selectedElement.name.toUpperCase()}} ARCHETYPES:</b>&nbsp;{{selectedElement.archetypes}}</p>
+                <p><b>{{selectedElement.name.toUpperCase()}} MERIDIANS:</b>&nbsp;{{selectedElement.meridians}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-selected-element [selectedElement]="selectedElement"></app-selected-element>

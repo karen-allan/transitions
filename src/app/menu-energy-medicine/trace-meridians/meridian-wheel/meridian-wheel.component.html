@@ -1,0 +1,120 @@
+<div class="content">
+    <div class="inner-content">
+        <div class="dark-heading">
+            <h4>Click on any Meridian to learn more about it.</h4>
+        </div>
+    </div>
+
+    <div class="meridian-wheel">
+        <div class="meridian-wheel-grid">
+            <!-- ROW 1-->
+            <div class="mer-grid-row-1">
+                <div class="mer-grid-row-1-col-1"></div>
+                <div class="mer-grid-row-1-col-2"></div>
+                <div class="mer-grid-row-1-col-3"></div>
+                <div class="mer-grid-row-1-col-4"></div>
+                <div class="mer-grid-row-1-col-5"></div>
+                <div class="mer-grid-row-1-col-6"></div>
+                <div class="mer-grid-row-1-col-7"></div>
+            </div>
+
+            <!-- ROW 2 -->
+            <div class="mer-grid-row-2">
+                <div class="mer-heart">
+                    <a (click)="this.getMeridianSummary(11 )">
+                        <div class="round-button">{{meridians[10].short.toUpperCase()}}</div>
+                    </a>
+                </div>
+            </div>
+
+            <!--  ROW 3 -->
+            <div class="mer-grid-row-3">
+                <div class="mer-spleen">
+                   <a (click)="this.getMeridianSummary(10 )">
+                        <div class="round-button">{{meridians[9].short.toUpperCase()}}</div>
+                   </a>
+                </div>
+
+                <div class="mer-small-intestine">
+                    <a (click)="this.getMeridianSummary(12 )">
+                        <div class="round-button">{{meridians[11].short.toUpperCase()}}</div>
+                    </a>
+                </div>
+            </div>
+
+            <!--  ROW 4-->
+            <div class="mer-grid-row-4">
+                <div class="mer-stomach">
+                    <a (click)="this.getMeridianSummary(9 )">
+                        <div class="round-button">{{meridians[8].short.toUpperCase()}}</div>
+                    </a>
+                </div>
+
+                <div class="mer-bladder">
+                    <a (click)="this.getMeridianSummary(1 )">
+                        <div class="round-button">{{meridians[0].short.toUpperCase()}}</div>
+                    </a>
+                </div>
+            </div>
+
+            <!--   ROW 5-->
+            <div class="mer-grid-row-5">
+                <div class="mer-large-intestine">
+                    <a (click)="this.getMeridianSummary(8 )">
+                        <div class="round-button">{{meridians[7].short.toUpperCase()}}</div>
+                    </a>
+                </div>
+
+                <div class="mer-kidney">
+                    <a (click)="this.getMeridianSummary(2 )">
+                        <div class="round-button">{{meridians[1].short.toUpperCase()}}</div>
+                    </a>
+                </div>
+            </div>
+
+            <!--   ROW 6-->
+            <div class="mer-grid-row-6">
+                <div class="mer-lung">
+                    <a (click)="this.getMeridianSummary(7 )">
+                        <div class="round-button">{{meridians[6].short.toUpperCase()}}</div>
+                    </a>
+                </div>
+
+                <div class="mer-pericardium">
+                    <a (click)="this.getMeridianSummary(3 )">
+                        <div class="round-button">{{meridians[2].short.toUpperCase()}}</div>
+                    </a>
+                </div>
+            </div>
+
+            <!--   ROW 7-->
+            <div class="mer-grid-row-7">
+                <div class="mer-liver">
+                    <a (click)="this.getMeridianSummary(6 )">
+                        <div class="round-button">{{meridians[5].short.toUpperCase()}}</div>
+                    </a>
+                </div>
+
+                <div class="mer-triple-warmer">
+                    <a (click)="this.getMeridianSummary(4 )">
+                        <div class="round-button">{{meridians[3].short.toUpperCase()}}</div>
+                    </a>
+                </div>
+            </div>
+
+            <!--   ROW 8-->
+            <div class="mer-grid-row-8">
+                <div class="mer-gallbladder">
+                    <a (click)="this.getMeridianSummary(5 )">
+                        <div class="round-button">{{meridians[4].short.toUpperCase()}}</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="selectedMeridian">
+    <app-selected-meridian [selectedMeridian]="selectedMeridian"></app-selected-meridian>
+</div>
+

@@ -1,76 +1,67 @@
 import { NgModule } from '@angular/core';
 import {Routes, RouterModule, ExtraOptions} from '@angular/router';
 
-import { AboutContainerComponent } from './about-menu/about-container/about-container.component';
-import { AboutEolDoulaContainerComponent } from './about-menu/about-doula/about-eol-doula-container/about-eol-doula-container.component';
-import { AboutEnergyPractContainerComponent } from './about-menu/about-energy/about-energy-pract-container/about-energy-pract-container.component';
+import { AboutEnergyPractContainerComponent } from './menu-about/about-energy-practitioner/about-energy-pract-container/about-energy-pract-container.component';
+import { AboutEolDoulaContainerComponent } from './menu-about/about-eol-doula/about-eol-doula-container/about-eol-doula-container.component';
+import { AboutMeContainerComponent } from './menu-about/about-me/about-me-container/about-me-container.component';
 
-import { HomeContainerComponent } from './home-menu/home-container/home-container.component';
+import { BookConsultationContainerComponent } from './menu-book/book-consultation/book-consultation-container/book-consultation-container.component';
+import { BookSessionContainerComponent } from './menu-book/book-session/book-session-container/book-session-container.component';
 
-import { AllSupportContainerComponent } from './support-menu/all-support-container/all-support-container.component';
 
-import { DoulaHelpContainerComponent } from './support-menu/support-doula/doula-help-container/doula-help-container.component';
-import { TopicAdvocateContainerComponent } from './support-menu/support-doula/doula-topics/advocate/topic-advocate-container/topic-advocate-container.component';
-import { TopicCaregiverCareContainerComponent } from './support-menu/support-doula/doula-topics/caregiver/topic-caregiver-care-container/topic-caregiver-care-container.component';
-import { TopicLegacyContainerComponent } from './support-menu/support-doula/doula-topics/legacy/topic-legacy-container/topic-legacy-container.component';
-import { TopicPatientCareContainerComponent } from './support-menu/support-doula/doula-topics/patient/topic-patient-care-container/topic-patient-care-container.component';
-import { TopicRepresentativeContainerComponent } from './support-menu/support-doula/doula-topics/representative/topic-representative-container/topic-representative-container.component';
+import { ChooseMemorialContainerComponent } from './menu-doula-work/choose-memorial/choose-memorial-container/choose-memorial-container.component';
 
-import { TopicHelpAnxietyContainerComponent } from './support-menu/support-energy/energy-topics/anxiety/topic-help-anxiety-container/topic-help-anxiety-container.component';
-import { TopicHelpBurnoutContainerComponent } from './support-menu/support-energy/energy-topics/burnout/topic-help-burnout-container/topic-help-burnout-container.component';
-import { TopicHelpPainContainerComponent } from './support-menu/support-energy/energy-topics/pain/topic-help-pain-container/topic-help-pain-container.component';
-import { TopicMoveEnergyContainerComponent } from './support-menu/support-energy/energy-topics/move/topic-move-energy-container/topic-move-energy-container.component';
-import { TopicKnowMeridiansContainerComponent } from './support-menu/support-energy/energy-topics/meridians/topic-know-meridians-container/topic-know-meridians-container.component';
-import { TopicCeremonyContainerComponent } from './support-menu/support-doula/doula-topics/ceremony/topic-ceremony-container/topic-ceremony-container.component';
-import { EnergyHelpContainerComponent } from './support-menu/support-energy/energy-help-container/energy-help-container.component';
-import { TopicDiscoverElementContainerComponent } from './support-menu/support-energy/energy-topics/elements/topic-discover-element-container/topic-discover-element-container.component';
-import { BookContainerComponent } from './book-menu/book-container/book-container.component';
-import { BookConsultContainerComponent } from './book-menu/book-consultation/book-consult-container/book-consult-container.component';
-import { BookSessionContainerComponent } from './book-menu/book-session/book-session-container/book-session-container.component';
-import { FaqContainerComponent } from './faq-menu/faq-container/faq-container.component';
-import { FormsContainerComponent } from './global-forms/forms-container/forms-container.component';
+import { ChooseRepresentativeContainerComponent } from './menu-doula-work/choose-representative/choose-representative-container/choose-representative-container.component';
+import { CreateLegacyContainerComponent } from './menu-doula-work/create-legacy/create-legacy-container/create-legacy-container.component';
+import { CareForPatientsContainerComponent } from './menu-doula-work/care-for-patients/care-for-patients-container/care-for-patients-container.component';
+import { PlanAheadContainerComponent } from './menu-doula-work/plan-ahead/plan-ahead-container/plan-ahead-container.component';
+import { SupportCaregiversContainerComponent } from './menu-doula-work/supportCaregivers/support-caregivers-container/support-caregivers-container.component';
+
+import { DiscoverElementContainerComponent } from './menu-energy-medicine/discover-element/discover-element-container/discover-element-container.component';
+import { DoEnergyExercisesContainerComponent } from './menu-energy-medicine/do-energy-exercises/do-energy-exercises-container/do-energy-exercises-container.component';
+import { TraceMeridiansContainerComponent } from './menu-energy-medicine/trace-meridians/trace-meridians-container/trace-meridians-container.component';
+import { ReduceAnxietyContainerComponent } from './menu-energy-medicine/reduce-anxiety/reduce-anxiety-container/reduce-anxiety-container.component';
+import { RelieveBurnoutContainerComponent } from './menu-energy-medicine/relieve-burnout/relieve-burnout-container/relieve-burnout-container.component';
+import { DecreasePainContainerComponent } from './menu-energy-medicine/decrease-pain/decrease-pain-container/decrease-pain-container.component';
+
+import { FaqContainerComponent } from './menu-faq/faq-container/faq-container.component';
+
+import { HomeContainerComponent } from './menu-home/home-container/home-container.component';
+
+
 import { PrintSessionComponent } from './global-print/print-session/print-session.component';
 
+
 const routes: Routes = [
-    {path: '', redirectTo: '/home', pathMatch: 'full'},
-    {path: 'home', component: HomeContainerComponent},
+    {path: '', redirectTo: '/menuHome', pathMatch: 'full'},
 
-    {path: 'about', component: AboutContainerComponent},
-    {path: 'aboutPath', component: AboutContainerComponent},
+    {path: 'menuAbout', component: AboutMeContainerComponent},
+    {path: 'aboutMe', component: AboutMeContainerComponent},
     {path: 'aboutEndOfLifeDoula', component: AboutEolDoulaContainerComponent},
-    {path: 'aboutEnergyMedicine', component: AboutEnergyPractContainerComponent},
+    {path: 'aboutEnergyPractitioner', component: AboutEnergyPractContainerComponent},
 
-    {path: 'book', component: BookContainerComponent},
-    {path: 'bookAll', component: BookContainerComponent},
-    {path: 'bookEOLConsult', component: BookConsultContainerComponent},
-    {path: 'bookEnergySessions', component: BookSessionContainerComponent},
+    {path: 'menuBook', component: BookSessionContainerComponent},
+    {path: 'bookSession', component: BookSessionContainerComponent},
+    {path: 'bookConsultation', component: BookConsultationContainerComponent},
 
-    {path: 'forms', component: FormsContainerComponent},
+    {path: 'menuEnergyMedicine', component: ReduceAnxietyContainerComponent},
+    {path: 'reduceAnxiety', component: ReduceAnxietyContainerComponent},
+    {path: 'relieveBurnout', component: RelieveBurnoutContainerComponent},
+    {path: 'decreasePain', component: DecreasePainContainerComponent},
+    {path: 'doEnergyExercises', component: DoEnergyExercisesContainerComponent},
+    {path: 'discoverElement', component: DiscoverElementContainerComponent},
+    {path: 'traceMeridians', component: TraceMeridiansContainerComponent},
 
-    {path: 'support', component: AllSupportContainerComponent},
-    {path: 'supportAll', component: AllSupportContainerComponent},
+    {path: 'menuDoulaWork', component: PlanAheadContainerComponent},
+    {path: 'planAhead', component: PlanAheadContainerComponent},
+    {path: 'chooseRepresentative', component: ChooseRepresentativeContainerComponent},
+    {path: 'careForPatient', component: CareForPatientsContainerComponent},
+    {path: 'supportCaregivers', component: SupportCaregiversContainerComponent},
+    {path: 'createLegacy', component: CreateLegacyContainerComponent},
+    {path: 'chooseMemorial', component: ChooseMemorialContainerComponent},
 
-    {path: 'supportSessions', component: EnergyHelpContainerComponent},
-    {path: 'energyMedicineHelp', component: EnergyHelpContainerComponent},
-
-    {path: 'energyHelpAnxiety', component: TopicHelpAnxietyContainerComponent},
-    {path: 'energyHelpBurnout', component: TopicHelpBurnoutContainerComponent},
-    {path: 'energyHelpPain', component: TopicHelpPainContainerComponent},
-    {path: 'energyMoveEnergy', component: TopicMoveEnergyContainerComponent},
-    {path: 'energyDiscoverElement', component: TopicDiscoverElementContainerComponent},
-    {path: 'energyKnowMeridians', component: TopicKnowMeridiansContainerComponent},
-
-    {path: 'supportEOLCare', component: DoulaHelpContainerComponent},
-    {path: 'eolDoulaHelp', component: DoulaHelpContainerComponent},
-
-    {path: 'eolTopicRepresentatives', component: TopicRepresentativeContainerComponent},
-    {path: 'eolTopicAdvocate', component: TopicAdvocateContainerComponent},
-    {path: 'eolTopicPatientCare', component: TopicPatientCareContainerComponent},
-    {path: 'eolTopicCaregiverCare', component: TopicCaregiverCareContainerComponent},
-    {path: 'eolTopicLegacy', component: TopicLegacyContainerComponent},
-    {path: 'eolTopicCeremony', component: TopicCeremonyContainerComponent},
-
-    {path: 'faq', component: FaqContainerComponent},
+    {path: 'menuFaq', component: FaqContainerComponent},
+    {path: 'menuHome', component: HomeContainerComponent},
 
     {path: 'printSessionProfile', component: PrintSessionComponent},
 ];

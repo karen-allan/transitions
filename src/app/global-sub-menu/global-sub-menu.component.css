@@ -1,195 +1,163 @@
 
-/*  BANANA PORTRAIT *******************************************************************************************/
+/*******************************************************************************************************************
+  ALL BANANAS, MOBILES AND TABLET AND IPAD PORTRAIT (MAX IS 1 less than TABLET LANDSCAPE
+*******************************************************************************************************************/
 @media only screen
 and (min-width: 240px)
-and (max-width: 359px)
-and (orientation: portrait) {
+and (max-width: 1279px) {
 
   .sub-menu {
     display:none;
   }
 
   .mobile-sub-menu {
-    display:inline-block;
-  }
-
-  .selectedSubItem, .unselectedSubItem a {
-    font-size: var(--menu-topic-mobile-port-font-size);
-  }
-
-}
-
-/* BANANA LANDSCAPE ****************************************************************************************************/
-@media only screen
-and (min-width: 568px)
-and (max-width: 895px)
-and (orientation: landscape) {
-
-  .selectedSubItem, .unselectedSubItem a {
-    font-size: var(--menu-topic-mobile-land-font-size);
-  }
-
-}
-
-/* MOBILES PORTRAIT ****************************************************************************************************/
-@media only screen
-and (min-width: 360px)
-and (max-width: 599px)
-and (orientation: portrait) {
-
-  .sub-menu {
-    display:none;
-  }
-
-  .selectedSubItem, .unselectedSubItem a {
-    font-size: var(--menu-topic-mobile-port-font-size);
-  }
-
-  .mobile-sub-menu {
     display: grid;
     width: 100%;
-  }
-
-  .mobile-selectedSubItem {
-    display: grid;
-    width: 100%;
-    align-content: center;
-    justify-content: flex-start;
-    padding-left: 30px;
-    height: 40px;
-    cursor: default;
-    background-color: var(--color-light-blue);
-    border:thin solid var(--color-off-white);
-  }
-
-  .mobile-unselectedSubItem {
-    display: grid;
-    width: 100%;
-    align-content: center;
-    justify-content: flex-start;
-    font-family: var(--family-menu);
-    color:whitesmoke;
-    height: 40px;
-    font-size: var(--menu-sub-topic-mobile-port-font-size);
-    background-color: var(--color-darkest-blue);
+    border:thin solid var(--color-white);
   }
 
   .mobile-selectedSubItem, .mobile-unselectedSubItem a {
+    display: grid;
+    width: 100%;
+    align-content: center;
+    justify-content: flex-start;
     font-family: var(--family-menu);
-    color:whitesmoke;
-    /*font-size: var(--menu-sub-topic-mobile-port-font-size);*/
+    height: 40px;
+    font-size: var(--sub-menu-mobile-font-size);
+    padding-left: 2em;
+  }
+
+  .mobile-selectedSubItem {
+    background-color: var(--color-off-white);
+    color: var(--color-darkest-blue);
   }
 
   .mobile-unselectedSubItem a {
-    padding-left: 30px;
     text-decoration: none;
     cursor: pointer;
+    background-color: var(--color-darkest-blue);
+    color:whitesmoke;
   }
 
-}
+  .left-social span, .right-social span, .right-social span a  {
+    font-size: var(--sub-menu-mobile-font-size);
 
-/*  MOBILES LANDSCAPE **************************************************************************************************/
-@media only screen
-and (min-width:896px )
-and (max-width: 1279px)
-and (orientation: landscape) {
-
-  .selectedSubItem, .unselectedSubItem a {
-    font-size: var(--menu-topic-mobile-land-font-size);
   }
 
-}
-
-/*  TABLETS PORTRAIT *******************************************************************************************/
-@media only screen
-and (min-width: 600px)
-and (max-width: 1023px)
-and (orientation: portrait) {
-
-  .selectedSubItem, .unselectedSubItem a {
-    font-size: var(--menu-topic-tablet-ipad-port-font-size);
-  }
-
-}
-
-/* TABLETS LANDSCAPE ***************************************************************************************************/
-@media only screen
-and (min-width: 1280px)
-and (max-width: 1365px)
-and (orientation: landscape) {
-
-  .selectedSubItem, .unselectedSubItem a {
-    font-size:var(--menu-topic-tablet-ipad-land-font-size);
-  }
-
-}
-
-/* IPADS PORTRAIT ****************************************************************************************************/
-@media only screen
-and (min-width: 1024px)
-and (max-width: 1366px)
-and (orientation: portrait) {
-
-  .selectedSubItem, .unselectedSubItem a {
-    font-size:var(--menu-topic-tablet-ipad-port-font-size);
-  }
-
-}
-
-
-/* IPADS LANDSCAPE ***************************************************************************************************/
-@media only screen
-and (min-width: 1366px)
-and (max-width: 1439px)
-and (orientation: landscape) {
-
-  .selectedSubItem, .unselectedSubItem a {
-    font-size:var(--menu-topic-tablet-ipad-land-font-size);
-  }
-
-}
-
-/* LAPTOPS *****************************************************************************************************/
-@media only screen
-and (min-width: 1440px)
-and (max-width: 1919px) {
-
-  .selectedSubItem, .unselectedSubItem a {
-    font-size:var(--menu-topic-laptop-desktop-font-size);
-  }
 }
 
 /* *****************************************************************************************************/
-/* ALL THAT SHOW BIG MENU TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP ********************************/
+/* ALL THAT SHOW BIG MENU TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
+********************************************************************************************************/
+
 @media only screen
 and (min-width: 1280px)
 and (orientation: landscape) {
+
+  .mobile-sub-menu {
+    display: none;
+  }
 
   /* 1152 is 60% of 1920 */
   .sub-menu {
     display:grid;
     width: 100%;
     margin:auto;
-    height:45px;
-    background-color: var(--color-darkest-purple);
-    justify-content: center;
+    height:var(--sub-menu-desktop-height);
+    background-color: var(--color-off-white);
+    font-family: var(--family-menu);
   }
 
-  .sub-menu-items {
+  .sub-menu-items-two, .sub-menu-items-three, .sub-menu-items-four, .sub-menu-items-six {
     display:inline-grid;
     margin:auto;
-    height:45px;
-    grid-template-columns:repeat(3, 384px);
     justify-content: center;
-    text-align: center;
   }
 
-  .selectedSubItem, .unselectedSubItem a {
-    font-size:var(--menu-topic-laptop-desktop-font-size);
+  .sub-menu-items-two  {
+    grid-template-columns:repeat(2, 576px);
   }
 
-  .mobile-sub-menu {
-    display: none;
+  .sub-menu-items-three {
+    grid-template-columns:repeat(3, 384px);
+  }
+
+  .sub-menu-items-four {
+    grid-template-columns:repeat(4, 288px);
+  }
+
+  .sub-menu-items-six {
+    grid-template-columns:repeat(6, 192px);
+  }
+
+  .selectedSubItem, .unselectedSubItem a    {
+    display:grid;
+    height:var(--sub-menu-desktop-height);
+    align-content: center;
+    font-weight:400;
+    font-size:var(--sub-menu-desktop-font-size);
+    justify-content: center;
+  }
+
+  .selectedSubItem {
+    background-color: var(--color-light-blue);
+    cursor:default;
+    border:thin solid var(--color-off-white);
+    color:var(--color-off-white);
+  }
+
+  .unselectedSubItem a {
+    text-decoration: none;
+    cursor: pointer;
+    color:var(--color-light-blue);
+  }
+
+  .left-social, .right-social {
+    color:var(--color-grey);
+    font-size:var(--sub-menu-desktop-font-size);
+    height:var(--sub-menu-desktop-height);
+    width:100%;
+    align-content: center;
+    font-family: var(--family-menu);
+  }
+
+  .left-social {
+    display:grid;
+    grid-column: 1;
+  }
+
+  .left-social-icon {
+    background: url("src/assets/images/backgrounds/insta.png") no-repeat left;
+    background-size: auto;
+  }
+
+  .left-social span {
+    display:grid;
+    justify-content: center;
+  }
+
+  .right-social  {
+    display:grid;
+    grid-column: 4;
+  }
+
+  .right-social-icon {
+    background: url("src/assets/images/backgrounds/email.png") no-repeat left;
+    background-size: auto;
+  }
+
+  .right-social span {
+    display:grid;
+    justify-content: center;
+  }
+
+ /* .left-social span, .left-social span a, .right-social span, .right-social span a  {
+    style:"white-space: nowrap";
+  }*/
+
+  .left-social span a, .right-social span a  {
+      text-decoration: none;
+      color:var(--color-grey);
   }
 }
 
@@ -198,25 +166,5 @@ and (orientation: landscape) {
 @media only screen {
 
 
-
-  .selectedSubItem, .unselectedSubItem a {
-    display:grid;
-    font-family: var(--family-menu);
-    height:45px;
-    align-content: center;
-    font-weight:400;
-    color:whitesmoke;
-  }
-
-  .selectedSubItem {
-    background-color: var(--color-light-blue);
-    cursor:default;
-    border:thin solid var(--color-off-white);
-  }
-
-  .unselectedSubItem a {
-    text-decoration: none;
-    cursor: pointer;
-  }
 
 }

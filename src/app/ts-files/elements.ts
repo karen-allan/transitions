@@ -14,7 +14,7 @@ import {EarthExcessPhysical, FireExcessPhysical, MetalExcessPhysical, WaterExces
     from "./element-physical-excesses";
 
 import {Element} from'./element';
-import {Meridian} from "./meridian";
+
 
 
 export const ELEMENTS: Element[] = [
@@ -32,14 +32,14 @@ export const ELEMENTS: Element[] = [
 
         meridians: 'Kidney (Yin) and Bladder (Yang)',
 
-        icon:'assets/images/support/practitioner/elements/water/waterElement.png',
-        bkgrd_image:'assets/images/support/practitioner/elements/water/waterElementLarge.jpg',
-        nl_pic:'assets/images/support/practitioner/elements/water/nlWater.jpg',
-        nv_pic:'assets/images/support/practitioner/elements/water/nvWater.jpg',
+        icon:'assets/images/energyMedicine/elements/water/waterElement.png',
+        bkgrd_image:'assets/images/energyMedicine/elements/water/waterElementLarge.jpg',
+        nl_pic:'assets/images/energyMedicine/elements/water/nlWater.jpg',
+        nv_pic:'assets/images/energyMedicine/elements/water/nvWater.jpg',
 
-        summary_yin:'YIN WATER is gentle and yielding when it flows over rocks in a stream. It ' +
+        summary_yin:' is gentle and yielding when it flows over rocks in a stream. It ' +
             'is deep, cold, still and mysterious like the bottom of a well.',
-        summary_yang:'YANG WATER is dynamic like wild rapids and overflowing waterfalls. With pressure can create dangerous tsunamis and floods.',
+        summary_yang:' is dynamic like wild rapids and overflowing waterfalls. With pressure can create dangerous tsunamis and floods.',
 
         power_animals:'the Water Turtle (signifying longevity and strength) and the Deer (signifying sexual vigor and vitality).',
         attributes:'our genetic background, reproduction, instinct, willpower, vision and dreams.',
@@ -125,14 +125,14 @@ export const ELEMENTS: Element[] = [
 
         meridians: 'Liver (Yin) and Gallbladder (Yang)',
 
-        icon:'assets/images/support/practitioner/elements/wood/woodElement.png',
-        bkgrd_image:'assets/images/support/practitioner/elements/wood/woodElementLarge.jpg',
-        nl_pic:'assets/images/support/practitioner/elements/wood/nlWood.jpg',
-        nv_pic:'assets/images/support/practitioner/elements/wood/nvWood.jpg',
+        icon:'assets/images/energyMedicine/elements/wood/woodElement.png',
+        bkgrd_image:'assets/images/energyMedicine/elements/wood/woodElementLarge.jpg',
+        nl_pic:'assets/images/energyMedicine/elements/wood/nlWood.jpg',
+        nv_pic:'assets/images/energyMedicine/elements/wood/nvWood.jpg',
 
-        summary_yin:'WOOD YIN emerges from the Earth as a new sapling struggling against the elements. It is YIN WOOD is ' +
+        summary_yin:' emerges from the Earth as a new sapling struggling against the elements. It is YIN WOOD is ' +
             'a fallen tree that creates a bridge across a river, while sending down roots to replenish itself.',
-        summary_yang:'WOOD YANG is powerful and ancestral like an old growth tree in an ancient forest. It forcefully ' +
+        summary_yang:' is powerful and ancestral like an old growth tree in an ancient forest. It forcefully ' +
             'reaches towards heaven while also powerfully spreading it\'s roots into the Earth.',
 
 
@@ -228,15 +228,15 @@ export const ELEMENTS: Element[] = [
 
         meridians: 'Heart (Yin), Pericardium (Yin), Small Intestine (Yang) and Triple Warmer (Yang)',
 
-        nl_pic:'assets/images/support/practitioner/elements/fire/nlFire.jpg',
-        nv_pic:'assets/images/support/practitioner/elements/fire/nvFire.jpg',
-        icon:'assets/images/support/practitioner/elements/fire/fireElement.png',
-        bkgrd_image:'assets/images/support/practitioner/elements/fire/fireElementLarge.jpg',
+        nl_pic:'assets/images/energyMedicine/elements/fire/nlFire.jpg',
+        nv_pic:'assets/images/energyMedicine/elements/fire/nvFire.jpg',
+        icon:'assets/images/energyMedicine/elements/fire/fireElement.png',
+        bkgrd_image:'assets/images/energyMedicine/elements/fire/fireElementLarge.jpg',
 
-        summary_yin:'YIN Fire is the fluid layer of liquid iron and nickel living in the Earth\'s outer core. It is ' +
+        summary_yin:' is the fluid layer of liquid iron and nickel living in the Earth\'s outer core. It is ' +
             'the deeply dark embers going cold in a fireplace.',
 
-        summary_yang:'YANG Fire is the flickering sparks of a newly lighted crackling fire. It is the volcanic lava, ' +
+        summary_yang:' is the flickering sparks of a newly lighted crackling fire. It is the volcanic lava, ' +
             'tephra, and steam that erupts on to the Earth\'s surface.',
 
         power_animals:'the mythical Phoenix, the Hummingbird, Grosbeak and other red-throated birds.',
@@ -325,14 +325,14 @@ export const ELEMENTS: Element[] = [
 
         meridians: 'Spleen (Yin) and Stomach (Yang)',
 
-        nl_pic:'assets/images/support/practitioner/elements/earth/nlEarth.jpg',
-        nv_pic:'assets/images/support/practitioner/elements/earth/nvEarth.jpg',
-        icon:'assets/images/support/practitioner/elements/earth/earthElement.png',
-        bkgrd_image:'assets/images/support/practitioner/elements/earth/earthElementLarge.jpg',
+        nl_pic:'assets/images/energyMedicine/elements/earth/nlEarth.jpg',
+        nv_pic:'assets/images/energyMedicine/elements/earth/nvEarth.jpg',
+        icon:'assets/images/energyMedicine/elements/earth/earthElement.png',
+        bkgrd_image:'assets/images/energyMedicine/elements/earth/earthElementLarge.jpg',
 
-        summary_yin:'YIN Earth supplies the nutrients to help newly planted seeds grow. It' +
+        summary_yin:' supplies the nutrients to help newly planted seeds grow. It' +
             ' grows the grass that invites you to lay down upon it and rest.',
-        summary_yang:'YANG Earth moves itself ever upwards to create mountains. It can tear itself apart creating deadly earthquakes.',
+        summary_yang:' moves itself ever upwards to create mountains. It can tear itself apart creating deadly earthquakes.',
 
         power_animals:'the Pheasant, Chicken, Turkey and other domestic farm animals.',
         attributes:'our authenticity, our solidity, our adaptability and practicality.',
@@ -424,14 +424,14 @@ export const ELEMENTS: Element[] = [
 
         meridians: 'Lung (Yin) and Large Intestine (Yang)',
 
-        icon:'assets/images/support/practitioner/elements/metal/metalElement.png',
-        bkgrd_image:'assets/images/support/practitioner/elements/metal/metalElementLarge.jpg',
-        nl_pic:'assets/images/support/practitioner/elements/metal/nlMetal.jpg',
-        nv_pic:'assets/images/support/practitioner/elements/metal/nvMetal.jpg',
+        icon:'assets/images/energyMedicine/elements/metal/metalElement.png',
+        bkgrd_image:'assets/images/energyMedicine/elements/metal/metalElementLarge.jpg',
+        nl_pic:'assets/images/energyMedicine/elements/metal/nlMetal.jpg',
+        nv_pic:'assets/images/energyMedicine/elements/metal/nvMetal.jpg',
 
-        summary_yin:'Yin Metal is like the intricate and magnificent inner workings of a grandfather clock. ' +
+        summary_yin:' is like the intricate and magnificent inner workings of a grandfather clock. ' +
             'It is a tool that is cold and lifeless when sitting on a shelf.',
-        summary_yang:'YANG Metal is the tool that when used creates magnificent and powerful works of art. It' +
+        summary_yang:' is the tool that when used creates magnificent and powerful works of art. It' +
             'can produce great buildings and structures like the skyscrapers that tower over the city.',
 
         power_animals:'the White Tiger. Metal represents all felines, both wild jungle cats ' +

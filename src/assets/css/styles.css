@@ -12,12 +12,13 @@
   --color-dark-purple: #983096;
   --color-darkest-purple:#623061;
 
+  --color-lightest-blue:#9bb3da;
   --color-light-blue:#5b89d5;
   --color-dark-blue:#5a7d9f;
   --color-darkest-blue:#183552;
 
   --color-off-white:#f7efef;
-  --color-white:#FFFFFF;
+  --color-white:#ffffff;
 
   --color-grey:#666161;
   --color-dark-grey: #878787;
@@ -36,71 +37,133 @@
 
   /* FONT SIZES  */
 
+
   /* WITH MALGUN GOTHIC */
   --family-menu:'Segoe UI Symbol';
 
-  --menu-sub-topic-mobile-port-font-size:.6em;
-  --menu-topic-mobile-port-font-size:.7em;
-  --menu-topic-mobile-land-font-size:.8em;
-  --menu-topic-tablet-ipad-port-font-size:.6em;
-  --menu-topic-tablet-ipad-land-font-size:7em;
-  --menu-topic-laptop-desktop-font-size:.8em;
+  --color-sub-menu:#a4b5d2;
+
+  /* these add up to 225px */
+  --slogan-desktop-height:130px;
+  --menu-desktop-height:50px;
+  --sub-menu-desktop-height:45px;
+
+  --menu-desktop-font-size:0.9em;
+  --sub-menu-desktop-font-size:0.8em;
+
+  --menu-mobile-font-size:.9em;
+  --sub-menu-mobile-font-size:.7em;
 
   /* WITH OPEN SANS */
   --family-open-sans: 'Open Sans';
 
   --open-sans-banana-port-font-size:.6em;
   --open-sans-mobile-port-font-size:.7em;
-  --open-sans-tablet-port-font-size:.9em;
-  --open-sans-ipad-port-font-size:1em;
+  --open-sans-tablet-port-font-size:.8em;
+  --open-sans-ipad-port-font-size:.9em;
 
-  --open-sans-banana-land-font-size:.8em;
-  --open-sans-mobile-land-font-size:.9em;
-  --open-sans-tablet-land-font-size:1em;
-  --open-sans-ipad-land-font-size:1.1em;
+  --open-sans-banana-land-font-size:.7em;
+  --open-sans-mobile-land-font-size:.8em;
+  --open-sans-tablet-land-font-size:.9em;
+  --open-sans-ipad-land-font-size:1.0em;
 
-  --open-sans-laptop-desktop-font-size:1.8em;
-
-  --list-open-sans-mobile-port-font-size:.6em;
-  --list-open-sans-mobile-land-font-size:.7em;
-  --list-open-sans-tablet-ipad-port-font-size:.8em;
-  --list-open-sans-tablet-ipad-land-font-size:.9em;
-  --list-open-sans-laptop-desktop-font-size:1.0em;
+  --open-sans-desktop-font-size:1.1em;
 
   /* WITH MALGUN GOTHIC */
   --family-global:'malgun gothic';         /*  */
 
-  --global-big-mobile-port-font-size:.7em;
-  --global-big-mobile-land-font-size:.8em;
-  --global-big-tablet-ipad-port-font-size:.9em;
-  --global-big-tablet-ipad-land-font-size:1em;
-  --global-big-laptop-desktop-font-size:1.2em;
-
-  --global-med-mobile-port-font-size:.6em;
-  --global-med-mobile-land-font-size:.7em;
-  --global-med-tablet-ipad-port-font-size:.8em;
-  --global-med-tablet-ipad-land-font-size:.9em;
-  --global-med-laptop-desktop-font-size:1.0em;
-
+  --global-small-banana-port-font-size:.5em;
   --global-small-mobile-port-font-size:.5em;
+  --global-small-tablet-port-font-size:.6em;
+  --global-small-ipad-port-font-size:.7em;
+
+  --global-small-banana-land-font-size:.6em;
   --global-small-mobile-land-font-size:.6em;
-  --global-small-tablet-ipad-port-font-size:.7em;
-  --global-small-tablet-ipad-land-font-size:.8em;
-  --global-small-laptop-desktop-font-size:.9em;
+  --global-small-tablet-land-font-size:.7em;
+  --global-small-ipad-land-font-size:.8em;
 
-  /* BELOW IS WITH FAMILY SCRIPT (quotes)*/
-  --family-script:'gabriola';                /*  */
+  --global-small-desktop-font-size:.9em;
 
-  --script-p-banana-port-font-size:0.9em;
-  --script-p-mobile-port-font-size:1.1em;
-  --script-p-tablet-port-font-size:1.3em;
-  --script-p-ipad-port-font-size:1.5em;
+  --global-med-banana-port-font-size:.6em;
+  --global-med-mobile-port-font-size:.7em;
+  --global-med-tablet-port-font-size:.8em;
+  --global-med-ipad-port-font-size:.9em;
 
-  --script-p-banana-land-font-size:1.1em;
-  --script-p-mobile-land-font-size:1.3em;
-  --script-p-tablet-land-font-size:1.6em;
-  --script-p-ipad-land-font-size:1.7em;
-  --script-p-laptop-desktop-font-size:1.8em;
+  --global-med-banana-land-font-size:.7em;
+  --global-med-mobile-land-font-size:.8em;
+  --global-med-tablet-land-font-size:.9em;
+  --global-med-ipad-land-font-size:.95em;
+
+  --global-med-desktop-font-size:1em;
+
+  --global-big-banana-port-font-size:.7em;
+  --global-big-mobile-port-font-size:.8em;
+  --global-big-tablet-port-font-size:.9em;
+  --global-big-ipad-port-font-size:1em;
+
+  --global-big-banana-land-font-size:.8em;
+  --global-big-mobile-land-font-size:.9em;
+  --global-big-tablet-land-font-size:1em;
+  --global-big-ipad-land-font-size:1.1em;
+
+  --global-big-desktop-font-size:1.2em;
+
+  /* RENE */
+  --rene-banana-port-font-size:.6em;
+  --rene-mobile-port-font-size:.7em;
+  --rene-tablet-port-font-size:.85em;
+  --rene-ipad-port-font-size:.9em;
+
+  --rene-banana-land-font-size:.7em;
+  --rene-mobile-land-font-size:.8em;
+  --rene-tablet-land-font-size:.9em;
+  --rene-ipad-land-font-size:.95em;
+
+  --rene-desktop-font-size:1.1em;
+
+
+  /* BELOW IS WITH FAMILY SCRIPT (quotes for header quotes, script for content quotes)*/
+                /*  */
+  --family-mono:Monotype Corsiva;
+  /* for header quotes */
+  --quotes-p-banana-port-font-size:.3em;
+  --quotes-span-banana-port-font-size:.4em;
+  --quotes-p-banana-land-font-size:.7em;
+  --quotes-span-banana-land-font-size:.8em;
+
+  --quotes-p-mobile-port-font-size:.5em;
+  --quotes-span-mobile-port-font-size:.4em;
+  --quotes-p-mobile-land-font-size:1.0em;
+  --quotes-span-mobile-land-font-size:1.2em;
+
+  --quotes-p-tablet-port-font-size:.6em;
+  --quotes-span-tablet-port-font-size:0.7em;
+
+  --quotes-p-tablet-land-font-size:1.0em;
+  --quotes-span-tablet-land-font-size:0.7em;
+
+  --quotes-p-ipad-port-font-size:1.0em;
+  --quotes-span-ipad-port-font-size:0.7em;
+
+  --quotes-p-ipad-land-font-size:1.2em;
+  --quotes-span-ipad-land-font-size:0.9em;
+
+  --quotes-p-desktop-font-size:1.4em;
+  --quotes-span-desktop-font-size:1.1em;
+
+  /* for content quotes */
+  --family-script:'gabriola';
+  --script-p-banana-port-font-size:0.7em;
+  --script-p-mobile-port-font-size:.9em;
+  --script-p-tablet-port-font-size:1.1em;
+  --script-p-ipad-port-font-size:1.4em;
+
+  --script-p-banana-land-font-size:1.2em;
+  --script-p-mobile-land-font-size:1.6em;
+  --script-p-tablet-land-font-size:1.7em;
+  --script-p-ipad-land-font-size:1.8em;
+
+  --script-p-desktop-font-size:1.8em;
 
   --script-span-banana-port-font-size:0.7em;
   --script-span-mobile-port-font-size:0.8em;
@@ -111,150 +174,108 @@
   --script-span-mobile-land-font-size:.9em;
   --script-span-tablet-land-font-size:1em;
   --script-span-ipad-land-font-size:1.1em;
-  --script-span-laptop-desktop-font-size:1.4em;
 
+  --script-span-desktop-font-size:1.2em;
 
-  /* BELOW IS WITH HOSTEL */
-  --hostel-heading-banana-port-font-size:0.5em;
-  --hostel-heading-mobile-port-font-size:0.7em;
-  --hostel-heading-tablet-port-font-size:1.3em;
-  --hostel-heading-ipad-port-font-size:1.5em;
+  /* BELOW IS WITH HOSTEL (used in Topic Heading with Right Images */
+  --hostel-heading-banana-port-font-size:0.9em;
+  --hostel-heading-mobile-port-font-size:0.8em;
+  --hostel-heading-tablet-port-font-size:1.1em;
+  --hostel-heading-ipad-port-font-size:1.8em;
 
-  --hostel-heading-banana-land-font-size:1.1em;
-  --hostel-heading-mobile-land-font-size:1.3em;
-  --hostel-heading-tablet-land-font-size:1.5em;
-  --hostel-heading-ipad-land-font-size:1.7em;
+  --hostel-heading-banana-land-font-size:1.2em;
+  --hostel-heading-mobile-land-font-size:1.5em;
+  --hostel-heading-tablet-land-font-size:1.8em;
+  --hostel-heading-ipad-land-font-size:2.1em;
 
-  --hostel-heading-laptop-font-size:1.9em;
-  --hostel-heading-desktop-font-size:2.1em;
-
-
-  /*--hostel-banana-port-font-size:0.5em;
-  --hostel-mobile-port-font-size:0.7em;
-  --hostel-tablet-port-font-size:1.3em;
-  --hostel-ipad-port-font-size:1.5em;
-
-  --hostel-banana-land-font-size:1.1em;
-  --hostel-mobile-land-font-size:1.3em;
-  --hostel-tablet-land-font-size:1.5em;
-  --hostel-ipad-land-font-size:1.7em;
-
-  --hostel-laptop-font-size:1.9em;
-  --hostel-desktop-font-size:2.1em;*/
+  --hostel-heading-desktop-font-size:2.3em;
 
   /* BELOW IS WITH FAMILY DATA */
   --family-data:arial;
 
-  /* p bigger than span (energy tips p) */
-  --data-banana-port-font-p-size:.5em;
+  /* p for details footer top, copyright footer bottom */
+  --data-banana-port-font-p-size:.6em;
   --data-mobile-port-font-p-size:.7em;
   --data-tablet-port-font-p-size:.9em;
-  --data-ipad-port-font-p-size:1.1em;
+  --data-ipad-port-font-p-size:1em;
 
-  --data-banana-land-font-p-size:.6em;
-  --data-mobile-land-font-p-size:.8em;
+  --data-banana-land-font-p-size:.8em;
+  --data-mobile-land-font-p-size:.9em;
   --data-tablet-land-font-p-size:1em;
-  --data-ipad-land-font-p-size:1.2em;
+  --data-ipad-land-font-p-size:1.1em;
 
-  --data-laptop-desktop-font-p-size:1.3em;
+  --data-desktop-font-p-size:1.2em;
 
-  /* span footer*/
-  --data-banana-port-font-span-size:.4em;
-  --data-mobile-port-font-span-size:.5em;
-  --data-tablet-port-font-span-size:.8em;
-  --data-ipad-port-font-span-size:1.1em;
+  /* span footer this information .... */
+  --data-banana-port-font-span-size:.5em;
+  --data-mobile-port-font-span-size:.6em;
+  --data-tablet-port-font-span-size:.7em;
+  --data-ipad-port-font-span-size:.8em;
 
-  --data-banana-land-font-span-size:.8em;
-  --data-mobile-land-font-span-size:.8em;
-  --data-tablet-land-font-span-size:1em;
-  --data-ipad-land-font-span-size:1.1em;
+  --data-banana-land-font-span-size:.6em;
+  --data-mobile-land-font-span-size:.7em;
+  --data-tablet-land-font-span-size:.8em;
+  --data-ipad-land-font-span-size:.9em;
 
-  --data-laptop-desktop-font-span-size:1em;
+  --data-desktop-font-span-size:1.0em;
 
   /* BELOW IS WITH WHITNEY BOOK font-family: Whitney-Book;*/
-  /* H1 */
-  --h1-whitney-banana-port-font-size:0.8em;
-  --h1-whitney-mobile-port-font-size:0.9em;
-  --h1-whitney-tablet-port-font-size:1.0em;
-  --h1-whitney-ipad-port-font-size:1.3em;
-
-  --h1-whitney-banana-land-font-size:1.0em;
-  --h1-whitney-mobile-land-font-size:1.1em;
-  --h1-whitney-tablet-land-font-size:1.2em;
-  --h1-whitney-ipad-land-font-size:1.4em;
-
-  --h1-whitney-laptop-font-size:1.5em;
-  --h1-whitney-desktop-font-size:1.6em;
-
-  /* H2 */
-  --h2-whitney-banana-port-font-size:.7em;
-  --h2-whitney-mobile-port-font-size:.8em;
-  --h2-whitney-tablet-port-font-size:.9em;
-  --h2-whitney-ipad-port-font-size:1.1em;
-
-  --h2-whitney-banana-land-font-size:.9em;
-  --h2-whitney-mobile-land-font-size:1.0em;
-  --h2-whitney-tablet-land-font-size:1.1em;
-  --h2-whitney-ipad-land-font-size:1.3em;
-
-  --h2-whitney-laptop-font-size:1.4em;
-  --h2-whitney-desktop-font-size:1.5em;
-
-  /* H3 */
-  --h3-whitney-banana-port-font-size:.6em;
-  --h3-whitney-mobile-port-font-size:.7em;
-  --h3-whitney-tablet-port-font-size:1.0em;
-  --h3-whitney-ipad-port-font-size:1.3em;
-
-  --h3-whitney-banana-land-font-size:.8em;
-  --h3-whitney-mobile-land-font-size:.9em;
-  --h3-whitney-tablet-land-font-size:1.0em;
-  --h3-whitney-ipad-land-font-size:1.2em;
-  --h3-whitney-laptop-font-size:1.3em;
-  --h3-whitney-desktop-font-size:1.4em;
+  --family-whitney:Whitney-Book;
 
   /* H4 */
-  --h4-whitney-banana-port-font-size:.3em;
-  --h4-whitney-mobile-port-font-size:.6em;
+  --h4-whitney-banana-port-font-size:.7em;
+  --h4-whitney-mobile-port-font-size:.8em;
   --h4-whitney-tablet-port-font-size:.9em;
-  --h4-whitney-ipad-port-font-size:1.2em;
+  --h4-whitney-ipad-port-font-size:1em;
 
-  --h4-whitney-banana-land-font-size:.7em;
-  --h4-whitney-mobile-land-font-size:.8em;
-  --h4-whitney-tablet-land-font-size:.9em;
-  --h4-whitney-ipad-land-font-size:1.0em;
+  --h4-whitney-banana-land-font-size:.9em;
+  --h4-whitney-mobile-land-font-size:1em;
+  --h4-whitney-tablet-land-font-size:1.1em;
+  --h4-whitney-ipad-land-font-size:1.2em;
 
-  --h4-whitney-laptop-font-size:1.2em;
-  --h4-whitney-desktop-font-size:1.2em;
+  --h4-whitney-desktop-font-size:1.3em;
+
+  /* H3 */
+  --h3-whitney-banana-port-font-size:.8em;
+  --h3-whitney-mobile-port-font-size:.9em;
+  --h3-whitney-tablet-port-font-size:1em;
+  --h3-whitney-ipad-port-font-size:1.1em;
+
+  --h3-whitney-banana-land-font-size:1em;
+  --h3-whitney-mobile-land-font-size:1.2em;
+  --h3-whitney-tablet-land-font-size:1.3em;
+  --h3-whitney-ipad-land-font-size:1.4em;
+
+  --h3-whitney-desktop-font-size:1.5em;
+
+  /* H2 */
+  --h2-whitney-banana-port-font-size:.9em;
+  --h2-whitney-mobile-port-font-size:1em;
+  --h2-whitney-tablet-port-font-size:1.1em;
+  --h2-whitney-ipad-port-font-size:1.2em;
+
+  --h2-whitney-banana-land-font-size:1.1em;
+  --h2-whitney-mobile-land-font-size:1.2em;
+  --h2-whitney-tablet-land-font-size:1.3em;
+  --h2-whitney-ipad-land-font-size:1.4em;
+
+  --h2-whitney-desktop-font-size:1.8em;
+
+  /* H1 */
+  --h1-whitney-banana-port-font-size:1em;
+  --h1-whitney-mobile-port-font-size:1.1em;
+  --h1-whitney-tablet-port-font-size:1.4em;
+  --h1-whitney-ipad-port-font-size:1.6em;
+
+  --h1-whitney-banana-land-font-size:1.4em;
+  --h1-whitney-mobile-land-font-size:1.5em;
+  --h1-whitney-tablet-land-font-size:1.7em;
+  --h1-whitney-ipad-land-font-size:1.9em;
+
+  --h1-whitney-desktop-font-size:2.1em;
 
   /* TEXT */
-  --big-whitney-banana-port-font-size:0.7em;
-  --big-whitney-mobile-port-font-size:0.8em;
-  --big-whitney-tablet-port-font-size:.9em;
-  --big-whitney-ipad-port-font-size:1em;
-
-  --big-whitney-banana-land-font-size:0.8em;
-  --big-whitney-mobile-land-font-size:0.9em;
-  --big-whitney-tablet-land-font-size:1.0em;
-  --big-whitney-ipad-land-font-size:1.1em;
-
-  --big-whitney-laptop-font-size:1.2em;
-  --big-whitney-desktop-font-size:1.3em;
-
-  --med-whitney-banana-port-font-size:0.5em;
-  --med-whitney-mobile-port-font-size:0.7em;
-  --med-whitney-tablet-port-font-size:0.8em;
-  --med-whitney-ipad-port-font-size:0.9em;
-
-  --med-whitney-banana-land-font-size:0.7em;
-  --med-whitney-mobile-land-font-size:0.8em;
-  --med-whitney-tablet-land-font-size:.9em;
-  --med-whitney-ipad-land-font-size:1em;
-
-  --med-whitney-laptop-font-size:1.1em;
-  --med-whitney-desktop-font-size:1.2em;
-
-  --small-whitney-banana-port-font-size:0.5em;
+  --small-whitney-banana-port-font-size:0.4em;
   --small-whitney-mobile-port-font-size:0.6em;
   --small-whitney-tablet-port-font-size:0.7em;
   --small-whitney-ipad-port-font-size:0.8em;
@@ -264,28 +285,46 @@
   --small-whitney-tablet-land-font-size:0.9em;
   --small-whitney-ipad-land-font-size:1em;
 
-  --small-whitney-laptop-font-size:1em;
   --small-whitney-desktop-font-size:1.1em;
 
-  --tiny-whitney-mobile-port-font-size:.6em;
-  --tiny-whitney-mobile-land-font-size:.5em;
-  --tiny-whitney-tablet-ipad-port-font-size:.6em;
-  --tiny-whitney-tablet-ipad-land-font-size:.7em;
-  --tiny-whitney-laptop-font-size:.8em;
-  --tiny-whitney-desktop-font-size:.9em;
+  --med-whitney-banana-port-font-size:0.6em;
+  --med-whitney-mobile-port-font-size:0.7em;
+  --med-whitney-tablet-port-font-size:0.8em;
+  --med-whitney-ipad-port-font-size:0.9em;
+
+  --med-whitney-banana-land-font-size:0.8em;
+  --med-whitney-mobile-land-font-size:0.9em;
+  --med-whitney-tablet-land-font-size:1em;
+  --med-whitney-ipad-land-font-size:1.1em;
+
+  --med-whitney-desktop-font-size:1.2em;
+
+
 
   /* BELOW IS WITH MONUMENT */
-  --monument-mobile-port-font-size:.9em;
-  --monument-mobile-land-font-size:1em;
-  --monument-tablet-ipad-port-font-size:2em;
-  --monument-tablet-ipad-land-font-size:3em;
-  --monument-laptop-desktop-font-size:4em;
+  --monument-banana-port-font-size:.8em;
+  --monument-mobile-port-font-size:1.2em;
+  --monument-tablet-port-font-size:2em;
+  --monument-ipad-port-font-size:2.6em;
 
-  --monument-med-mobile-port-font-size:.8em;
-  --monument-med-mobile-land-font-size:1em;
-  --monument-med-tablet-ipad-port-font-size:1.5em;
-  --monument-med-tablet-ipad-land-font-size:2em;
-  --monument-med-laptop-desktop-font-size:2.5em;
+  --monument-banana-land-font-size:1.8em;
+  --monument-mobile-land-font-size:3.1em;
+  --monument-tablet-land-font-size:2.7em;
+  --monument-ipad-land-font-size:2.8em;
+
+  --monument-desktop-font-size:2.9em;
+
+  --monument-header-banana-port-font-size:1.7em;
+  --monument-header-mobile-port-font-size:2.2em;
+  --monument-header-tablet-port-font-size:2.5em;
+  --monument-header-ipad-port-font-size:2.8em;
+
+  --monument-header-banana-land-font-size:2.5em;
+  --monument-header-mobile-land-font-size:2.6em;
+  --monument-header-tablet-land-font-size:2.8em;
+  --monument-header-ipad-land-font-size:3em;
+
+  --monument-header-desktop-font-size:3.5em;
 
 
   /* LINE HEIGHTS */
@@ -295,8 +334,7 @@
   --quote-p-line-height:130%;
   --quote-span-line-height:100%;
 
-  --copy-color-dark: #5a7d9f;
-  --copy-color-light: #ffffff;
+
 
 
 
@@ -329,6 +367,11 @@
     margin:auto;
   }
 
+  .content-container img {
+    max-width:100%;
+    height:auto;
+  }
+
   /* The actual content is 1152 - 90% of 1280 max */
   .content, .content-no-margins {
     display: block;
@@ -352,11 +395,20 @@
     height:auto;
   }
 
-  .inner-content {
+  .inner-content, .inner-content-no-margins {
     display: block;
-    width:100%;
+    width:90%;
+    margin-left:5%;
+    margin-right:5%;
     max-width:800px;
+  }
+
+  .inner-content {
     margin:1em auto;
+  }
+
+  .inner-content-no-margins {
+    margin:0 auto;
   }
 
   .images, .content-videos {
@@ -369,6 +421,13 @@
   .images img {
     max-width:100%;
     height:auto;
+  }
+
+  .forms-content-block {
+    display: block;
+    width: 100%;
+    max-width:1152px;
+    margin:auto;
   }
 
   /* LIST FORMATS */
@@ -452,7 +511,7 @@
   }
 
   .with-border {
-    border: thin solid gold;
+    border: thin solid #878787;
   }
 
   .top-border {
@@ -496,6 +555,10 @@
     color:var(--color-dark-purple);
   }
 
+  .color-gold {
+    color:var(--color-dark-gold);
+  }
+
   .background-blue {
     background-color: #5b89d5;
   }
@@ -536,7 +599,7 @@
 
   /* FIRE */
   .backcolor-fire-active {
-    background: radial-gradient(circle at 100px 100px,#d38180, #000);
+      background: radial-gradient(circle at 100px 100px,#d38180, #000);
   }
 
   .backcolor-fire-selected {
@@ -651,6 +714,14 @@
     padding-bottom: 3em;
   }
 
+  .pad-left {
+    padding-left:1em;
+  }
+
+  .pad-left-2 {
+    padding-left:2em;
+  }
+
   .pad-left-3 {
     padding-left:3em;
   }
@@ -659,371 +730,8 @@
     padding-left:6em;
   }
 
-  /* CSS ICONS */
-  .yin-yang {
-    width: 48px; /* 96px */
-    box-sizing: content-box;
-    height: 24px; /* 48 */
-    background: #eee;
-    border-color: var(--color-purple);
-    border-style: solid;
-    border-width: 1px 1px 25px 1px; /* 2 2 50 2 */
-    border-radius: 100%;
-    position: relative;
-  }
 
-  .yin-yang:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    background: #eee;
-    border: 9px solid var(--color-purple); /* 18 px */
-    border-radius: 100%;
-    width: 6px; /* 12 */
-    height: 6px;
-    box-sizing: content-box;
-  }
 
-  .yin-yang:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background: var(--color-purple);
-    border: 9px solid #eee;/* 18 px */
-    border-radius: 100%;
-    width: 6px; /* 12 */
-    height: 6px;
-    box-sizing: content-box;
-  }
-
-  /* ABOUT PAGE */
- /* .diamond-narrow {
-    width: 0;
-    height: 0;
-    border: 25px solid transparent;
-    !*border-bottom-color: transparent;*!
-    !*border-bottom-style: solid;*!
-    !*border-bottom-width: 25px;*!
-    border-bottom: 40px solid var(--color-purple); !* was 70 *!
-    position: relative;
-    top: -50px;
-  }*/
-
-  /*.diamond-narrow::after {
-    content: '';
-    position: absolute;
-    left: -50px;
-    top: 20px; !* was 70 *!
-    width: 0;
-    height: 0;
-    border: 25px solid transparent;
-    border-top-color: transparent;
-    border-top-style: solid;
-    border-top-width: 25px;
-    border-top: 20px solid var(--color-purple); !* was 70 *!
-  }
-*/
-  /* FAQ PAGE */
- /* .star-five {
-    margin: 50px 0;
-    position: relative;
-    display: block;
-    color: var(--color-purple);
-    width: 0px;
-    height: 0px;
-    border-right: 50px solid transparent; !* 50 *!
-    border-bottom: 35px solid var(--color-purple); !* 35 *!
-    border-left: 50px solid transparent; !* 50 *!
-    transform: rotate(35deg);
-  }
-
-  .star-five:before {
-    border-bottom: 40px solid var(--color-purple);
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    position: absolute;
-    height: 0;
-    width: 0;
-    top: -22.5px;
-    left: -32.5px;
-    display: block;
-    content: '';
-    transform: rotate(-35deg);
-  }
-
-  .star-five:after {
-    position: absolute;
-    display: block;
-    color: var(--color-purple);
-    top: 3px;
-    left: -52.5px;
-    width: 0px;
-    height: 0px;
-    border-right: 50px solid transparent;
-    border-bottom: 35px solid var(--color-purple);
-    border-left: 50px solid transparent;
-    transform: rotate(-70deg);
-    content: '';
-  }*/
-
-  /* LEARN */
-  .heart {
-    position: relative;
-    width: 100px;
-    height: 90px;
-  }
-
-  .heart:before,
-  .heart:after {
-    position: absolute;
-    content: "";
-    left: 50px;
-    top: 0;
-    width: 50px;
-    height: 80px;
-    background: var(--color-light-blue);
-    border-radius: 50px 50px 0 0;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
-  }
-
-  .heart:after {
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin: 100% 100%;
-  }
-
-  /* LEARN DER PAGE */
-  .infinity {
-    position: relative;
-    width: 106px; /* width was 212 */
-    height: 50px; /* height was 100 */
-    box-sizing: content-box;
-  }
-
-  .infinity:before,
-  .infinity:after {
-    content: "";
-    box-sizing: content-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30px; /* was 60 */
-    height: 30px; /* was 60 */
-    border: 10px solid var(--color-dark-blue); /* was 20 */
-    border-radius: 25px 25px 0 25px; /* was 50 50 0 50 */
-    transform: rotate(-45deg);
-  }
-
-  .infinity:after {
-    left: auto;
-    right: 0;
-    border-radius: 25px 25px 25px 0; /* was 50 50 50 0 */
-    transform: rotate(45deg);
-  }
-
-  /* LEARN GROUNDING PAGE */
-  .burst-12 {
-    background: var(--color-light-blue);
-    width: 40px; /* 80 */
-    height: 40px; /* 80 */
-    position: relative;
-    text-align: center;
-  }
-
-  .burst-12:before,
-  .burst-12:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 40px; /* 80 */
-    width: 40px; /* 80 */
-    background: var(--color-light-blue);
-  }
-
-  .burst-12:before {
-    transform: rotate(30deg);
-  }
-
-  .burst-12:after {
-    transform: rotate(60deg);
-  }
-
-  /* LEARN 5 ELEMENTS */
-  .yin-yang-small {
-    width: 48px;
-    box-sizing: content-box;
-    height: 24px;
-    background: #eee;
-    border-color: var(--color-purple);
-    border-style: solid;
-    border-width: 1px 1px 25px 1px;
-    border-radius: 100%;
-    position: relative;
-  }
-
-  .yin-yang-small:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    background: #eee;
-    border: 9px solid var(--color-purple);
-    border-radius: 100%;
-    width: 6px;
-    height: 6px;
-    box-sizing: content-box;
-  }
-
-  .yin-yang-small:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background: var(--color-purple);
-    border: 9px solid #eee;
-    border-radius: 100%;
-    width: 6px;
-    height: 6px;
-    box-sizing: content-box;
-  }
-
-  /* LEARN HORMONES */
-  .star-six {
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent; /* was 50 */
-    border-right: 25px solid transparent; /* was 50 */
-    border-bottom: 50px solid var(--color-purple); /* was 100 */
-    position: relative;
-  }
-
-  .star-six:after {
-    width: 0;
-    height: 0;
-    border-left: 25px solid transparent; /* was 50 */
-    border-right: 25px solid transparent; /* was 50 */
-    border-top: 50px solid var(--color-purple); /* was 100 */
-    position: absolute;
-    content: "";
-    top: 15px; /* 30 */
-    left: -25px; /* -50 */
-  }
-
-  /* LEARN MERIDIAN PATH */
-  .moon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    box-shadow: 15px 15px 0 0 #433E49;
-  }
-
-  /* LEARN CHAKRAS AND AURA */
-  .cut-diamond {
-    border-style: solid;
-    border-color: transparent transparent var(--color-purple) transparent;
-    border-width: 0 25px 25px 25px;
-    height: 0;
-    width: 50px;
-    box-sizing: content-box;
-    position: relative;
-    margin: 20px 0 50px 0;
-  }
-
-  .cut-diamond:after {
-    content: "";
-    position: absolute;
-    top: 25px;
-    left: -25px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: var(--color-purple) transparent transparent transparent;
-    border-width: 70px 50px 0 50px;
-  }
-
-  /* DO */
-  .half-moon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    box-shadow: 5px 5px 0 0 var(--color-purple);
-    border: thin solid var(--color-purple);
-  }
-
-  /* DO */
-  /*.red-square {
-    width: 100px;
-    height: 60px;
-    border-top: 20px solid var(--color-purple);
-    border-right: 20px solid var(--color-purple);
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    border-radius:15%;
-    border-bottom: 20px solid var(--color-purple);
-    border-bottom-left-radius:65px;
-    border-top-left-radius:65px;
-  }
-
-  .purple-square {
-    width: 60px;
-    height: 40px;
-    border-top: 20px solid var(--color-purple);
-    border-right: 20px solid var(--color-purple);
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    border-radius:15%;
-    border-bottom: 20px solid var(--color-purple);
-    border-bottom-left-radius:65px;
-    border-top-left-radius:65px;
-  }*/
-
- /* .big-dot {
-    width: 60px;
-    height: 40px;
-    border-top: 20px solid var(--color-purple);
-    border-right: 20px solid var(--color-purple);
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    border-radius:360%;
-
-  }
-
-  .green-dot {
-    width: 60px;
-    height: 40px;
-    border-top: 20px solid var(--color-purple);
-    border-right: 20px solid var(--color-purple);
-    transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    border-radius:360%;
-
-  }
-*/
-  /* BASIC SETTINGS */
-  /*html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, font, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  dl, dt, dd, ol, ul, li,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-weight: inherit;
-      font-style: inherit;
-      font-size: 100%;
-      font-family: inherit;
-      vertical-align: baseline;
-  }
-*/
-  /* remember to define focus styles! */
   :focus {
     outline: 0;
   }
@@ -1074,13 +782,10 @@
     src: url("../fonts/MonumentValley12-X55o.otf") format("opentype");
   }
 
-
   @font-face {
     font-family: ReneB-Book;
     src: url("../fonts/ReneBiederMilliardBook.otf") format("opentype");
   }
-
-
 
   @font-face {
     font-family: ReneB-Extra-Light;
@@ -1127,20 +832,16 @@
     src: url("../fonts/whitneymediumitalicsc.otf") format("opentype");
   }
 
-
-
-
-  .sphere {
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    margin: 10px;
-    background:
-      radial-gradient(
-        circle at 30% 30%,
-        #ffff00,
-        #774400
-      );
+  @font-face {
+    font-family: Whitney-SSm-Book;
+    src: url("../fonts/Whitney SSm Book.ttf") format("opentype");
   }
+
+  @font-face {
+    font-family: Whitney-SSm-Semibold;
+    src: url("../fonts/Whitney SSm Semibold.ttf") format("opentype");
+  }
+
+
 
 }

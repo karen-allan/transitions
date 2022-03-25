@@ -1,0 +1,812 @@
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    /* TOP WHEEL */
+    .element-inline-grid {
+        grid-template-columns: repeat(3, 72px);
+        grid-template-rows: repeat(4, 54px);
+    }
+
+    .element-name-button {
+        width: 54px;
+        height: 54px;
+    }
+
+    .element-name-button span, .element-name-button span a {
+        font-size:var(--global-med-banana-port-font-size);
+    }
+
+    .center-element span {
+        font-size:var(--global-big-banana-port-font-size);
+    }
+
+    /* BOTTOM ROW is TEXT */
+    .element-title   {
+        font-size:var(--monument-header-banana-port-font-size);
+    }
+
+    /* HEADER WITH ICON AND VERB */
+    .element-inline-header {
+        height:60px;
+    }
+
+    .element-icon {
+        padding:1em 1em 0 .5em;
+    }
+
+    .element-verb {
+        font-size:var(--monument-banana-port-font-size);
+    }
+
+    /* TIME and RANGE */
+    .element-time p {
+        font-size:var(--global-big-banana-port-font-size);
+    }
+
+    .time-range {
+        font-size:var(--global-med-banana-port-font-size);
+    }
+
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    .element-inline-grid {
+        grid-template-columns: repeat(3, 170px);
+        grid-template-rows: repeat(4, 127px);
+    }
+
+    .element-name-button {
+        width: 127px;
+        height: 127px;
+    }
+
+    .element-name-button span, .element-name-button span a  {
+        font-size:var(--global-med-banana-land-font-size);
+    }
+
+    .center-element span {
+        font-size:var(--global-big-banana-land-font-size);
+    }
+
+    /* BOTTOM ROW is TEXT */
+    .element-title   {
+        font-size:var(--monument-header-banana-land-font-size);
+    }
+
+    /* HEADER WITH ICON AND VERB */
+    .element-inline-header {
+        height:80px;
+    }
+
+    .element-icon {
+        padding:1em 1em 0 1em;
+    }
+
+    .element-icon img {
+        width:40px;
+        height:40px;
+    }
+
+    .element-verb {
+        font-size:var(--monument-mobile-port-font-size);
+    }
+
+    .element-time {
+        padding:0 0 0 2em;
+    }
+
+    /* TIME and RANGE */
+    .element-time p {
+        font-size:var(--global-big-banana-land-font-size);
+    }
+
+    .time-range {
+        font-size:var(--global-med-banana-land-font-size);
+    }
+
+
+
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    .element-inline-grid {
+        grid-template-columns: repeat(3, 108px);
+        grid-template-rows: repeat(4, 81px);
+    }
+
+    .element-name-button {
+        width: 81px;
+        height: 81px;
+    }
+
+    .element-name-button span, .element-name-button span a  {
+        font-size:var(--global-med-mobile-port-font-size);
+    }
+
+    .center-element span {
+        font-size:var(--global-big-mobile-port-font-size);
+    }
+
+    /* BOTTOM ROW is TEXT */
+    .element-title   {
+        font-size:var(--monument-header-mobile-port-font-size);
+    }
+
+    /* HEADER WITH ICON AND VERB */
+    .element-inline-header {
+        height:80px;
+    }
+
+    .element-icon {
+        padding:1em 1em 0 1em;
+    }
+
+    .element-icon img {
+        width:40px;
+        height:40px;
+    }
+
+    .element-verb {
+        font-size:var(--monument-mobile-port-font-size);
+    }
+
+    .element-time {
+        padding:0 0 0 2em;
+    }
+
+    /* TIME and RANGE */
+    .element-time p {
+        font-size:var(--global-big-mobile-port-font-size);
+    }
+
+    .time-range {
+        font-size:var(--global-med-mobile-port-font-size);
+    }
+
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+     /* Made rows and buttons 75% of columns */
+    .element-inline-grid {
+        grid-template-columns: 267px 266px 267px;
+        grid-template-rows: repeat(4, 200px);
+    }
+
+    .element-name-button {
+        width: 200px;
+        height: 200px;
+    }
+
+    .element-name-button span, .element-name-button span a  {
+        font-size:var(--global-med-mobile-land-font-size);
+    }
+
+    .center-element span {
+        font-size:var(--global-big-mobile-land-font-size);
+    }
+
+    /* BOTTOM ROW is TEXT */
+    .element-title   {
+        font-size:var(--monument-header-mobile-land-font-size);
+    }
+
+    /* HEADER WITH ICON AND VERB */
+    .element-inline-header {
+        height:100px;
+    }
+
+    .element-icon {
+        padding:1em 1em 0 1em;
+    }
+
+    .element-icon img {
+        width:40px;
+        height:40px;
+    }
+
+    .element-verb {
+        font-size:var(--monument-mobile-land-font-size);
+    }
+
+    .element-time {
+        padding:0 0 0 2em;
+    }
+
+    /* TIME and RANGE */
+    .element-time p {
+        font-size:var(--global-big-mobile-land-font-size);
+    }
+
+    .time-range {
+        font-size:var(--global-med-mobile-land-font-size);
+    }
+
+
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+     /* Made rows and buttons 75% of columns */
+    .element-inline-grid {
+        grid-template-columns: repeat(3, 180px);
+        grid-template-rows: repeat(4, 135px);
+    }
+
+    .element-name-button {
+        width: 135px;
+        height: 135px;
+    }
+
+    .element-name-button span, .element-name-button span a {
+        font-size:var(--global-med-tablet-port-font-size);
+    }
+
+    .center-element span {
+        font-size:var(--global-big-tablet-port-font-size);
+    }
+
+    /* BOTTOM ROW is TEXT */
+    .element-title   {
+        font-size:var(--monument-header-tablet-port-font-size);
+    }
+
+    /* HEADER WITH ICON AND VERB */
+    .element-inline-header {
+        height:100px;
+    }
+
+    .element-icon {
+        padding:1em 1em 0 1em;
+    }
+
+    .element-icon img {
+        width:40px;
+        height:40px;
+    }
+
+    .element-verb {
+        font-size:var(--monument-tablet-port-font-size);
+    }
+
+    .element-time {
+        padding:1em 0 0 2em;
+    }
+
+    /* TIME and RANGE */
+    .element-time p {
+        font-size:var(--global-big-tablet-port-font-size);
+    }
+
+    .time-range {
+        font-size:var(--global-med-tablet-port-font-size);
+    }
+
+
+
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+     /* Made rows and buttons 75% of columns */
+    .element-inline-grid {
+        grid-template-columns: 267px 266px 267px;
+        grid-template-rows: repeat(4, 200px);
+    }
+
+    .element-name-button {
+        width: 200px;
+        height: 200px;
+    }
+
+    .element-name-button span, .element-name-button span a  {
+        font-size:var(--global-med-tablet-land-font-size);
+    }
+
+    .center-element span {
+        font-size:var(--global-big-tablet-land-font-size);
+    }
+
+    /* BOTTOM ROW is TEXT */
+    .element-title   {
+        font-size:var(--monument-header-tablet-land-font-size);
+    }
+
+    /* HEADER WITH ICON AND VERB */
+    .element-inline-header {
+        height:100px;
+    }
+
+    .element-icon {
+        padding:1em 1em 0 1em;
+    }
+
+    .element-icon img {
+        width:40px;
+        height:40px;
+    }
+
+    .element-verb {
+        font-size:var(--monument-desktop-font-size);
+    }
+
+    .element-time {
+        padding:0 0 0 2em;
+    }
+
+    /* TIME and RANGE */
+    .element-time p {
+        font-size:var(--global-big-tablet-land-font-size);
+    }
+
+    .time-range {
+        font-size:var(--global-med-tablet-land-font-size);
+    }
+
+
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+      /* Made rows and buttons 75% of columns */
+    .element-inline-grid {
+        grid-template-columns: 267px 266px 267px;
+        grid-template-rows: repeat(4, 200px);
+    }
+
+    .element-name-button {
+        width: 200px;
+        height: 200px;
+    }
+
+    .element-name-button span, .element-name-button span a {
+        font-size:var(--global-med-ipad-port-font-size);
+    }
+
+    .center-element span {
+        font-size:var(--global-big-ipad-port-font-size);
+    }
+
+    /* BOTTOM ROW is TEXT */
+    .element-title   {
+        font-size:var(--monument-header-ipad-port-font-size);
+    }
+
+    /* HEADER WITH ICON AND VERB */
+    .element-inline-header {
+        height:100px;
+    }
+
+    .element-icon {
+        padding:1em 1em 0 1em;
+    }
+
+    .element-icon img {
+        width:40px;
+        height:40px;
+    }
+
+    .element-verb {
+        font-size:var(--monument-desktop-font-size);
+    }
+
+    .active-time {
+        font-size:var(--global-big-ipad-port-font-size);
+    }
+
+    /* TIME and RANGE */
+    .element-time p {
+        font-size:var(--global-big-ipad-port-font-size);
+    }
+
+    .time-range {
+        font-size:var(--global-med-ipad-port-font-size);
+    }
+
+
+}
+
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+     /* Made rows and buttons 75% of columns */
+    .element-inline-grid {
+        grid-template-columns: 267px 266px 267px;
+        grid-template-rows: repeat(4, 200px);
+    }
+
+    .element-name-button {
+        width: 200px;
+        height: 200px;
+    }
+
+    .element-name-button span, .element-name-button span a  {
+        font-size:var(--global-med-ipad-land-font-size);
+    }
+
+    .center-element span {
+        font-size:var(--global-big-ipad-land-font-size);
+    }
+
+    /* BOTTOM ROW is TEXT */
+    .element-title   {
+        font-size:var(--monument-header-ipad-land-font-size);
+    }
+
+    /* HEADER WITH ICON AND VERB */
+    .element-inline-header {
+        height:100px;
+    }
+
+    .element-icon {
+        padding:1em 1em 0 1em;
+    }
+
+    .element-icon img {
+        width:40px;
+        height:40px;
+    }
+
+    .element-verb {
+        font-size:var(--monument-desktop-font-size);
+    }
+
+    /* TIME and RANGE */
+    .element-time p {
+        font-size:var(--global-big-ipad-land-font-size);
+    }
+
+    .time-range {
+        font-size:var(--global-med-ipad-land-font-size);
+    }
+
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+     /* TOP ROW is WHEEL */
+    /* Made rows and buttons 75% of columns */
+    .element-inline-grid {
+        grid-template-columns: 267px 266px 267px;
+        grid-template-rows: repeat(4, 200px);
+    }
+
+    .element-name-button {
+        width: 200px;
+        height: 200px;
+    }
+
+    .element-name-button span, .element-name-button span a  {
+        font-size:var(--global-med-desktop-font-size);
+    }
+
+    .center-element span {
+        font-size:var(--global-big-desktop-font-size);
+    }
+
+    /* BOTTOM ROW is TEXT */
+    .element-title   {
+        font-size:var(--monument-header-desktop-font-size);
+    }
+
+    /* HEADER WITH ICON AND VERB */
+    .element-inline-header {
+        height:100px;
+    }
+
+    .element-icon {
+        padding:1em 1em 0 1em;
+    }
+
+    .element-verb {
+        font-size:var(--monument-desktop-font-size);
+    }
+
+    /* TIME and RANGE */
+    .element-time p {
+        font-size:var(--global-big-desktop-font-size);
+    }
+
+    .time-range {
+        font-size:var(--global-med-desktop-font-size);
+    }
+
+
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    /* ------------------ THE TOP SIDE WHEEL -sits inside Inner Content at 800 max width ---------------*/
+    .element-wheel {
+        display:block;
+        width:100%;
+        margin:auto;
+    }
+
+    /* used to center the inline grid on page */
+    .element-grid {
+        display:grid;
+        width:100%;
+        margin:auto;
+    }
+
+    .element-inline-grid {
+        display:inline-grid;
+        width:100%;
+        margin:auto;
+        font-family: var(--family-global);
+    }
+
+    /* ELEMENT WHEEL */
+    .element-name-button {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        border-radius: 50%;
+    }
+
+    .element-name-button img {
+        max-width: 50%;
+        margin:auto;
+        height:auto;
+    }
+
+    .element-name-button span, .element-name-button span a {
+        color:white;
+        text-align: center;
+    }
+
+    .element-name-button span {
+        cursor: pointer;
+    }
+
+    .element-name-button  a span {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* --------------------- ROW   1        ----------------------------- */
+    .fire-element, .wood-to-fire-arrow, .fire-to-earth-arrow  {
+        display:grid;
+        grid-row:1;
+        padding-top:1em;
+    }
+
+    .wood-to-fire-arrow  {
+        display:grid;
+        grid-column:1;
+        justify-content: center;
+    }
+
+    .wood-to-fire-arrow img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    .fire-element  {
+        display:grid;
+        grid-column:2;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .fire-to-earth-arrow  {
+        display:grid;
+        grid-column:3;
+        justify-content: center;
+    }
+
+    .fire-to-earth-arrow img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    /* --------------------- ROW 2 ---------------------------- */
+    .wood-element, .center-element, .earth-element {
+        grid-row:2;
+        display:grid;
+        /*border:thin solid gold;*/
+    }
+
+    .wood-element {
+        display:grid;
+        grid-column: 1;
+        align-content:center;
+        justify-content: flex-start;
+    }
+
+    .center-element {
+        display:grid;
+        grid-column: 2;
+        grid-row-end:4;
+        align-content:center;
+        justify-content: center;
+    }
+
+    .center-element span {
+        text-align: center;
+        font-family: var(--family-global);
+        color:var(--color-darkest-gold);
+        font-weight:bold;
+    }
+
+    .earth-element {
+        display:grid;
+        grid-column:3;
+        align-content:center;
+        justify-content: flex-end;
+    }
+
+    /* --------------------- ROW 3   ----------------------------- */
+    .water-to-wood-arrow  {
+        display:grid;
+        grid-row:3;
+        grid-column:1;
+        /*border:thin solid gold;*/
+        justify-content: flex-start;
+    }
+
+    .water-to-wood-arrow img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    .earth-to-metal-arrow  {
+        display:grid;
+        grid-row:3;
+        grid-column:3;
+        /*border:thin solid gold;*/
+        justify-content: flex-end;
+    }
+
+    .earth-to-metal-arrow img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    /* --------------------- ROW 4   ----------------------------- */
+    .water-element, .metal-to-water-arrow, .metal-element {
+        display:grid;
+        grid-row:4;
+        padding-bottom:1em;
+        /*border:thin solid gold;*/
+    }
+
+    .water-element {
+        display:grid;
+        grid-column:1;
+        align-content: center;
+        justify-content: flex-end;
+    }
+
+    .metal-to-water-arrow  {
+        display:grid;
+        grid-column:2;
+        /*border:thin solid gold;*/
+        justify-content: center;
+        align-content: center;
+    }
+
+    .metal-to-water-arrow img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    .metal-element {
+        display:grid;
+        grid-column: 3;
+        align-content: center;
+        justify-content: flex-start;
+    }
+
+    /* --------------------- BOTTOM  UNDER WHEEL sits within INNER CONTENT at max 800 width ----------------------------- */
+    .element-block {
+        display: block;
+        margin:2em auto;
+        width: 100%;
+        max-width:800px;
+    }
+
+    .element-title, .element-inline-header {
+        font-family: "Monument-Valley";
+        width: 100%;
+    }
+
+    .element-title {
+        display:block;
+        float:left;
+        text-align:center;
+    }
+
+    /* HEADER with ELEMENT ICON AND VERB */
+    .element-inline-header {
+        display:flex;
+        flex-direction: row;
+        color: white;
+    }
+
+    .element-icon {
+        display:grid;
+        align-content: center;
+        justify-content: flex-start;
+    }
+
+    .element-icon img {
+        width:40px;
+        height:40px;
+    }
+
+    .element-verb {
+        display:grid;
+        align-content: center;
+        justify-content: flex-start;
+    }
+
+    /* ELEMENT IMAGE SPANS ACROSS */
+    .element-image {
+        display: block;
+        float: left;
+        width: 100%;
+    }
+
+    .element-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* TIME RANGE INFO */
+    .element-time {
+        display:block;
+        float:left;
+        width:100%;
+        text-align:left;
+        font-family: global;
+    }
+
+    .time-range {
+        line-height:180%;
+    }
+
+
+
+}

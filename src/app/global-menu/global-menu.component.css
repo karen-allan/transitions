@@ -1,67 +1,99 @@
 
-/* Smart Menu smart-menu is a div that toggles all mobile menu on and off
-if you use fixed it will keep the header in focus when scrolling down a mobile device
-
-An element with greater stack order is always in front of an element with a lower stack order. Note: z-index only works
-on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky).
-
-> Sign: >  will target elements which are DIRECT children of a particular element. So if
-<div container p> where p is bold
-<p>blah
-<p>blah
-will be bold but
-    <div lower-container>
-        <p> will not be bold
-It will target all P element which are direct children of container div, not children of child div.
-
-+ Sign: + is Adjacent sibling combinator. It combines two sequences of simple selectors having the
-same parent and the second one must come IMMEDIATELY after the first.
-
-~ Sign:
-It is general sibling combinator and similar to Adjacent sibling combinator. the difference is
-that the second selector does NOT have to immediately follow the first one means It will
-select all elements that is preceded by the former selector.
-*/
-
-/* BANANAS, MOBILES AND TABLET AND IPAD PORTRAIT (MAX IS 1 less than TABLET LANDSCAPE **************************************/
+/*******************************************************************************************************************
+  ALL BANANAS, MOBILES AND TABLET AND IPAD PORTRAIT (MAX IS 1 less than TABLET LANDSCAPE at and (min-width: 1280px))
+*******************************************************************************************************************/
 @media only screen
 and (min-width: 240px)
 and (max-width: 1279px) {
 
-  .header-desktop {
-    display: none;
-  }
+      .header-desktop {
+        display: none;
+      }
 
-  .header-mobile {
-    display: block;
-    width: 100%;
-    background-color: white;
-  }
+      .header-mobile {
+        display: block;
+        width: 100%;
+        background-color: white;
+      }
 
-  .slogan {
+      .header-mobile-grid {
+        display: inline-grid;
+        grid-template-columns: 95% 5%;
+        width:100%;
+      }
+
+      .slogan, .mobile-menu-icon  {
+        display: grid;
+        grid-row:1;
+        width:100%;
+      }
+
+      .slogan {
+        grid-column:1;
+      }
+
+     .mobile-menu-icon {
+        grid-column: 2;
+        align-content: center;
+        justify-content:center;
+        cursor:pointer;
+      }
+
+      .mobile-menu {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+      }
+
+      .bar1, .bar2, .bar3 {
+        width: 20px;
+        height: 2px;
+        background-color: #333;
+        margin: 2px 0;
+        transition: 0.4s;
+      }
+
+  .mobile-selected-item, .mobile-unselected-item a {
     display:grid;
-    grid-row:1;
-    grid-column:1;
-    border-bottom:1px solid #d7e0e7;
-    width:100%;
-  }
-
-  .smart-menu {
-    display:grid;
-    width:100%;
-    position: relative;
-    grid-column:2;
+    font-family: var(--family-menu);
+    height: 50px;
     align-content: center;
+    padding-left: 1em;
+    font-size:var(--menu-mobile-font-size);
   }
 
-  .submenu-auto-content {
-    margin-left:4em;
+  .mobile-selected-item {
+    cursor: default;
+    background-color: var(--color-off-white);
+    color:var(--color-darkest-blue);
   }
 
-  .selectedSubItem, .unselectedSubItem a {
-    height: 40px;
-    justify-content: flex-start;
+  .mobile-unselected-item a {
+    text-decoration: none;
+    cursor: pointer;
+    color:var(--color-off-white);
+    background-color: var(--color-darkest-blue);
   }
+
+
+  /*
+  /* Rotate first bar */
+ /* .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+  }
+*/
+  /* Fade out the second bar */
+/*  .change .bar2 {
+    opacity: 0;
+  }
+*/
+  /* Rotate last bar */
+ /* .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+*/
 
 }
 
@@ -71,16 +103,16 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait){
 
+  .mobile-menu-icon, .slogan  {
+    height:52px;
+  }
+
+  /* 216 is 90% 0f 240 makes a 50 height*/
   .slogan {
     background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
     background-size: contain;
-    height:43px;
   }
 
-  .selectedSubItem, .unselectedSubItem a {
-    height:40px;
-    font-size:var(--menu-topic-mobile-port-font-size);
-  }
 }
 
 /* BANANA LANDSCAPE  *****************************************************************************/
@@ -89,14 +121,13 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
+  .mobile-menu-icon, .slogan  {
+    height:60px;
+  }
+
   .slogan {
     background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
     background-size: contain;
-    height:110px;
-  }
-
-  .selectedSubItem, .unselectedSubItem a {
-    font-size:var(--menu-topic-mobile-land-font-size);
   }
 
 }
@@ -107,25 +138,14 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
+  .mobile-menu-icon, .slogan  {
+    height:87px;
+  }
+
   .slogan {
     background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
     background-size: contain;
-    height:70px;
   }
-
-  .unselectedItem a {
-    height:50px;
-    padding-left: 40px;
-    justify-content: flex-start;
-    font-size:var(--menu-topic-laptop-desktop-font-size);
-  }
-
-  .selectedSubItem, .unselectedSubItem a {
-    font-size:var(--menu-topic-mobile-port-font-size);
-    border-color: white;
-    border-width: 1px;
-  }
-
 
 }
 
@@ -135,15 +155,15 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
+  .mobile-menu-icon, .slogan  {
+    height:90px;
+  }
+
   .slogan {
     background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
     background-size: contain;
-    height:110px;
   }
 
-  .selectedSubItem, .unselectedSubItem a {
-    font-size:var(--menu-topic-mobile-land-font-size);
-  }
 }
 
 /* TABLETS PORTRAIT ****************************************************************************************************/
@@ -152,15 +172,13 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-  .slogan {
-    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
-    background-size: contain;
-    height:110px;
-
+  .mobile-menu-icon, .slogan  {
+    height:90px;
   }
 
-  .selectedSubItem, .unselectedSubItem a {
-    font-size:var(--menu-topic-tablet-ipad-port-font-size);
+  .slogan {
+    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg") left no-repeat;
+    background-size: contain;
   }
 
 }
@@ -171,188 +189,105 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-  .slogan {
-    background: url("src/assets/images/headers/transitionsInEnergyDesktopHeader.jpg")  left no-repeat;
-    background-size: contain;
+
+  .mobile-menu-icon, .slogan  {
     height:110px;
-    border-bottom:1px solid #d7e0e7;
   }
 
-  .selectedSubItem, .unselectedSubItem a {
-    font-size:var(--menu-topic-tablet-ipad-port-font-size);
+  .slogan {
+    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg") left no-repeat;
+    background-size: contain;
   }
 
 }
 
+/*******************************************************************************************************************
+  ALL THAT SHOW BIG MENU TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
+*******************************************************************************************************************/
 
-/* ALL THAT SHOW BIG MENU TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP ********************************/
 @media only screen
 and (min-width: 1280px)
 and (orientation: landscape) {
 
-  .header-tablet-port, .header-mobile, .header-banana {
+  .header-mobile {
     display: none;
   }
 
   /* header large has slogan on top and main-menu on bottom - cant be declared in global */
   .header-desktop {
-    display: inline-grid;
-    grid-template-columns: 100%;
-    grid-template-rows:110px 50px;
+    display: block;
     width: 100%;
     background-color: white;
-    border-top: 1px solid slategray;
-    z-index:1;
   }
 
   /*cambria math to the left and berlin sans FB to the right text */
   .slogan {
     display:grid;
     grid-row:1;
-    grid-column: 1;
-    border-left: 1px solid #d7e0e7;
-    border-right: 1px solid #d7e0e7;
-    border-bottom:1px solid #d7e0e7;
-    margin:auto;
+    grid-column: 1/-1;
     width:100%;
-    height: 110px;
-    background: url("src/assets/images/headers/transitionsInEnergyDesktopHeader.jpg")  center no-repeat;
+    height: var(--slogan-desktop-height);
+    justify-content: flex-start;
+    background: url("src/assets/images/headers/transitionsInEnergyHeader.jpg")  left no-repeat;
     background-size:auto;
   }
 
-  .menu {
+  .desktop-menu {
     display:grid;
     grid-row: 2;
+    height:var(--menu-desktop-height);
     background-color: var(--color-darkest-blue);
   }
 
-  .menu-items {
+  .desktop-menu-items {
     display: inline-grid;
     margin:auto;
     width:1024px;
-
-    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: repeat(6, 16.6%);
   }
 
-  .selectedItem, .unselectedItem a {
-    height:50px;
+  .desktop-selected-item, .desktop-unselected-item a {
+    display:grid;
+    font-family: var(--family-menu);
+    color:whitesmoke;
+    height:var(--menu-desktop-height);
     justify-content: center;
-    font-size:var(--menu-topic-laptop-desktop-font-size);
+    font-size:var(--menu-desktop-font-size);
+    align-content: center;
   }
-}
 
+  .desktop-unselected-item a {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--color-darkest-blue);
+  }
+
+  .desktop-selected-item {
+    cursor: default;
+    background-color: var(--color-light-blue);
+    border:thin solid var(--color-off-white);
+  }
+
+}
 
 /* GLOBAL *************************************************************************************************************/
 @media screen {
 
-      .topnav {
-        overflow: hidden;
-        background-color: #333;
-        position: relative;
-      }
+  /*cambria math to the left and berlin sans FB to the right text */
+  .slogan {
+    /*align-content: center;*/
+    margin:auto;
+  }
 
-      .topnav-top-row {
-        display: inline-grid;
-        width:100%;
-        grid-template-columns: 90% 10%;
-      }
 
-      .topnav a {
-        color: white;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        display: block;
-      }
 
-      .mobile-menu {
-        overflow: hidden;
-        background-color: #333;
-        position: relative;
-      }
 
-      .mobile-top-row {
-        display: grid;
-        width:100%;
-        grid-template-columns: 90% 10%;
-      }
 
-      .mobile-menu-icon {
-        display: grid;
-        grid-column: 2;
-        align-content: center;
-        justify-content: center;
-      }
 
-      /*cambria math to the left and berlin sans FB to the right text */
-      .slogan {
-        align-content: center;
-        margin:auto;
-      }
-
-      /* header-desktop and header-mobile are not placed here as they are conditional not global */
-      .selectedItem, .unselectedItem a {
-        display:grid;
-        font-family: var(--family-menu);
-        color:whitesmoke;
-
-        height: 50px;
-        /**/
-
-        align-content: center;
-        /*font-weight:400;*/
-      }
-
-      .unselectedItem a {
-        text-decoration: none;
-        cursor: pointer;
-        background-color: var(--color-darkest-blue);
-      }
-
-      .selectedItem {
-        cursor: default;
-        background-color: var(--color-light-blue);
-        border:thin solid var(--color-off-white);
-      }
-
-      .mobile-selectedItem, .mobile-unselectedItem a {
-        display:grid;
-        font-family: var(--family-menu);
-        color:whitesmoke;
-        height: 50px;
-        align-content: center;
-      }
-
-      .mobile-unselectedItem a {
-        padding-left: 10px;
-        text-decoration: none;
-        cursor: pointer;
-        background-color: var(--color-darkest-blue);
-      }
-
-      .mobile-selectedItem {
-        padding-left: 10px;
-        cursor: default;
-        background-color: var(--color-light-blue);
-        border:thin solid var(--color-off-white);
-      }
-
-      .plus {
-        display:inline-block;
-        width:20px;
-        height:20px;
-        background:
-          linear-gradient(#000 0 0),
-          linear-gradient(#000 0 0);
-        background-position:center;
-        background-size: 90% 2px,2px 90%;
-        background-repeat:no-repeat;
-      }
-
-      .rotate-button {
-        height: 40px;
-      }
 }
+
+
+
 
 
 @media print {
@@ -360,3 +295,4 @@ and (orientation: landscape) {
     display: none;
   }
 }
+

@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import {SUB_MENU_ITEMS} from "../ts-files/subMenuItems";
-import {TOPIC_MENU_ITEMS} from "../ts-files/topicMenuItems";
 import {SubMenuItem} from "../ts-files/subMenuItem";
 import {Subject} from "../ts-files/subject";
 import {SUBJECTS} from "../ts-files/subjects";
@@ -32,17 +31,6 @@ export class DataService {
     return of(subMenuItems)
   }
 
-  // ******************** GET SUB SUB (TOPIC) MENU ITEMS *************************
-
-  getTopicMenuItems(parentId: number): Observable<SubMenuItem[]> {
-    var topicMenuItems=[];
-    for (var item of TOPIC_MENU_ITEMS) {
-      if ((item.parent_id == parentId) ) {
-        topicMenuItems.push(item);
-      }
-    }
-    return of(topicMenuItems)
-  }
 
   // ******************** GET SUBJECTS *************************
 

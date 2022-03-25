@@ -5,25 +5,86 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-    .topic-left h1, .topic-left h2 {
+    /* UNIQUE HEADING */
+    .titles h1,  .titles h2 {
+        width: 90%;
+        margin: 0 5%;
+        padding:1em 0;
+    }
+
+    .titles h1  {
+        font-size: var(--h1-whitney-banana-port-font-size);
+    }
+
+    .titles h2 {
+        font-size: var(--h2-whitney-banana-port-font-size);
+    }
+
+    .sub-titles h2 {
         font-size: var(--hostel-heading-banana-port-font-size);
+    }
+
+    /* TEXT IMAGE GRID with equal columns */
+    .text-image-equal-grid {
+        display:grid;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        grid-template-columns: 100%;
+    }
+
+    .left-side, .right-side {
+        grid-column:1;
+    }
+
+    .left-side {
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .left-side span {
+        font-size: var(--rene-banana-port-font-size);
+    }
+
+    .right-side {
+        padding-top:1em;
+        justify-content: center;
+    }
+
+    /* TOPIC BLOCK with clickable and non-clickable links */
+    .topic-inline-grid {
+        margin:.2em auto;
+    }
+
+    .topic-left a h2, .topic-left h2 {
+        font-size: var(--hostel-heading-banana-port-font-size);
+        letter-spacing: 0;
+    }
+
+    .topic-left a span, .topic-left span {
+        display:none;
+    }
+
+    /* QUOTES inside content */
+    .content-quote {
+        width:90%;
+        margin:1em 5% 0 5%;
     }
 
     .content-quote p {
         font-size:var(--script-p-banana-port-font-size);
     }
 
-    .content-quote span {
-        font-size:var(--script-span-banana-port-font-size);
-    }
-
-    .energy-tip p {
-        font-size:var(--data-banana-port-font-p-size);
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--open-sans-banana-port-font-size);
     }
 
     .content-videos {
         height:150px;
     }
+
+
 }
 
 /* BANANA LANDSCAPE ****************************************************************************************************/
@@ -32,25 +93,85 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-    .topic-left h1, .topic-left h2 {
+    /* UNIQUE HEADING */
+    .titles h1, .titles h2 {
+        width:90%;
+        margin:0 5%;
+        padding:1.5em 0;
+        font-size: var(--h1-whitney-banana-land-font-size);
+    }
+
+    .titles h2 {
+        font-size: var(--h2-whitney-banana-land-font-size);
+    }
+
+    .sub-titles h2 {
         font-size: var(--hostel-heading-banana-land-font-size);
+    }
+
+    /* TEXT IMAGE GRID with equal columns */
+    .text-image-equal-grid {
+        display:grid;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        grid-template-columns: 100%;
+    }
+
+    .left-side, .right-side {
+        grid-column:1;
+    }
+
+    .left-side {
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .left-side span {
+        font-size: var(--rene-banana-land-font-size);
+    }
+
+    .right-side {
+        padding-top:1em;
+        justify-content: center;
+    }
+
+    /* TOPIC BLOCK with clickable and non-clickable links */
+    .topic-inline-grid {
+        margin:.2em auto;
+    }
+
+    .topic-left a h2, .topic-left h2 {
+        font-size: var(--hostel-heading-banana-land-font-size);
+    }
+
+    .topic-left a span, .topic-left span {
+        font-size: var(--global-med-banana-land-font-size);
+    }
+
+    /* QUOTES inside content */
+    .content-quote {
+        width:90%;
+        margin:1em 5% 0 5%;
     }
 
     .content-quote p {
         font-size:var(--script-p-banana-land-font-size);
     }
 
-    .content-quote span {
-        font-size:var(--script-span-banana-land-font-size);
-    }
-
-    .energy-tip p {
-        font-size:var(--data-banana-land-font-p-size);
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--open-sans-banana-land-font-size);
     }
 
     .content-videos {
         height:250px;
     }
+
+    .icon img {
+        height:30px;
+    }
+
 }
 
 /* MOBILES PORTRAIT ****************************************************************************************************/
@@ -59,25 +180,93 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-    .topic-left h1, .topic-left h2 {
+    /* UNIQUE HEADING */
+    .titles h1, .titles h2 {
+        width:90%;
+        margin:0 5%;
+        padding:1.5em 0;
+        font-size: var(--h1-whitney-mobile-port-font-size);
+    }
+
+    .titles h1, .titles h2 {
+        padding:1.5em 0;
+        font-size: var(--h1-whitney-mobile-port-font-size);
+    }
+
+    .titles h2 {
+        padding:1em 0;
+        font-size: var(--h2-whitney-mobile-port-font-size);
+    }
+
+    .sub-titles h2 {
         font-size: var(--hostel-heading-mobile-port-font-size);
+    }
+
+    /* TEXT IMAGE GRID with equal columns */
+    .text-image-equal-grid {
+        display:grid;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        grid-template-columns: 100%;
+    }
+
+    .left-side, .right-side {
+        grid-column:1;
+    }
+
+    .left-side {
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .left-side span {
+        font-size: var(--rene-mobile-port-font-size);
+    }
+
+    .right-side {
+        padding-top:1em;
+        justify-content: center;
+    }
+
+    /* TOPIC BLOCK with clickable and non-clickable links */
+    .topic-inline-grid {
+        margin:.2em auto;
+    }
+
+    .topic-left a h2, .topic-left h2 {
+        font-size: var(--hostel-heading-mobile-port-font-size);
+    }
+
+    .topic-left a span, .topic-left span {
+        display:none;
+    }
+
+    /* QUOTES inside content */
+    .content-quote {
+        width:90%;
+        margin:1em 5% 0 5%;
     }
 
     .content-quote p {
         font-size:var(--script-p-mobile-port-font-size);
     }
 
-    .content-quote span {
-        font-size:var(--script-span-mobile-port-font-size);
-    }
-
-    .energy-tip p {
-        font-size:var(--data-mobile-port-font-p-size);
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--open-sans-mobile-port-font-size);
     }
 
     .content-videos {
         height:150px;
     }
+
+
+
+    .icon img {
+        height:20px;
+    }
+
 
 }
 
@@ -87,25 +276,90 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-    .topic-left h1, .topic-left h2 {
+    /* UNIQUE HEADING */
+    .titles h1, .titles h2 {
+        width:90%;
+        margin:0 5%;
+    }
+
+    .titles h1 {
+        padding:2em 0;
+        font-size: var(--h1-whitney-mobile-land-font-size);
+    }
+
+    .titles h2 {
+        padding:1em 0;
+        font-size: var(--h2-whitney-mobile-land-font-size);
+    }
+
+    .sub-titles h2 {
         font-size: var(--hostel-heading-mobile-land-font-size);
+    }
+
+    /* TEXT IMAGE GRID with equal columns */
+    .text-image-equal-grid {
+        display:inline-grid;
+        width:90%;
+        margin:0 5%;
+        grid-template-columns: 50% 50%;
+    }
+
+    .left-side {
+        width:95%;
+        margin-right:5%;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .left-side span {
+        font-size: var(--rene-mobile-land-font-size);
+    }
+
+    .right-side {
+        padding-top:1em;
+        justify-content: flex-end;
+    }
+
+    /* TOPIC BLOCK with clickable and non-clickable links */
+    .topic-inline-grid {
+        margin:.2em auto;
+    }
+
+    .topic-left a h2, .topic-left h2 {
+        font-size: var(--hostel-heading-mobile-land-font-size);
+    }
+
+    .topic-left a span, .topic-left span {
+        font-size: var(--global-med-mobile-land-font-size);
+    }
+
+    /* QUOTES inside content */
+    .content-quote {
+        width:90%;
+        margin:1em 5% 0 5%;
     }
 
     .content-quote p {
         font-size:var(--script-p-mobile-land-font-size);
     }
 
-    .content-quote span {
-        font-size:var(--script-span-mobile-land-font-size);
-    }
-
-    .energy-tip p {
-        font-size:var(--data-mobile-land-font-p-size);
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--open-sans-mobile-land-font-size);
     }
 
     .content-videos {
         height:250px;
     }
+
+
+
+    .icon img {
+        height:30px;
+    }
+
+
+
 
 }
 
@@ -115,25 +369,95 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-    .topic-left h1, .topic-left h2 {
+    /* UNIQUE HEADING */
+    .titles h1, .titles h2 {
+        width:90%;
+        margin:0 5%;
+    }
+
+    .titles h1 {
+        padding:2em 0;
+        font-size: var(--h1-whitney-tablet-port-font-size);
+    }
+
+    .titles h2 {
+        padding:1em 0;
+        font-size: var(--h2-whitney-tablet-port-font-size);
+    }
+
+    .sub-titles h2 {
         font-size: var(--hostel-heading-tablet-port-font-size);
+    }
+
+    /* TEXT IMAGE GRID with equal columns */
+    .text-image-equal-grid {
+        display:grid;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        grid-template-columns: 100%;
+    }
+
+    .left-side, .right-side {
+        grid-column:1;
+    }
+
+    .left-side {
+        width:100%;
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .left-side span {
+        font-size: var(--rene-tablet-port-font-size);
+    }
+
+    .right-side {
+        padding-top:1em;
+        justify-content: center;
+    }
+
+    /* TOPIC BLOCK with clickable and non-clickable links */
+    .topic-inline-grid {
+        margin:.2em auto;
+    }
+
+    .topic-left a h2, .topic-left h2 {
+        font-size: var(--hostel-heading-tablet-port-font-size);
+    }
+
+    .topic-left a span, .topic-left span {
+        font-size: var(--global-med-tablet-port-font-size);
+    }
+
+    /* QUOTES inside content */
+    .content-quote {
+        width:90%;
+        margin:1em 5% 0 5%;
     }
 
     .content-quote p {
         font-size:var(--script-p-tablet-port-font-size);
     }
 
-    .content-quote span {
-        font-size:var(--script-span-tablet-port-font-size);
-    }
-
-    .energy-tip p {
-        font-size:var(--data-tablet-port-font-p-size);
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--open-sans-tablet-port-font-size);
     }
 
     .content-videos {
         height:300px;
     }
+
+
+
+    .icon img {
+        height:30px;
+    }
+
+
+
+
 }
 
 /*  TABLETS LANDSCAPE *******************************************************************************************/
@@ -142,25 +466,84 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
-    .topic-left h1, .topic-left h2 {
+    /* UNIQUE HEADING */
+    .titles h1, .titles h2 {
+        width:90%;
+        margin:0 5%;
+    }
+    .titles h1 {
+        padding:2em 0;
+        font-size: var(--h1-whitney-tablet-land-font-size);
+    }
+
+    .titles h2 {
+        padding:1em 0;
+        font-size: var(--h2-whitney-tablet-land-font-size);
+    }
+
+    .sub-titles h2 {
         font-size: var(--hostel-heading-tablet-land-font-size);
+    }
+
+    /* TEXT IMAGE GRID with equal columns */
+    .text-image-equal-grid {
+        display:inline-grid;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        grid-template-columns: 50% 50%;
+    }
+
+    .left-side {
+        width:95%;
+        margin-right:5%;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .left-side span {
+        font-size: var(--rene-tablet-land-font-size);
+    }
+
+    /* TOPIC BLOCK with clickable and non-clickable links */
+    .topic-inline-grid {
+        margin:.2em auto;
+    }
+
+    .topic-left a h2, .topic-left h2 {
+        font-size: var(--hostel-heading-tablet-land-font-size);
+    }
+
+    .topic-left a span, .topic-left span {
+        font-size: var(--global-med-tablet-land-font-size);
+    }
+
+    /* QUOTES inside content */
+    .content-quote {
+        width:90%;
+        margin:1em 5% 0 5%;
     }
 
     .content-quote p {
         font-size:var(--script-p-tablet-land-font-size);
     }
 
-    .content-quote span {
-        font-size:var(--script-span-tablet-land-font-size);
-    }
-
-    .energy-tip p {
-        font-size:var(--data-tablet-land-font-p-size);
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--open-sans-tablet-land-font-size);
     }
 
     .content-videos {
         height:350px;
     }
+
+
+    .icon img {
+        height:30px;
+    }
+
+
+
 
 }
 
@@ -170,24 +553,86 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    .topic-left h1, .topic-left h2 {
+    /* UNIQUE HEADING */
+    .titles h1, .titles h2 {
+        width:90%;
+        margin:0 5%;
+    }
+
+    .titles h1 {
+        padding:1.5em 0;
+        font-size: var(--h1-whitney-ipad-port-font-size);
+    }
+
+    .titles h2 {
+        padding:1em 0;
+        font-size: var(--h2-whitney-ipad-port-font-size);
+    }
+
+    .sub-titles h2 {
         font-size: var(--hostel-heading-ipad-port-font-size);
+    }
+
+    /* TEXT IMAGE GRID with equal columns */
+    .text-image-equal-grid {
+        display:inline-grid;
+        width:100%;
+        grid-template-columns: 50% 50%;
+    }
+
+    .left-side {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .left-side span {
+        font-size: var(--rene-tablet-port-font-size);
+    }
+
+    .right-side {
+        padding-top:1em;
+        justify-content: center;
+    }
+
+    /* TOPIC BLOCK with clickable and non-clickable links */
+    .topic-inline-grid {
+        margin:2em auto;
+    }
+
+    .topic-left a h2, .topic-left h2 {
+        font-size: var(--hostel-heading-ipad-port-font-size);
+    }
+
+    .topic-left a span, .topic-left span {
+        font-size: var(--global-med-ipad-port-font-size);
+    }
+
+    /* QUOTES inside content */
+    .content-quote {
+        width:90%;
+        margin:1em 5% 0 5%;
     }
 
     .content-quote p {
         font-size:var(--script-p-ipad-port-font-size);
     }
 
-    .content-quote span {
-        font-size:var(--script-span-ipad-port-font-size);
-    }
-
-    .energy-tip p {
-        font-size:var(--data-ipad-port-font-p-size);
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--open-sans-ipad-port-font-size);
     }
 
     .content-videos {
         height:300px;
+    }
+
+
+
+    .icon img {
+        height:40px;
     }
 
 }
@@ -198,77 +643,161 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-    .topic-left h1, .topic-left h2 {
+    /* UNIQUE HEADING */
+    .titles h1, .titles h2 {
+        width:100%;
+    }
+
+    .titles h1 {
+        padding:2em 0;
+        font-size: var(--h1-whitney-ipad-land-font-size);
+    }
+
+    .titles h2 {
+        padding:1em 0;
+        font-size: var(--h2-whitney-ipad-land-font-size);
+    }
+
+    .sub-titles h2 {
         font-size: var(--hostel-heading-ipad-land-font-size);
+    }
+
+    /* TEXT IMAGE GRID with equal columns */
+    .text-image-equal-grid {
+        display:inline-grid;
+        width:100%;
+        grid-template-columns: 50% 50%;
+    }
+
+    .left-side {
+        width:100%;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .left-side span {
+        font-size: var(--rene-desktop-font-size);
+    }
+
+    /* TOPIC BLOCK with clickable and non-clickable links */
+    .topic-inline-grid {
+        margin:1em auto;
+    }
+
+    .topic-left a h2, .topic-left h2 {
+        font-size: var(--hostel-heading-ipad-land-font-size);
+    }
+
+    .topic-left a span, .topic-left span {
+        font-size: var(--global-med-ipad-land-font-size);
+    }
+
+    /* QUOTES inside content */
+    .content-quote {
+        width:100%;
+        margin:1em 0;
     }
 
     .content-quote p {
         font-size:var(--script-p-ipad-land-font-size);
     }
 
-    .content-quote span {
-        font-size:var(--script-span-ipad-land-font-size);
-    }
-
-    .energy-tip p {
-        font-size:var(--data-ipad-land-font-p-size);
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--open-sans-ipad-land-font-size);
     }
 
     .content-videos {
         height:400px;
     }
 
-}
 
-/* LAPTOPS *****************************************************************************************************/
-@media only screen
-and (min-width: 1440px)
-and (max-width: 1919px) {
 
-    .topic-left h1, .topic-left h2 {
-        font-size: var(--hostel-heading-laptop-font-size);
-    }
-
-    .content-quote p {
-        font-size:var(--script-p-laptop-desktop-font-size);
-    }
-
-    .content-quote span {
-        font-size:var(--script-span-laptop-desktop-font-size);
-    }
-
-    .energy-tip p {
-        font-size:var(--data-laptop-desktop-font-p-size);
-    }
-
-    .content-videos {
-        /*height:var(--content-videos-laptop-desktop-height);*/
+    icon img {
+        height:50px;
     }
 
 }
 
 /* DESKTOPS ****************************************************************************************************/
 @media only screen
-and (min-width: 1920px) {
+and (min-width: 1440px) {
 
-    .topic-left h1, .topic-left h2 {
+    /* UNIQUE HEADING */
+    .titles h1, .titles h2 {
+        width:100%;
+    }
+
+    .titles h1 {
+        padding:2em 0;
+        font-size: var(--h1-whitney-desktop-font-size);
+    }
+
+    .titles h2 {
+        padding:1em 0;
+        font-size: var(--h2-whitney-desktop-font-size);
+    }
+
+    .sub-titles h2 {
         font-size: var(--hostel-heading-desktop-font-size);
     }
 
+    /* TEXT IMAGE GRID with equal columns */
+    .text-image-equal-grid {
+        display:inline-grid;
+        width:100%;
+        grid-template-columns: 50% 50%;
+    }
+
+    .left-side {
+        width:100%;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .left-side span {
+        font-size: var(--rene-desktop-font-size);
+        padding-bottom:.5em;
+    }
+
+    /* TOPIC BLOCK with clickable and non-clickable links */
+    .topic-inline-grid {
+        margin:1em auto;
+    }
+
+    .topic-left a h2, .topic-left h2 {
+        font-size: var(--h1-whitney-desktop-font-size);
+    }
+
+    .topic-left a span, .topic-left span {
+        font-size: var(--global-med-desktop-font-size);
+    }
+
+    /* QUOTES inside content */
+    .content-quote {
+        width:100%;
+        margin:1em 0;
+    }
+
     .content-quote p {
-        font-size:var(--script-p-laptop-desktop-font-size);
+        font-size:var(--script-p-desktop-font-size);
     }
 
-    .content-quote span {
-        font-size:var(--script-span-laptop-desktop-font-size);
-    }
-
-    .energy-tip p {
-        font-size:var(--data-laptop-desktop-font-p-size);
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--open-sans-desktop-font-size);
     }
 
     .content-videos {
-        /*height:var(--content-videos-laptop-desktop-height);*/
+        height:400px;
+    }
+
+    .topic-text h2 {
+        font-size:var(--h1-whitney-desktop-font-size);
+    }
+
+    icon img {
+        height:50px;
     }
 
 }
@@ -276,32 +805,87 @@ and (min-width: 1920px) {
 /* GLOBAL ****************************************************************************************************/
 @media only screen {
 
-    .topic-block, .content-quote,  .energy-tip {
-        max-width:1152px;
+    /* UNIQUE HEADING */
+    .titles h1, .titles h2, .sub-titles h2 {
+        display:block;
+        float:left;
+        letter-spacing: 4px;
+        font-style:normal;
+        text-transform: uppercase;
+        font-weight:400;
+        color: var(--color-light-blue);
+    }
+
+    .titles h1 {
+        font-family: Whitney-SSm-Book;
+        text-align:left;
+    }
+
+    .sub-titles h2 {
         width:100%;
-        margin:1em auto;
-    }
-
-    .topic-block, .energy-tip {
-        background-color: var(--color-off-white);
-        color:var(--color-darkest-purple);
-    }
-
-    .topic-block {
-        display:inline-grid;
-        grid-template-columns: 74% 26%;
+        text-align:center;
         font-family: Green-Hostel;
+    }
+
+    /* TEXT IMAGE GRID with equal columns */
+    .text-image-equal-grid {
+        max-width:1280px;
+        color:var(--color-dark-blue);
+    }
+
+    .left-side {
+        display:grid;
+    }
+
+    .left-side span {
+        color: var(--color-dark-blue);
+        background-color: white;
+        font-family: ReneB-Book;
+        text-align: left;
+        line-height: var(--list-item-line-height);
+    }
+
+    .right-side {
+        display:grid;
+    }
+
+    .right-side img {
+        max-width:100%;
+        height:auto;
+    }
+
+    /* TOPIC inline grid with clickable and non-clickable links */
+    .topic-inline-grid {
+        display:inline-grid;
+        max-width:1152px;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        grid-template-columns: 74% 26%;
+        text-transform: uppercase;
+        background-image:linear-gradient(to right, var(--color-lightest-blue) , var(--color-off-white));
     }
 
     .topic-left {
         display:grid;
-        width:100%;
+        width:90%;
         align-content: center;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-left:5%;
     }
 
-    .topic-left h1, .topic-left h2, .topic-left h3 {
-        letter-spacing: 3px;
+    .topic-left a {
+        text-decoration: none;
+    }
+
+    .topic-left a h2, .topic-left h2 {
+        font-family: Whitney-Light;
+        color:var(--color-white);
+    }
+
+    .topic-left a span, .topic-left span {
+        font-family: global;
+        color:var(--color-white);
     }
 
     .topic-right {
@@ -309,9 +893,6 @@ and (min-width: 1920px) {
         width:100%;
         align-content: center;
         justify-content: flex-end;
-        border-top:thin solid var(--color-darkest-purple);
-        border-right:thin solid var(--color-darkest-purple);
-        border-bottom:thin solid var(--color-darkest-purple);
     }
 
     .topic-right img {
@@ -321,11 +902,12 @@ and (min-width: 1920px) {
 
     /* QUOTES INSIDE CONTENT (as opposed to Headings quotes*/
     .content-quote {
+        max-width:1152px;
         display:grid;
         align-content: center;
         justify-content: center;
         font-family: var(--family-script);
-        color:var(--color-darkest-purple);
+        color: var(--color-darkest-purple);
     }
 
     .content-quote p, .content-quote span {
@@ -334,7 +916,7 @@ and (min-width: 1920px) {
 
     .content-quote p  {
         font-weight: 400;
-        text-align:justify;
+        text-align:center;
         line-height:var(--quote-p-line-height);
     }
 
@@ -345,19 +927,129 @@ and (min-width: 1920px) {
 
     /* ENERGY TIPS */
     .energy-tip {
+        max-width:1152px;
+        width:90%;
+        margin:1em 5%;
         display:grid;
+        background-color: var(--color-white);
+        color:var(--color-darkest-purple);
         align-content: center;
         justify-content: center;
         border-radius:20px;
-        border:thin solid gold;
-        font-family: var(--family-data);
+        border:thin solid var(--color-dark-gold);
+        font-family: var(--family-open-sans);
     }
 
-    .energy-tip p {
+    .energy-tip p, .energy-tip span {
         padding:1em;
         line-height: var(--copy-line-height);
     }
 
+    .icon {
+        background: url("src/assets/images/backgrounds/endQuote.gif") no-repeat center;
+        height:25px;
+    }
+
+    /* topic headers with background image */
+    .topic-grid-with-background {
+        display:grid;
+        float:left;
+        justify-content: flex-start;
+        align-content: center;
+        height:300px;
+        max-width:1152px;
+        width:90%;
+        margin:2em 5%;
+        text-transform: uppercase;
+        border-bottom:thin dashed grey;
+    }
+
+    .topic-heading h1 {
+        font-family: Whitney-SSm-Book;
+        font-weight: 400;
+        line-height:150%;
+        color:var(--color-dark-blue);
+        padding-left:2em;
+    }
+
+    /* TOPIC BACKGROUND IMAGES (prefaced with back and globalHeaders.css are prefaced with header */
+    /* ABOUT IMAGES */
+    .back-about-me {
+        background-size: auto;
+        background:url('src/assets/images/about/me/aboutMeIntro.jpg') no-repeat right ;
+    }
+
+    .back-about-energy-practitioner {
+        background-size: auto;
+        background:url('src/assets/images/about/practitioner/aboutPractitionerIntro.jpg') no-repeat right ;
+    }
+
+    .back-about-eol-doula {
+        background-size: auto;
+        background:url('src/assets/images/about/doula/aboutDoulaIntro.jpg') no-repeat right ;
+    }
+
+    /* ENERGY MEDICINE */
+    .back-reduce-anxiety {
+        background-size: auto;
+         background:url('src/assets/images/energyMedicine/anxiety/anxietyIntro.jpg') no-repeat right;
+    }
+
+    .back-relieve-burnout {
+        background-size: auto;
+        background:url('src/assets/images/energyMedicine/burnout/burnoutIntro.jpg') no-repeat right ;
+    }
+
+    .back-decrease-pain {
+        background-size: auto;
+        background:url('src/assets/images/energyMedicine/pain/painIntro.jpg') no-repeat right ;
+    }
+
+    .back-do-energy-exercises {
+        background-size: auto;
+        background:url('src/assets/images/energyMedicine/move/moveIntro.jpg') no-repeat right ;
+    }
+
+    .back-discover-element {
+        background-size: auto;
+        background:url('src/assets/images/energyMedicine/elements/elementIntro.jpg') no-repeat right ;
+    }
+
+    .back-trace-meridians {
+        background-size: auto;
+        background:url('src/assets/images/energyMedicine/meridians/meridiansIntro.jpg') no-repeat right ;
+    }
+
+    /* DOULA WORK */
+    .back-plan-ahead {
+        background-size: auto;
+        background:url('src/assets/images/eolCare/planAhead/planAheadIntro.jpg') no-repeat right ;
+    }
+
+    .back-choose-representative {
+        background-size: auto;
+        background:url('src/assets/images/eolCare/chooseRep/chooseRepIntro.jpg') no-repeat right ;
+    }
+
+    .back-support-caregivers {
+        background-size: auto;
+        background:url('src/assets/images/eolCare/supportCaregivers/caregiverSupportIntro.jpg') no-repeat right ;
+    }
+
+    .back-care-for-patients {
+        background-size: auto;
+        background:url('src/assets/images/eolCare/careForPatient/patientCareIntro.jpg') no-repeat right ;
+    }
+
+    .back-create-legacy {
+        background-size: auto;
+        background:url('src/assets/images/eolCare/createLegacy/legacyIntro.jpg') no-repeat right ;
+    }
+
+    .back-choose-memorial {
+        background-size: auto;
+        background:url('src/assets/images/eolCare/chooseMemorial/memorialIntro.jpg') no-repeat right ;
+    }
 
 }
 
