@@ -16,6 +16,7 @@
   --color-light-blue:#5b89d5;
   --color-dark-blue:#5a7d9f;
   --color-darkest-blue:#183552;
+  --color-soft-blue:#bac9d5;
 
   --color-off-white:#f7efef;
   --color-white:#ffffff;
@@ -35,6 +36,9 @@
   --color-brown:#4a3f29;
   --color-black:#362f32;
 
+  --color-grey-purple:#656281;
+  --color-orange:#f0ab26;
+
   /* FONT SIZES  */
 
 
@@ -43,13 +47,24 @@
 
   --color-sub-menu:#a4b5d2;
 
-  /* these add up to 225px */
-  --slogan-desktop-height:130px;
-  --menu-desktop-height:50px;
+  /* DESKTOP HEADER-MENU ROW */
+  /* ADDS UP TO 195 px */
+  /* first row has 100 for Logo, Name and Slogans  */
+  --logo-name-slogan-desktop-height:100px;
+  /* second row is for the main menu */
+  --menu-desktop-height:60px;
+  /* third row is the sub menu */
   --sub-menu-desktop-height:45px;
 
+  /* MOBILE HEADER */
+  /*--total-mobile-header-height:130px;*/
+  --mobile-top-header-height:80px;
+  --mobile-middle-header-height:50px;
+  --mobile-bottom-header-height:40px;
+
+
   --menu-desktop-font-size:0.9em;
-  --sub-menu-desktop-font-size:0.8em;
+  --sub-menu-desktop-font-size:0.7em;
 
   --menu-mobile-font-size:.9em;
   --sub-menu-mobile-font-size:.7em;
@@ -72,7 +87,7 @@
   /* WITH MALGUN GOTHIC */
   --family-global:'malgun gothic';         /*  */
 
-  --global-small-banana-port-font-size:.5em;
+  --global-small-banana-port-font-size:.4em;
   --global-small-mobile-port-font-size:.5em;
   --global-small-tablet-port-font-size:.6em;
   --global-small-ipad-port-font-size:.7em;
@@ -94,6 +109,7 @@
   --global-med-tablet-land-font-size:.9em;
   --global-med-ipad-land-font-size:.95em;
 
+  --global-med-laptop-font-size:.95em;
   --global-med-desktop-font-size:1em;
 
   --global-big-banana-port-font-size:.7em;
@@ -108,7 +124,7 @@
 
   --global-big-desktop-font-size:1.2em;
 
-  /* RENE */
+  /* RENE in LISTS */
   --rene-banana-port-font-size:.6em;
   --rene-mobile-port-font-size:.7em;
   --rene-tablet-port-font-size:.85em;
@@ -121,6 +137,18 @@
 
   --rene-desktop-font-size:1.1em;
 
+  /* RENE as H1 heading for TOPICS */
+  --rene-thin-banana-port-font-size:.8em;
+  --rene-thin-mobile-port-font-size:1.2em;
+  --rene-thin-tablet-port-font-size:1.8em;
+  --rene-thin-ipad-port-font-size:2.0em;
+
+  --rene-thin-banana-land-font-size:1.1em;
+  --rene-thin-mobile-land-font-size:1.7em;
+  --rene-thin-tablet-land-font-size:2.1em;
+  --rene-thin-ipad-land-font-size:2.4em;
+
+  --rene-thin-desktop-font-size:2.5em;
 
   /* BELOW IS WITH FAMILY SCRIPT (quotes for header quotes, script for content quotes)*/
                 /*  */
@@ -261,6 +289,7 @@
 
   --h2-whitney-desktop-font-size:1.8em;
 
+
   /* H1 */
   --h1-whitney-banana-port-font-size:1em;
   --h1-whitney-mobile-port-font-size:1.1em;
@@ -292,26 +321,36 @@
   --med-whitney-tablet-port-font-size:0.8em;
   --med-whitney-ipad-port-font-size:0.9em;
 
-  --med-whitney-banana-land-font-size:0.8em;
+  --med-whitney-banana-land-font-size:0.9em;
   --med-whitney-mobile-land-font-size:0.9em;
   --med-whitney-tablet-land-font-size:1em;
   --med-whitney-ipad-land-font-size:1.1em;
 
   --med-whitney-desktop-font-size:1.2em;
 
+  --big-whitney-banana-port-font-size:.9em;
+  --big-whitney-mobile-port-font-size:1.2em;
+  --big-whitney-tablet-port-font-size:1.9em;
+  --big-whitney-ipad-port-font-size:2.1em;
 
+  --big-whitney-banana-land-font-size:1.2em;
+  --big-whitney-mobile-land-font-size:1.4em;
+  --big-whitney-tablet-land-font-size:1.8em;
+  --big-whitney-ipad-land-font-size:2.2em;
+
+  --big-whitney-desktop-font-size:2.5em;
 
   /* BELOW IS WITH MONUMENT */
   --monument-banana-port-font-size:.8em;
-  --monument-mobile-port-font-size:1.2em;
-  --monument-tablet-port-font-size:2em;
-  --monument-ipad-port-font-size:2.6em;
+  --monument-mobile-port-font-size:1.3em;
+  --monument-tablet-port-font-size:2.3em;
+  --monument-ipad-port-font-size:2.8em;
 
-  --monument-banana-land-font-size:1.8em;
-  --monument-mobile-land-font-size:3.1em;
+  --monument-banana-land-font-size:2.2em;
+  --monument-mobile-land-font-size:3.2em;
   --monument-tablet-land-font-size:2.7em;
   --monument-ipad-land-font-size:2.8em;
-
+  --monument-laptop-font-size:2.8em;
   --monument-desktop-font-size:2.9em;
 
   --monument-header-banana-port-font-size:1.7em;
@@ -510,16 +549,48 @@
     border: none;
   }
 
-  .with-border {
-    border: thin solid #878787;
+  .with-colored-border {
+    border: thin solid  var(--color-soft-blue);
   }
 
-  .top-border {
-    border-top: thin solid gold;
+  .top-colored-border {
+    border-top: thin solid var(--color-soft-blue);
   }
 
-  .bottom-border {
-    border-bottom: thin solid gold;
+  .bottom-colored-border {
+    border-bottom: thin solid var(--color-soft-blue);
+  }
+
+  .right-colored-border {
+    border-right: thin solid var(--color-soft-blue);
+  }
+
+  .right-colored-dashed-border {
+    border-right: thin dashed var(--color-soft-blue);
+  }
+
+  .left-colored-border {
+    border-left: thin solid var(--color-soft-blue);
+  }
+
+  .with-white-border {
+    border: thin solid var(--color-off-white);
+  }
+
+  .top-white-border {
+    border-top: thin solid var(--color-off-white);
+  }
+
+  .bottom-white-border {
+    border-bottom: thin solid var(--color-off-white);
+  }
+
+  .right-white-border {
+    border-right: 1px solid var(--color-off-white);
+  }
+
+  .left-white-border {
+    border-left: 1px solid var(--color-off-white);
   }
 
   .border-radius-left-only {
@@ -842,6 +913,11 @@
     src: url("../fonts/Whitney SSm Semibold.ttf") format("opentype");
   }
 
-
+  .super {
+    display:inline;
+    vertical-align:super;
+    font-size: .7em;
+    font-weight:bolder;
+  }
 
 }

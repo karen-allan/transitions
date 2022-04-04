@@ -13,7 +13,7 @@ export const SUB_MENU_ITEMS: SubMenuItem[] = [
     {id: 35, parent_id: 3, title: 'TRACE YOUR MERIDIANS', url: 'traceMeridians'},
 
     {id: 40, parent_id: 4, title: 'PLAN AHEAD', url: 'planAhead'},
-    {id: 41, parent_id: 4, title: 'CHOOSE YOUR REPRESENTATIVE', url: 'chooseRepresentative'},
+    {id: 41, parent_id: 4, title: 'CHOOSE YOUR ADVOCATE', url: 'chooseRepresentative'},
     {id: 42, parent_id: 4, title: 'CARE FOR PATIENTS', url: 'careForPatient'},
     {id: 43, parent_id: 4, title: 'SUPPORT FOR CAREGIVERS', url: 'supportCaregivers'},
     {id: 44, parent_id: 4, title: 'CREATE A LEGACY', url: 'createLegacy'},

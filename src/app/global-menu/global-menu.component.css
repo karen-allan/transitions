@@ -6,94 +6,194 @@
 and (min-width: 240px)
 and (max-width: 1279px) {
 
-      .header-desktop {
+    .header-desktop {
         display: none;
-      }
+    }
 
-      .header-mobile {
+    .header-mobile {
         display: block;
-        width: 100%;
-        background-color: white;
-      }
-
-      .header-mobile-grid {
-        display: inline-grid;
-        grid-template-columns: 95% 5%;
+        float:left;
+        margin:auto;
         width:100%;
-      }
+    }
 
-      .slogan, .mobile-menu-icon  {
+    /* contains the mobile-header-content */
+    .mobile-header-block {
         display: grid;
-        grid-row:1;
         width:100%;
-      }
+        max-width:1024px;
+        margin:auto;
+    }
 
-      .slogan {
-        grid-column:1;
-      }
+    /* ROW 1 The header is 2 grid columns with logo (col 1) and name (col 2) in row 1
+    and slogan in row 2 all cols, with slogan 1 in col 1 and slogan 2 in col 2
+    3rd row is the mobile hamburger menu ROWS AND HEIGHT DEFINED BELOW IN INDIVID. ELEMENTS */
+    .mobile-header-content {
+        display:inline-grid;
+        width:100%;
+        align-content: flex-start;
+        grid-template-columns: 25% 75%;
+    }
 
-     .mobile-menu-icon {
-        grid-column: 2;
+    .header-logo, .header-name {
+        height:var(--mobile-top-header-height);
+    }
+
+    .logo {
+        background-size: contain;
+        background-position: right;
+        background-image:url('src/assets/images/headers/transitionsInEnergyMobileLogo.png');
+        background-repeat: no-repeat;
+        margin:0;
+    }
+
+    .header-name {
+        letter-spacing: 3px;
+        justify-content: flex-start;
+    }
+
+    /* ROW 2 slogan - energy medicine treatments - icon - end of life doula support */
+    .header-slogans {
+        grid-row:2;
+        display:inline-grid;
+        align-content: flex-start;
+        grid-column:1/-1;
+        width:100%;
+        grid-template-columns: 40% 20% 40%;
+        background-color: var(--color-dark-blue);
+    }
+
+    .header-slogans p, .slogans-line, .header-slogans span {
+        display:inline-grid;
+        height:var(--mobile-middle-header-height);
         align-content: center;
-        justify-content:center;
-        cursor:pointer;
-      }
+    }
 
-      .mobile-menu {
+    .header-slogans p {
+        grid-column: 1;
+        letter-spacing: 2px;
+        padding-left:1em;
+        color:var(--color-white);
+        justify-content: flex-start;
+        margin: 0;
+    }
+
+    .slogans-line {
+        grid-column:2;
+        background-size:auto;
+        background: url("src/assets/images/headers/headerInfinity.png") no-repeat center;
+    }
+
+    .header-slogans span {
+        grid-column:3;
+        letter-spacing: 2px;
+        color:var(--color-white);
+        padding-right:1em;
+        justify-content: flex-end;
+    }
+
+    /* ROW 3 insta, email and menu item bars */
+    .mobile-menu-items {
+        grid-row:3;
+        display:inline-grid;
+        height:var(--mobile-bottom-header-height);
+        grid-column:1/-1;
+        width:100%;
+        background-color: var(--color-white);
+    }
+
+    .mobile-instagram-icon {
+        display:inline-grid;
+        grid-column:2;
+        align-content: center;
+    }
+
+    .mobile-email-icon {
+        display:inline-grid;
+        grid-column:3;
+        align-content: center;
+    }
+
+    .mobile-menu-icon {
+        display:inline-grid;
+        grid-column:4;
+        cursor: pointer;
+        justify-content: center;
+        align-content: center;
+        background-color: var(--color-darkest-purple);
+    }
+
+    .bar1, .bar2, .bar3 {
+        display:grid;
+        width: 20px;
+        height: 2px;
+        justify-content: center;
+        background-color: #fff;
+        margin: 2px 0;
+        transition: 0.4s;
+    }
+
+    /* THE MOBILE SUB MENU THAT SLIDES DOWN ON CLICKING  */
+    .mobile-menu-block {
+        display: grid;
+        grid-row:3;
+        align-content: flex-start;
+        width:100%;
+        margin:auto;
+        font-family: var(--family-global);
+    }
+
+    .mobile-menu {
         overflow: hidden;
         background-color: #333;
         position: relative;
-      }
+    }
 
-      .bar1, .bar2, .bar3 {
-        width: 20px;
-        height: 2px;
-        background-color: #333;
-        margin: 2px 0;
-        transition: 0.4s;
-      }
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        display: grid;
+        align-content: center;
+        height: 50px;
+        width:100%;
+        justify-content: flex-start;
+        padding-left: 1em;
+        font-size: var(--menu-mobile-font-size);
+    }
 
-  .mobile-selected-item, .mobile-unselected-item a {
-    display:grid;
-    font-family: var(--family-menu);
-    height: 50px;
-    align-content: center;
-    padding-left: 1em;
-    font-size:var(--menu-mobile-font-size);
-  }
+    .mobile-selected-top-menu-item {
+        cursor: default;
+        background-color: var(--color-off-white);
+        color: var(--color-darkest-blue);
+    }
 
-  .mobile-selected-item {
-    cursor: default;
-    background-color: var(--color-off-white);
-    color:var(--color-darkest-blue);
-  }
+    .mobile-unselected-top-menu-item a {
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--color-off-white);
+        background-color: var(--color-darkest-blue);
+    }
 
-  .mobile-unselected-item a {
-    text-decoration: none;
-    cursor: pointer;
-    color:var(--color-off-white);
-    background-color: var(--color-darkest-blue);
-  }
+    /* MOBILE SUB MENU ITEMS */
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        display: grid;
+        width: 100%;
+        align-content: center;
+        justify-content: flex-start;
+        height: 40px;
+        font-size: var(--sub-menu-mobile-font-size);
+        padding-left: 3em;
+    }
 
+    .mobile-selected-sub-menu-item {
+        background-color: var(--color-off-white);
+        color: var(--color-darkest-blue);
+    }
 
-  /*
-  /* Rotate first bar */
- /* .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-9px, 6px) ;
-  }
-*/
-  /* Fade out the second bar */
-/*  .change .bar2 {
-    opacity: 0;
-  }
-*/
-  /* Rotate last bar */
- /* .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-8px, -8px) ;
-  }
-*/
+    .mobile-unselected-sub-menu-item a {
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--color-off-white);
+        background-color: var(--color-darkest-blue);
+    }
 
 }
 
@@ -103,15 +203,18 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait){
 
-  .mobile-menu-icon, .slogan  {
-    height:52px;
-  }
+    .header-name {
+        font-size: var(--monument-banana-port-font-size);
+    }
 
-  /* 216 is 90% 0f 240 makes a 50 height*/
-  .slogan {
-    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
-    background-size: contain;
-  }
+    .header-slogans p, .header-slogans span {
+        font-size: var(--global-small-banana-port-font-size);
+        letter-spacing: .3em;
+    }
+
+    .mobile-menu-items {
+        grid-template-columns: 55% 15% 15% 15%;
+    }
 
 }
 
@@ -121,14 +224,18 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-  .mobile-menu-icon, .slogan  {
-    height:60px;
-  }
+    .header-name {
+        font-size: var(--monument-banana-land-font-size);
+        padding-left:1em;
+    }
 
-  .slogan {
-    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
-    background-size: contain;
-  }
+    .header-slogans p, .header-slogans span {
+        font-size: var(--global-small-banana-land-font-size);
+    }
+
+    .mobile-menu-items {
+        grid-template-columns: 72% 8% 10% 10%;
+    }
 
 }
 
@@ -138,14 +245,17 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-  .mobile-menu-icon, .slogan  {
-    height:87px;
-  }
+    .header-name {
+        font-size: var(--monument-mobile-port-font-size);
+    }
 
-  .slogan {
-    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
-    background-size: contain;
-  }
+    .header-slogans p, .header-slogans span {
+        font-size: var(--global-small-mobile-port-font-size);
+    }
+
+    .mobile-menu-items {
+        grid-template-columns: 60% 10% 15% 15%;
+    }
 
 }
 
@@ -155,15 +265,18 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-  .mobile-menu-icon, .slogan  {
-    height:90px;
-  }
+    .header-name {
+        font-size: var(--monument-mobile-land-font-size);
+        padding-left:1em;
+    }
 
-  .slogan {
-    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg")  left no-repeat;
-    background-size: contain;
-  }
+    .header-slogans p, .header-slogans span {
+        font-size: var(--global-med-mobile-land-font-size);
+    }
 
+    .mobile-menu-items {
+        grid-template-columns: 80% 5% 5% 10%;
+    }
 }
 
 /* TABLETS PORTRAIT ****************************************************************************************************/
@@ -172,14 +285,18 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-  .mobile-menu-icon, .slogan  {
-    height:90px;
-  }
+    .header-name {
+        font-size: var(--monument-tablet-port-font-size);
+        padding-left:1em;
+    }
 
-  .slogan {
-    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg") left no-repeat;
-    background-size: contain;
-  }
+    .header-slogans p, .header-slogans span {
+        font-size: var(--global-small-tablet-port-font-size);
+    }
+
+    .mobile-menu-items {
+        grid-template-columns: 76% 7% 7% 10%;
+    }
 
 }
 
@@ -189,15 +306,105 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
+    .header-name {
+        font-size: var(--monument-ipad-port-font-size);
+        padding-left:1em;
+    }
 
-  .mobile-menu-icon, .slogan  {
-    height:110px;
-  }
+    .header-slogans p, .header-slogans span {
+        font-size: var(--global-med-ipad-port-font-size);
+    }
 
-  .slogan {
-    background: url("src/assets/images/headers/transitionsInEnergyMobileHeader.jpg") left no-repeat;
-    background-size: contain;
-  }
+    .mobile-menu-items {
+        grid-template-columns: 80% 5% 5% 10%;
+    }
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    /* adds up to 1152 which syncs up with above header */
+    .desktop-menu-items, .desktop-sub-menu-block {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    .header-name {
+        font-size: var(--monument-tablet-land-font-size);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--global-med-tablet-land-font-size);
+    }
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    /* adds up to 1152 which syncs up with above header */
+    .desktop-menu-items, .desktop-sub-menu-block {
+        width:84.33%;
+        margin-left:7.85%;
+        margin-right:7.85%;
+    }
+
+    .header-name {
+        font-size: var(--monument-ipad-land-font-size);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--global-big-ipad-land-font-size);
+    }
+
+}
+
+/* LAPTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width:1919px){
+
+    /* adds up to 1152 which syncs up with above header */
+    .desktop-menu-items, .desktop-sub-menu-block {
+        width:80%;
+        margin-left:10%;
+        margin-right:10%;
+    }
+
+    .header-name {
+        font-size: var(--monument-laptop-font-size);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--global-med-laptop-font-size);
+    }
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    /* adds up to 1152 which syncs up with above header */
+    .desktop-menu-items, .desktop-sub-menu-block {
+        width:60%;
+        margin-left:20%;
+        margin-right:20%;
+    }
+
+    .header-name {
+        font-size: var(--monument-desktop-font-size);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--global-med-desktop-font-size);
+    }
 
 }
 
@@ -209,90 +416,265 @@ and (orientation: portrait) {
 and (min-width: 1280px)
 and (orientation: landscape) {
 
-  .header-mobile {
-    display: none;
-  }
+    /* header mobile displays in mobile mode and hides in desktop mode */
+    .header-mobile {
+        display: none;
+    }
 
-  /* header large has slogan on top and main-menu on bottom - cant be declared in global */
-  .header-desktop {
-    display: block;
-    width: 100%;
-    background-color: white;
-  }
+    /* header desktop displays in desktop mode and hides in mobile mode */
+    .header-desktop {
+        display: block;
+        width:100%;
+        float:left;
+        margin:auto;
+    }
 
-  /*cambria math to the left and berlin sans FB to the right text */
-  .slogan {
-    display:grid;
-    grid-row:1;
-    grid-column: 1/-1;
-    width:100%;
-    height: var(--slogan-desktop-height);
-    justify-content: flex-start;
-    background: url("src/assets/images/headers/transitionsInEnergyHeader.jpg")  left no-repeat;
-    background-size:auto;
-  }
+    /* DESKTOP-HEADER-BLOCK - ROW 1 - with logo, name and slogans - it is smaller than the max width of 1920 */
+    .desktop-header-block {
+        display: grid;
+        width:100%;
+        max-width:1152px;
+        margin:auto;
+    }
 
-  .desktop-menu {
-    display:grid;
-    grid-row: 2;
-    height:var(--menu-desktop-height);
-    background-color: var(--color-darkest-blue);
-  }
+    /* DESKTOP-HEADER-CONTENT - 3 grid columns with logo background, name, slogan on right  */
+    .desktop-header-content {
+        display:inline-grid;
+        width:100%;
+        grid-template-columns: 16.67% 38.33% 45%;
+        height:var(--logo-name-slogan-desktop-height);
+        border-left:thin solid #f1f1f1;
+        border-right:thin solid #f1f1f1;
+        margin: 0 auto;
+        align-content: flex-start;
+    }
 
-  .desktop-menu-items {
-    display: inline-grid;
-    margin:auto;
-    width:1024px;
-    grid-template-columns: repeat(6, 16.6%);
-  }
+    .header-logo,  .header-name, .header-slogans {
+        display:grid;
+        height:var(--logo-name-slogan-desktop-height);
+        align-content: center;
+    }
 
-  .desktop-selected-item, .desktop-unselected-item a {
-    display:grid;
-    font-family: var(--family-menu);
-    color:whitesmoke;
-    height:var(--menu-desktop-height);
-    justify-content: center;
-    font-size:var(--menu-desktop-font-size);
-    align-content: center;
-  }
+    .header-logo {
+        /*grid-column: 1;*/
+        justify-content: flex-start;
+    }
 
-  .desktop-unselected-item a {
-    text-decoration: none;
-    cursor: pointer;
-    background-color: var(--color-darkest-blue);
-  }
+    .logo {
+        background-size: auto;
+        background-position: center;
+        background-image:url('src/assets/images/headers/transitionsInEnergyLogo.jpg');
+        background-repeat: no-repeat;
+        margin:0;
+    }
 
-  .desktop-selected-item {
-    cursor: default;
-    background-color: var(--color-light-blue);
-    border:thin solid var(--color-off-white);
-  }
+    .header-name {
+        border-left: 1px solid #f1f1f1;
+        border-right: 1px solid #f1f1f1;
+        justify-content: center;
+    }
 
+    .header-slogans {
+        grid-column: 3;
+        justify-content: center;
+        padding-top:.5em;
+    }
+
+    .header-slogans p {
+        letter-spacing: 2px;
+        margin: 0;
+    }
+
+    .slogans-line {
+        background: url("src/assets/images/book/line.jpg") center repeat-x;
+        width:100%;
+    }
+
+    .header-slogans span {
+        letter-spacing: 3px;
+    }
+
+    /* DESKTOP-MENU-BLOCK - ROW 2 - is the top menu for desktop and is full screen blue background*/
+    .desktop-menu-block {
+        display: grid;
+        width:100%;
+        max-width:1920px;
+        margin:auto;
+        font-family: var(--family-global);
+        background-color: var(--color-darkest-blue);
+    }
+
+    /* DESKTOP-MENU-ITEMS - top menu items are moved inward to take up less than full width of 1920 */
+    .desktop-menu-items {
+        display: inline-grid;
+        align-content: flex-start;
+        grid-template-columns: repeat(6, 16.66%);
+        height:var(--menu-desktop-height);
+    }
+
+    /* SELECTED AND UNSELECTED TOP MENU ITEMS */
+    .desktop-selected-top-menu-item, .desktop-unselected-top-menu-item a {
+        display: grid;
+        font-weight:800;
+        justify-content: center;
+        align-content: center;
+        height: var(--menu-desktop-height);
+        font-size: var(--menu-desktop-font-size);
+    }
+
+    .desktop-unselected-top-menu-item a, .desktop-unselected-sub-menu-item a {
+        text-decoration: none;
+        cursor: pointer;
+        background-color: var(--color-dark-blue);
+        color:var(--color-white);
+    }
+
+    .desktop-selected-top-menu-item  {
+        background-color: var(--color-soft-blue);
+        cursor:default;
+        color: whitesmoke;
+    }
+
+    /* SUB MENUS */
+    .desktop-sub-menu-block {
+        display: grid;
+        margin:auto;
+    }
+
+    .sub-menu-items-two, .sub-menu-items-three, .sub-menu-items-four, .sub-menu-social, .sub-menu-items-six {
+        display:inline-grid;
+        width:100%;
+        margin:auto;
+        font-family: var(--family-global);
+        height: var(--sub-menu-desktop-height);
+    }
+
+    .sub-menu-items-two, .sub-menu-items-three, .sub-menu-items-four, .sub-menu-items-six {
+        justify-content: center;
+    }
+
+    .sub-menu-items-two  {
+        grid-template-columns:repeat(2, 50%);
+    }
+
+    .sub-menu-items-three {
+        grid-template-columns:repeat(3, 33.3%);
+    }
+
+    .sub-menu-social {
+        grid-template-columns:10% 40% 40% 10%;
+        background-color: var(--color-white);
+    }
+
+    .sub-menu-items-six {
+        grid-template-columns:repeat(6, 16.6%);
+    }
+
+    .desktop-selected-sub-menu-item, .desktop-unselected-sub-menu-item a   {
+        display: grid;
+        font-weight:900;
+        justify-content: center;
+        align-content: center;
+        height: var(--sub-menu-desktop-height);
+        font-size: var(--sub-menu-desktop-font-size);
+        letter-spacing: 1px;
+        background-color: var(--color-white);
+    }
+
+    .desktop-selected-sub-menu-item {
+        cursor:default;
+        color:var(--color-darkest-purple);
+    }
+
+    .desktop-unselected-sub-menu-item a   {
+        cursor: pointer;
+        color: var(--color-light-blue);
+    }
+
+    .left-social-icon a, .right-social-icon a {
+        display:grid;
+        height: var(--sub-menu-desktop-height);
+        align-content: center;
+    }
+
+    .left-social-icon a {
+        grid-column: 1;
+        justify-content: flex-end;
+    }
+
+    .right-social-icon a {
+        grid-column: 4;
+        justify-content: flex-start;
+    }
+
+    .left-social-icon a img, .right-social-icon a img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    .left-social-link a, .right-social-link a  {
+        white-space: nowrap;
+        font-family:var(--family-global);
+        height: var(--sub-menu-desktop-height);
+        color:var(--color-grey-purple);
+        font-weight:800;
+        letter-spacing: 1px;
+        align-content: center;
+        font-size:var(--global-small-desktop-font-size);
+    }
+
+    .left-social-link a {
+        display:grid;
+        grid-column: 2;
+        text-align: left;
+        padding-left:2em;
+    }
+
+    .right-social-link a {
+        display:grid;
+        grid-column: 3;
+        justify-content: flex-end;
+        padding-right:2em;
+    }
+
+    .left-social-link a, .right-social-link a  {
+        text-decoration: none;
+    }
 }
 
 /* GLOBAL *************************************************************************************************************/
 @media screen {
 
-  /*cambria math to the left and berlin sans FB to the right text */
-  .slogan {
-    /*align-content: center;*/
-    margin:auto;
-  }
+    .header-logo {
+        display:grid;
+        grid-column: 1;
+        grid-row:1;
+        align-content: center;
+    }
 
+    .header-name {
+        display:grid;
+        grid-column: 2;
+        grid-row:1;
+        text-transform: uppercase;
+        font-family: Monument-Valley;
+        color: var(--color-dark-blue);
+        font-weight: 600;
+        align-content: center;
+    }
 
-
-
-
+    .header-slogans {
+        text-transform: uppercase;
+        font-family: ReneB-Book;
+        color: var(--color-dark-blue);
+    }
 
 }
 
 
-
-
-
 @media print {
-  .header, .menu,  .smart-menu {
-    display: none;
-  }
+    .header, .menu,  .smart-menu {
+        display: none;
+    }
 }
 

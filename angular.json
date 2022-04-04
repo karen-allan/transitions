@@ -27,13 +27,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/css/styles.css",
               "src/assets/css/backgrounds.css",
               "src/assets/css/copy.css",
               "src/assets/css/forms.css",
               "src/assets/css/forms-menu.css",
-              "src/assets/css/symptoms.css",
               "src/assets/css/lists.css",
+              "src/assets/css/styles.css",
+              "src/assets/css/symptoms.css",
               "src/assets/css/template.css"
             ],
             "scripts": []
@@ -101,13 +101,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/css/styles.css",
               "src/assets/css/backgrounds.css",
               "src/assets/css/copy.css",
               "src/assets/css/forms.css",
               "src/assets/css/forms-menu.css",
-              "src/assets/css/symptoms.css",
               "src/assets/css/lists.css",
+              "src/assets/css/styles.css",
+              "src/assets/css/symptoms.css",
               "src/assets/css/template.css"
             ],
             "scripts": []

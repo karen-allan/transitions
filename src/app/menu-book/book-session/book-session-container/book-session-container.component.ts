@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookSessionContainerComponent implements OnInit {
 
-  menuItemId = 5
-  subMenuItemId = 50
+  menuItemId:number = 5;
+  subMenuItemId:number = 50;
 
   detailHeaderName = 'header-book-session'
   title='About Energy Sessions'

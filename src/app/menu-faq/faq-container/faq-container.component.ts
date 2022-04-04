@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqContainerComponent implements OnInit {
 
-  menuItemId = 6
-  subMenuItemId = 0
+  menuItemId:number  = 6;
+  subMenuItemId:number = 0
 
   detailHeaderName="header-faq"
   title="Frequently Asked Questions"

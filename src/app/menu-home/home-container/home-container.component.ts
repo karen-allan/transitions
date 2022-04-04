@@ -7,11 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeContainerComponent implements OnInit {
 
-  menuItemId = 1
+  menuItemId:number   = 1
   subMenuItemId = 0
 
   detailHeaderName = 'header-home'
-  title='Our Modern World - Are We Really Healthy?'
+  title='Our Modern World - How Modern Are We?'
 
   constructor() { }
 

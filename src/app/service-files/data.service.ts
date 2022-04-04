@@ -28,6 +28,7 @@ export class DataService {
         subMenuItems.push(item);
       }
     }
+
     return of(subMenuItems)
   }
 

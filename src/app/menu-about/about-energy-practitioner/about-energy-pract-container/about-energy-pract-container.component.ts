@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutEnergyPractContainerComponent implements OnInit {
 
-  menuItemId = 2
-  subMenuItemId = 21
+  menuItemId:number = 2;
+  subMenuItemId:number = 21;
 
   detailHeaderName = 'header-about-energy-practitioner'
   title='Becoming a Practitioner'

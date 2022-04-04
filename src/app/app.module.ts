@@ -44,9 +44,6 @@ import { GlobalMenuComponent } from './global-menu/global-menu.component';
 /* GLOBAL PRINT */
 import { PrintSessionComponent } from './global-print/print-session/print-session.component';
 
-/* GLOBAL SUB MENU */
-import { GlobalSubMenuComponent } from './global-sub-menu/global-sub-menu.component';
-
 /* MENU ABOUT FOLDER */
 /* ABOUT DOULA FOLDER */
 import {AboutEolDoulaContainerComponent} from './menu-about/about-eol-doula/about-eol-doula-container/about-eol-doula-container.component';
@@ -168,8 +165,6 @@ import {HomeOverviewComponent} from './menu-home/home-overview/home-overview.com
         /* GLOBAL PRINT */
         PrintSessionComponent,
 
-        GlobalSubMenuComponent,
-
         /* MENU ABOUT */
         AboutEolDoulaContainerComponent,
         AboutEolDoulaOverviewComponent,
@@ -185,25 +180,13 @@ import {HomeOverviewComponent} from './menu-home/home-overview/home-overview.com
 
         /* MENU DOULA WORK */
 
-
-
-
-
-
-
         /* MENU ENERGY MEDICINE */
         ElementWheelComponent,
         SelectedElementComponent,
 
-
-
-
         MeridianTracingVideosComponent,
         MeridianWheelComponent,
         SelectedMeridianComponent,
-
-
-       
 
 
         /* FAQ */

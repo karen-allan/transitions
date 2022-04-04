@@ -1,14 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {MENU_ITEMS} from "../ts-files/menuItems";
+import {SUB_MENU_ITEMS} from "../ts-files/subMenuItems";
 
 import {
   trigger,
   state,
   style,
   animate,
-  //query,
+  // query,
   transition
 } from '@angular/animations';
+import {DataService} from "../service-files/data.service";
 
 @Component({
   selector: 'app-global-menu',
@@ -40,13 +42,13 @@ export class GlobalMenuComponent implements OnInit {
 
   @Input() menuItemId: number = 0;
   @Input() subMenuItemId: number = 0;
-  @Input() topicMenuItemId: number = 0;
 
   menuItems = MENU_ITEMS;
+  subMenuItems = SUB_MENU_ITEMS;
 
-  show = false;
+  show:boolean = false;
 
-  constructor() {
+  constructor(private dataService: DataService) {
   }
 
   get showMenu() {
@@ -57,19 +59,20 @@ export class GlobalMenuComponent implements OnInit {
     return this.show ? 'rotated' : 'default'
   }
 
- /* toggle(x) {
-    alert('am in myfuncito');
-
-    x.classList.toggle("change");
-    this.show = !this.show;
-  }*/
-
   toggle() {
-  //  alert('am in myfuncito');
     this.show = !this.show;
+   // alert('show is ' + this.show)
   }
 
   ngOnInit(): void {
+    this.getSubMenuItems();
+  }
+
+  /***************************************************************************************/
+  getSubMenuItems(): void {
+    this.dataService.getSubMenuItems(this.menuItemId)
+        .subscribe(itemList => this.subMenuItems = itemList);
+
   }
 
 }
