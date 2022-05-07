@@ -1,0 +1,62 @@
+<div class="content-no-margins">
+    <div class="forms-content-block">
+        <form (ngSubmit)="onSubmit()">
+            <div class="full-line pad-top-2">
+                <ng-container *ngIf="errorMessage">
+                    <input type="text" readonly id="error">
+                    <div class="errorMessage">{{errorMessage}}</div>
+                </ng-container>
+                <ng-container *ngIf="!errorMessage">
+                    <input type="text" id="error2" readonly class="errorMessage">
+                    &nbsp;
+                </ng-container>
+            </div>
+
+
+
+            <app-demographic-info [model]="model"></app-demographic-info>
+            <app-end-of-life-planning [model]="model"></app-end-of-life-planning>
+            <app-medical-history [model]="model"></app-medical-history>
+
+            <!-- DISCLAIMER-->
+            <div class="disclaimer">
+                <p>Please Read:</p>
+                <span>
+                    I understand that the End of Life Doula Consultations I receive are provided for the basic purpose of preparing
+                    myself and my family for my eventual end of life care and legacy. I know that an End of Life Doula can help
+                    with end of life financial and health related questions, concerns and that I can learn how to better plan,
+                    prepare and document all of my wishes and hopes for a good ending.
+                    <br><br>
+                    But I further understand that End of Life Doulas are not a substitute for medical palliative care, hospice care
+                    or emergency care but are rather meant to fill the wholes where standard medical care can not. I also understand
+                    that doulas can never initiate conversations related to MAID, but if asked can clarify the latest rules as best
+                    as possible. For further information about the new MAID laws contact Death With Dignity.
+                    <br><br>
+                    I also know that End of Life Doulas can do much to aid in the comfort and care of a dying person but they
+                    can not prescribe or give out medications of any kind.
+                    <br><br>
+                    I understand that I must have proof of up-to-date Covid vaccinations in order to meet with you in person.
+                    If I have not been vaccinated I can still see you via a remote call, for example a Zoom or phone meeting.
+                    <br><br>
+                    I agree to provide 24 hours notice if I want to cancel an appointment. As well, I agree to bring proof of
+                    my Covid vaccination in the form of the vaccine passport. By signing below I agree and accept the above conditions.
+                </span>
+
+                <div class="full-line">
+                    <label class="first-text-column" for="date">Date: (YYYY / MM / DD):</label>
+                    <input type="text" class="first-text-column required" [(ngModel)]="model.defaultDate" id="date" name="date">
+
+                    <label class="first-text-column" for="sig">Signature:</label>
+                    <input type="text" class="first-text-column required signature" [(ngModel)]="model.name" id="sig" name="sig">
+                </div>
+            </div>
+
+            <div class="cancel-print-container">
+                <button class="cancel-button"(click)="cancelClientInfo()">CANCEL</button>
+                <button class="print-button"(click)="checkClientInfo()">PRINT</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+

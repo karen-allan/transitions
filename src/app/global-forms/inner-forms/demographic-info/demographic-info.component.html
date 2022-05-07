@@ -1,0 +1,159 @@
+<!-- DEMOGRAPHIC INFO -->
+
+<!-- DESKTOP -->
+<div class="forms-desktop">
+    <div class="title-background">
+        Your Contact Information
+    </div>
+
+   <!-- <p>
+        Count: {{ count }}
+        <button (click)="increment()">Increment</button>
+    </p>-->
+
+    <div class="two-unequal-columns-block">
+        <label class="first-text-column" for="name">Your Full Name:</label>
+        <label class="second-text-column" for="cellPhone">Phone:(+1&nbsp;NNN&nbsp;NNN&nbsp;NNNN)</label>
+
+        <input type="text" class="first-text-column required" [(ngModel)]="model.name" id="name" name="name">
+        <input type="text" class="second-text-column required" [(ngModel)]="model.cellPhone" maxlength="15" id="cellphone" name="cellPhone">
+
+        <label class="full-text-column" for="email">Email:</label>
+        <input type="text" class="full-text-column required" [(ngModel)]="model.email" id="email" name="email">
+
+        <label class="full-text-column" for="address">Home Address:</label>
+        <textarea class="full-text-column required" [(ngModel)]="model.address" rows=2 id="address" name="address"> </textarea>
+    </div>
+
+    <div class="four-columns pad-top-1">
+        <label class="first-text-column" for="city">City/Town:</label>
+        <label class="second-text-column" for="provState">Prov:</label>
+        <label class="third-text-column" for="pc">Postal Code (xxx-xxx):</label>
+        <label class="fourth-text-column" for="country">Country:</label>
+
+        <input type="text" class="first-text-column required" [(ngModel)]="model.city" id="city" name="city">
+
+        <div class="form-group">
+            <select class="second-text-column required" id="provState" required
+                    [(ngModel)]="model.provState" name="provState">
+                <option *ngFor="let prov of provinces" [value]="prov">{{prov}}</option>
+            </select>
+        </div>
+
+        <input [(ngModel)]="model.pc" type="text"
+               mask="U0U-0U0"
+               class="third-text-column required" id="pc" name="pc" oninput="this.value = this.value.toUpperCase()">
+
+        <input type="text" class="fourth-text-column required" [(ngModel)]="model.country" id="country" name="country">
+    </div>
+
+    <div class="title-background">
+        Emergency Contact
+    </div>
+
+    <div class="four-columns pad-top-1">
+        <label class="first-text-column" for="emergName">Contact:</label>
+        <label class="second-text-column" for="emergPhone">Phone:</label>
+        <label class="third-fourth-text-column" for="emergRelation">Relationship:</label>
+
+        <input type="text" class="first-text-column required" [(ngModel)]="model.emergName" id="emergName"  name="emergName">
+        <input type="text" class="second-text-column required" [(ngModel)]="model.emergPhone" id="emergPhone" name="emergPhone">
+        <input type="text" class="third-fourth-text-column required" [(ngModel)]="model.emergRelation" id="emergRelation"  name="emergRelation">
+    </div>
+
+    <div class="title-background">
+        Optional Details
+    </div>
+
+    <div class="four-columns pad-top-1">
+        <label class="first-text-column" for="referredBy">Referred By:</label>
+        <label class="second-text-column" for="birthdate">Birthdate:</label>
+        <label class="third-fourth-text-column" for="occupation">Occupation:</label>
+
+        <input type="text" class="form-control first-text-column" id="referredBy" [(ngModel)]="model.referredBy" name="referredBy">
+        <input type="text" class="form-control second-text-column" id="birthdate" [(ngModel)]="model.birthdate" name="birthdate">
+        <input type="text" class="form-control third-fourth-text-column" id="occupation" [(ngModel)]="model.occupation" name="occupation">
+    </div>
+</div>
+
+
+
+
+<!-- MOBILE -->
+<div class="forms-mobile">
+    <div class="title-background">
+        Your Contact Information
+    </div>
+
+    <div class="full-line">
+        <label class="full-text-column" for="m-name">Your Full Name:</label>
+        <input type="text" class="full-text-column required" [(ngModel)]="model.name" id="m-name" name="name">
+
+        <label class="full-text-column" for="m-cellPhone">Phone:(+1&nbsp;NNN&nbsp;NNN&nbsp;NNNN)</label>
+        <input type="text" class="full-text-column required" [(ngModel)]="model.cellPhone" maxlength="15" id="m-cellphone" name="cellPhone">
+
+        <label class="full-text-column" for="m-email">Email:</label>
+        <input type="text" class="full-text-column required" [(ngModel)]="model.email" id="m-email" name="email">
+
+        <label class="full-text-column" for="m-address">Home Address:</label>
+        <textarea class="full-text-column required" [(ngModel)]="model.address" rows=2 id="m-address" name="address"> </textarea>
+    </div>
+
+    <div class="two-small-big-columns-block pad-top-1">
+        <label class="first-text-column" for="m-city">City/<br>Town:</label>
+        <input type="text" class="second-text-column required" [(ngModel)]="model.city" id="m-city" name="city">
+    </div>
+
+    <div class="two-small-big-columns-block pad-top-1">
+       <label class="first-text-column" for="m-provState">Prov:</label>
+
+        <div class="form-group">
+            <select class="second-text-column  required with-dark-border" id="m-provState" required
+                    [(ngModel)]="model.provState" name="provState">
+                <option *ngFor="let prov of provinces" [value]="prov">{{prov}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="two-small-big-columns-block pad-top-1">
+        <label class="first-text-column" for="m-pc">Postal Code<br>(xxx-xxx):</label>
+        <input [(ngModel)]="model.pc" type="text"
+            mask="U0U-0U0"
+            class="second-text-column required" id="m-pc" name="pc" oninput="this.value = this.value.toUpperCase()">
+    </div>
+
+    <div class="two-small-big-columns-block pad-top-1">
+        <label class="first-text-column" for="m-country">Country:</label>
+        <input type="text" class="second-text-column required  margin-bottom-2" [(ngModel)]="model.country" id="m-country" name="country">
+    </div>
+
+    <div class="title-background">
+        Emergency Contact
+    </div>
+
+    <div class="full-line pad-top-1">
+        <label class="full-text-column" for="m-emergName">Contact:</label>
+        <input type="text" class="full-text-column required" [(ngModel)]="model.emergName" id="m-emergName"  name="emergName">
+
+        <label class="full-text-column" for="m-emergPhone">Phone:</label>
+        <input type="text" class="full-text-column required" [(ngModel)]="model.emergPhone" id="m-emergPhone" name="emergPhone">
+
+        <label class="full-text-column" for="m-emergRelation">Relationship:</label>
+       <input type="text" class="full-text-column required margin-bottom-2" [(ngModel)]="model.emergRelation" id="m-emergRelation"  name="emergRelation">
+    </div>
+
+    <div class="title-background">
+        Optional Details
+    </div>
+
+    <div class="full-line pad-top-1">
+        <label class="full-text-column" for="m-referredBy">Referred By:</label>
+        <input type="text" class="form-control full-text-column" id="m-referredBy" [(ngModel)]="model.referredBy" name="referredBy">
+
+        <label class="full-text-column" for="m-birthdate">Birthdate:</label>
+        <input type="text" class="form-control full-text-column" id="m-birthdate" [(ngModel)]="model.birthdate" name="birthdate">
+
+        <label class="full-text-column" for="m-occupation">Occupation:</label>
+        <input type="text" class="form-control full-text-column" id="m-occupation" [(ngModel)]="model.occupation" name="occupation">
+    </div>
+</div>

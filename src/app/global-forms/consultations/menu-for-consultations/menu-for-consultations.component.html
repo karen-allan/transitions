@@ -1,0 +1,59 @@
+<div class="content-no-margins">
+    <div class="dark-heading">
+        <h1>END OF LIFE DOULA CONSULTATION INTAKES</h1>
+    </div>
+
+    <div class="forms-menu-block">
+        <div class="forms-menu-heading">
+            I WOULD LIKE TO DISCUSS:
+        </div>
+
+        <ul class="forms-menu">
+            <div class="menu-item">
+                <li *ngIf="showPlanningEditor">
+                    <span>HOW TO PLAN FOR MY FUTURE CARE</span>
+                </li>
+                <li *ngIf ="!showPlanningEditor">
+                    <a (click)="toggleEditor('planning')">HOW TO PLAN FOR MY FUTURE CARE</a>
+                </li>
+            </div>
+
+            <div class="menu-item">
+                <li *ngIf="showCaregiverEditor">
+                    <span>MY NEED FOR SUPPORT AS CAREGIVER</span>
+                </li>
+                <li *ngIf ="!showCaregiverEditor">
+                    <a (click)="toggleEditor('caregiver')">MY NEED FOR SUPPORT AS CAREGIVER</a>
+                </li>
+            </div>
+
+            <div class="menu-item">
+                <li *ngIf="showPatientEditor">
+                    <span>MY NEED FOR SUPPORT AS PATIENT</span>
+                </li>
+                <li *ngIf ="!showPatientEditor">
+                    <a (click)="toggleEditor('patient')">MY NEED FOR SUPPORT AS PATIENT</a>
+                </li>
+            </div>
+        </ul>
+    </div>
+
+    <ng-container *ngIf="showPlanningEditor">
+        <app-intake-for-consultation-plans></app-intake-for-consultation-plans>
+    </ng-container>
+
+    <ng-container *ngIf="showCaregiverEditor">
+        <app-intake-for-consultation-caregiver></app-intake-for-consultation-caregiver>
+    </ng-container>
+
+    <ng-container *ngIf="showPatientEditor">
+        <app-intake-for-consultation-patient></app-intake-for-consultation-patient>
+        <!--  <app-intake-consult-demographic></app-intake-consult-demographic>
+          <app-intake-patient-support></app-intake-patient-support>
+          <app-intake-consult-medical></app-intake-consult-medical>-->
+    </ng-container>
+</div>
+
+
+
+

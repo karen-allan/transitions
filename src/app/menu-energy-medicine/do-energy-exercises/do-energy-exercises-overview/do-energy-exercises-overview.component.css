@@ -1,0 +1,406 @@
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    .exercise-detail-grid {
+        display:grid;
+        grid-template-columns: 100%;
+    }
+
+    .exercise-name h2 {
+        font-size:var(--h2-whitney-banana-port-font-size);
+    }
+
+    .exercise-video-block {
+        grid-row: 1;
+    }
+
+    /* 240 x.8 =  192 */
+    .exercise-video {
+        width: 192px;
+        height: 192px;
+    }
+
+    .exercise-copy-block {
+        grid-row: 2;
+        align-content: flex-start;
+    }
+
+    .exercise-copy, .exercise-list  {
+        font-size:var(--global-med-banana-port-font-size);
+    }
+
+    .exercise-copy {
+        padding:2em 0;
+    }
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    .exercise-detail-grid {
+        display:grid;
+        grid-template-columns: 100%;
+    }
+
+    .exercise-name h2 {
+        font-size:var(--h2-whitney-banana-land-font-size);
+    }
+
+    .exercise-video-block {
+        grid-row: 1;
+    }
+
+    /* 568 x.8 =  454 */
+    .exercise-video {
+        width: 454px;
+        height: 454px;
+    }
+
+    .exercise-copy-block {
+        grid-row: 2;
+        align-content: flex-start;
+    }
+
+    .exercise-copy, .exercise-list  {
+        font-size:var(--global-med-banana-land-font-size);
+    }
+
+    .exercise-copy {
+        padding:2em 0;
+    }
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    .exercise-detail-grid {
+        display:grid;
+        grid-template-columns: 100%;
+    }
+
+    .exercise-name h2 {
+        font-size:var(--h2-whitney-mobile-port-font-size);
+    }
+
+    .exercise-video-block {
+        grid-row: 1;
+    }
+
+    /* 360 x.8 =  288 */
+    .exercise-video {
+        width: 288px;
+        height: 288px;
+    }
+
+    .exercise-copy-block {
+        grid-row: 2;
+        align-content: flex-start;
+    }
+
+    .exercise-copy, .exercise-list  {
+        font-size:var(--global-med-mobile-port-font-size);
+    }
+
+    .exercise-copy {
+        padding:2em 0;
+    }
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    .exercise-detail-grid {
+        display:inline-grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .exercise-name h2 {
+        grid-row:1;
+        font-size:var(--h2-whitney-mobile-land-font-size);
+    }
+
+    .exercise-video-block {
+        grid-column: 1;
+    }
+
+    .exercise-video {
+        width: 400px;
+        height: 400px;
+    }
+
+    .exercise-copy-block {
+        grid-column: 2;
+        align-content: center;
+    }
+
+    .exercise-copy, .exercise-list  {
+        font-size:var(--global-med-mobile-land-font-size);
+    }
+
+}
+
+
+/* TABLETS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    .exercise-detail-grid {
+        display:grid;
+        grid-template-columns: 100%;
+    }
+
+    .exercise-name h2 {
+        font-size:var(--h2-whitney-tablet-port-font-size);
+    }
+
+    .exercise-video-block {
+        grid-row: 1;
+    }
+
+    /* 600 x.8 = 540 */
+    .exercise-video {
+        width: 480px;
+        height: 480px;
+    }
+
+    .exercise-copy-block {
+        grid-row: 2;
+        align-content: flex-start;
+    }
+
+    .exercise-copy, .exercise-list  {
+        font-size:var(--global-med-tablet-port-font-size);
+    }
+
+    .exercise-copy {
+        padding:2em 0;
+    }
+}
+
+/* TABLETS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    .exercise-detail-grid {
+        display:inline-grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .exercise-name h2 {
+        font-size:var(--h2-whitney-tablet-land-font-size);
+    }
+
+    .exercise-video-block {
+        grid-column: 1;
+    }
+
+    .exercise-video {
+        width: 400px;
+        height: 400px;
+    }
+
+    .exercise-copy-block {
+        grid-column: 2;
+        align-content: center;
+    }
+
+    .exercise-copy, .exercise-list  {
+        font-size:var(--global-med-tablet-land-font-size);
+    }
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    .exercise-detail-grid {
+        display:inline-grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .exercise-name h2 {
+        font-size:var(--h2-whitney-ipad-port-font-size);
+    }
+
+    .exercise-video-block {
+        grid-column: 1;
+    }
+
+    .exercise-video {
+        width: 400px;
+        height: 400px;
+    }
+
+    .exercise-copy-block {
+        grid-column: 2;
+        align-content: center;
+    }
+
+    .exercise-copy, .exercise-list  {
+        font-size:var(--global-med-ipad-port-font-size);
+    }
+
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    .exercise-detail-grid {
+        display:inline-grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .exercise-name h2 {
+        font-size:var(--h2-whitney-ipad-land-font-size);
+    }
+
+    .exercise-video-block {
+        grid-column: 1;
+    }
+
+    .exercise-video {
+        width: 400px;
+        height: 400px;
+    }
+
+    .exercise-copy-block {
+        grid-column: 2;
+        align-content: center;
+    }
+
+    .exercise-copy, .exercise-list  {
+        font-size:var(--global-med-ipad-land-font-size);
+    }
+
+}
+
+/* DESKTOPS ****** *********************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    /* max width:800 so video is 50% of that */
+    .exercise-detail-grid {
+        display:inline-grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .exercise-name h2 {
+        font-size:var(--h2-whitney-desktop-font-size);
+    }
+
+    .exercise-video-block {
+        grid-column: 1;
+    }
+
+    .exercise-video {
+        margin:0;
+        padding:0;
+        width: 400px;
+        height: 400px;
+    }
+
+    .exercise-copy-block {
+        grid-column: 2;
+        align-content: center;
+    }
+
+    .exercise-copy, .exercise-list  {
+        font-size: var(--global-med-desktop-font-size);
+    }
+
+}
+
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .exercise-block {
+        display:block;
+        max-width:800px;
+        margin:auto;
+        width:100%;
+        background-color: var(--color-dark-blue);
+    }
+
+    .exercise-name h2 {
+        display: grid;
+        width:100%;
+        margin:0;
+        grid-column:1/-1;
+        color:white;
+        font-family: Whitney-Book;
+        padding:1em 0;
+        justify-content: center;
+        border:1px solid white;
+    }
+
+    .exercise-detail-grid {
+        margin:auto;
+        width:100%;
+    }
+
+    .exercise-video-block {
+        display: grid;
+        justify-content: center;
+    }
+
+    .exercise-video {
+        border:0;
+        /*margin:0;*/
+    }
+
+    /* the default image for summary */
+    .exercise-video-block img {
+        max-width:100%;
+        height:auto;
+    }
+
+    .exercise-copy-block {
+        display: grid;
+        width:90%;
+        margin:0 5%;
+        font-family: var(--family-global);
+        justify-content: center;
+    }
+
+    .exercise-copy {
+        text-align: justify;
+        color: var(--color-white);
+        line-height:var(--copy-line-height);
+    }
+
+    .exercise-list  {
+        color: var(--color-white);
+        cursor:pointer;
+        line-height:var(--list-item-line-height);
+    }
+
+    .exercise-list li.selected  {
+        color:var(--color-gold);
+    }
+
+}
