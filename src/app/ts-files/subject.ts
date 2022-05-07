@@ -3,5 +3,6 @@ export interface Subject {
     title: string;
     copy: string;
     picture:string,
-    url?: string;
+    url?: string,
+    fragment?: string
 }

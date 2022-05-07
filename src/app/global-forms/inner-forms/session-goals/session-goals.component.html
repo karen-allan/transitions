@@ -1,0 +1,85 @@
+<div class="forms-desktop">
+    <div class="title-background margin-top-2">
+        Your Concerns and Goals
+    </div>
+
+    <div class="full-line">
+        <p>What would you say is your level of knowledge about Energy Medicine (circle one)?</p>
+    </div>
+
+    <div class="three-columns-block">
+        <div class="first-radio-check-column">
+            <input type="radio" [(ngModel)]="model.knowledgeLevel" value="knowledgeLevel1"  id="knowledge1" name="knowledge" checked="checked">
+            <label for="knowledge1">No Knowledge</label>
+        </div>
+
+        <div class="second-radio-check-column">
+            <input type="radio" [(ngModel)]="model.knowledgeLevel" value="knowledgeLevel2" id="knowledge2" name="knowledge">
+            <label for="knowledge2">Some Knowledge</label>
+        </div>
+
+        <div class="third-radio-check-column">
+            <input type="radio" [(ngModel)]="model.knowledgeLevel" value="knowledgeLevel3"  id="knowledge3" name="knowledge">
+            <label for="knowledge3">Extensive Knowledge</label>
+        </div>
+    </div>
+
+    <div class="full-line">
+        <p>What benefits do you hope to receive from getting Energy Medicine sessions?</p>
+    </div>
+
+    <div class="full-line">
+        <textarea rows=5 class="text-area" id="mainBenefit" [(ngModel)]="model.mainBenefit" name="mainBenefit"> </textarea>
+    </div>
+
+    <div class="full-line">
+        <p>Please describe any other non-traditional treatments or protocols you have tried and their effectiveness.</p>
+    </div>
+
+    <div class="full-line">
+        <textarea rows=5 class="text-area" id="mainIssues" [(ngModel)]="model.mainIssues" name="mainIssues"> </textarea>
+    </div>
+</div>
+
+<div class="forms-mobile">
+    <div class="title-background margin-top-2">
+        Your Concerns and Goals
+    </div>
+
+    <div class="full-line">
+        <p>What would you say is your level of knowledge about Energy Medicine (circle one)?</p>
+    </div>
+
+    <div class="three-columns-block">
+        <div class="first-radio-check-column">
+            <input type="radio" [(ngModel)]="model.knowledgeLevel" value="knowledgeLevel1"  id="m-knowledge1" name="m-knowledge" checked="checked">
+            <label for="m-knowledge1">No Knowledge</label>
+        </div>
+
+        <div class="second-radio-check-column">
+            <input type="radio" [(ngModel)]="model.knowledgeLevel" value="knowledgeLevel2" id="m-knowledge2" name="m-knowledge">
+            <label for="m-knowledge2">Some Knowledge</label>
+        </div>
+
+        <div class="third-radio-check-column">
+            <input type="radio" [(ngModel)]="model.knowledgeLevel" value="knowledgeLevel3"  id="m-knowledge3" name="m-knowledge">
+            <label for="m-knowledge3">Extensive Knowledge</label>
+        </div>
+    </div>
+
+    <div class="full-line">
+        <p>What benefits do you hope to receive from getting Energy Medicine sessions?</p>
+    </div>
+
+    <div class="full-line">
+        <textarea rows=5 class="text-area" id="m_mainBenefit" [(ngModel)]="model.mainBenefit" name="mainBenefit"> </textarea>
+    </div>
+
+    <div class="full-line">
+        <p>Please describe any other non-traditional treatments or protocols you have tried and their effectiveness.</p>
+    </div>
+
+    <div class="full-line">
+        <textarea rows=5 class="text-area" id="m_mainIssues" [(ngModel)]="model.mainIssues" name="mainIssues"> </textarea>
+    </div>
+</div>

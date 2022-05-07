@@ -34,6 +34,10 @@ export class Client {
         public hearingAids:boolean,
         public aromatherapy:boolean,
 
+        public will:boolean,
+        public finances:boolean,
+        public wishes:boolean,
+
         public mainBenefit:string,
         public mainIssues:string,
         public mainTreatments:string,
@@ -41,7 +45,8 @@ export class Client {
         public primaryFocus:string,
         public mainConcerns:string,
         public treatments:string,
-        public frailty:boolean)
+        public frailty:string,
+        public defaultDate:string)
     {}
 
 }

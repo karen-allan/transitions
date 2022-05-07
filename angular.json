@@ -34,7 +34,8 @@
               "src/assets/css/lists.css",
               "src/assets/css/styles.css",
               "src/assets/css/symptoms.css",
-              "src/assets/css/template.css"
+              "src/assets/css/template.css",
+              "src/assets/css/wizard.css"
             ],
             "scripts": []
           },
@@ -108,7 +109,8 @@
               "src/assets/css/lists.css",
               "src/assets/css/styles.css",
               "src/assets/css/symptoms.css",
-              "src/assets/css/template.css"
+              "src/assets/css/template.css",
+              "src/assets/css/wizard.css"
             ],
             "scripts": []
           }

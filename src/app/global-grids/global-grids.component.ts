@@ -24,6 +24,7 @@ export class GlobalGridsComponent implements OnInit {
     energyMin = 30;
     energyMax = 35;
 
+    //SUPPORT DOULAS
     doulaSubjects = SUBJECTS;
     doulaMin = 40;
     doulaMax = 45;

@@ -260,11 +260,11 @@ and (min-width: 1440px) {
         text-align: center;
     }
 
-    .dark-heading h2, .clear-heading h2, .light-heading h2,
+  /*  .dark-heading h2, .clear-heading h2, .light-heading h2,
     .dark-heading h3, .clear-heading h3, .light-heading h3,
     .dark-heading h4, .clear-heading h4, .light-heading h4 {
-        /*text-align: left;*/
-    }
+        !*text-align: left;*!
+    }*/
 
     .dark-heading h1, .dark-heading h2, .dark-heading h3, .dark-heading h4, .dark-copy, .dark-copy a {
         color: var(--color-dark-blue);

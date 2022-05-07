@@ -7,30 +7,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './service-files/in-memory-data.service';
+import {Router, Scroll} from '@angular/router';
+import { ViewportScroller } from '@angular/common';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { RouterModule, Routes } from '@angular/router';
 
 /* GLOBAL FOOTER */
 import { GlobalFooterComponent } from './global-footer/global-footer.component';
 
 /* GLOBAL FORMS */
 /* CONSULTATIONS */
-import { ConsultationFormContainerComponent } from './global-forms/consultations/consultation-form-container/consultation-form-container.component';
-import { ConsultationFormOverviewComponent } from './global-forms/consultations/consultation-form-overview/consultation-form-overview.component';
-import { IntakeCaregiverSupportComponent } from './global-forms/consultations/intake-caregiver-support/intake-caregiver-support.component';
-import { IntakeConsultDemographicComponent } from './global-forms/consultations/intake-consult-demographic/intake-consult-demographic.component';
-import { IntakeConsultMedicalComponent } from './global-forms/consultations/intake-consult-medical/intake-consult-medical.component';
-import { IntakeMakePlanComponent } from './global-forms/consultations/intake-make-plan/intake-make-plan.component';
-import { IntakePatientSupportComponent } from './global-forms/consultations/intake-patient-support/intake-patient-support.component';
+
+
+
 
 /* CURRENTLY, NOT IN USE */
 import { CovidComponent } from './global-forms/covid/covid.component';
 
 /* SESSIONS */
-import { IntakeEnergyTreatmentComponent } from './global-forms/sessions/intake-energy-treatment/intake-energy-treatment.component';
-import { IntakeSessionDemographicComponent } from './global-forms/sessions/intake-session-demographic/intake-session-demographic.component';
-import { IntakeSessionMedicalComponent } from './global-forms/sessions/intake-session-medical/intake-session-medical.component';
-import { SessionFormContainerComponent } from './global-forms/sessions/session-form-container/session-form-container.component';
-import { SessionFormOverviewComponent } from './global-forms/sessions/session-form-overview/session-form-overview.component';
 
 /* GLOBAL GRIDS */
 import { GlobalGridsComponent } from './global-grids/global-grids.component';
@@ -78,7 +75,6 @@ import { SupportCaregiversContainerComponent } from './menu-doula-work/supportCa
 /* CEREMONY */
 import { ChooseMemorialContainerComponent } from './menu-doula-work/choose-memorial/choose-memorial-container/choose-memorial-container.component';
 import { ChooseMemorialOverviewComponent } from './menu-doula-work/choose-memorial/choose-memorial-overview/choose-memorial-overview.component';
-
 
 /* REPRESENTATIVE */
 import { ChooseRepresentativeContainerComponent } from './menu-doula-work/choose-representative/choose-representative-container/choose-representative-container.component';
@@ -131,7 +127,37 @@ import {HomeContainerComponent} from './menu-home/home-container/home-container.
 import {HomeOverviewComponent} from './menu-home/home-overview/home-overview.component';
 
 
+import { WizardContainerComponent } from './menu-wizard/wizard-container/wizard-container.component';
+import { WizardOverviewComponent } from './menu-wizard/wizard-overview/wizard-overview.component';
+import { TsdmWizardOverviewComponent } from './menu-wizard/tsdm/tsdm-wizard-overview/tsdm-wizard-overview.component';
+import { TsdmWizardContainerComponent } from './menu-wizard/tsdm/tsdm-wizard-container/tsdm-wizard-container.component';
+import { RepNineWizardContainerComponent } from './menu-wizard/rep-nine/rep-nine-wizard-container/rep-nine-wizard-container.component';
+import { RepNineWizardOverviewComponent } from './menu-wizard/rep-nine/rep-nine-wizard-overview/rep-nine-wizard-overview.component';
+import { DnrWizardOverviewComponent } from './menu-wizard/dnr/dnr-wizard-overview/dnr-wizard-overview.component';
 
+import { DnrWizardContainerComponent } from './menu-wizard/dnr/dnr-wizard-container/dnr-wizard-container.component';
+import { EdithWizardOverviewComponent } from './menu-wizard/edith/edith-wizard-overview/edith-wizard-overview.component';
+import { EdithWizardContainerComponent } from './menu-wizard/edith/edith-wizard-container/edith-wizard-container.component';
+import { AcpWizardContainerComponent } from './menu-wizard/acp/acp-wizard-container/acp-wizard-container.component';
+import { AcpWizardOverviewComponent } from './menu-wizard/acp/acp-wizard-overview/acp-wizard-overview.component';
+import { TransferWizardOverviewComponent } from './menu-wizard/transfer/transfer-wizard-overview/transfer-wizard-overview.component';
+import { TransferWizardContainerComponent } from './menu-wizard/transfer/transfer-wizard-container/transfer-wizard-container.component';
+import {filter} from "rxjs";
+import { RepNineFinalComponent } from './global-forms/representative-nine/rep-nine-final/rep-nine-final.component';
+
+import { MedicalHistoryComponent } from './global-forms/inner-forms/medical-history/medical-history.component';
+import { DemographicInfoComponent } from './global-forms/inner-forms/demographic-info/demographic-info.component';
+
+import { SessionGoalsComponent} from "./global-forms/inner-forms/session-goals/session-goals.component";
+import { EndOfLifePlanningComponent } from './global-forms/inner-forms/end-of-life-planning/end-of-life-planning.component';
+import { SupportForCaregiverComponent } from './global-forms/inner-forms/support-for-caregiver/support-for-caregiver.component';
+import { SupportForPatientComponent } from './global-forms/inner-forms/support-for-patient/support-for-patient.component';
+import { IntakeForConsultationPatientComponent } from './global-forms/consultations/intake-for-consultation-patient/intake-for-consultation-patient.component';
+import { IntakeForConsultationCaregiverComponent } from './global-forms/consultations/intake-for-consultation-caregiver/intake-for-consultation-caregiver.component';
+
+import { IntakeForConsultationPlansComponent } from './global-forms/consultations/intake-for-consultation-plans/intake-for-consultation-plans.component';
+import { MenuForConsultationsComponent } from './global-forms/consultations/menu-for-consultations/menu-for-consultations.component';
+import { IntakeForEnergySessionComponent } from './global-forms/sessions/intake-for-energy-session/intake-for-energy-session.component';
 
 @NgModule({
     declarations: [
@@ -142,22 +168,13 @@ import {HomeOverviewComponent} from './menu-home/home-overview/home-overview.com
 
         /* GLOBAL FORMS */
         /* CONSULTATIONS */
-        ConsultationFormContainerComponent,
-        ConsultationFormOverviewComponent,
-        IntakeCaregiverSupportComponent,
-        IntakeConsultDemographicComponent,
-        IntakeConsultMedicalComponent,
-        IntakeMakePlanComponent,
-        IntakePatientSupportComponent,
+
 
         CovidComponent,
 
         /* SESSIONS */
-        IntakeEnergyTreatmentComponent,
-        IntakeSessionDemographicComponent,
-        IntakeSessionMedicalComponent,
-        SessionFormContainerComponent,
-        SessionFormOverviewComponent,
+
+
 
         GlobalGridsComponent,
         GlobalHeadersComponent,
@@ -227,6 +244,37 @@ import {HomeOverviewComponent} from './menu-home/home-overview/home-overview.com
         ChooseMemorialContainerComponent,
         ChooseMemorialOverviewComponent,
 
+        WizardContainerComponent,
+        WizardOverviewComponent,
+        TsdmWizardOverviewComponent,
+        TsdmWizardContainerComponent,
+        RepNineWizardContainerComponent,
+        RepNineWizardOverviewComponent,
+        DnrWizardOverviewComponent,
+
+        DnrWizardContainerComponent,
+          EdithWizardOverviewComponent,
+          EdithWizardContainerComponent,
+          AcpWizardContainerComponent,
+          AcpWizardOverviewComponent,
+          TransferWizardOverviewComponent,
+          TransferWizardContainerComponent,
+          RepNineFinalComponent,
+
+          MedicalHistoryComponent,
+          DemographicInfoComponent,
+        SessionGoalsComponent,
+        EndOfLifePlanningComponent,
+        SupportForCaregiverComponent,
+        SupportForPatientComponent,
+        IntakeForConsultationPatientComponent,
+        IntakeForConsultationCaregiverComponent,
+
+        IntakeForConsultationPlansComponent,
+          MenuForConsultationsComponent,
+          IntakeForEnergySessionComponent,
+
+
 
   ],
   imports: [
@@ -235,8 +283,39 @@ import {HomeOverviewComponent} from './menu-home/home-overview/home-overview.com
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+      HttpClientModule,
+      NgxMaskModule.forRoot(),
+      // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+// and returns simulated server responses.
+// Remove it when a real server is ready to receive requests.
+      HttpClientInMemoryWebApiModule.forRoot(
+          InMemoryDataService, { dataEncapsulation: false }
+      )
+
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+
+
+export class AppModule {
+    constructor(router: Router, viewportScroller: ViewportScroller) {
+        //viewportScroller.setOffset([0, 50]);
+        router.events.pipe(filter(e => e instanceof Scroll)).subscribe((e: Scroll) => {
+            if (e.anchor) {
+                // anchor navigation
+                /* setTimeout is the core line to solve the solution */
+                setTimeout(() => {
+                    viewportScroller.scrollToAnchor(e.anchor);
+                })
+            } else if (e.position) {
+                // backward navigation
+                viewportScroller.scrollToPosition(e.position);
+            } else {
+                // forward navigation
+                viewportScroller.scrollToPosition([0, 0]);
+            }
+        });
+    }
+}

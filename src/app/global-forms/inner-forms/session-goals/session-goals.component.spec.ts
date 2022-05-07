@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IntakeMakePlanComponent } from './intake-make-plan.component';
+import { SessionGoalsComponent } from './session-goals.component';
 
-describe('IntakeMakePlanComponent', () => {
-  let component: IntakeMakePlanComponent;
-  let fixture: ComponentFixture<IntakeMakePlanComponent>;
+describe('SessionGoalsComponent', () => {
+  let component: SessionGoalsComponent;
+  let fixture: ComponentFixture<SessionGoalsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IntakeMakePlanComponent ]
+      declarations: [ SessionGoalsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IntakeMakePlanComponent);
+    fixture = TestBed.createComponent(SessionGoalsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

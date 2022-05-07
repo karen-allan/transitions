@@ -8,8 +8,8 @@
                         <ng-container *ngIf="subject.id==subMenuItemId">
                             <div class="item-col-selected">
                                 <img alt="subject pic" src={{subject.picture}}/>
-                                <p>{{subject.title.toUpperCase()}}</p>
-                                <span>{{subject.copy}}</span>
+                                <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                <div class="grid-copy"><span>{{subject.copy}}</span></div>
                             </div>
                         </ng-container>
 
@@ -17,8 +17,8 @@
                             <div class="item-col-active">
                                 <a routerLink="{{subject.url}}">
                                     <img alt="subject pic" src={{subject.picture}}/>
-                                    <p>{{subject.title.toUpperCase()}}</p>
-                                    <span>{{subject.copy}}</span>
+                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
                                 </a>
                             </div>
                         </ng-container>
@@ -35,8 +35,8 @@
                         <ng-container *ngIf="subject.id==subMenuItemId">
                             <div class="item-col-selected">
                                 <img alt="subject pic" src={{subject.picture}}/>
-                                <p>{{subject.title.toUpperCase()}}</p>
-                                <span>{{subject.copy}}</span>
+                                <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                <div class="grid-copy"><span>{{subject.copy}}</span></div>
                             </div>
                         </ng-container>
 
@@ -44,8 +44,8 @@
                             <div class="item-col-active">
                                 <a routerLink="{{subject.url}}">
                                     <img alt="subject pic" src={{subject.picture}}/>
-                                    <p>{{subject.title.toUpperCase()}}</p>
-                                    <span>{{subject.copy}}</span>
+                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
                                 </a>
                             </div>
                         </ng-container>
@@ -62,8 +62,8 @@
                         <ng-container *ngIf="subject.id==subMenuItemId">
                             <div class="item-col-selected">
                                 <img alt="subject pic" src={{subject.picture}}/>
-                                <p>{{subject.title.toUpperCase()}}</p>
-                                <span>{{subject.copy}}</span>
+                                <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                <div class="grid-copy"><span>{{subject.copy}}</span></div>
                             </div>
                         </ng-container>
 
@@ -71,8 +71,8 @@
                             <div class="item-col-active">
                                 <a routerLink="{{subject.url}}">
                                     <img alt="subject pic" src={{subject.picture}}/>
-                                    <p>{{subject.title.toUpperCase()}}</p>
-                                    <span>{{subject.copy}}</span>
+                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
                                 </a>
                             </div>
                         </ng-container>
@@ -92,8 +92,8 @@
                         <ng-container *ngIf="subject.id==subMenuItemId">
                             <div class="item-col-selected">
                                 <img alt="subject pic" src={{subject.picture}}/>
-                                <p>{{subject.title.toUpperCase()}}</p>
-                                <span>{{subject.copy}}</span>
+                                <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                <div class="grid-copy"><span>{{subject.copy}}</span></div>
                             </div>
                         </ng-container>
 
@@ -101,8 +101,8 @@
                             <div class="item-col-active">
                                 <a routerLink="{{subject.url}}">
                                     <img alt="subject pic" src={{subject.picture}}/>
-                                    <p>{{subject.title.toUpperCase()}}</p>
-                                    <span>{{subject.copy}}</span>
+                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
                                 </a>
                             </div>
                         </ng-container>
@@ -119,8 +119,8 @@
                         <ng-container *ngIf="subject.id==subMenuItemId">
                             <div class="item-col-selected">
                                 <img alt="subject pic" src={{subject.picture}}/>
-                                <p>{{subject.title.toUpperCase()}}</p>
-                                <span>{{subject.copy}}</span>
+                                <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                <div class="grid-copy"><span>{{subject.copy}}</span></div>
                             </div>
                         </ng-container>
 
@@ -128,8 +128,8 @@
                             <div class="item-col-active">
                                 <a routerLink="{{subject.url}}">
                                     <img alt="subject pic" src={{subject.picture}}/>
-                                    <p>{{subject.title.toUpperCase()}}</p>
-                                    <span>{{subject.copy}}</span>
+                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
                                 </a>
                             </div>
                         </ng-container>
@@ -146,8 +146,8 @@
                         <ng-container *ngIf="subject.id==subMenuItemId">
                             <div class="item-col-selected">
                                 <img alt="subject pic" src={{subject.picture}}/>
-                                <p>{{subject.title.toUpperCase()}}</p>
-                                <span>{{subject.copy}}</span>
+                                <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                <div class="grid-copy"><span>{{subject.copy}}</span></div>
                             </div>
                         </ng-container>
 
@@ -155,8 +155,8 @@
                             <div class="item-col-active">
                                 <a routerLink="{{subject.url}}">
                                     <img alt="subject pic" src={{subject.picture}}/>
-                                    <p>{{subject.title.toUpperCase()}}</p>
-                                    <span>{{subject.copy}}</span>
+                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
                                 </a>
                             </div>
                         </ng-container>
@@ -171,13 +171,13 @@
         <!-- ABOUT -->
         <ng-container *ngIf="detailListName === 'list-about'">
             <div class="linked-grid">
-                <div class="grid-1-col-n-rows">
+                <div class="grid-1-col-3-rows">
                     <div *ngFor="let subject of aboutSubjects">
                         <ng-container *ngIf="subject.id==subMenuItemId">
                             <div class="item-col-selected">
                                 <img alt="subject pic" src={{subject.picture}}/>
-                                <p>{{subject.title.toUpperCase()}}</p>
-                                <span>{{subject.copy}}</span>
+                                <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                <div class="grid-copy"><span>{{subject.copy}}</span></div>
                             </div>
                         </ng-container>
 
@@ -185,8 +185,8 @@
                             <div class="item-col-active">
                                 <a routerLink="{{subject.url}}">
                                     <img alt="subject pic" src={{subject.picture}}/>
-                                    <p>{{subject.title.toUpperCase()}}</p>
-                                    <span>{{subject.copy}}</span>
+                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
                                 </a>
                             </div>
                         </ng-container>
@@ -198,13 +198,13 @@
         <!-- ENERGY MEDICINE -->
         <ng-container *ngIf="detailListName === 'list-energy-medicine'">
             <div class="linked-grid">
-                <div class="grid-1-col-n-rows">
+                <div class="grid-1-col-3-rows">
                     <div *ngFor="let subject of energySubjects">
                         <ng-container *ngIf="subject.id==subMenuItemId">
                             <div class="item-col-selected">
                                 <img alt="subject pic" src={{subject.picture}}/>
-                                <p>{{subject.title.toUpperCase()}}</p>
-                                <span>{{subject.copy}}</span>
+                                <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                <div class="grid-copy"><span>{{subject.copy}}</span></div>
                             </div>
                         </ng-container>
 
@@ -212,8 +212,8 @@
                             <div class="item-col-active">
                                 <a routerLink="{{subject.url}}">
                                     <img alt="subject pic" src={{subject.picture}}/>
-                                    <p>{{subject.title.toUpperCase()}}</p>
-                                    <span>{{subject.copy}}</span>
+                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
                                 </a>
                             </div>
                         </ng-container>
@@ -225,13 +225,13 @@
         <!-- DOULA -->
         <ng-container *ngIf="detailListName === 'list-doula-work'">
             <div class="linked-grid">
-                <div class="grid-1-col-n-rows">
+                <div class="grid-1-col-3-rows">
                     <div *ngFor="let subject of doulaSubjects">
                         <ng-container *ngIf="subject.id==subMenuItemId">
                             <div class="item-col-selected">
                                 <img alt="subject pic" src={{subject.picture}}/>
-                                <p>{{subject.title.toUpperCase()}}</p>
-                                <span>{{subject.copy}}</span>
+                                <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                <div class="grid-copy"><span>{{subject.copy}}</span></div>
                             </div>
                         </ng-container>
 
@@ -239,8 +239,8 @@
                             <div class="item-col-active">
                                 <a routerLink="{{subject.url}}">
                                     <img alt="subject pic" src={{subject.picture}}/>
-                                    <p>{{subject.title.toUpperCase()}}</p>
-                                    <span>{{subject.copy}}</span>
+                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
                                 </a>
                             </div>
                         </ng-container>
@@ -249,6 +249,8 @@
             </div>
         </ng-container>
     </div>
+
+
 </div>
 
 

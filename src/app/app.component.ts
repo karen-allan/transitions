@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,15 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'transitions';
+
+ /* onActivate(event) {
+    window.scroll({
+      top: 0,
+      left: 0
+    });
+
+  }
+  */
+
+
 }

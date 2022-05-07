@@ -12,6 +12,10 @@ export class AboutEnergyPractOverviewComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
+  onActivate(e, outlet){
+    outlet.scrollTop = 0;
+  }
 }

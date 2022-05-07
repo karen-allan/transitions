@@ -48,18 +48,17 @@ and (max-width: 1279px) {
     }
 
     .header-name {
-        letter-spacing: 3px;
-        justify-content: flex-start;
+        letter-spacing: 1px;
+        justify-content: center;
     }
 
     /* ROW 2 slogan - energy medicine treatments - icon - end of life doula support */
     .header-slogans {
         grid-row:2;
         display:inline-grid;
-        align-content: flex-start;
         grid-column:1/-1;
         width:100%;
-        grid-template-columns: 40% 20% 40%;
+        grid-template-columns: 1fr 1fr 1fr;
         background-color: var(--color-dark-blue);
     }
 
@@ -67,6 +66,8 @@ and (max-width: 1279px) {
         display:inline-grid;
         height:var(--mobile-middle-header-height);
         align-content: center;
+        justify-content: center;
+        text-align: center;
     }
 
     .header-slogans p {
@@ -74,7 +75,6 @@ and (max-width: 1279px) {
         letter-spacing: 2px;
         padding-left:1em;
         color:var(--color-white);
-        justify-content: flex-start;
         margin: 0;
     }
 
@@ -88,8 +88,6 @@ and (max-width: 1279px) {
         grid-column:3;
         letter-spacing: 2px;
         color:var(--color-white);
-        padding-right:1em;
-        justify-content: flex-end;
     }
 
     /* ROW 3 insta, email and menu item bars */
@@ -463,7 +461,7 @@ and (orientation: landscape) {
     .logo {
         background-size: auto;
         background-position: center;
-        background-image:url('src/assets/images/headers/transitionsInEnergyLogo.jpg');
+        background-image:url('src/assets/images/headers/transitionsInEnergyDesktopLogo.png');
         background-repeat: no-repeat;
         margin:0;
     }
@@ -508,7 +506,8 @@ and (orientation: landscape) {
     .desktop-menu-items {
         display: inline-grid;
         align-content: flex-start;
-        grid-template-columns: repeat(6, 16.66%);
+        /*grid-template-columns: repeat(6, 16.66%);*/
+        grid-template-columns: repeat(3, 33.33%);
         height:var(--menu-desktop-height);
     }
 

@@ -1,0 +1,294 @@
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    .errorMessage {
+        font-size:0.7em;
+    }
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    .errorMessage {
+        font-size:0.8em;
+    }
+
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    .errorMessage {
+        font-size:0.9em;
+    }
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    .errorMessage {
+        font-size:1.0em;
+    }
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    .errorMessage {
+        font-size:1.1em;
+    }
+
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    .errorMessage {
+        font-size:1.2em;
+    }
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    .errorMessage {
+        font-size:1.3em;
+    }
+
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    .errorMessage {
+        font-size:1.4em;
+    }
+
+}
+
+
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    .errorMessage {
+        font-size:1.5em;
+    }
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .wizard-container {
+        display: block;
+        float:left;
+        width: 100%;
+        margin:2em auto 0 auto;
+        padding-bottom:4em;
+        padding-top:4em;
+        height:auto;
+        background-color: var(--color-soft-blue);
+    }
+
+    .wizard-grid {
+        display:grid;
+        width:90%;
+        height:100%;
+        margin:auto;
+        border:thin solid  var(--color-soft-blue);
+        background-color: white;
+        align-content: flex-start;
+    }
+
+    .wizard-steps {
+        display:grid;
+        width:90%;
+        margin:auto;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .show-page {
+        display:block;
+        float:left;
+        width:100%;
+    }
+
+    .show-page h1, .show-page h2, .show-page h3 {
+        font-family: ReneB-Thin;
+        color:var(--color-dark-blue);
+        font-weight:800;
+    }
+
+    .show-page h1 {
+        font-size:1.6em;
+        padding-left:2em;
+        margin:.5em 0;
+    }
+
+    .show-page h2 {
+        font-size:1.4em;
+        padding-left:2em;
+        margin:.5em 0;
+    }
+
+    .show-page h3 {
+        font-size:1.8em;
+        padding-left:2em;
+        margin:.2em 0;
+    }
+
+    .show-page span {
+        display:block;
+        padding:1em;
+        font-family: global;
+        color:var(--color-dark-blue);
+        font-weight:800;
+        font-size:1.0em;
+    }
+
+    .page-overview {
+        display:block;
+        width:90%;
+        margin:auto;
+        font-family:var(--family-global);
+        color:var(--color-dark-blue);
+        font-size:1.1em;
+    }
+
+    .form-grid {
+        display: grid;
+        width: 90%;
+        margin:2em auto 0 auto;
+        /*border:thin solid red;*/
+    }
+
+    .show-finish-page {
+        display:block;
+        float:left;
+        width:100%;
+    }
+
+    .one-button-container, .two-buttons-container, .three-buttons-container, .four-buttons-container {
+        display: inline-grid;
+        justify-items: flex-end;
+        border:thin solid red;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width:98%;
+        margin-right:2%;
+    }
+
+    .same-address-container {
+        grid-template-columns: 100%;
+        display: inline-grid;
+        align-content: center;
+        justify-items: flex-start;
+        border:thin solid red;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .one-button-container {
+        align-content: center;
+        grid-template-columns: 100%;
+    }
+
+    .two-buttons-container {
+        align-content: center;
+        grid-template-columns: 89% 11%;
+        grid-column-gap: .3em;
+        justify-items: flex-end;
+    }
+
+    .three-buttons-container {
+        grid-template-columns: 78% 11% 11%;
+        grid-column-gap: .3em;
+    }
+
+    .four-buttons-container {
+        grid-template-columns: 67% 11% 11% 11%;
+        grid-column-gap: .3em;
+    }
+
+    .first-button, .second-button, .third-button, .fourth-button, .same-address-button   {
+        display:grid;
+        color: var(--color-white);
+        letter-spacing: 3px;
+        background-color: var(--color-light-blue);
+        border-radius: 1.0em;
+        padding:1em;
+
+    }
+
+    .uniform-width {
+        width:100px;
+    }
+
+    .big-width {
+        width:auto;
+    }
+
+    .first-button  {
+        grid-column: 1;
+    }
+
+    .second-button  {
+        grid-column: 2;
+    }
+
+    .third-button  {
+        grid-column: 3;
+    }
+
+    .fourth-button  {
+        grid-column:4;
+    }
+
+    .errorMessage {
+        display:block;
+        width:100%;
+        color:red;
+        font-weight:800;
+        font-family:var(--family-global);
+
+    }
+
+    #error, #error2 {
+        border:none;
+    }
+
+    .required  {
+        border-left: 5px solid #42A948; /* green */
+    }
+
+
+
+}

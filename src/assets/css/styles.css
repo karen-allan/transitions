@@ -1,5 +1,7 @@
 
+/* ANGULAR 13.1.2 */
 :root {
+
 
   --menu-speed: 0.75s;
 
@@ -87,6 +89,37 @@
   /* WITH MALGUN GOTHIC */
   --family-global:'malgun gothic';         /*  */
 
+  /* FACTS: */
+  /* this is where text and image are grids at 100% */
+  --global-citations-banana-port-font-size:.6em;
+  --global-citations-banana-land-font-size:.7em;
+
+  --global-citations-mobile-port-font-size:.7em;
+  --global-citations-mobile-land-font-size:.8em;
+
+  --global-citations-tablet-port-font-size:.8em;
+  --global-citations-ipad-port-font-size:.8em;
+
+  /* this is where text and image are inline-grids are side by side */
+  --global-citations-tablet-land-font-size:.65em;
+  --global-citations-ipad-land-font-size:.55em;
+  --global-citations-desktop-font-size:.7em;
+
+  /* small ones */
+  --global-smallest-banana-port-font-size:.7em;
+  --global-smallest-banana-land-font-size:.8em;
+
+  --global-smallest-mobile-port-font-size:.8em;
+  --global-smallest-mobile-land-font-size:.9em;
+
+  --global-smallest-tablet-port-font-size:.9em;
+  --global-smallest-ipad-port-font-size:.9em;
+
+  /* this is where text and image are inline-grids are side by side */
+  --global-smallest-tablet-land-font-size:.75em;
+  --global-smallest-ipad-land-font-size:.75em;
+  --global-smallest-desktop-font-size:.75em;
+
   --global-small-banana-port-font-size:.4em;
   --global-small-mobile-port-font-size:.5em;
   --global-small-tablet-port-font-size:.6em;
@@ -123,6 +156,8 @@
   --global-big-ipad-land-font-size:1.1em;
 
   --global-big-desktop-font-size:1.2em;
+
+  --citations:.7em;
 
   /* RENE in LISTS */
   --rene-banana-port-font-size:.6em;
@@ -287,7 +322,7 @@
   --h2-whitney-tablet-land-font-size:1.3em;
   --h2-whitney-ipad-land-font-size:1.4em;
 
-  --h2-whitney-desktop-font-size:1.8em;
+  --h2-whitney-desktop-font-size:1.6em;
 
 
   /* H1 */
@@ -466,7 +501,6 @@
     display: block;
     width: 100%;
     max-width:1152px;
-    margin:auto;
   }
 
   /* LIST FORMATS */
@@ -551,6 +585,10 @@
 
   .with-colored-border {
     border: thin solid  var(--color-soft-blue);
+  }
+
+  .with-dark-border {
+    border: thin solid  var(--color-dark-blue);
   }
 
   .top-colored-border {
@@ -801,7 +839,21 @@
     padding-left:6em;
   }
 
+  .pad-right {
+    padding-right:1em;
+  }
 
+  .pad-right-2 {
+    padding-right:2em;
+  }
+
+  .pad-right-3 {
+    padding-right:3em;
+  }
+
+  .pad-right-6 {
+    padding-right:6em;
+  }
 
   :focus {
     outline: 0;
@@ -833,6 +885,7 @@
   #wrapper {
     clear: both;
   }
+
 
 
 
@@ -913,11 +966,8 @@
     src: url("../fonts/Whitney SSm Semibold.ttf") format("opentype");
   }
 
-  .super {
-    display:inline;
-    vertical-align:super;
-    font-size: .7em;
-    font-weight:bolder;
-  }
+
+
+
 
 }

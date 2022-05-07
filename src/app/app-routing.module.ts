@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import {Routes, RouterModule, ExtraOptions} from '@angular/router';
 
 import { AboutEnergyPractContainerComponent } from './menu-about/about-energy-practitioner/about-energy-pract-container/about-energy-pract-container.component';
@@ -32,6 +33,15 @@ import { HomeContainerComponent } from './menu-home/home-container/home-containe
 import { PrintSessionComponent } from './global-print/print-session/print-session.component';
 
 
+import { WizardContainerComponent } from './menu-wizard/wizard-container/wizard-container.component';
+import { TsdmWizardContainerComponent } from './menu-wizard/tsdm/tsdm-wizard-container/tsdm-wizard-container.component';
+import { RepNineWizardContainerComponent } from './menu-wizard/rep-nine/rep-nine-wizard-container/rep-nine-wizard-container.component';
+import { DnrWizardContainerComponent } from './menu-wizard/dnr/dnr-wizard-container/dnr-wizard-container.component';
+import { EdithWizardContainerComponent } from './menu-wizard/edith/edith-wizard-container/edith-wizard-container.component';
+import { AcpWizardContainerComponent } from './menu-wizard/acp/acp-wizard-container/acp-wizard-container.component';
+import { TransferWizardContainerComponent } from './menu-wizard/transfer/transfer-wizard-container/transfer-wizard-container.component';
+
+
 const routes: Routes = [
     {path: '', redirectTo: '/menuHome', pathMatch: 'full'},
 
@@ -60,19 +70,27 @@ const routes: Routes = [
     {path: 'createLegacy', component: CreateLegacyContainerComponent},
     {path: 'chooseMemorial', component: ChooseMemorialContainerComponent},
 
-    {path: 'menuFaq', component: FaqContainerComponent},
+    {path: 'menuWizard', component: WizardContainerComponent},
+    {path: 'tsdmWizard', component: TsdmWizardContainerComponent},
+    {path: 'repNineWizard', component: RepNineWizardContainerComponent},
+    {path: 'dnrWizard', component: DnrWizardContainerComponent},
+    {path: 'edithWizard', component: EdithWizardContainerComponent},
+    {path: 'acpWizard', component: AcpWizardContainerComponent},
+    {path: 'transferWizard', component: TransferWizardContainerComponent},
+
     {path: 'menuHome', component: HomeContainerComponent},
 
     {path: 'printSessionProfile', component: PrintSessionComponent},
 ];
 
-const routerOptions: ExtraOptions = {
-  useHash: false,
-  anchorScrolling: 'enabled',
-};
-
 @NgModule({
-  imports:[RouterModule.forRoot(routes,  { scrollPositionRestoration: 'enabled' })],
+  imports:[RouterModule.forRoot(
+      routes,
+      {
+          useHash: false,
+          scrollPositionRestoration: 'enabled',
+          onSameUrlNavigation: 'reload',
+          anchorScrolling: 'enabled'})],
 
   exports: [RouterModule]
 })

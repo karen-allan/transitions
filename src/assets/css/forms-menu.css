@@ -494,8 +494,10 @@ and (min-width: 1440px) {
 
     .disclaimer {
         display: block;
-        width: 80%;
-        margin: 1em 10%;
+        width: 90%;
+        margin: 1em 0;
+        padding:1em 5%;
+        border:thin dashed var(--color-soft-blue);
     }
 
     .disclaimer span, .sig-date-prompt, .print-forms-button {

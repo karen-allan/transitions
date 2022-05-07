@@ -2,10 +2,26 @@ import {Subject} from './subject';
 
 export const SUBJECTS: Subject[] = [
     /* ABOUT PAGE */
-    {id: 20, title: 'My Before Path', copy:'My Meandering Journey Through Life', picture:'assets/images/about/grid/gridDesigner.jpg', url: '/aboutMe'},
-    {id: 21, title: 'As Practitioner', copy:'Venturing into the Woo Woo Land of Energy', picture:'assets/images/about/grid/gridPractitioner.jpg', url:'/aboutEnergyPractitioner'},
-    {id: 22, title: 'As an Advocate', copy:'Thinking About the Big Picture, called The End', picture:'assets/images/about/grid/gridDoula.jpg', url:'/aboutEndOfLifeDoula'},
+ /*   {id: 20, title: 'My Before Path', copy:'My Beginning that Led to my Now', picture:'assets/images/about/grid/gridDesigner.jpg',
+        url: '/aboutMe fragment="aboutMeTop"'},
+*/
+    {id: 20, title: 'My Before Path', copy:'My Beginning that Led to my Now', picture:'assets/images/about/grid/gridDesigner.jpg',
+        url: '/aboutMe'},
 
+    {id: 21, title: 'As Practitioner', copy:'Helping your Energy Move Freely', picture:'assets/images/about/grid/gridPractitioner.jpg',
+        url:'/aboutEnergyPractitioner #aboutPractTop'},
+
+    /*
+        {id: 21, title: 'As Practitioner', copy:'Helping your Energy Move Freely', picture:'assets/images/about/grid/gridPractitioner.jpg',
+            url:'/aboutEnergyPractitioner fragment="aboutEnergyPractTop"'},
+    */
+
+    {id: 22, title: 'As an Advocate', copy:'Helping you Plan Your Future', picture:'assets/images/about/grid/gridDoula.jpg',
+        url:'/aboutEndOfLifeDoula'},
+
+  /*  {id: 22, title: 'As an Advocate', copy:'Helping you Plan Your Future', picture:'assets/images/about/grid/gridDoula.jpg',
+        url:'/aboutEndOfLifeDoula fragment="aboutDoulaTop"'},
+*/
     /* ENERGY MEDICINE PAGE Clincking here takes you to Help with Anxiety */
     {id: 30, title: 'Reduce your Anxiety', copy:'Learn simple techniques to reduce your anxiety and lower your stress.', picture:'assets/images/energyMedicine/grid/gridReduceAnxiety.jpg', url:'/reduceAnxiety'},
     {id: 31, title: 'Relieve Burnout', copy:'Relieve burnout with simple energy techniques that focus on your adrenals.', picture:'assets/images/energyMedicine/grid/gridRelieveBurnout.jpg',url:'/relieveBurnout'},

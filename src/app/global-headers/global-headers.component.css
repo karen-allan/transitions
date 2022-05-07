@@ -217,7 +217,7 @@ and (min-width: 1920px) {
         }
 
         .background-text {
-            margin:0 auto .5em auto;
+            margin:0 auto 0 auto;
             text-align: center;
             background-color: rgb(0,0,0); /* Fallback color */
             background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
@@ -347,10 +347,17 @@ and (min-width: 1920px) {
         }
 
         /* FREQUENTLY ASKED QUESTIONS */
-        .faqs {
+       /* .faqs {
             background-size: cover;
             background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
             url('src/assets/images/backgrounds/faq/faqs.jpg');
+        }*/
+
+    /* FREQUENTLY ASKED QUESTIONS */
+        .wizard {
+            background-size: cover;
+            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+            url('src/assets/images/backgrounds/wizard/wizardIntro.jpg');
         }
 }
 
