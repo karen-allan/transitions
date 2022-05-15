@@ -1,0 +1,50 @@
+<div class="forms-both">
+    <div class="full-line-prompt">
+        <p>Please select the one statement that applies to you on the Clinical Frailty Scale (Rockwood et al., 2005).</p>
+    </div>
+
+    <div class="one-full-column-block">
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="radio" [(ngModel)]="model.eolFrailty" value="frailtyChart-1"  id="ageCondition1" name="frailty">
+            <label for="ageCondition1">
+                You are under 65 and in good health and fitness.
+            </label>
+        </div>
+
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="radio" [(ngModel)]="model.eolFrailty" value="frailtyChart-2" id="ageCondition2" name="frailty">
+            <label for="ageCondition2">
+                You have one or more chronic conditions, at any age.
+            </label>
+        </div>
+
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="radio" [(ngModel)]="model.eolFrailty" value="frailtyChart-3" id="ageCondition3" name="frailty">
+            <label for="ageCondition3">
+                You have a life-threatening illness and your life-expectancy is less than one to two years, at any age.
+            </label>
+        </div>
+
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="radio" [(ngModel)]="model.eolFrailty" value="frailtyChart-4" id="ageCondition4" name="frailty">
+            <label for="ageCondition4">
+                You are over 65 and relatively healthy.
+            </label>
+        </div>
+
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="radio" [(ngModel)]="model.eolFrailty" value="frailtyChart-5" id="ageCondition5" name="frailty">
+            <label for="ageCondition5">
+                You are over 65 and having trouble managing your day-to-day affairs and the activities of daily living.
+            </label>
+        </div>
+
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="radio" [(ngModel)]="model.eolFrailty" value="frailtyChart-6" id="ageCondition6" name="frailty">
+            <label for="ageCondition6">
+                You are over 75, no matter your state of health.
+            </label>
+        </div>
+    </div>
+</div>
+

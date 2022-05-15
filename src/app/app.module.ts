@@ -158,6 +158,8 @@ import { IntakeForConsultationCaregiverComponent } from './global-forms/consulta
 import { IntakeForConsultationPlansComponent } from './global-forms/consultations/intake-for-consultation-plans/intake-for-consultation-plans.component';
 import { MenuForConsultationsComponent } from './global-forms/consultations/menu-for-consultations/menu-for-consultations.component';
 import { IntakeForEnergySessionComponent } from './global-forms/sessions/intake-for-energy-session/intake-for-energy-session.component';
+import { FrailtyScaleComponent } from './global-forms/inner-forms/frailty-scale/frailty-scale.component';
+import { SessionConsiderationsComponent } from './global-forms/inner-forms/session-considerations/session-considerations.component';
 
 @NgModule({
     declarations: [
@@ -273,6 +275,8 @@ import { IntakeForEnergySessionComponent } from './global-forms/sessions/intake-
         IntakeForConsultationPlansComponent,
           MenuForConsultationsComponent,
           IntakeForEnergySessionComponent,
+          FrailtyScaleComponent,
+          SessionConsiderationsComponent,
 
 
 

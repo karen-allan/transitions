@@ -1,16 +1,13 @@
 <div class="content-no-margins">
     <div class="forms-content-block">
+        <div class="dark-copy pad-top-2">
+            Please note this form is to be filled out prior to us booking a first meeting. This gives me an overview of your needs. You can fill it in online
+            and then print it or you can print the blank form and fill it out later. You can print it and
+            scan it or
+            take a picture and send it to me at <a href="mailto:karen@transitionsInEnergy.com">karen@transitionsInEnergy.com</a> to set up an appointment at
+            your convenience. Thank you!
+        </div>
         <form (ngSubmit)="onSubmit()">
-            <div class="full-line pad-top-2">
-                <ng-container *ngIf="errorMessage">
-                    <input type="text" readonly id="error">
-                    <div class="errorMessage">{{errorMessage}}</div>
-                </ng-container>
-                <ng-container *ngIf="!errorMessage">
-                    <input type="text" id="error2" readonly class="errorMessage">&nbsp;
-                </ng-container>
-            </div>
-
             <app-demographic-info [model]="model"></app-demographic-info>
             <app-support-for-caregiver [model]="model"></app-support-for-caregiver>
 
@@ -48,8 +45,7 @@
             </div>
 
             <div class="cancel-print-container">
-                <button class="cancel-button"(click)="cancelClientInfo()">CANCEL</button>
-                <button class="print-button"(click)="checkClientInfo()">PRINT</button>
+                <button class="print-button"(click)="printProfile()">PRINT</button>
             </div>
         </form>
     </div>

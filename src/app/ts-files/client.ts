@@ -1,6 +1,7 @@
 export class Client {
 
     constructor(
+        /* demographics */
         public id: number,
         public name: string,
         public cellPhone:string,
@@ -17,6 +18,8 @@ export class Client {
         public emergRelation:string,
         public emergPhone:string,
 
+        /* medical */
+        public medsSupplements:string,
         public heartDisease:boolean,
         public cancer:boolean,
         public stroke:boolean,
@@ -25,27 +28,34 @@ export class Client {
         public mentalIllness:boolean,
         public seizures:boolean,
         public autoImmuneDisease:boolean,
+        public otherDisease:boolean,
+        public illnessDetails:string,
 
-        public other:boolean,
-        public conditions:string,
-        public knowledgeLevel:string,
+        /* energy medicine session */
+        /* session-goals */
+        public sessionEnergyKnowledge:string,
+        public sessionBenefits:string,
+        public sessionAltTreatments:string,
 
-        public paceMaker:boolean,
-        public hearingAids:boolean,
-        public aromatherapy:boolean,
+        /* session-considerations */
+        public sessionPaceMaker:boolean,
+        public sessionHearingAids:boolean,
+        public sessionAromatherapy:boolean,
+        public sessionPainfulJoints:boolean,
 
-        public will:boolean,
-        public finances:boolean,
-        public wishes:boolean,
+        /* end of life planning */
+        public eolFrailty:string,
+        public eolPlanFocus:string,
+        public eolPlanDetails:string,
 
-        public mainBenefit:string,
-        public mainIssues:string,
-        public mainTreatments:string,
+        /* end of life patient care */
+        public eolPatientFocus:string,
+        public eolPatientDetails:string,
 
-        public primaryFocus:string,
-        public mainConcerns:string,
-        public treatments:string,
-        public frailty:string,
+        /* end of life caregiver care */
+        public eolCaregiverFocus:string,
+        public eolCaregiverDetails:string,
+
         public defaultDate:string)
     {}
 

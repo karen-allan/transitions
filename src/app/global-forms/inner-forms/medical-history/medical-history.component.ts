@@ -10,11 +10,9 @@ export class MedicalHistoryComponent implements OnInit {
 
   @Input()  model: Client;
 
-
   constructor() { }
 
   ngOnInit(): void {
   }
-
 
 }

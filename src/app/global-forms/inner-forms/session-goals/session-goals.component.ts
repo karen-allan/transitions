@@ -13,9 +13,7 @@ export class SessionGoalsComponent implements OnInit {
   constructor() { }
 
     ngOnInit(): void {
-      this.model.knowledgeLevel = 'knowledgeLevel1';
+      this.model.sessionEnergyKnowledge = 'knowledgeLevel1';
     }
-
-
 
   }

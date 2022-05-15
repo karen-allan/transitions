@@ -1,0 +1,60 @@
+<!-- this one can have both desktop and mobile because there are no default values -->
+<!-- DESKTOP -->
+<div class="forms-desktop margin-top-2">
+    <div class="title-background margin-top-2">
+        Energy Treatment Considerations
+    </div>
+
+    <div class="full-line-prompt">
+        <p>Please select any that apply that can affect energy treatment protocols:</p>
+    </div>
+
+    <div class="two-even-columns-block {">
+        <div class="first-radio-check-column">
+            <input type="checkbox" [(ngModel)]="model.sessionPaceMaker" name="paceMaker">I have a pace-maker.
+        </div>
+
+        <div class="second-radio-check-column">
+            <input type="checkbox" [(ngModel)]="model.sessionHearingAids" name="hearingAids">I wear hearing aids.
+        </div>
+    </div>
+
+    <div class="two-even-columns-block">
+        <div class="first-radio-check-column">
+            <input type="checkbox" [(ngModel)]="model.sessionAromatherapy" name="aromatherapy">I am sensitive to aromas.
+        </div>
+
+        <div class="second-radio-check-column">
+            <input type="checkbox" [(ngModel)]="model.sessionPainfulJoints" name="painfulJoints">My joints hurt with movement.
+        </div>
+    </div>
+</div>
+
+<!-- MOBILE -->
+<div class="forms-mobile">
+    <div class="title-background margin-top-2">
+        Energy Treatment Considerations
+    </div>
+
+    <div class="full-line-prompt">
+        <p>Please select any that apply that can affect energy treatment protocols:</p>
+    </div>
+
+    <div class="one-full-column-block">
+        <div class="first-radio-check-column">
+            <input type="checkbox" [(ngModel)]="model.sessionPaceMaker" name="paceMaker">I have a pacemaker.
+        </div>
+
+        <div class="first-radio-check-column">
+            <input type="checkbox" [(ngModel)]="model.sessionHearingAids" name="hearingAids">I wear hearing aids.
+        </div>
+
+        <div class="first-radio-check-column">
+            <input type="checkbox" [(ngModel)]="model.sessionAromatherapy" name="aromatherapy">I am sensitive to aromas.
+        </div>
+
+        <div class="first-radio-check-column">
+            <input type="checkbox" [(ngModel)]="model.sessionPainfulJoints" name="painfulJoints">My joints hurt with movement.
+        </div>
+    </div>
+</div>

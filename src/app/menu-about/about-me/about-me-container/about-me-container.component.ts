@@ -11,7 +11,7 @@ export class AboutMeContainerComponent implements OnInit {
   subMenuItemId = 20
 
   detailHeaderName = 'header-about-me'
-  title= "How Did I Get From Here to There?"
+  title= "How Did I Get Here?"
   detailListName="list-about"
 
   constructor() { }

@@ -9,15 +9,14 @@ import {Client} from "../../../ts-files/client";
 export class DemographicInfoComponent implements OnInit {
 
     @Input() @Output() model: Client;
-    @Input() errorMessage:string='';
 
-  provinces = ['British Columbia', 'Alberta', 'Saskatchewan', 'Manitoba', 'Ontario', 'Quebec', 'Prince Edward Island', 'New Brunswick', 'Nova Scotia', 'Newfoundland',
-    'Northwest Territories', 'Nunavut', 'Yukon'];
+    provinces = ['British Columbia', 'Alberta', 'Saskatchewan', 'Manitoba', 'Ontario', 'Quebec', 'Prince Edward Island', 'New Brunswick', 'Nova Scotia', 'Newfoundland',
+        'Northwest Territories', 'Nunavut', 'Yukon'];
 
   constructor() { }
 
   ngOnInit(): void {
-    // alert("province picked is " + this.provinces[0]);
+      this.model.provState= this.provinces[0];
   }
 
 

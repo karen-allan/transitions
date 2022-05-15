@@ -1,5 +1,5 @@
 import {Component, Input, Output, OnInit} from '@angular/core';
-import { Client} from "../../../ts-files/client";
+import {Client} from "../../../ts-files/client";
 
 
 @Component({
@@ -11,18 +11,10 @@ export class EndOfLifePlanningComponent implements OnInit {
 
   @Input() @Output() model:Client;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
-
-    this.model.frailty = 'frailtyChart-1';
-    this.model.will=false;
-    this.model.finances=false;
-    this.model.wishes=false;
-
-
-
-//alert("do you have a will is " + this.model.will)
   }
 
 }

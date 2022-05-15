@@ -1,22 +1,22 @@
 <div class="forms-desktop">
     <div class="title-background">
-        Your Concerns and Goals
+        Your Concerns and Goals as a Patient
     </div>
 
-    <div class="full-line">
+    <div class="full-line-prompt">
         <p>What would be your main area of focus for seeking a consultation?</p>
     </div>
 
     <div class="two-even-columns-block">
         <div class="first-radio-check-column">
-            <input type="checkbox" id="primaryFocus1" [(ngModel)]="model.primaryFocus" value="patientFocus1">
+            <input type="checkbox" id="primaryFocus1" [(ngModel)]="model.eolPatientFocus" value="patientFocus1">
             <label for="primaryFocus1">
                 I have been diagnosed with a terminal illness.
             </label>
         </div>
 
         <div class="second-radio-check-column">
-            <input type="checkbox" id="primaryFocus2" [(ngModel)]="model.primaryFocus" value="patientFocus2">
+            <input type="checkbox" id="primaryFocus2" [(ngModel)]="model.eolPatientFocus" value="patientFocus2">
             <label for="primaryFocus2">
                 I am scared, angry, depressed and need emotional support.
             </label>
@@ -25,14 +25,14 @@
 
     <div class="two-even-columns-block">
         <div class="first-radio-check-column">
-            <input type="checkbox" id="primaryFocus3" [(ngModel)]="model.primaryFocus" value="patientFocus3">
+            <input type="checkbox" id="primaryFocus3" [(ngModel)]="model.eolPatientFocus" value="patientFocus3">
             <label for="primaryFocus3">
                 I am physically unable to care for myself as I used to.
             </label>
         </div>
 
         <div class="second-radio-check-column">
-            <input type="checkbox" id="primaryFocus4" [(ngModel)]="model.primaryFocus" value="patientFocus4">
+            <input type="checkbox" id="primaryFocus4" [(ngModel)]="model.eolPatientFocus" value="patientFocus4">
             <label for="primaryFocus4">
                 I need to discuss things with my family but they won't listen.
             </label>
@@ -41,14 +41,14 @@
 
     <div class="two-even-columns-block">
         <div class="first-radio-check-column">
-            <input type="checkbox" id="primaryFocus5" [(ngModel)]="model.primaryFocus" value="patientFocus5">
+            <input type="checkbox" id="primaryFocus5" [(ngModel)]="model.eolPatientFocus" value="patientFocus5">
             <label for="primaryFocus5">
                 My family is fighting and arguing about my care.
             </label>
         </div>
 
         <div class="second-radio-check-column">
-            <input type="checkbox" id="primaryFocus6" [(ngModel)]="model.primaryFocus" value="patientFocus6">
+            <input type="checkbox" id="primaryFocus6" [(ngModel)]="model.eolPatientFocus" value="patientFocus6">
             <label for="primaryFocus6">
                 I want to write down my wishes and requests while I still can.
             </label>
@@ -57,66 +57,58 @@
 
     <div class="two-even-columns-block">
         <div class="first-radio-check-column">
-            <input type="checkbox" id="primaryFocus7" [(ngModel)]="model.primaryFocus" value="patientFocus7">
+            <input type="checkbox" id="primaryFocus7" [(ngModel)]="model.eolPatientFocus" value="patientFocus7">
             <label for="primaryFocus7">
                 I am afraid I won't be able to handle the pain.
             </label>
         </div>
 
         <div class="second-radio-check-column">
-            <input type="checkbox" id="primaryFocus8" [(ngModel)]="model.primaryFocus" value="patientFocus8">
+            <input type="checkbox" id="primaryFocus8" [(ngModel)]="model.eolPatientFocus" value="patientFocus8">
             <label for="primaryFocus8">
+                I want more information about life prolonging procedures.
+            </label>
+        </div>
+    </div>
+
+    <div class="two-even-columns-block">
+        <div class="first-radio-check-column">
+            <input type="checkbox" id="primaryFocus9" [(ngModel)]="model.eolPatientFocus" value="patientFocus9">
+            <label for="primaryFocus9">
+                I want to explore who in my family I could best trust to consider and advocate for my wishes.
+            </label>
+        </div>
+
+        <div class="second-radio-check-column">
+            <input type="checkbox" id="primaryFocus10" [(ngModel)]="model.eolPatientFocus" value="patientFocus10">
+            <label for="primaryFocus10">
                 I feel that the health care team doesn't explain enough to me.
             </label>
         </div>
     </div>
 
-    <div class="full-line">
+    <div class="two-even-columns-block">
+        <div class="first-radio-check-column">
+            <input type="checkbox" id="primaryFocus11" [(ngModel)]="model.eolPatientFocus" value="primaryFocus11">
+            <label for="primaryFocus11">
+                I want information about my rights to die at home.
+            </label>
+        </div>
+
+        <div class="second-radio-check-column">
+            <input type="checkbox" id="primaryFocus12" [(ngModel)]="model.eolPatientFocus" value="primaryFocus12">
+            <label for="primaryFocus12">
+                I need information about MAID (Medical Assistance in Dying).
+            </label>
+        </div>
+    </div>
+
+   <div class="full-line-prompt">
         <p>Can you expand on what you are looking for related to the above answer?</p>
     </div>
 
-    <div class="full-line">
-        <textarea rows=6 class="text-area" id="mainIssues" [(ngModel)]="model.mainIssues" name="mainIssues"> </textarea>
-    </div>
-
-    <div class="full-line">
-        <p>Are their issues still left to consider and plan for in your remaining time?</p>
-    </div>
-
-    <div class="two-unequal-columns-block">
-        <div class="first-radio-check-column">
-            Have you considered who you would want to make your legal caregiver should you become incapacitated?
-        </div>
-        <div class="second-radio-check-column">
-            <input type="radio" value="yes" name="question1" id="question1_yes">
-            <label for="question1_yes">Yes</label>
-            <input type="radio" value="no" name="question1" id="question1_no" checked="checked">
-            <label for="question1_no">No</label>
-        </div>
-    </div>
-
-    <div class="two-unequal-columns-block">
-        <div class="first-radio-check-column">
-            Have you thought about accepting or rejecting any life extending procedures?
-        </div>
-        <div class="second-radio-check-column">
-            <input type="radio"  value="yes" name="question2" id="question2_yes">
-            <label for="question2_yes">Yes</label>
-            <input type="radio" value="no" name="question2" id="question2_no" checked="checked">
-            <label for="question2_no">No</label>
-        </div>
-    </div>
-
-    <div class="two-unequal-columns-block">
-        <div class="first-radio-check-column">
-            Do you know where you would like to die (home, hospital, hospice)?
-        </div>
-        <div class="second-radio-check-column">
-            <input type="radio" value="yes" name="question3" id="question3_yes">
-            <label for="question3_yes">Yes</label>
-            <input type="radio" value="no" name="question3" id="question3_no" checked="checked">
-            <label for="question3_no">No</label>
-        </div>
+    <div class="one-full-column-block">
+        <textarea rows=6 class="text-area" id="mainIssues" [(ngModel)]="model.eolPatientDetails" name="mainIssues"> </textarea>
     </div>
 </div>
 
@@ -127,106 +119,101 @@
         Your Concerns and Goals
     </div>
 
-    <div class="full-line">
+    <div class="full-line-prompt">
         <p>What would be your main areas of focus for seeking a consultation?</p>
     </div>
 
-    <div class="full-line">
+    <div class="one-full-column-block">
         <div class="first-radio-check-column pad-left pad-right">
-            <input type="checkbox" id="m-primaryFocus1" [(ngModel)]="model.primaryFocus" value="patientFocus1">
+            <input type="checkbox" id="m-primaryFocus1" [(ngModel)]="model.eolPatientFocus" value="patientFocus1">
             <label for="m-primaryFocus1">
                 I have been diagnosed with a terminal illness.
             </label>
         </div>
 
         <div class="first-radio-check-column pad-left pad-right">
-            <input type="checkbox" id="m-primaryFocus2" [(ngModel)]="model.primaryFocus" value="patientFocus2">
+            <input type="checkbox" id="m-primaryFocus2" [(ngModel)]="model.eolPatientFocus" value="patientFocus2">
             <label for="m-primaryFocus2">
                 I am scared, angry , depressed and need emotional support.
             </label>
         </div>
 
         <div class="first-radio-check-column pad-left pad-right">
-            <input type="checkbox" id="m-primaryFocus3" [(ngModel)]="model.primaryFocus" value="patientFocus3">
+            <input type="checkbox" id="m-primaryFocus3" [(ngModel)]="model.eolPatientFocus" value="patientFocus3">
             <label for="m-primaryFocus3">
                 I am physically unable to care for myself as I used to.
             </label>
         </div>
 
         <div class="first-radio-check-column pad-left pad-right">
-            <input type="checkbox" id="m-primaryFocus4" [(ngModel)]="model.primaryFocus" value="patientFocus4">
+            <input type="checkbox" id="m-primaryFocus4" [(ngModel)]="model.eolPatientFocus" value="patientFocus4">
             <label for="m-primaryFocus4">
                 I need to discuss things with my family but they won't listen.
             </label>
         </div>
 
         <div class="first-radio-check-column pad-left pad-right">
-            <input type="checkbox" id="m-primaryFocus5" [(ngModel)]="model.primaryFocus" value="patientFocus5">
+            <input type="checkbox" id="m-primaryFocus5" [(ngModel)]="model.eolPatientFocus" value="patientFocus5">
             <label for="m-primaryFocus5">
                 My family is fighting and arguing about my care.
             </label>
         </div>
 
         <div class="first-radio-check-column pad-left pad-right">
-            <input type="checkbox" id="m-primaryFocus6" [(ngModel)]="model.primaryFocus" value="patientFocus6">
+            <input type="checkbox" id="m-primaryFocus6" [(ngModel)]="model.eolPatientFocus" value="patientFocus6">
             <label for="m-primaryFocus6">
                 I want to write down my wishes and requests while I still can.
             </label>
         </div>
 
         <div class="first-radio-check-column pad-left pad-right">
-            <input type="checkbox" id="m-primaryFocus7" [(ngModel)]="model.primaryFocus" value="patientFocus7">
+            <input type="checkbox" id="m-primaryFocus7" [(ngModel)]="model.eolPatientFocus" value="patientFocus7">
             <label for="m-primaryFocus7">
                 I am afraid I won't be able to handle the pain.
             </label>
         </div>
 
         <div class="first-radio-check-column pad-left pad-right">
-            <input type="checkbox" id="m-primaryFocus8" [(ngModel)]="model.primaryFocus" value="patientFocus8">
+            <input type="checkbox" id="m-primaryFocus8" [(ngModel)]="model.eolPatientFocus" value="patientFocus8">
             <label for="m-primaryFocus8">
                 I feel that the health care team doesn't explain enough to me.
             </label>
         </div>
+
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="checkbox" id="m-primaryFocus9" [(ngModel)]="model.eolPatientFocus" value="primaryFocus9">
+            <label for="m-primaryFocus9">
+                I want to explore who in my family I could best trust to consider and advocate for my wishes.
+            </label>
+        </div>
+
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="checkbox" id="m-primaryFocus10" [(ngModel)]="model.eolPatientFocus" value="primaryFocus10">
+            <label for="m-primaryFocus10">
+                I feel that the health care team doesn't explain enough to me.
+            </label>
+        </div>
+
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="checkbox" id="m-primaryFocus11" [(ngModel)]="model.eolPatientFocus" value="primaryFocus11">
+            <label for="m-primaryFocus11">
+                I want information about my rights to die at home.
+            </label>
+        </div>
+
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="checkbox" id="m-primaryFocus12" [(ngModel)]="model.eolPatientFocus" value="primaryFocus12">
+            <label for="m-primaryFocus12">
+                I need information about MAID (Medical Assistance in Dying).
+            </label>
+        </div>
     </div>
 
-    <div class="full-line">
+    <div class="full-line-prompt">
         <p>Can you expand on what you are looking for related to the above answer?</p>
     </div>
 
-    <div class="full-line">
-        <textarea rows=6 class="text-area" id="m-mainIssues" [(ngModel)]="model.mainIssues" name="mainIssues"> </textarea>
-    </div>
-
-    <div class="full-line">
-        <p>Are their issues still left to consider and plan for in your remaining time?</p>
-    </div>
-
-    <div class="full-line">
-        <div class="first-radio-check-column">
-            Have you considered who you would want to make your legal caregiver should you become incapacitated?
-            <br><br>
-            <input type="radio" value="yes" name="question1" id="m-question1_yes">
-            <label for="m-question1_yes">Yes</label>
-            <input type="radio" value="no" name="question1" id="m-question1_no" checked="checked">
-            <label for="m-question1_no">No</label>
-        </div>
-
-        <div class="first-radio-check-column">
-            Have you thought about accepting or rejecting any life extending procedures?
-            <br><br>
-            <input type="radio"  value="yes" name="question2" id="m-question2_yes">
-            <label for="m-question2_yes">Yes</label>
-            <input type="radio" value="no" name="question2" id="m-question2_no" checked="checked">
-            <label for="m-question2_no">No</label>
-        </div>
-
-        <div class="first-radio-check-column">
-            Do you know where you would like to die (home, hospital, hospice)?
-            <br><br>
-            <input type="radio" value="yes" name="question3" id="m-question3_yes">
-            <label for="m-question3_yes">Yes</label>
-            <input type="radio" value="no" name="question3" id="m-question3_no" checked="checked">
-            <label for="m-question3_no">No</label>
-        </div>
+    <div class="one-full-column-block">
+        <textarea rows=6 class="text-area" id="m-mainIssues" [(ngModel)]="model.eolPatientDetails" name="mainIssues"> </textarea>
     </div>
 </div>
