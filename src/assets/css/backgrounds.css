@@ -30,18 +30,20 @@ and (orientation: portrait) {
         margin-right:5%;
     }
 
+    .facts-image {
+        margin:1.5em 0;
+        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
+        height:220px;
+    }
+
     .facts-text {
         justify-content: center;
         align-content: flex-start;
     }
 
-    .facts-text span  {
+    .facts-text a  {
         padding-top:1.5em;
         font-size: var(--global-smallest-banana-port-font-size);
-    }
-
-    .facts-image {
-        margin:1em 0;
     }
 
     .citations {
@@ -127,13 +129,15 @@ and (orientation: landscape) {
         align-content: flex-start;
     }
 
-    .facts-text span {
-        padding-top:1.5em;
-        font-size: var(--global-smallest-banana-land-font-size);
+    .facts-image {
+        margin:1.5em 0;
+        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
+        height:220px;
     }
 
-    .facts-image {
-        margin:1em 0;
+    .facts-text a {
+        padding-top:1.5em;
+        font-size: var(--global-smallest-banana-land-font-size);
     }
 
     .citations {
@@ -222,13 +226,15 @@ and (orientation: portrait) {
         align-content: flex-start;
     }
 
-    .facts-text span {
-        padding-top:1.5em;
-        font-size: var(--global-smallest-mobile-port-font-size);
-    }
-
     .facts-image {
         margin:1.5em 0;
+        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
+        height:220px;
+    }
+
+    .facts-text a {
+        padding-top:1.5em;
+        font-size: var(--global-smallest-mobile-port-font-size);
     }
 
     .citations {
@@ -322,13 +328,15 @@ and (orientation: landscape) {
         align-content: flex-start;
     }
 
-    .facts-text span {
-        padding-top: 1em;
-        font-size: var(--global-smallest-mobile-land-font-size);
+    .facts-image {
+        margin:1.5em 0;
+        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
+        height:220px;
     }
 
-    .facts-image {
-        padding-top:1em;
+    .facts-text a {
+        padding-top: 1em;
+        font-size: var(--global-smallest-mobile-land-font-size);
     }
 
     .citations {
@@ -415,13 +423,15 @@ and (orientation: portrait) {
         align-content: flex-start;
     }
 
-    .facts-text span {
-        font-size: var(--global-smallest-tablet-port-font-size);
-        padding-top: 1.5em;
+    .facts-image {
+        margin:1.5em 0;
+        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
+        height:220px;
     }
 
-    .facts-image {
-        margin-top:1.5em;
+    .facts-text a {
+        font-size: var(--global-smallest-tablet-port-font-size);
+        padding-top: 1.5em;
     }
 
     .citations {
@@ -513,6 +523,8 @@ and (orientation: landscape) {
 
     .facts-image {
         grid-column:1;
+        background: url("src/assets/images/home/backgroundFAQsTablet.jpg") no-repeat center;
+        height:600px;
     }
 
     .facts-text {
@@ -522,7 +534,7 @@ and (orientation: landscape) {
         align-content: center;
     }
 
-    .facts-text span {
+    .facts-text a {
         font-size: var(--global-smallest-tablet-land-font-size);
         padding-top: 1em;
     }
@@ -613,13 +625,15 @@ and (orientation: portrait) {
         align-content: flex-start;
     }
 
-    .facts-text span {
-        padding-top: 1em;
-        font-size: var(--global-smallest-ipad-port-font-size);
-    }
-
     .facts-image {
         margin:1.5em 0;
+        background: url("src/assets/images/home/backgroundFAQsTablet.jpg") no-repeat center;
+        height:600px;
+    }
+
+    .facts-text a {
+        padding-top: 1em;
+        font-size: var(--global-smallest-ipad-port-font-size);
     }
 
     .citations {
@@ -705,6 +719,8 @@ and (orientation: landscape) {
 
     .facts-image {
         grid-column:1;
+        background: url("src/assets/images/home/backgroundFAQsTablet.jpg") no-repeat center;
+        height:600px;
     }
 
     .facts-text {
@@ -714,7 +730,7 @@ and (orientation: landscape) {
         align-content: center;
     }
 
-    .facts-text span {
+    .facts-text a {
         font-size: var(--global-smallest-ipad-land-font-size);
         padding-top:1em;
     }
@@ -800,6 +816,8 @@ and (min-width: 1440px) {
 
     .facts-image {
         grid-column:1;
+        background: url("src/assets/images/home/backgroundFAQs.jpg") no-repeat center;
+        height:750px;
     }
 
     .facts-text {
@@ -819,7 +837,7 @@ and (min-width: 1440px) {
         margin:1em 5%;
     }
 
-    .citations p a, .citations p {
+    .citations a {
         font-size:var(--global-smallest-desktop-font-size);
     }
 
@@ -863,6 +881,14 @@ and (min-width: 1440px) {
 
     icon img {
         height:50px;
+    }
+
+    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p {
+        font-size:1.2em;
+    }
+
+    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span {
+        font-size:1em;
     }
 
 }
@@ -925,13 +951,28 @@ and (min-width: 1440px) {
     }
 
     .citations {
-        display:block;
-        float:left;
+        display:grid;
+        grid-template-columns: repeat(2, 50%);
+        width:100%;
+        line-height:140%;
         padding-top:thin dashed var(--color-soft-blue);
         font-family: var(--family-data);
     }
 
-    .citations p, .citations p a {
+    .citations-left, .citations-right {
+        display:grid;
+        width:100%;
+    }
+
+    .citations-left  {
+        grid-column:1;
+    }
+
+    .citations-right  {
+        grid-column:2;
+    }
+
+    .citations a {
         text-align: left;
         color:var(--color-dark-blue);
     }
@@ -956,10 +997,10 @@ and (min-width: 1440px) {
 
     .topic-left {
         display:grid;
-        width:90%;
+        width:100%;
         align-content: center;
         justify-content: flex-start;
-        padding-left:5%;
+        /*padding-left:5%;*/
     }
 
     .topic-left a {
@@ -969,17 +1010,20 @@ and (min-width: 1440px) {
     .topic-left a h2, .topic-left h2 {
         font-family: Whitney-Light;
         color:var(--color-white);
+        padding-left:1em;
     }
 
     /* H1 has the grid with a white background and blue letters */
     .topic-left h1 {
         font-family: ReneB-Thin;
-        color:var(--color-soft-blue);
+        color:var(--color-white);
+        padding-left:1em;
     }
 
     .topic-left a span, .topic-left span {
         font-family: global;
         color:var(--color-white);
+        padding-left:1em;
     }
 
     .topic-right {
@@ -1049,5 +1093,85 @@ and (min-width: 1440px) {
         background:url('src/assets/images/faq/faqsIntro.jpg') no-repeat right ;
     }
 
+    /* TOPIC inline grid with clickable and non-clickable links */
+    .charges-inline-grid {
+        display:inline-grid;
+        max-width:1152px;
+        width:100%;
+        grid-template-columns: 60% 40%;
+        font-family: var(--family-data);
+        margin-top:1em;
+        margin-bottom:.5em;
+    }
+
+    .hours, .pricing {
+        display:grid;
+        width:100%;
+        background-color: var(--color-dark-blue);
+        color:white;
+        align-content: center;
+        border:thin solid white;
+        font-size:1.2em;
+        justify-content: flex-start;
+    }
+
+    .hours {
+        grid-column:1;
+    }
+
+    .pricing {
+        grid-column:2;
+    }
+
+    .hours p, .pricing p {
+        padding-left:1em;
+    }
+
+    /* TOPIC inline grid with clickable and non-clickable links */
+    .testimonials-inline-grid {
+        display:inline-grid;
+        max-width:1152px;
+        width:100%;
+        grid-template-columns: 33% 33% 33%;
+        font-family: var(--family-script);
+        margin-top:1em;
+        margin-bottom:.5em;
+    }
+
+    .testimonial-1, .testimonial-2, .testimonial-3 {
+        display:grid;
+        width:100%;
+        background-color: #9bb3da;
+        color:white;
+        align-content: center;
+        border:thin solid white;
+    }
+
+    .testimonial-1 {
+        grid-column:1;
+    }
+
+    .testimonial-2 {
+        grid-column:2;
+    }
+
+    .testimonial-3 {
+        grid-column:3;
+    }
+
+    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p {
+        font-size:1.2em;
+        justify-content: center;
+        padding:1em;
+        line-height: 140%;
+        text-align: justify;
+    }
+
+    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span {
+        font-size:1em;
+        display:grid;
+        justify-content: flex-end;
+        padding-right:1em;
+    }
 }
 

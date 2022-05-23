@@ -500,7 +500,7 @@ and (min-width: 1440px) {
         border:thin dashed var(--color-soft-blue);
     }
 
-    .disclaimer span, .sig-date-prompt, .print-forms-button {
+    .disclaimer span, .disclaimer span a, .sig-date-prompt, .print-forms-button {
         font-family: var(--family-global);
         color: var(--color-dark-blue);
         text-align:left
