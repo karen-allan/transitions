@@ -1,0 +1,11 @@
+@media print {
+  .book-session-screen {
+    display: none;
+  }
+}
+
+@media screen {
+  .book-session-screen {
+    display: block;
+  }
+}
