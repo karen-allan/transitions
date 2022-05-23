@@ -62,17 +62,17 @@
     </div>
 
     <div class="title-background">
-        Personal Details (optional)
+        Optional Details
     </div>
 
     <div class="four-columns pad-top-1">
-        <label class="first-text-column" for="referredBy">Referred By:</label>
-        <label class="second-text-column" for="birthdate">Birthdate:</label>
-        <label class="third-fourth-text-column" for="occupation">Occupation:</label>
+        <label class="first-text-column" for="birthdate">Birthdate:</label>
+        <label class="second-text-column" for="occupation">Occupation:</label>
+        <label class="third-fourth-text-column" for="referredBy">Referred By:</label>
 
-        <input type="text" class="form-control first-text-column" id="referredBy" [(ngModel)]="model.referredBy" name="referredBy">
-        <input type="text" class="form-control second-text-column" id="birthdate" [(ngModel)]="model.birthdate" name="birthdate">
-        <input type="text" class="form-control third-fourth-text-column" id="occupation" [(ngModel)]="model.occupation" name="occupation">
+        <input type="text" class="form-control first-text-column" id="birthdate" [(ngModel)]="model.birthdate" name="birthdate">
+        <input type="text" class="form-control second-text-column" id="occupation" [(ngModel)]="model.occupation" name="occupation">
+        <input type="text" class="form-control third-fourth-text-column" id="referredBy" [(ngModel)]="model.referredBy" name="referredBy">
     </div>
 </div>
 
@@ -144,17 +144,18 @@
     </div>
 
     <div class="title-background">
-        Personal Details (optional)
+        Optional Details
     </div>
 
     <div class="one-full-column-block pad-top-1">
-        <label class="full-text-column" for="m-referredBy">Referred By:</label>
-        <input type="text" class="form-control full-text-column" id="m-referredBy" [(ngModel)]="model.referredBy" name="referredBy">
-
         <label class="full-text-column" for="m-birthdate">Birthdate:</label>
         <input type="text" class="form-control full-text-column" id="m-birthdate" [(ngModel)]="model.birthdate" name="birthdate">
 
         <label class="full-text-column" for="m-occupation">Occupation:</label>
         <input type="text" class="form-control full-text-column" id="m-occupation" [(ngModel)]="model.occupation" name="occupation">
+
+        <label class="full-text-column" for="m-referredBy">Referred By:</label>
+        <input type="text" class="form-control full-text-column" id="m-referredBy" [(ngModel)]="model.referredBy" name="referredBy">
+
     </div>
 </div>

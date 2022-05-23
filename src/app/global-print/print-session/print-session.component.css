@@ -1,0 +1,59 @@
+@media print {
+  .print-session-component {
+    display:block;
+    font-family: 'Arial';
+  }
+
+  .title {
+    font-family: 'Arial Black';
+    font-size: 18px;
+    font-weight: bold;
+    margin-top:20px;
+    margin-bottom: 30px;
+  }
+
+  .page-title {
+    font-family: 'Arial Black';
+    font-size: 18px;
+    font-weight: bold;
+    margin-top:20px;
+    margin-bottom: 30px;
+    page-break-before:always;
+  }
+
+  .sub-title {
+    font-family: 'Arial Black';
+    font-size: 14px;
+    font-weight: bold;
+    margin-top:20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+  }
+
+  .demographic {
+    font-size: 14px;
+    border: black solid 1px;
+    width: 80%;
+    margin-left: 20px;
+    margin-right: auto;
+  }
+
+  .demographic .firstCell {
+    width: 30%;
+  }
+
+  .demographic .secondCell {
+    width: 70%;
+  }
+
+  .response {
+    margin-left: 40px;
+    font-size: 14px;
+  }
+}
+
+@media screen {
+  .print-session-component {
+    display:none;
+  }
+}

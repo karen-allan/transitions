@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Client} from "../../../ts-files/client";
 
 @Component({
   selector: 'app-book-session-overview',
@@ -8,6 +9,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class BookSessionOverviewComponent implements OnInit {
 
   @Input() title:string ='';
+  @Input() model: Client;
 
   constructor() { }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Client } from '../../ts-files/client';
 
 @Component({
@@ -8,7 +8,7 @@ import { Client } from '../../ts-files/client';
 })
 export class PrintSessionComponent implements OnInit {
 
-  model: Client;
+  @Input() model: Client;
 
   constructor() { }
 

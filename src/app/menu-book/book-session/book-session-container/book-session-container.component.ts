@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Client} from "../../../ts-files/client";
 
 @Component({
   selector: 'app-book-session-container',
@@ -13,10 +14,20 @@ export class BookSessionContainerComponent implements OnInit {
   detailHeaderName = 'header-book-session'
   title='About Energy Sessions'
 
+  model  = new Client(0, '', '','' ,'' ,'', '', '','Canada' ,
+    '', '','' ,'', '', '', '', false,
+    false ,false ,false ,false ,false, false,false,
+    false,'','', '', '', false, false,false,
+    false, '', '', '', '', '','','', '');
+
   constructor() { }
 
   ngOnInit(): void {
 
+  }
+
+  printProfile() {
+    window.print();
   }
 
 }
