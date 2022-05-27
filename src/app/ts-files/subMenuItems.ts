@@ -2,8 +2,8 @@ import {SubMenuItem} from './subMenuItem';
 
 export const SUB_MENU_ITEMS: SubMenuItem[] = [
     {id: 20, parent_id: 2, title: 'MY MEANDERING JOURNEY', url: 'aboutMe'},
-    {id: 21, parent_id: 2, title: 'HOW I ENTERED INTO ENERGY MEDICINE', url: 'aboutEnergyPractitioner'},
-    {id: 22, parent_id: 2, title: 'HOW I FOUND END OF LIFE ADVOCACY', url: 'aboutEndOfLifeDoula'},
+    {id: 21, parent_id: 2, title: 'HOW I FOUND ENERGY WORK', url: 'aboutEnergyPractitioner'},
+    {id: 22, parent_id: 2, title: 'HOW I FOUND ADVOCACY', url: 'aboutEndOfLifeDoula'},
 
     {id: 30, parent_id: 3, title: 'REDUCE YOUR ANXIETY', url: 'reduceAnxiety'},
     {id: 31, parent_id: 3, title: 'RELIEVE BURNOUT', url: 'relieveBurnout'},

@@ -12,7 +12,7 @@ export class BookSessionContainerComponent implements OnInit {
   subMenuItemId:number = 50;
 
   detailHeaderName = 'header-book-session'
-  title='About Energy Sessions'
+  title='Book a Session'
 
   model  = new Client(0, '', '','' ,'' ,'', '', '','Canada' ,
     '', '','' ,'', '', '', '', false,
@@ -27,7 +27,7 @@ export class BookSessionContainerComponent implements OnInit {
   }
 
   printProfile() {
-    window.print();
+  //  window.print();
   }
 
 }

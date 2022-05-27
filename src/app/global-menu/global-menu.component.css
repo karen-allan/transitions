@@ -81,12 +81,13 @@ and (max-width: 1279px) {
     .slogans-line {
         grid-column:2;
         background-size:auto;
-        background: url("src/assets/images/headers/headerInfinity.png") no-repeat center;
+        background: url("src/assets/images/headers/headerInfinityMobile.png") no-repeat center;
     }
 
     .header-slogans span {
         grid-column:3;
         letter-spacing: 2px;
+        padding-right:1em;
         color:var(--color-white);
     }
 
@@ -118,7 +119,7 @@ and (max-width: 1279px) {
         cursor: pointer;
         justify-content: center;
         align-content: center;
-        background-color: var(--color-darkest-purple);
+        background-color: var(--color-white);
     }
 
     .bar1, .bar2, .bar3 {
@@ -126,7 +127,7 @@ and (max-width: 1279px) {
         width: 20px;
         height: 2px;
         justify-content: center;
-        background-color: #fff;
+        background-color: var(--color-darkest-purple);
         margin: 2px 0;
         transition: 0.4s;
     }
@@ -232,7 +233,7 @@ and (orientation: landscape) {
     }
 
     .mobile-menu-items {
-        grid-template-columns: 72% 8% 10% 10%;
+        grid-template-columns: 77% 8% 8% 7%;
     }
 
 }
@@ -252,7 +253,7 @@ and (orientation: portrait) {
     }
 
     .mobile-menu-items {
-        grid-template-columns: 60% 10% 15% 15%;
+        grid-template-columns: 65% 10% 8% 17%;
     }
 
 }
@@ -273,7 +274,7 @@ and (orientation: landscape) {
     }
 
     .mobile-menu-items {
-        grid-template-columns: 80% 5% 5% 10%;
+        grid-template-columns: 83% 5% 4% 8%;
     }
 }
 
@@ -293,7 +294,7 @@ and (orientation: portrait) {
     }
 
     .mobile-menu-items {
-        grid-template-columns: 76% 7% 7% 10%;
+        grid-template-columns: 78% 7% 7% 8%;
     }
 
 }
@@ -314,7 +315,7 @@ and (orientation: portrait) {
     }
 
     .mobile-menu-items {
-        grid-template-columns: 80% 5% 5% 10%;
+        grid-template-columns: 84% 5% 5% 6%;
     }
 }
 
@@ -656,7 +657,7 @@ and (orientation: landscape) {
         grid-column: 2;
         grid-row:1;
         text-transform: uppercase;
-        font-family: Monument-Valley;
+        font-family: Monument-Valley, arial, serif;
         color: var(--color-dark-blue);
         font-weight: 600;
         align-content: center;
@@ -664,7 +665,7 @@ and (orientation: landscape) {
 
     .header-slogans {
         text-transform: uppercase;
-        font-family: ReneB-Book;
+        font-family: ReneB-Book, arial, serif;
         color: var(--color-dark-blue);
     }
 

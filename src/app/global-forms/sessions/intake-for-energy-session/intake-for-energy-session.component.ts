@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, Renderer2} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Client} from "../../../ts-files/client";
 
 @Component({
@@ -14,7 +14,7 @@ export class IntakeForEnergySessionComponent implements OnInit {
   now:string;
   submitted = false;
 
-  constructor(private renderer: Renderer2) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.getCurrentDate();
@@ -35,5 +35,8 @@ export class IntakeForEnergySessionComponent implements OnInit {
     this.model.defaultDate = this.now;
   }
 
+  printProfile() {
+    window.print();
+  }
 
 }

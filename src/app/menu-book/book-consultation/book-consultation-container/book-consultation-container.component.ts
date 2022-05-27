@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Client} from "../../../ts-files/client";
 
 @Component({
   selector: 'app-book-consultation-container',
@@ -14,9 +15,19 @@ export class BookConsultationContainerComponent implements OnInit {
   title='Book a Consultation'
   detailListName="list-book";
 
+  model  = new Client(0, '', '','' ,'' ,'', '', '','Canada' ,
+      '', '','' ,'', '', '', '', false,
+      false ,false ,false ,false ,false, false,false,
+      false,'','', '', '', false, false,false,
+      false, '', '', '', '', '','','', '');
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  printProfile() {
+    window.print();
   }
 
 }

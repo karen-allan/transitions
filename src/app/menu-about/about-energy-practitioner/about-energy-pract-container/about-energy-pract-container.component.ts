@@ -11,7 +11,7 @@ export class AboutEnergyPractContainerComponent implements OnInit {
   subMenuItemId:number = 21;
 
   detailHeaderName = 'header-about-energy-practitioner'
-  title='Becoming a Practitioner'
+  title='Working with Energy'
   detailListName="list-about"
 
   constructor() { }

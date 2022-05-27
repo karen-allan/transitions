@@ -1,4 +1,4 @@
-import {Component, OnInit, Renderer2} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Client} from "../../../ts-files/client";
 
 @Component({
@@ -18,7 +18,7 @@ export class IntakeForConsultationPatientComponent implements OnInit {
       false,'','', '', '', false, false,false,
       false, '', '', '', '', '','','', '');
 
-  constructor(private renderer: Renderer2) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.getCurrentDate();
@@ -30,9 +30,9 @@ export class IntakeForConsultationPatientComponent implements OnInit {
 
   /* *************************************************************************************************************** */
   printProfile() {
-    alert("printing intake form for " + this.model.name + " at " + this.model.address + ", " + this.model.city
+ /*   alert("printing intake form for " + this.model.name + " at " + this.model.address + ", " + this.model.city
         + " - " + this.model.provState + "," + this.model.country + " phone " + this.model.cellPhone + " " + this.model.email +
-        " " + this.model.pc + ". " + "contact person is " + this.model.emergName + " " + this.model.emergPhone + " " + this.model.emergRelation);
+        " " + this.model.pc + ". " + "contact person is " + this.model.emergName + " " + this.model.emergPhone + " " + this.model.emergRelation);*/
   }
 
   getCurrentDate() {

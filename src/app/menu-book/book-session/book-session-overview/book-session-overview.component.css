@@ -1,0 +1,468 @@
+
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    /* PRICING INFO */
+    .charges-grid {
+        width: 90%;
+        margin:0 5%;
+    }
+
+    .charges-grid p {
+        font-size:var(--med-whitney-banana-port-font-size);
+        letter-spacing: 0;
+    }
+
+    .pricing span, .total span {
+        font-size:var(--data-banana-port-font-span-size);
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-heading {
+        font-size:var(--script-heading-banana-port-font-size);
+    }
+
+    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+        font-size:var(--script-p-banana-port-font-size);
+        margin:0;
+    }
+
+    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+        font-size:var(--script-small-banana-port-font-size);
+    }
+
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    /* PRICING INFO */
+    .charges-grid {
+        width: 90%;
+        margin:0 5%;
+    }
+
+    .charges-grid p {
+        font-size:var(--med-whitney-banana-land-font-size);
+        letter-spacing: 4px;
+    }
+
+    .pricing span, .total span {
+        font-size:var(--data-banana-land-font-span-size);
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-heading {
+        font-size:var(--script-heading-banana-land-font-size);
+    }
+
+    .testimonial-1, .testimonial-2, .testimonial-3 {
+        grid-column:1;
+    }
+
+    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+        font-size:var(--script-p-banana-land-font-size);
+        margin:0;
+    }
+
+    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+        font-size:var(--script-small-banana-land-font-size);
+    }
+
+}
+
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    /* PRICING INFO */
+    .charges-grid {
+        width: 90%;
+        margin:0 5%;
+    }
+
+    .charges-grid p {
+        font-size:var(--med-whitney-mobile-port-font-size);
+        letter-spacing: 1px;
+    }
+
+    .pricing span, .total span {
+        font-size:var(--data-mobile-port-font-span-size);
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-heading {
+        font-size:var(--script-heading-mobile-port-font-size);
+    }
+
+    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+        font-size:var(--script-p-mobile-port-font-size);
+        margin:0;
+    }
+
+    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+        font-size:var(--script-small-mobile-port-font-size);
+    }
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    /* PRICING INFO */
+    .charges-grid {
+        width: 60%;
+        margin:0 40% 0 0;
+    }
+
+    .charges-grid p {
+        font-size:var(--med-whitney-mobile-land-font-size);
+        letter-spacing: 4px;
+    }
+
+    .pricing span, .total span {
+        font-size:var(--data-mobile-land-font-span-size);
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-heading {
+        font-size:var(--script-heading-mobile-land-font-size);
+    }
+
+    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+        font-size:var(--script-p-mobile-land-font-size);
+        margin:0;
+    }
+
+    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+        font-size:var(--script-small-mobile-land-font-size);
+    }
+
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    /* PRICING INFO */
+    .charges-grid {
+        width:70%;
+    }
+
+    .charges-grid p {
+        font-size:var(--med-whitney-tablet-port-font-size);
+        letter-spacing: 4px;
+    }
+
+    .pricing span, .total span {
+        font-size:var(--data-tablet-port-font-span-size);
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-heading {
+        font-size:var(--script-heading-tablet-port-font-size);
+    }
+
+    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+        font-size:var(--script-p-tablet-port-font-size);
+        margin:0;
+    }
+
+    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+        font-size:var(--script-small-tablet-port-font-size);
+    }
+
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    /* PRICING INFO */
+    .charges-grid {
+        width:70%;
+    }
+
+    .charges-grid p {
+        font-size:var(--med-whitney-tablet-land-font-size);
+        letter-spacing: 4px;
+    }
+
+    .pricing span, .total span {
+        font-size:var(--data-tablet-land-font-span-size);
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-heading {
+        font-size:var(--script-heading-tablet-land-font-size);
+    }
+
+    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+        font-size:var(--script-p-tablet-land-font-size);
+        margin:0;
+    }
+
+    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+        font-size:var(--script-small-tablet-land-font-size);
+    }
+
+}
+
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    /* PRICING INFO */
+    .charges-grid {
+        width:70%;
+    }
+
+    .charges-grid p {
+        font-size:var(--med-whitney-ipad-port-font-size);
+        letter-spacing: 4px;
+    }
+
+    .pricing span, .total span {
+        font-size:var(--data-ipad-port-font-span-size);
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-heading {
+        font-size:var(--script-heading-ipad-port-font-size);
+    }
+
+    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+        font-size:var(--script-p-ipad-port-font-size);
+        margin:0;
+    }
+
+    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+        font-size:var(--script-small-ipad-port-font-size);
+    }
+
+}
+
+
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    /* PRICING INFO */
+    .charges-grid {
+        width:70%;
+    }
+
+    .charges-grid p {
+        font-size:var(--med-whitney-ipad-land-font-size);
+        letter-spacing: 4px;
+    }
+
+    .pricing span, .total span {
+        font-size:var(--data-ipad-land-font-span-size);
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-heading {
+        font-size:var(--script-heading-ipad-land-font-size);
+    }
+
+    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+        font-size:var(--script-p-ipad-land-font-size);
+        margin:0;
+    }
+
+    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+        font-size:var(--script-small-ipad-land-font-size);
+    }
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    /* PRICING INFO */
+    .charges-grid {
+        width:70%;
+    }
+
+    .charges-grid p {
+        font-size:var(--med-whitney-desktop-font-size);
+        letter-spacing: 4px;
+    }
+
+    .pricing span, .total span {
+        font-size:var(--data-desktop-font-span-size);
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-heading {
+        font-size:var(--script-heading-desktop-font-size);
+    }
+
+    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+        font-size:var(--script-p-desktop-font-size);
+        margin:0;
+    }
+
+    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+        font-size:var(--script-small-desktop-font-size);
+    }
+}
+
+/* GLOBAL ****************************************************************************************************/
+@media only screen {
+
+    /* PAYMENT INFORMATION */
+    .charges-grid {
+        display:grid;
+        float:left;
+        font-style:normal;
+        color: var(--color-light-blue);
+    }
+
+    .charges-grid p {
+        font-family: Whitney-SSm-Book, Whitney-Book, arial, serif;
+        text-align: left;
+        margin:2em 0 0 0;
+        text-transform: uppercase;
+        font-weight:600;
+    }
+
+    .charges-inline-grid {
+        display:inline-grid;
+        max-width:1152px;
+        width:100%;
+        grid-template-columns: 60% 40%;
+        font-family: var(--family-data);
+        border:thin dashed blue;
+    }
+
+    .pricing, .total {
+        display:grid;
+        width:100%;
+        color:var(--color-light-blue);
+        align-content: center;
+        border:thin solid white;
+        justify-content: flex-start;
+    }
+
+    .pricing {
+        grid-column:1;
+        border-right:thin dashed blue;
+    }
+
+    .total {
+        grid-column:2;
+    }
+
+    .pricing span, .total span {
+        display:block;
+        padding:1em 0 1em 1em;
+        font-weight:550;
+    }
+
+    /* TESTIMONIALS */
+    .testimonial-heading {
+        display:block;
+        float:left;
+        width:100%;
+        margin:1em 0 0 0;
+        font-weight:400;
+        color:var(--color-dark-blue);
+        font-family: var(--family-script);
+    }
+
+    .testimonials-grid {
+        display:grid;
+        max-width:1152px;
+        width:100%;
+        margin-top:1em;
+        margin-bottom:.5em;
+    }
+
+    .testimonial-1, .testimonial-2, .testimonial-3, .testimonial-4, .testimonial-5, .testimonial-6 {
+        display:grid;
+        width:100%;
+        border:thin solid var(--color-dark-grey);
+        padding:1em 0;
+        color:var(--color-dark-grey);
+    }
+
+    .testimonial-1 {
+        grid-row:1;
+    }
+
+    .testimonial-2 {
+        grid-row:2;
+    }
+
+    .testimonial-3 {
+        grid-row:3;
+    }
+
+    .testimonial-4 {
+        grid-row:4;
+    }
+
+    .testimonial-5 {
+        grid-row:5;
+    }
+
+    .testimonial-6 {
+        grid-row:6;
+    }
+
+    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p  {
+        padding:1em 1em 0 1em;
+        line-height: 140%;
+        text-align: justify;
+        font-family: var(--family-script);
+        margin:0;
+    }
+
+    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+        display:grid;
+        justify-content: flex-end;
+        align-content: flex-end;
+        padding-right:1em;
+        font-weight:400;
+        font-family: var(--family-script);
+    }
+}
+
+
+@media print {
+    .book-session-screen {
+        display: none;
+    }
+}
+
+@media screen {
+    .book-session-screen {
+        display: block;
+    }
+}

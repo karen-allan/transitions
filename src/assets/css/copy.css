@@ -283,21 +283,21 @@ and (min-width: 1440px) {
     .dark-heading h2, .light-heading h2, .clear-heading h2,
     .dark-heading h3, .light-heading h3, .clear-heading h3,
     .dark-heading h4, .light-heading h4, .clear-heading h4 {
-        font-family: Whitney-Book, arial;
+        font-family: Whitney-Light, Whitney-Book, arial, serif;
         letter-spacing: 3px;
         font-style:normal;
     }
 
-    .dark-heading h1, .light-heading h1, .clear-heading h1,
+  /*  .dark-heading h1, .light-heading h1, .clear-heading h1,
     .dark-heading h2, .light-heading h2, .clear-heading h2,
     .dark-heading h3, .light-heading h3, .clear-heading h3 {
         text-transform: uppercase;
-    }
+    }*/
 
-    .dark-heading h3, .light-heading h3, .clear-heading h3,
+  /*  .dark-heading h3, .light-heading h3, .clear-heading h3,
     .dark-heading h4, .light-heading h4, .clear-heading h4 {
-        /*margin:1em 0 .2em 0;*/
-    }
+        !*margin:1em 0 .2em 0;*!
+    }*/
 
     .dark-copy, .light-copy, .clear-copy {
         font-family: var(--family-open-sans);

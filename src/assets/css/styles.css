@@ -14,6 +14,7 @@
   --color-dark-purple: #983096;
   --color-darkest-purple:#623061;
 
+  --color-bright-blue:#a6c2dd;
   --color-lightest-blue:#9bb3da;
   --color-light-blue:#5b89d5;
   --color-dark-blue:#5a7d9f;
@@ -60,6 +61,10 @@
 
   /* MOBILE HEADER */
   /*--total-mobile-header-height:130px;*/
+
+  --mobile-top-header-portrait-height:80px;
+  --mobile-top-header-land-height:100px;
+
   --mobile-top-header-height:80px;
   --mobile-middle-header-height:50px;
   --mobile-bottom-header-height:40px;
@@ -158,6 +163,7 @@
   --global-big-desktop-font-size:1.2em;
 
   --citations:.7em;
+  --mobile-citations:.5em;
 
   /* RENE in LISTS */
   --rene-banana-port-font-size:.6em;
@@ -216,17 +222,31 @@
 
   /* for content quotes */
   --family-script:'gabriola';
+
+  --script-small-banana-port-font-size:0.6em;
+  --script-small-mobile-port-font-size:.8em;
+  --script-small-tablet-port-font-size:1.0em;
+  --script-small-ipad-port-font-size:1.3em;
+
+  --script-small-banana-land-font-size:1.1em;
+  --script-small-mobile-land-font-size:1.5em;
+  --script-small-tablet-land-font-size:1.6em;
+  --script-small-ipad-land-font-size:1.7em;
+
+  --script-small-desktop-font-size:1.7em;
+
+  /* for paragraphs */
   --script-p-banana-port-font-size:0.7em;
   --script-p-mobile-port-font-size:.9em;
   --script-p-tablet-port-font-size:1.1em;
   --script-p-ipad-port-font-size:1.4em;
 
   --script-p-banana-land-font-size:1.2em;
-  --script-p-mobile-land-font-size:1.6em;
-  --script-p-tablet-land-font-size:1.7em;
-  --script-p-ipad-land-font-size:1.8em;
+  --script-p-mobile-land-font-size:1.3em;
+  --script-p-tablet-land-font-size:1.4em;
+  --script-p-ipad-land-font-size:1.5em;
 
-  --script-p-desktop-font-size:1.8em;
+  --script-p-desktop-font-size:1.6em;
 
   --script-span-banana-port-font-size:0.7em;
   --script-span-mobile-port-font-size:0.8em;
@@ -239,6 +259,19 @@
   --script-span-ipad-land-font-size:1.1em;
 
   --script-span-desktop-font-size:1.2em;
+
+  /* testimonials */
+  --script-heading-banana-port-font-size:1.4em;
+  --script-heading-mobile-port-font-size:1.7em;
+  --script-heading-tablet-port-font-size:1.8em;
+  --script-heading-ipad-port-font-size:2.0em;
+
+  --script-heading-banana-land-font-size:1.9em;
+  --script-heading-mobile-land-font-size:2.0em;
+  --script-heading-tablet-land-font-size:2.2em;
+  --script-heading-ipad-land-font-size:2.4em;
+
+  --script-heading-desktop-font-size:2.8em;
 
   /* BELOW IS WITH HOSTEL (used in Topic Heading with Right Images */
   --hostel-heading-banana-port-font-size:0.9em;
@@ -281,6 +314,19 @@
   --data-ipad-land-font-span-size:.9em;
 
   --data-desktop-font-span-size:1.0em;
+
+  /* bigger .... */
+  --data-banana-port-font-size:.5em;
+  --data-mobile-port-font-size:.6em;
+  --data-tablet-port-font-size:.7em;
+  --data-ipad-port-font-size:.8em;
+
+  --data-banana-land-font-size:.6em;
+  --data-mobile-land-font-size:.7em;
+  --data-tablet-land-font-size:.8em;
+  --data-ipad-land-font-size:.9em;
+
+  --data-desktop-font-size:1.0em;
 
   /* BELOW IS WITH WHITNEY BOOK font-family: Whitney-Book;*/
   --family-whitney:Whitney-Book;
@@ -376,7 +422,7 @@
   --big-whitney-desktop-font-size:2.5em;
 
   /* BELOW IS WITH MONUMENT */
-  --monument-banana-port-font-size:.8em;
+  --monument-banana-port-font-size:1em;
   --monument-mobile-port-font-size:1.3em;
   --monument-tablet-port-font-size:2.3em;
   --monument-ipad-port-font-size:2.8em;
@@ -388,13 +434,13 @@
   --monument-laptop-font-size:2.8em;
   --monument-desktop-font-size:2.9em;
 
-  --monument-header-banana-port-font-size:1.7em;
-  --monument-header-mobile-port-font-size:2.2em;
-  --monument-header-tablet-port-font-size:2.5em;
+  --monument-header-banana-port-font-size:1.0em;
+  --monument-header-mobile-port-font-size:1.9em;
+  --monument-header-tablet-port-font-size:1.4em;
   --monument-header-ipad-port-font-size:2.8em;
 
-  --monument-header-banana-land-font-size:2.5em;
-  --monument-header-mobile-land-font-size:2.6em;
+  --monument-header-banana-land-font-size:1.2em;
+  --monument-header-mobile-land-font-size:2.8em;
   --monument-header-tablet-land-font-size:2.8em;
   --monument-header-ipad-land-font-size:3em;
 
@@ -444,6 +490,14 @@
   .content-container img {
     max-width:100%;
     height:auto;
+  }
+
+  /* for the top level grid header on about pages */
+  .grid-container {
+    display: block;
+    width:100%;
+    max-width:1440px;
+    margin:auto;
   }
 
   /* The actual content is 1152 - 90% of 1280 max */
@@ -691,7 +745,7 @@
   }
 
   .backcolor-water-selected {
-    background: radial-gradient(circle at 100px 100px, #608dc5, #000);
+    background: radial-gradient(circle at 100px 100px, #a6c2dd, #d4dee7);
   }
 
   /* WOOD */
@@ -733,6 +787,10 @@
 
   .backcolor-metal-selected  {
     background: radial-gradient(circle at 100px 100px,#acafb1, #000);
+  }
+
+  .backcolor-metal-light  {
+    background: radial-gradient(circle at 100px 100px,#d7dde1, #878787);
   }
 
   /* MARGINS */
@@ -886,8 +944,21 @@
     clear: both;
   }
 
+/* TO DO - TAKE THESE OUT BEFORE PRODUCTION */
+  .transitions-mail-image {
+    height:150px;
+    background-image:url('src/assets/images/headers/transitionsInEnergyMail.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom:2em;
+  }
 
-
+  .mem-mail-image {
+    height:150px;
+    background-image:url('src/assets/images/headers/mindworksEnergyMedicineMail.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   /* FONTS */
 
@@ -965,9 +1036,6 @@
     font-family: Whitney-SSm-Semibold;
     src: url("../fonts/Whitney SSm Semibold.ttf") format("opentype");
   }
-
-
-
 
 
 }
