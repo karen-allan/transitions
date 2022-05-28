@@ -1,0 +1,11 @@
+@media screen {
+  .book-consultation-screen {
+    display:block;
+  }
+}
+
+@media print {
+  .book-consultation-screen {
+    display:none;
+  }
+}

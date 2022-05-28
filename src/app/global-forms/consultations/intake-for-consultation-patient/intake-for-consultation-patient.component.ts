@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Client} from "../../../ts-files/client";
 
 @Component({
@@ -8,15 +8,11 @@ import {Client} from "../../../ts-files/client";
 })
 export class IntakeForConsultationPatientComponent implements OnInit {
 
+  @Input() model: Client;
+
   page: number = -1;
   now:string;
   submitted = false;
-
-  model  = new Client(0, '', '','' ,'' ,'', '', '','Canada' ,
-      '', '','' ,'', '', '', '', false,
-      false ,false ,false ,false ,false, false,false,
-      false,'','', '', '', false, false,false,
-      false, '', '', '', '', '','','', '');
 
   constructor() { }
 
@@ -29,11 +25,6 @@ export class IntakeForConsultationPatientComponent implements OnInit {
   }
 
   /* *************************************************************************************************************** */
-  printProfile() {
- /*   alert("printing intake form for " + this.model.name + " at " + this.model.address + ", " + this.model.city
-        + " - " + this.model.provState + "," + this.model.country + " phone " + this.model.cellPhone + " " + this.model.email +
-        " " + this.model.pc + ". " + "contact person is " + this.model.emergName + " " + this.model.emergPhone + " " + this.model.emergRelation);*/
-  }
 
   getCurrentDate() {
     var today = new Date();

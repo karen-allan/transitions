@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewContainerRef} from '@angular/core';
 import {Client} from "../../../ts-files/client";
+import {BookConsultationContainerComponent} from "../book-consultation-container/book-consultation-container.component";
 
 @Component({
   selector: 'app-book-consultation-overview',
@@ -8,12 +9,15 @@ import {Client} from "../../../ts-files/client";
 })
 export class BookConsultationOverviewComponent implements OnInit {
 
-  @Input() title:string ='';
   @Input() model: Client;
+  @Input() title:string ='';
 
-  constructor() { }
+  constructor(private _bookConsultationContainerComponent: BookConsultationContainerComponent) { }
 
   ngOnInit(): void {
   }
 
+  getParentComponent(): BookConsultationContainerComponent {
+    return this._bookConsultationContainerComponent;
+  }
 }

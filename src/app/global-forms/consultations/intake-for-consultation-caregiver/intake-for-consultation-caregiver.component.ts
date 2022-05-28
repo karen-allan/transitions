@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Client} from "../../../ts-files/client";
 
 @Component({
@@ -8,15 +8,11 @@ import {Client} from "../../../ts-files/client";
 })
 export class IntakeForConsultationCaregiverComponent implements OnInit {
 
+  @Input() model: Client;
+
   page: number = -1;
   now:string;
   submitted = false;
-
-  model  = new Client(0, '', '','' ,'' ,'', '', '','Canada' ,
-      '', '','' ,'', '', '', '', false,
-      false ,false ,false ,false ,false, false,false,
-      false,'','', '', '', false, false,false,
-      false, '', '', '', '', '','','', '');
 
   constructor() { }
 

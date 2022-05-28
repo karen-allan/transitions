@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Injector, Input, OnInit, ViewContainerRef} from '@angular/core';
+import {Client} from "../../../ts-files/client";
+import {
+  BookConsultationContainerComponent
+} from "../../../menu-book/book-consultation/book-consultation-container/book-consultation-container.component";
+import {
+  BookConsultationOverviewComponent
+} from "../../../menu-book/book-consultation/book-consultation-overview/book-consultation-overview.component";
 
 export type EditorType = 'assessment' | 'caregiver'  | 'patient'  | 'planning';
 
@@ -8,11 +15,16 @@ export type EditorType = 'assessment' | 'caregiver'  | 'patient'  | 'planning';
   styleUrls: ['./menu-for-consultations.component.css']
 })
 
-export class MenuForConsultationsComponent {
+export class MenuForConsultationsComponent implements OnInit {
 
+  @Input() model: Client;
   editor: EditorType = 'planning';
 
-  constructor() { }
+  constructor(private _bookConsultationOverviewComponent: BookConsultationOverviewComponent) { }
+
+  ngOnInit() {
+    this.getGrandparentComponent().selectedIntakeForm = this.editor;
+  }
 
   get showPlanningEditor() {
     return this.editor === 'planning';
@@ -28,7 +40,11 @@ export class MenuForConsultationsComponent {
 
   toggleEditor(type: EditorType) {
     this.editor = type;
+    this.getGrandparentComponent().selectedIntakeForm = type;
   }
 
+  getGrandparentComponent(): BookConsultationContainerComponent {
+    return this._bookConsultationOverviewComponent.getParentComponent();
+  }
 
 }

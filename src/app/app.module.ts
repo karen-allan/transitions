@@ -39,7 +39,7 @@ import { GlobalHeadersComponent } from './global-headers/global-headers.componen
 import { GlobalMenuComponent } from './global-menu/global-menu.component';
 
 /* GLOBAL PRINT */
-import { PrintSessionComponent } from './global-print/print-session/print-session.component';
+import { PrintSessionComponent } from './menu-book/book-session/print-session/print-session.component';
 
 /* MENU ABOUT FOLDER */
 /* ABOUT DOULA FOLDER */
@@ -160,6 +160,9 @@ import { MenuForConsultationsComponent } from './global-forms/consultations/menu
 import { IntakeForEnergySessionComponent } from './global-forms/sessions/intake-for-energy-session/intake-for-energy-session.component';
 import { FrailtyScaleComponent } from './global-forms/inner-forms/frailty-scale/frailty-scale.component';
 import { SessionConsiderationsComponent } from './global-forms/inner-forms/session-considerations/session-considerations.component';
+import { PrintIntakeForPlansComponent } from './menu-book/book-consultation/print-intake-for-plans/print-intake-for-plans.component';
+import { PrintIntakeForCaregiverComponent } from './menu-book/book-consultation/print-intake-for-caregiver/print-intake-for-caregiver.component';
+import { PrintIntakeForPatientComponent } from './menu-book/book-consultation/print-intake-for-patient/print-intake-for-patient.component';
 
 @NgModule({
     declarations: [
@@ -277,6 +280,9 @@ import { SessionConsiderationsComponent } from './global-forms/inner-forms/sessi
           IntakeForEnergySessionComponent,
           FrailtyScaleComponent,
           SessionConsiderationsComponent,
+          PrintIntakeForPlansComponent,
+          PrintIntakeForCaregiverComponent,
+          PrintIntakeForPatientComponent,
 
 
 

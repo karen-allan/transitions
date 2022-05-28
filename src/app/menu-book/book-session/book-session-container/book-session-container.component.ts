@@ -23,11 +23,10 @@ export class BookSessionContainerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
   printProfile() {
-  //  window.print();
+    window.print();
   }
 
 }

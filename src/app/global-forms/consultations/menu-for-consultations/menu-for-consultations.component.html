@@ -39,15 +39,15 @@
     </div>
 
     <ng-container *ngIf="showPlanningEditor">
-        <app-intake-for-consultation-plans></app-intake-for-consultation-plans>
+        <app-intake-for-consultation-plans [model]="model"></app-intake-for-consultation-plans>
     </ng-container>
 
     <ng-container *ngIf="showCaregiverEditor">
-        <app-intake-for-consultation-caregiver></app-intake-for-consultation-caregiver>
+        <app-intake-for-consultation-caregiver [model]="model"></app-intake-for-consultation-caregiver>
     </ng-container>
 
     <ng-container *ngIf="showPatientEditor">
-        <app-intake-for-consultation-patient></app-intake-for-consultation-patient>
+        <app-intake-for-consultation-patient [model]="model"></app-intake-for-consultation-patient>
     </ng-container>
 </div>
 

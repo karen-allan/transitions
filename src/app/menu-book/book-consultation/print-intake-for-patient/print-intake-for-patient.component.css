@@ -1,0 +1,11 @@
+@media print {
+  .print-intake-for-patient-component {
+    display:block;
+  }
+}
+
+@media screen {
+  .print-intake-for-patient-component {
+    display:none;
+  }
+}

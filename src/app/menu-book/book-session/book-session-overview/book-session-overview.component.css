@@ -454,15 +454,3 @@ and (min-width: 1440px) {
     }
 }
 
-
-@media print {
-    .book-session-screen {
-        display: none;
-    }
-}
-
-@media screen {
-    .book-session-screen {
-        display: block;
-    }
-}

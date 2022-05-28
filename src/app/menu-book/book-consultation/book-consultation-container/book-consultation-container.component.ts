@@ -14,6 +14,7 @@ export class BookConsultationContainerComponent implements OnInit {
   detailHeaderName = 'header-book-consultation'
   title='Book a Consultation'
   detailListName="list-book";
+  selectedIntakeForm='caregiver';
 
   model  = new Client(0, '', '','' ,'' ,'', '', '','Canada' ,
       '', '','' ,'', '', '', '', false,

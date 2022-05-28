@@ -1,0 +1,11 @@
+@media print {
+  .print-intake-for-caregiver-component {
+    display:block;
+  }
+}
+
+@media screen {
+  .print-intake-for-caregiver-component {
+    display:none;
+  }
+}
