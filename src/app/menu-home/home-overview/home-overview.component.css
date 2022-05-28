@@ -1,0 +1,520 @@
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    /* FACTS GRID ON HOME PAGE ONLY */
+    .facts-grid {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    .facts-image {
+        margin:1.5em 0;
+        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
+        height:220px;
+    }
+
+    .facts-text {
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .facts-text a  {
+        padding-top:1.5em;
+        font-size: var(--global-smallest-banana-port-font-size);
+    }
+
+    .citations {
+        grid-template-columns: 100%;
+        width:90%;
+        margin:1em 5%;
+    }
+
+    .citations-left, .citations-right  {
+        grid-column:1;
+    }
+
+    .citations a {
+        font-size:var(--mobile-citations);
+        line-height:110%;
+        padding:.5em 0;
+    }
+
+
+
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    /* FACTS GRID ON HOME PAGE ONLY */
+    .facts-grid {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    .facts-text {
+        width:100%;
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .facts-image {
+        margin:1.5em 0;
+        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
+        height:220px;
+    }
+
+    .facts-text a {
+        padding-top:1.5em;
+        font-size: var(--global-smallest-banana-land-font-size);
+    }
+
+    .citations {
+        grid-template-columns: 100%;
+        width:90%;
+        margin:1em 5%;
+    }
+
+    .citations-left, .citations-right  {
+        grid-column:1;
+    }
+
+    .citations a {
+        font-size:var(--mobile-citations);
+        line-height:110%;
+        padding:.5em 0;
+    }
+
+
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    /* FACTS GRID ON HOME PAGE ONLY */
+    .facts-grid {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    .facts-text {
+        width:100%;
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .facts-image {
+        margin:1.5em 0;
+        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
+        height:220px;
+    }
+
+    .facts-text a {
+        padding-top:1.5em;
+        font-size: var(--global-smallest-mobile-port-font-size);
+    }
+
+    .citations {
+        grid-template-columns: 100%;
+        width:90%;
+        margin:1em 5%;
+    }
+
+    .citations-left, .citations-right  {
+        grid-column:1;
+    }
+
+    .citations a {
+        font-size:var(--mobile-citations);
+        line-height:120%;
+        padding:.5em 0;
+    }
+
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    /* FACTS GRID ON HOME PAGE ONLY */
+    .facts-grid {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    .facts-text {
+        width:100%;
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .facts-image {
+        margin:1.5em 0;
+        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
+        height:220px;
+    }
+
+    .facts-text a {
+        padding-top: 1em;
+        font-size: var(--global-smallest-mobile-land-font-size);
+    }
+
+    .citations {
+        grid-template-columns: repeat(2, 50%);
+        width:90%;
+        margin:1em 5%;
+    }
+
+    .citations-left  {
+        grid-column:1;
+    }
+
+    .citations-right  {
+        grid-column:2;
+    }
+
+    .citations a {
+        font-size:var(--mobile-citations);
+        line-height:140%;
+        padding:.5em 0;
+    }
+
+
+}
+
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    /* FACTS GRID ON HOME PAGE ONLY */
+    .facts-grid {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    .facts-text {
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .facts-image {
+        margin:1.5em 0;
+        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
+        height:220px;
+    }
+
+    .facts-text a {
+        font-size: var(--global-smallest-tablet-port-font-size);
+        padding-top: 1.5em;
+    }
+
+    .citations {
+        grid-template-columns: 100%;
+        width:90%;
+        margin:1em 5%;
+    }
+
+    .citations-left, .citations-right  {
+        grid-column:1;
+    }
+
+    .citations a {
+        font-size:var(--mobile-citations);
+        line-height:120%;
+        padding:.5em 0;
+    }
+
+
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    /* FACTS GRID ON HOME PAGE ONLY */
+    .facts-grid {
+        display:inline-grid;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        grid-template-columns: 34% 66%;
+    }
+
+    .facts-image {
+        grid-column:1;
+        background: url("src/assets/images/home/backgroundFAQsTablet.jpg") no-repeat center;
+        height:600px;
+    }
+
+    .facts-text {
+        grid-column:2;
+        width:100%;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .facts-text a {
+        font-size: var(--global-smallest-tablet-land-font-size);
+        padding-top: 1em;
+    }
+
+    .citations {
+        grid-template-columns: repeat(2, 50%);
+        width:90%;
+        margin:1em 5%;
+    }
+
+    .citations-left  {
+        grid-column:1;
+    }
+
+    .citations-right  {
+        grid-column:2;
+    }
+
+    .citations a {
+        font-size:var(--citations);
+        line-height:140%;
+        padding:.5em 0;
+    }
+
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    /* FACTS GRID ON HOME PAGE ONLY */
+    .facts-grid {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    .facts-text {
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .facts-image {
+        margin:1.5em 0;
+        background: url("src/assets/images/home/backgroundFAQsTablet.jpg") no-repeat center;
+        height:600px;
+    }
+
+    .facts-text a {
+        padding-top: 1em;
+        font-size: var(--global-smallest-ipad-port-font-size);
+    }
+
+    .citations {
+        grid-template-columns: repeat(2, 50%);
+        width:90%;
+        margin:1em 5%;
+    }
+
+    .citations-left  {
+        grid-column:1;
+    }
+
+    .citations-right  {
+        grid-column:2;
+    }
+
+    .citations a {
+        font-size:var(--mobile-citations);
+        line-height:140%;
+        padding:.5em 0;
+    }
+
+
+}
+
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    /* FACTS GRID ON HOME PAGE ONLY */
+    .facts-grid {
+        display:inline-grid;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        grid-template-columns: 34% 66%;
+    }
+
+    .facts-image {
+        grid-column:1;
+        background: url("src/assets/images/home/backgroundFAQsTablet.jpg") no-repeat center;
+        height:600px;
+    }
+
+    .facts-text {
+        grid-column:2;
+        width:100%;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .facts-text a {
+        font-size: var(--global-smallest-ipad-land-font-size);
+        padding-top:1em;
+    }
+
+    .citations {
+        grid-template-columns: repeat(2, 50%);
+        width:90%;
+        margin:1em 5%;
+    }
+
+    .citations-left  {
+        grid-column:1;
+    }
+
+    .citations-right  {
+        grid-column:2;
+    }
+
+    .citations a {
+        font-size:var(--citations);
+        line-height:140%;
+        padding:.5em 0;
+    }
+
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    /* FACTS GRID ON HOME PAGE ONLY */
+    .facts-grid {
+        display:inline-grid;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+        grid-template-columns: 34% 66%;
+    }
+
+    .facts-image {
+        grid-column:1;
+        background: url("src/assets/images/home/backgroundFAQs2.jpg") no-repeat center;
+        height:750px;
+    }
+
+    .facts-text {
+        grid-column:2;
+        width:100%;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .facts-text span, .facts-text  a {
+        font-size: var(--data-desktop-font-span-size);
+        padding-top:1em;
+    }
+
+    .citations {
+        grid-template-columns: repeat(2, 50%);
+        width:90%;
+        margin:1em 5%;
+    }
+
+    .citations-left  {
+        grid-column:1;
+    }
+
+    .citations-right  {
+        grid-column:2;
+    }
+
+    .citations a {
+        font-size:var(--citations);
+        line-height:140%;
+        padding:.5em 0;
+    }
+
+
+}
+
+/* GLOBAL ****************************************************************************************************/
+@media only screen {
+
+    /* FACTS GRID ON HOME PAGE ONLY */
+    .facts-grid {
+        max-width:1280px;
+        color:var(--color-dark-blue);
+    }
+
+    .facts-text {
+        display:grid;
+        width:100%;
+    }
+
+    .facts-text a {
+        display:inline;
+        color: var(--color-dark-blue);
+        font-family: var(--family-data);
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .facts-image {
+        display:grid;
+        width:100%;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .facts-image img {
+        max-width:100%;
+        height:auto;
+    }
+
+    .citations {
+        display:grid;
+        font-family: var(--family-data);
+    }
+
+    .citations-left, .citations-right {
+        display:grid;
+        width:100%;
+    }
+
+    .citations a {
+        text-align: left;
+        color:var(--color-dark-blue);
+    }
+
+
+
+}

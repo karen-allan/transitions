@@ -156,6 +156,15 @@ and (max-width: 1279px) {
         justify-content: flex-start;
         padding-left: 1em;
         font-size: var(--menu-mobile-font-size);
+
+    }
+
+    .mobile-unselected-top-menu-item a, .mobile-unselected-sub-menu-item a {
+        border-bottom:thin solid white;
+    }
+
+    .mobile-selected-top-menu-item {
+        border-bottom:thin solid var(--color-darkest-blue);
     }
 
     .mobile-selected-top-menu-item {

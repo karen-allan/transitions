@@ -1,0 +1,322 @@
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    /* TOPIC BLOCK THAT LINKS TO BOOK PAGES ON THE HOME PAGE AND DISPLAYS ONLY ON THE BOOKING PAGES */
+     .topic-left h2 {
+        font-size: var(--hostel-heading-banana-port-font-size);
+        letter-spacing: 0;
+    }
+
+    .topic-left span {
+        display:none;
+    }
+
+    /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
+    .topic-grid h1 {
+        font-size:var(--monument-header-banana-port-font-size);
+        align-content: flex-end;
+        justify-content: center;
+    }
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    /* TOPIC BLOCK THAT LINKS TO BOOK PAGES ON THE HOME PAGE AND DISPLAYS ONLY ON THE BOOKING PAGES */
+    .topic-left h2 {
+        font-size: var(--hostel-heading-banana-land-font-size);
+    }
+
+    .topic-left span {
+        font-size: var(--global-med-banana-land-font-size);
+    }
+
+    /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
+    .topic-grid h1 {
+        font-size:var(--monument-header-banana-land-font-size);
+        align-content: center;
+        justify-content: flex-start;
+        padding-left:.5em;
+    }
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    /* TOPIC BLOCK THAT LINKS TO BOOK PAGES ON THE HOME PAGE AND DISPLAYS ONLY ON THE BOOKING PAGES */
+    .topic-left h2 {
+        font-size: var(--med-whitney-mobile-port-font-size);
+    }
+
+    .topic-left span {
+        display:none;
+    }
+
+    /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
+    .topic-grid h1 {
+        font-size:var(--monument-header-mobile-port-font-size);
+        align-content: flex-end;
+        justify-content: center;
+    }
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    /* TOPIC BLOCK THAT LINKS TO BOOK PAGES ON THE HOME PAGE AND DISPLAYS ONLY ON THE BOOKING PAGES */
+    .topic-left h2 {
+        font-size: var(--hostel-heading-mobile-land-font-size);
+    }
+
+    .topic-left span {
+        font-size: var(--global-med-mobile-land-font-size);
+    }
+
+    /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
+    .topic-grid h1 {
+        font-size:var(--monument-header-mobile-land-font-size);
+        align-content: center;
+        justify-content: flex-start;
+        padding-left:.5em;
+    }
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    /* TOPIC BLOCK THAT LINKS TO BOOK PAGES ON THE HOME PAGE AND DISPLAYS ONLY ON THE BOOKING PAGES */
+    .topic-left h2 {
+        font-size: var(--hostel-heading-tablet-port-font-size);
+    }
+
+    .topic-left span {
+        font-size: var(--global-med-tablet-port-font-size);
+    }
+
+    /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
+    .topic-grid h1 {
+        font-size:var(--monument-header-tablet-port-font-size);
+        align-content: center;
+        justify-content: flex-start;
+        padding-left:.5em;
+    }
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    /* TOPIC BLOCK THAT LINKS TO BOOK PAGES ON THE HOME PAGE AND DISPLAYS ONLY ON THE BOOKING PAGES */
+    .topic-left h2 {
+        font-size: var(--hostel-heading-tablet-land-font-size);
+    }
+
+    .topic-left span {
+        font-size: var(--global-med-tablet-land-font-size);
+    }
+
+    /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
+    .topic-grid h1 {
+        font-size:var(--monument-header-tablet-land-font-size);
+        align-content: center;
+        justify-content: flex-start;
+        padding-left:.5em;
+    }
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    /* TOPIC BLOCK THAT LINKS TO BOOK PAGES ON THE HOME PAGE AND DISPLAYS ONLY ON THE BOOKING PAGES */
+    .topic-left a h2, .topic-left h2 {
+        font-size: var(--hostel-heading-ipad-port-font-size);
+    }
+
+    .topic-left a span, .topic-left span {
+        font-size: var(--global-med-ipad-port-font-size);
+    }
+
+    /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
+    .topic-grid h1 {
+        font-size:var(--monument-header-ipad-port-font-size);
+        align-content: center;
+        justify-content: flex-start;
+        padding-left:.5em;
+    }
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    /* TOPIC BLOCK THAT LINKS TO BOOK PAGES ON THE HOME PAGE AND DISPLAYS ONLY ON THE BOOKING PAGES */
+    .topic-left h2 {
+        font-size: var(--hostel-heading-ipad-land-font-size);
+    }
+
+    .topic-left span {
+        font-size: var(--global-smallest-ipad-land-font-size);
+    }
+
+    /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
+    .topic-grid h1 {
+        font-size:var(--monument-header-ipad-land-font-size);
+        align-content: center;
+        justify-content: flex-start;
+        padding-left:.5em;
+    }
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    /* TOPIC BLOCK THAT LINKS TO BOOK PAGES ON THE HOME PAGE AND DISPLAYS ONLY ON THE BOOKING PAGES */
+    .topic-left h2 {
+        font-size: var(--h1-whitney-desktop-font-size);
+    }
+
+    .topic-left span {
+        font-size: var(--global-med-desktop-font-size);
+    }
+
+    /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
+    .topic-grid h1 {
+        font-size:var(--monument-header-desktop-font-size);
+        align-content: center;
+        justify-content: flex-start;
+        padding-left:.5em;
+    }
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    /* TOPIC BLOCK THAT LINKS TO BOOK PAGES ON THE HOME PAGE AND DISPLAYS ONLY ON THE BOOKING PAGES */
+    .topic-inline-grid {
+        display:inline-grid;
+        max-width:1152px;
+        grid-template-columns: 74% 26%;
+        width:90%;
+        margin:1em 5% 0 5%;
+    }
+
+    .with-faded-background {
+        background-image:linear-gradient(to right, var(--color-lightest-blue) , var(--color-off-white));
+    }
+
+    .with-underline {
+        border-bottom:dashed thin var(--color-soft-blue);
+    }
+
+    .with-solid-underline {
+        border-bottom:solid thin var(--color-dark-blue);
+    }
+
+    .topic-left {
+        display:grid;
+        width:90%;
+        margin:0 5%;
+        align-content: center;
+        justify-content: flex-start;
+    }
+
+    .topic-left h2 {
+        font-family: Whitney-Light, arial, serif;
+        color:var(--color-white);
+        text-transform: uppercase;
+    }
+
+    /*.topic-left a span, .topic-left span {*/
+    .topic-left span {
+        font-family: var(--family-global), arial, serif;
+        color:var(--color-white);
+    }
+
+    .topic-right {
+        display:grid;
+        width:100%;
+        align-content: center;
+        justify-content: flex-end;
+    }
+
+    .topic-right img {
+        max-width:100%;
+        height:auto;
+    }
+
+    /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
+    .topic-grid {
+        display:grid;
+        width:100%;
+        float: left;
+        max-width:1920px;
+        text-transform: uppercase;
+        margin-bottom:.5em;
+    }
+
+    .topic-grid h1 {
+        display:grid;
+        font-family: Monument-Valley, arial, serif;
+        letter-spacing: 2px;
+        color:var(--color-white);
+    }
+
+    .about-me {
+        background-image: url("src/assets/images/about/me/aboutMeIntro.jpg"), linear-gradient(#878787, #d7dde1);
+        background-repeat: no-repeat;
+        background-position: right;
+        height:300px;
+    }
+
+    .about-energy-practitioner {
+        background-image: url("src/assets/images/about/practitioner/aboutPractitionerIntro.jpg"), linear-gradient(#dc5452, #f0c5c5);
+        background-repeat: no-repeat;
+        background-position: right;
+        height:300px;
+    }
+
+    .about-doula-consultant {
+        background-image: url("src/assets/images/about/doula/aboutDoulaIntro.jpg"), linear-gradient(#609eeb, #d4dee7);
+        background-repeat: no-repeat;
+        background-position: right;
+        height:300px;
+    }
+
+    .book-session {
+        background-image: url("src/assets/images/book/energySession/bookSession.jpg"), linear-gradient(#e59844, #e7d2bb);
+        background-repeat: no-repeat;
+        background-position: right;
+        height:300px;
+    }
+
+    .book-consultation {
+        background-image: url("src/assets/images/book/doulaConsult/bookDoulaConsult.jpg"), linear-gradient(#455b36, #bcd6ab);
+        background-repeat: no-repeat;
+        background-position: right;
+        height:300px;
+    }
+}

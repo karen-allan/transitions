@@ -30,17 +30,13 @@
                     my Covid vaccination in the form of the vaccine passport. By signing below I agree and accept the above conditions.
                 </span>
 
-                <div class="full-line">
+                <div class="date-signature-block">
                     <label class="first-text-column" for="date">Date: (YYYY / MM / DD):</label>
-                    <input type="text" class="first-text-column required" [(ngModel)]="model.defaultDate" id="date" name="date">
+                    <input type="text" class="first-text-column no-border with-solid-underline" [(ngModel)]="model.defaultDate" id="date" name="date">
 
                     <label class="first-text-column" for="sig">Signature:</label>
-                    <input type="text" class="first-text-column" id="sig" name="sig">
+                    <input type="text" class="first-text-column no-border with-solid-underline" id="sig" name="sig">
                 </div>
-
-              <!--  <div class="print-container">
-                  <button class="print-form-button" (click)="printProfile()">PRINT</button>
-                </div>-->
             </div>
         </form>
     </div>

@@ -16,7 +16,6 @@ and (orientation: portrait) {
         font-size: var(--rene-banana-port-font-size);
     }
 
-
 }
 
 /* BANANA LANDSCAPE ****************************************************************************************************/
@@ -36,8 +35,6 @@ and (orientation: landscape) {
     .list-med-item, .list-med-item a {
         font-size: var(--rene-banana-land-font-size);
     }
-
-
 
 }
 
@@ -59,7 +56,6 @@ and (orientation: portrait) {
         font-size: var(--rene-mobile-port-font-size);
     }
 
-
 }
 
 /*  MOBILES LANDSCAPE **************************************************************************************************/
@@ -79,7 +75,6 @@ and (orientation: landscape) {
     .list-med-item, .list-med-item a {
         font-size: var(--rene-mobile-land-font-size);
     }
-
 
 }
 
@@ -101,7 +96,6 @@ and (orientation: portrait) {
         font-size: var(--rene-tablet-port-font-size);
     }
 
-
 }
 
 /*  TABLETS LANDSCAPE *******************************************************************************************/
@@ -121,7 +115,6 @@ and (orientation: landscape) {
     .list-med-item, .list-med-item a {
         font-size: var(--rene-tablet-land-font-size);
     }
-
 
 }
 
@@ -143,8 +136,6 @@ and (orientation: portrait) {
         font-size: var(--rene-ipad-port-font-size);
     }
 
-
-
 }
 
 /* IPADS LANDSCAPE ***************************************************************************************************/
@@ -165,7 +156,6 @@ and (orientation: landscape) {
         font-size: var(--rene-ipad-land-font-size);
     }
 
-
 }
 
 /* DESKTOPS ***********************************************************************************************************/
@@ -183,8 +173,6 @@ and (min-width: 1440px) {
     .list-med-item, .list-med-item a {
         font-size: var(--rene-desktop-font-size);
     }
-
-
 
 }
 /* GLOBAL *************************************************************************************************************/
@@ -217,13 +205,13 @@ and (min-width: 1440px) {
     }
 
     .list-big-item, .list-big-item a {
-        font-family: Whitney-Book;
+        font-family: Whitney-Book, serif;
         text-align: left;
         line-height: var(--list-wide-item-line-height);
     }
 
     .list-med-item, .list-med-item a {
-        font-family: ReneB-Book;
+        font-family: ReneB-Book, serif;
         text-align: left;
         line-height: var(--list-item-line-height);
         padding-bottom:.5em;
@@ -234,10 +222,5 @@ and (min-width: 1440px) {
         text-decoration: underline;
         cursor: pointer;
     }
-
-
-
-
-
 
 }

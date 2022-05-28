@@ -30,11 +30,12 @@
               "src/assets/css/backgrounds.css",
               "src/assets/css/copy.css",
               "src/assets/css/forms.css",
-              "src/assets/css/forms-menu.css",
               "src/assets/css/lists.css",
+              "src/assets/css/print-demographics.css",
               "src/assets/css/styles.css",
               "src/assets/css/symptoms.css",
               "src/assets/css/template.css",
+              "src/assets/css/topics.css",
               "src/assets/css/wizard.css"
             ],
             "scripts": []
@@ -105,11 +106,12 @@
               "src/assets/css/backgrounds.css",
               "src/assets/css/copy.css",
               "src/assets/css/forms.css",
-              "src/assets/css/forms-menu.css",
               "src/assets/css/lists.css",
+              "src/assets/css/print-demographics.css",
               "src/assets/css/styles.css",
               "src/assets/css/symptoms.css",
               "src/assets/css/template.css",
+              "src/assets/css/topics.css",
               "src/assets/css/wizard.css"
             ],
             "scripts": []

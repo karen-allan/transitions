@@ -358,7 +358,7 @@ and (min-width: 1440px) {
         width:100%;
         grid-template-columns: 60% 40%;
         font-family: var(--family-data);
-        border:thin dashed blue;
+        border:thin dotted var(--color-soft-blue);
     }
 
     .pricing, .total {
@@ -366,13 +366,12 @@ and (min-width: 1440px) {
         width:100%;
         color:var(--color-light-blue);
         align-content: center;
-        border:thin solid white;
         justify-content: flex-start;
     }
 
     .pricing {
         grid-column:1;
-        border-right:thin dashed blue;
+        border-right:thin dotted var(--color-soft-blue);
     }
 
     .total {

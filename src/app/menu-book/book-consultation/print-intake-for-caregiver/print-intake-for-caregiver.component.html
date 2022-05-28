@@ -1,3 +1,144 @@
 <div class="print-intake-for-caregiver-component">
-  <p>print-intake-for-caregiver works!</p>
+    <div class="print-session-component">
+        <div class="title">
+            Your Contact Information
+        </div>
+
+        <div>
+            <table class="demographic">
+                <tr>
+                    <td class="firstCell">
+                        Name:
+                    </td>
+                    <td class="secondCell">
+                        {{model.name}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Phone:
+                    </td>
+                    <td class="secondCell">
+                        {{model.cellPhone | mask: '(000) 000-0000'}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Email:
+                    </td>
+                    <td class="secondCell">
+                        {{model.email}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Address:
+                    </td>
+                    <td class="secondCell">
+                        {{model.address}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Province:
+                    </td>
+                    <td class="secondCell">
+                        {{model.provState}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Country:
+                    </td>
+                    <td class="secondCell">
+                        {{model.country}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Postal Code:
+                    </td>
+                    <td class="secondCell">
+                        {{model.pc | mask: "U0U-0U0"}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="title">
+            Emergency Contact Information
+        </div>
+
+        <div>
+            <table class="demographic">
+                <tr>
+                    <td class="firstCell">
+                        Name:
+                    </td>
+                    <td class="secondCell">
+                        {{model.emergName}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Relationship:
+                    </td>
+                    <td class="secondCell">
+                        {{model.emergRelation}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Phone:
+                    </td>
+                    <td class="secondCell">
+                        {{model.emergPhone | mask: '(000) 000-0000'}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="title">
+            Optional Details
+        </div>
+
+        <div>
+            <table class="demographic">
+                <tr>
+                    <td class="firstCell">
+                        Birthdate:
+                    </td>
+                    <td class="secondCell">
+                        {{model.birthdate}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Occupation:
+                    </td>
+                    <td class="secondCell">
+                        {{model.occupation}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Referred By:
+                    </td>
+                    <td class="secondCell">
+                        {{model.referredBy}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </div>

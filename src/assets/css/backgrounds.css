@@ -5,18 +5,6 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-    /* THE HEADERS FOR EACH PAGE */
-    .topic-grid {
-        width:90%;
-        margin:0 5%;
-    }
-
-    .topic-grid h1 {
-        font-size:var(--monument-header-banana-port-font-size);
-        align-content: flex-end;
-        justify-content: center;
-    }
-
     /* UNIQUE HEADINGS ON HOME PAGE ONLY RIGHT NOW  */
     .full-length-titles h1  {
         font-size: var(--big-whitney-banana-port-font-size);
@@ -25,64 +13,6 @@ and (orientation: portrait) {
 
     .full-length-sub-titles h2 {
         font-size: var(--med-whitney-banana-port-font-size);
-    }
-
-    /* TEXT IMAGE GRID with equal columns */
-    .facts-grid {
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-    }
-
-    .facts-image {
-        margin:1.5em 0;
-        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
-        height:220px;
-    }
-
-    .facts-text {
-        justify-content: center;
-        align-content: flex-start;
-    }
-
-    .facts-text a  {
-        padding-top:1.5em;
-        font-size: var(--global-smallest-banana-port-font-size);
-    }
-
-    .citations {
-        grid-template-columns: 100%;
-        width:90%;
-        margin:1em 5%;
-    }
-
-    .citations-left, .citations-right  {
-        grid-column:1;
-    }
-
-    .citations a {
-        font-size:var(--mobile-citations);
-        line-height:110%;
-        padding:.5em 0;
-    }
-
-    /* TOPIC BLOCK with clickable and non-clickable links */
-    /* these are the white background bigger font topics */
-    .topic-inline-grid {
-        width:100%;
-    }
-
-    .topic-left h1 {
-        font-size:var(--rene-thin-banana-port-font-size);
-    }
-
-    .topic-left a h2, .topic-left h2 {
-        font-size: var(--hostel-heading-banana-port-font-size);
-        letter-spacing: 0;
-    }
-
-    .topic-left a span, .topic-left span {
-        display:none;
     }
 
     /* QUOTES inside content */
@@ -112,18 +42,6 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-    /* THE HEADERS FOR EACH PAGE */
-    .topic-grid {
-        width:100%;
-    }
-
-    .topic-grid h1 {
-        font-size:var(--monument-header-banana-land-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
-    }
-
     /* UNIQUE HEADING */
     .full-length-titles h1 {
         font-size: var(--h2-whitney-banana-land-font-size);
@@ -132,67 +50,6 @@ and (orientation: landscape) {
 
     .full-length-sub-titles h2 {
         font-size: var(--med-whitney-banana-land-font-size);
-    }
-
-    /* TEXT IMAGE GRID with equal columns */
-    .facts-grid {
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-    }
-
-    .facts-text {
-        width:100%;
-        justify-content: center;
-        align-content: flex-start;
-    }
-
-    .facts-image {
-        margin:1.5em 0;
-        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
-        height:220px;
-    }
-
-    .facts-text a {
-        padding-top:1.5em;
-        font-size: var(--global-smallest-banana-land-font-size);
-    }
-
-    .citations {
-        grid-template-columns: 100%;
-        width:90%;
-        margin:1em 5%;
-
-    }
-
-    .citations-left, .citations-right  {
-        grid-column:1;
-    }
-
-    .citations a {
-        font-size:var(--mobile-citations);
-        line-height:110%;
-        padding:.5em 0;
-    }
-
-
-
-    /* TOPIC BLOCK with clickable and non-clickable links */
-    /* these are the white background bigger font topics */
-    .topic-inline-grid {
-        width:100%;
-    }
-
-    .topic-left h1 {
-       font-size:var(--rene-thin-banana-land-font-size);
-    }
-
-    .topic-left a h2, .topic-left h2 {
-        font-size: var(--hostel-heading-banana-land-font-size);
-    }
-
-    .topic-left a span, .topic-left span {
-        font-size: var(--global-med-banana-land-font-size);
     }
 
     /* QUOTES inside content */
@@ -214,10 +71,6 @@ and (orientation: landscape) {
         height:250px;
     }
 
-    .icon img {
-        height:30px;
-    }
-
 }
 
 /* MOBILES PORTRAIT ****************************************************************************************************/
@@ -226,18 +79,6 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-    /* THE HEADERS FOR EACH PAGE */
-    .topic-grid {
-        width:100%;
-    }
-
-    .topic-grid h1 {
-        font-size:var(--monument-header-mobile-port-font-size);
-        align-content: flex-end;
-        justify-content: center;
-    }
-
-    /* UNIQUE HEADING */
     .full-length-titles h1 {
         font-size: var(--h2-whitney-mobile-land-font-size);
         text-align:center;
@@ -245,66 +86,6 @@ and (orientation: portrait) {
 
     .full-length-sub-titles h2 {
         font-size: var(--hostel-heading-mobile-port-font-size);
-    }
-
-    /* TEXT IMAGE GRID with equal columns */
-    .facts-grid {
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-    }
-
-    .facts-text {
-        width:100%;
-        justify-content: center;
-        align-content: flex-start;
-    }
-
-    .facts-image {
-        margin:1.5em 0;
-        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
-        height:220px;
-    }
-
-    .facts-text a {
-        padding-top:1.5em;
-        font-size: var(--global-smallest-mobile-port-font-size);
-    }
-
-    .citations {
-        grid-template-columns: 100%;
-        width:90%;
-        margin:1em 5%;
-
-    }
-
-    .citations-left, .citations-right  {
-        grid-column:1;
-    }
-
-    .citations a {
-        font-size:var(--mobile-citations);
-        line-height:120%;
-        padding:.5em 0;
-    }
-
-
-
-    /* TOPIC BLOCK with clickable and non-clickable links */
-    .topic-inline-grid {
-        width:100%;
-    }
-
-    .topic-left h1 {
-        font-size:var(--rene-thin-mobile-port-font-size);
-    }
-
-    .topic-left a h2, .topic-left h2 {
-        font-size: var(--med-whitney-mobile-port-font-size);
-    }
-
-    .topic-left a span, .topic-left span {
-        display:none;
     }
 
     /* QUOTES inside content */
@@ -326,11 +107,6 @@ and (orientation: portrait) {
         height:150px;
     }
 
-    .icon img {
-        height:20px;
-    }
-
-
 }
 
 /*  MOBILES LANDSCAPE **************************************************************************************************/
@@ -339,18 +115,6 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-    .topic-grid {
-        width:100%;
-    }
-
-    .topic-grid h1 {
-        font-size:var(--monument-header-mobile-land-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
-    }
-
-    /* UNIQUE HEADING */
     .full-length-titles h1 {
         font-size: var(--h1-whitney-mobile-land-font-size);
         text-align:center;
@@ -358,69 +122,6 @@ and (orientation: landscape) {
 
     .full-length-sub-titles  h2 {
         font-size: var(--med-whitney-mobile-land-font-size);
-    }
-
-    /* TEXT IMAGE GRID with equal columns */
-    .facts-grid {
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-    }
-
-    .facts-text {
-        width:100%;
-        justify-content: center;
-        align-content: flex-start;
-    }
-
-    .facts-image {
-        margin:1.5em 0;
-        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
-        height:220px;
-    }
-
-    .facts-text a {
-        padding-top: 1em;
-        font-size: var(--global-smallest-mobile-land-font-size);
-    }
-
-    .citations {
-        grid-template-columns: repeat(2, 50%);
-        width:90%;
-        margin:1em 5%;
-    }
-
-    .citations-left  {
-        grid-column:1;
-    }
-
-    .citations-right  {
-        grid-column:2;
-    }
-
-    .citations a {
-        font-size:var(--mobile-citations);
-        line-height:140%;
-        padding:.5em 0;
-    }
-
-
-
-    /* TOPIC BLOCK with clickable and non-clickable links */
-    .topic-inline-grid {
-        width:100%;
-    }
-
-    .topic-left h1 {
-        font-size:var(--rene-thin-mobile-land-font-size);
-    }
-
-    .topic-left a h2, .topic-left h2 {
-        font-size: var(--hostel-heading-mobile-land-font-size);
-    }
-
-    .topic-left a span, .topic-left span {
-        font-size: var(--global-med-mobile-land-font-size);
     }
 
     /* QUOTES inside content */
@@ -442,10 +143,6 @@ and (orientation: landscape) {
         height:250px;
     }
 
-    .icon img {
-        height:30px;
-    }
-
 }
 
 /*  TABLETS PORTRAIT *******************************************************************************************/
@@ -453,17 +150,6 @@ and (orientation: landscape) {
 and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
-
-    .topic-grid {
-        width:100%;
-    }
-
-    .topic-grid h1 {
-        font-size:var(--monument-header-tablet-port-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
-    }
 
     /* UNIQUE HEADING */
     .full-length-titles h1 {
@@ -473,64 +159,6 @@ and (orientation: portrait) {
 
     .full-length-sub-titles h2 {
         font-size: var(--med-whitney-tablet-port-font-size);
-    }
-
-    /* TEXT IMAGE GRID with equal columns */
-    .facts-grid {
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-    }
-
-    .facts-text {
-        justify-content: center;
-        align-content: flex-start;
-    }
-
-    .facts-image {
-        margin:1.5em 0;
-        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
-        height:220px;
-    }
-
-    .facts-text a {
-        font-size: var(--global-smallest-tablet-port-font-size);
-        padding-top: 1.5em;
-    }
-
-    .citations {
-        grid-template-columns: 100%;
-        width:90%;
-        margin:1em 5%;
-    }
-
-    .citations-left, .citations-right  {
-        grid-column:1;
-    }
-
-    .citations a {
-        font-size:var(--mobile-citations);
-        line-height:120%;
-        padding:.5em 0;
-    }
-
-
-
-    /* TOPIC BLOCK with clickable and non-clickable links */
-    .topic-inline-grid {
-        width:100%;
-    }
-
-    .topic-left h1 {
-        font-size:var(--rene-thin-tablet-port-font-size);
-    }
-
-    .topic-left a h2, .topic-left h2 {
-        font-size: var(--hostel-heading-tablet-port-font-size);
-    }
-
-    .topic-left a span, .topic-left span {
-        font-size: var(--global-med-tablet-port-font-size);
     }
 
     /* QUOTES inside content */
@@ -552,10 +180,6 @@ and (orientation: portrait) {
         height:300px;
     }
 
-    .icon img {
-        height:30px;
-    }
-
 }
 
 /*  TABLETS LANDSCAPE *******************************************************************************************/
@@ -563,17 +187,6 @@ and (orientation: portrait) {
 and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
-
-    .topic-grid {
-        width:100%;
-    }
-
-    .topic-grid h1 {
-        font-size:var(--monument-header-tablet-land-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
-    }
 
     /* UNIQUE HEADING */
     .full-length-titles h1 {
@@ -584,72 +197,6 @@ and (orientation: landscape) {
 
     .full-length-sub-titles h2 {
         font-size: var(--med-whitney-tablet-land-font-size);
-    }
-
-    /* TEXT IMAGE GRID with equal columns */
-    .facts-grid {
-        display:inline-grid;
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-        grid-template-columns: 34% 66%;
-    }
-
-    .facts-image {
-        grid-column:1;
-        background: url("src/assets/images/home/backgroundFAQsTablet.jpg") no-repeat center;
-        height:600px;
-    }
-
-    .facts-text {
-        grid-column:2;
-        width:100%;
-        justify-content: flex-start;
-        align-content: center;
-    }
-
-    .facts-text a {
-        font-size: var(--global-smallest-tablet-land-font-size);
-        padding-top: 1em;
-    }
-
-    .citations {
-        grid-template-columns: repeat(2, 50%);
-        width:90%;
-        margin:1em 5%;
-    }
-
-    .citations-left  {
-        grid-column:1;
-    }
-
-    .citations-right  {
-        grid-column:2;
-    }
-
-    .citations a {
-        font-size:var(--citations);
-        line-height:140%;
-        padding:.5em 0;
-    }
-
-
-
-    .topic-inline-grid {
-        width:100%;
-    }
-
-    /* TOPIC BLOCK with clickable and non-clickable links */
-    .topic-left h1 {
-        font-size:var(--rene-thin-tablet-land-font-size);
-    }
-
-    .topic-left a h2, .topic-left h2 {
-        font-size: var(--hostel-heading-tablet-land-font-size);
-    }
-
-    .topic-left a span, .topic-left span {
-        font-size: var(--global-med-tablet-land-font-size);
     }
 
     /* QUOTES inside content */
@@ -671,10 +218,6 @@ and (orientation: landscape) {
         height:350px;
     }
 
-    .icon img {
-        height:30px;
-    }
-
 }
 
 /* IPADS PORTRAIT ****************************************************************************************************/
@@ -682,17 +225,6 @@ and (orientation: landscape) {
 and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
-
-    .topic-grid {
-        width:100%;
-    }
-
-    .topic-grid h1 {
-        font-size:var(--monument-header-ipad-port-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
-    }
 
     /* UNIQUE HEADING */
     .full-length-titles h1 {
@@ -703,68 +235,6 @@ and (orientation: portrait) {
 
     .full-length-sub-titles h2 {
         font-size: var(--med-whitney-ipad-port-font-size);
-    }
-
-    /* TEXT IMAGE GRID each with full width */
-    .facts-grid {
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-    }
-
-    .facts-text {
-        justify-content: center;
-        align-content: flex-start;
-    }
-
-    .facts-image {
-        margin:1.5em 0;
-        background: url("src/assets/images/home/backgroundFAQsTablet.jpg") no-repeat center;
-        height:600px;
-    }
-
-    .facts-text a {
-        padding-top: 1em;
-        font-size: var(--global-smallest-ipad-port-font-size);
-    }
-
-    .citations {
-        grid-template-columns: repeat(2, 50%);
-        width:90%;
-        margin:1em 5%;
-    }
-
-    .citations-left  {
-        grid-column:1;
-    }
-
-    .citations-right  {
-        grid-column:2;
-    }
-
-    .citations a {
-        font-size:var(--mobile-citations);
-        line-height:140%;
-        padding:.5em 0;
-    }
-
-    .topic-inline-grid {
-        width:100%;
-    }
-
-
-
-    /* TOPIC BLOCK with clickable and non-clickable links */
-    .topic-left h1 {
-        font-size:var(--rene-thin-ipad-port-font-size);
-    }
-
-    .topic-left a h2, .topic-left h2 {
-        font-size: var(--hostel-heading-ipad-port-font-size);
-    }
-
-    .topic-left a span, .topic-left span {
-        font-size: var(--global-med-ipad-port-font-size);
     }
 
     /* QUOTES inside content */
@@ -786,10 +256,6 @@ and (orientation: portrait) {
         height:300px;
     }
 
-    .icon img {
-        height:40px;
-    }
-
 }
 
 /* IPADS LANDSCAPE ***************************************************************************************************/
@@ -797,18 +263,6 @@ and (orientation: portrait) {
 and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
-
-    .topic-grid {
-        width:100%;
-    }
-
-    .topic-grid h1 {
-        font-size:var(--monument-header-ipad-land-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
-    }
-
 
     /* UNIQUE HEADING */
     .full-length-titles h1 {
@@ -819,70 +273,6 @@ and (orientation: landscape) {
 
     .full-length-sub-titles h2 {
         font-size: var(--med-whitney-ipad-land-font-size);
-    }
-
-    .facts-grid {
-        display:inline-grid;
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-        grid-template-columns: 34% 66%;
-    }
-
-    .facts-image {
-        grid-column:1;
-        background: url("src/assets/images/home/backgroundFAQsTablet.jpg") no-repeat center;
-        height:600px;
-    }
-
-    .facts-text {
-        grid-column:2;
-        width:100%;
-        justify-content: flex-start;
-        align-content: center;
-    }
-
-    .facts-text a {
-        font-size: var(--global-smallest-ipad-land-font-size);
-        padding-top:1em;
-    }
-
-    .citations {
-        grid-template-columns: repeat(2, 50%);
-        width:90%;
-        margin:1em 5%;
-    }
-
-    .citations-left  {
-        grid-column:1;
-    }
-
-    .citations-right  {
-        grid-column:2;
-    }
-
-    .citations a {
-        font-size:var(--citations);
-        line-height:140%;
-        padding:.5em 0;
-    }
-
-    .topic-inline-grid {
-        width:100%;
-    }
-
-
-    /* TOPIC BLOCK with clickable and non-clickable links */
-    .topic-left h1 {
-        font-size: var(--rene-thin-ipad-land-font-size);
-    }
-
-    .topic-left a h2, .topic-left h2 {
-        font-size: var(--hostel-heading-ipad-land-font-size);
-    }
-
-    .topic-left a span, .topic-left span {
-        font-size: var(--global-smallest-ipad-land-font-size);
     }
 
     /* QUOTES inside content */
@@ -904,10 +294,6 @@ and (orientation: landscape) {
         height:400px;
     }
 
-    icon img {
-        height:50px;
-    }
-
 }
 
 /* DESKTOPS ****************************************************************************************************/
@@ -915,8 +301,6 @@ and (orientation: landscape) {
 and (min-width: 1440px) {
 
     /* UNIQUE HEADING */
-
-
     .full-length-titles h1 {
         padding:2em 0;
         font-size: var(--h1-whitney-desktop-font-size);
@@ -925,83 +309,6 @@ and (min-width: 1440px) {
 
     .full-length-sub-titles h2 {
         font-size: var(--med-whitney-desktop-font-size);
-    }
-
-    .facts-grid {
-        display:inline-grid;
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-        grid-template-columns: 34% 66%;
-    }
-
-    .facts-image {
-        grid-column:1;
-        background: url("src/assets/images/home/backgroundFAQs.jpg") no-repeat center;
-        height:750px;
-    }
-
-    .facts-text {
-        grid-column:2;
-        width:100%;
-        justify-content: flex-start;
-        align-content: center;
-    }
-
-    .facts-text span, .facts-text  a {
-        font-size: var(--data-desktop-font-span-size);
-        padding-top:1em;
-    }
-
-
-
-    .citations {
-        grid-template-columns: repeat(2, 50%);
-        width:90%;
-        margin:1em 5%;
-    }
-
-    .citations-left  {
-        grid-column:1;
-    }
-
-    .citations-right  {
-        grid-column:2;
-    }
-
-    .citations a {
-        font-size:var(--citations);
-        line-height:140%;
-        padding:.5em 0;
-    }
-
-    /* TOPIC BLOCK with clickable and non-clickable links */
-    .topic-inline-grid {
-        width:100%;
-        margin:1em 5% 0 5%;
-    }
-
-    .topic-left h1 {
-        font-size: var(--rene-thin-desktop-font-size);
-    }
-
-    .topic-left a h2, .topic-left h2 {
-        font-size: var(--h1-whitney-desktop-font-size);
-    }
-
-    .topic-left a span {
-        font-size: var(--global-med-desktop-font-size);
-    }
-
-    .topic-grid {
-        width:100%;
-    }
-
-    .topic-grid h1 {
-        font-size:var(--monument-header-desktop-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
     }
 
     /* QUOTES inside content */
@@ -1022,12 +329,6 @@ and (min-width: 1440px) {
     .content-videos {
         height:400px;
     }
-
-    icon img {
-        height:50px;
-    }
-
-
 
 }
 
@@ -1050,165 +351,6 @@ and (min-width: 1440px) {
         font-family: Whitney-SSm-Book, Whitney-Book, arial, serif;
         padding:.5em 0;
         text-align: center;
-    }
-
-    /* TEXT IMAGE GRID   */
-    .facts-grid {
-        max-width:1280px;
-        color:var(--color-dark-blue);
-    }
-
-    .facts-text {
-        display:grid;
-        width:100%;
-    }
-
-    .facts-text a {
-        display:inline;
-        color: var(--color-dark-blue);
-        font-family: var(--family-data);
-        text-align: left;
-        text-decoration: none;
-    }
-
-    .facts-image {
-        display:grid;
-        width:100%;
-        align-content: center;
-        justify-content: center;
-    }
-
-    .facts-image img {
-        max-width:100%;
-        height:auto;
-    }
-
-    /* Payment Info */
-    .citations {
-        display:grid;
-        font-family: var(--family-data);
-    }
-
-    .citations-left, .citations-right {
-        display:grid;
-        width:100%;
-    }
-
-    .citations a {
-        text-align: left;
-        color:var(--color-dark-blue);
-    }
-
-    /* this is used on the about and book headers */
-    .topic-grid {
-        display:grid;
-        float: left;
-        max-width:1920px;
-        text-transform: uppercase;
-        margin-bottom:.5em;
-    }
-
-    .topic-grid h1 {
-        display:grid;
-        font-family: Monument-Valley, arial, serif;
-        letter-spacing: 2px;
-        color:var(--color-white);
-    }
-
-    .about-me {
-        background-image: url("src/assets/images/about/me/aboutMeIntro.jpg"), linear-gradient(#878787, #d7dde1);
-        background-repeat: no-repeat;
-        background-position: right;
-        height:300px;
-    }
-
-    .about-energy-practitioner {
-        background-image: url("src/assets/images/about/practitioner/aboutPractitionerIntro.jpg"), linear-gradient(#dc5452, #f0c5c5);
-        background-repeat: no-repeat;
-        background-position: right;
-        height:300px;
-    }
-
-    .about-doula-consultant {
-        background-image: url("src/assets/images/about/doula/aboutDoulaIntro.jpg"), linear-gradient(#609eeb, #d4dee7);
-        background-repeat: no-repeat;
-        background-position: right;
-        height:300px;
-    }
-
-    .book-session {
-        background-image: url("src/assets/images/book/energySession/bookSession.jpg"), linear-gradient(#e59844, #e7d2bb);
-        background-repeat: no-repeat;
-        background-position: right;
-        height:300px;
-    }
-
-    .book-consultation {
-        background-image: url("src/assets/images/book/doulaConsult/bookDoulaConsult.jpg"), linear-gradient(#455b36, #bcd6ab);
-        background-repeat: no-repeat;
-        background-position: right;
-        height:300px;
-    }
-
-    /* TOPIC inline grid with clickable and non-clickable links */
-    .topic-inline-grid {
-        display:inline-grid;
-        max-width:1152px;
-        grid-template-columns: 74% 26%;
-        text-transform: uppercase;
-
-
-    }
-
-    .with-faded-background {
-        background-image:linear-gradient(to right, var(--color-lightest-blue) , var(--color-off-white));
-    }
-
-    .with-underline {
-        border-bottom:dashed thin var(--color-soft-blue);
-    }
-
-    .topic-left {
-        display:grid;
-        width:100%;
-        align-content: center;
-        justify-content: flex-start;
-        /*padding-left:5%;*/
-    }
-
-    .topic-left a {
-        text-decoration: none;
-    }
-
-    .topic-left a h2, .topic-left h2 {
-        font-family: Whitney-Light, arial, serif;
-        color:var(--color-white);
-        padding-left:1em;
-    }
-
-    /* H1 has the grid with a white background and blue letters */
-    .topic-left h1 {
-        font-family: ReneB-Thin, arial, serif;
-        color:var(--color-white);
-        padding-left:1em;
-    }
-
-    .topic-left a span, .topic-left span {
-        font-family: global, arial, serif;
-        color:var(--color-white);
-        padding-left:1em;
-    }
-
-    .topic-right {
-        display:grid;
-        width:100%;
-        align-content: center;
-        justify-content: flex-end;
-    }
-
-    .topic-right img {
-        max-width:100%;
-        height:auto;
     }
 
     /* QUOTES INSIDE CONTENT (as opposed to Headings quotes*/
@@ -1255,19 +397,6 @@ and (min-width: 1440px) {
         padding:1em;
         line-height: var(--copy-line-height);
     }
-
-    .icon {
-        background: url("src/assets/images/backgrounds/endQuote.gif") no-repeat center;
-        height:25px;
-    }
-
-    .back-faq {
-        background-size: auto;
-        background:url('src/assets/images/faq/faqsIntro.jpg') no-repeat right ;
-    }
-
-
-
 
 }
 
