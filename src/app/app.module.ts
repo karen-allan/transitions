@@ -25,7 +25,7 @@ import { GlobalFooterComponent } from './global-footer/global-footer.component';
 
 
 /* CURRENTLY, NOT IN USE */
-import { CovidComponent } from './global-forms/covid/covid.component';
+import { CovidComponent } from './menu-book/global-form-sections/covid/covid.component';
 
 /* SESSIONS */
 
@@ -39,7 +39,7 @@ import { GlobalHeadersComponent } from './global-headers/global-headers.componen
 import { GlobalMenuComponent } from './global-menu/global-menu.component';
 
 /* GLOBAL PRINT */
-import { PrintSessionComponent } from './menu-book/book-session/print-session/print-session.component';
+import { PrintSessionComponent } from './menu-book/book-session/print/print-session.component';
 
 /* MENU ABOUT FOLDER */
 /* ABOUT DOULA FOLDER */
@@ -145,24 +145,24 @@ import { TransferWizardContainerComponent } from './menu-wizard/transfer/transfe
 import {filter} from "rxjs";
 import { RepNineFinalComponent } from './global-forms/representative-nine/rep-nine-final/rep-nine-final.component';
 
-import { MedicalHistoryComponent } from './global-forms/inner-forms/medical-history/medical-history.component';
-import { DemographicInfoComponent } from './global-forms/inner-forms/demographic-info/demographic-info.component';
+import { MedicalHistoryComponent } from './menu-book/global-form-sections/medical-history/medical-history.component';
+import { DemographicInfoComponent } from './menu-book/global-form-sections/demographic-info/demographic-info.component';
 
-import { SessionGoalsComponent} from "./global-forms/inner-forms/session-goals/session-goals.component";
-import { EndOfLifePlanningComponent } from './global-forms/inner-forms/end-of-life-planning/end-of-life-planning.component';
-import { SupportForCaregiverComponent } from './global-forms/inner-forms/support-for-caregiver/support-for-caregiver.component';
-import { SupportForPatientComponent } from './global-forms/inner-forms/support-for-patient/support-for-patient.component';
-import { IntakeForConsultationPatientComponent } from './global-forms/consultations/intake-for-consultation-patient/intake-for-consultation-patient.component';
-import { IntakeForConsultationCaregiverComponent } from './global-forms/consultations/intake-for-consultation-caregiver/intake-for-consultation-caregiver.component';
+import { SessionGoalsComponent} from "./menu-book/global-form-sections/session-goals/session-goals.component";
+import { EndOfLifePlanningComponent } from './menu-book/global-form-sections/end-of-life-planning/end-of-life-planning.component';
+import { SupportForCaregiverComponent } from './menu-book/global-form-sections/support-for-caregiver/support-for-caregiver.component';
+import { SupportForPatientComponent } from './menu-book/global-form-sections/support-for-patient/support-for-patient.component';
+import { IntakeForConsultationPatientComponent } from './menu-book/book-consultation/data-entry/intake-for-consultation-patient/intake-for-consultation-patient.component';
+import { IntakeForConsultationCaregiverComponent } from './menu-book/book-consultation/data-entry/intake-for-consultation-caregiver/intake-for-consultation-caregiver.component';
 
-import { IntakeForConsultationPlansComponent } from './global-forms/consultations/intake-for-consultation-plans/intake-for-consultation-plans.component';
-import { MenuForConsultationsComponent } from './global-forms/consultations/menu-for-consultations/menu-for-consultations.component';
-import { IntakeForEnergySessionComponent } from './global-forms/sessions/intake-for-energy-session/intake-for-energy-session.component';
-import { FrailtyScaleComponent } from './global-forms/inner-forms/frailty-scale/frailty-scale.component';
-import { SessionConsiderationsComponent } from './global-forms/inner-forms/session-considerations/session-considerations.component';
-import { PrintIntakeForPlansComponent } from './menu-book/book-consultation/print-intake-for-plans/print-intake-for-plans.component';
-import { PrintIntakeForCaregiverComponent } from './menu-book/book-consultation/print-intake-for-caregiver/print-intake-for-caregiver.component';
-import { PrintIntakeForPatientComponent } from './menu-book/book-consultation/print-intake-for-patient/print-intake-for-patient.component';
+import { IntakeForConsultationPlansComponent } from './menu-book/book-consultation/data-entry/intake-for-consultation-plans/intake-for-consultation-plans.component';
+import { MenuForConsultationsComponent } from './menu-book/book-consultation/data-entry/menu-for-consultations/menu-for-consultations.component';
+import { IntakeForEnergySessionComponent } from './menu-book/book-session/data-entry/intake-for-energy-session.component';
+import { FrailtyScaleComponent } from './menu-book/global-form-sections/frailty-scale/frailty-scale.component';
+import { SessionConsiderationsComponent } from './menu-book/global-form-sections/session-considerations/session-considerations.component';
+import { PrintIntakeForPlansComponent } from './menu-book/book-consultation/print/print-intake-for-plans/print-intake-for-plans.component';
+import { PrintIntakeForCaregiverComponent } from './menu-book/book-consultation/print/print-intake-for-caregiver/print-intake-for-caregiver.component';
+import { PrintIntakeForPatientComponent } from './menu-book/book-consultation/print/print-intake-for-patient/print-intake-for-patient.component';
 
 @NgModule({
     declarations: [

@@ -30,7 +30,7 @@ import { FaqContainerComponent } from './menu-faq/faq-container/faq-container.co
 import { HomeContainerComponent } from './menu-home/home-container/home-container.component';
 
 
-import { PrintSessionComponent } from './menu-book/book-session/print-session/print-session.component';
+import { PrintSessionComponent } from './menu-book/book-session/print/print-session.component';
 
 
 import { WizardContainerComponent } from './menu-wizard/wizard-container/wizard-container.component';

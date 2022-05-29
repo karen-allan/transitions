@@ -45,15 +45,45 @@ export class Client {
 
         /* end of life planning */
         public eolFrailty:string,
-        public eolPlanFocus:string,
+        public eolPlanFocus1:boolean,
+        public eolPlanFocus2:boolean,
+        public eolPlanFocus3:boolean,
+        public eolPlanFocus4:boolean,
+        public eolPlanFocus5:boolean,
+        public eolPlanFocus6:boolean,
+        public eolPlanFocus7:boolean,
+        public eolPlanFocus8:boolean,
+
         public eolPlanDetails:string,
 
         /* end of life patient care */
-        public eolPatientFocus:string,
+        public eolPatientFocus1:boolean,
+        public eolPatientFocus2:boolean,
+        public eolPatientFocus3:boolean,
+        public eolPatientFocus4:boolean,
+        public eolPatientFocus5:boolean,
+        public eolPatientFocus6:boolean,
+        public eolPatientFocus7:boolean,
+        public eolPatientFocus8:boolean,
+        public eolPatientFocus9:boolean,
+        public eolPatientFocus10:boolean,
+        public eolPatientFocus11:boolean,
+        public eolPatientFocus12:boolean,
+
         public eolPatientDetails:string,
 
         /* end of life caregiver care */
-        public eolCaregiverFocus:string,
+        public eolCaregiverFocus1:boolean,
+        public eolCaregiverFocus2:boolean,
+        public eolCaregiverFocus3:boolean,
+        public eolCaregiverFocus4:boolean,
+        public eolCaregiverFocus5:boolean,
+        public eolCaregiverFocus6:boolean,
+        public eolCaregiverFocus7:boolean,
+        public eolCaregiverFocus8:boolean,
+        public eolCaregiverFocus9:boolean,
+        public eolCaregiverFocus10:boolean,
+
         public eolCaregiverDetails:string,
 
         public defaultDate:string)

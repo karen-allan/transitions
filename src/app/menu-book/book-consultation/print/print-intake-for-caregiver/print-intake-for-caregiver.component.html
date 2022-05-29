@@ -1,0 +1,204 @@
+<div class="print-intake-for-caregiver-component">
+    <div class="print-session-component">
+   <!--
+   *************************** DEMOGRAPHIC INFO **********************************
+   -->
+        <div class="title">
+            Your Contact Information
+        </div>
+
+        <div>
+            <table class="demographic">
+                <tr>
+                    <td class="firstCell">
+                        Name:
+                    </td>
+                    <td class="secondCell">
+                        {{model.name}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Phone:
+                    </td>
+                    <td class="secondCell">
+                        {{model.cellPhone | mask: '(000) 000-0000'}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Email:
+                    </td>
+                    <td class="secondCell">
+                        {{model.email}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Address:
+                    </td>
+                    <td class="secondCell">
+                        {{model.address}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Province:
+                    </td>
+                    <td class="secondCell">
+                        {{model.provState}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Country:
+                    </td>
+                    <td class="secondCell">
+                        {{model.country}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Postal:
+                    </td>
+                    <td class="secondCell">
+                        {{model.pc | mask: "U0U-0U0"}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="title">
+            Emergency Contact Information
+        </div>
+
+        <div>
+            <table class="demographic">
+                <tr>
+                    <td class="firstCell">
+                        Name:
+                    </td>
+                    <td class="secondCell">
+                        {{model.emergName}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Relationship:
+                    </td>
+                    <td class="secondCell">
+                        {{model.emergRelation}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Phone:
+                    </td>
+                    <td class="secondCell">
+                        {{model.emergPhone | mask: '(000) 000-0000'}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="title">
+            Optional Details
+        </div>
+
+        <div>
+            <table class="demographic">
+                <tr>
+                    <td class="firstCell">
+                        Birthdate:
+                    </td>
+                    <td class="secondCell">
+                        {{model.birthdate | mask: '00-00-0000'}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Occupation:
+                    </td>
+                    <td class="secondCell">
+                        {{model.occupation}}
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="firstCell">
+                        Referred By:
+                    </td>
+                    <td class="secondCell">
+                        {{model.referredBy}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--
+        ******************************* SUPPORT FOR CAREGIVER ****************************
+        -->
+        <div class="title">
+            Your Concerns and Goals
+        </div>
+
+        <div class="sub-title">
+            As Caregiver, what are your main areas of focus for seeking a consultation?
+        </div>
+
+        <div class="response">
+            <div *ngIf="model.eolCaregiverFocus1">
+                I am overwhelmed with all the decisions I need to make.
+            </div>
+            <div *ngIf="model.eolCaregiverFocus2">
+                I am exhausted and burned out and need emotional support.
+            </div>
+            <div *ngIf="model.eolCaregiverFocus3">
+                I am physically unable to care for my loved one adequately.
+            </div>
+            <div *ngIf="model.eolCaregiverFocus4">
+                My loved one is angry and lashing out at me and I don't feel safe.
+            </div>
+            <div *ngIf="model.eolCaregiverFocus5">
+                I am having conflicts with my extended family's opinions on care, even though I am the main caregiver.
+            </div>
+            <div *ngIf="model.eolCaregiverFocus6">
+                I need to ensure their last wishes and requests are respected.
+            </div>
+            <div *ngIf="model.eolCaregiverFocus7">
+                I need to discuss these issues with an impartial advocate.
+            </div>
+            <div *ngIf="model.eolCaregiverFocus8">
+                I am having difficulties with my loved one's health care team.
+            </div>
+            <div *ngIf="model.eolCaregiverFocus9">
+                My loved one will not discuss any end of life issues with me and I need to get things in order.
+            </div>
+            <div *ngIf="model.eolCaregiverFocus10">
+                They want care in one place (hospital, hospice or home) that I am unable to organize on my own.
+            </div>
+        </div>
+
+        <div class="sub-title">
+            Can you expand on what you are looking for related to the above considerations?
+        </div>
+
+        <div class="response">
+            <div *ngIf="model.eolCaregiverDetails.length > 0">
+                {{model.eolCaregiverDetails}}
+            </div>
+            <div *ngIf="model.eolCaregiverDetails.length == 0">
+                No expanded answer given.
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,11 +16,19 @@ export class BookConsultationContainerComponent implements OnInit {
   detailListName="list-book";
   selectedIntakeForm='caregiver';
 
-  model  = new Client(0, '', '','' ,'' ,'', '', '','Canada' ,
-      '', '','' ,'', '', '', '', false,
-      false ,false ,false ,false ,false, false,false,
-      false,'','', '', '', false, false,false,
-      false, '', '', '', '', '','','', '');
+ model= new Client(0, "", "", "", "", "", "", "", "",
+     "", "", "", "", "", "", "",
+     false, false, false, false, false, false, false,
+     false, false, "", "", "", "",
+     false, false, false, false, "",
+     false, false, false, false, false, false,
+     false, false, "", false, false, false,
+     false, false, false, false, false,
+     false, false, false, false, "",
+     false, false, false, false, false,
+     false, false, false, false, false,
+     "", "");
+
 
   constructor() { }
 

@@ -11,10 +11,12 @@ and (orientation: portrait) {
         margin-right:5%;
     }
 
+    /* 240 x 272 */
     .facts-image {
         margin:1.5em 0;
-        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
-        height:220px;
+        background: url("src/assets/images/home/backgroundFAQs.jpg") no-repeat center;
+        height:200px;
+        background-size: contain;
     }
 
     .facts-text {
@@ -66,10 +68,13 @@ and (orientation: landscape) {
         align-content: flex-start;
     }
 
+
+    /* 560 x 272 */
     .facts-image {
         margin:1.5em 0;
-        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
-        height:220px;
+        background: url("src/assets/images/home/backgroundFAQs.jpg") no-repeat center;
+        height:272px;
+        background-size: contain;
     }
 
     .facts-text a {
@@ -117,8 +122,9 @@ and (orientation: portrait) {
 
     .facts-image {
         margin:1.5em 0;
-        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
-        height:220px;
+        background: url("src/assets/images/home/backgroundFAQs.jpg") no-repeat center;
+        height:350px;
+        background-size: contain;
     }
 
     .facts-text a {
@@ -166,8 +172,9 @@ and (orientation: landscape) {
 
     .facts-image {
         margin:1.5em 0;
-        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
-        height:220px;
+        background: url("src/assets/images/home/backgroundFAQs.jpg") no-repeat center;
+        height:400px;
+        background-size: contain;
     }
 
     .facts-text a {
@@ -219,8 +226,9 @@ and (orientation: portrait) {
 
     .facts-image {
         margin:1.5em 0;
-        background: url("src/assets/images/home/backgroundFAQsMobile.jpg") no-repeat center;
-        height:220px;
+        background: url("src/assets/images/home/backgroundFAQs.jpg") no-repeat center;
+        height:400px;
+        background-size: contain;
     }
 
     .facts-text a {
@@ -264,8 +272,7 @@ and (orientation: landscape) {
 
     .facts-image {
         grid-column:1;
-        background: url("src/assets/images/home/backgroundFAQsTablet.jpg") no-repeat center;
-        height:600px;
+        background: url("src/assets/images/home/backgroundFAQs.jpg") no-repeat center;
     }
 
     .facts-text {
@@ -323,8 +330,9 @@ and (orientation: portrait) {
 
     .facts-image {
         margin:1.5em 0;
-        background: url("src/assets/images/home/backgroundFAQsTablet.jpg") no-repeat center;
-        height:600px;
+        background: url("src/assets/images/home/backgroundFAQs.jpg") no-repeat center;
+        height:400px;
+        background-size: contain;
     }
 
     .facts-text a {
@@ -373,8 +381,8 @@ and (orientation: landscape) {
 
     .facts-image {
         grid-column:1;
-        background: url("src/assets/images/home/backgroundFAQsTablet.jpg") no-repeat center;
-        height:600px;
+        background: url("src/assets/images/home/backgroundFAQs.jpg") no-repeat center;
+        /*height:600px;*/
     }
 
     .facts-text {
@@ -426,9 +434,11 @@ and (min-width: 1440px) {
     }
 
     .facts-image {
+        display:grid;
         grid-column:1;
-        background: url("src/assets/images/home/backgroundFAQs2.jpg") no-repeat center;
-        height:750px;
+        background: url("src/assets/images/home/backgroundFAQs.jpg") no-repeat center;
+        /*height:650px;*/
+        background-size: contain;
     }
 
     .facts-text {
@@ -493,6 +503,7 @@ and (min-width: 1440px) {
         width:100%;
         align-content: center;
         justify-content: center;
+        /*border:thin solid var(--color-soft-blue);*/
     }
 
     .facts-image img {

@@ -1,0 +1,286 @@
+<div class="print-session-component">
+    <!--
+    *************************** DEMOGRAPHIC INFO **********************************
+    -->
+    <div class="title">
+        Your Contact Information
+    </div>
+
+    <div>
+        <table class="demographic">
+            <tr>
+                <td class="firstCell">
+                    Name:
+                </td>
+                <td class="secondCell">
+                    {{model.name}}
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstCell">
+                    Phone:
+                </td>
+                <td class="secondCell">
+                    {{model.cellPhone | mask: '(000) 000-0000'}}
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstCell">
+                    Email:
+                </td>
+                <td class="secondCell">
+                    {{model.email}}
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstCell">
+                    Address:
+                </td>
+                <td class="secondCell">
+                    {{model.address}}
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstCell">
+                    Province:
+                </td>
+                <td class="secondCell">
+                    {{model.provState}}
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstCell">
+                    Country:
+                </td>
+                <td class="secondCell">
+                    {{model.country}}
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstCell">
+                    Postal:
+                </td>
+                <td class="secondCell">
+                    {{model.pc | mask: "U0U-0U0"}}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="title">
+        Emergency Contact Information
+    </div>
+
+    <div>
+        <table class="demographic">
+            <tr>
+                <td class="firstCell">
+                    Name:
+                </td>
+                <td class="secondCell">
+                    {{model.emergName}}
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstCell">
+                    Relationship:
+                </td>
+                <td class="secondCell">
+                    {{model.emergRelation}}
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstCell">
+                    Phone:
+                </td>
+                <td class="secondCell">
+                    {{model.emergPhone | mask: '(000) 000-0000'}}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="title">
+        Optional Details
+    </div>
+
+    <div>
+        <table class="demographic">
+            <tr>
+                <td class="firstCell">
+                    Birthdate:
+                </td>
+                <td class="secondCell">
+                    {{model.birthdate | mask: '00-00-0000'}}
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstCell">
+                    Occupation:
+                </td>
+                <td class="secondCell">
+                    {{model.occupation}}
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstCell">
+                    Referred By:
+                </td>
+                <td class="secondCell">
+                    {{model.referredBy}}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!--
+    *********************** SESSION GOALS **************************
+    -->
+
+    <div class="sub-title">
+        Your Energy Medicine Knowledge Level:
+    </div>
+
+    <div class="response">
+        <div *ngIf="model.sessionEnergyKnowledge == 'knowledgeLevel1'">
+            I have no real knowledge about Energy Medicine or Energy Sessions.
+        </div>
+        <div *ngIf="model.sessionEnergyKnowledge == 'knowledgeLevel2'">
+            I have a little bit of knowledge about Energy and Energy Medicine.
+        </div>
+        <div *ngIf="model.sessionEnergyKnowledge == 'knowledgeLevel3'">
+            I have studied energy and have extensive knowledge about it.
+        </div>
+    </div>
+
+    <div class="title">
+        Your Energy Treatment Goals
+    </div>
+
+    <div class="sub-title">
+        What benefits do you hope to receive from getting Energy Medicine sessions?
+    </div>
+
+    <div class="response">
+        <div *ngIf="model.sessionBenefits.length > 0">
+            {{model.sessionBenefits}}
+        </div>
+        <div *ngIf="model.sessionBenefits.length == 0">
+            No expanded answer given.
+        </div>
+    </div>
+
+    <div class="sub-title">
+        Treatments or protocols you have tried and their effectiveness:
+    </div>
+
+    <div class="response">
+        <div *ngIf="model.sessionAltTreatments.length > 0">
+            {{model.sessionAltTreatments}}
+        </div>
+        <div *ngIf="model.sessionAltTreatments.length == 0">
+            No expanded answer given.
+        </div>
+    </div>
+
+    <!--
+    ************************* SESSION CONSIDERATIONS ***************************
+    -->
+
+    <div class="title">
+        Energy Treatment Considerations
+    </div>
+
+    <div class="response">
+        <div *ngIf="model.sessionPaceMaker">
+            I have a pace-maker.
+        </div>
+        <div *ngIf="model.sessionHearingAids">
+            I wear hearing aids.
+        </div>
+        <div *ngIf="model.sessionAromatherapy">
+            I am sensitive to aromas.
+        </div>
+        <div *ngIf="model.sessionPainfulJoints">
+            My joints hurt with movement.
+        </div>
+    </div>
+
+    <!--
+        ******************************** MEDICAL HISTORY  **********************************
+    -->
+
+    <div class="title">
+        (Optional) Your Medical History
+    </div>
+
+    <div class="sub-title">
+        Please list medications and supplements that your are currently taking.
+    </div>
+
+    <div class="response">
+        <div *ngIf="model.medsSupplements.length > 0">
+            {{model.medsSupplements}}
+        </div>
+        <div *ngIf="model.medsSupplements.length == 0">
+            No expanded answer given.
+        </div>
+    </div>
+
+    <div class="sub-title">
+        Please select any health conditions you have been diagnosed with:
+    </div>
+
+    <div class="response">
+        <div *ngIf="model.heartDisease">
+            Heart Disease
+        </div>
+        <div *ngIf="model.cancer">
+            Cancer
+        </div>
+        <div *ngIf="model.stroke">
+            Stroke
+        </div>
+        <div *ngIf="model.highBloodPressure">
+            High Blood Pressure
+        </div>
+        <div *ngIf="model.diabetes">
+            Diabetes
+        </div>
+        <div *ngIf="model.mentalIllness">
+            Emotional Illness
+        </div>
+        <div *ngIf="model.seizures">
+            Seizures
+        </div>
+        <div *ngIf="model.autoImmuneDisease">
+            Auto-immune Disease
+        </div>
+        <div *ngIf="model.otherDisease">
+            Other Illness
+        </div>
+    </div>
+
+    <div class="sub-title">
+        Please further describe your situation, condition and or illness, if applicable:
+    </div>
+
+    <div class="response">
+        <div *ngIf="model.illnessDetails.length > 0">
+            {{model.illnessDetails}}
+        </div>
+        <div *ngIf="model.illnessDetails.length == 0">
+            No expanded answer given.
+        </div>
+    </div>
+</div>

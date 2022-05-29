@@ -1,0 +1,66 @@
+@media print {
+    .print-session-component {
+        display:block;
+        font-family: 'Arial', serif;
+        color:#878787;
+        margin-top:1em;
+    }
+
+    .title {
+        /*font-family: 'Arial Black', serif;*/
+        font-size: 20px;
+        font-weight: bold;
+        margin-top:20px;
+        margin-bottom: 30px;
+    }
+
+    .page-title {
+        /*font-family: 'Arial Black', serif;*/
+        font-size: 18px;
+        font-weight: bold;
+        margin-top:20px;
+        margin-bottom: 30px;
+        page-break-before:always;
+    }
+
+    .sub-title {
+        /*font-family: 'Arial Black', serif;*/
+        font-size: 16px;
+        font-weight: normal;
+        margin-top:20px;
+        margin-bottom: 15px;
+        /*margin-left: 20px;*/
+    }
+
+    .demographic {
+        font-size: 14px;
+        border: #878787 solid 1px;
+        width: 80%;
+        margin-left: 20px;
+    }
+
+    .demographic .firstCell {
+        width: 25%;
+        padding:.25em 0;
+    }
+
+    .demographic .secondCell {
+        width: 75%;
+        padding:.25em 0;
+    }
+
+    .full-width-answer {
+        width: 100%;
+    }
+
+    .response {
+        margin-left: 40px;
+        font-size: 14px;
+    }
+}
+
+@media screen {
+    .print-session-component {
+        display:none;
+    }
+}

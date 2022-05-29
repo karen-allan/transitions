@@ -14,11 +14,18 @@ export class BookSessionContainerComponent implements OnInit {
   detailHeaderName = 'header-book-session'
   title='Book a Session'
 
-  model  = new Client(0, '', '','' ,'' ,'', '', '','Canada' ,
-    '', '','' ,'', '', '', '', false,
-    false ,false ,false ,false ,false, false,false,
-    false,'','', '', '', false, false,false,
-    false, '', '', '', '', '','','', '');
+  model= new Client(0, "", "", "", "", "", "", "", "",
+      "", "", "", "", "", "", "",
+      false, false, false, false, false, false, false,
+      false, false, "", "", "", "",
+      false, false, false, false, "",
+      false, false, false, false, false, false,
+      false, false, "", false, false, false,
+      false, false, false, false, false,
+      false, false, false, false, "",
+      false, false, false, false, false,
+      false, false, false, false, false,
+      "", "");
 
   constructor() { }
 
