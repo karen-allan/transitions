@@ -7,7 +7,6 @@
     }
 
     .title {
-        /*font-family: 'Arial Black', serif;*/
         font-size: 20px;
         font-weight: bold;
         margin-top:20px;
@@ -15,7 +14,6 @@
     }
 
     .page-title {
-        /*font-family: 'Arial Black', serif;*/
         font-size: 18px;
         font-weight: bold;
         margin-top:20px;
@@ -24,19 +22,28 @@
     }
 
     .sub-title {
-        /*font-family: 'Arial Black', serif;*/
         font-size: 16px;
         font-weight: normal;
         margin-top:20px;
         margin-bottom: 15px;
-        /*margin-left: 20px;*/
     }
 
-    .demographic {
+    .demographic  {
         font-size: 14px;
         border: #878787 solid 1px;
         width: 80%;
         margin-left: 20px;
+    }
+
+    .read {
+        font-size: 1.5em;
+        font-weight: 600;
+        width: 80%;
+        margin:2em 0 0 0;
+    }
+
+    .page-break {
+        page-break-before:always;
     }
 
     .demographic .firstCell {
@@ -49,8 +56,30 @@
         padding:.25em 0;
     }
 
-    .full-width-answer {
+    .disclaimer {
+      font-size: 14px;
+      border: #878787 solid 1px;
+      width: 100%;
+
+    }
+
+    .signed-date {
+        width:80%;
+        margin-top:2em;
+
+    }
+    .signed-date .sig-date{
+        width: 50%;
+        padding-bottom:2em;
+    }
+
+    .signed-date .line {
+        width: 50%;
+    }
+
+    .full-copy {
         width: 100%;
+        padding:1em;
     }
 
     .response {
