@@ -29,9 +29,9 @@
             "styles": [
               "src/assets/css/backgrounds.css",
               "src/assets/css/copy.css",
-              "src/assets/css/forms.css",
               "src/assets/css/lists.css",
               "src/assets/css/print-forms.css",
+              "src/assets/css/screen-forms.css",
               "src/assets/css/styles.css",
               "src/assets/css/symptoms.css",
               "src/assets/css/template.css",
@@ -105,9 +105,9 @@
             "styles": [
               "src/assets/css/backgrounds.css",
               "src/assets/css/copy.css",
-              "src/assets/css/forms.css",
               "src/assets/css/lists.css",
               "src/assets/css/print-forms.css",
+              "src/assets/css/screen-forms.css",
               "src/assets/css/styles.css",
               "src/assets/css/symptoms.css",
               "src/assets/css/template.css",

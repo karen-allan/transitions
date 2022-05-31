@@ -164,6 +164,7 @@
 
   --citations:.7em;
   --mobile-citations:.5em;
+  --signatures:.8em;
 
   /* RENE in LISTS */
   --rene-banana-port-font-size:.6em;
@@ -812,6 +813,10 @@
 
   .margin-top-3 {
     margin-top: 3em;
+  }
+
+  .margin-top-6 {
+    margin-top: 6em;
   }
 
   .margin-bottom-1 {

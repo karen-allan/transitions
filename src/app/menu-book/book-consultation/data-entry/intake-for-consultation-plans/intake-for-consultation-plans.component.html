@@ -13,45 +13,12 @@
             <app-medical-history [model]="model"></app-medical-history>
 
             <!-- DISCLAIMER-->
-            <div class="disclaimer-desktop">
-                <p>Please Read:</p>
-                <span>
-                    I understand that the End of Life Doula Consultations I receive are provided for the basic purpose of preparing
-                    myself and my family for my eventual end of life care and legacy. I know that an End of Life Doula can help
-                    with financial and health related questions and concerns allowing me to better plan,
-                    prepare and document all of my wishes and hopes for a good ending.
-                    <br><br>
-                    But I further understand that End of Life Doulas are not a substitute for medical palliative care, hospice care
-                    or emergency care but are rather meant to fill the gaps that standard medical care can not fill. I also understand
-                    that doulas can never initiate conversations related to MAID, but if asked can clarify the latest rules as best
-                    as possible. For further information about the new MAID laws contact
-                    <a target ='_blank'
-                        href="https://www.dyingwithdignity.ca/?gclid=Cj0KCQjw1ZeUBhDyARIsAOzAqQIYVDPHM8BSjiZ7thtY9r0237ApYnM8uHd0oQ3yqD4oaDxCRLvZ74oaAiAFEALw_wcBDeath With Dignity.">
-                        Death With Dignity</a>
-                    <br><br>
-                    I also know that End of Life Doulas can do much to aid in the comfort and care of a dying person but they
-                    can not prescribe or give out medications of any kind.
-                    <br><br>
-                    I understand that I must have proof of up-to-date Covid vaccinations in order to meet with you in person.
-                    If I have not been vaccinated I can still see you via a remote call, for example a Zoom or phone meeting.
-                    <br><br>
-                    I agree to provide 24 hours notice if I want to cancel an appointment. As well, I agree to bring proof of
-                    my Covid vaccination in the form of the vaccine passport. By signing below I agree and accept the above conditions.
-                </span>
-
-                <div class="date-signature-desktop">
-                    <label class="first-text-column" for="date">Date: (YYYY / MM / DD):</label>
-                    <input type="text" class="first-text-column no-border with-solid-underline" [(ngModel)]="model.defaultDate" id="date" name="date">
-
-                    <label class="first-text-column" for="sig">Signature:</label>
-                    <input type="text" class="first-text-column no-border with-solid-underline" id="sig" name="sig">
+            <div class="disclaimer-copy">
+                <div class="dark-heading">
+                    <h4>Please Read:</h4>
                 </div>
-            </div>
 
-            <!-- DISCLAIMER-->
-            <div class="disclaimer-mobile">
-                <p>Please Read:</p>
-                <span>
+                <div class="dark-copy pad-all-1">
                     I understand that the End of Life Doula Consultations I receive are provided for the basic purpose of preparing
                     myself and my family for my eventual end of life care and legacy. I know that an End of Life Doula can help
                     with financial and health related questions and concerns allowing me to better plan,
@@ -60,10 +27,7 @@
                     But I further understand that End of Life Doulas are not a substitute for medical palliative care, hospice care
                     or emergency care but are rather meant to fill the gaps that standard medical care can not fill. I also understand
                     that doulas can never initiate conversations related to MAID, but if asked can clarify the latest rules as best
-                    as possible. For further information about the new MAID laws contact
-                    <a target ='_blank'
-                       href="https://www.dyingwithdignity.ca/?gclid=Cj0KCQjw1ZeUBhDyARIsAOzAqQIYVDPHM8BSjiZ7thtY9r0237ApYnM8uHd0oQ3yqD4oaDxCRLvZ74oaAiAFEALw_wcBDeath With Dignity.">
-                        Death With Dignity</a>
+                    as possible. For further information about the new MAID laws contact Dying With Dignity.
                     <br><br>
                     I also know that End of Life Doulas can do much to aid in the comfort and care of a dying person but they
                     can not prescribe or give out medications of any kind.
@@ -73,14 +37,14 @@
                     <br><br>
                     I agree to provide 24 hours notice if I want to cancel an appointment. As well, I agree to bring proof of
                     my Covid vaccination in the form of the vaccine passport. By signing below I agree and accept the above conditions.
-                </span>
+                </div>
 
-                <div class="date-signature-block">
-                    <label class="first-text-column" for="mdate">Date: (YYYY / MM / DD):</label>
-                    <input type="text" class="first-text-column no-border with-solid-underline" [(ngModel)]="model.defaultDate" id="mdate" name="date">
+                <div class="date-signature">
+                    <label class="first-text-column pad-right-2" for="date">Date: (yyyy/mm/dd):</label>
+                    <input type="text" class="second-text-column no-border with-solid-underline" [(ngModel)]="model.defaultDate" id="date" name="date">
 
-                    <label class="first-text-column" for="msig">Signature:</label>
-                    <input type="text" class="first-text-column no-border with-solid-underline" id="msig" name="sig">
+                    <label class="first-text-column pad-right-2" for="sig">Signature:</label>
+                    <input type="text" class="second-text-column no-border with-solid-underline " id="sig" name="sig">
                 </div>
             </div>
         </form>
