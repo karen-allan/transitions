@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 
-import {Routes, RouterModule, ExtraOptions} from '@angular/router';
+import {Routes, RouterModule} from '@angular/router';
 
 import { AboutEnergyPractContainerComponent } from './menu-about/about-energy-practitioner/about-energy-pract-container/about-energy-pract-container.component';
 import { AboutEolDoulaContainerComponent } from './menu-about/about-eol-doula/about-eol-doula-container/about-eol-doula-container.component';
@@ -25,12 +25,12 @@ import { ReduceAnxietyContainerComponent } from './menu-energy-medicine/reduce-a
 import { RelieveBurnoutContainerComponent } from './menu-energy-medicine/relieve-burnout/relieve-burnout-container/relieve-burnout-container.component';
 import { DecreasePainContainerComponent } from './menu-energy-medicine/decrease-pain/decrease-pain-container/decrease-pain-container.component';
 
-import { FaqContainerComponent } from './menu-faq/faq-container/faq-container.component';
+// import { FaqContainerComponent } from './menu-faq/faq-container/faq-container.component';
 
 import { HomeContainerComponent } from './menu-home/home-container/home-container.component';
 
 
-import { PrintSessionComponent } from './menu-book/book-session/print/print-session.component';
+
 
 
 import { WizardContainerComponent } from './menu-wizard/wizard-container/wizard-container.component';
@@ -80,7 +80,7 @@ const routes: Routes = [
 
     {path: 'menuHome', component: HomeContainerComponent},
 
-    {path: 'printSessionProfile', component: PrintSessionComponent},
+
 ];
 
 @NgModule({

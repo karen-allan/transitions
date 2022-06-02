@@ -12,22 +12,15 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './service-files/in-memory-data.service';
 import {Router, Scroll} from '@angular/router';
 import { ViewportScroller } from '@angular/common';
-import { NgxMaskModule, IConfig } from 'ngx-mask';
-import { RouterModule, Routes } from '@angular/router';
+import { NgxMaskModule } from 'ngx-mask';
+import {filter} from "rxjs";
 
 /* GLOBAL FOOTER */
 import { GlobalFooterComponent } from './global-footer/global-footer.component';
 
 /* GLOBAL FORMS */
-/* CONSULTATIONS */
-
-
-
-
-/* CURRENTLY, NOT IN USE */
-import { CovidComponent } from './menu-book/global-form-sections/covid/covid.component';
-
-/* SESSIONS */
+/* REPRESENTATIVE NINE */
+import { RepNineFinalComponent } from './menu-wizard/rep-nine/rep-nine-final/rep-nine-final.component';
 
 /* GLOBAL GRIDS */
 import { GlobalGridsComponent } from './global-grids/global-grids.component';
@@ -38,11 +31,12 @@ import { GlobalHeadersComponent } from './global-headers/global-headers.componen
 /* GLOBAL MENU */
 import { GlobalMenuComponent } from './global-menu/global-menu.component';
 
-/* GLOBAL PRINT */
-import { PrintSessionComponent } from './menu-book/book-session/print/print-session.component';
-
 /* MENU ABOUT FOLDER */
-/* ABOUT DOULA FOLDER */
+/* ABOUT ENERGY PRACTITIONER FOLDER */
+import {AboutEnergyPractContainerComponent} from './menu-about/about-energy-practitioner/about-energy-pract-container/about-energy-pract-container.component';
+import {AboutEnergyPractOverviewComponent} from './menu-about/about-energy-practitioner/about-energy-pract-overview/about-energy-pract-overview.component';
+
+/* ABOUT EOL DOULA FOLDER */
 import {AboutEolDoulaContainerComponent} from './menu-about/about-eol-doula/about-eol-doula-container/about-eol-doula-container.component';
 import {AboutEolDoulaOverviewComponent} from './menu-about/about-eol-doula/about-eol-doula-overview/about-eol-doula-overview.component';
 
@@ -50,20 +44,60 @@ import {AboutEolDoulaOverviewComponent} from './menu-about/about-eol-doula/about
 import { AboutMeContainerComponent } from './menu-about/about-me/about-me-container/about-me-container.component';
 import { AboutMeOverviewComponent } from './menu-about/about-me/about-me-overview/about-me-overview.component';
 
-/* ABOUT PRACTITIONER FOLDER */
-import {AboutEnergyPractContainerComponent} from './menu-about/about-energy-practitioner/about-energy-pract-container/about-energy-pract-container.component';
-import {AboutEnergyPractOverviewComponent} from './menu-about/about-energy-practitioner/about-energy-pract-overview/about-energy-pract-overview.component';
-
 /* MENU BOOK FOLDER */
-/* BOOK CONSULT */
+/* BOOK CONSULTATION */
 import { BookConsultationContainerComponent } from './menu-book/book-consultation/book-consultation-container/book-consultation-container.component';
 import { BookConsultationOverviewComponent } from './menu-book/book-consultation/book-consultation-overview/book-consultation-overview.component';
 
-/* BOOK SESSION */
+/* DATA ENTRY CONSULT */
+import { DataEntryCaregiverConsultComponent } from './menu-book/book-consultation/data-entry-consult/data-entry-caregiver-consult/data-entry-caregiver-consult.component';
+import { DataEntryPatientConsultComponent } from './menu-book/book-consultation/data-entry-consult/data-entry-patient-consult/data-entry-patient-consult.component';
+import { DataEntryPlanningConsultComponent } from './menu-book/book-consultation/data-entry-consult/data-entry-planning-consult/data-entry-planning-consult.component';
+
+import { MenuForConsultationsComponent } from './menu-book/book-consultation/menu-for-consultations/menu-for-consultations.component';
+
+/* PRINT CONSULT */
+import { PrintCaregiverConsultComponent } from './menu-book/book-consultation/print-consult/print-caregiver-consult/print-caregiver-consult.component';
+import { PrintPatientConsultComponent } from './menu-book/book-consultation/print-consult/print-patient-consult/print-patient-consult.component';
+import { PrintPlanningConsultComponent } from './menu-book/book-consultation/print-consult/print-planning-consult/print-planning-consult.component';
+
+/* BOOK ENERGY SESSION */
 import { BookSessionContainerComponent } from './menu-book/book-session/book-session-container/book-session-container.component';
 import { BookSessionOverviewComponent } from './menu-book/book-session/book-session-overview/book-session-overview.component';
+import { DataEntryEnergySessionComponent } from './menu-book/book-session/data-entry-energy-session/data-entry-energy-session.component';
+import { PrintEnergySessionComponent } from './menu-book/book-session/print-energy-session/print-energy-session.component';
+
+/* GLOBAL FORM SECTIONS */
+import { CovidComponent } from './menu-book/global-form-sections/covid/covid.component';
+import { DemographicInfoComponent } from './menu-book/global-form-sections/demographic-info/demographic-info.component';
+import { EndOfLifePlanningComponent } from './menu-book/global-form-sections/end-of-life-planning/end-of-life-planning.component';
+import { FrailtyScaleComponent } from './menu-book/global-form-sections/frailty-scale/frailty-scale.component';
+import { MedicalHistoryComponent } from './menu-book/global-form-sections/medical-history/medical-history.component';
+import { SessionConsiderationsComponent } from './menu-book/global-form-sections/session-considerations/session-considerations.component';
+import { SessionGoalsComponent} from "./menu-book/global-form-sections/session-goals/session-goals.component";
+import { SupportForCaregiverComponent } from './menu-book/global-form-sections/support-for-caregiver/support-for-caregiver.component';
+import { SupportForPatientComponent } from './menu-book/global-form-sections/support-for-patient/support-for-patient.component';
+
+
+
 
 /* MENU DOULA WORK */
+/* CARE FOR PATIENTS */
+import { CareForPatientsOverviewComponent } from './menu-doula-work/care-for-patients/care-for-patients-overview/care-for-patients-overview.component';
+import { CareForPatientsContainerComponent } from './menu-doula-work/care-for-patients/care-for-patients-container/care-for-patients-container.component';
+
+/* CHOOSE MEMORIAL */
+import { ChooseMemorialContainerComponent } from './menu-doula-work/choose-memorial/choose-memorial-container/choose-memorial-container.component';
+import { ChooseMemorialOverviewComponent } from './menu-doula-work/choose-memorial/choose-memorial-overview/choose-memorial-overview.component';
+
+/* CHOOSE REPRESENTATIVE */
+import { ChooseRepresentativeContainerComponent } from './menu-doula-work/choose-representative/choose-representative-container/choose-representative-container.component';
+import { ChooseRepresentativeOverviewComponent } from './menu-doula-work/choose-representative/choose-representative-overview/choose-representative-overview.component';
+
+/* CREATE LEGACY */
+import { CreateLegacyContainerComponent } from './menu-doula-work/create-legacy/create-legacy-container/create-legacy-container.component';
+import { CreateLegacyOverviewComponent } from './menu-doula-work/create-legacy/create-legacy-overview/create-legacy-overview.component';
+
 /* PLAN AHEAD */
 import { PlanAheadContainerComponent } from './menu-doula-work/plan-ahead/plan-ahead-container/plan-ahead-container.component';
 import { PlanAheadOverviewComponent } from './menu-doula-work/plan-ahead/plan-ahead-overview/plan-ahead-overview.component';
@@ -72,39 +106,20 @@ import { PlanAheadOverviewComponent } from './menu-doula-work/plan-ahead/plan-ah
 import { SupportCaregiversOverviewComponent } from './menu-doula-work/supportCaregivers/support-caregivers-overview/support-caregivers-overview.component';
 import { SupportCaregiversContainerComponent } from './menu-doula-work/supportCaregivers/support-caregivers-container/support-caregivers-container.component';
 
-/* CEREMONY */
-import { ChooseMemorialContainerComponent } from './menu-doula-work/choose-memorial/choose-memorial-container/choose-memorial-container.component';
-import { ChooseMemorialOverviewComponent } from './menu-doula-work/choose-memorial/choose-memorial-overview/choose-memorial-overview.component';
-
-/* REPRESENTATIVE */
-import { ChooseRepresentativeContainerComponent } from './menu-doula-work/choose-representative/choose-representative-container/choose-representative-container.component';
-import { ChooseRepresentativeOverviewComponent } from './menu-doula-work/choose-representative/choose-representative-overview/choose-representative-overview.component';
-
-/* LEGACY */
-import { CreateLegacyContainerComponent } from './menu-doula-work/create-legacy/create-legacy-container/create-legacy-container.component';
-import { CreateLegacyOverviewComponent } from './menu-doula-work/create-legacy/create-legacy-overview/create-legacy-overview.component';
-
-/* PATIENT */
-import { CareForPatientsOverviewComponent } from './menu-doula-work/care-for-patients/care-for-patients-overview/care-for-patients-overview.component';
-import { CareForPatientsContainerComponent } from './menu-doula-work/care-for-patients/care-for-patients-container/care-for-patients-container.component';
-
 /* MENU ENERGY MEDICINE */
+/* DECREASE PAIN */
+import { DecreasePainOverviewComponent } from './menu-energy-medicine/decrease-pain/decrease-pain-overview/decrease-pain-overview.component';
+import { DecreasePainContainerComponent } from './menu-energy-medicine/decrease-pain/decrease-pain-container/decrease-pain-container.component';
+
 /* DISCOVER ELEMENT FOLDER */
-import {ElementWheelComponent} from './menu-energy-medicine/discover-element/element-wheel/element-wheel.component';
-import {SelectedElementComponent } from './menu-energy-medicine/discover-element/selected-element/selected-element.component';
 import { DiscoverElementContainerComponent } from './menu-energy-medicine/discover-element/discover-element-container/discover-element-container.component';
 import { DiscoverElementOverviewComponent } from './menu-energy-medicine/discover-element/discover-element-overview/discover-element-overview.component';
+import {ElementWheelComponent} from './menu-energy-medicine/discover-element/element-wheel/element-wheel.component';
+import {SelectedElementComponent } from './menu-energy-medicine/discover-element/selected-element/selected-element.component';
 
-/* ENERGY EXERCISES */
+/* DO ENERGY EXERCISES */
 import { DoEnergyExercisesOverviewComponent } from './menu-energy-medicine/do-energy-exercises/do-energy-exercises-overview/do-energy-exercises-overview.component';
 import { DoEnergyExercisesContainerComponent } from './menu-energy-medicine/do-energy-exercises/do-energy-exercises-container/do-energy-exercises-container.component';
-
-/* TRACE MERIDIANS */
-import {MeridianTracingVideosComponent } from './menu-energy-medicine/trace-meridians/meridian-tracing-videos/meridian-tracing-videos.component';
-import {MeridianWheelComponent } from './menu-energy-medicine/trace-meridians/meridian-wheel/meridian-wheel.component';
-import {SelectedMeridianComponent } from './menu-energy-medicine/trace-meridians/selected-meridian/selected-meridian.component';
-import { TraceMeridiansContainerComponent } from './menu-energy-medicine/trace-meridians/trace-meridians-container/trace-meridians-container.component';
-import { TraceMeridiansOverviewComponent } from './menu-energy-medicine/trace-meridians/trace-meridians-overview/trace-meridians-overview.component';
 
 /* REDUCE ANXIETY */
 import { ReduceAnxietyOverviewComponent } from './menu-energy-medicine/reduce-anxiety/reduce-anxiety-overview/reduce-anxiety-overview.component';
@@ -114,55 +129,58 @@ import { ReduceAnxietyContainerComponent } from './menu-energy-medicine/reduce-a
 import { RelieveBurnoutContainerComponent } from './menu-energy-medicine/relieve-burnout/relieve-burnout-container/relieve-burnout-container.component';
 import { RelieveBurnoutOverviewComponent } from './menu-energy-medicine/relieve-burnout/relieve-burnout-overview/relieve-burnout-overview.component';
 
-/* REDUCE PAIN */
-import { DecreasePainOverviewComponent } from './menu-energy-medicine/decrease-pain/decrease-pain-overview/decrease-pain-overview.component';
-import { DecreasePainContainerComponent } from './menu-energy-medicine/decrease-pain/decrease-pain-container/decrease-pain-container.component';
+/* TRACE MERIDIANS */
+import {MeridianTracingVideosComponent } from './menu-energy-medicine/trace-meridians/meridian-tracing-videos/meridian-tracing-videos.component';
+import {MeridianWheelComponent } from './menu-energy-medicine/trace-meridians/meridian-wheel/meridian-wheel.component';
+import {SelectedMeridianComponent } from './menu-energy-medicine/trace-meridians/selected-meridian/selected-meridian.component';
+import { TraceMeridiansContainerComponent } from './menu-energy-medicine/trace-meridians/trace-meridians-container/trace-meridians-container.component';
+import { TraceMeridiansOverviewComponent } from './menu-energy-medicine/trace-meridians/trace-meridians-overview/trace-meridians-overview.component';
 
 /* FAQ */
 import { FaqContainerComponent } from './menu-faq/faq-container/faq-container.component';
 import { FaqOverviewComponent } from './menu-faq/faq-overview/faq-overview.component';
 
-/* HOME MENU FOLDER */
+/* MENU HOME FOLDER */
 import {HomeContainerComponent} from './menu-home/home-container/home-container.component';
 import {HomeOverviewComponent} from './menu-home/home-overview/home-overview.component';
 
+/* MENU WIZARD FOLDER */
+/* ACP */
+import { AcpWizardContainerComponent } from './menu-wizard/acp/acp-wizard-container/acp-wizard-container.component';
+import { AcpWizardOverviewComponent } from './menu-wizard/acp/acp-wizard-overview/acp-wizard-overview.component';
+
+/* DNR */
+import { DnrWizardContainerComponent } from './menu-wizard/dnr/dnr-wizard-container/dnr-wizard-container.component';
+import { DnrWizardOverviewComponent } from './menu-wizard/dnr/dnr-wizard-overview/dnr-wizard-overview.component';
+
+/* EDITH */
+import { EdithWizardOverviewComponent } from './menu-wizard/edith/edith-wizard-overview/edith-wizard-overview.component';
+import { EdithWizardContainerComponent } from './menu-wizard/edith/edith-wizard-container/edith-wizard-container.component';
+
+/* REP NINE */
+import { RepNineWizardContainerComponent } from './menu-wizard/rep-nine/rep-nine-wizard-container/rep-nine-wizard-container.component';
+import { RepNineWizardOverviewComponent } from './menu-wizard/rep-nine/rep-nine-wizard-overview/rep-nine-wizard-overview.component';
+
+/* TRANSFER */
+import { TransferWizardContainerComponent } from './menu-wizard/transfer/transfer-wizard-container/transfer-wizard-container.component';
+import { TransferWizardOverviewComponent } from './menu-wizard/transfer/transfer-wizard-overview/transfer-wizard-overview.component';
+
+/* TSDM */
+import { TsdmWizardContainerComponent } from './menu-wizard/tsdm/tsdm-wizard-container/tsdm-wizard-container.component';
+import { TsdmWizardOverviewComponent } from './menu-wizard/tsdm/tsdm-wizard-overview/tsdm-wizard-overview.component';
 
 import { WizardContainerComponent } from './menu-wizard/wizard-container/wizard-container.component';
 import { WizardOverviewComponent } from './menu-wizard/wizard-overview/wizard-overview.component';
-import { TsdmWizardOverviewComponent } from './menu-wizard/tsdm/tsdm-wizard-overview/tsdm-wizard-overview.component';
-import { TsdmWizardContainerComponent } from './menu-wizard/tsdm/tsdm-wizard-container/tsdm-wizard-container.component';
-import { RepNineWizardContainerComponent } from './menu-wizard/rep-nine/rep-nine-wizard-container/rep-nine-wizard-container.component';
-import { RepNineWizardOverviewComponent } from './menu-wizard/rep-nine/rep-nine-wizard-overview/rep-nine-wizard-overview.component';
-import { DnrWizardOverviewComponent } from './menu-wizard/dnr/dnr-wizard-overview/dnr-wizard-overview.component';
 
-import { DnrWizardContainerComponent } from './menu-wizard/dnr/dnr-wizard-container/dnr-wizard-container.component';
-import { EdithWizardOverviewComponent } from './menu-wizard/edith/edith-wizard-overview/edith-wizard-overview.component';
-import { EdithWizardContainerComponent } from './menu-wizard/edith/edith-wizard-container/edith-wizard-container.component';
-import { AcpWizardContainerComponent } from './menu-wizard/acp/acp-wizard-container/acp-wizard-container.component';
-import { AcpWizardOverviewComponent } from './menu-wizard/acp/acp-wizard-overview/acp-wizard-overview.component';
-import { TransferWizardOverviewComponent } from './menu-wizard/transfer/transfer-wizard-overview/transfer-wizard-overview.component';
-import { TransferWizardContainerComponent } from './menu-wizard/transfer/transfer-wizard-container/transfer-wizard-container.component';
-import {filter} from "rxjs";
-import { RepNineFinalComponent } from './global-forms/representative-nine/rep-nine-final/rep-nine-final.component';
 
-import { MedicalHistoryComponent } from './menu-book/global-form-sections/medical-history/medical-history.component';
-import { DemographicInfoComponent } from './menu-book/global-form-sections/demographic-info/demographic-info.component';
 
-import { SessionGoalsComponent} from "./menu-book/global-form-sections/session-goals/session-goals.component";
-import { EndOfLifePlanningComponent } from './menu-book/global-form-sections/end-of-life-planning/end-of-life-planning.component';
-import { SupportForCaregiverComponent } from './menu-book/global-form-sections/support-for-caregiver/support-for-caregiver.component';
-import { SupportForPatientComponent } from './menu-book/global-form-sections/support-for-patient/support-for-patient.component';
-import { IntakeForConsultationPatientComponent } from './menu-book/book-consultation/data-entry/intake-for-consultation-patient/intake-for-consultation-patient.component';
-import { IntakeForConsultationCaregiverComponent } from './menu-book/book-consultation/data-entry/intake-for-consultation-caregiver/intake-for-consultation-caregiver.component';
 
-import { IntakeForConsultationPlansComponent } from './menu-book/book-consultation/data-entry/intake-for-consultation-plans/intake-for-consultation-plans.component';
-import { MenuForConsultationsComponent } from './menu-book/book-consultation/data-entry/menu-for-consultations/menu-for-consultations.component';
-import { IntakeForEnergySessionComponent } from './menu-book/book-session/data-entry/intake-for-energy-session.component';
-import { FrailtyScaleComponent } from './menu-book/global-form-sections/frailty-scale/frailty-scale.component';
-import { SessionConsiderationsComponent } from './menu-book/global-form-sections/session-considerations/session-considerations.component';
-import { PrintIntakeForPlansComponent } from './menu-book/book-consultation/print/print-intake-for-plans/print-intake-for-plans.component';
-import { PrintIntakeForCaregiverComponent } from './menu-book/book-consultation/print/print-intake-for-caregiver/print-intake-for-caregiver.component';
-import { PrintIntakeForPatientComponent } from './menu-book/book-consultation/print/print-intake-for-patient/print-intake-for-patient.component';
+
+
+
+
+
+
 
 @NgModule({
     declarations: [
@@ -185,7 +203,6 @@ import { PrintIntakeForPatientComponent } from './menu-book/book-consultation/pr
         GlobalHeadersComponent,
         GlobalMenuComponent,
         /* GLOBAL PRINT */
-        PrintSessionComponent,
 
         /* MENU ABOUT */
         AboutEolDoulaContainerComponent,
@@ -272,17 +289,21 @@ import { PrintIntakeForPatientComponent } from './menu-book/book-consultation/pr
         EndOfLifePlanningComponent,
         SupportForCaregiverComponent,
         SupportForPatientComponent,
-        IntakeForConsultationPatientComponent,
-        IntakeForConsultationCaregiverComponent,
 
-        IntakeForConsultationPlansComponent,
           MenuForConsultationsComponent,
-          IntakeForEnergySessionComponent,
+
           FrailtyScaleComponent,
           SessionConsiderationsComponent,
-          PrintIntakeForPlansComponent,
-          PrintIntakeForCaregiverComponent,
-          PrintIntakeForPatientComponent,
+
+
+          DataEntryCaregiverConsultComponent,
+          DataEntryPatientConsultComponent,
+          DataEntryPlanningConsultComponent,
+          DataEntryEnergySessionComponent,
+          PrintCaregiverConsultComponent,
+          PrintPatientConsultComponent,
+          PrintPlanningConsultComponent,
+          PrintEnergySessionComponent,
 
 
 

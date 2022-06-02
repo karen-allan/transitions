@@ -1,0 +1,11 @@
+@media print {
+    .print-intake-for-plans-component {
+        display:block;
+    }
+}
+
+@media screen {
+    .print-intake-for-plans-component {
+        display:none;
+    }
+}

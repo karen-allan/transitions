@@ -1,6 +1,6 @@
 import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import { RepNine} from "../../../ts-files/rep-nine";
-import {RepNineFinalComponent} from "../../../global-forms/representative-nine/rep-nine-final/rep-nine-final.component"
+import {RepNineFinalComponent} from "../rep-nine-final/rep-nine-final.component"
 
 @Component({
   selector: 'app-rep-nine-wizard-overview',

@@ -29,11 +29,11 @@
   <app-global-footer></app-global-footer>
 </div>
 <div *ngIf="selectedIntakeForm == 'caregiver'">
-  <app-print-intake-for-caregiver [model]="model"></app-print-intake-for-caregiver>
+  <app-print-caregiver-consult [model]="model"></app-print-caregiver-consult>
 </div>
 <div *ngIf="selectedIntakeForm == 'planning'">
-  <app-print-intake-for-plans [model]="model"></app-print-intake-for-plans>
+  <app-print-planning-consult [model]="model"></app-print-planning-consult>
 </div>
 <div *ngIf="selectedIntakeForm == 'patient'">
-  <app-print-intake-for-patient [model]="model"></app-print-intake-for-patient>
+  <app-print-patient-consult [model]="model"></app-print-patient-consult>
 </div>
