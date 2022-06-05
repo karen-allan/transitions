@@ -11,7 +11,7 @@ export class HomeContainerComponent implements OnInit {
   subMenuItemId = 0
 
   detailHeaderName = 'header-home'
-  title='Our Modern World - How Modern Are We?'
+  title='Our Modern World: How Healthy Are We?'
 
   constructor() { }
 

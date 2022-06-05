@@ -26,12 +26,12 @@ and (orientation: portrait) {
         font-size:var(--script-heading-banana-port-font-size);
     }
 
-    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+    .testimonial p {
         font-size:var(--script-p-banana-port-font-size);
         margin:0;
     }
 
-    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+    .testimonial span {
         font-size:var(--script-small-banana-port-font-size);
     }
 
@@ -67,12 +67,12 @@ and (orientation: landscape) {
         grid-column:1;
     }
 
-    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+    .testimonial p {
         font-size:var(--script-p-banana-land-font-size);
         margin:0;
     }
 
-    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+    .testimonial span {
         font-size:var(--script-small-banana-land-font-size);
     }
 
@@ -105,12 +105,12 @@ and (orientation: portrait) {
         font-size:var(--script-heading-mobile-port-font-size);
     }
 
-    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+    .testimonial p {
         font-size:var(--script-p-mobile-port-font-size);
         margin:0;
     }
 
-    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+    .testimonial span {
         font-size:var(--script-small-mobile-port-font-size);
     }
 
@@ -142,12 +142,12 @@ and (orientation: landscape) {
         font-size:var(--script-heading-mobile-land-font-size);
     }
 
-    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+    .testimonial p {
         font-size:var(--script-p-mobile-land-font-size);
         margin:0;
     }
 
-    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+    .testimonial span {
         font-size:var(--script-small-mobile-land-font-size);
     }
 
@@ -178,12 +178,12 @@ and (orientation: portrait) {
         font-size:var(--script-heading-tablet-port-font-size);
     }
 
-    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+    .testimonial p  {
         font-size:var(--script-p-tablet-port-font-size);
         margin:0;
     }
 
-    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+    .testimonial span {
         font-size:var(--script-small-tablet-port-font-size);
     }
 
@@ -214,12 +214,12 @@ and (orientation: landscape) {
         font-size:var(--script-heading-tablet-land-font-size);
     }
 
-    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+    .testimonial p {
         font-size:var(--script-p-tablet-land-font-size);
         margin:0;
     }
 
-    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+    .testimonial span {
         font-size:var(--script-small-tablet-land-font-size);
     }
 
@@ -251,12 +251,12 @@ and (orientation: portrait) {
         font-size:var(--script-heading-ipad-port-font-size);
     }
 
-    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+    .testimonial p {
         font-size:var(--script-p-ipad-port-font-size);
         margin:0;
     }
 
-    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+    .testimonial span {
         font-size:var(--script-small-ipad-port-font-size);
     }
 
@@ -289,12 +289,12 @@ and (orientation: landscape) {
         font-size:var(--script-heading-ipad-land-font-size);
     }
 
-    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+    .testimonial p {
         font-size:var(--script-p-ipad-land-font-size);
         margin:0;
     }
 
-    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+    .testimonial span {
         font-size:var(--script-small-ipad-land-font-size);
     }
 
@@ -323,12 +323,12 @@ and (min-width: 1440px) {
         font-size:var(--script-heading-desktop-font-size);
     }
 
-    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p {
+    .testimonial p {
         font-size:var(--script-p-desktop-font-size);
         margin:0;
     }
 
-    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+    .testimonial  span {
         font-size:var(--script-small-desktop-font-size);
     }
 }
@@ -339,7 +339,7 @@ and (min-width: 1440px) {
     /* PAYMENT INFORMATION */
     .charges-grid {
         display:grid;
-        float:left;
+        margin:auto;
         font-style:normal;
         color: var(--color-light-blue);
     }
@@ -350,6 +350,7 @@ and (min-width: 1440px) {
         margin:2em 0 0 0;
         text-transform: uppercase;
         font-weight:600;
+        width: 100%;
     }
 
     .charges-inline-grid {
@@ -376,6 +377,8 @@ and (min-width: 1440px) {
 
     .total {
         grid-column:2;
+        justify-content: flex-end;
+        padding-right:1em;
     }
 
     .pricing span, .total span {
@@ -403,7 +406,7 @@ and (min-width: 1440px) {
         margin-bottom:.5em;
     }
 
-    .testimonial-1, .testimonial-2, .testimonial-3, .testimonial-4, .testimonial-5, .testimonial-6 {
+    .testimonial-1, .testimonial-2, .testimonial-3, .testimonial-4, .testimonial-5, .testimonial-6, .testimonial-7  {
         display:grid;
         width:100%;
         border:thin solid var(--color-dark-grey);
@@ -435,7 +438,7 @@ and (min-width: 1440px) {
         grid-row:6;
     }
 
-    .testimonial-1 p, .testimonial-2 p, .testimonial-3 p, .testimonial-4 p, .testimonial-5 p, .testimonial-6 p  {
+    .testimonial p {
         padding:1em 1em 0 1em;
         line-height: 140%;
         text-align: justify;
@@ -443,7 +446,7 @@ and (min-width: 1440px) {
         margin:0;
     }
 
-    .testimonial-1 span, .testimonial-2 span, .testimonial-3 span, .testimonial-4 span, .testimonial-5 span, .testimonial-6 span {
+    .testimonial span {
         display:grid;
         justify-content: flex-end;
         align-content: flex-end;

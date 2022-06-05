@@ -6,6 +6,10 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait){
 
+    .home-image {
+        height:122px;
+    }
+
     .background-images {
         height:88px;
     }
@@ -21,6 +25,10 @@ and (orientation: portrait){
 and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
+
+    .home-image {
+        height:289px;
+    }
 
     .background-images {
         height:207px;
@@ -38,6 +46,10 @@ and (orientation: landscape) {
 and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
+
+    .home-image {
+        height:183px;
+    }
 
     .background-images {
         height:131px;
@@ -57,6 +69,10 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
+    .home-image {
+        height:456px;
+    }
+
     .background-images {
         height:327px;
     }
@@ -74,6 +90,10 @@ and (orientation: landscape) {
 and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
+
+    .home-image {
+        height:306px;
+    }
 
     .background-images {
         height:219px;
@@ -93,6 +113,10 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
+    .home-image {
+        height:652px;
+    }
+
     .background-images {
         height:467px;
     }
@@ -111,6 +135,10 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
+    .home-image {
+        height:522px;
+    }
+
     .background-images {
         height:373px;
     }
@@ -128,6 +156,10 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
+    .home-image {
+        height:696px;
+    }
+
     .background-images {
         height:498px;
     }
@@ -141,10 +173,13 @@ and (orientation: landscape) {
 
 /* LAPTOPS ****************************************************************************************************/
 @media only screen
-and (min-width: 1440px)
-and (max-width:1919px ){
+    and (min-width: 1440px)
+    and (max-width:1919px) {
 
-    /* 525 plus sub-menu height 45 */
+    .home-image {
+        height:734px;
+    }
+
     .background-images {
         height:525px;
     }
@@ -156,22 +191,25 @@ and (max-width:1919px ){
 
 }
 
+
 /* DESKTOPS ****************************************************************************************************/
 @media only screen
 and (min-width: 1920px) {
 
-    /* 48 is default p and span height plus padding at top of 30 = 78 px PLUS MENUS at 225*
-     700 - 136 */
-        .background-images {
-            height:700px;
-        }
+    /* 1920 by 978 */
+    .home-image {
+        height:978px;
+    }
 
+    /* 1920 by 700 */
+    .background-images {
+        height:700px;
+    }
 
-
-        .background-text p {
-            font-size:var(--quotes-p-desktop-font-size);
-            line-height:150%;
-        }
+    .background-text p {
+        font-size:var(--quotes-p-desktop-font-size);
+        line-height:150%;
+    }
 
 }
 
@@ -179,20 +217,19 @@ and (min-width: 1920px) {
 @media only screen {
 
         .background-images {
-            display:grid;
+            display:block;
+            float:left;
             width: 100%;
-            align-content: flex-end;
             max-width:1920px;
         }
 
         .background-text {
+            display:block;
+            float:left;
             width:100%;
-            margin:0 auto 0 auto;
             text-align: center;
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            background-color: var(--color-darkest-blue); /* Fallback color */
             color: var(--color-white);
-            z-index: 2;
             border: 1px solid #f1f1f1;
          }
 
@@ -200,14 +237,15 @@ and (min-width: 1920px) {
         .background-text p {
             font-family: var(--family-mono);
             font-weight: 400;
-
+            padding: 0 1em;
+            line-height:120%;
         }
 
         /* HEADER BACKGROUND IMAGES */
         .header-home {
             background-size: cover;
             background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-            url('src/assets/images/backgrounds/home/home.jpg');
+            url('src/assets/images/backgrounds/home/transitionsInEnergy.jpg');
         }
 
         /* ABOUT BACKGROUND IMAGES */

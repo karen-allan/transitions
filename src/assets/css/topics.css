@@ -17,9 +17,13 @@ and (orientation: portrait) {
 
     /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
     .topic-grid h1 {
-        font-size:var(--monument-header-banana-port-font-size);
-        align-content: flex-end;
-        justify-content: center;
+        display:none;
+    }
+
+    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+        height:240px;
+        background-position: center;
+        background-size: cover;
     }
 }
 
@@ -40,10 +44,14 @@ and (orientation: landscape) {
 
     /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
     .topic-grid h1 {
-        font-size:var(--monument-header-banana-land-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
+        display:grid;
+        font-size:var(--rene-thin-banana-land-font-size);
+    }
+
+    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+        height:300px;
+        background-position: right;
+        background-size: contain;
     }
 }
 
@@ -64,9 +72,13 @@ and (orientation: portrait) {
 
     /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
     .topic-grid h1 {
-        font-size:var(--monument-header-mobile-port-font-size);
-        align-content: flex-end;
-        justify-content: center;
+        display:none;
+    }
+
+    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+        height:400px;
+        background-position: center;
+        background-size: cover;
     }
 }
 
@@ -87,10 +99,14 @@ and (orientation: landscape) {
 
     /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
     .topic-grid h1 {
-        font-size:var(--monument-header-mobile-land-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
+        display:grid;
+        font-size:var(--rene-thin-mobile-land-font-size);
+    }
+
+    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+        height:400px;
+        background-position: right;
+        background-size: contain;
     }
 }
 
@@ -111,10 +127,14 @@ and (orientation: portrait) {
 
     /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
     .topic-grid h1 {
-        font-size:var(--monument-header-tablet-port-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
+        display:grid;
+        font-size:var(--rene-thin-tablet-port-font-size);
+    }
+
+    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+        height:300px;
+        background-position: right;
+        background-size: contain;
     }
 }
 
@@ -135,10 +155,13 @@ and (orientation: landscape) {
 
     /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
     .topic-grid h1 {
-        font-size:var(--monument-header-tablet-land-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
+        display:grid;
+        font-size:var(--rene-thin-tablet-land-font-size);
+    }
+
+    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+        height:400px;
+        background-position: right;
     }
 }
 
@@ -159,10 +182,13 @@ and (orientation: portrait) {
 
     /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
     .topic-grid h1 {
-        font-size:var(--monument-header-ipad-port-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
+        display:grid;
+        font-size:var(--rene-thin-ipad-port-font-size);
+    }
+
+    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+        height:400px;
+        background-position: right;
     }
 }
 
@@ -183,10 +209,13 @@ and (orientation: landscape) {
 
     /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
     .topic-grid h1 {
-        font-size:var(--monument-header-ipad-land-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
+        display:grid;
+        font-size:var(--rene-thin-ipad-land-font-size);
+    }
+
+    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+        height:400px;
+        background-position: right;
     }
 }
 
@@ -205,10 +234,13 @@ and (min-width: 1440px) {
 
     /* THIS TOPIC GRID IS USED AT THE TOP OF EACH DETAIL PAGE */
     .topic-grid h1 {
-        font-size:var(--monument-header-desktop-font-size);
-        align-content: center;
-        justify-content: flex-start;
-        padding-left:.5em;
+        display:grid;
+        font-size:var(--rene-thin-desktop-font-size);
+    }
+
+    .book-session, .book-consultation, .about-me, .about-doula-consultant, .about-energy-practitioner {
+        height:400px;
+        background-position: right;
     }
 }
 
@@ -279,44 +311,36 @@ and (min-width: 1440px) {
     }
 
     .topic-grid h1 {
-        display:grid;
-        font-family: Monument-Valley, arial, serif;
-        letter-spacing: 2px;
+        font-family: ReneB-Thin, arial, serif;
+        letter-spacing: 4px;
+        align-content: center;
+        justify-content: flex-start;
+        padding-left:1em;
         color:var(--color-white);
     }
 
     .about-me {
         background-image: url("src/assets/images/about/me/aboutMeIntro.jpg"), linear-gradient(#878787, #d7dde1);
         background-repeat: no-repeat;
-        background-position: right;
-        height:300px;
     }
 
     .about-energy-practitioner {
-        background-image: url("src/assets/images/about/practitioner/aboutPractitionerIntro.jpg"), linear-gradient(#dc5452, #f0c5c5);
+        background-image: url("src/assets/images/about/practitioner/aboutPractitionerIntro2.jpg"), linear-gradient(#dc5452, #f0c5c5);
         background-repeat: no-repeat;
-        background-position: right;
-        height:300px;
     }
 
     .about-doula-consultant {
         background-image: url("src/assets/images/about/doula/aboutDoulaIntro.jpg"), linear-gradient(#609eeb, #d4dee7);
         background-repeat: no-repeat;
-        background-position: right;
-        height:300px;
     }
 
     .book-session {
-        background-image: url("src/assets/images/book/energySession/bookSession.jpg"), linear-gradient(#e59844, #e7d2bb);
+        background-image: url("src/assets/images/book/energySession/bookSession2.jpg"), linear-gradient(#e59844, #e7d2bb);
         background-repeat: no-repeat;
-        background-position: right;
-        height:300px;
     }
 
     .book-consultation {
         background-image: url("src/assets/images/book/doulaConsult/bookDoulaConsult.jpg"), linear-gradient(#455b36, #bcd6ab);
         background-repeat: no-repeat;
-        background-position: right;
-        height:300px;
     }
 }

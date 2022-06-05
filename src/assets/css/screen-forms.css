@@ -694,6 +694,7 @@ and (min-width: 1440px) {
         padding-top:1em;
         text-align:left;
         padding-right:2em;
+        color: var(--color-dark-blue);
     }
 
     .signature-prompt {

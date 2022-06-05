@@ -6,8 +6,14 @@ and (max-width: 359px)
 and (orientation: portrait) {
 
     /* UNIQUE HEADINGS ON HOME PAGE ONLY RIGHT NOW  */
+    .full-length-titles, .full-length-sub-titles  {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
     .full-length-titles h1  {
-        font-size: var(--big-whitney-banana-port-font-size);
+        font-size: var(--heading-whitney-banana-port-font-size);
         text-align:center;
     }
 
@@ -42,9 +48,15 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
+    .full-length-titles, .full-length-sub-titles  {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
     /* UNIQUE HEADING */
     .full-length-titles h1 {
-        font-size: var(--h2-whitney-banana-land-font-size);
+        font-size: var(--heading-whitney-banana-land-font-size);
         text-align:center;
     }
 
@@ -79,8 +91,14 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
+    .full-length-titles, .full-length-sub-titles  {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
     .full-length-titles h1 {
-        font-size: var(--h2-whitney-mobile-land-font-size);
+        font-size: var(--heading-whitney-mobile-port-font-size);
         text-align:center;
     }
 
@@ -115,8 +133,12 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
+    .full-length-titles, .full-length-sub-titles  {
+        width:100%;
+    }
+
     .full-length-titles h1 {
-        font-size: var(--h1-whitney-mobile-land-font-size);
+        font-size: var(--heading-whitney-mobile-land-font-size);
         text-align:center;
     }
 
@@ -152,8 +174,12 @@ and (max-width: 1023px)
 and (orientation: portrait) {
 
     /* UNIQUE HEADING */
+    .full-length-titles, .full-length-sub-titles  {
+        width:100%;
+    }
+
     .full-length-titles h1 {
-        font-size: var(--h1-whitney-tablet-port-font-size);
+        font-size: var(--heading-whitney-tablet-port-font-size);
         text-align:center;
     }
 
@@ -189,9 +215,13 @@ and (max-width: 1365px)
 and (orientation: landscape) {
 
     /* UNIQUE HEADING */
+    .full-length-titles, .full-length-sub-titles  {
+        width:100%;
+    }
+
     .full-length-titles h1 {
         padding:2em 0;
-        font-size: var(--h1-whitney-tablet-land-font-size);
+        font-size: var(--heading-whitney-tablet-land-font-size);
         text-align:left;
     }
 
@@ -227,9 +257,13 @@ and (max-width: 1366px)
 and (orientation: portrait) {
 
     /* UNIQUE HEADING */
+    .full-length-titles, .full-length-sub-titles  {
+        width:100%;
+    }
+
     .full-length-titles h1 {
         padding:1.5em 0;
-        font-size: var(--h1-whitney-ipad-port-font-size);
+        font-size: var(--heading-whitney-ipad-port-font-size);
         text-align:left;
     }
 
@@ -265,9 +299,13 @@ and (max-width: 1439px)
 and (orientation: landscape) {
 
     /* UNIQUE HEADING */
+    .full-length-titles, .full-length-sub-titles  {
+        width:100%;
+    }
+
     .full-length-titles h1 {
         padding:2em 0;
-        font-size: var(--h1-whitney-ipad-land-font-size);
+        font-size: var(--heading-whitney-ipad-land-font-size);
         text-align:left;
     }
 
@@ -301,13 +339,18 @@ and (orientation: landscape) {
 and (min-width: 1440px) {
 
     /* UNIQUE HEADING */
+    .full-length-titles, .full-length-sub-titles  {
+        width:100%;
+    }
+
     .full-length-titles h1 {
         padding:2em 0;
-        font-size: var(--h1-whitney-desktop-font-size);
+        font-size: var(--heading-whitney-desktop-font-size);
         text-align:left;
     }
 
     .full-length-sub-titles h2 {
+
         font-size: var(--med-whitney-desktop-font-size);
     }
 
@@ -339,7 +382,7 @@ and (min-width: 1440px) {
     .full-length-titles, .full-length-sub-titles  {
         display:block;
         float:left;
-        width:100%;
+
         font-style:normal;
         text-transform: uppercase;
         font-weight:400;

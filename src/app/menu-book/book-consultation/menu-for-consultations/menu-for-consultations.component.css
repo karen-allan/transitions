@@ -11,7 +11,7 @@ and (orientation: portrait) {
     }
 
     .forms-menu-heading  {
-        font-size: var(--h4-whitney-banana-port-font-size);
+        font-size: var(--h3-whitney-banana-port-font-size);
         letter-spacing:0;
     }
 
@@ -59,7 +59,7 @@ and (orientation: landscape) {
     }
 
     .forms-menu-heading  {
-        font-size: var(--h4-whitney-banana-land-font-size);
+        font-size: var(--h3-whitney-banana-land-font-size);
     }
 
     /* TOP REPORT MENU ITEMS */
@@ -104,7 +104,7 @@ and (orientation: portrait) {
     }
 
     .forms-menu-heading  {
-        font-size: var(--h4-whitney-mobile-port-font-size);
+        font-size: var(--h3-whitney-mobile-port-font-size);
     }
 
     /* TOP REPORT MENU ITEMS */
@@ -153,7 +153,7 @@ and (orientation: landscape) {
     }
 
     .forms-menu-heading  {
-        font-size: var(--h4-whitney-mobile-land-font-size);
+        font-size: var(--h3-whitney-mobile-land-font-size);
     }
 
     /* TOP REPORT MENU ITEMS */
@@ -198,7 +198,7 @@ and (orientation: portrait) {
     }
 
     .forms-menu-heading  {
-        font-size: var(--h4-whitney-tablet-port-font-size);
+        font-size: var(--h3-whitney-tablet-port-font-size);
     }
 
     /* TOP REPORT MENU ITEMS */
@@ -249,7 +249,7 @@ and (orientation: landscape) {
     }
 
     .forms-menu-heading  {
-        font-size: var(--h4-whitney-tablet-land-font-size);
+        font-size: var(--h3-whitney-tablet-land-font-size);
     }
 
     /* TOP REPORT MENU ITEMS */
@@ -301,7 +301,7 @@ and (orientation: portrait) {
     }
 
     .forms-menu-heading  {
-        font-size: var(--h4-whitney-ipad-port-font-size);
+        font-size: var(--h3-whitney-ipad-port-font-size);
     }
 
     /* TOP REPORT MENU ITEMS */
@@ -346,7 +346,7 @@ and (orientation: landscape) {
     }
 
     .forms-menu-heading  {
-        font-size: var(--h4-whitney-ipad-land-font-size);
+        font-size: var(--h3-whitney-ipad-land-font-size);
     }
 
     /* TOP REPORT MENU ITEMS */
@@ -390,12 +390,7 @@ and (min-width: 1440px) {
     }
 
     .forms-menu-heading  {
-        font-size: var(--h4-whitney-desktop-font-size);
-    }
-
-    /* REPORTS MENU */
-    .forms-menu-heading {
-        font-size: var(--h4-whitney-desktop-font-size);
+        font-size: var(--h3-whitney-desktop-font-size);
     }
 
     .menu-item span, .menu-item a {
@@ -455,27 +450,26 @@ and (min-width: 1440px) {
         border-bottom:thin solid var(--color-grey);
     }
 
-    .forms-menu  {
-        margin:0;
-        color: var(--color-dark-blue);
-    }
-
     .forms-menu-heading  {
-        font-family: Whitney-Book, serif;
-        /*letter-spacing: 3px;*/
         font-style:normal;
-        text-transform: uppercase;
+        /*text-transform: uppercase;*/
+        color: var(--color-dark-blue);
+        font-family: Whitney-Book, serif;
         text-align: left;
         width:98%;
         padding-left: 2%;
         padding-bottom:.5em;
         font-weight:800;
-        color: var(--color-dark-blue);
         background-color: white;
     }
 
-    .menu-item span, .menu-item a {
+    .forms-menu  {
+        margin:0;
+        color: var(--color-dark-blue);
         font-family: Whitney-Book, serif;
+    }
+
+    .menu-item span, .menu-item a {
         text-align: left;
         line-height:var(--list-wide-item-line-height);
     }
@@ -483,13 +477,11 @@ and (min-width: 1440px) {
     .menu-item a {
         text-decoration: none;
         cursor: pointer;
-        color: var(--color-dark-blue);
     }
 
     .menu-item span {
         cursor: default;
-        color: var(--color-dark-purple);
-        font-weight:800;
+        font-weight:300;
     }
 
     .disclaimer {

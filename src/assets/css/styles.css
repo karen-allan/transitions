@@ -180,46 +180,34 @@
   --rene-desktop-font-size:1.1em;
 
   /* RENE as H1 heading for TOPICS */
-  --rene-thin-banana-port-font-size:.8em;
-  --rene-thin-mobile-port-font-size:1.2em;
-  --rene-thin-tablet-port-font-size:1.8em;
-  --rene-thin-ipad-port-font-size:2.0em;
+  --rene-thin-banana-land-font-size:0.7em;
+  --rene-thin-mobile-land-font-size:1.2em;
 
-  --rene-thin-banana-land-font-size:1.1em;
-  --rene-thin-mobile-land-font-size:1.7em;
-  --rene-thin-tablet-land-font-size:2.1em;
-  --rene-thin-ipad-land-font-size:2.4em;
+  --rene-thin-tablet-port-font-size:1.0em;
+  --rene-thin-tablet-land-font-size:1.6em;
 
-  --rene-thin-desktop-font-size:2.5em;
+  --rene-thin-ipad-port-font-size:1.4em;
+  --rene-thin-ipad-land-font-size:1.8em;
+
+  --rene-thin-desktop-font-size:2.0em;
 
   /* BELOW IS WITH FAMILY SCRIPT (quotes for header quotes, script for content quotes)*/
                 /*  */
   --family-mono:Monotype Corsiva;
   /* for header quotes */
-  --quotes-p-banana-port-font-size:.3em;
-  --quotes-span-banana-port-font-size:.4em;
-  --quotes-p-banana-land-font-size:.7em;
-  --quotes-span-banana-land-font-size:.8em;
+  --quotes-p-banana-port-font-size:.6em;
+  --quotes-p-banana-land-font-size:.8em;
 
-  --quotes-p-mobile-port-font-size:.5em;
-  --quotes-span-mobile-port-font-size:.4em;
-  --quotes-p-mobile-land-font-size:1.0em;
-  --quotes-span-mobile-land-font-size:1.2em;
+  --quotes-p-mobile-port-font-size:.9em;
+  --quotes-p-mobile-land-font-size:1.1em;
 
-  --quotes-p-tablet-port-font-size:.6em;
-  --quotes-span-tablet-port-font-size:0.7em;
+  --quotes-p-tablet-port-font-size:1.2em;
+  --quotes-p-tablet-land-font-size:1.5em;
 
-  --quotes-p-tablet-land-font-size:1.0em;
-  --quotes-span-tablet-land-font-size:0.7em;
+  --quotes-p-ipad-port-font-size:1.5em;
+  --quotes-p-ipad-land-font-size:1.6em;
 
-  --quotes-p-ipad-port-font-size:1.0em;
-  --quotes-span-ipad-port-font-size:0.7em;
-
-  --quotes-p-ipad-land-font-size:1.2em;
-  --quotes-span-ipad-land-font-size:0.9em;
-
-  --quotes-p-desktop-font-size:1.4em;
-  --quotes-span-desktop-font-size:1.1em;
+  --quotes-p-desktop-font-size:1.7em;
 
   /* for content quotes */
   --family-script:'gabriola';
@@ -238,16 +226,18 @@
 
   /* for paragraphs */
   --script-p-banana-port-font-size:0.7em;
+  --script-p-banana-land-font-size:1.0em;
+
   --script-p-mobile-port-font-size:.9em;
-  --script-p-tablet-port-font-size:1.1em;
-  --script-p-ipad-port-font-size:1.4em;
+  --script-p-mobile-land-font-size:1.1em;
 
-  --script-p-banana-land-font-size:1.2em;
-  --script-p-mobile-land-font-size:1.3em;
-  --script-p-tablet-land-font-size:1.4em;
-  --script-p-ipad-land-font-size:1.5em;
+  --script-p-tablet-port-font-size:1.0em;
+  --script-p-tablet-land-font-size:1.2em;
 
-  --script-p-desktop-font-size:1.6em;
+  --script-p-ipad-port-font-size:1.1em;
+  --script-p-ipad-land-font-size:1.3em;
+
+  --script-p-desktop-font-size:1.4em;
 
   --script-span-banana-port-font-size:0.7em;
   --script-span-mobile-port-font-size:0.8em;
@@ -385,6 +375,21 @@
 
   --h1-whitney-desktop-font-size:2.1em;
 
+  /* HEADING */
+  --heading-whitney-banana-port-font-size:0.6em;
+  --heading-whitney-banana-land-font-size:0.8em;
+
+  --heading-whitney-mobile-port-font-size:0.7em;
+  --heading-whitney-mobile-land-font-size:0.9em;
+
+  --heading-whitney-tablet-port-font-size:0.9em;
+  --heading-whitney-tablet-land-font-size:1.1em;
+
+  --heading-whitney-ipad-port-font-size:1.3em;
+  --heading-whitney-ipad-land-font-size:1.5em;
+
+  --heading-whitney-desktop-font-size:1.8em;
+
   /* TEXT */
   --small-whitney-banana-port-font-size:0.4em;
   --small-whitney-mobile-port-font-size:0.6em;
@@ -435,7 +440,7 @@
   --monument-laptop-font-size:2.8em;
   --monument-desktop-font-size:2.9em;
 
-  --monument-header-banana-port-font-size:1.0em;
+  --monument-header-banana-port-font-size:1.3em;
   --monument-header-mobile-port-font-size:1.9em;
   --monument-header-tablet-port-font-size:1.4em;
   --monument-header-ipad-port-font-size:2.8em;
@@ -498,6 +503,13 @@
     display: block;
     width:100%;
     max-width:1440px;
+    margin:auto;
+  }
+
+  .header-container {
+    display: block;
+    width:100%;
+    max-width:1920px;
     margin:auto;
   }
 
