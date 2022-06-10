@@ -30,17 +30,18 @@ import { DecreasePainContainerComponent } from './menu-energy-medicine/decrease-
 import { HomeContainerComponent } from './menu-home/home-container/home-container.component';
 
 
-
-
-
 import { WizardContainerComponent } from './menu-wizard/wizard-container/wizard-container.component';
-import { TsdmWizardContainerComponent } from './menu-wizard/tsdm/tsdm-wizard-container/tsdm-wizard-container.component';
-import { RepNineWizardContainerComponent } from './menu-wizard/rep-nine/rep-nine-wizard-container/rep-nine-wizard-container.component';
-import { DnrWizardContainerComponent } from './menu-wizard/dnr/dnr-wizard-container/dnr-wizard-container.component';
-import { EdithWizardContainerComponent } from './menu-wizard/edith/edith-wizard-container/edith-wizard-container.component';
-import { AcpWizardContainerComponent } from './menu-wizard/acp/acp-wizard-container/acp-wizard-container.component';
-import { TransferWizardContainerComponent } from './menu-wizard/transfer/transfer-wizard-container/transfer-wizard-container.component';
+import { TsdmWizardContainerComponent } from './menu-wizard/tsdm-wizard/tsdm-wizard-container/tsdm-wizard-container.component';
+import { RepNineWizardContainerComponent } from './menu-wizard/rep-9-wizard/rep-nine-wizard-container/rep-nine-wizard-container.component';
 
+/* MENU EOL DOCS */
+import { AcpContainerComponent } from './menu-eol-docs/ACP/acp-container/acp-container.component';
+import { DnrContainerComponent } from './menu-eol-docs/DNR/dnr-container/dnr-container.component';
+import { EdithContainerComponent } from './menu-eol-docs/EDITH/edith-container/edith-container.component';
+
+import { RepSectionNineContainerComponent } from './menu-eol-docs/REP-SECTION-NINE/rep-section-nine-container/rep-section-nine-container.component';
+import { TsdmContainerComponent } from './menu-eol-docs/TSDM/tsdm-container/tsdm-container.component';
+import { FrailtyMenuContainerComponent } from './menu-eol-docs/FRAILTY-MENU/frailty-menu-container/frailty-menu-container.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/menuHome', pathMatch: 'full'},
@@ -70,13 +71,18 @@ const routes: Routes = [
     {path: 'createLegacy', component: CreateLegacyContainerComponent},
     {path: 'chooseMemorial', component: ChooseMemorialContainerComponent},
 
+    {path: 'menuEOLDocs', component: FrailtyMenuContainerComponent},
+    {path: 'frailtyDocMenu', component: FrailtyMenuContainerComponent},
+    {path: 'tsdmDoc', component: TsdmContainerComponent},
+    {path: 'repSectionNineDoc', component: RepSectionNineContainerComponent},
+    {path: 'edithDoc', component: EdithContainerComponent},
+    {path: 'dnrDoc', component: DnrContainerComponent},
+    {path: 'acPlanDoc', component: AcpContainerComponent},
+
     {path: 'menuWizard', component: WizardContainerComponent},
     {path: 'tsdmWizard', component: TsdmWizardContainerComponent},
     {path: 'repNineWizard', component: RepNineWizardContainerComponent},
-    {path: 'dnrWizard', component: DnrWizardContainerComponent},
-    {path: 'edithWizard', component: EdithWizardContainerComponent},
-    {path: 'acpWizard', component: AcpWizardContainerComponent},
-    {path: 'transferWizard', component: TransferWizardContainerComponent},
+
 
     {path: 'menuHome', component: HomeContainerComponent},
 

@@ -20,7 +20,7 @@ and (orientation: portrait) {
         display:none;
     }
 
-    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+    .topic {
         height:240px;
         background-position: center;
         background-size: cover;
@@ -48,7 +48,7 @@ and (orientation: landscape) {
         font-size:var(--rene-thin-banana-land-font-size);
     }
 
-    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+    .topic {
         height:300px;
         background-position: right;
         background-size: contain;
@@ -75,7 +75,7 @@ and (orientation: portrait) {
         display:none;
     }
 
-    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+    .topic {
         height:400px;
         background-position: center;
         background-size: cover;
@@ -103,7 +103,7 @@ and (orientation: landscape) {
         font-size:var(--rene-thin-mobile-land-font-size);
     }
 
-    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+    .topic {
         height:400px;
         background-position: right;
         background-size: contain;
@@ -131,7 +131,7 @@ and (orientation: portrait) {
         font-size:var(--rene-thin-tablet-port-font-size);
     }
 
-    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+    .topic {
         height:300px;
         background-position: right;
         background-size: contain;
@@ -159,7 +159,7 @@ and (orientation: landscape) {
         font-size:var(--rene-thin-tablet-land-font-size);
     }
 
-    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+    .topic {
         height:400px;
         background-position: right;
     }
@@ -186,7 +186,7 @@ and (orientation: portrait) {
         font-size:var(--rene-thin-ipad-port-font-size);
     }
 
-    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+    .topic {
         height:400px;
         background-position: right;
     }
@@ -213,7 +213,7 @@ and (orientation: landscape) {
         font-size:var(--rene-thin-ipad-land-font-size);
     }
 
-    .about-me, .about-energy-practitioner, .about-doula-consultant, .book-session, .book-consultation  {
+    .topic {
         height:400px;
         background-position: right;
     }
@@ -238,7 +238,11 @@ and (min-width: 1440px) {
         font-size:var(--rene-thin-desktop-font-size);
     }
 
-    .book-session, .book-consultation, .about-me, .about-doula-consultant, .about-energy-practitioner {
+    /*.book-session, .book-consultation, .about-me, .about-doula-consultant, .about-energy-practitioner, .doula-work-plan-ahead {
+        height:400px;
+        background-position: right;
+    }*/
+    .topic {
         height:400px;
         background-position: right;
     }
@@ -343,4 +347,53 @@ and (min-width: 1440px) {
         background-image: url("src/assets/images/book/doulaConsult/bookDoulaConsult.jpg"), linear-gradient(#455b36, #bcd6ab);
         background-repeat: no-repeat;
     }
+
+    /* MENU-EOL-DOCS */
+    .doula-work-acplans{
+        background-image: url("src/assets/images/eolDocuments/acPlanDoc/advCarePlanIntro.jpg"), linear-gradient(#45423f, #e8dbce);
+        background-repeat: no-repeat;
+    }
+
+    .doula-work-frailty-menu {
+        background-image: url("src/assets/images/eolDocuments/frailtyMenu/frailyMenuIntro.jpg"), linear-gradient(#4c7ebd, #c4d2e5);
+        background-repeat: no-repeat;
+    }
+
+    .doula-work-tsdm {
+        background-image: url("src/assets/images/eolDocuments/tsdmDoc/tsdmIntro.jpg"), linear-gradient(#8fb397, #e7f6ef);
+        background-repeat: no-repeat;
+    }
+
+    .doula-work-rep {
+        background-image: url("src/assets/images/eolDocuments/repNineDoc/repNineIntro.jpg"), linear-gradient(#252a2e, #c3c7cb);
+        background-repeat: no-repeat;
+    }
+
+    .doula-work-edith {
+        background-image: url("src/assets/images/eolDocuments/edithDoc/edithIntro.jpg"), linear-gradient(#080c0f, #d3ccc4);
+        background-repeat: no-repeat;
+    }
+
+    .doula-work-dnr {
+        background-image: url("src/assets/images/eolDocuments/dnrDoc/dnrIntro.jpg"), linear-gradient(#587968, #eef2f1);
+        background-repeat: no-repeat;
+    }
+
+
+
+
+
+
+
+
+
+
+   /* .doula-work-rep {
+        background-image: url("src/assets/images/eolCare/chooseRep/chooseRepIntro.jpg"), linear-gradient(#609eeb, #d4dee7);
+        background-repeat: no-repeat;
+    }
+
+
+
+    */
 }

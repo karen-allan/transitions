@@ -4,7 +4,7 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-    .list-item, .list-item a, .item-col span {
+    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
         font-size: var(--open-sans-banana-port-font-size);
     }
 
@@ -24,7 +24,7 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-    .list-item, .list-item a, .item-col span {
+    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
         font-size: var(--open-sans-banana-land-font-size);
     }
 
@@ -44,7 +44,7 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-    .list-item, .list-item a, .item-col span {
+    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
         font-size: var(--open-sans-mobile-port-font-size);
     }
 
@@ -64,7 +64,7 @@ and (min-width: 896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-    .list-item, .list-item a, .item-col span {
+    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
         font-size: var(--open-sans-mobile-land-font-size);
     }
 
@@ -84,7 +84,7 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-    .list-item, .list-item a, .item-col span {
+    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
         font-size: var(--open-sans-tablet-port-font-size);
     }
 
@@ -104,7 +104,7 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
-    .list-item, .list-item a, .item-col span {
+    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
         font-size: var(--open-sans-tablet-land-font-size);
     }
 
@@ -124,7 +124,7 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    .list-item, .list-item a, .item-col span {
+    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
         font-size: var(--open-sans-ipad-port-font-size);
     }
 
@@ -144,7 +144,7 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-    .list-item, .list-item a, .item-col span {
+    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
         font-size: var(--open-sans-ipad-land-font-size);
     }
 
@@ -162,7 +162,7 @@ and (orientation: landscape) {
 @media only screen
 and (min-width: 1440px) {
 
-    .list-item, .list-item a, .item-col span {
+    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
         font-size: var(--open-sans-desktop-font-size);
     }
 
@@ -202,6 +202,14 @@ and (min-width: 1440px) {
         padding-bottom:.5em;
         line-height: var(--list-item-line-height);
         list-style-image:url("src/assets/images/backgrounds/yinYang.png");
+    }
+
+    .list-item-no-image, .list-item-no-image a {
+        padding-left:1em;
+        font-family: var(--family-open-sans);
+        text-align: left;
+        padding-bottom:.5em;
+        line-height: var(--list-item-basic-line-height);
     }
 
     .list-big-item, .list-big-item a {

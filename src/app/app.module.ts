@@ -18,10 +18,6 @@ import {filter} from "rxjs";
 /* GLOBAL FOOTER */
 import { GlobalFooterComponent } from './global-footer/global-footer.component';
 
-/* GLOBAL FORMS */
-/* REPRESENTATIVE NINE */
-import { RepNineFinalComponent } from './menu-wizard/rep-nine/rep-nine-final/rep-nine-final.component';
-
 /* GLOBAL GRIDS */
 import { GlobalGridsComponent } from './global-grids/global-grids.component';
 
@@ -61,7 +57,7 @@ import { PrintCaregiverConsultComponent } from './menu-book/book-consultation/pr
 import { PrintPatientConsultComponent } from './menu-book/book-consultation/print-consult/print-patient-consult/print-patient-consult.component';
 import { PrintPlanningConsultComponent } from './menu-book/book-consultation/print-consult/print-planning-consult/print-planning-consult.component';
 
-/* BOOK ENERGY SESSION */
+/* BOOK SESSION */
 import { BookSessionContainerComponent } from './menu-book/book-session/book-session-container/book-session-container.component';
 import { BookSessionOverviewComponent } from './menu-book/book-session/book-session-overview/book-session-overview.component';
 import { DataEntryEnergySessionComponent } from './menu-book/book-session/data-entry-energy-session/data-entry-energy-session.component';
@@ -77,9 +73,6 @@ import { SessionConsiderationsComponent } from './menu-book/global-form-sections
 import { SessionGoalsComponent} from "./menu-book/global-form-sections/session-goals/session-goals.component";
 import { SupportForCaregiverComponent } from './menu-book/global-form-sections/support-for-caregiver/support-for-caregiver.component';
 import { SupportForPatientComponent } from './menu-book/global-form-sections/support-for-patient/support-for-patient.component';
-
-
-
 
 /* MENU DOULA WORK */
 /* CARE FOR PATIENTS */
@@ -136,6 +129,33 @@ import {SelectedMeridianComponent } from './menu-energy-medicine/trace-meridians
 import { TraceMeridiansContainerComponent } from './menu-energy-medicine/trace-meridians/trace-meridians-container/trace-meridians-container.component';
 import { TraceMeridiansOverviewComponent } from './menu-energy-medicine/trace-meridians/trace-meridians-overview/trace-meridians-overview.component';
 
+/* MENU EOL DOCS */
+/* AC PLAN */
+import { AcpContainerComponent } from './menu-eol-docs/ACP/acp-container/acp-container.component';
+import { AcpOverviewComponent } from './menu-eol-docs/ACP/acp-overview/acp-overview.component';
+
+/* DNR */
+import { DnrContainerComponent } from './menu-eol-docs/DNR/dnr-container/dnr-container.component';
+import { DnrOverviewComponent } from './menu-eol-docs/DNR/dnr-overview/dnr-overview.component';
+
+/* EDITH */
+import { EdithContainerComponent } from './menu-eol-docs/EDITH/edith-container/edith-container.component';
+import { EdithOverviewComponent } from './menu-eol-docs/EDITH/edith-overview/edith-overview.component';
+
+/* FRAILTY MENU */
+import { FrailtyMenuContainerComponent } from './menu-eol-docs/FRAILTY-MENU/frailty-menu-container/frailty-menu-container.component';
+import { FrailtyMenuOverviewComponent } from './menu-eol-docs/FRAILTY-MENU/frailty-menu-overview/frailty-menu-overview.component';
+
+/* REP SECTION NINE */
+import { RepSectionNineContainerComponent } from './menu-eol-docs/REP-SECTION-NINE/rep-section-nine-container/rep-section-nine-container.component';
+import { RepSectionNineOverviewComponent } from './menu-eol-docs/REP-SECTION-NINE/rep-section-nine-overview/rep-section-nine-overview.component';
+
+/* TSDM */
+import { TsdmContainerComponent } from './menu-eol-docs/TSDM/tsdm-container/tsdm-container.component';
+import { TsdmOverviewComponent } from './menu-eol-docs/TSDM/tsdm-overview/tsdm-overview.component';
+
+
+
 /* FAQ */
 import { FaqContainerComponent } from './menu-faq/faq-container/faq-container.component';
 import { FaqOverviewComponent } from './menu-faq/faq-overview/faq-overview.component';
@@ -145,32 +165,29 @@ import {HomeContainerComponent} from './menu-home/home-container/home-container.
 import {HomeOverviewComponent} from './menu-home/home-overview/home-overview.component';
 
 /* MENU WIZARD FOLDER */
-/* ACP */
-import { AcpWizardContainerComponent } from './menu-wizard/acp/acp-wizard-container/acp-wizard-container.component';
-import { AcpWizardOverviewComponent } from './menu-wizard/acp/acp-wizard-overview/acp-wizard-overview.component';
 
-/* DNR */
-import { DnrWizardContainerComponent } from './menu-wizard/dnr/dnr-wizard-container/dnr-wizard-container.component';
-import { DnrWizardOverviewComponent } from './menu-wizard/dnr/dnr-wizard-overview/dnr-wizard-overview.component';
 
-/* EDITH */
-import { EdithWizardOverviewComponent } from './menu-wizard/edith/edith-wizard-overview/edith-wizard-overview.component';
-import { EdithWizardContainerComponent } from './menu-wizard/edith/edith-wizard-container/edith-wizard-container.component';
+
 
 /* REP NINE */
-import { RepNineWizardContainerComponent } from './menu-wizard/rep-nine/rep-nine-wizard-container/rep-nine-wizard-container.component';
-import { RepNineWizardOverviewComponent } from './menu-wizard/rep-nine/rep-nine-wizard-overview/rep-nine-wizard-overview.component';
+import { RepNineWizardContainerComponent } from './menu-wizard/rep-9-wizard/rep-nine-wizard-container/rep-nine-wizard-container.component';
+import { RepNineWizardOverviewComponent } from './menu-wizard/rep-9-wizard/rep-nine-wizard-overview/rep-nine-wizard-overview.component';
 
-/* TRANSFER */
-import { TransferWizardContainerComponent } from './menu-wizard/transfer/transfer-wizard-container/transfer-wizard-container.component';
-import { TransferWizardOverviewComponent } from './menu-wizard/transfer/transfer-wizard-overview/transfer-wizard-overview.component';
+
 
 /* TSDM */
-import { TsdmWizardContainerComponent } from './menu-wizard/tsdm/tsdm-wizard-container/tsdm-wizard-container.component';
-import { TsdmWizardOverviewComponent } from './menu-wizard/tsdm/tsdm-wizard-overview/tsdm-wizard-overview.component';
+import { TsdmWizardContainerComponent } from './menu-wizard/tsdm-wizard/tsdm-wizard-container/tsdm-wizard-container.component';
+import { TsdmWizardOverviewComponent } from './menu-wizard/tsdm-wizard/tsdm-wizard-overview/tsdm-wizard-overview.component';
 
 import { WizardContainerComponent } from './menu-wizard/wizard-container/wizard-container.component';
 import { WizardOverviewComponent } from './menu-wizard/wizard-overview/wizard-overview.component';
+
+
+
+
+
+
+
 
 
 
@@ -272,16 +289,7 @@ import { WizardOverviewComponent } from './menu-wizard/wizard-overview/wizard-ov
         TsdmWizardContainerComponent,
         RepNineWizardContainerComponent,
         RepNineWizardOverviewComponent,
-        DnrWizardOverviewComponent,
 
-        DnrWizardContainerComponent,
-          EdithWizardOverviewComponent,
-          EdithWizardContainerComponent,
-          AcpWizardContainerComponent,
-          AcpWizardOverviewComponent,
-          TransferWizardOverviewComponent,
-          TransferWizardContainerComponent,
-          RepNineFinalComponent,
 
           MedicalHistoryComponent,
           DemographicInfoComponent,
@@ -304,6 +312,20 @@ import { WizardOverviewComponent } from './menu-wizard/wizard-overview/wizard-ov
           PrintPatientConsultComponent,
           PrintPlanningConsultComponent,
           PrintEnergySessionComponent,
+
+          RepSectionNineContainerComponent,
+          RepSectionNineOverviewComponent,
+          TsdmContainerComponent,
+          TsdmOverviewComponent,
+          EdithOverviewComponent,
+          EdithContainerComponent,
+          DnrOverviewComponent,
+          DnrContainerComponent,
+          AcpContainerComponent,
+          AcpOverviewComponent,
+          FrailtyMenuContainerComponent,
+          FrailtyMenuOverviewComponent,
+
 
 
 

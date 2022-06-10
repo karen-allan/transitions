@@ -258,13 +258,13 @@ and (min-width: 1920px) {
         .header-about-energy-practitioner {
             background-size: cover;
             background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-            url('src/assets/images/backgrounds/about/energyPractitioner2.jpg');
+            url('src/assets/images/backgrounds/about/energyPractitioner.jpg');
         }
 
         .header-about-eol-doula {
             background-size: cover;
             background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-            url('src/assets/images/backgrounds/about/eolDoula2.jpg');
+            url('src/assets/images/backgrounds/about/eolDoula.jpg');
         }
 
         /* ENERGY MEDICINE */
@@ -305,18 +305,6 @@ and (min-width: 1920px) {
         }
 
         /* DOULA WORK */
-        .header-plan-ahead {
-            background-size: cover;
-            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-            url('src/assets/images/backgrounds/eolDoulaHelp/planAhead.jpg');
-        }
-
-        .header-choose-representative {
-            background-size: cover;
-            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-            url('src/assets/images/backgrounds/eolDoulaHelp/chooseRepresentative.jpg');
-        }
-
         .header-support-caregivers {
             background-size: cover;
             background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
@@ -354,19 +342,47 @@ and (min-width: 1920px) {
             url('src/assets/images/backgrounds/book/consultation.jpg');
         }
 
-        /* FREQUENTLY ASKED QUESTIONS */
-       /* .faqs {
-            background-size: cover;
-            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-            url('src/assets/images/backgrounds/faq/faqs.jpg');
-        }*/
+
 
     /* FREQUENTLY ASKED QUESTIONS */
-        .wizard {
-            background-size: cover;
-            background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-            url('src/assets/images/backgrounds/wizard/wizardIntro.jpg');
-        }
+
+
+    /* PLAN AHEAD EOL DOCUMENTS */
+    .header-planning-ahead {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/backgrounds/planningAhead/whereToStart.jpg');
+    }
+
+    .header-tsdm {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/backgrounds/planningAhead/tsdmaker.jpg');
+    }
+
+    .header-representative {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/backgrounds/planningAhead/representative.jpg');
+    }
+
+    .header-edith {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/backgrounds/planningAhead/edith.jpg');
+    }
+
+    .header-dnr {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/backgrounds/planningAhead/dnrCpr.jpg');
+    }
+
+    .header-acplan {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/backgrounds/planningAhead/advCarePlan.jpg');
+    }
 }
 
 

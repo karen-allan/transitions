@@ -441,5 +441,20 @@ and (min-width: 1440px) {
         line-height: var(--copy-line-height);
     }
 
+
+    .preamble-block {
+        display:block;
+        float:left;
+        width:100%;
+        color: var(--color-white);
+        background-color: #5b89d5;
+        border: thin solid  var(--color-soft-blue);
+        font-family: var(--family-open-sans);
+        line-height:var(--copy-line-height);
+        text-align: left;
+        font-size: var(--open-sans-desktop-font-size);
+        margin-top:2em;
+    }
+
 }
 

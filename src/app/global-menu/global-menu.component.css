@@ -516,8 +516,9 @@ and (orientation: landscape) {
     .desktop-menu-items {
         display: inline-grid;
         align-content: flex-start;
+        grid-template-columns: repeat(4, 25%);
         /*grid-template-columns: repeat(6, 16.66%);*/
-        grid-template-columns: repeat(3, 33.33%);
+        /*grid-template-columns: repeat(5, 20%);*/
         height:var(--menu-desktop-height);
     }
 
