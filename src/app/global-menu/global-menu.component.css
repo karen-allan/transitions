@@ -549,6 +549,7 @@ and (orientation: landscape) {
     .desktop-sub-menu-block {
         display: grid;
         margin:auto;
+        background-color:#ecebf3;
     }
 
     .sub-menu-items-two, .sub-menu-items-three, .sub-menu-items-four, .sub-menu-social, .sub-menu-items-six {

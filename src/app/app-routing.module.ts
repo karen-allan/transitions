@@ -12,10 +12,9 @@ import { BookSessionContainerComponent } from './menu-book/book-session/book-ses
 
 import { ChooseMemorialContainerComponent } from './menu-doula-work/choose-memorial/choose-memorial-container/choose-memorial-container.component';
 
-import { ChooseRepresentativeContainerComponent } from './menu-doula-work/choose-representative/choose-representative-container/choose-representative-container.component';
 import { CreateLegacyContainerComponent } from './menu-doula-work/create-legacy/create-legacy-container/create-legacy-container.component';
 import { CareForPatientsContainerComponent } from './menu-doula-work/care-for-patients/care-for-patients-container/care-for-patients-container.component';
-import { PlanAheadContainerComponent } from './menu-doula-work/plan-ahead/plan-ahead-container/plan-ahead-container.component';
+
 import { SupportCaregiversContainerComponent } from './menu-doula-work/supportCaregivers/support-caregivers-container/support-caregivers-container.component';
 
 import { DiscoverElementContainerComponent } from './menu-energy-medicine/discover-element/discover-element-container/discover-element-container.component';
@@ -25,10 +24,7 @@ import { ReduceAnxietyContainerComponent } from './menu-energy-medicine/reduce-a
 import { RelieveBurnoutContainerComponent } from './menu-energy-medicine/relieve-burnout/relieve-burnout-container/relieve-burnout-container.component';
 import { DecreasePainContainerComponent } from './menu-energy-medicine/decrease-pain/decrease-pain-container/decrease-pain-container.component';
 
-// import { FaqContainerComponent } from './menu-faq/faq-container/faq-container.component';
-
 import { HomeContainerComponent } from './menu-home/home-container/home-container.component';
-
 
 import { WizardContainerComponent } from './menu-wizard/wizard-container/wizard-container.component';
 import { TsdmWizardContainerComponent } from './menu-wizard/tsdm-wizard/tsdm-wizard-container/tsdm-wizard-container.component';
@@ -63,9 +59,7 @@ const routes: Routes = [
     {path: 'discoverElement', component: DiscoverElementContainerComponent},
     {path: 'traceMeridians', component: TraceMeridiansContainerComponent},
 
-    {path: 'menuDoulaWork', component: PlanAheadContainerComponent},
-    {path: 'planAhead', component: PlanAheadContainerComponent},
-    {path: 'chooseRepresentative', component: ChooseRepresentativeContainerComponent},
+    {path: 'menuDoulaWork', component: CareForPatientsContainerComponent},
     {path: 'careForPatient', component: CareForPatientsContainerComponent},
     {path: 'supportCaregivers', component: SupportCaregiversContainerComponent},
     {path: 'createLegacy', component: CreateLegacyContainerComponent},

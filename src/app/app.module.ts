@@ -83,17 +83,11 @@ import { CareForPatientsContainerComponent } from './menu-doula-work/care-for-pa
 import { ChooseMemorialContainerComponent } from './menu-doula-work/choose-memorial/choose-memorial-container/choose-memorial-container.component';
 import { ChooseMemorialOverviewComponent } from './menu-doula-work/choose-memorial/choose-memorial-overview/choose-memorial-overview.component';
 
-/* CHOOSE REPRESENTATIVE */
-import { ChooseRepresentativeContainerComponent } from './menu-doula-work/choose-representative/choose-representative-container/choose-representative-container.component';
-import { ChooseRepresentativeOverviewComponent } from './menu-doula-work/choose-representative/choose-representative-overview/choose-representative-overview.component';
 
 /* CREATE LEGACY */
 import { CreateLegacyContainerComponent } from './menu-doula-work/create-legacy/create-legacy-container/create-legacy-container.component';
 import { CreateLegacyOverviewComponent } from './menu-doula-work/create-legacy/create-legacy-overview/create-legacy-overview.component';
 
-/* PLAN AHEAD */
-import { PlanAheadContainerComponent } from './menu-doula-work/plan-ahead/plan-ahead-container/plan-ahead-container.component';
-import { PlanAheadOverviewComponent } from './menu-doula-work/plan-ahead/plan-ahead-overview/plan-ahead-overview.component';
 
 /* SUPPORT CAREGIVERS */
 import { SupportCaregiversOverviewComponent } from './menu-doula-work/supportCaregivers/support-caregivers-overview/support-caregivers-overview.component';
@@ -252,14 +246,12 @@ import { WizardOverviewComponent } from './menu-wizard/wizard-overview/wizard-ov
         /* HOME */
         HomeContainerComponent,
         HomeOverviewComponent,
-        PlanAheadContainerComponent,
-        PlanAheadOverviewComponent,
+     
         DoEnergyExercisesOverviewComponent,
         DoEnergyExercisesContainerComponent,
         SupportCaregiversOverviewComponent,
         SupportCaregiversContainerComponent,
-        ChooseRepresentativeContainerComponent,
-        ChooseRepresentativeOverviewComponent,
+
 
 
         CreateLegacyContainerComponent,
