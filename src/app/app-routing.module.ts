@@ -68,7 +68,7 @@ const routes: Routes = [
     {path: 'menuEOLDocs', component: FrailtyMenuContainerComponent},
     {path: 'frailtyDocMenu', component: FrailtyMenuContainerComponent},
     {path: 'tsdmDoc', component: TsdmContainerComponent},
-    {path: 'repSectionNineDoc', component: RepSectionNineContainerComponent},
+    {path: 'advocateDoc', component: RepSectionNineContainerComponent},
     {path: 'edithDoc', component: EdithContainerComponent},
     {path: 'dnrDoc', component: DnrContainerComponent},
     {path: 'acPlanDoc', component: AcpContainerComponent},

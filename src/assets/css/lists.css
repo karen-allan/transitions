@@ -4,16 +4,12 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
-        font-size: var(--open-sans-banana-port-font-size);
+    .list-item, .list-item a, .list-item-no-left-pad, .list-item-no-left-pad a, .list-med-item, .list-med-item a {
+        font-size: var(--small-copy-banana-port-font-size);
     }
 
     .list-big-item, .list-big-item a {
-        font-size: var(--med-whitney-banana-port-font-size);
-    }
-
-    .list-med-item, .list-med-item a {
-        font-size: var(--rene-banana-port-font-size);
+        font-size: var(--med-copy-banana-port-font-size);
     }
 
 }
@@ -24,16 +20,12 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
-        font-size: var(--open-sans-banana-land-font-size);
+    .list-item, .list-item a, .list-item-no-left-pad, .list-item-no-left-pad a, .list-med-item, .list-med-item a {
+        font-size: var(--small-copy-banana-land-font-size);
     }
 
     .list-big-item, .list-big-item a {
-        font-size: var(--med-whitney-banana-land-font-size);
-    }
-
-    .list-med-item, .list-med-item a {
-        font-size: var(--rene-banana-land-font-size);
+        font-size: var(--med-copy-banana-land-font-size);
     }
 
 }
@@ -44,16 +36,12 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
-        font-size: var(--open-sans-mobile-port-font-size);
+    .list-item, .list-item a, .list-item-no-left-pad, .list-item-no-left-pad a, .list-med-item, .list-med-item a {
+        font-size: var(--small-copy-mobile-port-font-size);
     }
 
     .list-big-item, .list-big-item a {
-        font-size: var(--med-whitney-mobile-port-font-size);
-    }
-
-    .list-med-item, .list-med-item a {
-        font-size: var(--rene-mobile-port-font-size);
+        font-size: var(--med-copy-mobile-port-font-size);
     }
 
 }
@@ -64,16 +52,12 @@ and (min-width: 896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
-        font-size: var(--open-sans-mobile-land-font-size);
+    .list-item, .list-item a, .list-item-no-left-pad, .list-item-no-left-pad a, .list-med-item, .list-med-item a {
+        font-size: var(--small-copy-mobile-land-font-size);
     }
 
     .list-big-item, .list-big-item a {
-        font-size: var(--med-whitney-mobile-land-font-size);
-    }
-
-    .list-med-item, .list-med-item a {
-        font-size: var(--rene-mobile-land-font-size);
+        font-size: var(--med-copy-mobile-land-font-size);
     }
 
 }
@@ -84,16 +68,12 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
-        font-size: var(--open-sans-tablet-port-font-size);
+    .list-item, .list-item a, .list-item-no-left-pad, .list-item-no-left-pad a, .list-med-item, .list-med-item a {
+        font-size: var(--small-copy-tablet-port-font-size);
     }
 
     .list-big-item, .list-big-item a {
-        font-size: var(--med-whitney-tablet-port-font-size);
-    }
-
-    .list-med-item, .list-med-item a {
-        font-size: var(--rene-tablet-port-font-size);
+        font-size: var(--med-copy-tablet-port-font-size);
     }
 
 }
@@ -104,16 +84,12 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
-    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
-        font-size: var(--open-sans-tablet-land-font-size);
+    .list-item, .list-item a, .list-item-no-left-pad, .list-item-no-left-pad a, .list-med-item, .list-med-item a {
+        font-size: var(--small-copy-tablet-land-font-size);
     }
 
     .list-big-item, .list-big-item a {
-        font-size: var(--med-whitney-tablet-land-font-size);
-    }
-
-    .list-med-item, .list-med-item a {
-        font-size: var(--rene-tablet-land-font-size);
+        font-size: var(--med-copy-tablet-land-font-size);
     }
 
 }
@@ -124,16 +100,12 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
-        font-size: var(--open-sans-ipad-port-font-size);
+    .list-item, .list-item a, .list-item-no-left-pad, .list-item-no-left-pad a, .list-med-item, .list-med-item a {
+        font-size: var(--small-copy-ipad-port-font-size);
     }
 
     .list-big-item, .list-big-item a {
-        font-size: var(--med-whitney-ipad-port-font-size);
-    }
-
-    .list-med-item, .list-med-item a {
-        font-size: var(--rene-ipad-port-font-size);
+        font-size: var(--med-copy-ipad-port-font-size);
     }
 
 }
@@ -144,16 +116,12 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
-        font-size: var(--open-sans-ipad-land-font-size);
+    .list-item, .list-item a, .list-item-no-left-pad, .list-item-no-left-pad a, .list-med-item, .list-med-item a {
+        font-size: var(--small-copy-ipad-port-font-size);
     }
 
     .list-big-item, .list-big-item a {
-        font-size: var(--med-whitney-ipad-land-font-size);
-    }
-
-    .list-med-item, .list-med-item a {
-        font-size: var(--rene-ipad-land-font-size);
+        font-size: var(--med-copy-ipad-land-font-size);
     }
 
 }
@@ -162,16 +130,12 @@ and (orientation: landscape) {
 @media only screen
 and (min-width: 1440px) {
 
-    .list-item, .list-item a, .item-col span, .list-item-no-image, .list-item-no-image a {
-        font-size: var(--open-sans-desktop-font-size);
+    .list-item, .list-item a, .list-item-no-left-pad, .list-item-no-left-pad a, .list-med-item, .list-med-item a {
+        font-size: var(--small-copy-ipad-port-font-size);
     }
 
     .list-big-item, .list-big-item a {
-        font-size: var(--med-whitney-desktop-font-size);
-    }
-
-    .list-med-item, .list-med-item a {
-        font-size: var(--rene-desktop-font-size);
+        font-size: var(--med-copy-desktop-font-size);
     }
 
 }
@@ -179,54 +143,51 @@ and (min-width: 1440px) {
 @media screen {
 
     /* ULs */
-    .dark-list, .light-list, .clear-list {
-        padding-left: 2%;
-        padding-right:2%;
-        width: 96%;
+    .content-dark-list, .content-light-list, .content-clear-list {
+        display: block;
+        width: 100%;
+        margin: auto;
+        max-width: 800px;
+        border:thick solid purple;
     }
 
-    .dark-list {
+    .content-dark-list {
         color: var(--color-dark-blue);
         background-color: white;
     }
 
-    .light-list {
+    .content-light-list {
         color: var(--color-white);
     }
 
-    /* LIs */
-    .list-item, .list-item a {
-        padding-left:1em;
-        font-family: var(--family-open-sans);
+    /* LIST */
+    .list-item, .list-item a, .list-item-no-left-pad, .list-item-no-left-pad a, .list-big-item, .list-big-item a, .list-med-item, .list-med-item a   {
+        font-family: var(--family-copy);
         text-align: left;
         padding-bottom:.5em;
+    }
+
+    .list-item, .list-item a, .list-med-item, .list-med-item a {
+        padding-right:1em;
         line-height: var(--list-item-line-height);
         list-style-image:url("src/assets/images/backgrounds/yinYang.png");
     }
 
-    .list-item-no-image, .list-item-no-image a {
-        padding-left:1em;
-        font-family: var(--family-open-sans);
-        text-align: left;
-        padding-bottom:.5em;
+    .list-item-no-left-pad, .list-item-no-left-pad a {
         line-height: var(--list-item-basic-line-height);
+        list-style-image:url("src/assets/images/backgrounds/facts.png");
     }
 
     .list-big-item, .list-big-item a {
-        font-family: Whitney-Book, serif;
-        text-align: left;
         line-height: var(--list-wide-item-line-height);
     }
 
     .list-med-item, .list-med-item a {
-        font-family: ReneB-Book, serif;
-        text-align: left;
         line-height: var(--list-item-line-height);
-        padding-bottom:.5em;
         list-style-image:url("src/assets/images/backgrounds/infinity.png");
     }
 
-    .list-item a, .list-big-item a {
+    .list-item a, .list-item-no-left-pad a, .list-big-item a, .list-med-item a {
         text-decoration: underline;
         cursor: pointer;
     }

@@ -28,7 +28,7 @@
             ],
             "styles": [
               "src/assets/css/backgrounds.css",
-              "src/assets/css/copy.css",
+              "src/assets/css/content.css",
               "src/assets/css/lists.css",
               "src/assets/css/print-forms.css",
               "src/assets/css/screen-forms.css",
@@ -104,7 +104,7 @@
             ],
             "styles": [
               "src/assets/css/backgrounds.css",
-              "src/assets/css/copy.css",
+              "src/assets/css/content.css",
               "src/assets/css/lists.css",
               "src/assets/css/print-forms.css",
               "src/assets/css/screen-forms.css",

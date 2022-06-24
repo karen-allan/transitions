@@ -6,11 +6,11 @@ and (max-width: 359px)
 and (orientation: portrait) {
 
     .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-banana-port-font-size);
+        font-size: var(--med-copy-banana-port-font-size);
     }
 
     .question-item, .question-radio label.radio {
-        font-size: var(--open-sans-mobile-port-font-size);
+        font-size: var(--small-copy-banana-port-font-size);
     }
 
 }
@@ -22,11 +22,11 @@ and (max-width: 895px)
 and (orientation: landscape) {
 
     .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-banana-land-font-size);
+        font-size: var(--med-copy-banana-land-font-size);
     }
 
     .question-item, .question-radio label.radio {
-        font-size: var(--open-sans-mobile-land-font-size);
+        font-size: var(--small-copy-mobile-land-font-size);
     }
 
 }
@@ -37,11 +37,11 @@ and (max-width: 599px)
 and (orientation: portrait) {
 
     .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-mobile-port-font-size);
+        font-size: var(--med-copy-mobile-port-font-size);
     }
 
     .question-item, .question-radio label.radio {
-        font-size: var(--open-sans-mobile-port-font-size);
+        font-size: var(--small-copy-mobile-port-font-size);
     }
 
 }
@@ -53,11 +53,11 @@ and (max-width: 1279px)
 and (orientation: landscape) {
 
     .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-mobile-land-font-size);
+        font-size: var(--med-copy-mobile-land-font-size);
     }
 
     .question-item, .question-radio label.radio {
-        font-size: var(--open-sans-mobile-land-font-size);
+        font-size: var(--small-copy-mobile-land-font-size);
     }
 }
 
@@ -68,11 +68,11 @@ and (max-width: 1023px)
 and (orientation: portrait) {
 
     .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-tablet-port-font-size);
+        font-size: var(--med-copy-tablet-port-font-size);
     }
 
     .question-item, .question-radio label.radio {
-        font-size: var(--open-sans-tablet-port-font-size);
+        font-size: var(--small-copy-tablet-port-font-size);
     }
 }
 
@@ -83,11 +83,11 @@ and (max-width: 1365px)
 and (orientation: landscape) {
 
     .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-tablet-land-font-size);
+        font-size: var(--med-copy-tablet-land-font-size);
     }
 
     .question-item, .question-radio label.radio {
-        font-size: var(--open-sans-tablet-land-font-size);
+        font-size: var(--small-copy-tablet-land-font-size);
     }
 
 }
@@ -99,11 +99,11 @@ and (max-width: 1366px)
 and (orientation: portrait) {
 
     .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-ipad-port-font-size);
+        font-size: var(--med-copy-ipad-port-font-size);
     }
 
     .question-item, .question-radio label.radio {
-        font-size: var(--open-sans-ipad-port-font-size);
+        font-size: var(--small-copy-ipad-port-font-size);
     }
 }
 
@@ -114,11 +114,11 @@ and (max-width: 1439px)
 and (orientation: landscape) {
 
     .top-prompt, .list-prompt  {
-        font-size: var(--global-big-ipad-land-font-size);
+        font-size: var(--med-copy-ipad-land-font-size);
     }
 
     .question-item, .question-radio label.radio {
-        font-size: var(--open-sans-ipad-land-font-size);
+        font-size: var(--small-copy-ipad-land-font-size);
     }
 }
 
@@ -129,11 +129,11 @@ and (orientation: landscape) {
 and (min-width: 1440px) {
 
     .top-prompt, .list-prompt, .question-prompt  {
-        font-size: var(--global-big-desktop-font-size);
+        font-size: var(--med-copy-desktop-font-size);
     }
 
     .question-item, .question-radio label.radio {
-        font-size: var(--open-sans-desktop-font-size);
+        font-size: var(--small-copy-desktop-font-size);
     }
 
 }
@@ -150,14 +150,14 @@ and (min-width: 1440px) {
         padding-top:2em;
         margin:0 auto;
         color: var(--color-dark-blue);
-        font-family: var(--family-open-sans);
+        font-family: var(--family-copy);
         border:thin solid var(--color-darkest-blue);
     }
 
     .top-prompt, .list-prompt, .question-prompt  {
         width:90%;
         margin-right:10%;
-        font-family: var(--family-global);
+        font-family: var(--family-copy);
         color: var(--color-dark-blue);
         text-align:left;
     }

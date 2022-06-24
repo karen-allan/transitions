@@ -1,256 +1,255 @@
-<div class="content-no-margins">
-    <div class="grid-desktop">
-        <!-- ABOUT -->
-        <ng-container *ngIf="detailListName === 'list-about'">
-            <div class="linked-grid">
-                <div class="grid-3-cols-1-row">
-                    <div *ngFor="let subject of aboutSubjects">
-                        <ng-container *ngIf="subject.id==subMenuItemId">
-                            <div class="item-col-selected">
+<div class="grid-desktop">
+    <!-- ABOUT -->
+    <ng-container *ngIf="detailListName === 'list-about'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-1-row">
+                <div *ngFor="let subject of aboutSubjects">
+                    <ng-container *ngIf="subject.id==subMenuItemId">
+                        <div class="item-col-selected">
+                            <img alt="subject pic" src={{subject.picture}}/>
+                            <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                            <div class="grid-copy"><span>{{subject.copy}}</span></div>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="subject.id!=subMenuItemId">
+                        <div class="item-col-active">
+                            <a routerLink="{{subject.url}}">
                                 <img alt="subject pic" src={{subject.picture}}/>
                                 <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
                                 <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                            </div>
-                        </ng-container>
-
-                        <ng-container *ngIf="subject.id!=subMenuItemId">
-                            <div class="item-col-active">
-                                <a routerLink="{{subject.url}}">
-                                    <img alt="subject pic" src={{subject.picture}}/>
-                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
-                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                                </a>
-                            </div>
-                        </ng-container>
-                    </div>
+                            </a>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
-        </ng-container>
+        </div>
+    </ng-container>
 
-        <!-- ENERGY MEDICINE -->
-        <ng-container *ngIf="detailListName === 'list-energy-medicine'">
-            <div class="linked-grid">
-                <div class="grid-3-cols-2-rows">
-                    <div *ngFor="let subject of energySubjects">
-                        <ng-container *ngIf="subject.id==subMenuItemId">
-                            <div class="item-col-selected">
+    <!-- ENERGY MEDICINE -->
+    <ng-container *ngIf="detailListName === 'list-energy-medicine'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-2-rows">
+                <div *ngFor="let subject of energySubjects">
+                    <ng-container *ngIf="subject.id==subMenuItemId">
+                        <div class="item-col-selected">
+                            <img alt="subject pic" src={{subject.picture}}/>
+                            <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                            <div class="grid-copy"><span>{{subject.copy}}</span></div>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="subject.id!=subMenuItemId">
+                        <div class="item-col-active">
+                            <a routerLink="{{subject.url}}">
                                 <img alt="subject pic" src={{subject.picture}}/>
                                 <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
                                 <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                            </div>
-                        </ng-container>
-
-                        <ng-container *ngIf="subject.id!=subMenuItemId">
-                            <div class="item-col-active">
-                                <a routerLink="{{subject.url}}">
-                                    <img alt="subject pic" src={{subject.picture}}/>
-                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
-                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                                </a>
-                            </div>
-                        </ng-container>
-                    </div>
+                            </a>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
-        </ng-container>
+        </div>
+    </ng-container>
 
-        <!-- DOULA -->
-        <ng-container *ngIf="detailListName === 'list-doula-work'">
-            <div class="linked-grid">
-                <div class="grid-3-cols-2-rows">
-                    <div *ngFor="let subject of doulaSubjects">
-                        <ng-container *ngIf="subject.id==subMenuItemId">
-                            <div class="item-col-selected">
+    <!-- DOULA -->
+    <ng-container *ngIf="detailListName === 'list-doula-work'">
+        <div class="linked-grid">
+            <div class="grid-3-cols-2-rows">
+                <div *ngFor="let subject of doulaSubjects">
+                    <ng-container *ngIf="subject.id==subMenuItemId">
+                        <div class="item-col-selected">
+                            <img alt="subject pic" src={{subject.picture}}/>
+                            <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                            <div class="grid-copy"><span>{{subject.copy}}</span></div>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="subject.id!=subMenuItemId">
+                        <div class="item-col-active">
+                            <a routerLink="{{subject.url}}">
                                 <img alt="subject pic" src={{subject.picture}}/>
                                 <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
                                 <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                            </div>
-                        </ng-container>
-
-                        <ng-container *ngIf="subject.id!=subMenuItemId">
-                            <div class="item-col-active">
-                                <a routerLink="{{subject.url}}">
-                                    <img alt="subject pic" src={{subject.picture}}/>
-                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
-                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                                </a>
-                            </div>
-                        </ng-container>
-                    </div>
+                            </a>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
-        </ng-container>
-    </div>
+        </div>
+    </ng-container>
+</div>
 
 <!-- MEDIUM SIZE (mobile landscape) -->
-    <div class="grid-medium">
-        <!-- ABOUT -->
-        <ng-container *ngIf="detailListName === 'list-about'">
-            <div class="linked-grid">
-                <div class="grid-1-col-n-rows">
-                    <div *ngFor="let subject of aboutSubjects">
-                        <ng-container *ngIf="subject.id==subMenuItemId">
-                            <div class="item-col-selected">
+<div class="grid-medium">
+    <!-- ABOUT -->
+    <ng-container *ngIf="detailListName === 'list-about'">
+        <div class="linked-grid">
+            <div class="grid-1-col-n-rows">
+                <div *ngFor="let subject of aboutSubjects">
+                    <ng-container *ngIf="subject.id==subMenuItemId">
+                        <div class="item-col-selected">
+                            <img alt="subject pic" src={{subject.picture}}/>
+                            <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                            <div class="grid-copy"><span>{{subject.copy}}</span></div>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="subject.id!=subMenuItemId">
+                        <div class="item-col-active">
+                            <a routerLink="{{subject.url}}">
                                 <img alt="subject pic" src={{subject.picture}}/>
                                 <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
                                 <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                            </div>
-                        </ng-container>
-
-                        <ng-container *ngIf="subject.id!=subMenuItemId">
-                            <div class="item-col-active">
-                                <a routerLink="{{subject.url}}">
-                                    <img alt="subject pic" src={{subject.picture}}/>
-                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
-                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                                </a>
-                            </div>
-                        </ng-container>
-                    </div>
+                            </a>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
-        </ng-container>
+        </div>
+    </ng-container>
 
-        <!-- ENERGY MEDICINE -->
-        <ng-container *ngIf="detailListName === 'list-energy-medicine'">
-            <div class="linked-grid">
-                <div class="grid-2-cols-3-rows">
-                    <div *ngFor="let subject of energySubjects">
-                        <ng-container *ngIf="subject.id==subMenuItemId">
-                            <div class="item-col-selected">
+    <!-- ENERGY MEDICINE -->
+    <ng-container *ngIf="detailListName === 'list-energy-medicine'">
+        <div class="linked-grid">
+            <div class="grid-2-cols-3-rows">
+                <div *ngFor="let subject of energySubjects">
+                    <ng-container *ngIf="subject.id==subMenuItemId">
+                        <div class="item-col-selected">
+                            <img alt="subject pic" src={{subject.picture}}/>
+                            <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                            <div class="grid-copy"><span>{{subject.copy}}</span></div>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="subject.id!=subMenuItemId">
+                        <div class="item-col-active">
+                            <a routerLink="{{subject.url}}">
                                 <img alt="subject pic" src={{subject.picture}}/>
                                 <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
                                 <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                            </div>
-                        </ng-container>
-
-                        <ng-container *ngIf="subject.id!=subMenuItemId">
-                            <div class="item-col-active">
-                                <a routerLink="{{subject.url}}">
-                                    <img alt="subject pic" src={{subject.picture}}/>
-                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
-                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                                </a>
-                            </div>
-                        </ng-container>
-                    </div>
+                            </a>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
-        </ng-container>
+        </div>
+    </ng-container>
 
-        <!-- DOULA -->
-        <ng-container *ngIf="detailListName === 'list-doula-work'">
-            <div class="linked-grid">
-                <div class="grid-2-cols-3-rows">
-                    <div *ngFor="let subject of doulaSubjects">
-                        <ng-container *ngIf="subject.id==subMenuItemId">
-                            <div class="item-col-selected">
+    <!-- DOULA -->
+    <ng-container *ngIf="detailListName === 'list-doula-work'">
+        <div class="linked-grid">
+            <div class="grid-2-cols-3-rows">
+                <div *ngFor="let subject of doulaSubjects">
+                    <ng-container *ngIf="subject.id==subMenuItemId">
+                        <div class="item-col-selected">
+                            <img alt="subject pic" src={{subject.picture}}/>
+                            <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                            <div class="grid-copy"><span>{{subject.copy}}</span></div>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="subject.id!=subMenuItemId">
+                        <div class="item-col-active">
+                            <a routerLink="{{subject.url}}">
                                 <img alt="subject pic" src={{subject.picture}}/>
                                 <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
                                 <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                            </div>
-                        </ng-container>
-
-                        <ng-container *ngIf="subject.id!=subMenuItemId">
-                            <div class="item-col-active">
-                                <a routerLink="{{subject.url}}">
-                                    <img alt="subject pic" src={{subject.picture}}/>
-                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
-                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                                </a>
-                            </div>
-                        </ng-container>
-                    </div>
+                            </a>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
-        </ng-container>
-    </div>
+        </div>
+    </ng-container>
+</div>
 
 <!-- MOBILE -->
-    <div class="grid-mobile">
-        <!-- ABOUT -->
-        <ng-container *ngIf="detailListName === 'list-about'">
-            <div class="linked-grid">
-                <div class="grid-1-col-3-rows">
-                    <div *ngFor="let subject of aboutSubjects">
-                        <ng-container *ngIf="subject.id==subMenuItemId">
-                            <div class="item-col-selected">
+<div class="grid-mobile">
+    <!-- ABOUT -->
+    <ng-container *ngIf="detailListName === 'list-about'">
+        <div class="linked-grid">
+            <div class="grid-1-col-3-rows">
+                <div *ngFor="let subject of aboutSubjects">
+                    <ng-container *ngIf="subject.id==subMenuItemId">
+                        <div class="item-col-selected">
+                            <img alt="subject pic" src={{subject.picture}}/>
+                            <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                            <div class="grid-copy"><span>{{subject.copy}}</span></div>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="subject.id!=subMenuItemId">
+                        <div class="item-col-active">
+                            <a routerLink="{{subject.url}}">
                                 <img alt="subject pic" src={{subject.picture}}/>
                                 <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
                                 <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                            </div>
-                        </ng-container>
-
-                        <ng-container *ngIf="subject.id!=subMenuItemId">
-                            <div class="item-col-active">
-                                <a routerLink="{{subject.url}}">
-                                    <img alt="subject pic" src={{subject.picture}}/>
-                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
-                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                                </a>
-                            </div>
-                        </ng-container>
-                    </div>
+                            </a>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
-        </ng-container>
+        </div>
+    </ng-container>
 
-        <!-- ENERGY MEDICINE -->
-        <ng-container *ngIf="detailListName === 'list-energy-medicine'">
-            <div class="linked-grid">
-                <div class="grid-1-col-3-rows">
-                    <div *ngFor="let subject of energySubjects">
-                        <ng-container *ngIf="subject.id==subMenuItemId">
-                            <div class="item-col-selected">
+    <!-- ENERGY MEDICINE -->
+    <ng-container *ngIf="detailListName === 'list-energy-medicine'">
+        <div class="linked-grid">
+            <div class="grid-1-col-3-rows">
+                <div *ngFor="let subject of energySubjects">
+                    <ng-container *ngIf="subject.id==subMenuItemId">
+                        <div class="item-col-selected">
+                            <img alt="subject pic" src={{subject.picture}}/>
+                            <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                            <div class="grid-copy"><span>{{subject.copy}}</span></div>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="subject.id!=subMenuItemId">
+                        <div class="item-col-active">
+                            <a routerLink="{{subject.url}}">
                                 <img alt="subject pic" src={{subject.picture}}/>
                                 <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
                                 <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                            </div>
-                        </ng-container>
-
-                        <ng-container *ngIf="subject.id!=subMenuItemId">
-                            <div class="item-col-active">
-                                <a routerLink="{{subject.url}}">
-                                    <img alt="subject pic" src={{subject.picture}}/>
-                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
-                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                                </a>
-                            </div>
-                        </ng-container>
-                    </div>
+                            </a>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
-        </ng-container>
+        </div>
+    </ng-container>
 
-        <!-- DOULA -->
-        <ng-container *ngIf="detailListName === 'list-doula-work'">
-            <div class="linked-grid">
-                <div class="grid-1-col-3-rows">
-                    <div *ngFor="let subject of doulaSubjects">
-                        <ng-container *ngIf="subject.id==subMenuItemId">
-                            <div class="item-col-selected">
+    <!-- DOULA -->
+    <ng-container *ngIf="detailListName === 'list-doula-work'">
+        <div class="linked-grid">
+            <div class="grid-1-col-3-rows">
+                <div *ngFor="let subject of doulaSubjects">
+                    <ng-container *ngIf="subject.id==subMenuItemId">
+                        <div class="item-col-selected">
+                            <img alt="subject pic" src={{subject.picture}}/>
+                            <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
+                            <div class="grid-copy"><span>{{subject.copy}}</span></div>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="subject.id!=subMenuItemId">
+                        <div class="item-col-active">
+                            <a routerLink="{{subject.url}}">
                                 <img alt="subject pic" src={{subject.picture}}/>
                                 <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
                                 <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                            </div>
-                        </ng-container>
-
-                        <ng-container *ngIf="subject.id!=subMenuItemId">
-                            <div class="item-col-active">
-                                <a routerLink="{{subject.url}}">
-                                    <img alt="subject pic" src={{subject.picture}}/>
-                                    <div class="grid-heading">{{subject.title.toUpperCase()}}</div>
-                                    <div class="grid-copy"><span>{{subject.copy}}</span></div>
-                                </a>
-                            </div>
-                        </ng-container>
-                    </div>
+                            </a>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
-        </ng-container>
-    </div>
-
-
+        </div>
+    </ng-container>
 </div>
+
+
+
 
 

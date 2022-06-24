@@ -5,39 +5,27 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-    /* UNIQUE HEADINGS ON HOME PAGE ONLY RIGHT NOW  */
-    .full-length-titles, .full-length-sub-titles  {
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-    }
-
-    .full-length-titles h1  {
-        font-size: var(--heading-whitney-banana-port-font-size);
-        text-align:center;
-    }
-
-    .full-length-sub-titles h2 {
-        font-size: var(--med-whitney-banana-port-font-size);
-    }
-
     /* QUOTES inside content */
     .content-quote {
         width:90%;
         margin:1em 5% 0 5%;
     }
 
-    .content-quote p {
-        font-size:var(--script-p-banana-port-font-size);
+    .content-quote p, .content-quote span {
+        font-size:var(--small-quote-banana-port-font-size);
     }
 
     /* ENERGY TIPS */
     .energy-tip span {
-        font-size: var(--open-sans-banana-port-font-size);
+        font-size: var(--small-copy-banana-port-font-size);
     }
 
-    .content-videos {
+    .background-video {
         height:150px;
+    }
+
+    .background-notes {
+        font-size: var(--small-copy-banana-port-font-size);
     }
 
 }
@@ -48,39 +36,27 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-    .full-length-titles, .full-length-sub-titles  {
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-    }
-
-    /* UNIQUE HEADING */
-    .full-length-titles h1 {
-        font-size: var(--heading-whitney-banana-land-font-size);
-        text-align:center;
-    }
-
-    .full-length-sub-titles h2 {
-        font-size: var(--med-whitney-banana-land-font-size);
-    }
-
     /* QUOTES inside content */
     .content-quote {
         width:90%;
         margin:1em 5% 0 5%;
     }
 
-    .content-quote p {
-        font-size:var(--script-p-banana-land-font-size);
+    .content-quote p, .content-quote span {
+        font-size:var(--small-quote-banana-land-font-size);
     }
 
     /* ENERGY TIPS */
     .energy-tip span {
-        font-size: var(--open-sans-banana-land-font-size);
+        font-size: var(--small-copy-banana-land-font-size);
     }
 
-    .content-videos {
+    .background-video {
         height:250px;
+    }
+
+    .background-notes {
+        font-size: var(--small-copy-banana-land-font-size);
     }
 
 }
@@ -91,38 +67,27 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-    .full-length-titles, .full-length-sub-titles  {
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
-    }
-
-    .full-length-titles h1 {
-        font-size: var(--heading-whitney-mobile-port-font-size);
-        text-align:center;
-    }
-
-    .full-length-sub-titles h2 {
-        font-size: var(--hostel-heading-mobile-port-font-size);
-    }
-
     /* QUOTES inside content */
     .content-quote {
         width:90%;
         margin:1em 5% 0 5%;
     }
 
-    .content-quote p {
-        font-size:var(--script-p-mobile-port-font-size);
+    .content-quote p, .content-quote span {
+        font-size:var(--small-quote-mobile-port-font-size);
     }
 
     /* ENERGY TIPS */
     .energy-tip span {
-        font-size: var(--open-sans-mobile-port-font-size);
+        font-size: var(--small-copy-mobile-port-font-size);
     }
 
-    .content-videos {
+    .background-video {
         height:150px;
+    }
+
+    .background-notes {
+        font-size: var(--small-copy-mobile-port-font-size);
     }
 
 }
@@ -133,36 +98,27 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-    .full-length-titles, .full-length-sub-titles  {
-        width:100%;
-    }
-
-    .full-length-titles h1 {
-        font-size: var(--heading-whitney-mobile-land-font-size);
-        text-align:center;
-    }
-
-    .full-length-sub-titles  h2 {
-        font-size: var(--med-whitney-mobile-land-font-size);
-    }
-
     /* QUOTES inside content */
     .content-quote {
         width:90%;
         margin:1em 5% 0 5%;
     }
 
-    .content-quote p {
-        font-size:var(--script-p-mobile-land-font-size);
+    .content-quote p, .content-quote span {
+        font-size:var(--small-quote-mobile-land-font-size);
     }
 
     /* ENERGY TIPS */
     .energy-tip span {
-        font-size: var(--open-sans-mobile-land-font-size);
+        font-size: var(--small-copy-mobile-land-font-size);
     }
 
-    .content-videos {
+    .background-video {
         height:250px;
+    }
+
+    .background-notes {
+        font-size: var(--small-copy-mobile-land-font-size);
     }
 
 }
@@ -173,37 +129,27 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-    /* UNIQUE HEADING */
-    .full-length-titles, .full-length-sub-titles  {
-        width:100%;
-    }
-
-    .full-length-titles h1 {
-        font-size: var(--heading-whitney-tablet-port-font-size);
-        text-align:center;
-    }
-
-    .full-length-sub-titles h2 {
-        font-size: var(--med-whitney-tablet-port-font-size);
-    }
-
     /* QUOTES inside content */
     .content-quote {
         width:90%;
         margin:1em 5% 0 5%;
     }
 
-    .content-quote p {
-        font-size:var(--script-p-tablet-port-font-size);
+    .content-quote p, .content-quote span {
+        font-size:var(--small-quote-tablet-port-font-size);
     }
 
     /* ENERGY TIPS */
     .energy-tip span {
-        font-size: var(--open-sans-tablet-port-font-size);
+        font-size: var(--small-copy-tablet-port-font-size);
     }
 
-    .content-videos {
+    .background-video {
         height:300px;
+    }
+
+    .background-notes {
+        font-size: var(--small-copy-tablet-port-font-size);
     }
 
 }
@@ -214,38 +160,27 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
-    /* UNIQUE HEADING */
-    .full-length-titles, .full-length-sub-titles  {
-        width:100%;
-    }
-
-    .full-length-titles h1 {
-        padding:2em 0;
-        font-size: var(--heading-whitney-tablet-land-font-size);
-        text-align:left;
-    }
-
-    .full-length-sub-titles h2 {
-        font-size: var(--med-whitney-tablet-land-font-size);
-    }
-
     /* QUOTES inside content */
     .content-quote {
         width:90%;
         margin:1em 5% 0 5%;
     }
 
-    .content-quote p {
-        font-size:var(--script-p-tablet-land-font-size);
+    .content-quote p, .content-quote span {
+        font-size:var(--small-quote-tablet-land-font-size);
     }
 
     /* ENERGY TIPS */
     .energy-tip span {
-        font-size: var(--open-sans-tablet-land-font-size);
+        font-size: var(--small-copy-tablet-land-font-size);
     }
 
-    .content-videos {
+    .background-video {
         height:350px;
+    }
+
+    .background-notes {
+        font-size: var(--small-copy-tablet-land-font-size);
     }
 
 }
@@ -256,38 +191,27 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    /* UNIQUE HEADING */
-    .full-length-titles, .full-length-sub-titles  {
-        width:100%;
-    }
-
-    .full-length-titles h1 {
-        padding:1.5em 0;
-        font-size: var(--heading-whitney-ipad-port-font-size);
-        text-align:left;
-    }
-
-    .full-length-sub-titles h2 {
-        font-size: var(--med-whitney-ipad-port-font-size);
-    }
-
     /* QUOTES inside content */
     .content-quote {
         width:90%;
         margin:1em 5% 0 5%;
     }
 
-    .content-quote p {
-        font-size:var(--script-p-ipad-port-font-size);
+    .content-quote p, .content-quote span {
+        font-size:var(--small-quote-ipad-port-font-size);
     }
 
     /* ENERGY TIPS */
     .energy-tip span {
-        font-size: var(--open-sans-ipad-port-font-size);
+        font-size: var(--small-copy-ipad-port-font-size);
     }
 
-    .content-videos {
+    .background-video {
         height:300px;
+    }
+
+    .background-notes {
+        font-size: var(--small-copy-ipad-port-font-size);
     }
 
 }
@@ -298,79 +222,55 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-    /* UNIQUE HEADING */
-    .full-length-titles, .full-length-sub-titles  {
-        width:100%;
-    }
-
-    .full-length-titles h1 {
-        padding:2em 0;
-        font-size: var(--heading-whitney-ipad-land-font-size);
-        text-align:left;
-    }
-
-    .full-length-sub-titles h2 {
-        font-size: var(--med-whitney-ipad-land-font-size);
-    }
-
     /* QUOTES inside content */
     .content-quote {
         width:100%;
         margin:1em 0;
     }
 
-    .content-quote p {
-        font-size:var(--script-p-ipad-land-font-size);
+    .content-quote p, .content-quote span {
+        font-size:var(--small-quote-ipad-land-font-size);
     }
 
     /* ENERGY TIPS */
     .energy-tip span {
-        font-size: var(--open-sans-ipad-land-font-size);
+        font-size: var(--small-copy-ipad-land-font-size);
     }
 
-    .content-videos {
+    .background-video {
         height:400px;
     }
 
+    .background-notes {
+        font-size: var(--small-copy-ipad-land-font-size);
+    }
 }
 
 /* DESKTOPS ****************************************************************************************************/
 @media only screen
 and (min-width: 1440px) {
 
-    /* UNIQUE HEADING */
-    .full-length-titles, .full-length-sub-titles  {
-        width:100%;
-    }
-
-    .full-length-titles h1 {
-        padding:2em 0;
-        font-size: var(--heading-whitney-desktop-font-size);
-        text-align:left;
-    }
-
-    .full-length-sub-titles h2 {
-
-        font-size: var(--med-whitney-desktop-font-size);
-    }
-
     /* QUOTES inside content */
     .content-quote {
         width:100%;
         margin:1em 0;
     }
 
-    .content-quote p {
-        font-size:var(--script-p-desktop-font-size);
+    .content-quote p, .content-quote span {
+        font-size:var(--small-quote-desktop-font-size);
     }
 
     /* ENERGY TIPS */
     .energy-tip span {
-        font-size: var(--open-sans-desktop-font-size);
+        font-size: var(--small-copy-desktop-font-size);
     }
 
-    .content-videos {
+    .background-video {
         height:400px;
+    }
+
+    .background-notes {
+        font-size: var(--small-copy-desktop-font-size);
     }
 
 }
@@ -378,32 +278,15 @@ and (min-width: 1440px) {
 /* GLOBAL ****************************************************************************************************/
 @media only screen {
 
-    /* UNIQUE HEADING WHITNEY   */
-    .full-length-titles, .full-length-sub-titles  {
-        display:block;
-        float:left;
-
-        font-style:normal;
-        text-transform: uppercase;
-        font-weight:400;
-        color: var(--color-light-blue);
-        letter-spacing: 4px;
-    }
-
-    .full-length-titles h1, .full-length-sub-titles h2 {
-        font-family: Whitney-SSm-Book, Whitney-Book, arial, serif;
-        padding:.5em 0;
-        text-align: center;
-    }
-
     /* QUOTES INSIDE CONTENT (as opposed to Headings quotes*/
     .content-quote {
         max-width:1152px;
         display:grid;
+        margin:2em auto 0 auto;
         align-content: center;
         justify-content: center;
-        font-family: var(--family-script);
-        color: var(--color-darkest-purple);
+        font-family: var(--family-quotes);
+        color: var(--color-quotes-purple);
     }
 
     .content-quote p, .content-quote span {
@@ -427,13 +310,12 @@ and (min-width: 1440px) {
         width:90%;
         margin:1em 5%;
         display:grid;
-        background-color: var(--color-white);
-        color:var(--color-darkest-purple);
+        color:var(--color-quotes-purple);
         align-content: center;
         justify-content: center;
         border-radius:20px;
-        border:thin solid var(--color-dark-gold);
-        font-family: var(--family-open-sans);
+        border:thin solid var(--color-dark-blue);
+        font-family: var(--family-copy);
     }
 
     .energy-tip p, .energy-tip span {
@@ -441,19 +323,37 @@ and (min-width: 1440px) {
         line-height: var(--copy-line-height);
     }
 
+    .background-video {
+        display: block;
+        width:100%;
+        max-width:800px;
+        margin:1em auto;
+    }
 
-    .preamble-block {
+    .background-notes {
         display:block;
+        max-width: 800px;
         float:left;
         width:100%;
         color: var(--color-white);
         background-color: #5b89d5;
         border: thin solid  var(--color-soft-blue);
-        font-family: var(--family-open-sans);
+        font-family: var(--family-copy);
         line-height:var(--copy-line-height);
         text-align: left;
-        font-size: var(--open-sans-desktop-font-size);
-        margin-top:2em;
+        margin:2em auto 0 auto;
+    }
+
+    .content-images {
+        display: block;
+        width:100%;
+        max-width:800px;
+        margin:1em auto;
+    }
+
+    .content-images img {
+        max-width:100%;
+        height:auto;
     }
 
 }

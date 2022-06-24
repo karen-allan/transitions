@@ -9,30 +9,24 @@ and (orientation: portrait) {
     /* PRICING INFO */
     .charges-grid {
         width: 90%;
-        margin:0 5%;
     }
 
-    .charges-grid p {
-        font-size:var(--med-whitney-banana-port-font-size);
-        letter-spacing: 0;
+    .charges-grid p, .testimonials-heading {
+        font-size:var(--big-copy-banana-port-font-size);
+        letter-spacing: 4px;
     }
 
-    .pricing span, .total span {
-        font-size:var(--data-banana-port-font-span-size);
+    .pricing span, .total span, .testimonial p {
+        font-size:var(--small-copy-banana-port-font-size);
     }
 
-    /* TESTIMONIALS */
-    .testimonial-heading {
-        font-size:var(--script-heading-banana-port-font-size);
-    }
-
-    .testimonial p {
-        font-size:var(--script-p-banana-port-font-size);
+    /* TESTIMONIAL */
+    .testimonial  p {
         margin:0;
     }
 
-    .testimonial span {
-        font-size:var(--script-small-banana-port-font-size);
+    .testimonial  span {
+        font-size:var(--smallest-copy-banana-port-font-size);
     }
 
 }
@@ -46,35 +40,26 @@ and (orientation: landscape) {
     /* PRICING INFO */
     .charges-grid {
         width: 90%;
-        margin:0 5%;
     }
 
-    .charges-grid p {
-        font-size:var(--med-whitney-banana-land-font-size);
+    .charges-grid p, .testimonials-heading {
+        font-size:var(--big-copy-banana-land-font-size);
         letter-spacing: 4px;
     }
 
-    .pricing span, .total span {
-        font-size:var(--data-banana-land-font-span-size);
+    .pricing span, .total span, .testimonial p {
+        font-size:var(--small-copy-banana-land-font-size);
     }
 
-    /* TESTIMONIALS */
-    .testimonial-heading {
-        font-size:var(--script-heading-banana-land-font-size);
-    }
-
-    .testimonial-1, .testimonial-2, .testimonial-3 {
-        grid-column:1;
-    }
-
-    .testimonial p {
-        font-size:var(--script-p-banana-land-font-size);
+    /* TESTIMONIAL */
+    .testimonial  p {
         margin:0;
     }
 
-    .testimonial span {
-        font-size:var(--script-small-banana-land-font-size);
+    .testimonial  span {
+        font-size:var(--smallest-copy-banana-land-font-size);
     }
+
 
 }
 
@@ -88,30 +73,25 @@ and (orientation: portrait) {
     /* PRICING INFO */
     .charges-grid {
         width: 90%;
-        margin:0 5%;
+        /*margin:0 5%;*/
     }
 
-    .charges-grid p {
-        font-size:var(--med-whitney-mobile-port-font-size);
-        letter-spacing: 1px;
+    .charges-grid p, .testimonials-heading {
+        font-size:var(--big-copy-mobile-port-font-size);
+        letter-spacing: 4px;
     }
 
-    .pricing span, .total span {
-        font-size:var(--data-mobile-port-font-span-size);
+    .pricing span, .total span, .testimonial p {
+        font-size:var(--small-copy-mobile-port-font-size);
     }
 
-    /* TESTIMONIALS */
-    .testimonial-heading {
-        font-size:var(--script-heading-mobile-port-font-size);
-    }
-
-    .testimonial p {
-        font-size:var(--script-p-mobile-port-font-size);
+    /* TESTIMONIAL */
+    .testimonial  p {
         margin:0;
     }
 
-    .testimonial span {
-        font-size:var(--script-small-mobile-port-font-size);
+    .testimonial  span {
+        font-size:var(--smallest-copy-mobile-port-font-size);
     }
 
 }
@@ -125,30 +105,25 @@ and (orientation: landscape) {
     /* PRICING INFO */
     .charges-grid {
         width: 60%;
-        margin:0 40% 0 0;
+        /*margin:0 40% 0 0;*/
     }
 
-    .charges-grid p {
-        font-size:var(--med-whitney-mobile-land-font-size);
+    .charges-grid p, .testimonials-heading {
+        font-size:var(--big-copy-mobile-land-font-size);
         letter-spacing: 4px;
     }
 
-    .pricing span, .total span {
-        font-size:var(--data-mobile-land-font-span-size);
+    .pricing span, .total span, .testimonial p {
+        font-size:var(--small-copy-mobile-land-font-size);
     }
 
-    /* TESTIMONIALS */
-    .testimonial-heading {
-        font-size:var(--script-heading-mobile-land-font-size);
-    }
-
-    .testimonial p {
-        font-size:var(--script-p-mobile-land-font-size);
+    /* TESTIMONIAL */
+    .testimonial  p {
         margin:0;
     }
 
-    .testimonial span {
-        font-size:var(--script-small-mobile-land-font-size);
+    .testimonial  span {
+        font-size:var(--smallest-copy-mobile-land-font-size);
     }
 
 }
@@ -164,27 +139,22 @@ and (orientation: portrait) {
         width:70%;
     }
 
-    .charges-grid p {
-        font-size:var(--med-whitney-tablet-port-font-size);
+    .charges-grid p, .testimonials-heading {
+        font-size:var(--big-copy-tablet-port-font-size);
         letter-spacing: 4px;
     }
 
-    .pricing span, .total span {
-        font-size:var(--data-tablet-port-font-span-size);
+    .pricing span, .total span, .testimonial p {
+        font-size:var(--small-copy-tablet-port-font-size);
     }
 
-    /* TESTIMONIALS */
-    .testimonial-heading {
-        font-size:var(--script-heading-tablet-port-font-size);
-    }
-
-    .testimonial p  {
-        font-size:var(--script-p-tablet-port-font-size);
+    /* TESTIMONIAL */
+    .testimonial  p {
         margin:0;
     }
 
-    .testimonial span {
-        font-size:var(--script-small-tablet-port-font-size);
+    .testimonial  span {
+        font-size:var(--smallest-copy-tablet-port-font-size);
     }
 
 }
@@ -200,28 +170,24 @@ and (orientation: landscape) {
         width:70%;
     }
 
-    .charges-grid p {
-        font-size:var(--med-whitney-tablet-land-font-size);
+    .charges-grid p, .testimonials-heading {
+        font-size:var(--big-copy-tablet-land-font-size);
         letter-spacing: 4px;
     }
 
-    .pricing span, .total span {
-        font-size:var(--data-tablet-land-font-span-size);
+    .pricing span, .total span, .testimonial p {
+        font-size:var(--small-copy-tablet-land-font-size);
     }
 
-    /* TESTIMONIALS */
-    .testimonial-heading {
-        font-size:var(--script-heading-tablet-land-font-size);
-    }
-
-    .testimonial p {
-        font-size:var(--script-p-tablet-land-font-size);
+    /* TESTIMONIAL */
+    .testimonial  p {
         margin:0;
     }
 
-    .testimonial span {
-        font-size:var(--script-small-tablet-land-font-size);
+    .testimonial  span {
+        font-size:var(--smallest-copy-tablet-land-font-size);
     }
+
 
 }
 
@@ -237,32 +203,25 @@ and (orientation: portrait) {
         width:70%;
     }
 
-    .charges-grid p {
-        font-size:var(--med-whitney-ipad-port-font-size);
+    .charges-grid p, .testimonials-heading {
+        font-size:var(--big-copy-ipad-port-font-size);
         letter-spacing: 4px;
     }
 
-    .pricing span, .total span {
-        font-size:var(--data-ipad-port-font-span-size);
+    .pricing span, .total span, .testimonial p {
+        font-size:var(--small-copy-ipad-port-font-size);
     }
 
-    /* TESTIMONIALS */
-    .testimonial-heading {
-        font-size:var(--script-heading-ipad-port-font-size);
-    }
-
-    .testimonial p {
-        font-size:var(--script-p-ipad-port-font-size);
+    /* TESTIMONIAL */
+    .testimonial  p {
         margin:0;
     }
 
-    .testimonial span {
-        font-size:var(--script-small-ipad-port-font-size);
+    .testimonial  span {
+        font-size:var(--smallest-copy-ipad-port-font-size);
     }
 
 }
-
-
 
 /* IPADS LANDSCAPE ***************************************************************************************************/
 @media only screen
@@ -275,27 +234,22 @@ and (orientation: landscape) {
         width:70%;
     }
 
-    .charges-grid p {
-        font-size:var(--med-whitney-ipad-land-font-size);
+    .charges-grid p, .testimonials-heading {
+        font-size:var(--big-copy-ipad-land-font-size);
         letter-spacing: 4px;
     }
 
-    .pricing span, .total span {
-        font-size:var(--data-ipad-land-font-span-size);
+    .pricing span, .total span, .testimonial p {
+        font-size:var(--small-copy-ipad-land-font-size);
     }
 
-    /* TESTIMONIALS */
-    .testimonial-heading {
-        font-size:var(--script-heading-ipad-land-font-size);
-    }
-
-    .testimonial p {
-        font-size:var(--script-p-ipad-land-font-size);
+    /* TESTIMONIAL */
+    .testimonial  p {
         margin:0;
     }
 
-    .testimonial span {
-        font-size:var(--script-small-ipad-land-font-size);
+    .testimonial  span {
+        font-size:var(--smallest-copy-ipad-land-font-size);
     }
 
 }
@@ -309,47 +263,49 @@ and (min-width: 1440px) {
         width:70%;
     }
 
-    .charges-grid p {
-        font-size:var(--med-whitney-desktop-font-size);
+    .charges-grid p, .testimonials-heading {
+        font-size:var(--big-copy-desktop-font-size);
         letter-spacing: 4px;
     }
 
-    .pricing span, .total span {
-        font-size:var(--data-desktop-font-span-size);
+    .pricing span, .total span, .testimonial p {
+        font-size:var(--small-copy-desktop-font-size);
     }
 
-    /* TESTIMONIALS */
-    .testimonial-heading {
-        font-size:var(--script-heading-desktop-font-size);
-    }
-
-    .testimonial p {
-        font-size:var(--script-p-desktop-font-size);
+    /* TESTIMONIAL */
+    .testimonial  p {
         margin:0;
     }
 
     .testimonial  span {
-        font-size:var(--script-small-desktop-font-size);
+        font-size:var(--smallest-copy-desktop-font-size);
     }
+
 }
 
 /* GLOBAL ****************************************************************************************************/
 @media only screen {
 
+    .charges-grid, .testimonials-grid, .testimonials-heading  {
+        font-family: var(--family-copy);
+    }
+
     /* PAYMENT INFORMATION */
     .charges-grid {
         display:grid;
         margin:auto;
-        font-style:normal;
+        max-width:800px;
+    }
+
+    .charges-grid p, .testimonials-heading {
+        text-transform: uppercase;
+        font-weight:600;
         color: var(--color-light-blue);
     }
 
     .charges-grid p {
-        font-family: Whitney-SSm-Book, Whitney-Book, arial, serif;
         text-align: left;
         margin:2em 0 0 0;
-        text-transform: uppercase;
-        font-weight:600;
         width: 100%;
     }
 
@@ -358,14 +314,13 @@ and (min-width: 1440px) {
         max-width:1152px;
         width:100%;
         grid-template-columns: 60% 40%;
-        font-family: var(--family-data);
+        color: var(--color-light-blue);
         border:thin dotted var(--color-soft-blue);
     }
 
     .pricing, .total {
         display:grid;
         width:100%;
-        color:var(--color-light-blue);
         align-content: center;
         justify-content: flex-start;
     }
@@ -388,22 +343,20 @@ and (min-width: 1440px) {
     }
 
     /* TESTIMONIALS */
-    .testimonial-heading {
+    .testimonials-heading {
         display:block;
         float:left;
         width:100%;
         margin:1em 0 0 0;
-        font-weight:400;
-        color:var(--color-dark-blue);
-        font-family: var(--family-script);
     }
 
     .testimonials-grid {
         display:grid;
         max-width:1152px;
         width:100%;
-        margin-top:1em;
-        margin-bottom:.5em;
+        margin: auto;
+        /*max-width:800px;*/
+        /*font-family: var(--family-copy);*/
     }
 
     .testimonial-1, .testimonial-2, .testimonial-3, .testimonial-4, .testimonial-5, .testimonial-6, .testimonial-7  {
@@ -411,7 +364,7 @@ and (min-width: 1440px) {
         width:100%;
         border:thin solid var(--color-dark-grey);
         padding:1em 0;
-        color:var(--color-dark-grey);
+        color:var(--color-dark-blue);
     }
 
     .testimonial-1 {
@@ -440,9 +393,9 @@ and (min-width: 1440px) {
 
     .testimonial p {
         padding:1em 1em 0 1em;
-        line-height: 140%;
+        line-height: 160%;
         text-align: justify;
-        font-family: var(--family-script);
+        /*font-style: italic;*/
         margin:0;
     }
 
@@ -452,7 +405,7 @@ and (min-width: 1440px) {
         align-content: flex-end;
         padding-right:1em;
         font-weight:400;
-        font-family: var(--family-script);
+        font-style: italic;
     }
 }
 

@@ -59,7 +59,7 @@ and (orientation: portrait) {
     }
 
     .round-button {
-        font-size:var(--global-big-mobile-port-font-size);
+        font-size:var(--med-copy-mobile-port-font-size);
         width: 20px;
         height: 20px;
     }
@@ -126,7 +126,7 @@ and (orientation: landscape) {
     }
 
     .round-button {
-        font-size:var(--global-big-mobile-land-font-size);
+        font-size:var(--med-copy-mobile-land-font-size);
         width: 40px;
         height: 40px;
     }
@@ -193,7 +193,7 @@ and (orientation: portrait) {
     }
 
     .round-button {
-        font-size:var(--global-big-mobile-port-font-size);
+        font-size:var(--med-copy-mobile-port-font-size);
         width: 30px;
         height: 30px;
     }
@@ -260,7 +260,7 @@ and (orientation: landscape) {
     }
 
     .round-button {
-        font-size:var(--global-big-mobile-land-font-size);
+        font-size:var(--med-copy-mobile-land-font-size);
         width: 70px;
         height: 70px;
     }
@@ -327,7 +327,7 @@ and (orientation: portrait) {
     }
 
     .round-button {
-        font-size:var(--global-big-tablet-port-font-size);
+        font-size:var(--med-copy-tablet-port-font-size);
         width: 55px;
         height: 55px;
     }
@@ -394,7 +394,7 @@ and (orientation: landscape) {
     }
 
     .round-button {
-        font-size:var(--global-big-tablet-land-font-size);
+        font-size:var(--med-copy-tablet-land-font-size);
         width: 70px;
         height: 70px;
     }
@@ -460,7 +460,7 @@ and (orientation: portrait) {
     }
 
     .round-button {
-        font-size:var(--global-big-ipad-port-font-size);
+        font-size:var(--med-copy-ipad-port-font-size);
         width: 70px;
         height: 70px;
     }
@@ -527,7 +527,7 @@ and (orientation: landscape) {
     }
 
     .round-button {
-        font-size:var(--global-big-ipad-land-font-size);
+        font-size:var(--med-copy-ipad-land-font-size);
         width: 70px;
         height: 70px;
     }
@@ -592,7 +592,7 @@ and (max-width: 1919px) {
     }
 
     .round-button {
-        font-size:var(--global-big-desktop-font-size);
+        font-size:var(--med-copy-desktop-font-size);
         width: 70px;
         height: 70px;
     }
@@ -616,7 +616,7 @@ and (min-width: 1920px) {
     }
 
     .round-button {
-        font-size:var(--global-big-desktop-font-size);
+        font-size:var(--med-copy-desktop-font-size);
         width: 70px;
         height: 70px;
     }
@@ -843,7 +843,7 @@ and (min-width: 1920px) {
         text-align: center;
         border-radius: 70%;
         line-height:100%;
-        font-family: var(--family-global);
+        font-family: var(--family-copy);
         border: thin solid var(--color-light-blue);
         box-shadow: 0 1rem 1.25rem 0 rgba(67, 62, 73, .1),
         0 -0.25rem 1.5rem rgba(208, 188, 188, .5) inset, /* 878787 */

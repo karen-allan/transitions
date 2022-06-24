@@ -5,7 +5,7 @@
 
   --menu-speed: 0.75s;
 
-  /* FONT COLORS in use */
+  /* ******************************* FONT COLORS in use ********************************** */
   --overlay-color: rgba(244,239,251, 0.95);
 
   /* global colors */
@@ -13,6 +13,7 @@
   --color-purple: #5d34a5;
   --color-dark-purple: #983096;
   --color-darkest-purple:#623061;
+  --color-quotes-purple:#8773aa;
 
   --color-bright-blue:#a6c2dd;
   --color-lightest-blue:#9bb3da;
@@ -42,418 +43,225 @@
   --color-grey-purple:#656281;
   --color-orange:#f0ab26;
 
-  /* FONT SIZES  */
-
-
-  /* WITH MALGUN GOTHIC */
-  --family-menu:'Segoe UI Symbol';
-
   --color-sub-menu:#a4b5d2;
 
-  /* DESKTOP HEADER-MENU ROW */
-  /* ADDS UP TO 195 px */
+  /* ******************************* DESKTOP HEADER-MENU ROW - ADDS UP TO 205 px *********************** */
+
   /* first row has 100 for Logo, Name and Slogans  */
-  --logo-name-slogan-desktop-height:100px;
+  --logo-name-slogan-desktop-height:120px;
   /* second row is for the main menu */
-  --menu-desktop-height:60px;
+  --menu-desktop-height:50px;
   /* third row is the sub menu */
-  --sub-menu-desktop-height:45px;
+  --sub-menu-desktop-height:40px;
 
-  /* MOBILE HEADER */
-  /*--total-mobile-header-height:130px;*/
-
-  --mobile-top-header-portrait-height:80px;
-  --mobile-top-header-land-height:100px;
-
-  --mobile-top-header-height:80px;
+  /* ******************************* MOBILE HEADER is 3 rows *******************************************/
+  --mobile-top-header-height:120px;
   --mobile-middle-header-height:50px;
-  --mobile-bottom-header-height:40px;
+  --mobile-bottom-header-height:45px;
 
+  /* ****************************** FONT SIZES ************************************ */
+  /* HEADER NAME - TYPE MONUMENT */
+  --family-header-name:'Monument-Valley';
 
-  --menu-desktop-font-size:0.9em;
-  --sub-menu-desktop-font-size:0.7em;
+  --header-name-banana-port-font-size:.9em;
+  --header-name-banana-land-font-size:2.2em;
+  --header-name-mobile-port-font-size:1.3em;
+  --header-name-mobile-land-font-size:3.2em;
+  --header-name-tablet-port-font-size:2.3em;
+  --header-name-tablet-land-font-size:2.7em;
+  --header-name-ipad-port-font-size:2.8em;
+  --header-name-ipad-land-font-size:2.8em;
+  --header-name-laptop-font-size:2.8em;
+  --header-name-desktop-font-size:2.9em;
 
-  --menu-mobile-font-size:.9em;
-  --sub-menu-mobile-font-size:.7em;
+  /* HEADER SLOGAN - TYPE RENE */
+  --family-header-copy:'ReneB-Book';
 
-  /* WITH OPEN SANS */
-  --family-open-sans: 'Open Sans';
+  --header-slogan-banana-port-font-size:.4em;
+  --header-slogan-banana-land-font-size:.7em;
+  --header-slogan-mobile-port-font-size:.5em;
+  --header-slogan-mobile-land-font-size:.8em;
+  --header-slogan-tablet-port-font-size:.7em;
+  --header-slogan-tablet-land-font-size:.9em;
+  --header-slogan-ipad-port-font-size:.9em;
+  --header-slogan-ipad-land-font-size:.95em;
+  --header-slogan-laptop-font-size:1em;
+  --header-slogan-desktop-font-size:1.1em;
 
-  --open-sans-banana-port-font-size:.6em;
-  --open-sans-mobile-port-font-size:.7em;
-  --open-sans-tablet-port-font-size:.8em;
-  --open-sans-ipad-port-font-size:.9em;
+  /* HEADER MENU ITEMS - TYPE RENE */
+  --menu-item-tablet-land-font-size:.7em;
+  --menu-item-ipad-land-font-size:.8em;
+  --menu-item-laptop-font-size:.9em;
+  --menu-item-desktop-font-size:.9em;
 
-  --open-sans-banana-land-font-size:.7em;
-  --open-sans-mobile-land-font-size:.8em;
-  --open-sans-tablet-land-font-size:.9em;
-  --open-sans-ipad-land-font-size:1.0em;
+  --sub-menu-item-tablet-land-font-size:.6em;
+  --sub-menu-item-ipad-land-font-size:.7em;
+  --sub-menu-item-laptop-font-size:.8em;
+  --sub-menu-item-desktop-font-size:.8em;
 
-  --open-sans-desktop-font-size:1.1em;
+  /* ALL COPY AND LISTS USE OPEN SANS */
+  --family-copy: 'Open Sans';
 
-  /* WITH MALGUN GOTHIC */
-  --family-global:'malgun gothic';         /*  */
+  --smallest-copy-banana-port-font-size:.6em;
+  --smallest-copy-banana-land-font-size:.7em;
+  --smallest-copy-mobile-port-font-size:.7em;
+  --smallest-copy-mobile-land-font-size:.8em;
+  --smallest-copy-tablet-port-font-size:.6em;
+  --smallest-copy-tablet-land-font-size:.7em;
+  --smallest-copy-ipad-port-font-size:.8em;
+  --smallest-copy-ipad-land-font-size:0.8em;
+  --smallest-copy-desktop-font-size:0.9em;
 
-  /* FACTS: */
-  /* this is where text and image are grids at 100% */
-  --global-citations-banana-port-font-size:.6em;
-  --global-citations-banana-land-font-size:.7em;
+  --small-copy-banana-port-font-size:.6em;
+  --small-copy-banana-land-font-size:.7em;
+  --small-copy-mobile-port-font-size:.7em;
+  --small-copy-mobile-land-font-size:.8em;
+  --small-copy-tablet-port-font-size:.8em;
+  --small-copy-tablet-land-font-size:.9em;
+  --small-copy-ipad-port-font-size:.9em;
+  --small-copy-ipad-land-font-size:1.0em;
+  --small-copy-desktop-font-size:1.1em;
 
-  --global-citations-mobile-port-font-size:.7em;
-  --global-citations-mobile-land-font-size:.8em;
+  /* MEDIUM */
+  --med-copy-banana-port-font-size:.7em;
+  --med-copy-banana-land-font-size:.8em;
+  --med-copy-mobile-port-font-size:.8em;
+  --med-copy-mobile-land-font-size:.9em;
+  --med-copy-tablet-port-font-size:.9em;
+  --med-copy-tablet-land-font-size:1em;
+  --med-copy-ipad-port-font-size:1em;
+  --med-copy-ipad-land-font-size:1.1em;
+  --med-copy-desktop-font-size:1.2em;
 
-  --global-citations-tablet-port-font-size:.8em;
-  --global-citations-ipad-port-font-size:.8em;
+  /* BIG not yet used */
+  --big-copy-banana-port-font-size:.8em;
+  --big-copy-banana-land-font-size:.9em;
+  --big-copy-mobile-port-font-size:.9em;
+  --big-copy-mobile-land-font-size:1em;
+  --big-copy-tablet-port-font-size:1.0em;
+  --big-copy-tablet-land-font-size:1.1em;
+  --big-copy-ipad-port-font-size:1.1em;
+  --big-copy-ipad-land-font-size:1.2em;
+  --big-copy-desktop-font-size:1.3em;
 
-  /* this is where text and image are inline-grids are side by side */
-  --global-citations-tablet-land-font-size:.65em;
-  --global-citations-ipad-land-font-size:.55em;
-  --global-citations-desktop-font-size:.7em;
+  /* FOR FORM DATA - USES MALGUN GOTHIC */
+  --family-forms:'malgun gothic';         /*  */
 
-  /* small ones */
-  --global-smallest-banana-port-font-size:.7em;
-  --global-smallest-banana-land-font-size:.8em;
+  --forms-med-banana-port-font-size:.6em;
+  --forms-med-banana-land-font-size:.8em;
+  --forms-med-mobile-port-font-size:.7em;
+  --forms-med-mobile-land-font-size:.8em;
+  --forms-med-tablet-port-font-size:.8em;
+  --forms-med-tablet-land-font-size:.9em;
+  --forms-med-ipad-port-font-size:.9em;
+  --forms-med-ipad-land-font-size:1em;
+  --forms-med-desktop-font-size:1.1em;
 
-  --global-smallest-mobile-port-font-size:.8em;
-  --global-smallest-mobile-land-font-size:.9em;
+  --forms-big-banana-port-font-size:.7em;
+  --forms-big-banana-land-font-size:.9em;
+  --forms-big-mobile-port-font-size:.8em;
+  --forms-big-mobile-land-font-size:.9em;
+  --forms-big-tablet-port-font-size:.9em;
+  --forms-big-tablet-land-font-size:1em;
+  --forms-big-ipad-port-font-size:1em;
+  --forms-big-ipad-land-font-size:1.1em;
+  --forms-big-desktop-font-size:1.2em;
 
-  --global-smallest-tablet-port-font-size:.9em;
-  --global-smallest-ipad-port-font-size:.9em;
+  /* ALL QUOTES - USES FAMILY QUOTES */
+  --family-quotes:Monotype Corsiva;
 
-  /* this is where text and image are inline-grids are side by side */
-  --global-smallest-tablet-land-font-size:.75em;
-  --global-smallest-ipad-land-font-size:.75em;
-  --global-smallest-desktop-font-size:.75em;
+  --big-quote-banana-port-font-size:.6em;
+  --big-quote-banana-land-font-size:.8em;
+  --big-quote-mobile-port-font-size:.9em;
+  --big-quote-mobile-land-font-size:1.1em;
+  --big-quote-tablet-port-font-size:1.2em;
+  --big-quote-tablet-land-font-size:1.5em;
+  --big-quote-ipad-port-font-size:1.5em;
+  --big-quote-ipad-land-font-size:1.6em;
+  --big-quote-desktop-font-size:1.7em;
 
-  --global-small-banana-port-font-size:.4em;
-  --global-small-mobile-port-font-size:.5em;
-  --global-small-tablet-port-font-size:.6em;
-  --global-small-ipad-port-font-size:.7em;
+  --small-quote-banana-port-font-size:.3em;
+  --small-quote-banana-land-font-size:.5em;
+  --small-quote-mobile-port-font-size:.6em;
+  --small-quote-mobile-land-font-size:0.8em;
+  --small-quote-tablet-port-font-size:0.9em;
+  --small-quote-tablet-land-font-size:1.2em;
+  --small-quote-ipad-port-font-size:1.2em;
+  --small-quote-ipad-land-font-size:1.3em;
+  --small-quote-desktop-font-size:1.4em;
 
-  --global-small-banana-land-font-size:.6em;
-  --global-small-mobile-land-font-size:.6em;
-  --global-small-tablet-land-font-size:.7em;
-  --global-small-ipad-land-font-size:.8em;
+  /* *********************************** ALL HEADINGS - USE WHITNEY BOOK ************************************* */
+  --family-headers: 'Whitney-Book';
+  /* H1 */
+  --h1-banana-port-font-size:.8em;
+  --h1-banana-land-font-size:1.5em;
+  --h1-mobile-port-font-size:1.1em;
+  --h1-mobile-land-font-size:1.6em;
+  --h1-tablet-port-font-size:1.4em;
+  --h1-tablet-land-font-size:1.7em;
+  --h1-ipad-port-font-size:1.6em;
+  --h1-ipad-land-font-size:1.8em;
+  --h1-desktop-font-size:1.9em;
 
-  --global-small-desktop-font-size:.9em;
+  /* H2 */
+  --h2-banana-port-font-size:.7em;
+  --h2-banana-land-font-size:1.2em;
+  --h2-mobile-port-font-size:1.0em;
+  --h2-mobile-land-font-size:1.3em;
+  --h2-tablet-port-font-size:1.1em;
+  --h2-tablet-land-font-size:1.2em;
+  --h2-ipad-port-font-size:1.3em;
+  --h2-ipad-land-font-size:1.5em;
+  --h2-desktop-font-size:1.6em;
 
-  --global-med-banana-port-font-size:.6em;
-  --global-med-mobile-port-font-size:.7em;
-  --global-med-tablet-port-font-size:.8em;
-  --global-med-ipad-port-font-size:.9em;
+  /* H3 */
+  --h3-banana-port-font-size:.6em;
+  --h3-banana-land-font-size:1.1em;
+  --h3-mobile-port-font-size:.9em;
+  --h3-mobile-land-font-size:1.2em;
+  --h3-tablet-port-font-size:1em;
+  --h3-tablet-land-font-size:1.1em;
+  --h3-ipad-port-font-size:1.2em;
+  --h3-ipad-land-font-size:1.4em;
+  --h3-desktop-font-size:1.5em;
 
-  --global-med-banana-land-font-size:.7em;
-  --global-med-mobile-land-font-size:.8em;
-  --global-med-tablet-land-font-size:.9em;
-  --global-med-ipad-land-font-size:.95em;
+  /* H4 */
+  --h4-banana-port-font-size:.5em;
+  --h4-banana-land-font-size:1em;
+  --h4-mobile-port-font-size:.8em;
+  --h4-mobile-land-font-size:1.1em;
+  --h4-tablet-port-font-size:.9em;
+  --h4-tablet-land-font-size:1em;
+  --h4-ipad-port-font-size:1.1em;
+  --h4-ipad-land-font-size:1.3em;
+  --h4-desktop-font-size:1.4em;
 
-  --global-med-laptop-font-size:.95em;
-  --global-med-desktop-font-size:1em;
+  /* FORM MENU ITEMS */
+  --form-menu-banana-port-font-size:.6em;
+  --form-menu-banana-land-font-size:1.1em;
+  --form-menu-mobile-port-font-size:.9em;
+  --form-menu-mobile-land-font-size:1.2em;
+  --form-menu-tablet-port-font-size:1.0em;
+  --form-menu-tablet-land-font-size:1.1em;
+  --form-menu-ipad-port-font-size:1.2em;
+  --form-menu-ipad-land-font-size:1.4em;
+  --form-menu-desktop-font-size:1.5em;
 
-  --global-big-banana-port-font-size:.7em;
-  --global-big-mobile-port-font-size:.8em;
-  --global-big-tablet-port-font-size:.9em;
-  --global-big-ipad-port-font-size:1em;
-
-  --global-big-banana-land-font-size:.8em;
-  --global-big-mobile-land-font-size:.9em;
-  --global-big-tablet-land-font-size:1em;
-  --global-big-ipad-land-font-size:1.1em;
-
-  --global-big-desktop-font-size:1.2em;
+  --form-menu-item-banana-port-font-size:.5em;
+  --form-menu-item-banana-land-font-size:1.0em;
+  --form-menu-item-mobile-port-font-size:.8em;
+  --form-menu-item-mobile-land-font-size:1.1em;
+  --form-menu-item-tablet-port-font-size:0.9em;
+  --form-menu-item-tablet-land-font-size:1.0em;
+  --form-menu-item-ipad-port-font-size:1.1em;
+  --form-menu-item-ipad-land-font-size:1.3em;
+  --form-menu-item-desktop-font-size:1.4em;
 
   --citations:.7em;
   --mobile-citations:.5em;
   --signatures:.8em;
 
-  /* RENE in LISTS */
-  --rene-banana-port-font-size:.6em;
-  --rene-mobile-port-font-size:.7em;
-  --rene-tablet-port-font-size:.85em;
-  --rene-ipad-port-font-size:.9em;
-
-  --rene-banana-land-font-size:.7em;
-  --rene-mobile-land-font-size:.8em;
-  --rene-tablet-land-font-size:.9em;
-  --rene-ipad-land-font-size:.95em;
-
-  --rene-desktop-font-size:1.1em;
-
-  /* RENE as H1 heading for TOPICS */
-  --rene-thin-banana-land-font-size:0.7em;
-  --rene-thin-mobile-land-font-size:1.2em;
-
-  --rene-thin-tablet-port-font-size:1.0em;
-  --rene-thin-tablet-land-font-size:1.6em;
-
-  --rene-thin-ipad-port-font-size:1.4em;
-  --rene-thin-ipad-land-font-size:1.8em;
-
-  --rene-thin-desktop-font-size:2.0em;
-
-  /* BELOW IS WITH FAMILY SCRIPT (quotes for header quotes, script for content quotes)*/
-                /*  */
-  --family-mono:Monotype Corsiva;
-  /* for header quotes */
-  --quotes-p-banana-port-font-size:.6em;
-  --quotes-p-banana-land-font-size:.8em;
-
-  --quotes-p-mobile-port-font-size:.9em;
-  --quotes-p-mobile-land-font-size:1.1em;
-
-  --quotes-p-tablet-port-font-size:1.2em;
-  --quotes-p-tablet-land-font-size:1.5em;
-
-  --quotes-p-ipad-port-font-size:1.5em;
-  --quotes-p-ipad-land-font-size:1.6em;
-
-  --quotes-p-desktop-font-size:1.7em;
-
-  /* for content quotes */
-  --family-script:'gabriola';
-
-  --script-small-banana-port-font-size:0.6em;
-  --script-small-mobile-port-font-size:.8em;
-  --script-small-tablet-port-font-size:1.0em;
-  --script-small-ipad-port-font-size:1.3em;
-
-  --script-small-banana-land-font-size:1.1em;
-  --script-small-mobile-land-font-size:1.5em;
-  --script-small-tablet-land-font-size:1.6em;
-  --script-small-ipad-land-font-size:1.7em;
-
-  --script-small-desktop-font-size:1.7em;
-
-  /* for paragraphs */
-  --script-p-banana-port-font-size:0.7em;
-  --script-p-banana-land-font-size:1.0em;
-
-  --script-p-mobile-port-font-size:.9em;
-  --script-p-mobile-land-font-size:1.1em;
-
-  --script-p-tablet-port-font-size:1.0em;
-  --script-p-tablet-land-font-size:1.2em;
-
-  --script-p-ipad-port-font-size:1.1em;
-  --script-p-ipad-land-font-size:1.3em;
-
-  --script-p-desktop-font-size:1.4em;
-
-  --script-span-banana-port-font-size:0.7em;
-  --script-span-mobile-port-font-size:0.8em;
-  --script-span-tablet-port-font-size:0.9em;
-  --script-span-ipad-port-font-size:1em;
-
-  --script-span-banana-land-font-size:.8em;
-  --script-span-mobile-land-font-size:.9em;
-  --script-span-tablet-land-font-size:1em;
-  --script-span-ipad-land-font-size:1.1em;
-
-  --script-span-desktop-font-size:1.2em;
-
-  /* testimonials */
-  --script-heading-banana-port-font-size:1.4em;
-  --script-heading-mobile-port-font-size:1.7em;
-  --script-heading-tablet-port-font-size:1.8em;
-  --script-heading-ipad-port-font-size:2.0em;
-
-  --script-heading-banana-land-font-size:1.9em;
-  --script-heading-mobile-land-font-size:2.0em;
-  --script-heading-tablet-land-font-size:2.2em;
-  --script-heading-ipad-land-font-size:2.4em;
-
-  --script-heading-desktop-font-size:2.8em;
-
-  /* BELOW IS WITH HOSTEL (used in Topic Heading with Right Images */
-  --hostel-heading-banana-port-font-size:0.9em;
-  --hostel-heading-mobile-port-font-size:1em;
-  --hostel-heading-tablet-port-font-size:1.1em;
-  --hostel-heading-ipad-port-font-size:1.8em;
-
-  --hostel-heading-banana-land-font-size:1.2em;
-  --hostel-heading-mobile-land-font-size:1.5em;
-  --hostel-heading-tablet-land-font-size:1.8em;
-  --hostel-heading-ipad-land-font-size:2.1em;
-
-  --hostel-heading-desktop-font-size:2.3em;
-
-  /* BELOW IS WITH FAMILY DATA */
-  --family-data:arial;
-
-  /* p for details footer top, copyright footer bottom */
-  --data-banana-port-font-p-size:.6em;
-  --data-mobile-port-font-p-size:.7em;
-  --data-tablet-port-font-p-size:.9em;
-  --data-ipad-port-font-p-size:1em;
-
-  --data-banana-land-font-p-size:.8em;
-  --data-mobile-land-font-p-size:.9em;
-  --data-tablet-land-font-p-size:1em;
-  --data-ipad-land-font-p-size:1.1em;
-
-  --data-desktop-font-p-size:1.2em;
-
-  /* span footer this information .... */
-  --data-banana-port-font-span-size:.5em;
-  --data-mobile-port-font-span-size:.6em;
-  --data-tablet-port-font-span-size:.7em;
-  --data-ipad-port-font-span-size:.8em;
-
-  --data-banana-land-font-span-size:.6em;
-  --data-mobile-land-font-span-size:.7em;
-  --data-tablet-land-font-span-size:.8em;
-  --data-ipad-land-font-span-size:.9em;
-
-  --data-desktop-font-span-size:1.0em;
-
-  /* bigger .... */
-  --data-banana-port-font-size:.5em;
-  --data-mobile-port-font-size:.6em;
-  --data-tablet-port-font-size:.7em;
-  --data-ipad-port-font-size:.8em;
-
-  --data-banana-land-font-size:.6em;
-  --data-mobile-land-font-size:.7em;
-  --data-tablet-land-font-size:.8em;
-  --data-ipad-land-font-size:.9em;
-
-  --data-desktop-font-size:1.0em;
-
-  /* BELOW IS WITH WHITNEY BOOK font-family: Whitney-Book;*/
-  --family-whitney:Whitney-Book;
-
-  /* H4 */
-  --h4-whitney-banana-port-font-size:.7em;
-  --h4-whitney-mobile-port-font-size:.8em;
-  --h4-whitney-tablet-port-font-size:.9em;
-  --h4-whitney-ipad-port-font-size:1em;
-
-  --h4-whitney-banana-land-font-size:.9em;
-  --h4-whitney-mobile-land-font-size:1em;
-  --h4-whitney-tablet-land-font-size:1.1em;
-  --h4-whitney-ipad-land-font-size:1.2em;
-
-  --h4-whitney-desktop-font-size:1.3em;
-
-  /* H3 */
-  --h3-whitney-banana-port-font-size:.8em;
-  --h3-whitney-mobile-port-font-size:.9em;
-  --h3-whitney-tablet-port-font-size:1em;
-  --h3-whitney-ipad-port-font-size:1.1em;
-
-  --h3-whitney-banana-land-font-size:1em;
-  --h3-whitney-mobile-land-font-size:1.2em;
-  --h3-whitney-tablet-land-font-size:1.3em;
-  --h3-whitney-ipad-land-font-size:1.4em;
-
-  --h3-whitney-desktop-font-size:1.5em;
-
-  /* H2 */
-  --h2-whitney-banana-port-font-size:.9em;
-  --h2-whitney-mobile-port-font-size:1em;
-  --h2-whitney-tablet-port-font-size:1.1em;
-  --h2-whitney-ipad-port-font-size:1.2em;
-
-  --h2-whitney-banana-land-font-size:1.1em;
-  --h2-whitney-mobile-land-font-size:1.2em;
-  --h2-whitney-tablet-land-font-size:1.3em;
-  --h2-whitney-ipad-land-font-size:1.4em;
-
-  --h2-whitney-desktop-font-size:1.6em;
-
-
-  /* H1 */
-  --h1-whitney-banana-port-font-size:1em;
-  --h1-whitney-mobile-port-font-size:1.1em;
-  --h1-whitney-tablet-port-font-size:1.4em;
-  --h1-whitney-ipad-port-font-size:1.6em;
-
-  --h1-whitney-banana-land-font-size:1.4em;
-  --h1-whitney-mobile-land-font-size:1.5em;
-  --h1-whitney-tablet-land-font-size:1.7em;
-  --h1-whitney-ipad-land-font-size:1.9em;
-
-  --h1-whitney-desktop-font-size:2.1em;
-
-  /* HEADING */
-  --heading-whitney-banana-port-font-size:0.6em;
-  --heading-whitney-banana-land-font-size:0.8em;
-
-  --heading-whitney-mobile-port-font-size:0.7em;
-  --heading-whitney-mobile-land-font-size:0.9em;
-
-  --heading-whitney-tablet-port-font-size:0.9em;
-  --heading-whitney-tablet-land-font-size:1.1em;
-
-  --heading-whitney-ipad-port-font-size:1.3em;
-  --heading-whitney-ipad-land-font-size:1.5em;
-
-  --heading-whitney-desktop-font-size:1.8em;
-
-  /* TEXT */
-  --small-whitney-banana-port-font-size:0.4em;
-  --small-whitney-mobile-port-font-size:0.6em;
-  --small-whitney-tablet-port-font-size:0.7em;
-  --small-whitney-ipad-port-font-size:0.8em;
-
-  --small-whitney-banana-land-font-size:0.7em;
-  --small-whitney-mobile-land-font-size:0.8em;
-  --small-whitney-tablet-land-font-size:0.9em;
-  --small-whitney-ipad-land-font-size:1em;
-
-  --small-whitney-desktop-font-size:1.1em;
-
-  --med-whitney-banana-port-font-size:0.6em;
-  --med-whitney-mobile-port-font-size:0.7em;
-  --med-whitney-tablet-port-font-size:0.8em;
-  --med-whitney-ipad-port-font-size:0.9em;
-
-  --med-whitney-banana-land-font-size:0.9em;
-  --med-whitney-mobile-land-font-size:0.9em;
-  --med-whitney-tablet-land-font-size:1em;
-  --med-whitney-ipad-land-font-size:1.1em;
-
-  --med-whitney-desktop-font-size:1.2em;
-
-  --big-whitney-banana-port-font-size:.9em;
-  --big-whitney-mobile-port-font-size:1.2em;
-  --big-whitney-tablet-port-font-size:1.9em;
-  --big-whitney-ipad-port-font-size:2.1em;
-
-  --big-whitney-banana-land-font-size:1.2em;
-  --big-whitney-mobile-land-font-size:1.4em;
-  --big-whitney-tablet-land-font-size:1.8em;
-  --big-whitney-ipad-land-font-size:2.2em;
-
-  --big-whitney-desktop-font-size:2.5em;
-
-  /* BELOW IS WITH MONUMENT */
-  --monument-banana-port-font-size:1em;
-  --monument-mobile-port-font-size:1.3em;
-  --monument-tablet-port-font-size:2.3em;
-  --monument-ipad-port-font-size:2.8em;
-
-  --monument-banana-land-font-size:2.2em;
-  --monument-mobile-land-font-size:3.2em;
-  --monument-tablet-land-font-size:2.7em;
-  --monument-ipad-land-font-size:2.8em;
-  --monument-laptop-font-size:2.8em;
-  --monument-desktop-font-size:2.9em;
-
-  --monument-header-banana-port-font-size:1.3em;
-  --monument-header-mobile-port-font-size:1.9em;
-  --monument-header-tablet-port-font-size:1.4em;
-  --monument-header-ipad-port-font-size:2.8em;
-
-  --monument-header-banana-land-font-size:1.2em;
-  --monument-header-mobile-land-font-size:2.8em;
-  --monument-header-tablet-land-font-size:2.8em;
-  --monument-header-ipad-land-font-size:3em;
-
-  --monument-header-desktop-font-size:3.5em;
-
-
-  /* LINE HEIGHTS */
+  /* *********************************************** LINE HEIGHTS *****************************************************/
   --copy-line-height:170%;
   --list-item-line-height:180%;
   --list-wide-item-line-height:200%;
@@ -461,12 +269,7 @@
   --quote-p-line-height:130%;
   --quote-span-line-height:100%;
 
-
-
-
-
 }
-
 
 /* GLOBAL  ***********************************************************************************************************/
 
@@ -485,90 +288,6 @@
     width:100%;
     max-width:1920px;
     margin:auto;
-  }
-
-  .content-container {
-    display: block;
-    width:100%;
-    max-width:1280px;
-    margin:auto;
-  }
-
-  .content-container img {
-    max-width:100%;
-    height:auto;
-  }
-
-  /* for the top level grid header on about pages */
-  .grid-container {
-    display: block;
-    width:100%;
-    max-width:1440px;
-    margin:auto;
-  }
-
-  .header-container {
-    display: block;
-    width:100%;
-    max-width:1920px;
-    margin:auto;
-  }
-
-  /* The actual content is 1152 - 90% of 1280 max */
-  .content, .content-no-margins {
-    display: block;
-    float:left;
-    max-width:1152px;
-    width: 90%;
-  }
-
-  .content {
-    margin:1.5em 5%;
-    /*border:thick solid gold;*/
-  }
-
-  .content-no-margins {
-    margin:0 5%;
-    /*border:thick solid pink;*/
-  }
-
-  .content img {
-    max-width:100%;
-    height:auto;
-  }
-
-  .inner-content, .inner-content-no-margins {
-    display: block;
-    width:90%;
-    margin-left:5%;
-    margin-right:5%;
-    max-width:800px;
-  }
-
-  .inner-content {
-    margin:1em auto;
-  }
-
-  .inner-content-no-margins {
-    margin:0 auto;
-  }
-
-  .images, .content-videos {
-    display: block;
-    width:100%;
-    max-width:800px;
-    margin:1em auto;
-  }
-
-  .images img {
-    max-width:100%;
-    height:auto;
-  }
-
-  .forms-content-block {
-    display: block;
-    width: 100%;
-    max-width:1152px;
   }
 
   /* LIST FORMATS */
@@ -976,6 +695,18 @@
     background-image:url('src/assets/images/headers/mindworksEnergyMedicineMail.jpg');
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  .with-faded-background {
+    background-image:linear-gradient(to right, var(--color-lightest-blue) , var(--color-off-white));
+  }
+
+  .with-underline {
+    border-bottom:dashed thin var(--color-soft-blue);
+  }
+
+  .with-solid-underline {
+    border-bottom:solid thin var(--color-dark-blue);
   }
 
   /* FONTS */

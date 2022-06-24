@@ -17,16 +17,16 @@ and (orientation: portrait) {
     }
 
     .element-name-button span, .element-name-button span a {
-        font-size:var(--global-med-banana-port-font-size);
+        font-size:var(--small-copy-banana-port-font-size);
     }
 
     .center-element span {
-        font-size:var(--global-big-banana-port-font-size);
+        font-size:var(--med-copy-banana-port-font-size);
     }
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--monument-header-banana-port-font-size);
+        font-size:var(--header-name-banana-port-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -39,16 +39,16 @@ and (orientation: portrait) {
     }
 
     .element-verb {
-        font-size:var(--monument-banana-port-font-size);
+        font-size:var(--header-name-banana-port-font-size);
     }
 
     /* TIME and RANGE */
     .element-time p {
-        font-size:var(--global-big-banana-port-font-size);
+        font-size:var(--med-copy-banana-port-font-size);
     }
 
     .time-range {
-        font-size:var(--global-med-banana-port-font-size);
+        font-size:var(--small-copy-banana-port-font-size);
     }
 
 }
@@ -70,16 +70,16 @@ and (orientation: landscape) {
     }
 
     .element-name-button span, .element-name-button span a  {
-        font-size:var(--global-med-banana-land-font-size);
+        font-size:var(--small-copy-banana-land-font-size);
     }
 
     .center-element span {
-        font-size:var(--global-big-banana-land-font-size);
+        font-size:var(--med-copy-banana-land-font-size);
     }
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--monument-header-banana-land-font-size);
+        font-size:var(--header-name-banana-land-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -97,7 +97,7 @@ and (orientation: landscape) {
     }
 
     .element-verb {
-        font-size:var(--monument-mobile-port-font-size);
+        font-size:var(--header-name-banana-land-font-size);
     }
 
     .element-time {
@@ -106,11 +106,11 @@ and (orientation: landscape) {
 
     /* TIME and RANGE */
     .element-time p {
-        font-size:var(--global-big-banana-land-font-size);
+        font-size:var(--med-copy-banana-land-font-size);
     }
 
     .time-range {
-        font-size:var(--global-med-banana-land-font-size);
+        font-size:var(--small-copy-banana-land-font-size);
     }
 
 
@@ -134,16 +134,16 @@ and (orientation: portrait) {
     }
 
     .element-name-button span, .element-name-button span a  {
-        font-size:var(--global-med-mobile-port-font-size);
+        font-size:var(--small-copy-mobile-port-font-size);
     }
 
     .center-element span {
-        font-size:var(--global-big-mobile-port-font-size);
+        font-size:var(--med-copy-mobile-port-font-size);
     }
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--monument-header-mobile-port-font-size);
+        font-size:var(--header-name-mobile-port-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -161,7 +161,7 @@ and (orientation: portrait) {
     }
 
     .element-verb {
-        font-size:var(--monument-mobile-port-font-size);
+        font-size:var(--header-name-mobile-port-font-size);
     }
 
     .element-time {
@@ -170,11 +170,11 @@ and (orientation: portrait) {
 
     /* TIME and RANGE */
     .element-time p {
-        font-size:var(--global-big-mobile-port-font-size);
+        font-size:var(--med-copy-mobile-port-font-size);
     }
 
     .time-range {
-        font-size:var(--global-med-mobile-port-font-size);
+        font-size:var(--small-copy-mobile-port-font-size);
     }
 
 
@@ -198,16 +198,16 @@ and (orientation: landscape) {
     }
 
     .element-name-button span, .element-name-button span a  {
-        font-size:var(--global-med-mobile-land-font-size);
+        font-size:var(--small-copy-mobile-land-font-size);
     }
 
     .center-element span {
-        font-size:var(--global-big-mobile-land-font-size);
+        font-size:var(--med-copy-mobile-land-font-size);
     }
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--monument-header-mobile-land-font-size);
+        font-size:var(--header-name-mobile-land-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -225,7 +225,7 @@ and (orientation: landscape) {
     }
 
     .element-verb {
-        font-size:var(--monument-mobile-land-font-size);
+        font-size:var(--header-name-mobile-land-font-size);
     }
 
     .element-time {
@@ -234,11 +234,11 @@ and (orientation: landscape) {
 
     /* TIME and RANGE */
     .element-time p {
-        font-size:var(--global-big-mobile-land-font-size);
+        font-size:var(--med-copy-mobile-land-font-size);
     }
 
     .time-range {
-        font-size:var(--global-med-mobile-land-font-size);
+        font-size:var(--small-copy-mobile-land-font-size);
     }
 
 
@@ -262,16 +262,16 @@ and (orientation: portrait) {
     }
 
     .element-name-button span, .element-name-button span a {
-        font-size:var(--global-med-tablet-port-font-size);
+        font-size:var(--small-copy-tablet-port-font-size);
     }
 
     .center-element span {
-        font-size:var(--global-big-tablet-port-font-size);
+        font-size:var(--med-copy-tablet-port-font-size);
     }
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--monument-header-tablet-port-font-size);
+        font-size:var(--header-name-tablet-port-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -289,7 +289,7 @@ and (orientation: portrait) {
     }
 
     .element-verb {
-        font-size:var(--monument-tablet-port-font-size);
+        font-size:var(--header-name-tablet-port-font-size);
     }
 
     .element-time {
@@ -298,11 +298,11 @@ and (orientation: portrait) {
 
     /* TIME and RANGE */
     .element-time p {
-        font-size:var(--global-big-tablet-port-font-size);
+        font-size:var(--med-copy-tablet-port-font-size);
     }
 
     .time-range {
-        font-size:var(--global-med-tablet-port-font-size);
+        font-size:var(--small-copy-tablet-port-font-size);
     }
 
 
@@ -327,16 +327,16 @@ and (orientation: landscape) {
     }
 
     .element-name-button span, .element-name-button span a  {
-        font-size:var(--global-med-tablet-land-font-size);
+        font-size:var(--small-copy-tablet-land-font-size);
     }
 
     .center-element span {
-        font-size:var(--global-big-tablet-land-font-size);
+        font-size:var(--med-copy-tablet-land-font-size);
     }
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--monument-header-tablet-land-font-size);
+        font-size:var(--header-name-tablet-land-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -354,7 +354,7 @@ and (orientation: landscape) {
     }
 
     .element-verb {
-        font-size:var(--monument-desktop-font-size);
+        font-size:var(--header-name-tablet-land-font-size);
     }
 
     .element-time {
@@ -363,11 +363,11 @@ and (orientation: landscape) {
 
     /* TIME and RANGE */
     .element-time p {
-        font-size:var(--global-big-tablet-land-font-size);
+        font-size:var(--med-copy-tablet-land-font-size);
     }
 
     .time-range {
-        font-size:var(--global-med-tablet-land-font-size);
+        font-size:var(--small-copy-tablet-land-font-size);
     }
 
 
@@ -392,16 +392,16 @@ and (orientation: portrait) {
     }
 
     .element-name-button span, .element-name-button span a {
-        font-size:var(--global-med-ipad-port-font-size);
+        font-size:var(--small-copy-ipad-port-font-size);
     }
 
     .center-element span {
-        font-size:var(--global-big-ipad-port-font-size);
+        font-size:var(--med-copy-ipad-port-font-size);
     }
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--monument-header-ipad-port-font-size);
+        font-size:var(--header-name-ipad-port-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -419,20 +419,20 @@ and (orientation: portrait) {
     }
 
     .element-verb {
-        font-size:var(--monument-desktop-font-size);
+        font-size:var(--header-name-ipad-port-font-size);
     }
 
     .active-time {
-        font-size:var(--global-big-ipad-port-font-size);
+        font-size:var(--med-copy-ipad-port-font-size);
     }
 
     /* TIME and RANGE */
     .element-time p {
-        font-size:var(--global-big-ipad-port-font-size);
+        font-size:var(--med-copy-ipad-port-font-size);
     }
 
     .time-range {
-        font-size:var(--global-med-ipad-port-font-size);
+        font-size:var(--small-copy-ipad-port-font-size);
     }
 
 
@@ -457,16 +457,16 @@ and (orientation: landscape) {
     }
 
     .element-name-button span, .element-name-button span a  {
-        font-size:var(--global-med-ipad-land-font-size);
+        font-size:var(--small-copy-ipad-land-font-size);
     }
 
     .center-element span {
-        font-size:var(--global-big-ipad-land-font-size);
+        font-size:var(--med-copy-ipad-land-font-size);
     }
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--monument-header-ipad-land-font-size);
+        font-size:var(--header-name-ipad-land-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -484,16 +484,16 @@ and (orientation: landscape) {
     }
 
     .element-verb {
-        font-size:var(--monument-desktop-font-size);
+        font-size:var(--header-name-ipad-land-font-size);
     }
 
     /* TIME and RANGE */
     .element-time p {
-        font-size:var(--global-big-ipad-land-font-size);
+        font-size:var(--med-copy-ipad-land-font-size);
     }
 
     .time-range {
-        font-size:var(--global-med-ipad-land-font-size);
+        font-size:var(--small-copy-ipad-land-font-size);
     }
 
 
@@ -516,16 +516,16 @@ and (min-width: 1440px) {
     }
 
     .element-name-button span, .element-name-button span a  {
-        font-size:var(--global-med-desktop-font-size);
+        font-size:var(--small-copy-desktop-font-size);
     }
 
     .center-element span {
-        font-size:var(--global-big-desktop-font-size);
+        font-size:var(--med-copy-desktop-font-size);
     }
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--monument-header-desktop-font-size);
+        font-size:var(--header-name-desktop-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -538,16 +538,16 @@ and (min-width: 1440px) {
     }
 
     .element-verb {
-        font-size:var(--monument-desktop-font-size);
+        font-size:var(--header-name-desktop-font-size);
     }
 
     /* TIME and RANGE */
     .element-time p {
-        font-size:var(--global-big-desktop-font-size);
+        font-size:var(--med-copy-desktop-font-size);
     }
 
     .time-range {
-        font-size:var(--global-med-desktop-font-size);
+        font-size:var(--small-copy-desktop-font-size);
     }
 
 
@@ -561,6 +561,7 @@ and (min-width: 1440px) {
         display:block;
         width:100%;
         margin:auto;
+        max-width:800px;
     }
 
     /* used to center the inline grid on page */
@@ -574,7 +575,7 @@ and (min-width: 1440px) {
         display:inline-grid;
         width:100%;
         margin:auto;
-        font-family: var(--family-global);
+        font-family: var(--family-copy);
     }
 
     /* ELEMENT WHEEL */
@@ -665,7 +666,7 @@ and (min-width: 1440px) {
 
     .center-element span {
         text-align: center;
-        font-family: var(--family-global);
+        font-family: var(--family-copy);
         color:var(--color-darkest-gold);
         font-weight:bold;
     }
@@ -722,7 +723,6 @@ and (min-width: 1440px) {
     .metal-to-water-arrow  {
         display:grid;
         grid-column:2;
-        /*border:thin solid gold;*/
         justify-content: center;
         align-content: center;
     }
@@ -748,7 +748,7 @@ and (min-width: 1440px) {
     }
 
     .element-title, .element-inline-header {
-        font-family: "Monument-Valley";
+        font-family: var(--family-header-name);
         width: 100%;
     }
 
@@ -800,7 +800,7 @@ and (min-width: 1440px) {
         float:left;
         width:100%;
         text-align:left;
-        font-family: global;
+        font-family: var(--family-copy);
     }
 
     .time-range {

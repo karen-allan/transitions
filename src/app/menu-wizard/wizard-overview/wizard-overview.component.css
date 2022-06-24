@@ -94,8 +94,8 @@ and (min-width: 1920px) {
     }
 
     .wizard-prompt a {
-        font-size: var(--global-big-desktop-font-size);
-        font-family: var(--family-global);
+        font-size: var(--med-copy-desktop-font-size);
+        font-family: var(--family-copy);
         color: var(--color-dark-blue);
         font-weight: 800;
         text-decoration: underline;
@@ -131,7 +131,7 @@ and (min-width: 1920px) {
 
     .wizard-inline-text span, .wizard-inline-text span a {
         font-size:1em;
-        font-family:var(--family-global);
+        font-family:var(--family-copy);
         color:var(--color-dark-blue);
     }
 

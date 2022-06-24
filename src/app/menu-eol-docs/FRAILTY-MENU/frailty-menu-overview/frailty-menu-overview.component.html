@@ -1,282 +1,265 @@
 
-<div class = "topic-grid doula-work-frailty-menu topic">
+<div class = "heading-topic-grid doula-work-frailty-menu topic">
     <h1>{{title}}</h1>
 </div>
 
-<div class="content-container">
-    <div class = "frailty-block margin-top-3">
-        <a (click)="this.getTriggeredPromptKey(1)">
-            &#8734;&nbsp;You are under 65 and in good health and fitness:
-        </a>
-    </div>
+
+<div class = "frailty-block">
+    <a class="frailty-link" (click)="this.getTriggeredPromptKey(1)">
+        &#8734;&nbsp;You are under 65, with good health, no medical issues and feel your fitness level is good:
+    </a>
 
     <div *ngIf="sectionSelected === 'triggeredSection1'">
-        <div class="frailty-two-inline-grid">
-            <div class="frailty-inline-text">
-                <span>
-                    Adults over 19 are encouraged to put a basic health care plan together in case of an accident or emergency.
-                    This plan should include who you would like to make decisions for you should you be incapacitated in some way.
-                    Generally if you are young and healthy you will want them to agree to any and all life saving treatments
-                    and procedures in case you land in the hospital due to accident or injury.
-                    <br><br>
-                    This is something most of us never think of. But B.C. Law mandates that if you haven't got any kind of
-                    document written that designates your primary and/or secondary representative/advocate, this choice will be made for you.
-                    <br><br>
-                     Let's say you are in a car accident and unable to speak for yourself. When you arrive at the hospital - a social worker
-                    or other health professional will fill out a form called a Temporary Substitute Decision Maker. They are legally required
-                    to follow in the order given on the form. The order is:
+        <div class="frailty-grid-display">
+            <div class="frailty-copy">
+                All adults are encouraged to put a basic health care plan together in case of an accident or emergency.
+                This plan should include who you would like to make decisions for you should you be incapacitated in some way.
+                Generally if you are young and healthy you will want them to agree to any and all life saving treatments.
+                <br><br>
+                This is something most of us never think of. But in most provinces in Canada, if you haven't got any kind of
+                document written that designates your primary and/or secondary Advocate, this choice for who will be
+                contacted on your behalf will be made by a health care professional you have likely never met.
+                <br><br>
+                 Let's say you are in a car accident and unable to speak for yourself. When you arrive at the hospital - a health
+                care team member is legally required to search for your next-of-kin and then fill out a list called
+                many different names depending on the province you are in, but in general looks something like this
+                one that B.C. uses (Temporary Substitute Decision Maker):
 
-                    <ul class="dark-list">
-                         <li class="list-item-no-image">Spouse</li>
-                         <li class="list-item-no-image">Adult Children if any</li>
-                         <li class="list-item-no-image">Parents</li>
-                         <li class="list-item-no-image">Siblings</li>
-                         <li class="list-item-no-image">Grandparents</li>
-                         <li class="list-item-no-image">Grandchildren</li>
-                        <li class="list-item-no-image">Others Related by Birth or Adoption</li>
-                        <li class="list-item-no-image">Close Friend(s) and Others related by marriage</li>
-                    </ul>
-                    Read more about <b><a routerLink="/tsdmDoc">the Temporary Substitute Decision Maker Form</a></b> here.
+                <ul class="content-dark-list">
+                     <li class="list-item-no-left-pad">Spouse</li>
+                     <li class="list-item-no-left-pad">Adult Children if any</li>
+                     <li class="list-item-no-left-pad">Parents</li>
+                     <li class="list-item-no-left-pad">Siblings</li>
+                     <li class="list-item-no-left-pad">Grandparents</li>
+                     <li class="list-item-no-left-pad">Grandchildren</li>
+                    <li class="list-item-no-left-pad">Others Related by Birth or Adoption</li>
+                    <li class="list-item-no-left-pad">Close Friend(s) and Others related by marriage</li>
+                </ul>
 
-                    <br><br>
-                    If you have no issues with the idea that your health and life decisions are about to be made by someone selected by a
-                    stranger, then this might work for you. If, however you know, for instance, that you want your oldest grand-child who is
-                    over 19 to be the decision maker for you, but you have not written this wish down, it is highly unlikely
-                    that they will work their way down the list to that level. Maybe instead, they will choose your spouse, the top person on the list to call.
-                    But they may be an ex-spouse and may not have your best interests at heart. Your new girlfriend, who is your true love, will be
-                    among those listed as the very last on the list.
-                    <br><br>
-                    It is for this reason, that it is smart and proactive to fill out a <b><a routerLink="/repSectionNineDoc">Representative Section 9</a></b>
-                    form to legally and permanently state who you would prefer to make life and death decisions on your behalf.
-                    <br><br>
-                    By simply filling out this page, you can quickly and easily select the one or, at maximum two people you trust who would best
-                    handle any health related decisions if you are not in a position to do so due to accident or injury. By filling out this list, you are letting
-                    the health care team know who you have specifically chosen to make decisions for you related to your situation.
-                </span>
+                If you have no issues with the idea that your health and life decisions are about to be made by a
+                family member or friend selected by a stranger, then this might work for you. If, however you know,
+                for  instance, that you want your oldest grand-child who is legally eligible to be the decision maker
+                for you, but you have not written this wish down, it is highly unlikely that they will work their way
+                down the list to that level. Maybe instead, they will choose your spouse, the top person on the list to call.
+                This could be a soon-to-be-ex-spouse who may not have your best interests at heart. Your new
+                girlfriend, who is your true love, may not even show up on the list.
+                <br><br>
+                It is for this reason, that it is smart and proactive to designate your own preferred Health Care Advocate who will, in most regions
+                of Canada, be able to make those life and death decisions on your behalf. By simply stating your Advocate, you can quickly and
+                easily select the one or, at maximum two people you trust who would best handle any health related decisions if you are not in a
+                position to do so due to accident or injury. You are letting the health care team know who you have specifically chosen to make
+                decisions for you related to your situation.
             </div>
 
             <div class="frailty-grid-one-image">
-                <a routerLink="/repSectionNineDoc"><img alt="Rep 9 form" class="frailty-image-one" src="../../../../assets/images/eolDocuments/frailtyMenu/rep9.jpg"></a>
+                <a class="frailty-image-one-only" routerLink="/advocateDoc">
+                    <img alt="Choose Your Health Advocate" src="../../../../assets/images/eolDocuments/frailtyMenu/chooseAdvocate.jpg">
+                </a>
             </div>
         </div>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection1'">
-        <div class="frailty-two-inline-grid-hidden"></div>
+        <div class="frailty-grid-hidden"></div>
     </div>
+</div>
 
-    <div class = "frailty-block">
-        <a (click)="this.getTriggeredPromptKey(2)">
-            &#8734;&nbsp;You have one or more chronic conditions, at any age:
-        </a>
-    </div>
+<div class = "frailty-block">
+    <a class="frailty-link" (click)="this.getTriggeredPromptKey(2)">
+        &#8734;&nbsp;You suffer from one or more serious, chronic medical conditions, at any age:
+    </a>
 
     <div *ngIf="sectionSelected === 'triggeredSection2'">
-        <div class="frailty-two-inline-grid">
-            <div class="frailty-inline-text">
-                <span>
-                    No matter what your age, if you have any of the chronic health conditions you need to be more prepared for
-                    a health crisis. Chronic health conditions to consider include:
-                    <ul class = "dark-list">
-                        <li >Diabetes</li>
-                        <li>High Blood Pressure</li>
-                        <li>Kidney Disease</li>
-                        <li>Heart Disease</li>
-                        <li>Lung Disease</li>
-                        <li>Liver Disease</li>
-                        <li>Parkinson’s</li>
-                        <li>ALS</li>
-                        <li>Huntington’s</li>
-                        <li>Multiple Sclerosis</li>
-                        <li>Vascular Disease</li>
-                        <li>Auto-immune Disorders</li>
-                        <li>Early to Moderate Dementia</li>
-                    </ul>
-
-                    If you have these or any other chronic condition
-                    it is very important to put a plan together for your family to follow. In addition to filling out the
-                    <b><a routerLink="/repSectionNineDoc">Representative Section 9 Agreement</a></b>
-                    you should also create an <a routerLink="/acPlanDoc"> Advanced Care Plan or Advance Directive</a>.
-                </span>
+        <div class="frailty-grid-display">
+            <div class="frailty-copy">
+                No matter what your age, if you have any of the chronic health conditions you need to be more prepared for
+                a health crisis. Chronic health conditions to consider include:
+                <ul class = "content-dark-list">
+                    <li class="list-item-no-left-pad">Insulin Dependent or Non-Insulin Dependent Diabetes </li>
+                    <li class="list-item-no-left-pad">Chronic Kidney Disease (CKD)</li>
+                    <li class="list-item-no-left-pad">Heart Diseases such as Angina, Congestive Heart Failure, Heart Attack or Enlarged Heart</li>
+                    <li class="list-item-no-left-pad">Lung Disease such as COPD, Pulmonary Edema, Pulmonary Fibrosis, Pneumonitis</li>
+                    <li class="list-item-no-left-pad">Liver Disease such as Cirrhosis, Hepatitis B or C</li>
+                    <li class="list-item-no-left-pad">Parkinson’s, ALS, Huntington's or Multiple Sclerosis</li>
+                    <li class="list-item-no-left-pad">Vascular Diseases such as Stroke, Aneurysms, Peripheral Artery Diseases, Hypertension</li>
+                    <li class="list-item-no-left-pad">Auto-immune Disorders such as Addisons, Graves, Hashimotos or Graves Disease</li>
+                    <li class="list-item-no-left-pad">Dementia such as Alzheimer's, Huntingtons or Creutzfeldt-Jakob Disease</li>
+                </ul>
+                If you have these or any other serious, chronic condition it is very important to put a plan together for your family to
+                follow. In addition to selecting the person or persons who will Advocate for you in the event of an emergency,
+                you should also create an Advanced Care Plan. This allows you to add more information about the kinds of specific
+                treatments and procedures that you may want to say yes or no to.
             </div>
+
             <div class="frailty-inline-two-images">
-                <a routerLink="/repSectionNineDoc"><img alt="Rep 9 form" class="frailty-image-one" src="../../../../assets/images/eolDocuments/frailtyMenu/rep9.jpg"></a>
-                <a routerLink="/acPlanDoc"><img alt="Advanced Care Plan" class="frailty-image-two" src="../../../../assets/images/eolDocuments/frailtyMenu/acplan.jpg"></a>
+                <a class="frailty-image-one-of-two" routerLink="/advocateDoc">
+                    <img alt="Choose Your Health Advocate" src="../../../../assets/images/eolDocuments/frailtyMenu/chooseAdvocate.jpg">
+                </a>
+
+                <a class="frailty-image-two-of-two" routerLink="/acPlanDoc">
+                    <img alt="Make an Advanced Care Plan" src="../../../../assets/images/eolDocuments/frailtyMenu/acplan.jpg">
+                </a>
             </div>
         </div>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection2'">
-        <div class="frailty-two-inline-grid-hidden"></div>
+        <div class="frailty-grid-hidden"></div>
     </div>
+</div>
 
-    <div class = "frailty-block">
-        <a (click)="this.getTriggeredPromptKey(3)">
-            &#8734;&nbsp;You have a life-threatening illness and your life-expectancy is less than one to two years, at any age:
-        </a>
-    </div>
+<div class = "frailty-block ">
+    <a class="frailty-link" (click)="this.getTriggeredPromptKey(3)">
+        &#8734;&nbsp;You have a life-threatening illness and your life-expectancy is less than one to two years, at any age:
+    </a>
 
     <div *ngIf="sectionSelected === 'triggeredSection3'">
-        <div class="frailty-two-inline-grid">
-            <div class="frailty-inline-text">
-                <span>
-                    If you have been told some kind of time limit to your life, it is imperative to make an end of life plan.
-                    The plan can be as simple or as detailed as you like and can include <b><a routerLink="/dnrDoc"> Do Not Resuscitate, No CPR orders</a></b>,
-                    or plans for an <b><a routerLink="/edithDoc">EDITH (Expected Death in the Home)</a></b>, funeral arrangements, celebrations etc.
-                    <br><br>
-                    If you want to ensure that your needs and wishes are respected right to the end, you should seriously consider making an
-                    <b><a routerLink="/acPlanDoc">Advanced Care Plan</a></b>. Although the <b><a routerLink="/repSectionNineDoc">Representative Section 9
-                    Agreement</a></b>form has a few lines where you can enter more detailed wishes,
-                    an <a routerLink="/acPlanDoc">Advanced Care Plan aka Advanced Directive</a> allows you to consider a myriad of
-                    questions and concerns to address earlier rather than later.
-                </span>
+        <div class="frailty-grid-display">
+            <div class="frailty-copy">
+                If you have been told some kind of time limit to your life, it is imperative to make an end of life plan.
+                The plan can be as simple or as detailed as you like and can include Do Not Resuscitate, No CPR orders,
+                or plans for an EDITH (Expected Death in the Home), funeral arrangements, celebrations etc.
+                <br><br>
+                As with the other situations shown here, for your own health and well-being, you need to declare one or two people who
+                you trust would Advocate for you in the event you can't do this for yourself. If you want to ensure that your needs and
+                wishes are respected right to the end, you should also seriously consider making an Advanced Care Plan. This allows you to
+                consider a myriad of questions and concerns as to how you wish to be treated medically.
             </div>
+
             <div class="frailty-inline-four-images">
-                <a routerLink="/repSectionNineDoc"><img alt="Rep 9 form" class="frailty-image-one" src="../../../../assets/images/eolDocuments/frailtyMenu/rep9.jpg"></a>
-                <a routerLink="/acPlanDoc"><img alt="Advanced Care Plan" class="frailty-image-two" src="../../../../assets/images/eolDocuments/frailtyMenu/acplan.jpg"></a>
-                <a routerLink="/dnrDoc"><img alt="DNR form" class="frailty-image-one" src="../../../../assets/images/eolDocuments/frailtyMenu/dnr.jpg"></a>
-                <a routerLink="/edithDoc"><img alt="EDITH form" class="frailty-image-two" src="../../../../assets/images/eolDocuments/frailtyMenu/edith.jpg"></a>
+                <a class="frailty-image-one-of-four" routerLink="/advocateDoc">
+                    <img alt="Choose Your Health Advocate" src="../../../../assets/images/eolDocuments/frailtyMenu/chooseAdvocate.jpg">
+                </a>
+                <a class="frailty-image-two-of-four" routerLink="/acPlanDoc">
+                    <img alt="Make an Advanced Care Plan" src="../../../../assets/images/eolDocuments/frailtyMenu/acplan.jpg">
+                </a>
+                <a class="frailty-image-three-of-four" routerLink="/dnrDoc">
+                    <img alt="Arrange a DNR Request" src="../../../../assets/images/eolDocuments/frailtyMenu/dnr.jpg">
+                </a>
+                <a class="frailty-image-four-of-four" routerLink="/edithDoc">
+                    <img alt="Request to Die at Home" src="../../../../assets/images/eolDocuments/frailtyMenu/edith.jpg">
+                </a>
             </div>
         </div>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection3'">
-        <div class="frailty-two-inline-grid-hidden"></div>
+        <div class="frailty-grid-hidden"></div>
     </div>
+</div>
 
-    <div class = "frailty-block">
-        <a (click)="this.getTriggeredPromptKey(4)">
-            &#8734;&nbsp;You are over 65 and relatively healthy:
-        </a>
-    </div>
+<div class = "frailty-block">
+    <a class="frailty-link" (click)="this.getTriggeredPromptKey(4)">
+        &#8734;&nbsp;You are over 65 and relatively healthy:
+    </a>
 
     <div *ngIf="sectionSelected === 'triggeredSection4'">
-        <div class="frailty-two-inline-grid">
-            <div class="frailty-inline-text">
-                 <span>
-                    Even if you are still healthy and feeling fine, getting your affairs in order at this age, is essential to the peace of
-                     mind of yourself and your family.
-                    <br><br>
-                    After 65 years of age, it is assumed that, no matter your apparent health, you are more vulnerable and
-                     less resilient to disease and injury. <b><a routerLink="/acPlanDoc">Advance Care Planning</a></b> should be an urgent call
-                     to action at this point in your life. It is also time to figure out who you want to advocate for your health should you become
-                     unable to with a <a routerLink="/repSectionNineDoc">Representative Section-9 Agreement</a>.
-                </span>
+        <div class="frailty-grid-display">
+            <div class="frailty-copy">
+                 Even if you are still healthy and feeling fine, getting your affairs in order at this age, is essential to your
+                 peace of mind. Even if your family doesn't want to discuss end-of-life planning, they will thank you for preparing
+                 for the inevitable. You probably have a Will in place and maybe even have a life insurance policy, so by completing an
+                 Advance Care Plan and by choosing a Health Care Advocate you and your family will be well prepared.
             </div>
 
             <div class="frailty-inline-two-images">
-                <a routerLink="/repSectionNineDoc"><img alt="Rep 9 form" class="frailty-image-one" src="../../../../assets/images/eolDocuments/frailtyMenu/rep9.jpg"></a>
-                <a routerLink="/acPlanDoc"><img alt="Advanced Care Plan" class="frailty-image-two" src="../../../../assets/images/eolDocuments/frailtyMenu/acplan.jpg"></a>
+                <a class="frailty-image-one-of-two" routerLink="/advocateDoc">
+                    <img alt="Choose Your Health Advocate" src="../../../../assets/images/eolDocuments/frailtyMenu/chooseAdvocate.jpg">
+                </a>
+
+                <a class="frailty-image-two-of-two" routerLink="/acPlanDoc">
+                    <img alt="Make an Advanced Care Plan" src="../../../../assets/images/eolDocuments/frailtyMenu/acplan.jpg">
+                </a>
             </div>
         </div>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection4'">
-        <div class="frailty-two-inline-grid-hidden"></div>
+        <div class="frailty-grid-hidden"></div>
     </div>
+</div>
 
-    <div class = "frailty-block">
-        <a (click)="this.getTriggeredPromptKey(5)">
-            &#8734;&nbsp;You are over 65 and having trouble managing your day-to-day affairs and the activities of daily living.:
-        </a>
-    </div>
+<div class = "frailty-block">
+    <a class="frailty-link" (click)="this.getTriggeredPromptKey(5)">
+        &#8734;&nbsp;You are over 65, still independent but are having trouble managing your day-to-day affairs and activities:
+    </a>
 
     <div *ngIf="sectionSelected === 'triggeredSection5'">
-        <div class="frailty-two-inline-grid">
-            <div class="frailty-inline-text">
-                 <span>
-                    If you are a “frail elder” meaning you need help with your daily care, meals and house-keeping then
-                    it is even more essential to create an <b><a routerLink="/acPlanDoc">Advanced Care Plan</a></b>
-                     to put on your fridge door or somewhere it can be easily found by family and friends.
-                    <br><br>
-                    You need to ensure that you or your family
-                    have investigated care homes or have more services brought to your home, such as Meals on Wheels. You may also consider filling out
-                    the following forms. An <b><a routerLink="/acPlanDoc">Advanced Care Planning</a></b> should be in place for your family and
-                    the medical team to follow.
-                    <br><br>
-                    You should have your <b><a routerLink="/repSectionNineDoc">Representative Section 9 Agreement</a></b> filled out and witnessed.
-                     In this situation along with the above you may want to fill out a <a routerLink="/dnrDoc">DNR (do not
-                     resuscitate) or No CPR</a> form.
-                    This tells Paramedics and Hospital staff that you do not wish to be revived through Artificial Respiration methods. Read here why
-                    CPR may not be for you.
-                    <br><br>
-                    You may also want to fill out an <a routerLink="/edithDoc">EDITH form (Expected Death in the
-                    Home)</a> if you would like to die at home. There is also a
-                     <a href="https://www.consumerprotectionbc.ca/wordpress/wp-content/uploads/2017/08/Private-Transfer-Permit-Application.pdf" target="_blank">
-                         Private Transfer Permit
-                     </a>
-                    form that allows family to transport their loved one"s body to the funeral home or crematorium. This may seem strange,
-                    but it allows families to gather and have more time with the deceased, perhaps to have a wake or some other kind of ritual.
-                    <br><br>
-                    After 75 years of age, it is assumed that, no matter your apparent health, you are more vulnerable and
-                    less resilient to disease and injury. Advance Care Planning should be an urgent call to action at this
-                    point in your life.
-                </span>
+        <div class="frailty-grid-display">
+            <div class="frailty-copy">
+                If you are a “frail elder” meaning you are still of sound mind and health but you do need help with your daily
+                care, meals and house-keeping then it is even more essential to think ahead. Your family may be pressuring you to move
+                into a care home, but you may wish, as most do, to stay at home till the very end. In that case you should know about
+                E.D.I.T.H. (Expected Death in the Home) that allows you to ask to die at home when the time comes.
+                <br><br>
+                Even though you are getting by with help from home care aids and other services, you need to
+                protect yourself by choosing an Advocate, by making an advanced care plan. These forms, placed safely away with their
+                whereabouts known to family and your doctor will allow medical personnel to know you wishes.
             </div>
 
-            <div class="frailty-inline-four-images">
-                <a routerLink="/repSectionNineDoc"><img alt="Rep 9 form" class="frailty-image-one" src="../../../../assets/images/eolDocuments/frailtyMenu/rep9.jpg"></a>
-                <a routerLink="/acPlanDoc"><img alt="Advanced Care Plan" class="frailty-image-two" src="../../../../assets/images/eolDocuments/frailtyMenu/acplan.jpg"></a>
-                <a routerLink="/dnrDoc"><img alt="DNR form" class="frailty-image-one" src="../../../../assets/images/eolDocuments/frailtyMenu/dnr.jpg"></a>
-                <a routerLink="/edithDoc"><img alt="EDITH form" class="frailty-image-two" src="../../../../assets/images/eolDocuments/frailtyMenu/edith.jpg"></a>
+            <div class="frailty-inline-three-images">
+                <a class="frailty-image-one-of-three" routerLink="/advocateDoc">
+                    <img alt="Choose Your Health Advocate"  src="../../../../assets/images/eolDocuments/frailtyMenu/chooseAdvocate.jpg">
+                </a>
+
+                <a class="frailty-image-two-of-three" routerLink="/acPlanDoc">
+                    <img alt="Make an Advanced Care Plan"  src="../../../../assets/images/eolDocuments/frailtyMenu/acplan.jpg">
+                </a>
+
+                 <a class="frailty-image-three-of-three" routerLink="/edithDoc">
+                     <img alt="Request to Die at Home"  src="../../../../assets/images/eolDocuments/frailtyMenu/edith.jpg">
+                 </a>
             </div>
         </div>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection5'">
-        <div class="frailty-two-inline-grid-hidden"></div>
+        <div class="frailty-grid-hidden"></div>
     </div>
+</div>
 
-    <div class = "frailty-block">
-        <a (click)="this.getTriggeredPromptKey(6)">
-            &#8734;&nbsp;You are over 75, no matter your state of health:
-        </a>
-    </div>
+<div class = "frailty-block">
+    <a class="frailty-link" (click)="this.getTriggeredPromptKey(6)">
+        &#8734;&nbsp;You are over 75, no matter your state of health:
+    </a>
 
     <div *ngIf="sectionSelected === 'triggeredSection6'">
-        <div class="frailty-two-inline-grid">
-            <div class="frailty-inline-text">
-                  <span>
-                    As someone over 75, no matter what your state of health, getting your plans in order is something you just need to do.
-                    As what is considered a frail elder, you need to ensure that you or your family
-                    have investigated care homes or have more services brought to your home, such as Meals on Wheels. You may also consider filling out
-                    the following forms. An <b><a routerLink="/acPlanDoc">Advanced Care Planning</a></b> should be in place for your family and
-                    the medical team to follow.
-                    <br><br>
-                    You should have your <b><a routerLink="/repSectionNineDoc">Representative Section 9 Agreement</a></b> filled out and witnessed.
-                     In this situation along with the above you may want to fill out a <a routerLink="/dnrDoc">DNR (do not
-                     resuscitate) or No CPR</a> form.
-                    This tells Paramedics and Hospital staff that you do not wish to be revived through Artificial Respiration methods. Read here why
-                    CPR may not be for you.
-                    <br><br>
-                    You may also want to fill out an <a routerLink="/edithDoc">EDITH form (Expected Death in the
-                    Home)</a> if you would like to die at home. There is also a
-                     <a href="https://www.consumerprotectionbc.ca/wordpress/wp-content/uploads/2017/08/Private-Transfer-Permit-Application.pdf" target="_blank">
-                         Private Transfer Permit
-                     </a>
-                    form that allows family to transport their loved one"s body to the funeral home or crematorium. This may seem strange,
-                    but it allows families to gather and have more time with the deceased, perhaps to have a wake or some other kind of ritual.
-                    <br><br>
-                    After 75 years of age, it is assumed that, no matter your apparent health, you are more vulnerable and
-                    less resilient to disease and injury. Advance Care Planning should be an urgent call to action at this
-                    point in your life.
-                </span>
+        <div class="frailty-grid-display">
+            <div class="frailty-copy">
+                As someone over 75, no matter what your state of health, getting your plans in order is something you just need to do.
+                You should have an an advanced care Plan in place for your family and the medical team to follow. Choosing who you
+                want as your health care advocate is also essential.
+                <br><br>
+                 In this situation along with the above you may want to fill out a DNR (Do Not Resuscitate) or No CPR form.
+                This tells Paramedics and Hospital staff that you do not wish to be revived through Artificial Respiration methods.
+                <br><br>
+                You may have made the decision that you would like to die at home when the time comes. In that case you will want to
+                fill out an E.D.I.T.H. form (Expected Death in the Home) form so your wishes can be known to family and the medical
+                team.
             </div>
 
             <div class="frailty-inline-four-images">
-                <a routerLink="/repSectionNineDoc"><img alt="Rep 9 form" class="frailty-image-one" src="../../../../assets/images/eolDocuments/frailtyMenu/rep9.jpg"></a>
-                <a routerLink="/acPlanDoc"><img alt="Advanced Care Plan" class="frailty-image-two" src="../../../../assets/images/eolDocuments/frailtyMenu/acplan.jpg"></a>
-                <a routerLink="/dnrDoc"><img alt="DNR form" class="frailty-image-one" src="../../../../assets/images/eolDocuments/frailtyMenu/dnr.jpg"></a>
-                <a routerLink="/edithDoc"><img alt="EDITH form" class="frailty-image-two" src="../../../../assets/images/eolDocuments/frailtyMenu/edith.jpg"></a>
+                <a class="frailty-image-one-of-four" routerLink="/advocateDoc">
+                    <img alt="Choose Your Health Advocate" src="../../../../assets/images/eolDocuments/frailtyMenu/chooseAdvocate.jpg">
+                </a>
+                <a class="frailty-image-two-of-four" routerLink="/acPlanDoc">
+                    <img alt="Make an Advanced Care Plan" src="../../../../assets/images/eolDocuments/frailtyMenu/acplan.jpg">
+                </a>
+                <a class="frailty-image-three-of-four" routerLink="/dnrDoc">
+                    <img alt="Arrange a DNR Request" src="../../../../assets/images/eolDocuments/frailtyMenu/dnr.jpg">
+                </a>
+                <a class="frailty-image-four-of-four" routerLink="/edithDoc">
+                    <img alt="Request to Die at Home" src="../../../../assets/images/eolDocuments/frailtyMenu/edith.jpg">
+                </a>
             </div>
         </div>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection6'">
-        <div class="frailty-two-inline-grid-hidden"></div>
+        <div class="frailty-grid-hidden"></div>
     </div>
-
 </div>
+
 
 
 

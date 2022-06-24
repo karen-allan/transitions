@@ -142,7 +142,7 @@ and (min-width: 1440px) {
     }
 
     .show-page h1, .show-page h2, .show-page h3 {
-        font-family: ReneB-Thin;
+        font-family: var(--family-headers);
         color:var(--color-dark-blue);
         font-weight:800;
     }
@@ -168,7 +168,7 @@ and (min-width: 1440px) {
     .show-page span {
         display:block;
         padding:1em;
-        font-family: global;
+        font-family: var(--family-copy);
         color:var(--color-dark-blue);
         font-weight:800;
         font-size:1.0em;
@@ -178,7 +178,7 @@ and (min-width: 1440px) {
         display:block;
         width:90%;
         margin:auto;
-        font-family:var(--family-global);
+        font-family:var(--family-copy);
         color:var(--color-dark-blue);
         font-size:1.1em;
     }
@@ -277,7 +277,7 @@ and (min-width: 1440px) {
         width:100%;
         color:red;
         font-weight:800;
-        font-family:var(--family-global);
+        font-family:var(--family-copy);
 
     }
 

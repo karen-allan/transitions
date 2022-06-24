@@ -15,7 +15,7 @@ and (orientation: portrait){
     }
 
     .background-text p {
-        font-size:var(--quotes-p-banana-port-font-size);
+        font-size:var(--big-quote-banana-port-font-size);
     }
 
 }
@@ -35,7 +35,7 @@ and (orientation: landscape) {
     }
 
     .background-text p {
-        font-size:var(--quotes-p-banana-land-font-size);
+        font-size:var(--big-quote-banana-land-font-size);
         line-height:100%;
     }
 
@@ -56,7 +56,7 @@ and (orientation: portrait) {
     }
 
     .background-text p {
-        font-size:var(--quotes-p-mobile-port-font-size);
+        font-size:var(--big-quote-mobile-port-font-size);
         line-height:100%;
 
     }
@@ -78,7 +78,7 @@ and (orientation: landscape) {
     }
 
     .background-text p {
-        font-size:var(--quotes-p-mobile-land-font-size);
+        font-size:var(--big-quote-mobile-land-font-size);
         line-height:100%;
 
     }
@@ -100,7 +100,7 @@ and (orientation: portrait) {
     }
 
     .background-text p {
-        font-size:var(--quotes-p-tablet-port-font-size);
+        font-size:var(--big-quote-tablet-port-font-size);
         line-height:150%;
 
     }
@@ -122,7 +122,7 @@ and (orientation: landscape) {
     }
 
     .background-text p {
-        font-size:var(--quotes-p-tablet-land-font-size);
+        font-size:var(--big-quote-tablet-land-font-size);
         line-height:150%;
 
     }
@@ -144,7 +144,7 @@ and (orientation: portrait) {
     }
 
     .background-text p {
-        font-size:var(--quotes-p-ipad-port-font-size);
+        font-size:var(--big-quote-ipad-port-font-size);
         line-height:150%;
     }
 
@@ -165,7 +165,7 @@ and (orientation: landscape) {
     }
 
     .background-text p {
-        font-size:var(--quotes-p-ipad-land-font-size);
+        font-size:var(--big-quote-ipad-land-font-size);
         line-height:150%;
     }
 
@@ -185,7 +185,7 @@ and (orientation: landscape) {
     }
 
     .background-text p {
-        font-size:var(--quotes-p-desktop-font-size);
+        font-size:var(--big-quote-desktop-font-size);
         line-height:150%;
     }
 
@@ -207,7 +207,7 @@ and (min-width: 1920px) {
     }
 
     .background-text p {
-        font-size:var(--quotes-p-desktop-font-size);
+        font-size:var(--big-quote-desktop-font-size);
         line-height:150%;
     }
 
@@ -235,7 +235,7 @@ and (min-width: 1920px) {
 
         /* 48 px is the height of the font without padding */
         .background-text p {
-            font-family: var(--family-mono);
+            font-family: var(--family-quotes);
             font-weight: 400;
             padding: 0 1em;
             line-height:120%;

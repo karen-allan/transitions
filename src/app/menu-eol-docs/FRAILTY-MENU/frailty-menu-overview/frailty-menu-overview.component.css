@@ -5,6 +5,16 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
+    .frailty-link, .frailty-copy {
+        font-size: var(--med-copy-desktop-font-size);
+        line-height: 170%;
+    }
+
+    .frailty-grid-display {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
 
 }
 
@@ -13,6 +23,24 @@ and (orientation: portrait) {
 and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
+
+    .frailty-link, .frailty-copy {
+        font-size: var(--med-copy-banana-land-font-size);
+    }
+
+    .frailty-link {
+        line-height: 150%;
+    }
+
+    .frailty-copy {
+        line-height: 170%;
+    }
+
+    .frailty-grid-display {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
 
 
 }
@@ -23,6 +51,23 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
+    .frailty-link, .frailty-copy {
+        font-size: var(--med-copy-mobile-port-font-size);
+    }
+
+    .frailty-link {
+        line-height: 150%;
+    }
+
+    .frailty-copy {
+        line-height: 170%;
+    }
+
+    .frailty-grid-display {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
 
 }
 
@@ -32,6 +77,23 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
+    .frailty-link, .frailty-copy {
+        font-size: var(--med-copy-mobile-land-font-size);
+    }
+
+    .frailty-link {
+        line-height: 150%;
+    }
+
+    .frailty-copy {
+        line-height: 170%;
+    }
+
+    .frailty-grid-display {
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
 
 }
 
@@ -41,6 +103,18 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
+    .frailty-link, .frailty-copy {
+        font-size: var(--med-copy-tablet-port-font-size);
+    }
+
+    .frailty-link {
+        line-height: 150%;
+    }
+
+    .frailty-copy {
+        line-height: 170%;
+    }
+
 }
 
 /*  TABLETS LANDSCAPE *******************************************************************************************/
@@ -49,6 +123,17 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
+    .frailty-link, .frailty-copy {
+        font-size: var(--med-copy-tablet-land-font-size);
+    }
+
+    .frailty-link {
+        line-height: 150%;
+    }
+
+    .frailty-copy {
+        line-height: 170%;
+    }
 
 }
 
@@ -58,6 +143,18 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
+    .frailty-link, .frailty-copy {
+        font-size: var(--med-copy-ipad-port-font-size);
+    }
+
+    .frailty-link {
+        line-height: 150%;
+    }
+
+    .frailty-copy {
+        line-height: 170%;
+    }
+
 }
 
 /* IPADS LANDSCAPE ***************************************************************************************************/
@@ -66,20 +163,42 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
+    .frailty-link, .frailty-copy {
+        font-size: var(--med-copy-ipad-land-font-size);
+    }
+
+    .frailty-link {
+        line-height: 150%;
+    }
+
+    .frailty-copy {
+        line-height: 170%;
+    }
+
 }
 
-/* LAPTOPS ****************************************************************************************************/
+/* LAPTOPS and UP ****************************************************************************************************/
 @media only screen
-and (min-width: 1440px)
-and (max-width:1919px){
+and (min-width: 1440px) {
+
+    .frailty-link, .frailty-copy {
+        font-size: var(--med-copy-desktop-font-size);
+    }
+
+    .frailty-link {
+        line-height: 150%;
+    }
+
+    .frailty-copy {
+        line-height: 170%;
+    }
+
+    .frailty-grid-display {
+        width: 100%;
+    }
 
 }
 
-/* DESKTOPS ****************************************************************************************************/
-@media only screen
-and (min-width: 1920px) {
-
-}
 
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
@@ -87,112 +206,139 @@ and (min-width: 1920px) {
     .frailty-block {
         display:block;
         float: left;
-        width:100%;
-        padding:1em;
         text-align:left;
-
+        width:90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        max-width:1280px;
     }
 
-    .frailty-block a {
-        font-size: var(--global-big-desktop-font-size);
-        font-family: var(--family-global);
+    /* i had it as frailty-block a but that was interfering with the grid a below it as the anchor with a block type overrode the anchor with a grid */
+    .frailty-link {
+        display:block;
+        font-family: var(--family-copy);
         color: var(--color-dark-blue);
         font-weight: 800;
         text-decoration: underline;
         cursor:pointer;
+        padding:2em 0 0 0;
     }
 
-    .frailty-two-inline-grid-hidden {
-        display:none;
-    }
-
-    /* the inline copy and image grid */
-    .frailty-two-inline-grid {
-        /*display:inline-grid;*/
-        /*float:left;*/
-        display:grid;
-        width:95%;
-        margin-left:5%;
-        margin-top:1em;
-        /*grid-template-columns: 75% 25%;*/
+    .frailty-grid-display {
+        display:block;
+        float:left;
         border:thin dotted var(--color-dark-blue);
+        padding:1em 0;
     }
 
-    .frailty-two-inline-grid-hidden {
+    .frailty-grid-hidden {
         display:none;
     }
 
-    .frailty-inline-text {
-        display:grid;
-        width:90%;
-        padding:1em 5%;
+    .frailty-copy {
+        display:block;
+        font-family:var(--family-copy);
         color:var(--color-dark-blue);
+        padding:1em 2em 0 2em;
+    }
+
+    /* Text for images is Harrington Regular 36 */
+    .frailty-grid-one-image, .frailty-inline-two-images, .frailty-inline-three-images, .frailty-inline-four-images {
         align-content: center;
-    }
-
-    .frailty-inline-text span, .frailty-inline-text span a {
-        font-size:1em;
-        font-family:var(--family-global);
-        color:var(--color-dark-blue);
-    }
-
-    .frailty-inline-text span a {
-        font-weight:bold;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .frailty-inline-image {
-        display:inline-grid;
-        /*height:inherit;*/
-        width:100%;
-        align-content: center;
-        justify-content: center;
+        padding-top:2em;
     }
 
     .frailty-grid-one-image {
         display: grid;
         width:100%;
-        align-content: center;
         justify-content: center;
     }
 
     .frailty-inline-two-images {
         display: inline-grid;
-        grid-template-columns: repeat(2, 50%);
         width:70%;
         margin:0 15%;
-        align-content: center;
-        justify-content: center;
+        grid-template-columns: repeat(2, 50%);
     }
 
     .frailty-inline-three-images {
         display: inline-grid;
         grid-template-columns: repeat(3, 33.3%);
+        width:80%;
+        margin:0 10%;
+    }
+
+    .frailty-inline-four-images {
+        display: inline-grid;
+        grid-template-columns: repeat(4, 25%);
         width:90%;
         margin:0 5%;
-        align-content: center;
-        justify-content: center;
     }
 
     .frailty-inline-image img {
         max-width:100%;
         height:auto;
-
     }
 
-    .frailty-image-one {
+    .frailty-image-one-only {
+        display:grid;
+        justify-content: center;
         grid-column:1;
     }
 
-    .frailty-image-two {
+    .frailty-image-one-of-two {
+        display:grid;
+        justify-content: flex-start;
+        grid-column:1;
+    }
+
+    .frailty-image-two-of-two {
+        display:grid;
         grid-column:2;
+        justify-content: flex-end;
     }
 
-    .frailty-image-three {
+    .frailty-image-one-of-three {
+        display:grid;
+        grid-column:1;
+        justify-content: flex-start;
+    }
+
+    .frailty-image-two-of-three {
+        display:grid;
+        grid-column:2;
+        justify-content: center;
+    }
+
+    .frailty-image-three-of-three {
+        display:grid;
         grid-column:3;
+        justify-content: flex-end;
     }
 
+    .frailty-image-one-of-four {
+        display:grid;
+        grid-column:1;
+        justify-content: flex-start;
+    }
+
+    .frailty-image-two-of-four {
+        display:grid;
+        grid-column:2;
+        justify-content: center;
+    }
+
+    .frailty-image-three-of-four {
+        display:grid;
+        grid-column:3;
+        justify-content: center;
+    }
+
+    .frailty-image-four-of-four {
+        display:grid;
+        grid-column:4;
+        justify-content: flex-end;
+    }
 
 
 }

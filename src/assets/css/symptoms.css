@@ -10,11 +10,11 @@ and (orientation: portrait) {
     }
 
     .symptom span {
-        font-size: var(--open-sans-banana-port-font-size);
+        font-size: var(--small-copy-banana-port-font-size);
     }
 
     .element-meridian-intro p {
-        font-size:var(--global-big-banana-port-font-size);
+        font-size:var(--med-copy-banana-port-font-size);
     }
 
 }
@@ -30,11 +30,11 @@ and (orientation: landscape) {
     }
 
     .symptom span {
-        font-size: var(--open-sans-banana-land-font-size);
+        font-size: var(--small-copy-banana-land-font-size);
     }
 
     .element-meridian-intro p {
-        font-size:var(--global-big-banana-land-font-size);
+        font-size:var(--med-copy-banana-land-font-size);
     }
 
 }
@@ -50,11 +50,11 @@ and (orientation: portrait) {
     }
 
     .symptom span {
-        font-size: var(--open-sans-mobile-port-font-size);
+        font-size: var(--small-copy-mobile-port-font-size);
     }
 
     .element-meridian-intro p {
-        font-size:var(--global-big-mobile-port-font-size);
+        font-size:var(--med-copy-mobile-port-font-size);
     }
 }
 
@@ -69,11 +69,11 @@ and (orientation: landscape) {
     }
 
     .symptom span {
-        font-size: var(--open-sans-mobile-land-font-size);
+        font-size: var(--small-copy-mobile-land-font-size);
     }
 
     .element-meridian-intro p {
-        font-size:var(--global-big-mobile-land-font-size);
+        font-size:var(--med-copy-mobile-land-font-size);
     }
 
 }
@@ -89,11 +89,11 @@ and (orientation: portrait) {
     }
 
     .symptom span {
-        font-size: var(--open-sans-tablet-port-font-size);
+        font-size: var(--small-copy-tablet-port-font-size);
     }
 
     .element-meridian-intro p {
-        font-size:var(--global-big-tablet-port-font-size);
+        font-size:var(--med-copy-tablet-port-font-size);
     }
 
 }
@@ -109,11 +109,11 @@ and (orientation: landscape) {
     }
 
     .symptom span {
-        font-size: var(--open-sans-tablet-land-font-size);
+        font-size: var(--small-copy-tablet-land-font-size);
     }
 
     .element-meridian-intro p {
-        font-size:var(--global-big-tablet-land-font-size);
+        font-size:var(--med-copy-tablet-land-font-size);
     }
 }
 
@@ -128,11 +128,11 @@ and (orientation: portrait) {
     }
 
     .symptom span {
-        font-size: var(--open-sans-ipad-port-font-size);
+        font-size: var(--small-copy-ipad-port-font-size);
     }
 
     .element-meridian-intro p {
-        font-size:var(--global-big-ipad-port-font-size);
+        font-size:var(--med-copy-ipad-port-font-size);
     }
 }
 
@@ -147,11 +147,11 @@ and (orientation: landscape) {
     }
 
     .symptom span {
-        font-size: var(--open-sans-ipad-land-font-size);
+        font-size: var(--small-copy-ipad-land-font-size);
     }
 
     .element-meridian-intro p {
-        font-size:var(--global-big-ipad-land-font-size);
+        font-size:var(--med-copy-ipad-land-font-size);
     }
 }
 
@@ -164,12 +164,12 @@ and (min-width: 1440px) {
     }
 
     .symptom span {
-        font-size: var(--open-sans-desktop-font-size);
+        font-size: var(--small-copy-desktop-font-size);
     }
 
     /* INTRO */
     .element-meridian-intro p {
-        font-size:var(--global-big-desktop-font-size);
+        font-size:var(--med-copy-desktop-font-size);
     }
 }
 
@@ -197,7 +197,7 @@ and (min-width: 1440px) {
     .symptom span {
         text-align: left;
         padding-left:2em;
-        font-family: var(--family-open-sans);
+        font-family: var(--family-copy);
         color:white;
         line-height: var(--list-item-line-height);
     }

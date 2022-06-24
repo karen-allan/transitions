@@ -22,7 +22,7 @@ export const SUB_MENU_ITEMS: SubMenuItem[] = [
 
     {id: 60, parent_id: 6, title: 'WHERE TO START?', url: 'frailtyDocMenu'},
     {id: 61, parent_id: 6, title: 'YOUR TSDM LIST', url: 'tsdmDoc'},
-    {id: 62, parent_id: 6, title: 'NAME YOUR ADVOCATE', url: 'repSectionNineDoc'},
+    {id: 62, parent_id: 6, title: 'NAME YOUR ADVOCATE', url: 'advocateDoc'},
     {id: 63, parent_id: 6, title: 'ALL ABOUT EDITH', url: 'edithDoc'},
     {id: 64, parent_id: 6, title: 'DNRs ETC.', url: 'dnrDoc'},
     {id: 65, parent_id: 6, title: 'ADVANCED CARE PLANS', url: 'acPlanDoc'},

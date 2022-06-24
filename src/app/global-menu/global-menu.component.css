@@ -32,7 +32,6 @@ and (max-width: 1279px) {
         display:inline-grid;
         width:100%;
         align-content: flex-start;
-        grid-template-columns: 25% 75%;
     }
 
     .header-logo, .header-name {
@@ -40,8 +39,8 @@ and (max-width: 1279px) {
     }
 
     .logo {
-        background-size: contain;
-        background-position: right;
+        background-size: auto;
+        background-position: center;
         background-image:url('src/assets/images/headers/transitionsInEnergyMobileLogo.png');
         background-repeat: no-repeat;
         margin:0;
@@ -50,6 +49,8 @@ and (max-width: 1279px) {
     .header-name {
         letter-spacing: 1px;
         justify-content: center;
+        text-align: center;
+        font-weight: 500;
     }
 
     /* ROW 2 slogan - energy medicine treatments - icon - end of life doula support */
@@ -134,12 +135,16 @@ and (max-width: 1279px) {
 
     /* THE MOBILE SUB MENU THAT SLIDES DOWN ON CLICKING  */
     .mobile-menu-block {
+        font-family: var(--family-header-copy);
+    }
+
+    .mobile-menu-block {
         display: grid;
         grid-row:3;
         align-content: flex-start;
         width:100%;
         margin:auto;
-        font-family: var(--family-global);
+
     }
 
     .mobile-menu {
@@ -155,8 +160,6 @@ and (max-width: 1279px) {
         width:100%;
         justify-content: flex-start;
         padding-left: 1em;
-        font-size: var(--menu-mobile-font-size);
-
     }
 
     .mobile-unselected-top-menu-item a, .mobile-unselected-sub-menu-item a {
@@ -187,7 +190,6 @@ and (max-width: 1279px) {
         align-content: center;
         justify-content: flex-start;
         height: 40px;
-        font-size: var(--sub-menu-mobile-font-size);
         padding-left: 3em;
     }
 
@@ -205,18 +207,22 @@ and (max-width: 1279px) {
 
 }
 
-/* BANANA PORTRAIT  *****************************************************************************/
+/* BANANA PORTRAIT IS MOBILE MENU *****************************************************************************/
 @media only screen
 and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait){
 
+    .mobile-header-content {
+        grid-template-columns: 55% 45%;
+    }
+
     .header-name {
-        font-size: var(--monument-banana-port-font-size);
+        font-size: var(--header-name-banana-port-font-size);
     }
 
     .header-slogans p, .header-slogans span {
-        font-size: var(--global-small-banana-port-font-size);
+        font-size: var(--header-slogan-banana-port-font-size);
         letter-spacing: .3em;
     }
 
@@ -224,115 +230,189 @@ and (orientation: portrait){
         grid-template-columns: 55% 15% 15% 15%;
     }
 
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--med-copy-banana-port-font-size);
+    }
+
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--small-copy-banana-port-font-size);
+    }
+
+
+
 }
 
-/* BANANA LANDSCAPE  *****************************************************************************/
+/* BANANA LANDSCAPE IS MOBILE MENU *****************************************************************************/
 @media only screen
 and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
+    .mobile-header-content {
+        grid-template-columns: 35% 65%;
+    }
+
     .header-name {
-        font-size: var(--monument-banana-land-font-size);
-        padding-left:1em;
+        font-size: var(--header-name-banana-land-font-size);
     }
 
     .header-slogans p, .header-slogans span {
-        font-size: var(--global-small-banana-land-font-size);
+        font-size: var(--header-slogan-banana-land-font-size);
     }
 
     .mobile-menu-items {
         grid-template-columns: 77% 8% 8% 7%;
     }
 
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--med-copy-banana-land-font-size);
+    }
+
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--small-copy-banana-land-font-size);
+    }
+
 }
 
-/* MOBILES PORTRAIT ****************************************************************************************************/
+/* MOBILES PORTRAIT IS MOBILE MENU ****************************************************************************************************/
 @media only screen
 and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
+    .mobile-header-content {
+        grid-template-columns: 40% 60%;
+    }
+
     .header-name {
-        font-size: var(--monument-mobile-port-font-size);
+        font-size: var(--header-name-mobile-port-font-size);
     }
 
     .header-slogans p, .header-slogans span {
-        font-size: var(--global-small-mobile-port-font-size);
+        font-size: var(--header-slogan-mobile-port-font-size);
     }
 
     .mobile-menu-items {
         grid-template-columns: 65% 10% 8% 17%;
     }
 
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--med-copy-mobile-port-font-size);
+    }
+
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--small-copy-mobile-port-font-size);
+    }
+
 }
 
-/*  MOBILES LANDSCAPE **************************************************************************************************/
+/*  MOBILES LANDSCAPE IS MOBILE MENU **************************************************************************************************/
 @media only screen
 and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
+    .mobile-header-content {
+        grid-template-columns: 40% 60%;
+    }
+
     .header-name {
-        font-size: var(--monument-mobile-land-font-size);
-        padding-left:1em;
+        font-size: var(--header-name-mobile-land-font-size);
     }
 
     .header-slogans p, .header-slogans span {
-        font-size: var(--global-med-mobile-land-font-size);
+        font-size: var(--header-slogan-mobile-land-font-size);
     }
 
     .mobile-menu-items {
         grid-template-columns: 83% 5% 4% 8%;
     }
+
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--med-copy-mobile-land-font-size);
+    }
+
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--small-copy-mobile-land-font-size);
+    }
 }
 
-/* TABLETS PORTRAIT ****************************************************************************************************/
+/* TABLETS PORTRAIT IS MOBILE MENU ****************************************************************************************************/
 @media only screen
 and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
+    .mobile-header-content {
+        grid-template-columns: 40% 60%;
+    }
+
     .header-name {
-        font-size: var(--monument-tablet-port-font-size);
-        padding-left:1em;
+        font-size: var(--header-name-tablet-port-font-size);
     }
 
     .header-slogans p, .header-slogans span {
-        font-size: var(--global-small-tablet-port-font-size);
+        font-size: var(--header-slogan-tablet-port-font-size);
     }
 
     .mobile-menu-items {
         grid-template-columns: 78% 7% 7% 8%;
     }
 
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--med-copy-tablet-port-font-size);
+    }
+
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--small-copy-tablet-port-font-size);
+    }
+
 }
 
-/* IPADS PORTRAIT ****************************************************************************************************/
+/* IPADS PORTRAIT IS MOBILE MENU ****************************************************************************************************/
 @media only screen
 and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
+    .mobile-header-content {
+        grid-template-columns: 40% 60%;
+    }
+
     .header-name {
-        font-size: var(--monument-ipad-port-font-size);
-        padding-left:1em;
+        font-size: var(--header-name-ipad-port-font-size);
     }
 
     .header-slogans p, .header-slogans span {
-        font-size: var(--global-med-ipad-port-font-size);
+        font-size: var(--header-slogan-ipad-port-font-size);
     }
 
     .mobile-menu-items {
         grid-template-columns: 84% 5% 5% 6%;
     }
+
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--med-copy-ipad-port-font-size);
+    }
+
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--small-copy-ipad-port-font-size);
+    }
 }
 
-/*  TABLETS LANDSCAPE *******************************************************************************************/
+/*  TABLETS LANDSCAPE IS DESKTOP MENU *******************************************************************************************/
 @media only screen
 and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
+
+    .header-name {
+        font-size: var(--header-name-tablet-land-font-size);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--header-slogan-tablet-land-font-size);
+    }
 
     /* adds up to 1152 which syncs up with above header */
     .desktop-menu-items, .desktop-sub-menu-block {
@@ -341,20 +421,29 @@ and (orientation: landscape) {
         margin-right:5%;
     }
 
-    .header-name {
-        font-size: var(--monument-tablet-land-font-size);
+    .desktop-selected-top-menu-item, .desktop-unselected-top-menu-item a {
+        font-size: var(--menu-item-tablet-land-font-size);
     }
 
-    .header-slogans p, .header-slogans span {
-        font-size: var(--global-med-tablet-land-font-size);
+    .desktop-selected-sub-menu-item, .desktop-unselected-sub-menu-item a {
+        font-size: var(--sub-menu-item-tablet-land-font-size);
     }
+
 }
 
-/* IPADS LANDSCAPE ***************************************************************************************************/
+/* IPADS LANDSCAPE IS DESKTOP MENU ***************************************************************************************************/
 @media only screen
 and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
+
+    .header-name {
+        font-size: var(--header-name-ipad-land-font-size);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--header-slogan-ipad-land-font-size);
+    }
 
     /* adds up to 1152 which syncs up with above header */
     .desktop-menu-items, .desktop-sub-menu-block {
@@ -363,12 +452,12 @@ and (orientation: landscape) {
         margin-right:7.85%;
     }
 
-    .header-name {
-        font-size: var(--monument-ipad-land-font-size);
+    .desktop-selected-top-menu-item, .desktop-unselected-top-menu-item a {
+        font-size: var(--menu-item-ipad-land-font-size);
     }
 
-    .header-slogans p, .header-slogans span {
-        font-size: var(--global-big-ipad-land-font-size);
+    .desktop-selected-sub-menu-item, .desktop-unselected-sub-menu-item a {
+        font-size: var(--sub-menu-item-ipad-land-font-size);
     }
 
 }
@@ -378,6 +467,14 @@ and (orientation: landscape) {
 and (min-width: 1440px)
 and (max-width:1919px){
 
+    .header-name {
+        font-size: var(--header-name-laptop-font-size);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--header-slogan-laptop-font-size);
+    }
+
     /* adds up to 1152 which syncs up with above header */
     .desktop-menu-items, .desktop-sub-menu-block {
         width:80%;
@@ -385,12 +482,12 @@ and (max-width:1919px){
         margin-right:10%;
     }
 
-    .header-name {
-        font-size: var(--monument-laptop-font-size);
+    .desktop-selected-top-menu-item, .desktop-unselected-top-menu-item a {
+        font-size: var(--menu-item-laptop-font-size);
     }
 
-    .header-slogans p, .header-slogans span {
-        font-size: var(--global-med-laptop-font-size);
+    .desktop-selected-sub-menu-item, .desktop-unselected-sub-menu-item a {
+        font-size: var(--sub-menu-item-laptop-font-size);
     }
 
 }
@@ -399,6 +496,14 @@ and (max-width:1919px){
 @media only screen
 and (min-width: 1920px) {
 
+    .header-name {
+        font-size: var(--header-name-desktop-font-size);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--header-slogan-desktop-font-size);
+    }
+
     /* adds up to 1152 which syncs up with above header */
     .desktop-menu-items, .desktop-sub-menu-block {
         width:60%;
@@ -406,18 +511,18 @@ and (min-width: 1920px) {
         margin-right:20%;
     }
 
-    .header-name {
-        font-size: var(--monument-desktop-font-size);
+    .desktop-selected-top-menu-item, .desktop-unselected-top-menu-item a {
+        font-size: var(--menu-item-desktop-font-size);
     }
 
-    .header-slogans p, .header-slogans span {
-        font-size: var(--global-med-desktop-font-size);
+    .desktop-selected-sub-menu-item, .desktop-unselected-sub-menu-item a, .left-social-link a, .right-social-link a {
+        font-size: var(--sub-menu-item-desktop-font-size);
     }
 
 }
 
 /*******************************************************************************************************************
-  ALL THAT SHOW BIG MENU TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
+  ALL THAT SHOW BIG DESKTOP MENU TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
 *******************************************************************************************************************/
 
 @media only screen
@@ -464,7 +569,6 @@ and (orientation: landscape) {
     }
 
     .header-logo {
-        /*grid-column: 1;*/
         justify-content: flex-start;
     }
 
@@ -502,13 +606,16 @@ and (orientation: landscape) {
         letter-spacing: 3px;
     }
 
+    .desktop-selected-top-menu-item, .desktop-unselected-top-menu-item a, .desktop-selected-sub-menu-item, .desktop-unselected-sub-menu-item a {
+        font-family: var(--family-header-copy);
+    }
+
     /* DESKTOP-MENU-BLOCK - ROW 2 - is the top menu for desktop and is full screen blue background*/
     .desktop-menu-block {
         display: grid;
         width:100%;
         max-width:1920px;
         margin:auto;
-        font-family: var(--family-global);
         background-color: var(--color-darkest-blue);
     }
 
@@ -525,11 +632,10 @@ and (orientation: landscape) {
     /* SELECTED AND UNSELECTED TOP MENU ITEMS */
     .desktop-selected-top-menu-item, .desktop-unselected-top-menu-item a {
         display: grid;
-        font-weight:800;
+        font-weight:400;
         justify-content: center;
         align-content: center;
         height: var(--menu-desktop-height);
-        font-size: var(--menu-desktop-font-size);
     }
 
     .desktop-unselected-top-menu-item a, .desktop-unselected-sub-menu-item a {
@@ -556,7 +662,7 @@ and (orientation: landscape) {
         display:inline-grid;
         width:100%;
         margin:auto;
-        font-family: var(--family-global);
+        /*font-family: var(--family-copy);*/
         height: var(--sub-menu-desktop-height);
     }
 
@@ -583,11 +689,10 @@ and (orientation: landscape) {
 
     .desktop-selected-sub-menu-item, .desktop-unselected-sub-menu-item a   {
         display: grid;
-        font-weight:900;
+        font-weight:400;
         justify-content: center;
         align-content: center;
         height: var(--sub-menu-desktop-height);
-        font-size: var(--sub-menu-desktop-font-size);
         letter-spacing: 1px;
         background-color: var(--color-white);
     }
@@ -625,27 +730,27 @@ and (orientation: landscape) {
 
     .left-social-link a, .right-social-link a  {
         white-space: nowrap;
-        font-family:var(--family-global);
+        /*font-family:var(--family-copy);*/
         height: var(--sub-menu-desktop-height);
         color:var(--color-grey-purple);
-        font-weight:800;
+        font-weight:400;
         letter-spacing: 1px;
         align-content: center;
-        font-size:var(--global-small-desktop-font-size);
+        /*font-size:var(--small-copy-desktop-font-size);*/
     }
 
     .left-social-link a {
         display:grid;
         grid-column: 2;
         text-align: left;
-        padding-left:2em;
+        padding-left:.2em;
     }
 
     .right-social-link a {
         display:grid;
         grid-column: 3;
         justify-content: flex-end;
-        padding-right:2em;
+        padding-right:.2em;
     }
 
     .left-social-link a, .right-social-link a  {
@@ -668,17 +773,21 @@ and (orientation: landscape) {
         grid-column: 2;
         grid-row:1;
         text-transform: uppercase;
-        font-family: Monument-Valley, arial, serif;
+        font-family: var(--family-header-name);
+        /*font-family: Monument-Valley, arial, serif;*/
         color: var(--color-dark-blue);
-        font-weight: 600;
         align-content: center;
     }
 
     .header-slogans {
         text-transform: uppercase;
-        font-family: ReneB-Book, arial, serif;
+        font-family:var(--family-header-copy);
+        /*font-family: ReneB-Book, arial, serif;*/
         color: var(--color-dark-blue);
     }
+
+
+
 
 }
 

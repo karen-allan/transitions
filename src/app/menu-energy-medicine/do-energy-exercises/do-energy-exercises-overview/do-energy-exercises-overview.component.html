@@ -1,30 +1,26 @@
-<div class = "topic-inline-grid with-underline">
-    <div class="topic-left">
-        <h1>{{title}}</h1>
-    </div>
-
-    <div class="topic-right">
-        <img src="../../../../assets/images/energyMedicine/move/moveIntro.jpg" alt={{title}} title={{title}}>
-    </div>
+<div class = "heading-topic-grid em-move-der topic">
+    <h1>{{title}}</h1>
 </div>
 
-<div class="inner-content-no-margins">
-    <div class="dark-copy">
-        The Daily Energy Routine was created by Donna Eden many decades ago when she started using her extrasensory abilities in seeing energy
-        to help heal herself from Multiple Sclerosis, a Heart Attack and many other conditions. To look at her today, in her late 70s, you wouldn't know that this
-        woman was once severely ill and pretty much told by her doctors to get her affairs in order.
-        <br><br>
-        They used to call it the 5 minute DER but over time exercises have been added to it and it can range from 10-30 minutes
-        depending on extra add ons like Radiant Circuits, Meridian Tracing and Grounding techniques. But as lazy as I can be, I
-        do try to do it every day - sometimes outside in my bare feet and pjs in the middle of the night if I can't sleep! (I don't <i>think</i>
-        anyone can see me).
-        <br><br>
-        There are lots and lots of videos of people doing the DER, many of them explaining everything as they go. I like to do my DER to
-        music and just get into the flow of it. That is what I offer you here and I hope you are okay with my musical taste. If you
-        already know the exercises and just want to do them all you can scroll to the bottom of this page to follow the entire routine.
-        Because I like to just get into the music and feel my energy I don't talk during my DER so before you watch it, I'll give a little
-        bit of information about each exercise here starting with:
-    </div>
+<div class="full-length-titles">
+    <h2>Move your Energy</h2>
+</div>
+
+<div class="content-dark-copy">
+    The Daily Energy Routine was created by Donna Eden many decades ago when she started using her extrasensory abilities in seeing energy
+    to help heal herself from Multiple Sclerosis, a Heart Attack and many other conditions. To look at her today, in her late 70s, you wouldn't know that this
+    woman was once severely ill and pretty much told by her doctors to get her affairs in order.
+    <br><br>
+    They used to call it the 5 minute DER but over time exercises have been added to it and it can range from 10-30 minutes
+    depending on extra add ons like Radiant Circuits, Meridian Tracing and Grounding techniques. But as lazy as I can be, I
+    do try to do it every day - sometimes outside in my bare feet and pjs in the middle of the night if I can't sleep! (I don't <i>think</i>
+    anyone can see me).
+    <br><br>
+    There are lots and lots of videos of people doing the DER, many of them explaining everything as they go. I like to do my DER to
+    music and just get into the flow of it. That is what I offer you here and I hope you are okay with my musical taste. If you
+    already know the exercises and just want to do them all you can scroll to the bottom of this page to follow the entire routine.
+    Because I like to just get into the music and feel my energy I don't talk during my DER so before you watch it, I'll give a little
+    bit of information about each exercise here starting with:
 </div>
 
 <div class="exercise-block">
@@ -260,7 +256,8 @@
     <div class="exercise-detail-grid">
         <div class="exercise-video-block">
             <ng-container *ngIf="selectedExercise.id==0">
-                <img [style.border-left]="'1px solid '" src= "../../../../assets/images/energyMedicine/move/defaultDERExercises.jpg">
+                <img [style.border-left]="'1px solid '" src= "../../../../assets/images/energyMedicine/move/defaultDERExercises.jpg"
+                     alt="der">
             </ng-container>
 
             <div *ngIf="selectedExercise">

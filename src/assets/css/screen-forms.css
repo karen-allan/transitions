@@ -20,26 +20,26 @@ and (orientation: portrait) {
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
     .full-line-prompt p   {
-        font-size: var(--global-big-banana-port-font-size);
+        font-size: var(--forms-big-banana-port-font-size);
     }
 
     .text-area {
-        font-size: var(--global-med-banana-port-font-size);
+        font-size: var(--forms-med-banana-port-font-size);
     }
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, SESSION MEDICAL */
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
-        font-size: var(--global-med-banana-port-font-size);
+        font-size: var(--forms-med-banana-port-font-size);
         padding:1em .2em;
     }
 
     /* DEMOGRAPHICS */
     .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
-        font-size: var(--global-big-banana-port-font-size);
+        font-size: var(--forms-big-banana-port-font-size);
     }
 
     .title-background, .title-background-top {
-        font-size: var(--med-whitney-banana-port-font-size);
+        font-size: var(--med-copy-banana-port-font-size);
     }
 
     .date-signature {
@@ -76,25 +76,25 @@ and (orientation: landscape) {
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
     .full-line-prompt p   {
-        font-size: var(--global-big-banana-land-font-size);
+        font-size: var(--forms-big-banana-land-font-size);
     }
 
     .text-area {
-        font-size: var(--global-med-banana-land-font-size);
+        font-size: var(--forms-med-banana-land-font-size);
     }
 
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
-        font-size: var(--global-med-banana-land-font-size);
+        font-size: var(--forms-med-banana-land-font-size);
         padding:1em 2em 1em 2em;
     }
 
     /* DEMOGRAPHICS */
     .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
-        font-size: var(--global-big-banana-land-font-size);
+        font-size: var(--forms-big-banana-land-font-size);
     }
 
     .title-background, .title-background-top {
-        font-size: var(--med-whitney-banana-land-font-size);
+        font-size: var(--med-copy-banana-land-font-size);
     }
 
     .date-signature {
@@ -130,26 +130,26 @@ and (orientation: portrait) {
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
     .full-line-prompt p   {
-        font-size: var(--global-big-mobile-port-font-size);
+        font-size: var(--forms-big-mobile-port-font-size);
     }
 
     .text-area  {
-        font-size: var(--global-med-mobile-port-font-size);
+        font-size: var(--forms-med-mobile-port-font-size);
     }
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, SESSION MEDICAL */
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
-        font-size: var(--global-med-mobile-port-font-size);
+        font-size: var(--forms-med-mobile-port-font-size);
         padding:1em;
     }
 
     /* DEMOGRAPHICS */
     .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
-        font-size: var(--global-big-mobile-port-font-size);
+        font-size: var(--forms-big-mobile-port-font-size);
     }
 
     .title-background, .title-background-top {
-        font-size: var(--med-whitney-mobile-port-font-size);
+        font-size: var(--med-copy-mobile-port-font-size);
     }
 
     .date-signature {
@@ -185,26 +185,26 @@ and (orientation: landscape) {
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
     .full-line-prompt p   {
-        font-size: var(--global-big-mobile-land-font-size);
+        font-size: var(--forms-big-mobile-land-font-size);
     }
 
     .text-area {
-        font-size: var(--global-med-mobile-land-font-size);
+        font-size: var(--forms-med-mobile-land-font-size);
     }
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, SESSION MEDICAL */
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
-        font-size: var(--global-med-mobile-land-font-size);
+        font-size: var(--forms-med-mobile-land-font-size);
         padding:1em;
     }
 
     /* DEMOGRAPHICS */
     .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
-        font-size: var(--global-big-mobile-land-font-size);
+        font-size: var(--forms-big-mobile-land-font-size);
     }
 
     .title-background, .title-background-top {
-        font-size: var(--med-whitney-mobile-land-font-size);
+        font-size: var(--med-copy-mobile-land-font-size);
     }
 
     .date-signature {
@@ -240,26 +240,26 @@ and (orientation: portrait) {
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
     .full-line-prompt p   {
-        font-size: var(--global-big-tablet-port-font-size);
+        font-size: var(--forms-big-tablet-port-font-size);
     }
 
     .text-area {
-        font-size: var(--global-med-tablet-port-font-size);
+        font-size: var(--forms-med-tablet-port-font-size);
     }
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, SESSION MEDICAL */
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
-        font-size: var(--global-med-tablet-port-font-size);
+        font-size: var(--forms-med-tablet-port-font-size);
         padding:1em;
     }
 
     /* DEMOGRAPHICS */
     .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
-        font-size: var(--global-big-tablet-port-font-size);
+        font-size: var(--forms-big-tablet-port-font-size);
     }
 
     .title-background, .title-background-top {
-        font-size: var(--med-whitney-tablet-port-font-size);
+        font-size: var(--med-copy-tablet-port-font-size);
     }
 
     .date-signature {
@@ -296,26 +296,26 @@ and (orientation: landscape) {
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
     .full-line-prompt p   {
-        font-size: var(--global-big-tablet-land-font-size);
+        font-size: var(--forms-big-tablet-land-font-size);
     }
 
     .text-area {
-        font-size: var(--global-med-tablet-land-font-size);
+        font-size: var(--forms-med-tablet-land-font-size);
     }
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT SESSION, SESSION MEDICAL */
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
-        font-size: var(--global-med-tablet-land-font-size);
+        font-size: var(--forms-med-tablet-land-font-size);
         padding:1em;
     }
 
     /* DEMOGRAPHICS */
     .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
-        font-size: var(--global-big-tablet-land-font-size);
+        font-size: var(--forms-big-tablet-land-font-size);
     }
 
     .title-background, .title-background-top {
-        font-size: var(--med-whitney-tablet-land-font-size);
+        font-size: var(--med-copy-tablet-land-font-size);
     }
 
     .date-signature {
@@ -352,26 +352,26 @@ and (orientation: portrait) {
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
     .full-line-prompt p   {
-        font-size: var(--global-big-ipad-port-font-size);
+        font-size: var(--forms-big-ipad-port-font-size);
     }
 
     .text-area {
-        font-size: var(--global-med-ipad-port-font-size);
+        font-size: var(--forms-med-ipad-port-font-size);
     }
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT SESSION, SESSION MEDICAL */
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
-        font-size: var(--global-med-ipad-port-font-size);
+        font-size: var(--forms-med-ipad-port-font-size);
         padding:1em;
     }
 
     /* DEMOGRAPHICS */
     .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
-        font-size: var(--global-big-ipad-port-font-size);
+        font-size: var(--forms-big-ipad-port-font-size);
     }
 
     .title-background, .title-background-top {
-        font-size: var(--med-whitney-ipad-port-font-size);
+        font-size: var(--med-copy-ipad-port-font-size);
     }
 
     .date-signature {
@@ -408,26 +408,26 @@ and (orientation: landscape) {
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
     .full-line-prompt p   {
-        font-size: var(--global-big-ipad-land-font-size);
+        font-size: var(--forms-big-ipad-land-font-size);
     }
 
     .text-area {
-        font-size: var(--global-med-ipad-land-font-size);
+        font-size: var(--forms-med-ipad-land-font-size);
     }
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT SESSION, SESSION MEDICAL */
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
-        font-size: var(--global-med-ipad-land-font-size);
+        font-size: var(--forms-med-ipad-land-font-size);
         padding:1em;
     }
 
     /* DEMOGRAPHICS */
     .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
-        font-size: var(--global-big-ipad-land-font-size);
+        font-size: var(--forms-big-ipad-land-font-size);
     }
 
     .title-background, .title-background-top {
-        font-size: var(--med-whitney-ipad-land-font-size);
+        font-size: var(--med-copy-ipad-land-font-size);
     }
 
     .date-signature {
@@ -468,26 +468,26 @@ and (min-width: 1440px) {
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT-SESSION, SESSION MEDICAL */
     .full-line-prompt p   {
-        font-size: var(--global-big-desktop-font-size);
+        font-size: var(--forms-big-desktop-font-size);
     }
 
     .text-area {
-        font-size: var(--global-med-desktop-font-size);
+        font-size: var(--forms-med-desktop-font-size);
     }
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT SESSION, SESSION MEDICAL */
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
-        font-size: var(--global-med-desktop-font-size);
+        font-size: var(--forms-med-desktop-font-size);
         padding:1em;
     }
 
     /* DEMOGRAPHICS */
     .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
-        font-size: var(--global-big-desktop-font-size);
+        font-size: var(--forms-big-desktop-font-size);
     }
 
     .title-background, .title-background-top {
-        font-size: var(--med-whitney-desktop-font-size);
+        font-size: var(--med-copy-desktop-font-size);
     }
 
     .date-signature {
@@ -506,10 +506,17 @@ and (min-width: 1440px) {
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
+    .forms-content-block {
+        display: block;
+        width: 100%;
+        max-width:1152px;
+        margin:auto;
+    }
+
     .forms-heading {
         color: var(--color-dark-blue);
         background-color: white;
-        font-family: Whitney-Book, arial, serif;
+        font-family: var(--family-forms);
         letter-spacing: 3px;
         font-style:normal;
     }
@@ -602,7 +609,7 @@ and (min-width: 1440px) {
     .first-text-column-bordered   {
       display:grid;
       border:1px dashed var(--color-light-blue);
-      font-family: var(--family-global);
+      font-family: var(--family-forms);
       color: var(--color-dark-blue);
       text-align:left;
       margin-bottom:1em;
@@ -617,7 +624,7 @@ and (min-width: 1440px) {
     /* THESE ARE FOR CONTENT  */
     .full-line-prompt p, .text-area {
         padding-top: .5em;
-        font-family: var(--family-global);
+        font-family: var(--family-forms);
         color: var(--color-dark-blue);
         text-align: left;
     }
@@ -630,7 +637,7 @@ and (min-width: 1440px) {
     .full-text-column, .first-text-column, .first-second-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
         display:grid;
         padding-top:1em;
-        font-family: var(--family-global);
+        font-family: var(--family-forms);
         color: var(--color-dark-blue);
         text-align:left;
     }
@@ -638,7 +645,7 @@ and (min-width: 1440px) {
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
         display:inline;
         border:1px dashed var(--color-light-blue);
-        font-family: var(--family-global);
+        font-family: var(--family-forms);
         color: var(--color-dark-blue);
         text-align:left;
         margin-bottom:1em;
@@ -663,10 +670,10 @@ and (min-width: 1440px) {
     .disclaimer-copy {
         display:block;
         float:left;
-        width:90%;
-        margin:1em 5%;
+        width:100%;
+        margin:1em auto;
         border:thin solid var(--color-soft-blue);
-        font-family: var(--family-global);
+        font-family: var(--family-copy);
     }
 
     .date-signature {
@@ -676,7 +683,7 @@ and (min-width: 1440px) {
         grid-template-rows:repeat(2, 1fr);
         justify-content: flex-end;
         align-content: flex-end;
-        font-family: var(--family-global);
+        font-family: var(--family-copy);
         color: var(--color-dark-blue);
     }
 

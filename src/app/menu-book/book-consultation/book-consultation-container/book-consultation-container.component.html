@@ -1,30 +1,16 @@
-<!--<app-global-menu [menuItemId]='menuItemId' [subMenuItemId]='subMenuItemId'></app-global-menu>
-
-<app-global-headers [detailHeaderName]="detailHeaderName" [title]="title"></app-global-headers>
-
-<div class="grid-container">
-    <app-book-consultation-overview [title]="title">  </app-book-consultation-overview>
-</div>
-
-<app-global-footer></app-global-footer>-->
-
-<!-- Mike there is no book-session-screen css ?-->
-
 <div class="book-consultation-screen">
     <app-global-menu [menuItemId]='menuItemId' [subMenuItemId]='subMenuItemId'></app-global-menu>
     <app-global-headers [detailHeaderName]="detailHeaderName" [title]="title"></app-global-headers>
 
-    <div class="header-container">
-        <app-book-consultation-overview [model]="model" [title]="title">  </app-book-consultation-overview>
-    </div>
+    <app-book-consultation-overview [model]="model" [title]="title">  </app-book-consultation-overview>
 
-    <div class="content-container">
-        <div class="content-no-margins">
+<!--    <div class="content-container">-->
+
             <div class="print-container">
                 <button class="print-form-button" (click)="printProfile()">PRINT</button>
             </div>
-        </div>
-    </div>
+
+<!--    </div>-->
 
   <app-global-footer></app-global-footer>
 </div>

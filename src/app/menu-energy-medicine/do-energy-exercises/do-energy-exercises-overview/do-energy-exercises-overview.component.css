@@ -11,7 +11,7 @@ and (orientation: portrait) {
     }
 
     .exercise-name h2 {
-        font-size:var(--h2-whitney-banana-port-font-size);
+        font-size:var(--h2-banana-port-font-size);
     }
 
     .exercise-video-block {
@@ -30,7 +30,7 @@ and (orientation: portrait) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--global-med-banana-port-font-size);
+        font-size:var(--small-copy-banana-port-font-size);
     }
 
     .exercise-copy {
@@ -50,7 +50,7 @@ and (orientation: landscape) {
     }
 
     .exercise-name h2 {
-        font-size:var(--h2-whitney-banana-land-font-size);
+        font-size:var(--h2-banana-land-font-size);
     }
 
     .exercise-video-block {
@@ -69,7 +69,7 @@ and (orientation: landscape) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--global-med-banana-land-font-size);
+        font-size:var(--small-copy-banana-land-font-size);
     }
 
     .exercise-copy {
@@ -89,7 +89,7 @@ and (orientation: portrait) {
     }
 
     .exercise-name h2 {
-        font-size:var(--h2-whitney-mobile-port-font-size);
+        font-size:var(--h2-mobile-port-font-size);
     }
 
     .exercise-video-block {
@@ -108,7 +108,7 @@ and (orientation: portrait) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--global-med-mobile-port-font-size);
+        font-size:var(--small-copy-mobile-port-font-size);
     }
 
     .exercise-copy {
@@ -130,7 +130,7 @@ and (orientation: landscape) {
 
     .exercise-name h2 {
         grid-row:1;
-        font-size:var(--h2-whitney-mobile-land-font-size);
+        font-size:var(--h2-mobile-land-font-size);
     }
 
     .exercise-video-block {
@@ -148,7 +148,7 @@ and (orientation: landscape) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--global-med-mobile-land-font-size);
+        font-size:var(--small-copy-mobile-land-font-size);
     }
 
 }
@@ -166,7 +166,7 @@ and (orientation: portrait) {
     }
 
     .exercise-name h2 {
-        font-size:var(--h2-whitney-tablet-port-font-size);
+        font-size:var(--h2-tablet-port-font-size);
     }
 
     .exercise-video-block {
@@ -185,7 +185,7 @@ and (orientation: portrait) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--global-med-tablet-port-font-size);
+        font-size:var(--small-copy-tablet-port-font-size);
     }
 
     .exercise-copy {
@@ -205,7 +205,7 @@ and (orientation: landscape) {
     }
 
     .exercise-name h2 {
-        font-size:var(--h2-whitney-tablet-land-font-size);
+        font-size:var(--h2-tablet-land-font-size);
     }
 
     .exercise-video-block {
@@ -223,7 +223,7 @@ and (orientation: landscape) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--global-med-tablet-land-font-size);
+        font-size:var(--small-copy-tablet-land-font-size);
     }
 
 }
@@ -240,7 +240,7 @@ and (orientation: portrait) {
     }
 
     .exercise-name h2 {
-        font-size:var(--h2-whitney-ipad-port-font-size);
+        font-size:var(--h2-ipad-port-font-size);
     }
 
     .exercise-video-block {
@@ -258,7 +258,7 @@ and (orientation: portrait) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--global-med-ipad-port-font-size);
+        font-size:var(--small-copy-ipad-port-font-size);
     }
 
 }
@@ -275,7 +275,7 @@ and (orientation: landscape) {
     }
 
     .exercise-name h2 {
-        font-size:var(--h2-whitney-ipad-land-font-size);
+        font-size:var(--h2-ipad-land-font-size);
     }
 
     .exercise-video-block {
@@ -293,7 +293,7 @@ and (orientation: landscape) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size:var(--global-med-ipad-land-font-size);
+        font-size:var(--small-copy-ipad-land-font-size);
     }
 
 }
@@ -309,7 +309,7 @@ and (min-width: 1440px) {
     }
 
     .exercise-name h2 {
-        font-size:var(--h2-whitney-desktop-font-size);
+        font-size:var(--h2-desktop-font-size);
     }
 
     .exercise-video-block {
@@ -329,7 +329,7 @@ and (min-width: 1440px) {
     }
 
     .exercise-copy, .exercise-list  {
-        font-size: var(--global-med-desktop-font-size);
+        font-size: var(--small-copy-desktop-font-size);
     }
 
 }
@@ -352,7 +352,7 @@ and (min-width: 1440px) {
         margin:0;
         grid-column:1/-1;
         color:white;
-        font-family: Whitney-Book;
+        /*font-family: var(--font-family-=(());*/
         padding:1em 0;
         justify-content: center;
         border:1px solid white;
@@ -383,7 +383,7 @@ and (min-width: 1440px) {
         display: grid;
         width:90%;
         margin:0 5%;
-        font-family: var(--family-global);
+        font-family: var(--family-copy);
         justify-content: center;
     }
 

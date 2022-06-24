@@ -5,13 +5,17 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-  .footer-top p, .footer-bottom p {
+  /*.footer-top p, .footer-bottom p {
     font-size: var(--data-banana-port-font-p-size);
   }
 
   .footer-bottom span {
     font-size: var(--data-banana-port-font-span-size);
     padding:0 2em;
+  }*/
+
+  .footer-top p, .footer-bottom p, .footer-bottom span {
+    font-size: var(--small-copy-banana-port-font-size);
   }
 
 }
@@ -22,12 +26,16 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-  .footer-top p, .footer-bottom p {
+ /* .footer-top p, .footer-bottom p {
     font-size: var(--data-banana-land-font-p-size);
   }
 
   .footer-bottom span {
     font-size: var(--data-banana-land-font-span-size);
+  }*/
+
+  .footer-top p, .footer-bottom p, .footer-bottom span {
+    font-size: var(--small-copy-banana-land-font-size);
   }
 
 }
@@ -38,13 +46,17 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-  .footer-top p, .footer-bottom p {
+ /* .footer-top p, .footer-bottom p {
     font-size: var(--data-mobile-port-font-p-size);
   }
 
   .footer-bottom span {
     font-size: var(--data-mobile-port-font-span-size);
     padding:0 2em;
+  }
+*/
+  .footer-top p, .footer-bottom p, .footer-bottom span {
+    font-size: var(--small-copy-mobile-port-font-size);
   }
 
 }
@@ -55,12 +67,16 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-  .footer-top p, .footer-bottom p {
+ /* .footer-top p, .footer-bottom p {
     font-size: var(--data-mobile-land-font-p-size);
   }
 
   .footer-bottom span {
     font-size: var(--data-mobile-land-font-span-size);
+  }*/
+
+  .footer-top p, .footer-bottom p, .footer-bottom span {
+    font-size: var(--small-copy-mobile-land-font-size);
   }
 
 }
@@ -71,12 +87,16 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-  .footer-top p, .footer-bottom p {
+ /* .footer-top p, .footer-bottom p {
     font-size: var(--data-tablet-port-font-p-size);
   }
 
   .footer-bottom span {
     font-size: var(--data-tablet-port-font-span-size);
+  }*/
+
+  .footer-top p, .footer-bottom p, .footer-bottom span {
+    font-size: var(--small-copy-tablet-port-font-size);
   }
 
 }
@@ -87,12 +107,16 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
-  .footer-top p, .footer-bottom p {
+ /* .footer-top p, .footer-bottom p {
     font-size: var(--data-tablet-land-font-p-size);
   }
 
   .footer-bottom span {
     font-size: var(--data-tablet-land-font-span-size);
+  }*/
+
+  .footer-top p, .footer-bottom p, .footer-bottom span {
+    font-size: var(--small-copy-tablet-land-font-size);
   }
 
 }
@@ -103,12 +127,16 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-  .footer-top p, .footer-bottom p {
+ /* .footer-top p, .footer-bottom p {
     font-size: var(--data-ipad-port-font-p-size);
   }
 
   .footer-bottom span {
     font-size: var(--data-ipad-port-font-span-size);
+  }*/
+
+  .footer-top p, .footer-bottom p, .footer-bottom span {
+    font-size: var(--small-copy-ipad-port-font-size);
   }
 
 }
@@ -119,12 +147,16 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-  .footer-top p, .footer-bottom p {
+ /* .footer-top p, .footer-bottom p {
     font-size: var(--data-ipad-land-font-p-size);
   }
 
   .footer-bottom span {
     font-size: var(--data-ipad-land-font-span-size);
+  }*/
+
+  .footer-top p, .footer-bottom p, .footer-bottom span {
+    font-size: var(--small-copy-ipad-land-font-size);
   }
 
 }
@@ -133,13 +165,11 @@ and (orientation: landscape) {
 @media only screen
 and (min-width: 1440px) {
 
-  .footer-top p, .footer-bottom p {
-      font-size: var(--data-desktop-font-p-size);
+  .footer-top p, .footer-bottom p, .footer-bottom span {
+      font-size: var(--small-copy-desktop-font-size);
   }
 
-  .footer-bottom span {
-    font-size: var(--data-desktop-font-span-size);
-  }
+
 
 }
 
@@ -152,7 +182,7 @@ and (min-width: 1440px) {
     display: grid;
     width:100%;
     justify-items: center;
-    font-family: var(--family-data);
+    font-family: var(--family-copy);
     text-align: center;
   }
 

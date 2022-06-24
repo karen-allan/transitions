@@ -21,24 +21,17 @@ and (orientation: portrait) {
     }
 
     .grid-heading {
-        font-size: var(--small-whitney-banana-port-font-size);
+        font-size: var(--med-copy-banana-port-font-size);
         letter-spacing: 1px;
     }
 
     .grid-copy  {
-        font-size: var(--global-med-banana-port-font-size);
+        font-size: var(--small-copy-banana-port-font-size);
         border-bottom: 2px solid black;
     }
 
 
- /*   .item-col-selected p, .item-col-active a p  {
-        font-size: var(--small-whitney-banana-land-font-size);
-        letter-spacing: 1px;
-    }
 
-    .item-col-selected span, .item-col-active a span  {
-        font-size: var(--global-med-banana-land-font-size);
-    }*/
 
 }
 
@@ -59,24 +52,16 @@ and (orientation: landscape) {
     }
 
     .grid-heading {
-        font-size: var(--small-whitney-banana-land-font-size);
+        font-size: var(--med-copy-banana-land-font-size);
         letter-spacing: 1px;
     }
 
     .grid-copy  {
-        font-size: var(--global-med-banana-land-font-size);
+        font-size: var(--small-copy-banana-land-font-size);
         border-bottom: 2px solid black;
     }
 
-/*
-    .item-col-selected p, .item-col-active a p  {
-        font-size: var(--small-whitney-banana-land-font-size);
-        letter-spacing: 1px;
-    }
 
-    .item-col-selected span, .item-col-active a span  {
-        font-size: var(--global-med-banana-land-font-size);
-    }*/
 
 }
 
@@ -97,12 +82,12 @@ and (orientation: portrait) {
     }
 
     .item-col-selected p, .item-col-active a p  {
-        font-size: var(--small-whitney-mobile-port-font-size);
+        font-size: var(--med-copy-mobile-port-font-size);
         letter-spacing: 1px;
     }
 
     .item-col-selected span, .item-col-active a span  {
-        font-size: var(--global-med-mobile-port-font-size);
+        font-size: var(--small-copy-mobile-port-font-size);
     }
 
 }
@@ -124,23 +109,16 @@ and (orientation: landscape) {
     }
 
     .grid-heading {
-        font-size: var(--small-whitney-tablet-port-font-size);
+        font-size: var(--med-copy-tablet-port-font-size);
         letter-spacing: 1px;
     }
 
     .grid-copy  {
-        font-size: var(--global-med-tablet-port-font-size);
+        font-size: var(--small-copy-tablet-port-font-size);
         border-bottom: 2px solid black;
     }
 
-   /* .item-col-selected p, .item-col-active a p  {
-        font-size: var(--small-whitney-mobile-land-font-size);
-        letter-spacing: 1px;
-    }
 
-    .item-col-selected span, .item-col-active a span  {
-        font-size: var(--global-med-mobile-land-font-size);
-    }*/
 
 }
 
@@ -161,37 +139,14 @@ and (orientation: portrait) {
     }
 
     .grid-heading {
-        font-size: var(--small-whitney-tablet-port-font-size);
+        font-size: var(--med-copy-tablet-port-font-size);
         letter-spacing: 1px;
     }
 
     .grid-copy  {
+        font-size: var(--small-copy-tablet-port-font-size);
         border-bottom: 2px solid black;
     }
-
-    .grid-copy span  {
-        font-size: var(--global-med-tablet-port-font-size);
-        /*border-bottom: 2px solid black;*/
-    }
-
-  /*  .item-col-selected p, .item-col-active a p  {
-        font-size: var(--small-whitney-tablet-port-font-size);
-        letter-spacing: 1px;
-    }
-
-    .item-col-selected span, .item-col-active a span  {
-        font-size: var(--global-med-tablet-port-font-size);
-    }
-*/
-
-
-    /*  .item-col-selected:first-child, .item-col-active:first-child {
-       border-bottom:1px solid red;
-   }
-
-   .item-col-selected:last-child, .item-col-active:last-child {
-       border-top:1px solid blue;
-   }*/
 
 }
 
@@ -210,13 +165,13 @@ and (orientation: landscape) {
         display: block;
     }
 
-    .item-col-selected p, .item-col-active a p  {
-        font-size: var(--small-whitney-tablet-land-font-size);
-        letter-spacing: 2px;
+    .grid-heading {
+        font-size: var(--med-copy-tablet-land-font-size);
+        letter-spacing: 1px;
     }
 
-    .item-col-selected span, .item-col-active a span  {
-        font-size: var(--global-med-tablet-land-font-size);
+    .grid-copy  {
+        font-size: var(--small-copy-tablet-land-font-size);
     }
 
 }
@@ -236,14 +191,16 @@ and (orientation: portrait) {
         display: block;
     }
 
-    .item-col-selected p, .item-col-active a p  {
-        font-size: var(--small-whitney-ipad-port-font-size);
+    .grid-heading {
+        font-size: var(--med-copy-ipad-port-font-size);
         letter-spacing: 1px;
     }
 
-    .item-col-selected span, .item-col-active a span  {
-        font-size: var(--global-med-ipad-port-font-size);
+    .grid-copy  {
+        font-size: var(--small-copy-ipad-port-font-size);
     }
+
+
 
 }
 
@@ -262,13 +219,22 @@ and (orientation: landscape) {
         display: block;
     }
 
+    .grid-heading {
+        font-size: var(--med-copy-desktop-font-size);
+        letter-spacing: 1px;
+    }
+
+    .grid-copy  {
+        font-size: var(--small-copy-desktop-font-size);
+    }
+
     .item-col-selected p, .item-col-active a p  {
-        font-size: var(--small-whitney-ipad-land-font-size);
+        font-size: var(--small-copy-desktop-font-size);
         letter-spacing: 2px;
     }
 
     .item-col-selected span, .item-col-active a span  {
-        font-size: var(--global-med-ipad-land-font-size);
+        font-size: var(--small-copy-ipad-land-font-size);
     }
 }
 
@@ -287,12 +253,12 @@ and (min-width: 1440px) {
     }
 
     .grid-heading   {
-        font-size: var(--small-whitney-desktop-font-size);
+        font-size: var(--med-copy-desktop-font-size);
         letter-spacing: 2px;
     }
 
     .grid-copy  {
-        font-size: var(--global-med-desktop-font-size);
+        font-size: var(--small-copy-desktop-font-size);
     }
 
 }
@@ -359,9 +325,7 @@ and (min-width: 1440px) {
         justify-content: center;
     }
 
-  /*  .item-col-selected:first-child, .item-col-active:first-child {
-        border-right:thin solid var(--color-dark-purple);
-    }*/
+
 
     .item-col-active  {
         color: var(--color-dark-purple);
@@ -369,12 +333,10 @@ and (min-width: 1440px) {
         cursor: pointer;
     }
 
-  /*  .item-col-selected p, .item-col-active a p {
-        font-family: Whitney-Book;
-    }*/
+
 
     .grid-heading {
-        font-family: Whitney-Book;
+        font-family: var(--family-copy);
         padding-top:1em;
     }
 
@@ -384,13 +346,10 @@ and (min-width: 1440px) {
     }
 
     .grid-copy span {
-        font-family: var(--family-global);
+        font-family: var(--family-copy);
     }
 
-   /* .item-col-selected span, .item-col-active a span {
-        font-family: var(--family-global);
-        padding:0 1em;
-    }*/
+
 
     .grid-copy a  {
         text-decoration: none;
