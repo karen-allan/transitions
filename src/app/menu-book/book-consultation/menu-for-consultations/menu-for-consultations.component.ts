@@ -1,11 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Client} from "../../../ts-files/client";
-import {
-  BookConsultationContainerComponent
-} from "../book-consultation-container/book-consultation-container.component";
-import {
-  BookConsultationOverviewComponent
-} from "../book-consultation-overview/book-consultation-overview.component";
+import {BookConsultationContainerComponent} from "../book-consultation-container/book-consultation-container.component";
+import {BookConsultationOverviewComponent} from "../book-consultation-overview/book-consultation-overview.component";
 
 export type EditorType = 'assessment' | 'caregiver'  | 'patient'  | 'planning';
 

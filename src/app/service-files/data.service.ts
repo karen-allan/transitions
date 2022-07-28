@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import {SUB_MENU_ITEMS} from "../ts-files/subMenuItems";
 import {SubMenuItem} from "../ts-files/subMenuItem";
-import {Subject} from "../ts-files/subject";
-import {SUBJECTS} from "../ts-files/subjects";
 import {DerExercise} from "../ts-files/derExercise";
 import {DER_EXERCISES} from "../ts-files/derExercises";
 import {ELEMENTS} from "../ts-files/elements";
@@ -32,18 +30,6 @@ export class DataService {
     return of(subMenuItems)
   }
 
-
-  // ******************** GET SUBJECTS *************************
-
-  getSelectedSubjects(id1: number, id2: number): Observable<Subject[]> {
-    var subjectList=[];
-    for (var subject of SUBJECTS) {
-      if ((subject.id >= id1) && (subject.id <= id2)) {
-        subjectList.push(subject);
-      }
-    }
-    return of(subjectList)
-  }
 
   // ******************** GET EXERCISES *************************
   getExercises(): Observable<DerExercise[]> {

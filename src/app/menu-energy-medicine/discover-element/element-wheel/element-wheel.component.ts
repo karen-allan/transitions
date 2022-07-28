@@ -9,6 +9,7 @@ import {DataService} from "../../../service-files/data.service";
   templateUrl: './element-wheel.component.html',
   styleUrls: ['./element-wheel.component.css']
 })
+
 export class ElementWheelComponent implements OnInit {
 
   detailListName="list-element"

@@ -7,12 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeContainerComponent implements OnInit {
 
-  menuItemId:number   = 2
-  subMenuItemId = 20
+  menuItemId:number   = 1
+  subMenuItemId = 10
 
   detailHeaderName = 'header-about-me'
   title= "From There to Here"
-  detailListName="list-about"
 
   constructor() { }
 

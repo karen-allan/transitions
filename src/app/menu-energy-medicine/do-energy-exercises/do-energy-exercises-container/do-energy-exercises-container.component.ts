@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DoEnergyExercisesContainerComponent implements OnInit {
 
-  menuItemId:number = 3;
-  subMenuItemId:number = 33;
+  menuItemId:number = 2;
+  subMenuItemId:number = 23;
 
-  detailHeaderName = 'header-do-energy-exercises'
+  detailHeaderName = 'header-energy-der'
   title='Move the Energy inside you'
-  detailListName="list-energy-medicine"
+
 
   constructor() { }
 

@@ -10,6 +10,7 @@ import {DatePipe} from "@angular/common";
   templateUrl: './meridian-wheel.component.html',
   styleUrls: ['./meridian-wheel.component.css']
 })
+
 export class MeridianWheelComponent implements OnInit {
 
   @Input() source:string ='';

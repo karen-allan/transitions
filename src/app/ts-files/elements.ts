@@ -32,10 +32,10 @@ export const ELEMENTS: Element[] = [
 
         meridians: 'Kidney (Yin) and Bladder (Yang)',
 
-        icon:'assets/images/energyMedicine/elements/water/waterElement.png',
-        bkgrd_image:'assets/images/energyMedicine/elements/water/waterElementLarge.jpg',
-        nl_pic:'assets/images/energyMedicine/elements/water/nlWater.jpg',
-        nv_pic:'assets/images/energyMedicine/elements/water/nvWater.jpg',
+        icon:'assets/images/details/energyMedicine/elements/water/waterElement.png',
+        bkgrd_image:'assets/images/details/energyMedicine/elements/water/waterElementLarge.jpg',
+        nl_pic:'assets/images/details/energyMedicine/elements/water/nlWater.jpg',
+        nv_pic:'assets/images/details/energyMedicine/elements/water/nvWater.jpg',
 
         summary_yin:' is gentle and yielding when it flows over rocks in a stream. It ' +
             'is deep, cold, still and mysterious like the bottom of a well.',
@@ -125,10 +125,10 @@ export const ELEMENTS: Element[] = [
 
         meridians: 'Liver (Yin) and Gallbladder (Yang)',
 
-        icon:'assets/images/energyMedicine/elements/wood/woodElement.png',
-        bkgrd_image:'assets/images/energyMedicine/elements/wood/woodElementLarge.jpg',
-        nl_pic:'assets/images/energyMedicine/elements/wood/nlWood.jpg',
-        nv_pic:'assets/images/energyMedicine/elements/wood/nvWood.jpg',
+        icon:'assets/images/details/energyMedicine/elements/wood/woodElement.png',
+        bkgrd_image:'assets/images/details/energyMedicine/elements/wood/woodElementLarge.jpg',
+        nl_pic:'assets/images/details/energyMedicine/elements/wood/nlWood.jpg',
+        nv_pic:'assets/images/details/energyMedicine/elements/wood/nvWood.jpg',
 
         summary_yin:' emerges from the Earth as a new sapling struggling against the elements. It is YIN WOOD is ' +
             'a fallen tree that creates a bridge across a river, while sending down roots to replenish itself.',
@@ -228,10 +228,10 @@ export const ELEMENTS: Element[] = [
 
         meridians: 'Heart (Yin), Pericardium (Yin), Small Intestine (Yang) and Triple Warmer (Yang)',
 
-        nl_pic:'assets/images/energyMedicine/elements/fire/nlFire.jpg',
-        nv_pic:'assets/images/energyMedicine/elements/fire/nvFire.jpg',
-        icon:'assets/images/energyMedicine/elements/fire/fireElement.png',
-        bkgrd_image:'assets/images/energyMedicine/elements/fire/fireElementLarge.jpg',
+        nl_pic:'assets/images/details/energyMedicine/elements/fire/nlFire.jpg',
+        nv_pic:'assets/images/details/energyMedicine/elements/fire/nvFire.jpg',
+        icon:'assets/images/details/energyMedicine/elements/fire/fireElement.png',
+        bkgrd_image:'assets/images/details/energyMedicine/elements/fire/fireElementLarge.jpg',
 
         summary_yin:' is the fluid layer of liquid iron and nickel living in the Earth\'s outer core. It is ' +
             'the deeply dark embers going cold in a fireplace.',
@@ -325,10 +325,10 @@ export const ELEMENTS: Element[] = [
 
         meridians: 'Spleen (Yin) and Stomach (Yang)',
 
-        nl_pic:'assets/images/energyMedicine/elements/earth/nlEarth.jpg',
-        nv_pic:'assets/images/energyMedicine/elements/earth/nvEarth.jpg',
-        icon:'assets/images/energyMedicine/elements/earth/earthElement.png',
-        bkgrd_image:'assets/images/energyMedicine/elements/earth/earthElementLarge.jpg',
+        nl_pic:'assets/images/details/energyMedicine/elements/earth/nlEarth.jpg',
+        nv_pic:'assets/images/details/energyMedicine/elements/earth/nvEarth.jpg',
+        icon:'assets/images/details/energyMedicine/elements/earth/earthElement.png',
+        bkgrd_image:'assets/images/details/energyMedicine/elements/earth/earthElementLarge.jpg',
 
         summary_yin:' supplies the nutrients to help newly planted seeds grow. It' +
             ' grows the grass that invites you to lay down upon it and rest.',
@@ -424,10 +424,10 @@ export const ELEMENTS: Element[] = [
 
         meridians: 'Lung (Yin) and Large Intestine (Yang)',
 
-        icon:'assets/images/energyMedicine/elements/metal/metalElement.png',
-        bkgrd_image:'assets/images/energyMedicine/elements/metal/metalElementLarge.jpg',
-        nl_pic:'assets/images/energyMedicine/elements/metal/nlMetal.jpg',
-        nv_pic:'assets/images/energyMedicine/elements/metal/nvMetal.jpg',
+        icon:'assets/images/details/energyMedicine/elements/metal/metalElement.png',
+        bkgrd_image:'assets/images/details/energyMedicine/elements/metal/metalElementLarge.jpg',
+        nl_pic:'assets/images/details/energyMedicine/elements/metal/nlMetal.jpg',
+        nv_pic:'assets/images/details/energyMedicine/elements/metal/nvMetal.jpg',
 
         summary_yin:' is like the intricate and magnificent inner workings of a grandfather clock. ' +
             'It is a tool that is cold and lifeless when sitting on a shelf.',

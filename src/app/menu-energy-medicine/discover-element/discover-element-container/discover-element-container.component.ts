@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiscoverElementContainerComponent implements OnInit {
 
-  menuItemId:number = 3;
-  subMenuItemId:number = 34;
+  menuItemId:number = 2;
+  subMenuItemId:number = 24;
 
-  detailHeaderName = 'header-discover-element'
+  detailHeaderName = 'header-energy-element'
   title='Discover Your Element'
-  detailListName="list-energy-medicine"
+
 
   constructor() { }
 

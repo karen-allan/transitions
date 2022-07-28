@@ -7,15 +7,13 @@
     <img src="{{selectedMeridian.meridian_attribute_pic}}" alt="Meridian Attributes" title="Meridian Attributes">
 </div>
 
-<div class="content-dark-copy">
-    <div class="meridians-element">
-        <div class="element-icon">
-            <img alt="Meridian Icon" src={{selectedMeridian.meridian_icon}}>
-        </div>
+<div class="meridians-element">
+    <div class="meridian-element-icon">
+        <img alt="Meridian Icon" src={{selectedMeridian.meridian_icon}}>
+    </div>
 
-        <div class="element-affirmation">
-            {{selectedMeridian.name}}'s Affirmation:<i>&nbsp;<b>{{selectedMeridian.affirmation_text}}</b></i>.
-        </div>
+    <div class="meridian-element-affirmation" style="{{selectedMeridian.font_color}}">
+        <b>{{selectedMeridian.affirmation_text}}</b>
     </div>
 </div>
 
@@ -28,23 +26,22 @@
         <p><b>IN CHINESE MEDICINE:&nbsp;</b>{{selectedMeridian.chinese.medicalNotes}}</p>
     </ng-container>
 
-    <p><b>{{selectedMeridian.name.toUpperCase()}}</b>&nbsp;is a {{selectedMeridian.yin_yang.toUpperCase()}} Meridian that belongs to {{selectedElement.name}}&nbsp;Element.</p>
+    <p><b>{{selectedMeridian.name.toUpperCase()}}</b>&nbsp;is a {{selectedMeridian.yin_yang.toUpperCase()}} Meridian that belongs to
+        {{selectedElement.name}}&nbsp;Element.</p>
     <p><b>{{selectedElement.name.toUpperCase()}} GOVERNS: </b>&nbsp;{{selectedElement.governs}}</p>
     <p><b>{{selectedMeridian.name.toUpperCase()}} IS ACTIVE:</b>&nbsp;between {{selectedMeridian.time_range}}.</p>
     <p><b>POWER ANIMALS:</b>&nbsp;are the {{selectedElement.power_animals}}.</p>
 </div>
 
-<div class="content-dark-copy">
-    <div *ngIf="selectedMeridian.id == 3 || selectedMeridian.id == 4 || selectedMeridian.id == 11 || selectedMeridian.id == 12">
-        <div class="content-images">
-            <img alt="Meridian Animals" src="{{selectedMeridian.meridian_animal_pic}}">
-        </div>
+<div *ngIf="selectedMeridian.id == 3 || selectedMeridian.id == 4 || selectedMeridian.id == 11 || selectedMeridian.id == 12">
+    <div class="content-images">
+        <img alt="Meridian Animals" src="{{selectedMeridian.meridian_animal_pic}}">
     </div>
+</div>
 
-    <div *ngIf="selectedMeridian.id != 3 && selectedMeridian.id != 4 && selectedMeridian.id != 11 && selectedMeridian.id != 12">
-        <div class="content-images">
-            <img alt="Meridian Animals" src="{{selectedMeridian.meridian_animal_pic}}">
-        </div>
+<div *ngIf="selectedMeridian.id != 3 && selectedMeridian.id != 4 && selectedMeridian.id != 11 && selectedMeridian.id != 12">
+    <div class="content-images">
+        <img alt="Meridian Animals" src="{{selectedMeridian.meridian_animal_pic}}">
     </div>
 </div>
 
@@ -53,7 +50,7 @@
 </div>
 
 <div class="content-dark-copy">
-    {{selectedMeridian.meridian_path_copy}}
+    <p>{{selectedMeridian.meridian_path_copy}}</p>
 </div>
 
 <div class="content-images">
@@ -62,11 +59,13 @@
 
 <!-- STATE -->
 <div class="content-dark-copy">
-    Physical and psychological imbalances can arise from an over-abundance of energy or a lack of energy in a Meridian.
-    If on browsing the lists of common symptoms you see that some are a chronic problem for you, you may want to test yourself as to
-    what state your Meridian may be in. We as practitioners perform many tests to find out if a meridian
-    is over energized (OE) or under energized (UE). But you may be able to tell whether the meridian is OE or UE
-    by how you feel psychologically or the state your body is in physically.
+    <p>
+        Physical and psychological imbalances can arise from an over-abundance of energy or a lack of energy in a Meridian. If on browsing
+        the lists of common symptoms you see that some are a chronic problem for you, you may want to test yourself as to what state your
+        Meridian may be in. We as practitioners perform many tests to find out if a meridian is over energized (OE) or under energized
+        (UE). But you may be able to tell whether the meridian is OE or UE by how you feel psychologically or the state your body is in
+        physically.
+    </p>
 </div>
 
 <div class="content-clear-titles" style="{{selectedMeridian.font_color}}">
@@ -103,48 +102,47 @@
 </div>
 
 <div class="content-dark-copy">
-    If in looking through the lists of imbalances you see symptoms that are chronic for you, you can try some simple
-    methods to bring this energy back into balance. While we as practitioners delve very much deeper into testing
-    and correcting meridian and element imbalances, these methods are used extensively. I hope that in
-    providing these methods, you can also learn how to help balance your energies. And I encourage you go deeper
-    <a target="_blank" routerLink="/book"> with a 90 minute in house or distance session :).</a>
-    But in the end, your own body is the healer so why not start now to learn any or all of these methods:
+    <p>
+        If in looking through the lists of imbalances you see symptoms that are chronic for you, you can try some simple methods to bring
+        this energy back into balance. While we as practitioners delve very much deeper into testing and correcting meridian and element
+        imbalances, these methods are used extensively. I hope that in providing these methods, you can also learn how to help balance
+        your energies. And I encourage you go deeper <a target="_blank" routerLink="/bookSession" target="bookEMSession"> with a 90
+        minute in house or distance session :).</a> But in the end, your own body is the healer so why not start now to learn any or all
+        of these methods:
+    </p>
 </div>
 
 <div class="energy-tip">
     <span><b><i>Energy Tip</i></b> :
-        You can self test your energy with this simple technique. While standing, with thumb, pointer and middle fingers,
-        hold the organ or meridian acupressure point you want
-        to test. Now with your hands clasped on your chest wait for your body to move. If it moves forward, the energy is likely
-        strong. If you start to fall backwards, your energy could use a boost.
+        You can self test your energy with this simple technique. While standing, with thumb, pointer and middle fingers, hold the organ
+        or meridian acupressure point you want to test. Now with your hands clasped on your chest wait for your body to move. If it moves
+        forward, the energy is likely strong. If you start to fall backwards, your energy could use a boost.
     </span>
 </div>
 
 <ng-container *ngIf="selectedMeridian.id != 11">
-    <ul class="content-dark-list">
-        <li class="list-big-item"><b>Source Points:</b>&nbsp;&nbsp;Bring energy to specific organs via {{selectedMeridian.name}}'s Source Point.</li>
-        <li class="list-big-item"><b>Neuro-Lymphatics:</b>&nbsp;&nbsp;Move accumulated {{selectedMeridian.name}} Lymph with Neuro-Lymphatic Massage.</li>
-        <li class="list-big-item"><b>Neuro-Vasculars:</b>&nbsp;&nbsp;Bring blood to the {{selectedMeridian.name}} Meridian by holding it's Neuro-Vascular points.</li>
-        <li class="list-big-item"><b>Hook-Up:</b>&nbsp;&nbsp;Bring Chi energy in via the Central-Governing Channels.</li>
-        <li class="list-big-item"><b>Ground:</b>&nbsp;&nbsp;Bring in fresh Chi from the Earth by learning grounding techniques.</li>
-        <li class="list-big-item"><b>Trace {{selectedMeridian.name}}:</b>&nbsp;&nbsp;Trace {{selectedMeridian.name}} Meridian forward to strengthen, backwards to
-            sedate.
-        </li>
-        <li class="list-big-item"><b>Cycle Meridians Daily:</b>&nbsp;&nbsp;To strengthen your overall Meridian systems trace your Meridians daily.</li>
-        <li class="list-big-item"><b>Hold Acupressure Points:</b>&nbsp;&nbsp;Sedate or strengthen {{selectedMeridian.name}}'s Acupressure points.</li>
+    <ul class="content-dark-list yin-yang">
+        <li class="list-item"><b>Source Points:</b>&nbsp;&nbsp;Bring energy to specific organs via {{selectedMeridian.name}}'s Source Point.</li>
+        <li class="list-item"><b>Neuro-Lymphatics:</b>&nbsp;&nbsp;Move accumulated {{selectedMeridian.name}} Lymph with Neuro-Lymphatic Massage.</li>
+        <li class="list-item"><b>Neuro-Vasculars:</b>&nbsp;&nbsp;Bring blood to {{selectedMeridian.name}} by holding it's Neuro-Vascular points.</li>
+        <li class="list-item"><b>Hook-Up:</b>&nbsp;&nbsp;Bring Chi energy in via the Central-Governing Channels.</li>
+        <li class="list-item"><b>Ground:</b>&nbsp;&nbsp;Bring in fresh Chi from the Earth by learning grounding techniques.</li>
+        <li class="list-item"><b>Trace {{selectedMeridian.name}}:</b>&nbsp;&nbsp;Trace {{selectedMeridian.name}} Meridian strengthen or sedate.</li>
+        <li class="list-item"><b>Cycle Meridians Daily:</b>&nbsp;&nbsp;To strengthen your overall Meridian systems.</li>
+        <li class="list-item"><b>Hold Acupressure Points:</b>&nbsp;&nbsp;Sedate or strengthen {{selectedMeridian.name}}'s Acupressure points.</li>
     </ul>
 </ng-container>
 
 <ng-container *ngIf="selectedMeridian.id === 11">
-    <ul class="content-dark-list">
-        <li class="list-big-item"><b>Source Points:</b>&nbsp;&nbsp;Bring energy to specific organs via {{selectedMeridian.name}}'s Source Point.</li>
-        <li class="list-big-item"><b>Neuro-Lymphatics:</b>&nbsp;&nbsp;Move accumulated {{selectedMeridian.name}} Lymph with Neuro-Lymphatic Massage.</li>
-        <li class="list-big-item"><b>Neuro-Vasculars:</b>&nbsp;&nbsp;Bring blood to the {{selectedMeridian.name}} Meridian by holding it's Neuro-Vascular points.</li>
-        <li class="list-big-item"><b>Hook-Up:</b>&nbsp;&nbsp;Bring Chi energy in via the Central-Governing Channels.</li>
-        <li class="list-big-item"><b>Ground:</b>&nbsp;&nbsp;Bring in fresh Chi from the Earth by learning grounding techniques.</li>
-        <li class="list-big-item"><b>Trace {{selectedMeridian.name}}:</b>&nbsp;&nbsp;Trace it forward to strengthen it, <i>NEVER SEDATE HEART MERIDIAN</i>.</li>
-        <li class="list-big-item"><b>Cycle Meridians Daily</b>&nbsp;&nbsp;:To strengthen your overall Meridian systems.</li>
-        <li class="list-big-item"><b>Hold Acupressure Points:</b>&nbsp;&nbsp;Strengthen {{selectedMeridian.name}}'s Acupressure points.</li>
+    <ul class="content-dark-list yin-yang">
+        <li class="list-item"><b>Source Points:</b>&nbsp;&nbsp;Bring energy to specific organs via {{selectedMeridian.name}}'s Source Point.</li>
+        <li class="list-item"><b>Neuro-Lymphatics:</b>&nbsp;&nbsp;Move accumulated {{selectedMeridian.name}} Lymph with Neuro-Lymphatic Massage.</li>
+        <li class="list-item"><b>Neuro-Vasculars:</b>&nbsp;&nbsp;Bring blood to {{selectedMeridian.name}}by holding it's Neuro-Vascular points.</li>
+        <li class="list-item"><b>Hook-Up:</b>&nbsp;&nbsp;Bring Chi energy in via the Central-Governing Channels.</li>
+        <li class="list-item"><b>Ground:</b>&nbsp;&nbsp;Bring in fresh Chi from the Earth by learning grounding techniques.</li>
+        <li class="list-item"><b>Trace {{selectedMeridian.name}}:</b>&nbsp;&nbsp;Trace it forward to strengthen it, <i>NEVER SEDATE IT</i>.</li>
+        <li class="list-item"><b>Cycle Meridians Daily</b>&nbsp;&nbsp;:To strengthen your overall Meridian systems.</li>
+        <li class="list-item"><b>Hold Acupressure Points:</b>&nbsp;&nbsp;Strengthen {{selectedMeridian.name}}'s Acupressure points.</li>
     </ul>
 </ng-container>
 
@@ -157,17 +155,16 @@
 </div>
 
 <div class="content-dark-copy">
-    {{selectedMeridian.name}}'s source point is {{selectedMeridian.source_point}}
-    Every meridian (except Central and Governing) has a Source Point that stores a reservoir of energy for the organ
-    it serves. Massaging these
-    points can send needed energy to the {{selectedMeridian.name}}.
-    Source points can be massaged, tapped or be realigned 'in the field', a few inches above the point via a crystal
-    or magnet.
-    <br><br>
-    Simply rub or hold your {{selectedMeridian.name}} Source Point using whatever pressure feels right for you.
-    You can also flip your hand over the point, moving from the back of your hand to your palm.
-    This mimics a magnet, in that your palm has a South polarity and the back of your hand
-    has a North polarity. Flipping them helps to realign the cells to follow their natural polarity.
+    <p>
+        {{selectedMeridian.name}}'s source point is {{selectedMeridian.source_point}}. Every meridian (except Central and Governing) has
+        a Source Point that stores a reservoir of energy for the organ it serves. Massaging these points can send needed energy to the
+        {{selectedMeridian.name}}. Source points can be massaged, tapped or be realigned 'in the field', a few inches above the point via
+        a crystal or magnet.
+        <br><br>
+        Simply rub or hold your {{selectedMeridian.name}} Source Point using whatever pressure feels right for you. You can also flip
+        your hand over the point, moving from the back of your hand to your palm. This mimics a magnet, in that your palm has a South
+        polarity and the back of your hand has a North polarity. Flipping them helps to realign the cells to follow their natural polarity.
+    </p>
 </div>
 
 <div class="content-clear-titles" style="{{selectedMeridian.font_color}}">
@@ -175,14 +172,15 @@
 </div>
 
 <div class="content-dark-copy">
-    Massaging the Neurolymphatics (NLs) is a great way to move accumulated Lymph from the body. Unlike blood that
-    gets circulated via the muscles and valves of the Heart, the Lymphatic system relys on us to get up and move
-    around to distribute it. Another way is through massage. You can self massage your front Neurolymphatics and
-    ask a friend to give you a deep back rub, with deep massage only either side of the spine (not ON the spine).
-    Not only are they moving the Lymph associated with multiple Meridians but they are also rubbing along Bladder
-    meridian which is very calming to the nervous system.
-    <br><br>
-    {{selectedMeridian.nl_points}}
+    <p>
+        Massaging the Neurolymphatics (NLs) is a great way to move accumulated Lymph from the body. Unlike blood that gets circulated via
+        the muscles and valves of the Heart, the Lymphatic system relys on us to get up and move around to distribute it. Another way is
+        through massage. You can self massage your front Neurolymphatics and ask a friend to give you a deep back rub, with deep massage
+        only either side of the spine (not ON the spine). Not only are they moving the Lymph associated with multiple Meridians but they
+        are also rubbing along Bladder meridian which is very calming to the nervous system.
+        <br><br>
+        {{selectedMeridian.nl_points}}
+    </p>
 </div>
 
 <div class="content-images">
@@ -194,25 +192,22 @@
 </div>
 
 <div class="content-dark-copy">
-    When we are stressed our bodies and brain go into fight or flight. Blood travels down to your legs to allow
-    you to run away from danger. Your heart starts to beat faster to get that blood down there ASAP. Your Stomach
-    may cease to digest at that time leaving you nausea with fear.
-    And of course, we all have heard over and over the Sabre Tooth Tiger story and how we are still reacting as if
-    one is chasing us, even though it could be a deadline at work or just a generalized feeling of anxiety.
-    Everyone says to meditate which is wonderful but if you are stressed, angry and depressed, you don't have the
-    willpower to make that committment.
-    <br><br>
-    Holding your Neuro-Vasculars for maybe 5 minutes can help bring blood and Cerebral Spinal Fluid to the
-    Neuro-Vascular points in
-    your head and face. With your fingers acting as magnets you can draw the blood and CSF back up to your Brain.
-    While breathing
-    deeply and holding these points, you may find that you are now able to look more logically at your problem, or
-    in a calmer state
-    because your head is now being fed!
-    <br><br>
-    {{selectedMeridian.nv_points}}
-    Try holding them for about 3 minutes or until you can feel them pulsing together. Blood is coming back up to
-    your brain, hopefully allowing for more centered thinking.
+    <p>
+        When we are stressed our bodies and brain go into fight or flight. Blood travels down to your legs to allow you to run away from
+        danger. Your heart starts to beat faster to get that blood down there ASAP. Your Stomach may cease to digest at that time leaving
+        you nausea with fear. And of course, we all have heard over and over the Sabre Tooth Tiger story and how we are still reacting as if
+        one is chasing us, even though it could be a deadline at work or just a generalized feeling of anxiety. Everyone says to meditate
+        which is wonderful but if you are stressed, angry and depressed, you don't have the willpower to make that commitment.
+        <br><br>
+        Holding your Neuro-Vasculars for maybe 5 minutes can help bring blood and Cerebral Spinal Fluid to the Neuro-Vascular points in
+        your head and face. With your fingers acting as magnets you can draw the blood and CSF back up to your Brain. While breathing
+        deeply and holding these points, you may find that you are now able to look more logically at your problem, or in a calmer state
+        because your head is now being fed!
+        <br><br>
+        {{selectedMeridian.nv_points}}
+        Try holding them for about 3 minutes or until you can feel them pulsing together. Blood is coming back up to your brain,
+        hopefully allowing for more centered thinking.
+    </p>
 </div>
 
 <div class="content-images">
@@ -224,30 +219,30 @@
 </div>
 
 <div class="content-dark-copy">
-    Tracing your Meridians is fast once you get the hang of it. If you have analyzed your conditions and have
-    intuited that {{selectedMeridian.name}} is under energy (UE) you can trace it forward three times.
-    <br><br>
-    <div *ngIf="selectedMeridian.id != 11">
-        If you think it is over energy (OE) you can trace it backwards three times. If you aren't sure you
-        can trace backwards once, forward three
-        times. This will flush the meridian of excess energy and then refresh it with new energy.
-    </div>
+    <p>
+        Tracing your Meridians is fast once you get the hang of it. If you have analyzed your conditions and have intuited that
+        {{selectedMeridian.name}} is under energy (UE) you can trace it forward three times.
+        <br><br>
+        <ng-container *ngIf="selectedMeridian.id != 11">
+            If you think it is over energy (OE) you can trace it backwards three times. If you aren't sure you can trace backwards once,
+            forward three times. This will flush the meridian of excess energy and then refresh it with new energy.
+        </ng-container>
 
-    <div *ngIf="selectedMeridian.id === 11">
-        If you think it is over energy, then you sedate Small Intestine meridian. We never sedate {{selectedMeridian.name}}.
-    </div>
+        <ng-container *ngIf="selectedMeridian.id === 11">
+           If you think it is over energy, then you sedate Small Intestine meridian. We never sedate {{selectedMeridian.name}}.
+        </ng-container>
 
-    <div *ngIf="selectedMeridian.yin_yang == 'yin'">
-        {{selectedMeridian.name}} is a YIN meridian. Yin meridians are found on the front of the
-        body, the inner arms, the inner legs, at the bottoms of the feet, at the medial side of the feet
-        and on the palms and inner wrists.
-    </div>
+        <ng-container *ngIf="selectedMeridian.yin_yang == 'yin'">
+            {{selectedMeridian.name}} is a YIN meridian. Yin meridians are found on the front of the body, the inner arms, the inner
+            legs, at the bottoms of the feet, at the medial side of the feet and on the palms and inner wrists.
+        </ng-container>
 
-    <div *ngIf="selectedMeridian.yin_yang == 'yang'">
-        {{selectedMeridian.name}} is a YANG meridian. Yang meridians are found on the back, at the sides of the
-        body, on the outer arms, behind the legs, along the outsides of the legs, at the lateral side of the feet,
-        and on the dorsal (top) sides of the feet and hands.
-    </div>
+        <ng-container *ngIf="selectedMeridian.yin_yang == 'yang'">
+            {{selectedMeridian.name}} is a YANG meridian. Yang meridians are found on the back, at the sides of the body, on the outer
+            arms, behind the legs, along the outsides of the legs, at the lateral side of the feet, and on the dorsal (top) sides of the
+            feet and hands.
+        </ng-container>
+    </p>
 </div>
 
 <!-- TO TRACING MERIDIANS -->
@@ -260,18 +255,20 @@
 </div>
 
 <div class="content-dark-copy">
-    The most detailed but still easy enough to follow method is to hold our Acu-pressure points. These are the same
-    points Acupuncturists work with but with Energy Medicine, we don't use needles, just our fingers. Chinese Medicine has been working
-    with these points for centuries and I have to say this is a brilliant, elegant and exciting protocol. You may not have the tools
-    to know whether your {{selectedMeridian.name}} is over energy or under energy but a general rule Yang meridians are generally
-    over energy and Yin meridians are generally under energy. {{selectedMeridian.name.toUpperCase()}}
-    is a {{selectedMeridian.yin_yang}} meridian.
-    <div *ngIf="selectedMeridian.id != 11">
-        <br><br>
-        If you are unsure as to whether the Meridian is over or under energy you can do the 3 point technique. First
-        you hold the calming acupressure points for 3 minutes. Then you move to the strengthening points for the same amount of time. You
-        then stop the process by holding the control points for a minute. Do both sides and re-test yourself.
-    </div>
+    <p>
+        The most detailed but still easy enough to follow method is to hold our Acu-pressure points. These are the same points
+        Acupuncturists work with but with Energy Medicine, we don't use needles, just our fingers. Chinese Medicine has been working with
+        these points for centuries and I have to say this is a brilliant, elegant and exciting protocol. You may not have the tools to
+        know whether your {{selectedMeridian.name}} is over energy or under energy but a general rule Yang meridians are generally over
+        energy and Yin meridians are generally under energy. {{selectedMeridian.name.toUpperCase()}} is a {{selectedMeridian.yin_yang}}
+        meridian.
+        <ng-container *ngIf="selectedMeridian.id != 11">
+            <br><br>
+            If you are unsure as to whether the Meridian is over or under energy you can do the 3 point technique. First you hold the
+            calming acupressure points for 3 minutes. Then you move to the strengthening points for the same amount of time. You then
+            stop the process by holding the control points for a minute. Do both sides and re-test yourself.
+        </ng-container>
+    </p>
 </div>
 
 <div class="content-clear-titles" style="{{selectedMeridian.font_color}}">
@@ -279,13 +276,15 @@
 </div>
 
 <div class="content-dark-copy">
-    <i><b>{{selectedMeridian.acu_points_strengthen}}</b></i>
-    <br><br>
-    {{selectedMeridian.acu_points_strengthen_desc}}
-    <br>
-    Hold the {{selectedMeridian.name}} strengthening points on one side for a few minutes
-    <br>
-    Hold the {{selectedMeridian.name}} strengthening points on the other side for a few minutes
+    <p>
+        <i><b>{{selectedMeridian.acu_points_strengthen}}</b></i>
+        <br><br>
+        {{selectedMeridian.acu_points_strengthen_desc}}
+        <br>
+        Hold the {{selectedMeridian.name}} strengthening points on one side for a few minutes
+        <br>
+        Hold the {{selectedMeridian.name}} strengthening points on the other side for a few minutes
+    </p>
 </div>
 
 <div class="content-images">
@@ -300,15 +299,17 @@
 
 <div class="content-dark-copy">
     <div *ngIf="selectedMeridian.id != 11">
-        <b>To take energy away from an over-active {{selectedMeridian.name}} Meridian</b>
-        <br><br>
-        <i><b>{{selectedMeridian.acu_points_sedate}}</b></i>
-        <br><br>
-        {{selectedMeridian.acu_points_sedate_desc}}
-        <br>
-        Hold the {{selectedMeridian.name}} strengthening points on one side for a few minutes
-        <br>
-        Hold the {{selectedMeridian.name}} strengthening points on the other side for a few minutes
+        <p>
+            <b>To take energy away from an over-active {{selectedMeridian.name}} Meridian</b>
+            <br><br>
+            <i><b>{{selectedMeridian.acu_points_sedate}}</b></i>
+            <br><br>
+            {{selectedMeridian.acu_points_sedate_desc}}
+            <br>
+            Hold the {{selectedMeridian.name}} strengthening points on one side for a few minutes
+            <br>
+            Hold the {{selectedMeridian.name}} strengthening points on the other side for a few minutes
+        </p>
     </div>
 </div>
 

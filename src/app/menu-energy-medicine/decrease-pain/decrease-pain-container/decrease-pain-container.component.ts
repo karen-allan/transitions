@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DecreasePainContainerComponent implements OnInit {
 
-  menuItemId:number = 3;
-  subMenuItemId:number = 32;
+  menuItemId:number = 2;
+  subMenuItemId:number = 22;
 
-  detailHeaderName = 'header-decrease-pain'
+  detailHeaderName = 'header-energy-pain'
   title='Decrease Your Pain'
-  detailListName="list-energy-medicine"
+
 
   constructor() { }
 

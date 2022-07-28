@@ -1,0 +1,55 @@
+<!-- because default radio button selectins do not work if there are two kinds of forms (mobile, desktop) we only use forms-both -->
+<div class="forms-both">
+    <div class="title-background margin-top-2">
+        Your Energy Medicine Knowledge Level
+    </div>
+
+    <div class="full-line-prompt">
+        <p>What would you say is your level of knowledge about Energy Medicine?</p>
+    </div>
+
+    <div class="one-full-column-block">
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="radio" [(ngModel)]="model.sessionEnergyKnowledge" value="knowledgeLevel1"  id="knowledge1" name="knowledge" checked="checked">
+            <label for="knowledge1">I have no real knowledge about Energy Medicine or Energy Sessions.</label>
+        </div>
+    </div>
+
+    <div class="one-full-column-block">
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="radio" [(ngModel)]="model.sessionEnergyKnowledge" value="knowledgeLevel2" id="knowledge2" name="knowledge">
+            <label for="knowledge2">I have a little bit of knowledge about Energy and Energy Medicine.</label>
+        </div>
+    </div>
+
+    <div class="one-full-column-block">
+        <div class="first-radio-check-column pad-left pad-right">
+            <input type="radio" [(ngModel)]="model.sessionEnergyKnowledge" value="knowledgeLevel3"  id="knowledge3" name="knowledge">
+            <label for="knowledge3">I have studied energy and have extensive knowledge about it.</label>
+        </div>
+    </div>
+</div>
+
+<div class="forms-both bordered-input">
+    <div class="title-background margin-top-2">
+        Your Energy Treatment Goals
+    </div>
+
+    <div class="full-line-prompt">
+        <p>What benefits do you hope to receive from getting Energy Medicine sessions?</p>
+    </div>
+
+    <div class="one-full-column-block">
+        <textarea rows=8 class="text-area" [(ngModel)]="model.sessionBenefits" name="treatmentBenefit"> </textarea>
+    </div>
+
+    <div class="full-line-prompt">
+        <p>Please describe any traditional or non-traditional treatments or protocols you have tried and their effectiveness.</p>
+    </div>
+
+    <div class="one-full-column-block">
+        <textarea rows=8 class="text-area" [(ngModel)]="model.sessionAltTreatments" name="otherTreatments"> </textarea>
+    </div>
+</div>
+
+

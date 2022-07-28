@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutEolDoulaContainerComponent implements OnInit {
 
-  menuItemId:number   = 2;
-  subMenuItemId:number = 22;
+  menuItemId:number   = 1;
+  subMenuItemId:number = 12;
 
-  detailHeaderName = 'header-about-eol-doula'
+  detailHeaderName = 'header-about-doula-pract'
   title='End-of-Life Work'
-  detailListName="list-about"
+
 
   constructor() { }
 

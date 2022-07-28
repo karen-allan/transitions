@@ -1,0 +1,194 @@
+<div class = "banner-topic-grid topic-end-of-life-documents topic-size">
+    <h1>{{title}}</h1>
+</div>
+
+<div class="screen-prompts margin-top-2">
+    <div *ngIf="sectionSelected === 'triggeredSection1'">
+        <a (click)="this.getTriggeredPromptKey(1)">
+            <B><I>The Basics: Choose Someone Who Will Advocate For You:&#x25BC;</I></B>
+        </a>
+    </div>
+
+    <div *ngIf="sectionSelected != 'triggeredSection1'">
+        <a (click)="this.getTriggeredPromptKey(1)">
+            The Basics: Choose Someone Who Will Advocate For You:&#x25B6;
+        </a>
+    </div>
+</div>
+
+<div *ngIf="sectionSelected === 'triggeredSection1'">
+    <div class="screen-copy with-soft-border">
+        <p>
+            All adults are encouraged to put a basic health care plan together in case of an accident or emergency. This plan should
+            include who you would like to make decisions for you should you be incapacitated in some way. Generally if you are young
+            and healthy you will want them to agree to any and all life saving treatments.
+            <br><br>
+            This is something most of us never think of. But in most provinces in Canada, if you haven't got any kind of document
+            written that designates your primary and/or secondary Advocate, this choice for who will be contacted on your behalf will
+            be made by a health care professional you have likely never met.
+            <br><br>
+            Let's say you are in a car accident and unable to speak for yourself. When you arrive at the hospital - a health care
+            team member is legally required to search for your next-of-kin and then fill out a list called many different names
+            depending on the province you are in, but in general looks something like this one that B.C. uses called the Temporary
+            Substitute Decision Maker List. It shows the order in which they will attempt to contact your family, seeking someone who
+            will agree to advocate for you.
+        </p>
+
+        <ul class="content-dark-list square">
+            <li class="list-item">Spouse</li>
+            <li class="list-item">Adult Children if any</li>
+            <li class="list-item">Parents</li>
+            <li class="list-item">Siblings</li>
+            <li class="list-item">Grandparents</li>
+            <li class="list-item">Grandchildren</li>
+            <li class="list-item">Others Related by Birth or Adoption</li>
+            <li class="list-item">Close Friend(s) and Others related by marriage</li>
+        </ul>
+
+        <p>
+            If you have no issues with the idea that your health and life decisions are about to be made by a family member or friend
+            selected by a stranger, then this might work for you. If, however you know, for instance, that you want your oldest
+            grand-child who is legally eligible to be the decision maker for you, but you have not written this wish down, it is
+            highly unlikely that they will work their way down the list to that level. Maybe instead, they will choose your spouse,
+            the top person on the list to call. This could be a soon-to-be-ex-spouse who may not have your best interests at heart.
+            Your new girlfriend, who is your true love, may not even show up on the list.
+            <br><br>
+            It is for this reason, that it is smart and proactive to designate your own preferred Health Care Advocate who will, in most
+            regions of Canada, be able to make those life and death decisions on your behalf. By simply stating your Advocate, you
+            can quickly and easily select the one or, at maximum two people you trust who would best handle any health related
+            decisions if you are not in a position to do so due to accident or injury. You are letting the health care team know who
+            you have specifically chosen to make decisions for you related to your situation.
+        </p>
+
+        <app-rep-nine-document [title]="title"></app-rep-nine-document>
+    </div>
+</div>
+
+<div *ngIf="sectionSelected != 'triggeredSection1'">
+    <div class="screen-copy-hidden"></div>
+</div>
+
+<div class="screen-prompts margin-top">
+    <div *ngIf="sectionSelected === 'triggeredSection2'">
+        <a (click)="this.getTriggeredPromptKey(2)">
+            <B><I>Protect Yourself Further With an Advanced Care Plan:&#x25BC;</I></B>
+        </a>
+    </div>
+
+    <div *ngIf="sectionSelected != 'triggeredSection2'">
+        <a (click)="this.getTriggeredPromptKey(2)">
+            Protect Yourself Further With an Advanced Care Plan:&#x25B6;
+        </a>
+    </div>
+</div>
+
+<div *ngIf="sectionSelected === 'triggeredSection2'">
+    <div class="screen-copy with-soft-border">
+        <p>
+            No matter what your age, if you have any of the chronic health conditions you need to be more prepared for a health
+            crisis. Chronic health conditions to consider include:
+        </p>
+
+        <ul class="content-dark-list square">
+            <li class="list-item">Insulin Dependent or Non-Insulin Dependent Diabetes.</li>
+            <li class="list-item">Chronic Kidney Disease (CKD).</li>
+            <li class="list-item">Heart Diseases such as Angina, Congestive Heart Failure, Heart Attack or Enlarged Heart.</li>
+            <li class="list-item">Lung Disease such as COPD, Pulmonary Edema, Pulmonary Fibrosis, Pneumonitis.</li>
+            <li class="list-item">Liver Disease such as Cirrhosis, Hepatitis B or C.</li>
+            <li class="list-item">Parkinson’s, ALS, Huntington's or Multiple Sclerosis.</li>
+            <li class="list-item">Vascular Diseases such as Stroke, Aneurysms, Peripheral Artery Diseases, Hypertension.</li>
+            <li class="list-item">Auto-immune Disorders such as Addisons, Graves, Hashimotos or Graves Disease.</li>
+            <li class="list-item">Dementia such as Alzheimer's, Huntingtons or Creutzfeldt-Jakob Disease.</li>
+        </ul>
+
+        <p>
+            If you have these or any other serious, chronic condition or have been told that you have some kind of time limit to your
+            life, it is very important to put a plan together for your family to follow. In addition to selecting the person or persons
+            who will Advocate for you in the event of an emergency, you should also create an Advanced Care Plan. This allows you to add
+            more information about the kinds of specific treatments and procedures that you may want to say yes or no to.
+            <br><br>
+            The plan can be as simple or as detailed as you like and can include Do Not Resuscitate, No CPR orders, or plans for an EDITH
+            (Expected Death in the Home).
+        </p>
+        <app-advanced-care-document [title]="title"></app-advanced-care-document>
+    </div>
+</div>
+
+<div *ngIf="sectionSelected != 'triggeredSection2'">
+    <div class="screen-copy-hidden"></div>
+</div>
+
+<div class="screen-prompts margin-top">
+    <div *ngIf="sectionSelected === 'triggeredSection3'">
+        <a (click)="this.getTriggeredPromptKey(3)">
+            <B><I>Sign on the Dotted Line - CPR or No CPR?:&#x25BC;</I></B>
+        </a>
+    </div>
+
+    <div *ngIf="sectionSelected != 'triggeredSection3'">
+        <a (click)="this.getTriggeredPromptKey(3)">
+            Sign on the Dotted Line - CPR or No CPR?:&#x25B6;
+        </a>
+    </div>
+</div>
+
+<div *ngIf="sectionSelected === 'triggeredSection3'">
+    <div class="screen-copy with-soft-border">
+        <p>
+            If you are a “frail elder” or are over 75, no matter what your state of health, getting your plans in order is something you
+            just need to do. You should have an an advanced care Plan in place for your family and the medical team to follow. Choosing
+            who you want as your health care advocate is also essential.
+            <br><br>
+            In these situations along you may want to fill out a DNR (Do Not Resuscitate) or No CPR form. This tells Paramedics and the
+            medical team that you do not wish to be revived through Artificial Respiration methods. This is a heavy decision to make but
+            being informed of the facts about CPR and Do Not Resuscitate procedures and outcomes will help give you the perspective you
+            need to make these decisions.
+        </p>
+
+        <app-dnr-no-cpr-document [title]="title"></app-dnr-no-cpr-document>
+    </div>
+</div>
+
+<div *ngIf="sectionSelected != 'triggeredSection3'">
+    <div class="screen-copy-hidden"></div>
+</div>
+
+<div class="screen-prompts margin-top">
+    <div *ngIf="sectionSelected === 'triggeredSection4'">
+        <a (click)="this.getTriggeredPromptKey(4)">
+            <B><I>Requesting to Stay at Home to Die:&#x25BC;</I></B>
+        </a>
+    </div>
+
+    <div *ngIf="sectionSelected != 'triggeredSection4'">
+        <a (click)="this.getTriggeredPromptKey(4)">
+            Requesting to Stay at Home to Die:&#x25B6;
+        </a>
+    </div>
+</div>
+
+<div *ngIf="sectionSelected === 'triggeredSection4'">
+    <div class="screen-copy with-soft-border">
+        <p>
+            If you are a “frail elder” meaning you are still of sound mind and health but you do need help with your daily care,
+            meals and house-keeping then it is even more essential to think ahead. Your family may be pressuring you to move into a
+            care home, but you may wish, as most do, to stay at home till the very end. In that case you should know about E.D.I.T.H.
+            (Expected Death in the Home) that allows you to ask to die at home when the time comes.
+            <br><br>
+            You have lived in your home and you want to die there as well when the time comes. Filling out the E.D.I.T.H. form makes your
+            wishes known to both your family and the medical team.
+        </p>
+
+        <app-edith-document [title]="title"></app-edith-document>
+    </div>
+</div>
+
+<div *ngIf="sectionSelected != 'triggeredSection4'">
+    <div class="screen-copy-hidden"></div>
+</div>
+
+
+
+
+
+

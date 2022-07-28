@@ -26,7 +26,7 @@ and (orientation: portrait) {
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--header-name-banana-port-font-size);
+        font-size:var(--big-copy-banana-port-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -39,7 +39,7 @@ and (orientation: portrait) {
     }
 
     .element-verb {
-        font-size:var(--header-name-banana-port-font-size);
+        font-size:var(--big-copy-banana-port-font-size);
     }
 
     /* TIME and RANGE */
@@ -79,7 +79,7 @@ and (orientation: landscape) {
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--header-name-banana-land-font-size);
+        font-size:var(--big-copy-banana-land-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -97,7 +97,7 @@ and (orientation: landscape) {
     }
 
     .element-verb {
-        font-size:var(--header-name-banana-land-font-size);
+        font-size:var(--big-copy-banana-land-font-size);
     }
 
     .element-time {
@@ -143,7 +143,7 @@ and (orientation: portrait) {
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--header-name-mobile-port-font-size);
+        font-size:var(--big-copy-mobile-port-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -161,7 +161,7 @@ and (orientation: portrait) {
     }
 
     .element-verb {
-        font-size:var(--header-name-mobile-port-font-size);
+        font-size:var(--big-copy-mobile-port-font-size);
     }
 
     .element-time {
@@ -207,7 +207,7 @@ and (orientation: landscape) {
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--header-name-mobile-land-font-size);
+        font-size:var(--big-copy-mobile-land-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -225,7 +225,7 @@ and (orientation: landscape) {
     }
 
     .element-verb {
-        font-size:var(--header-name-mobile-land-font-size);
+        font-size:var(--big-copy-mobile-land-font-size);
     }
 
     .element-time {
@@ -271,7 +271,7 @@ and (orientation: portrait) {
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--header-name-tablet-port-font-size);
+        font-size:var(--big-copy-tablet-port-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -289,7 +289,7 @@ and (orientation: portrait) {
     }
 
     .element-verb {
-        font-size:var(--header-name-tablet-port-font-size);
+        font-size:var(--big-copy-tablet-port-font-size);
     }
 
     .element-time {
@@ -336,7 +336,7 @@ and (orientation: landscape) {
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--header-name-tablet-land-font-size);
+        font-size:var(--big-copy-tablet-land-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -354,7 +354,7 @@ and (orientation: landscape) {
     }
 
     .element-verb {
-        font-size:var(--header-name-tablet-land-font-size);
+        font-size:var(--big-copy-tablet-land-font-size);
     }
 
     .element-time {
@@ -401,7 +401,7 @@ and (orientation: portrait) {
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--header-name-ipad-port-font-size);
+        font-size:var(--big-copy-ipad-port-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -419,7 +419,7 @@ and (orientation: portrait) {
     }
 
     .element-verb {
-        font-size:var(--header-name-ipad-port-font-size);
+        font-size:var(--big-copy-ipad-port-font-size);
     }
 
     .active-time {
@@ -466,7 +466,7 @@ and (orientation: landscape) {
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--header-name-ipad-land-font-size);
+        font-size:var(--big-copy-ipad-land-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -484,7 +484,7 @@ and (orientation: landscape) {
     }
 
     .element-verb {
-        font-size:var(--header-name-ipad-land-font-size);
+        font-size:var(--big-copy-ipad-land-font-size);
     }
 
     /* TIME and RANGE */
@@ -525,7 +525,7 @@ and (min-width: 1440px) {
 
     /* BOTTOM ROW is TEXT */
     .element-title   {
-        font-size:var(--header-name-desktop-font-size);
+        font-size:var(--big-copy-desktop-font-size);
     }
 
     /* HEADER WITH ICON AND VERB */
@@ -538,7 +538,7 @@ and (min-width: 1440px) {
     }
 
     .element-verb {
-        font-size:var(--header-name-desktop-font-size);
+        font-size:var(--big-copy-desktop-font-size);
     }
 
     /* TIME and RANGE */
@@ -748,7 +748,7 @@ and (min-width: 1440px) {
     }
 
     .element-title, .element-inline-header {
-        font-family: var(--family-header-name);
+        font-family: var(--family-copy);
         width: 100%;
     }
 
@@ -805,8 +805,7 @@ and (min-width: 1440px) {
 
     .time-range {
         line-height:180%;
+        padding-bottom:1em;
     }
-
-
 
 }

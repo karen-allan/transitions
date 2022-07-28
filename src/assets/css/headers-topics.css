@@ -1,0 +1,747 @@
+
+
+/*******************************************************************************************************************
+  ALL USE THE MAXIMUM BANNER WIDTH
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 240px) {
+
+    .banner-header-image, .banner-header-copy, .banner-topic-grid {
+        width:var(--media-more-than-content-width);
+    }
+
+}
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .banner-home-image {
+        height:122px;
+    }
+
+    .banner-header-image {
+        height:88px;
+    }
+
+    .banner-header-copy p {
+        font-size:var(--big-quote-banana-port-font-size);
+    }
+
+    .banner-topic-grid h1, .banner-topic-grid h2 {
+        align-content: flex-end;
+        justify-content: center;
+        text-align:center;
+    }
+
+    .banner-topic-grid h1 {
+        font-size: var(--h1-banana-port-font-size);
+    }
+
+    .banner-topic-grid h2 {
+        font-size: var(--h2-banana-port-font-size);
+    }
+
+    .topic-size{
+        height:240px;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .banner-home-image {
+        height:289px;
+    }
+
+    .banner-header-image {
+        height:207px;
+    }
+
+    .banner-header-copy p {
+        font-size:var(--big-quote-banana-land-font-size);
+        line-height:100%;
+    }
+
+    .banner-topic-grid h1, .banner-topic-grid h2 {
+        align-content: flex-end;
+        justify-content: center;
+        text-align:center;
+    }
+
+    .banner-topic-grid h1 {
+        font-size: var(--h1-banana-land-font-size);
+    }
+
+    .banner-topic-grid h2 {
+        font-size: var(--h2-banana-land-font-size);
+    }
+
+    .topic-size{
+        height:300px;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .banner-home-image {
+        height:183px;
+    }
+
+    .banner-header-image {
+        height:131px;
+    }
+
+    .banner-header-copy p {
+        font-size:var(--big-quote-mobile-port-font-size);
+        line-height:100%;
+
+    }
+
+    .banner-topic-grid h1, .banner-topic-grid h2 {
+        align-content: flex-end;
+        justify-content: center;
+        text-align:center;
+    }
+
+    .banner-topic-grid h1 {
+        font-size: var(--h1-mobile-port-font-size);
+    }
+
+    .banner-topic-grid h2 {
+        font-size: var(--h2-mobile-port-font-size);
+    }
+
+    .topic-size{
+        height:400px;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .banner-home-image {
+        height:456px;
+    }
+
+    .banner-header-image {
+        height:327px;
+    }
+
+    .banner-header-copy p {
+        font-size:var(--big-quote-mobile-land-font-size);
+        line-height:100%;
+
+    }
+
+    .banner-topic-grid h1, .banner-topic-grid h2 {
+        align-content: center;
+        justify-content: flex-start;
+        text-align:center;
+        padding-left:.5em;
+    }
+
+    .banner-topic-grid h1 {
+        font-size:var(--h1-mobile-land-font-size);
+    }
+
+    .banner-topic-grid h2 {
+        font-size:var(--h2-mobile-land-font-size);
+    }
+
+    .topic-size{
+        height:400px;
+        background-position: right;
+        background-size: contain;
+    }
+
+
+
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .banner-home-image {
+        height:306px;
+    }
+
+    .banner-header-image {
+        height:219px;
+    }
+
+    .banner-header-copy p {
+        font-size:var(--big-quote-tablet-port-font-size);
+        line-height:150%;
+
+    }
+
+    .banner-topic-grid h1, .banner-topic-grid h2 {
+        align-content: flex-end;
+        justify-content: center;
+        text-align:center;
+    }
+
+    .banner-topic-grid h1 {
+        font-size:var(--h1-tablet-port-font-size);
+    }
+
+    .banner-topic-grid h2 {
+        font-size:var(--h2-tablet-port-font-size);
+    }
+
+    .topic-size{
+        height:300px;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .banner-home-image {
+        height:652px;
+    }
+
+    .banner-header-image {
+        height:467px;
+    }
+
+    .banner-header-copy p {
+        font-size:var(--big-quote-tablet-land-font-size);
+        line-height:150%;
+
+    }
+
+    .banner-topic-grid h1, .banner-topic-grid h2 {
+        align-content: center;
+        justify-content: flex-start;
+        text-align:center;
+        padding-left:1.5em;
+    }
+
+    .banner-topic-grid h1 {
+        font-size:var(--h1-tablet-land-font-size);
+    }
+
+    .banner-topic-grid h2 {
+        font-size:var(--h2-tablet-land-font-size);
+    }
+
+    .topic-size{
+        height:400px;
+        background-position: right;
+    }
+
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .banner-home-image {
+        height:522px;
+    }
+
+    .banner-header-image {
+        height:373px;
+    }
+
+    .banner-header-copy p {
+        font-size:var(--big-quote-ipad-port-font-size);
+        line-height:150%;
+    }
+
+    .banner-topic-grid h1, .banner-topic-grid h2 {
+        align-content: center;
+        justify-content: flex-start;
+        text-align:center;
+        padding-left:1.5em;
+    }
+
+    .banner-topic-grid h1 {
+        font-size:var(--h1-ipad-port-font-size);
+    }
+
+    .banner-topic-grid h2 {
+        font-size:var(--h2-ipad-port-font-size);
+    }
+
+    .topic-size{
+        height:400px;
+        background-position: right;
+    }
+
+
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .banner-home-image {
+        height:696px;
+    }
+
+    .banner-header-image {
+        height:498px;
+    }
+
+    .banner-header-copy p {
+        font-size:var(--big-quote-ipad-land-font-size);
+        line-height:150%;
+    }
+
+    .banner-topic-grid h1, .banner-topic-grid h2 {
+        align-content: center;
+        justify-content: flex-start;
+        text-align:center;
+        padding-left:1.5em;
+    }
+
+    .banner-topic-grid h1 {
+        font-size:var(--h1-ipad-land-font-size);
+    }
+
+    .banner-topic-grid h2 {
+        font-size:var(--h2-ipad-land-font-size);
+    }
+
+    .topic-size{
+        height:400px;
+        background-position: right;
+    }
+
+
+
+}
+
+/* LAPTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width:1919px) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .banner-home-image {
+        height:734px;
+    }
+
+    .banner-header-image {
+        height:525px;
+    }
+
+    .banner-header-copy p {
+        font-size:var(--big-quote-desktop-font-size);
+        line-height:150%;
+    }
+
+    .banner-topic-grid h1, .banner-topic-grid h2 {
+        align-content: center;
+        justify-content: flex-start;
+        text-align:center;
+        padding-left:1.5em;
+    }
+
+    .banner-topic-grid h1 {
+        font-size:var(--h1-desktop-font-size);
+    }
+
+    .banner-topic-grid h2 {
+        font-size:var(--h2-desktop-font-size);
+    }
+
+    .topic-size {
+        height:400px;
+        background-position: right;
+    }
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .banner-home-image {
+        height:978px;
+    }
+
+    /* 1920 by 700 */
+    .banner-header-image {
+        height:700px;
+    }
+
+    .banner-header-copy p {
+        font-size:var(--big-quote-desktop-font-size);
+        line-height:150%;
+    }
+
+    /* FOR EVERY DETAIL PAGE, UNDER THE HEADER, ARE THE TOPICS WITH TEXT AND IMAGE GRID */
+    .banner-topic-grid h1, .banner-topic-grid h2 {
+        align-content: center;
+        justify-content: flex-start;
+        text-align:center;
+        padding-left:1.5em;
+    }
+
+    .banner-topic-grid h1 {
+        font-size:var(--h1-desktop-font-size);
+    }
+
+    .banner-topic-grid h2 {
+        font-size:var(--h2-desktop-font-size);
+    }
+
+    .topic-size{
+        height:400px;
+        background-position: right;
+
+    }
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .banner-header-image, .banner-header-copy, .banner-topic-grid  {
+        max-width:var(--banner-width);
+    }
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .banner-header-image {
+        display:block;
+        float:left;
+    }
+
+    .banner-header-copy {
+        display:block;
+        float:left;
+        text-align: center;
+        background-color: var(--color-darkest-blue); /* Fallback color */
+        color: var(--color-white);
+        border: 1px solid #f1f1f1;
+    }
+
+    .banner-header-copy p {
+        font-family: var(--family-quotes);
+        font-weight: 400;
+        padding: 0 1em;
+        line-height:120%;
+    }
+
+    .banner-topic-grid {
+        display:grid;
+        text-transform: uppercase;
+        margin:auto;
+    }
+
+    .banner-topic-grid h1, .banner-topic-grid h2 {
+        display:grid;
+        font-family: var(--family-headers);
+        letter-spacing: 4px;
+        color:var(--color-white);
+    }
+
+/* HOME SUBJECTS */
+    .header-home {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/home/headerHome.jpg');
+    }
+
+    .topic-home-energy {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/home/topicHomeEnergy.jpg"), linear-gradient(#587968, #eef2f1);
+    }
+
+    .topic-home-doula {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/home/topicHomeDoula.jpg"), linear-gradient(#587968, #eef2f1);
+    }
+
+/* ABOUT SUBJECTS */
+    .header-about-me {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/about/headerAboutMe.jpg');
+    }
+
+    .topic-about-me {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/about/topicAboutMe.jpg"), linear-gradient(#878787, #d7dde1);
+
+    }
+
+    .header-about-eem-pract {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/about/headerAboutEEMPract.jpg');
+    }
+
+    .topic-about-eem-pract {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/about/topicAboutEEMPract.jpg"), linear-gradient(#dc5452, #f0c5c5);
+
+    }
+
+    .header-about-doula-pract {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/about/headerAboutDoulaPract.jpg');
+    }
+
+    .topic-about-doula-pract {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/about/topicAboutDoulaPract.jpg"), linear-gradient(#609eeb, #d4dee7);
+
+    }
+
+/* ENERGY MEDICINE SUBJECTS */
+    .header-energy-anxiety {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/energyMedicine/headerEnergyAnxiety.jpg');
+    }
+
+    .topic-energy-anxiety {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/energyMedicine/topicEnergyAnxiety.jpg"), linear-gradient(#a76e3b, #341806);
+    }
+
+    .header-energy-burnout {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/energyMedicine/headerEnergyBurnout.jpg');
+    }
+
+    .topic-energy-burnout {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/energyMedicine/topicEnergyBurnout.jpg"), linear-gradient(#b1ced0, #8d9fad);
+    }
+
+    .header-energy-pain {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/energyMedicine/headerEnergyPain.jpg');
+    }
+
+    .topic-energy-pain {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/energyMedicine/topicEnergyPain.jpg"), linear-gradient(#5c6970, #161e11);
+    }
+
+    .header-energy-der {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/energyMedicine/headerEnergyDer.jpg');
+    }
+
+    .topic-energy-der {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/energyMedicine/topicEnergyDer.jpg"), linear-gradient(#bcc0b5, #d4c9c4);
+    }
+
+    .header-energy-element {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/energyMedicine/headerEnergyElement.jpg');
+    }
+
+    .topic-energy-element {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/energyMedicine/topicEnergyElement.jpg"), linear-gradient(#e1d8c5, #071d13);
+    }
+
+    .header-energy-meridians {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/energyMedicine/headerEnergyMeridians.jpg');
+    }
+
+    .topic-energy-meridians {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/energyMedicine/topicEnergyMeridians.jpg"), linear-gradient(#7cb2de, #4b6991);
+    }
+
+/* END OF LIFE DOULA SUBJECTS */
+    .header-end-of-life-documents {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/doulaWork/headerEndOfLifeDocuments.jpg');
+    }
+
+    .topic-end-of-life-documents {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/doulaWork/topicKnowYourStage.jpg"), linear-gradient(#4c7ebd, #c4d2e5);
+    }
+
+    .header-end-of-life-planning {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/doulaWork/headerMakeCarePlan.jpg');
+    }
+
+    .topic-end-of-life-planning {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/doulaWork/topicMakeCarePlan.jpg"), linear-gradient(#f0f7b4, #213f13);
+    }
+
+    .header-create-legacy {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/doulaWork/headerCreateLegacy.jpg');
+    }
+
+    .topic-create-legacy {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/doulaWork/topicCreateLegacy.jpg"), linear-gradient(#929d9f, #768eb6);
+    }
+
+    .header-choose-memorial {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/doulaWork/headerChooseMemorial.jpg');
+    }
+
+    .topic-choose-memorial {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/doulaWork/topicChooseMemorial.jpg"), linear-gradient(#587968, #eef2f1);
+    }
+
+/* BOOKING SUBJECTS */
+    .header-book-session {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/book/headerBookSession.jpg');
+    }
+
+    .topic-book-session {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/book/topicBookSession.jpg"), linear-gradient(#e59844, #e7d2bb);
+    }
+
+    .header-book-consultation {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/book/headerBookConsultation.jpg');
+    }
+
+    .topic-book-consultation {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/book/topicBookConsultation.jpg"), linear-gradient(#455b36, #bcd6ab);
+    }
+
+    /* EOL DOULA SUB DIRECTORY DOCUMENTS */
+    .header-doc-rep {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/doulaWork/documents/headerDocRep.jpg');
+    }
+
+    .topic-doc-rep {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/doulaWork/documents/topicDocRep.jpg"), linear-gradient(#252a2e, #c3c7cb);
+    }
+
+    .header-doc-edith {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/doulaWork/documents/headerDocEdith.jpg');
+    }
+
+    .topic-doc-edith {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/doulaWork/documents/topicDocEdith.jpg"), linear-gradient(#080c0f, #d3ccc4);
+    }
+
+    .header-doc-dnr {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/doulaWork/documents/headerDocDnr.jpg');
+    }
+
+    .topic-doc-dnr {
+        background-repeat: no-repeat;
+        background-image:
+        url("src/assets/images/topics/doulaWork/documents/topicDocDnr.jpg"), linear-gradient(#587968, #eef2f1);
+    }
+
+    .header-wizard-acp {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/doulaWork/documents/headerWizardAcp.jpg');
+    }
+
+    .topic-wizard-acp {
+        background-repeat: no-repeat;
+        background-image:
+            url("src/assets/images/topics/doulaWork/documents/topicWizardAcp.jpg"), linear-gradient(#587968, #eef2f1);
+    }
+
+
+}

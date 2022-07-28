@@ -2,15 +2,12 @@
     <app-global-menu [menuItemId]='menuItemId' [subMenuItemId]='subMenuItemId'></app-global-menu>
     <app-global-headers [detailHeaderName]="detailHeaderName" [title]="title"></app-global-headers>
 
+    <div id ="bookEMSession"></div>
     <app-book-session-overview [model]="model" [title]="title"></app-book-session-overview>
 
-<!--    <div class="content-container">-->
-<!--        <div class="content-no-margins">-->
-            <div class="print-container">
-                <button class="print-form-button" (click)="printProfile()">PRINT</button>
-            </div>
-<!--        </div>-->
-<!--    </div>-->
+    <div class="print-container">
+        <button class="print-form-button" (click)="printProfile()">PRINT</button>
+    </div>
 
     <app-global-footer></app-global-footer>
 </div>

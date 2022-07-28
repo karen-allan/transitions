@@ -1,0 +1,408 @@
+
+/*******************************************************************************************************************
+  ALL BANANAS, MOBILES AND TABLET AND IPAD PORTRAIT (MAX IS 1 less than TABLET LANDSCAPE at and (min-width: 1280px))
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 1279px) {
+
+    .content-dark-titles, .content-clear-titles, .content-light-titles, .content-dark-copy, .content-light-copy, .content-clear-copy {
+        width:var(--media-less-than-content-width);
+
+    }
+}
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    .content-dark-titles h1, .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-banana-port-font-size);
+    }
+
+    .content-dark-titles h2, .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-banana-port-font-size);
+    }
+
+    .content-dark-titles h3, .content-clear-titles h3, .content-light-titles h3  {
+        font-size: var(--h3-banana-port-font-size);
+    }
+
+    .content-dark-titles h4, .content-clear-titles h4, .content-light-titles h4  {
+        font-size: var(--h4-banana-port-font-size);
+    }
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-banana-port-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-banana-port-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    .content-dark-titles h1, .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-banana-land-font-size);
+    }
+
+    .content-dark-titles h2, .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-banana-land-font-size);
+    }
+
+    .content-dark-titles h3, .content-clear-titles h3, .content-light-titles h3  {
+        font-size: var(--h3-banana-land-font-size);
+    }
+
+    .content-dark-titles h4, .content-clear-titles h4, .content-light-titles h4  {
+        font-size: var(--h4-banana-land-font-size);
+    }
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-banana-land-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-banana-land-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    .content-dark-titles h1, .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-mobile-port-font-size);
+    }
+
+    .content-dark-titles h2, .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-mobile-port-font-size);
+    }
+
+    .content-dark-titles h3, .content-clear-titles h3, .content-light-titles h3  {
+        font-size: var(--h3-mobile-port-font-size);
+    }
+
+    .content-dark-titles h4, .content-clear-titles h4, .content-light-titles h4  {
+        font-size: var(--h4-mobile-port-font-size);
+    }
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-mobile-port-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-mobile-port-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    .content-dark-titles h1, .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-mobile-land-font-size);
+    }
+
+    .content-dark-titles h2, .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-mobile-land-font-size);
+    }
+
+    .content-dark-titles h3, .content-clear-titles h3, .content-light-titles h3  {
+        font-size: var(--h3-mobile-land-font-size);
+    }
+
+    .content-dark-titles h4, .content-clear-titles h4, .content-light-titles h4  {
+        font-size: var(--h4-mobile-land-font-size);
+    }
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-mobile-land-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-mobile-land-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+}
+
+/* TABLETS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    .content-dark-titles h1, .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-tablet-port-font-size);
+    }
+
+    .content-dark-titles h2, .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-tablet-port-font-size);
+    }
+
+    .content-dark-titles h3, .content-clear-titles h3, .content-light-titles h3  {
+        font-size: var(--h3-tablet-port-font-size);
+    }
+
+    .content-dark-titles h4, .content-clear-titles h4, .content-light-titles h4  {
+        font-size: var(--h4-tablet-port-font-size);
+    }
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-tablet-port-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-tablet-port-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    .content-dark-titles h1, .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-ipad-port-font-size);
+    }
+
+    .content-dark-titles h2, .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-ipad-port-font-size);
+    }
+
+    .content-dark-titles h3, .content-clear-titles h3, .content-light-titles h3  {
+        font-size: var(--h3-ipad-port-font-size);
+    }
+
+    .content-dark-titles h4, .content-clear-titles h4, .content-light-titles h4  {
+        font-size: var(--h4-ipad-port-font-size);
+    }
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-ipad-port-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-ipad-port-font-size);
+        line-height:var(--copy-line-height);
+    }
+}
+
+/*******************************************************************************************************************
+  ALL THAT SHOW DESKTOP - TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
+*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 1280px)
+and (orientation: landscape) {
+
+    .content-dark-titles, .content-clear-titles, .content-light-titles, .content-dark-copy, .content-light-copy, .content-clear-copy  {
+        width: var(--media-more-than-content-width);
+    }
+
+  /*  .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p,
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        width: var(--media-less-than-content-width);
+    }*/
+}
+
+/* TABLETS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    .content-dark-titles h1, .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-tablet-land-font-size);
+    }
+
+    .content-dark-titles h2, .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-tablet-land-font-size);
+    }
+
+    .content-dark-titles h3, .content-clear-titles h3, .content-light-titles h3  {
+        font-size: var(--h3-tablet-land-font-size);
+    }
+
+    .content-dark-titles h4, .content-clear-titles h4, .content-light-titles h4  {
+        font-size: var(--h4-tablet-land-font-size);
+    }
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-tablet-land-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-tablet-land-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+}
+
+
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    .content-dark-titles h1, .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-ipad-land-font-size);
+    }
+
+    .content-dark-titles h2, .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-ipad-land-font-size);
+    }
+
+    .content-dark-titles h3, .content-clear-titles h3, .content-light-titles h3  {
+        font-size: var(--h3-ipad-land-font-size);
+    }
+
+    .content-dark-titles h4, .content-clear-titles h4, .content-light-titles h4  {
+        font-size: var(--h4-ipad-land-font-size);
+    }
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-ipad-land-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-ipad-land-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+}
+
+/* DESKTOPS AND LAPTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    .content-dark-titles h1, .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-desktop-font-size);
+    }
+
+    .content-dark-titles h2, .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-desktop-font-size);
+    }
+
+    .content-dark-titles h3, .content-clear-titles h3, .content-light-titles h3  {
+        font-size: var(--h3-desktop-font-size);
+    }
+
+    .content-dark-titles h4, .content-clear-titles h4, .content-light-titles h4  {
+        font-size: var(--h4-desktop-font-size);
+    }
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-desktop-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-desktop-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .content-dark-titles, .content-clear-titles, .content-light-titles, .content-dark-copy, .content-light-copy, .content-clear-copy, .content-bordered-copy {
+        display: grid;
+        margin: auto;
+        max-width: var(--content-width);
+    }
+
+    .content-dark-titles {
+        color: var(--color-light-blue);
+    }
+
+    .content-light-titles {
+        color: var(--color-white);
+    }
+
+    .content-dark-titles h1, .content-light-titles h1, .content-clear-titles h1,
+    .content-dark-titles h2, .content-light-titles h2, .content-clear-titles h2,
+    .content-dark-titles h3, .content-light-titles h3, .content-clear-titles h3,
+    .content-dark-titles h4, .content-light-titles h4, .content-clear-titles h4 {
+        font-family: var(--family-headers);
+        text-align: center;
+        font-style:normal;
+        text-transform: uppercase;
+        font-weight:400;
+        letter-spacing: 4px;
+        margin:auto;
+    }
+
+    .content-dark-titles h1, .content-light-titles h1, .content-clear-titles h1,
+    .content-dark-titles h2, .content-light-titles h2, .content-clear-titles h2,
+    .content-dark-titles h3, .content-light-titles h3, .content-clear-titles h3 {
+        padding:1em 0;
+    }
+
+    .content-dark-titles h4, .content-light-titles h4, .content-clear-titles h4 {
+        padding:1em 0 0 0;
+    }
+
+    .content-dark-copy, .content-light-copy, .content-clear-copy, .content-white-copy, .content-bordered-copy {
+        font-family: var(--family-copy);
+    }
+
+    .content-bordered-copy {
+        width:90%;
+        padding:1em 5%;
+        border:thin solid var(--color-soft-blue);
+    }
+
+    .content-dark-copy p, .content-dark-copy p a, .content-dark-copy span, .content-dark-copy span a, .content-bordered-copy p {
+        color: var(--color-dark-blue);
+    }
+
+    .content-light-copy p, .content-light-copy p a, .content-light-copy span, .content-light-copy span a {
+        color: var(--color-white);
+        background-color:var(--color-light-blue);
+        padding:1em;
+    }
+
+    .content-white-copy p, .content-white-copy p a, .content-white-copy span, .content-white-copy span a {
+        color: var(--color-white);
+    }
+
+    .content-dark-copy p a, .content-light-copy p a, .content-clear-copy p a, .content-white-copy p a,
+    .content-dark-copy span a, .content-light-copy span a, .content-clear-copy span a, content-white-copy span a {
+        font-weight:800;
+    }
+
+
+
+}

@@ -2,54 +2,50 @@ import { NgModule } from '@angular/core';
 
 import {Routes, RouterModule} from '@angular/router';
 
+/* MENU ABOUT */
 import { AboutEnergyPractContainerComponent } from './menu-about/about-energy-practitioner/about-energy-pract-container/about-energy-pract-container.component';
 import { AboutEolDoulaContainerComponent } from './menu-about/about-eol-doula/about-eol-doula-container/about-eol-doula-container.component';
 import { AboutMeContainerComponent } from './menu-about/about-me/about-me-container/about-me-container.component';
 
+/* MENU BOOK */
 import { BookConsultationContainerComponent } from './menu-book/book-consultation/book-consultation-container/book-consultation-container.component';
 import { BookSessionContainerComponent } from './menu-book/book-session/book-session-container/book-session-container.component';
 
-
+/* MENU DOULA WORK */
 import { ChooseMemorialContainerComponent } from './menu-doula-work/choose-memorial/choose-memorial-container/choose-memorial-container.component';
-
 import { CreateLegacyContainerComponent } from './menu-doula-work/create-legacy/create-legacy-container/create-legacy-container.component';
-import { CareForPatientsContainerComponent } from './menu-doula-work/care-for-patients/care-for-patients-container/care-for-patients-container.component';
 
-import { SupportCaregiversContainerComponent } from './menu-doula-work/supportCaregivers/support-caregivers-container/support-caregivers-container.component';
-
+/* MENU ENERGY MEDICINE */
+import { DecreasePainContainerComponent } from './menu-energy-medicine/decrease-pain/decrease-pain-container/decrease-pain-container.component';
 import { DiscoverElementContainerComponent } from './menu-energy-medicine/discover-element/discover-element-container/discover-element-container.component';
 import { DoEnergyExercisesContainerComponent } from './menu-energy-medicine/do-energy-exercises/do-energy-exercises-container/do-energy-exercises-container.component';
-import { TraceMeridiansContainerComponent } from './menu-energy-medicine/trace-meridians/trace-meridians-container/trace-meridians-container.component';
 import { ReduceAnxietyContainerComponent } from './menu-energy-medicine/reduce-anxiety/reduce-anxiety-container/reduce-anxiety-container.component';
 import { RelieveBurnoutContainerComponent } from './menu-energy-medicine/relieve-burnout/relieve-burnout-container/relieve-burnout-container.component';
-import { DecreasePainContainerComponent } from './menu-energy-medicine/decrease-pain/decrease-pain-container/decrease-pain-container.component';
-
-import { HomeContainerComponent } from './menu-home/home-container/home-container.component';
-
-import { WizardContainerComponent } from './menu-wizard/wizard-container/wizard-container.component';
-import { TsdmWizardContainerComponent } from './menu-wizard/tsdm-wizard/tsdm-wizard-container/tsdm-wizard-container.component';
-import { RepNineWizardContainerComponent } from './menu-wizard/rep-9-wizard/rep-nine-wizard-container/rep-nine-wizard-container.component';
+import { TraceMeridiansContainerComponent } from './menu-energy-medicine/trace-meridians/trace-meridians-container/trace-meridians-container.component';
 
 /* MENU EOL DOCS */
-import { AcpContainerComponent } from './menu-eol-docs/ACP/acp-container/acp-container.component';
-import { DnrContainerComponent } from './menu-eol-docs/DNR/dnr-container/dnr-container.component';
-import { EdithContainerComponent } from './menu-eol-docs/EDITH/edith-container/edith-container.component';
+import { EndOfLifeDocumentsContainerComponent } from './menu-doula-work/end-of-life-documents/end-of-life-documents-container/end-of-life-documents-container.component';
 
-import { RepSectionNineContainerComponent } from './menu-eol-docs/REP-SECTION-NINE/rep-section-nine-container/rep-section-nine-container.component';
-import { TsdmContainerComponent } from './menu-eol-docs/TSDM/tsdm-container/tsdm-container.component';
-import { FrailtyMenuContainerComponent } from './menu-eol-docs/FRAILTY-MENU/frailty-menu-container/frailty-menu-container.component';
+/* MENU HOME */
+import { HomeContainerComponent } from './menu-home/home-container/home-container.component';
 
+/* MENU WIZARD */
+import { RepNineWizardContainerComponent } from './menu-doula-work/end-of-life-documents/wizard-temps/rep-nine-wizard-container/rep-nine-wizard-container.component';
+import { TsdmWizardContainerComponent } from './menu-doula-work/end-of-life-documents/wizard-temps/tsdm-wizard-container/tsdm-wizard-container.component';
+import { EndOfLifePlanningContainerComponent } from './menu-doula-work/end-of-life-planning/end-of-life-planning-container/end-of-life-planning-container.component';
+
+
+
+/* AS SHOWN ON MENU */
 const routes: Routes = [
     {path: '', redirectTo: '/menuHome', pathMatch: 'full'},
+
+    {path: 'menuHome', component: HomeContainerComponent},
 
     {path: 'menuAbout', component: AboutMeContainerComponent},
     {path: 'aboutMe', component: AboutMeContainerComponent},
     {path: 'aboutEndOfLifeDoula', component: AboutEolDoulaContainerComponent},
     {path: 'aboutEnergyPractitioner', component: AboutEnergyPractContainerComponent},
-
-    {path: 'menuBook', component: BookSessionContainerComponent},
-    {path: 'bookSession', component: BookSessionContainerComponent},
-    {path: 'bookConsultation', component: BookConsultationContainerComponent},
 
     {path: 'menuEnergyMedicine', component: ReduceAnxietyContainerComponent},
     {path: 'reduceAnxiety', component: ReduceAnxietyContainerComponent},
@@ -59,26 +55,16 @@ const routes: Routes = [
     {path: 'discoverElement', component: DiscoverElementContainerComponent},
     {path: 'traceMeridians', component: TraceMeridiansContainerComponent},
 
-    {path: 'menuDoulaWork', component: CareForPatientsContainerComponent},
-    {path: 'careForPatient', component: CareForPatientsContainerComponent},
-    {path: 'supportCaregivers', component: SupportCaregiversContainerComponent},
+    {path: 'menuDoulaWork', component: EndOfLifePlanningContainerComponent},
+    {path: 'endOfLifePlanning', component: EndOfLifePlanningContainerComponent},
+    {path: 'endOfLifeDocuments', component: EndOfLifeDocumentsContainerComponent},
+
     {path: 'createLegacy', component: CreateLegacyContainerComponent},
     {path: 'chooseMemorial', component: ChooseMemorialContainerComponent},
 
-    {path: 'menuEOLDocs', component: FrailtyMenuContainerComponent},
-    {path: 'frailtyDocMenu', component: FrailtyMenuContainerComponent},
-    {path: 'tsdmDoc', component: TsdmContainerComponent},
-    {path: 'advocateDoc', component: RepSectionNineContainerComponent},
-    {path: 'edithDoc', component: EdithContainerComponent},
-    {path: 'dnrDoc', component: DnrContainerComponent},
-    {path: 'acPlanDoc', component: AcpContainerComponent},
-
-    {path: 'menuWizard', component: WizardContainerComponent},
-    {path: 'tsdmWizard', component: TsdmWizardContainerComponent},
-    {path: 'repNineWizard', component: RepNineWizardContainerComponent},
-
-
-    {path: 'menuHome', component: HomeContainerComponent},
+    {path: 'menuBook', component: BookSessionContainerComponent},
+    {path: 'bookSession', component: BookSessionContainerComponent},
+    {path: 'bookConsultation', component: BookConsultationContainerComponent},
 
 
 ];

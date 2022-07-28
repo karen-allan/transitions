@@ -6,6 +6,7 @@ import {Client} from "../../../../ts-files/client";
   templateUrl: './data-entry-caregiver-consult.component.html',
   styleUrls: ['./data-entry-caregiver-consult.component.css']
 })
+
 export class DataEntryCaregiverConsultComponent implements OnInit {
 
   @Input() model: Client;

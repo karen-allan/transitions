@@ -156,7 +156,7 @@
 }
 
 @media screen {
-    .print-session-component {
+    .print-session-component, .print-caregiver-consult-component, .print-patient-consult-component, .print-planning-consult-component {
         display:none;
     }
 }

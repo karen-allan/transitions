@@ -1,0 +1,375 @@
+/*******************************************************************************************************************
+  ALL BANANAS, MOBILES AND TABLET AND IPAD PORTRAIT (MAX IS 1 less than TABLET LANDSCAPE at and (min-width: 1280px))
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 1279px) {
+
+    .energy-tip, .background-video, .background-notes, .content-images, .list-symptoms, .element-meridian-intro  {
+        width:var(--media-less-than-content-width);
+    }
+
+}
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    .energy-tip span {
+        font-size: var(--small-copy-banana-port-font-size);
+    }
+
+    .background-video {
+        height:150px;
+    }
+
+    .list-symptoms {
+        grid-template-columns: 100%;
+    }
+
+    .symptom span {
+        font-size: var(--small-copy-banana-port-font-size);
+    }
+
+    .element-meridian-intro p {
+        font-size:var(--med-copy-banana-port-font-size);
+    }
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+
+    .energy-tip span {
+        font-size: var(--small-copy-banana-land-font-size);
+    }
+
+    .background-video {
+        height:250px;
+    }
+
+    .list-symptoms {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .symptom span {
+        font-size: var(--small-copy-banana-land-font-size);
+    }
+
+    .element-meridian-intro p {
+        font-size:var(--med-copy-banana-land-font-size);
+    }
+
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    .energy-tip span {
+        font-size: var(--small-copy-mobile-port-font-size);
+    }
+
+    .background-video {
+        height:150px;
+    }
+
+    .list-symptoms {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .symptom span {
+        font-size: var(--small-copy-mobile-port-font-size);
+    }
+
+    .element-meridian-intro p {
+        font-size:var(--med-copy-mobile-port-font-size);
+    }
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+     /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--small-copy-mobile-land-font-size);
+    }
+
+    .background-video {
+        height:250px;
+    }
+
+    .list-symptoms {
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+    .symptom span {
+        font-size: var(--small-copy-mobile-land-font-size);
+    }
+
+    .element-meridian-intro p {
+        font-size:var(--med-copy-mobile-land-font-size);
+    }
+
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    .energy-tip span {
+        font-size: var(--small-copy-tablet-port-font-size);
+    }
+
+    .background-video {
+        height:300px;
+    }
+
+    .list-symptoms {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .symptom span {
+        font-size: var(--small-copy-tablet-port-font-size);
+    }
+
+    .element-meridian-intro p {
+        font-size:var(--med-copy-tablet-port-font-size);
+    }
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+
+    .energy-tip, .background-video, .background-notes, .content-images, .list-symptoms, .element-meridian-intro  {
+        width:var(--media-more-than-content-width);
+    }
+
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--small-copy-ipad-port-font-size);
+    }
+
+    .background-video {
+        height:300px;
+    }
+
+    .list-symptoms {
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+    .symptom span {
+        font-size: var(--small-copy-ipad-port-font-size);
+    }
+
+    .element-meridian-intro p {
+        font-size:var(--med-copy-ipad-port-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  ALL THAT SHOW DESKTOP - TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
+*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 1280px)
+and (orientation: landscape) {
+
+    .energy-tip, .background-video, .background-notes, .content-images, .list-symptoms, .element-meridian-intro  {
+        width:var(--media-more-than-content-width);
+    }
+
+}
+
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--small-copy-tablet-land-font-size);
+    }
+
+    .background-video {
+        height:350px;
+    }
+
+    .list-symptoms {
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+    .symptom span {
+        font-size: var(--small-copy-tablet-land-font-size);
+    }
+
+    .element-meridian-intro p {
+        font-size:var(--med-copy-tablet-land-font-size);
+    }
+
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--small-copy-ipad-land-font-size);
+    }
+
+    .background-video {
+        height:400px;
+    }
+
+    .list-symptoms {
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+    .symptom span {
+        font-size: var(--small-copy-ipad-land-font-size);
+    }
+
+    .element-meridian-intro p {
+        font-size:var(--med-copy-ipad-land-font-size);
+    }
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    /* ENERGY TIPS */
+    .energy-tip span {
+        font-size: var(--small-copy-desktop-font-size);
+    }
+
+    .background-video {
+        height:400px;
+    }
+
+    .list-symptoms {
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+    .symptom span {
+        font-size: var(--small-copy-desktop-font-size);
+    }
+
+    /* INTRO */
+    .element-meridian-intro p {
+        font-size:var(--med-copy-desktop-font-size);
+    }
+
+    .meridians-element {
+        grid-template-columns: 30% 70%;
+
+    }
+
+    .meridian-element-icon {
+        display:grid;
+        grid-column:1;
+        justify-content: flex-start;
+    }
+
+    .meridian-element-affirmation {
+        display:grid;
+        grid-column:2;
+        justify-content: flex-start;
+        font-size:var(--h2-desktop-font-size);
+        font-style: italic;
+        align-content: center;
+    }
+}
+
+/* GLOBAL ****************************************************************************************************/
+@media only screen {
+
+    .energy-tip, .background-video, .content-images, .list-symptoms   {
+        display:grid;
+        max-width:var(--content-width);
+        margin:1em auto;
+    }
+
+    /* ENERGY TIPS */
+    .energy-tip {
+        color:var(--color-quotes-purple);
+        align-content: center;
+        justify-content: center;
+        border-radius:20px;
+        border:thin solid var(--color-dark-blue);
+        font-family: var(--family-copy);
+    }
+
+    .energy-tip p, .energy-tip span {
+        padding:1em;
+        line-height: var(--copy-line-height);
+    }
+
+    .content-images img {
+        max-width:100%;
+        height:auto;
+    }
+
+    /* In selected element and meridian imbalances balances lists */
+    .list-symptoms {
+        /*display:grid;*/
+        padding:1em 0;
+    }
+
+    .symptom {
+        display:grid;
+        width:100%;
+    }
+
+    .symptom span {
+        text-align: left;
+        padding-left:2em;
+        font-family: var(--family-copy);
+        color:white;
+        line-height: var(--list-item-line-height);
+    }
+
+    /* INTRO FOR ELEMENT and MERIDIAN */
+    .element-meridian-intro {
+        display:block;
+        padding:1em 0;
+        max-width:var(--content-width);
+        margin:1em auto;
+    }
+
+    .meridians-element {
+        display:grid;
+        padding:1em 0;
+        max-width:var(--content-width);
+        margin:auto;
+        font-family: var(--family-copy);
+
+    }
+
+}
+

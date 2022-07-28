@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChooseMemorialContainerComponent implements OnInit {
 
-  menuItemId:number  = 4;
-  subMenuItemId:number = 43;
+  menuItemId:number  = 3;
+  subMenuItemId:number = 33;
 
   detailHeaderName = 'header-choose-memorial'
   title='Ceremonies and Funerals'

@@ -11,8 +11,6 @@ export class BookSessionOverviewComponent implements OnInit {
 
   @Input() title:string ='';
   @Input() model: Client;
- /* total:number=0;
-  @Output() totalString:string='';*/
 
   constructor() { }
 

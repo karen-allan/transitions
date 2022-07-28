@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TraceMeridiansContainerComponent implements OnInit {
 
-  menuItemId:number   = 3;
-  subMenuItemId:number = 35;
+  menuItemId:number   = 2;
+  subMenuItemId:number = 25;
 
-  detailHeaderName = 'header-trace-meridians'
-  title='Know about your Meridians'
-  detailListName="list-energy-medicine"
+  detailHeaderName = 'header-energy-meridians'
+  title='Know your Meridians'
+
 
   constructor() { }
 

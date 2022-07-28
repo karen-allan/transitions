@@ -8,8 +8,8 @@ import {Client} from "../../../ts-files/client";
 })
 export class BookSessionContainerComponent implements OnInit {
 
-  menuItemId:number = 5;
-  subMenuItemId:number = 50;
+  menuItemId:number = 4;
+  subMenuItemId:number = 40;
 
   detailHeaderName = 'header-book-session'
   title='Book a Session'

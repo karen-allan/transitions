@@ -3,23 +3,23 @@
 </div>
 
 <div class="content-dark-copy">
-    As you trace your meridians you may wish to silently or say aloud the following affirmations.
+    <p>As you trace your meridians you may wish to silently or say aloud the following affirmations.</p>
 </div>
 
 <div *ngIf="selectedMeridian.affirmations_list != null">
-    <div class="content-clear-list" style="{{selectedMeridian.font_color}}">
+    <ul class="content-clear-list yin-yang" style="{{selectedMeridian.font_color}}">
         <li class="list-item" *ngFor="let line of selectedMeridian.affirmations_list.merAffirmations">
             <span>{{line}}</span>
         </li>
-    </div>
+    </ul>
 </div>
 
 <div *ngIf="selectedMeridian.tracingText != null">
-    <div class="content-light-list margin-top-2" style="{{selectedMeridian.font_color}}">
+    <ul class="content-light-list yin-yang margin-top-2" style="{{selectedMeridian.font_color}}">
         <li class="list-item" *ngFor="let line of selectedMeridian.tracingText.instruction">
             <span>{{line}}</span>
         </li>
-    </div>
+    </ul>
 </div>
 
 <!-- Starts with Bladder -->

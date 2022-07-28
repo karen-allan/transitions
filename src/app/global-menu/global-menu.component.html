@@ -1,10 +1,12 @@
 <div id="headers">
-    <!-- DESKTOP MENU -->
-    <div class="header-desktop">
-        <!-- ROW 1 LOGO, NAME, SLOGANS -->
-       <div class="desktop-header-block">
-            <div class="desktop-header-content">
-                <a routerLink="/menuHome"> <div class="header-logo logo"></div></a>
+<!-- DESKTOP MENU -->
+    <div class="desktop-header">
+        <!-- LOGO, NAME, SLOGANS ROW 1  -->
+        <div class="desktop-content-block">
+            <div class="desktop-content">
+                <a routerLink="/menuHome">
+                    <div class="header-logo logo"></div>
+                </a>
 
                 <div class="header-name">
                     TRANSITIONS in ENERGY
@@ -15,189 +17,48 @@
                     <div class="slogans-line">&nbsp;</div>
                     <span>End of Life Doula Support</span>
                 </div>
-            </div>
-       </div>
 
-       <!-- ROW 2 MAIN MENU -->
-       <div class="desktop-menu-block">
-           <div class="desktop-menu-items">
-               <div *ngFor="let menuItem of menuItems">
-                   <div *ngIf="menuItemId==menuItem.id">
-                       <ng-container *ngIf="menuItem.id!==6">
-                           <div class="desktop-selected-top-menu-item right-white-border">{{menuItem.title}}</div>
-                       </ng-container>
-                       <ng-container *ngIf="menuItem.id===6">
-                           <div class="desktop-selected-top-menu-item no-border">{{menuItem.title}}</div>
-                       </ng-container>
-                   </div>
-
-                   <div *ngIf="menuItemId!=menuItem.id">
-                       <ng-container *ngIf="menuItem.id!==6">
-                           <div class="desktop-unselected-top-menu-item right-white-border"><a routerLink='/{{menuItem.url}}'>{{menuItem.title}}</a></div>
-                       </ng-container>
-                       <ng-container *ngIf="menuItem.id===6">
-                           <div class="desktop-unselected-top-menu-item"><a routerLink='/{{menuItem.url}}'>{{menuItem.title}}</a></div>
-                       </ng-container>
-                   </div>
-               </div>
-           </div>
-       </div>
-
-       <!-- ROW 3 SUB MENU -->
-        <div class= "desktop-sub-menu-block">
-<!--        MENU HOME > 1 with no submenu items -->
-            <ng-container *ngIf="menuItemId==1 || menuItemId==3 || menuItemId ==4">
-                <div class="sub-menu-social">
-                    <div class="left-social-icon">
+                <div class="header-socials">
+                    <div class="top-social">
                         <a href="https://practitioner.edenmethod.com/listing/karen-gail-allan/" target="_blank">
-                            <img src="assets/images/headers/headerEEM.png" title="EEM" alt="EEM">
+                            <img src="assets/images/menu/edenLink.png" title="EEM" alt="EEM">&nbsp;Karen&nbsp;@Eden Method
                         </a>
                     </div>
 
-                    <div class="left-social-link">
-                        <a href="https://practitioner.edenmethod.com/listing/karen-gail-allan/" target="_blank">@Eden Method</a>
-                    </div>
-
-                    <div class="right-social-link">
-                        <a href="mailto:karen@transitionsInEnergy.com">karen@transitionsInEnergy.com</a>
-                    </div>
-
-                    <div class="right-social-icon">
+                    <div class="bottom-social">
                         <a href="mailto:karen@transitionsInEnergy.com">
-                            <img src="assets/images/headers/headerEmail.png" title="email" alt="email">
+                            <img src="assets/images/menu/emailLink.png" title="email" alt="email">&nbsp;Karen&nbsp;@transitionsInEnergy
                         </a>
                     </div>
                 </div>
-            </ng-container>
 
-            <!-- MENU ABOUT > 2 with submenu items 20, 21, 22  -->
-            <ng-container *ngIf="menuItemId==2">
-                <div class="sub-menu-items-three">
-                    <div *ngFor="let subMenuItem of subMenuItems">
-                        <div *ngIf="subMenuItemId==subMenuItem.id">
-                            <ng-container *ngIf="subMenuItem.id!==22">
-                                <div class="desktop-selected-sub-menu-item right-colored-dashed-border">{{subMenuItem.title}}</div>
-                            </ng-container>
-                            <ng-container *ngIf="subMenuItem.id===22">
-                                <div class="desktop-selected-sub-menu-item">{{subMenuItem.title}}</div>
-                            </ng-container>
-                        </div>
+            </div>
+        </div>
 
-                        <div *ngIf="subMenuItemId!=subMenuItem.id">
-                            <ng-container *ngIf="subMenuItem.id!==22">
-                                <div class="desktop-unselected-sub-menu-item right-colored-dashed-border"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
-                            </ng-container>
-                            <ng-container *ngIf="subMenuItem.id===22">
-                                <div class="desktop-unselected-sub-menu-item"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
+        <!-- MAIN MENU  ROW 2 -->
+        <div class="desktop-menu-block">
+            <div class="desktop-menu">
+                <div *ngFor="let menuItem of menuItems">
+                    <div class="desktop-top-menu-item">
+                        <span>{{menuItem.title}}&#x25BC;&nbsp;</span>
+                        <div class="dropdown-content">
+                            <ng-container *ngFor="let subMenuItem of menuItem.submenuItems">
+                                <ng-container *ngIf="subMenuItem.id == subMenuItemId">
+                                    <span><div class="swirl"></div>{{subMenuItem.title}}</span>
+                                </ng-container>
+
+                                <ng-container *ngIf="subMenuItem.id != subMenuItemId">
+                                    <a routerLink='/{{subMenuItem.url}}'><div class="swirl"></div>{{subMenuItem.title}}</a>
+                                </ng-container>
                             </ng-container>
                         </div>
                     </div>
                 </div>
-            </ng-container>
-
-            <!-- MENU ENERGY > 3 with submenu items 30, 31, 32, 33, 34, 35 -->
-           <!-- <ng-container *ngIf="menuItemId==3">
-                <div class="sub-menu-items-six">
-                    <div *ngFor="let subMenuItem of subMenuItems">
-                        <div *ngIf="subMenuItemId==subMenuItem.id">
-                            <ng-container *ngIf="subMenuItem.id!==35">
-                                <div class="desktop-selected-sub-menu-item right-colored-dashed-border">{{subMenuItem.title}}</div>
-                            </ng-container>
-                            <ng-container *ngIf="subMenuItem.id==35">
-                                <div class="desktop-selected-sub-menu-item">{{subMenuItem.title}}</div>
-                            </ng-container>
-                        </div>
-
-                        <div *ngIf="subMenuItemId!=subMenuItem.id">
-                            <ng-container *ngIf="subMenuItem.id!==35">
-                                <div class="desktop-unselected-sub-menu-item right-colored-dashed-border"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
-                            </ng-container>
-                            <ng-container *ngIf="subMenuItem.id==35">
-                                <div class="desktop-unselected-sub-menu-item"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
-                            </ng-container>
-                        </div>
-                    </div>
-                </div>
-            </ng-container>-->
-
-            <!-- MENU DOULA CARE > 4 with submenu items 40, 41, 42, 43, 44, 45 -->
-          <!--  <ng-container *ngIf="menuItemId==4">
-                <div class="sub-menu-items-six">
-                    <div *ngFor="let subMenuItem of subMenuItems">
-                        <div *ngIf="subMenuItemId==subMenuItem.id">
-                            <ng-container *ngIf="subMenuItem.id!==45">
-                                <div class="desktop-selected-sub-menu-item right-colored-dashed-border">{{subMenuItem.title}}</div>
-                            </ng-container>
-                            <ng-container *ngIf="subMenuItem.id==45">
-                                <div class="desktop-selected-sub-menu-item">{{subMenuItem.title}}</div>
-                            </ng-container>
-                        </div>
-
-                        <div *ngIf="subMenuItemId!=subMenuItem.id">
-                            <ng-container *ngIf="subMenuItem.id!==45">
-                                <div class="desktop-unselected-sub-menu-item right-colored-dashed-border"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
-                            </ng-container>
-                            <ng-container *ngIf="subMenuItem.id==45">
-                                <div class="desktop-unselected-sub-menu-item"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
-                            </ng-container>
-                        </div>
-                    </div>
-                </div>
-            </ng-container>-->
-
-            <!-- MENU BOOK > 5 with submenu items 50, 51 -->
-            <ng-container *ngIf="menuItemId==5">
-                <div class="sub-menu-items-two">
-                    <div *ngFor="let subMenuItem of subMenuItems">
-                        <div *ngIf="subMenuItemId==subMenuItem.id">
-                            <ng-container *ngIf="subMenuItem.id!==51">
-                                <div class="desktop-selected-sub-menu-item right-colored-dashed-border">{{subMenuItem.title}}</div>
-                            </ng-container>
-                            <ng-container *ngIf="subMenuItem.id==51">
-                                <div class="desktop-selected-sub-menu-item">{{subMenuItem.title}}</div>
-                            </ng-container>
-                        </div>
-
-                        <div *ngIf="subMenuItemId!=subMenuItem.id">
-                            <ng-container *ngIf="subMenuItem.id!==51">
-                                <div class="desktop-unselected-sub-menu-item right-colored-dashed-border"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
-                            </ng-container>
-                            <ng-container *ngIf="subMenuItem.id==51">
-                                <div class="desktop-unselected-sub-menu-item"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
-                            </ng-container>
-                        </div>
-                    </div>
-                </div>
-            </ng-container>
-
-            <!-- MENU PLANNING AHEAD > 6 with submenu items 60, 61, 62, 63, 64, 65-->
-            <ng-container *ngIf="menuItemId==6">
-                <div class="sub-menu-items-six">
-                    <div *ngFor="let subMenuItem of subMenuItems">
-                        <div *ngIf="subMenuItemId==subMenuItem.id">
-                            <ng-container *ngIf="subMenuItem.id!==65">
-                                <div class="desktop-selected-sub-menu-item right-colored-dashed-border">{{subMenuItem.title}}</div>
-                            </ng-container>
-                            <ng-container *ngIf="subMenuItem.id==65">
-                                <div class="desktop-selected-sub-menu-item">{{subMenuItem.title}}</div>
-                            </ng-container>
-                        </div>
-
-                        <div *ngIf="subMenuItemId!=subMenuItem.id">
-                            <ng-container *ngIf="subMenuItem.id!==65">
-                                <div class="desktop-unselected-sub-menu-item right-colored-dashed-border"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
-                            </ng-container>
-                            <ng-container *ngIf="subMenuItem.id==65">
-                                <div class="desktop-unselected-sub-menu-item"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
-                            </ng-container>
-                        </div>
-                    </div>
-                </div>
-            </ng-container>
+            </div>
         </div>
     </div>
 
-    <!-- MOBILE MENU -->
+<!-- MOBILE MENU -->
     <div class="header-mobile">
         <!-- ROW 1 LOGO, NAME, SLOGANS -->
         <div class="mobile-header-block">
@@ -215,25 +76,16 @@
                 </div>
             </div>
 
-            <!-- ROW 2 INSTA, EMAIL and MAIN MENU
-
-             -->
             <div class="mobile-menu-items">
-                <!--<div class="mobile-instagram-icon">
-                    <a href="https://www.instagram.com/karenallan0717" target="_blank">
-                        <img src="assets/images/headers/headerInsta.png" title="IG" alt="IG">
-                    </a>
-                </div>-->
-
-                <div class="mobile-instagram-icon">
+                <div class="mobile-eden-icon">
                     <a href="https://practitioner.edenmethod.com/listing/karen-gail-allan/" target="_blank">
-                        <img src="assets/images/headers/headerEEM.png" title="EEM" alt="EEM">
+                        <img src="assets/images/menu/edenLink.png" title="EEM" alt="EEM">
                     </a>
                 </div>
 
                 <div class="mobile-email-icon">
-                    <a href="mailto:karen@mindworksEnergyMedicine.com">
-                        <img src="assets/images/headers/headerEmail.png" title="email" alt="email">
+                    <a href="mailto:karen@transitionsInEnergy.com">
+                        <img src="assets/images/menu/emailLink.png" title="email" alt="email">
                     </a>
                 </div>
 
@@ -255,14 +107,15 @@
                             <div class="mobile-selected-top-menu-item">
                                 {{menuItem.title}}
                             </div>
-                            <ng-container *ngIf="subMenuItems.length > 0">
-                                <ng-container *ngFor="let subMenuItem of subMenuItems">
+                            <ng-container *ngIf="menuItem.submenuItems.length > 0">
+                                <ng-container *ngFor="let subMenuItem of menuItem.submenuItems">
                                     <ng-container *ngIf="subMenuItemId==subMenuItem.id">
                                         <div class="mobile-selected-sub-menu-item">{{subMenuItem.title}}</div>
                                     </ng-container>
 
                                     <ng-container *ngIf="subMenuItemId!=subMenuItem.id">
-                                        <div class="mobile-unselected-sub-menu-item"><a routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
+                                        <div class="mobile-unselected-sub-menu-item"><a
+                                            routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
                                     </ng-container>
                                 </ng-container>
                             </ng-container>
@@ -281,11 +134,3 @@
 </div>
 
 
-<!--<div class="left-social-icon">
-                      <a href="https://www.instagram.com/transitionsInEnergy" target="_blank">
-                          <img src="assets/images/headers/headerInsta.png" title="IG" alt="IG">
-                      </a>
-                  </div>
-                  <div class="left-social-link">
-                      <a href="https://www.instagram.com/transitionsInEnergy" target="_blank">@transitionsInEnergy on instagram</a>
-                  </div>-->

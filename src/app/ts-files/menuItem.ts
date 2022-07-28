@@ -1,7 +1,9 @@
+import {SubMenuItem} from "./subMenuItem";
 
 export interface MenuItem {
     id: number;
     title: string;
     url?: string;
-    children?:MenuItem[];
+    // children?:MenuItem[];
+    submenuItems?: SubMenuItem[];
 }

@@ -45,59 +45,89 @@
 
   --color-sub-menu:#a4b5d2;
 
-  /* ******************************* DESKTOP HEADER-MENU ROW - ADDS UP TO 205 px *********************** */
+  /* CONTENT WIDTHS */
+  /* if the content container --content-width (800) and the device css is smaller than 800px it needs space on either side 90%
+     which is bananas, mobile-port and tablet-port */
+  --content-width:800px;
+  --menu-width:840px;
+  --tablet-width:1280px;
+  --screen-width:1152px;
+  --banner-width:1920px;
+
+  --media-less-than-content-width:90%;
+  /* this is if the minimum width of the device css is larger than 800px (it does not need extra space on the side */
+  --media-more-than-content-width:100%;
+
+
+/* MENU DESIGN */
+
+  /* ******************************* DESKTOP MENU ROW - ADDS UP TO 205 px *********************** */
 
   /* first row has 100 for Logo, Name and Slogans  */
-  --logo-name-slogan-desktop-height:120px;
+  --desktop-top-menu-height:120px;
   /* second row is for the main menu */
-  --menu-desktop-height:50px;
-  /* third row is the sub menu */
-  --sub-menu-desktop-height:40px;
+  --desktop-bottom-menu-height:50px;
 
-  /* ******************************* MOBILE HEADER is 3 rows *******************************************/
-  --mobile-top-header-height:120px;
-  --mobile-middle-header-height:50px;
-  --mobile-bottom-header-height:45px;
+  /* ******************************* MOBILE MENU is 3 rows *******************************************/
+  --mobile-top-menu-height:120px;
+  --mobile-middle-menu-height:50px;
+  --mobile-bottom-menu-height:45px;
 
   /* ****************************** FONT SIZES ************************************ */
-  /* HEADER NAME - TYPE MONUMENT */
-  --family-header-name:'Monument-Valley';
+   /* ALL HEADER FONTS HERE
+   NAME = TYPE MONUMENT */
+  --family-menu-name:'Monument-Valley';
 
-  --header-name-banana-port-font-size:.9em;
-  --header-name-banana-land-font-size:2.2em;
-  --header-name-mobile-port-font-size:1.3em;
-  --header-name-mobile-land-font-size:3.2em;
-  --header-name-tablet-port-font-size:2.3em;
-  --header-name-tablet-land-font-size:2.7em;
-  --header-name-ipad-port-font-size:2.8em;
-  --header-name-ipad-land-font-size:2.8em;
-  --header-name-laptop-font-size:2.8em;
-  --header-name-desktop-font-size:2.9em;
+  --menu-name-banana-port-font-size:.9em;
+  --menu-name-banana-land-font-size:2.2em;
+  --menu-name-mobile-port-font-size:1.3em;
+  --menu-name-mobile-land-font-size:3.2em;
+  --menu-name-tablet-port-font-size:2.3em;
+  --menu-name-tablet-land-font-size:2.7em;
+  --menu-name-ipad-port-font-size:2.8em;
+  --menu-name-ipad-land-font-size:2.8em;
+  --menu-name-desktop-font-size:2.9em;
 
   /* HEADER SLOGAN - TYPE RENE */
-  --family-header-copy:'ReneB-Book';
+  --family-menu-copy:'ReneB-Book';
 
-  --header-slogan-banana-port-font-size:.4em;
-  --header-slogan-banana-land-font-size:.7em;
-  --header-slogan-mobile-port-font-size:.5em;
-  --header-slogan-mobile-land-font-size:.8em;
-  --header-slogan-tablet-port-font-size:.7em;
-  --header-slogan-tablet-land-font-size:.9em;
-  --header-slogan-ipad-port-font-size:.9em;
-  --header-slogan-ipad-land-font-size:.95em;
-  --header-slogan-laptop-font-size:1em;
-  --header-slogan-desktop-font-size:1.1em;
+  /* these show the mobile menu - white on blue */
+  --menu-slogan-banana-port-font-size:.4em;
+  --menu-slogan-banana-land-font-size:.7em;
+  --menu-slogan-mobile-port-font-size:.5em;
+  --menu-slogan-mobile-land-font-size:.8em;
+  --menu-slogan-tablet-port-font-size:.7em;
+  --menu-slogan-ipad-port-font-size:.9em;
 
-  /* HEADER MENU ITEMS - TYPE RENE */
-  --menu-item-tablet-land-font-size:.7em;
-  --menu-item-ipad-land-font-size:.8em;
-  --menu-item-laptop-font-size:.9em;
-  --menu-item-desktop-font-size:.9em;
+  /* the 3 below show the desktop menu blue on white */
+  --menu-slogan-tablet-land-font-size:.8em;
+  --menu-slogan-ipad-land-font-size:.9em;
+  --menu-slogan-desktop-font-size:1em;
 
-  --sub-menu-item-tablet-land-font-size:.6em;
-  --sub-menu-item-ipad-land-font-size:.7em;
-  --sub-menu-item-laptop-font-size:.8em;
-  --sub-menu-item-desktop-font-size:.8em;
+  /* HEADER SOCIALS */
+  --menu-social-ipad-tablet-land-font-size:.7em;
+  --menu-social-desktop-font-size:.8em;
+
+  /* DESKTOP MENU ITEMS - TYPE RENE */
+  --desktop-menu-item-tablet-land-font-size:.7em;
+  --desktop-menu-item-ipad-land-font-size:.8em;
+  --desktop-menu-item-desktop-font-size:.9em;
+
+  /* DESKTOP SUB MENU ITEMS NOW OFF TOP MENU */
+  --desktop-sub-menu-item-tablet-land-font-size:.6em;
+  --desktop-sub-menu-item-ipad-land-font-size:.7em;
+  --desktop-sub-menu-item-desktop-font-size:.8em;
+
+  /* MOBILE MENU ITEMS - TYPE RENE */
+  --mobile-main-menu-item-banana-font-size:.7em;
+  --mobile-main-menu-item-mobile-font-size:.8em;
+  --mobile-main-menu-item-tablet-ipad-font-size:.9em;
+
+  /* MOBILE SUB MENU ITEMS - TYPE RENE */
+  --mobile-sub-menu-item-banana-font-size:.6em;
+  --mobile-sub-menu-item-mobile-font-size:.7em;
+  --mobile-sub-menu-item-tablet-ipad-font-size:.8em;
+
 
   /* ALL COPY AND LISTS USE OPEN SANS */
   --family-copy: 'Open Sans';
@@ -138,34 +168,13 @@
   --big-copy-banana-land-font-size:.9em;
   --big-copy-mobile-port-font-size:.9em;
   --big-copy-mobile-land-font-size:1em;
-  --big-copy-tablet-port-font-size:1.0em;
-  --big-copy-tablet-land-font-size:1.1em;
-  --big-copy-ipad-port-font-size:1.1em;
-  --big-copy-ipad-land-font-size:1.2em;
-  --big-copy-desktop-font-size:1.3em;
+  --big-copy-tablet-port-font-size:1.2em;
+  --big-copy-tablet-land-font-size:1.3em;
+  --big-copy-ipad-port-font-size:1.3em;
+  --big-copy-ipad-land-font-size:1.4em;
+  --big-copy-desktop-font-size:1.5em;
 
-  /* FOR FORM DATA - USES MALGUN GOTHIC */
-  --family-forms:'malgun gothic';         /*  */
-
-  --forms-med-banana-port-font-size:.6em;
-  --forms-med-banana-land-font-size:.8em;
-  --forms-med-mobile-port-font-size:.7em;
-  --forms-med-mobile-land-font-size:.8em;
-  --forms-med-tablet-port-font-size:.8em;
-  --forms-med-tablet-land-font-size:.9em;
-  --forms-med-ipad-port-font-size:.9em;
-  --forms-med-ipad-land-font-size:1em;
-  --forms-med-desktop-font-size:1.1em;
-
-  --forms-big-banana-port-font-size:.7em;
-  --forms-big-banana-land-font-size:.9em;
-  --forms-big-mobile-port-font-size:.8em;
-  --forms-big-mobile-land-font-size:.9em;
-  --forms-big-tablet-port-font-size:.9em;
-  --forms-big-tablet-land-font-size:1em;
-  --forms-big-ipad-port-font-size:1em;
-  --forms-big-ipad-land-font-size:1.1em;
-  --forms-big-desktop-font-size:1.2em;
+  /*
 
   /* ALL QUOTES - USES FAMILY QUOTES */
   --family-quotes:Monotype Corsiva;
@@ -180,15 +189,15 @@
   --big-quote-ipad-land-font-size:1.6em;
   --big-quote-desktop-font-size:1.7em;
 
-  --small-quote-banana-port-font-size:.3em;
-  --small-quote-banana-land-font-size:.5em;
-  --small-quote-mobile-port-font-size:.6em;
-  --small-quote-mobile-land-font-size:0.8em;
-  --small-quote-tablet-port-font-size:0.9em;
+  --small-quote-banana-port-font-size:.6em;
+  --small-quote-banana-land-font-size:.8em;
+  --small-quote-mobile-port-font-size:.9em;
+  --small-quote-mobile-land-font-size:1em;
+  --small-quote-tablet-port-font-size:1.1em;
   --small-quote-tablet-land-font-size:1.2em;
-  --small-quote-ipad-port-font-size:1.2em;
-  --small-quote-ipad-land-font-size:1.3em;
-  --small-quote-desktop-font-size:1.4em;
+  --small-quote-ipad-port-font-size:1.3em;
+  --small-quote-ipad-land-font-size:1.4em;
+  --small-quote-desktop-font-size:1.5em;
 
   /* *********************************** ALL HEADINGS - USE WHITNEY BOOK ************************************* */
   --family-headers: 'Whitney-Book';
@@ -236,38 +245,15 @@
   --h4-ipad-land-font-size:1.3em;
   --h4-desktop-font-size:1.4em;
 
-  /* FORM MENU ITEMS */
-  --form-menu-banana-port-font-size:.6em;
-  --form-menu-banana-land-font-size:1.1em;
-  --form-menu-mobile-port-font-size:.9em;
-  --form-menu-mobile-land-font-size:1.2em;
-  --form-menu-tablet-port-font-size:1.0em;
-  --form-menu-tablet-land-font-size:1.1em;
-  --form-menu-ipad-port-font-size:1.2em;
-  --form-menu-ipad-land-font-size:1.4em;
-  --form-menu-desktop-font-size:1.5em;
 
-  --form-menu-item-banana-port-font-size:.5em;
-  --form-menu-item-banana-land-font-size:1.0em;
-  --form-menu-item-mobile-port-font-size:.8em;
-  --form-menu-item-mobile-land-font-size:1.1em;
-  --form-menu-item-tablet-port-font-size:0.9em;
-  --form-menu-item-tablet-land-font-size:1.0em;
-  --form-menu-item-ipad-port-font-size:1.1em;
-  --form-menu-item-ipad-land-font-size:1.3em;
-  --form-menu-item-desktop-font-size:1.4em;
-
-  --citations:.7em;
-  --mobile-citations:.5em;
-  --signatures:.8em;
 
   /* *********************************************** LINE HEIGHTS *****************************************************/
+  --mobile-copy-line-height:150%;
   --copy-line-height:170%;
   --list-item-line-height:180%;
   --list-wide-item-line-height:200%;
-  --list-item-basic-line-height:100%;
-  --quote-p-line-height:130%;
-  --quote-span-line-height:100%;
+  --quote-line-height:130%;
+
 
 }
 
@@ -277,18 +263,37 @@
 
   /* constant widths */
   html, body {
-    max-width:1920px;
-    margin:auto;
+    max-width: 1920px;
+    margin: auto;
   }
 
   /*the headers, footers and container fill the maximum width of 1920  */
   #headers, #footers, #container {
     display: block;
     float: left;
-    width:100%;
-    max-width:1920px;
-    margin:auto;
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
   }
+
+  .footer-top, .footer-bottom {
+    display: grid;
+    justify-items: center;
+    font-family: var(--family-copy);
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  .footer-top {
+    padding-top: 1em;
+    background-color: white;
+  }
+
+  .footer-bottom {
+    padding-bottom: 1em;
+    background-color: var(--color-light-blue);
+  }
+
 
   /* LIST FORMATS */
   .with-circle {
@@ -303,7 +308,7 @@
 
   .no-style {
     list-style: none;
-    font-size:1em;
+    font-size: 1em;
   }
 
   /* CURSORS */
@@ -327,7 +332,7 @@
 
   .selected-action {
     cursor: default;
-    font-weight:900;
+    font-weight: 900;
     font-style: italic;
   }
 
@@ -337,6 +342,10 @@
 
   .text-left {
     text-align: left;
+  }
+
+  .text-right {
+    text-align: right;
   }
 
   /* GRID ALIGN VERTICALLY */
@@ -370,12 +379,16 @@
     border: none;
   }
 
-  .with-colored-border {
-    border: thin solid  var(--color-soft-blue);
+  .with-colored-border  {
+    border: thin solid var(--color-soft-blue);
+  }
+
+  .with-soft-border {
+    border: thin dotted var(--color-soft-blue);
   }
 
   .with-dark-border {
-    border: thin solid  var(--color-dark-blue);
+    border: thin solid var(--color-dark-blue);
   }
 
   .top-colored-border {
@@ -423,15 +436,15 @@
   }
 
   .bold-light {
-    font-weight:600;
+    font-weight: 600;
   }
 
   .bold-medium {
-    font-weight:700;
+    font-weight: 700;
   }
 
   .bold-dark {
-    font-weight:550;
+    font-weight: 550;
   }
 
   .justify-text {
@@ -444,15 +457,15 @@
 
   /* COLORS */
   .color-white {
-    color:#ffffff;
+    color: #ffffff;
   }
 
   .color-dark-purple {
-    color:var(--color-dark-purple);
+    color: var(--color-dark-purple);
   }
 
   .color-gold {
-    color:var(--color-dark-gold);
+    color: var(--color-dark-gold);
   }
 
   .background-blue {
@@ -495,35 +508,35 @@
 
   /* FIRE */
   .backcolor-fire-active {
-      background: radial-gradient(circle at 100px 100px,#d38180, #000);
+    background: radial-gradient(circle at 100px 100px, #d38180, #000);
   }
 
   .backcolor-fire-selected {
-    background: radial-gradient(circle at 100px 100px,#d35755, #000);
+    background: radial-gradient(circle at 100px 100px, #d35755, #000);
   }
 
   /* EARTH */
   /* Make sure these match the colors in the db */
   .backcolor-earth-active {
-    background: radial-gradient(circle at 100px 100px,#ddba51, #000);
+    background: radial-gradient(circle at 100px 100px, #ddba51, #000);
   }
 
   .backcolor-earth-selected {
-    background: radial-gradient(circle at 100px 100px,#b8a466, #000);
+    background: radial-gradient(circle at 100px 100px, #b8a466, #000);
   }
 
   /* METAL */
   /* Make sure these match the colors in the db 566169 */
   .backcolor-metal-active {
-    background: radial-gradient(circle at 100px 100px,#dce0e2, #000);
+    background: radial-gradient(circle at 100px 100px, #dce0e2, #000);
   }
 
-  .backcolor-metal-selected  {
-    background: radial-gradient(circle at 100px 100px,#acafb1, #000);
+  .backcolor-metal-selected {
+    background: radial-gradient(circle at 100px 100px, #acafb1, #000);
   }
 
-  .backcolor-metal-light  {
-    background: radial-gradient(circle at 100px 100px,#d7dde1, #878787);
+  .backcolor-metal-light {
+    background: radial-gradient(circle at 100px 100px, #d7dde1, #878787);
   }
 
   /* MARGINS */
@@ -564,15 +577,15 @@
   }
 
   .pad-all-1 {
-    padding:1em;
+    padding: 1em;
   }
 
   .pad-all-2 {
-    padding:2em;
+    padding: 2em;
   }
 
   .pad-all-3 {
-    padding:3em;
+    padding: 3em;
   }
 
   .pad-top-1, .pad-top {
@@ -619,35 +632,35 @@
   }
 
   .pad-left {
-    padding-left:1em;
+    padding-left: 1em;
   }
 
   .pad-left-2 {
-    padding-left:2em;
+    padding-left: 2em;
   }
 
   .pad-left-3 {
-    padding-left:3em;
+    padding-left: 3em;
   }
 
   .pad-left-6 {
-    padding-left:6em;
+    padding-left: 6em;
   }
 
   .pad-right {
-    padding-right:1em;
+    padding-right: 1em;
   }
 
   .pad-right-2 {
-    padding-right:2em;
+    padding-right: 2em;
   }
 
   .pad-right-3 {
-    padding-right:3em;
+    padding-right: 3em;
   }
 
   .pad-right-6 {
-    padding-right:6em;
+    padding-right: 6em;
   }
 
   :focus {
@@ -681,46 +694,31 @@
     clear: both;
   }
 
-/* TO DO - TAKE THESE OUT BEFORE PRODUCTION */
-  .transitions-mail-image {
-    height:150px;
-    background-image:url('src/assets/images/headers/transitionsInEnergyMail.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom:2em;
-  }
 
-  .mem-mail-image {
-    height:150px;
-    background-image:url('src/assets/images/headers/mindworksEnergyMedicineMail.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+
 
   .with-faded-background {
-    background-image:linear-gradient(to right, var(--color-lightest-blue) , var(--color-off-white));
+    background-image: linear-gradient(to right, var(--color-lightest-blue), var(--color-off-white));
   }
 
   .with-underline {
-    border-bottom:dashed thin var(--color-soft-blue);
+    border-bottom: dashed thin var(--color-soft-blue);
   }
 
   .with-solid-underline {
-    border-bottom:solid thin var(--color-dark-blue);
+    border-bottom: solid thin var(--color-dark-blue);
   }
 
   /* FONTS */
-
   @font-face {
     font-family: Green-Hostel;
     src: url("../fonts/GreenHostel-2OLr3.otf") format("opentype");
   }
 
- /* @font-face {
-    font-family: High-Billion;
-    src: url("../fonts/HighBillionSans-eZ1Kx.otf") format("opentype");
-  }*/
-
+  /* @font-face {
+     font-family: High-Billion;
+     src: url("../fonts/HighBillionSans-eZ1Kx.otf") format("opentype");
+   }*/
   @font-face {
     font-family: Monument-Valley;
     src: url("../fonts/MonumentValley12-X55o.otf") format("opentype");

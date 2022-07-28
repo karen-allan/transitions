@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateLegacyContainerComponent implements OnInit {
 
-  menuItemId:number  = 4;
-  subMenuItemId:number = 42;
+  menuItemId:number  = 3;
+  subMenuItemId:number = 32;
 
   detailHeaderName = 'header-create-legacy'
   title='Leaving a Legacy'

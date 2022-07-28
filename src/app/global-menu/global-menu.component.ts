@@ -70,9 +70,10 @@ export class GlobalMenuComponent implements OnInit {
 
   /***************************************************************************************/
   getSubMenuItems(): void {
-    this.dataService.getSubMenuItems(this.menuItemId)
-        .subscribe(itemList => this.subMenuItems = itemList);
-
+    for (var menuItem of this.menuItems) {
+       this.dataService.getSubMenuItems(menuItem.id)
+          .subscribe(itemList => menuItem.submenuItems = itemList);
+    }
   }
 
 }
