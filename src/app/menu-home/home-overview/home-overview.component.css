@@ -7,29 +7,29 @@
 and (min-width: 240px)
 and (max-width: 1279px) {
 
-    .screen-image-text-grid,  .screen-text-text-grid,   .screen-prompts {
+    .facts-grid,  .citations-grid {
         width:var(--media-less-than-content-width);
     }
 
-    .screen-image-text-grid {
+    .facts-grid {
         grid-template-columns: 100%;
     }
 
-    .screen-image-grid {
+    .facts-image {
         grid-column:1;
         justify-content: center;
         text-align: center;
         height:300px;
     }
 
-    .screen-text-grid {
+    .facts-text {
         grid-column:1;
         justify-content: center;
         align-content: center;
         padding:1em 0;
     }
 
-    .screen-text-grid a {
+    .facts-text a {
         padding-top:1em;
     }
 
@@ -41,26 +41,22 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-    .screen-text-grid a {
-        font-size: var(--smallest-copy-banana-land-font-size);
-    }
-
-    .screen-text-grid a {
+    .facts-text a {
         font-size: var(--smallest-copy-banana-port-font-size);
     }
 
-    .screen-text-text-grid {
+    .citations-grid {
         grid-template-columns: 100%;
     }
 
-    .screen-text-left, .screen-text-right  {
-        grid-column:1;
-        justify-content: flex-start;
+    .citations-grid a {
+        font-size:var(--tiny-copy-banana-port-font-size);
+        padding:.5em 0;
     }
 
-    .screen-text-text-grid a {
-        font-size:var(--smallest-copy-banana-port-font-size);
-        padding:.5em 0;
+    .citations-left, .citations-right  {
+        grid-column:1;
+        justify-content: flex-start;
     }
 
 }
@@ -71,24 +67,25 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-    .screen-text-grid a {
+    .facts-text a {
         font-size: var(--smallest-copy-banana-land-font-size);
     }
 
-    .screen-text-text-grid {
+    .citations-grid {
         grid-template-columns: 100%;
         width:70%;
         margin:1em 15%;
     }
 
-    .screen-text-left, .screen-text-right  {
+    .citations-grid a {
+        font-size:var(--tiny-copy-banana-land-font-size);
+        padding:.5em 0;
+    }
+
+    .citations-left, .citations-right  {
         grid-column:1;
     }
 
-    .screen-text-text-grid a {
-        font-size:var(--smallest-copy-banana-land-font-size);
-        padding:.5em 0;
-    }
 }
 
 /* MOBILES PORTRAIT IS MOBILE ****************************************************************************************************/
@@ -97,23 +94,24 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-    .screen-text-grid a {
+    .facts-text a {
         font-size: var(--smallest-copy-mobile-port-font-size);
     }
 
-    .screen-text-text-grid {
+    .citations-grid {
         grid-template-columns: 100%;
     }
 
-    .screen-text-left, .screen-text-right  {
+    .citations-grid a {
+        font-size:var(--tiny-copy-mobile-port-font-size);
+        padding:.5em 0;
+    }
+
+    .citations-left, .citations-right  {
         grid-column:1;
         justify-content: flex-start;
     }
 
-    .screen-text-text-grid a {
-        font-size:var(--smallest-copy-mobile-port-font-size);
-        padding:.5em 0;
-    }
 }
 
 /*  MOBILES LANDSCAPE IS MOBILE  **************************************************************************************************/
@@ -122,58 +120,62 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-    .screen-text-grid a {
+    .facts-text a {
         font-size: var(--small-copy-mobile-land-font-size);
     }
 
-    .screen-text-text-grid {
+    .citations-grid {
         grid-template-columns: repeat(2, 50%);
     }
 
-    .screen-text-left  {
+    .citations-grid a {
+        font-size:var(--tiny-copy-mobile-land-font-size);
+        padding:.5em 0;
+    }
+
+    .citations-left  {
         grid-column:1;
         text-align: left;
         justify-content: flex-start;
     }
 
-    .screen-text-right  {
+    .citations-right  {
         grid-column:2;
         text-align: right;
         justify-content: flex-end;
     }
 
-    .screen-text-text-grid a {
-        font-size:var(--smallest-copy-mobile-land-font-size);
-        padding:.5em 0;
-    }
-
 }
 
-/*  TABLETS PORTRAIT IS MOBILE  *******************************************************************************************/
+/*  TABLETS PORTRAIT  *******************************************************************************************/
 @media only screen
 and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-    .screen-text-grid a {
+    .facts-text a {
         font-size: var(--smallest-copy-tablet-port-font-size);
     }
 
-    .screen-text-text-grid {
-        grid-template-columns: 100%;
-        width:60%;
-        margin:1em 20%;
+    .citations-grid {
+        grid-template-columns: repeat(2, 50%);
     }
 
-    .screen-text-left, .screen-text-right  {
+    .citations-grid a {
+        font-size:var(--tiny-copy-tablet-port-font-size);
+        padding:.5em 0;
+    }
+
+    .citations-left  {
         grid-column:1;
         text-align: left;
         justify-content: flex-start;
     }
 
-    .screen-text-text-grid a {
-        font-size:var(--smallest-copy-tablet-port-font-size);
-        padding:.5em 0;
+    .citations-right  {
+        grid-column:2;
+        text-align: right;
+        justify-content: flex-end;
     }
 
 }
@@ -184,29 +186,29 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    .screen-text-grid a {
+    .facts-text a {
         font-size: var(--small-copy-ipad-port-font-size);
     }
 
-    .screen-text-text-grid {
+    .citations-grid {
         grid-template-columns: repeat(2, 50%);
     }
 
-    .screen-text-left  {
+    .citations-grid a {
+        font-size:var(--tiny-copy-ipad-port-font-size);
+        padding:.5em 0;
+    }
+
+    .citations-left  {
         grid-column:1;
         text-align: left;
         justify-content: flex-start;
     }
 
-    .screen-text-right  {
+    .citations-right  {
         grid-column:2;
         text-align: right;
         justify-content: flex-end;
-    }
-
-    .screen-text-text-grid a {
-        font-size:var(--smallest-copy-ipad-port-font-size);
-        padding:.5em 0;
     }
 
 }
@@ -219,17 +221,17 @@ and (orientation: portrait) {
 and (min-width: 1280px)
 and (orientation: landscape) {
 
-    .screen-image-text-grid,   .screen-text-text-grid,    .screen-prompts {
+    .facts-grid,   .citations-grid {
         width:var(--media-more-than-content-width);
     }
 
-    .screen-image-grid {
+    .facts-image {
         grid-column:1;
         justify-content: center;
         height:600px;
     }
 
-    .screen-text-grid {
+    .facts-text {
         grid-column:2;
         justify-content: flex-end;
         align-content: center;
@@ -244,33 +246,33 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
-    .screen-image-text-grid {
+    .facts-grid {
         grid-template-columns: 40% 60%;
     }
 
-    .screen-text-grid a {
+    .facts-text a {
         font-size: var(--small-copy-tablet-land-font-size);
     }
 
-    .screen-text-text-grid {
+    .citations-grid {
         grid-template-columns: repeat(2, 50%);
     }
 
-    .screen-text-left  {
+    .citations-grid a {
+        font-size:var(--tiny-copy-tablet-land-font-size);
+        padding:.5em 0;
+    }
+
+    .citations-left  {
         grid-column:1;
         text-align: left;
         justify-content: flex-start;
     }
 
-    .screen-text-right  {
+    .citations-right  {
         grid-column:2;
         text-align: right;
         justify-content: flex-end;
-    }
-
-    .screen-text-text-grid a {
-        font-size:var(--smallest-copy-tablet-land-font-size);
-        padding:.5em 0;
     }
 
 }
@@ -281,34 +283,34 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
-    .screen-image-text-grid {
+    .facts-grid {
         grid-template-columns: 50% 50%;
     }
 
-    .screen-text-grid a {
+    .facts-text a {
         font-size: var(--smallest-copy-ipad-land-font-size);
     }
 
-    .screen-text-text-grid {
+    .citations-grid {
         display:inline-grid;
         grid-template-columns: repeat(2, 50%);
     }
 
-    .screen-text-left  {
+    .citations-grid a {
+        font-size:var(--tiny-copy-ipad-land-font-size);
+        padding:.5em 0;
+    }
+
+    .citations-left  {
         grid-column:1;
         text-align: left;
         justify-content: flex-start;
     }
 
-    .screen-text-right  {
+    .citations-right  {
         grid-column:2;
         text-align: right;
         justify-content: flex-end;
-    }
-
-    .screen-text-text-grid a {
-        font-size:var(--smallest-copy-ipad-land-font-size);
-        padding:.5em 0;
     }
 
 }
@@ -321,34 +323,34 @@ and (min-width: 1440px) {
         font-size: var(--big-copy-desktop-font-size);
     }
 
-    .screen-image-text-grid {
+    .facts-grid {
         grid-template-columns: 45% 55%;
     }
 
-    .screen-text-grid a {
+    .facts-text a {
         font-size: var(--smallest-copy-desktop-font-size);
     }
 
-    .screen-text-text-grid {
+    .citations-grid {
         display:inline-grid;
         grid-template-columns: repeat(2, 50%);
     }
 
-    .screen-text-left  {
+    .citations-grid a {
+        font-size:var(--tiny-copy-desktop-font-size);
+        padding:.5em 0;
+    }
+
+    .citations-left  {
         grid-column:1;
         text-align: left;
         justify-content: flex-start;
     }
 
-    .screen-text-right  {
+    .citations-right  {
         grid-column:2;
         text-align: right;
         justify-content: flex-end;
-    }
-
-    .screen-text-text-grid a {
-        font-size:var(--smallest-copy-desktop-font-size);
-        padding:.5em 0;
     }
 
 }
@@ -356,7 +358,7 @@ and (min-width: 1440px) {
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-    .screen-image-text-grid, .screen-text-text-grid,  .screen-prompts {
+    .facts-grid, .citations-grid,  .screen-prompts {
         max-width: var(--screen-width);
     }
 
@@ -379,13 +381,13 @@ and (min-width: 1440px) {
         display:none;
     }
 
-    .screen-image-text-grid  {
+    .facts-grid  {
         display:grid;
         font-family: var(--family-copy);
         margin:auto;
     }
 
-    .screen-image-grid {
+    .facts-image {
         display: grid;
         width: 100%;
     }
@@ -395,30 +397,30 @@ and (min-width: 1440px) {
         background-size: contain;
     }
 
-    .screen-text-grid {
+    .facts-text {
         display: grid;
         width: 100%;
     }
 
-    .screen-text-grid a {
+    .facts-text a {
         text-align: left;
         text-decoration: none;
         color: var(--color-dark-blue);
     }
 
-    .screen-text-text-grid {
+    .citations-grid {
         display:grid;
         margin:auto;
         font-family: var(--family-copy);
     }
 
-    .screen-text-left, .screen-text-right {
-        display:grid;
-        width:100%;
+    .citations-grid a {
+        color:var(--color-dark-blue);
     }
 
-    .screen-text-text-grid a {
-        color:var(--color-dark-blue);
+    .citations-left, .citations-right {
+        display:grid;
+        width:100%;
     }
 
 }

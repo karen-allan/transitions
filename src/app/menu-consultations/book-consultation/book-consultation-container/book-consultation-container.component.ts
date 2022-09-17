@@ -12,7 +12,7 @@ export class BookConsultationContainerComponent implements OnInit {
   subMenuItemId:number = 21;
 
   detailHeaderName = 'header-book-consultation'
-  title='Book an End-of-Life Consultation'
+  title='Book a Consultation'
   detailListName="list-book";
   selectedIntakeForm='caregiver';
 

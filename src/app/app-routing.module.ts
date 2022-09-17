@@ -1,24 +1,16 @@
 import { NgModule } from '@angular/core';
-
 import {Routes, RouterModule} from '@angular/router';
 
 /* MENU ABOUT */
-
 import { AboutEolAdvocacyContainerComponent } from './menu-about/about-eol-advocacy/about-eol-advocacy-container/about-eol-advocacy-container.component';
 import { AboutPractitionerContainerComponent } from './menu-about/about-practitioner/about-practitioner-container/about-practitioner-container.component';
 
-/* MENU BOOK */
+/* MENU CONSULTATION */
+import { RolesOfConsultantContainerComponent } from './menu-consultations/roles-of-consultant/roles-of-consultant-container/roles-of-consultant-container.component';
 import { BookConsultationContainerComponent } from './menu-consultations/book-consultation/book-consultation-container/book-consultation-container.component';
-
-
-/* MENU EOL DOCS */
 
 /* MENU HOME */
 import { HomeContainerComponent } from './menu-home/home-container/home-container.component';
-
-
-import { RolesOfConsultantContainerComponent } from './menu-consultations/roles-of-consultant/roles-of-consultant-container/roles-of-consultant-container.component';
-
 
 /* AS SHOWN ON MENU */
 const routes: Routes = [
@@ -30,12 +22,6 @@ const routes: Routes = [
     {path: 'aboutEndOfLifeAdvocacy', component: AboutEolAdvocacyContainerComponent},
     {path: 'aboutPractitioner', component: AboutPractitionerContainerComponent},
 
-  /*  {path: 'menuDoulaWork', component: EndOfLifePlanningContainerComponent},
-    {path: 'endOfLifePlanning', component: EndOfLifePlanningContainerComponent},
-    {path: 'endOfLifeDocuments', component: EndOfLifeDocumentsContainerComponent},
-    {path: 'createLegacy', component: CreateLegacyContainerComponent},
-    {path: 'chooseMemorial', component: ChooseMemorialContainerComponent},*/
-
     {path: 'menuConsultations', component: RolesOfConsultantContainerComponent},
     {path: 'rolesOfConsultant', component: RolesOfConsultantContainerComponent},
     {path: 'bookConsultation', component: BookConsultationContainerComponent},
@@ -44,14 +30,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports:[RouterModule.forRoot(
-      routes,
-      {
-          useHash: false,
-          scrollPositionRestoration: 'enabled',
-          onSameUrlNavigation: 'reload',
-          anchorScrolling: 'enabled'})],
+    imports:[RouterModule.forRoot(routes,  { scrollPositionRestoration: 'enabled' })],
 
-  exports: [RouterModule]
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }

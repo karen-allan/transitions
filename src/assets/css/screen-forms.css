@@ -756,15 +756,14 @@ and (min-width: 1440px) {
         grid-column: 1/-1;
     }
 
-
-
     /* The menu for Consultation form types */
     .forms-menu-block  {
         display: block;
         max-width:var(--screen-width);
         margin:auto;
         padding:1em 0;
-        border:thin solid var(--color-grey);
+        border-top:dashed thin var(--color-grey);
+        border-bottom:dashed thin var(--color-grey);
         font-family: var(--family-copy);
     }
 

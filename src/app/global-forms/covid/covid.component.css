@@ -151,7 +151,7 @@ and (min-width: 1440px) {
         margin:0 auto;
         color: var(--color-dark-blue);
         font-family: var(--family-copy);
-        border:thin solid var(--color-darkest-blue);
+        border:thin solid var(--color-dark-blue);
     }
 
     .top-prompt, .list-prompt, .question-prompt  {

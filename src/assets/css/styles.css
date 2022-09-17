@@ -106,6 +106,17 @@
   /* ****************************** ALL COPY AND LISTS ****************************** */
   --family-copy: 'Open Sans';
 
+  --tiny-copy-banana-port-font-size:.3em;
+  --tiny-copy-mobile-port-font-size:.5em;
+  --tiny-copy-tablet-port-font-size:.4em;
+  --tiny-copy-ipad-port-font-size:.6em;
+
+  --tiny-copy-banana-land-font-size:.6em;
+  --tiny-copy-mobile-land-font-size:.6em;
+  --tiny-copy-tablet-land-font-size:.5em;
+  --tiny-copy-ipad-land-font-size:0.6em;
+  --tiny-copy-desktop-font-size:0.7em;
+
   --smallest-copy-banana-port-font-size:.4em;
   --smallest-copy-mobile-port-font-size:.7em;
   --smallest-copy-tablet-port-font-size:.6em;

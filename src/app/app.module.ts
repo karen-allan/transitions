@@ -1,6 +1,6 @@
+import { BrowserModule, Meta } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -155,45 +155,21 @@ import { DnrNoCprDocumentComponent } from './menu-doula-work/end-of-life-documen
         RolesOfConsultantOverviewComponent,
 
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-      HttpClientModule,
-      NgxMaskModule.forRoot(),
-      // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
-// and returns simulated server responses.
-// Remove it when a real server is ready to receive requests.
-      HttpClientInMemoryWebApiModule.forRoot(
-          InMemoryDataService, { dataEncapsulation: false }
-      )
-
-  ],
-  providers: [DatePipe],
-  bootstrap: [AppComponent]
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        NgxMaskModule.forRoot(),
+        HttpClientInMemoryWebApiModule.forRoot(
+            InMemoryDataService, { dataEncapsulation: false }
+        )
+    ],
+    providers: [DatePipe, Meta],
+    bootstrap: [AppComponent]
 })
 
 
-
-export class AppModule {
-   /* constructor(router: Router, viewportScroller: ViewportScroller) {
-        //viewportScroller.setOffset([0, 50]);
-        router.events.pipe(filter(e => e instanceof Scroll)).subscribe((e: Scroll) => {
-            if (e.anchor) {
-                // anchor navigation
-                /!* setTimeout is the core line to solve the solution *!/
-                setTimeout(() => {
-                    viewportScroller.scrollToAnchor(e.anchor);
-                })
-            } else if (e.position) {
-                // backward navigation
-                viewportScroller.scrollToPosition(e.position);
-            } else {
-                // forward navigation
-                viewportScroller.scrollToPosition([0, 0]);
-            }
-        });
-    }*/
-}
+export class AppModule { }

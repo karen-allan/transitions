@@ -13,7 +13,7 @@
         <input type="text" class="first-text-column" [(ngModel)]="model.name" id="name" name="name">
         <input [(ngModel)]="model.cellPhone" type="text"
                mask="000-000-0000"
-               class="second-text-column" id="cellphone" name="cellPhone" oninput="this.value=this.value">
+               class="second-text-column" id="cellphone" name="cellPhone" oninput="this.value=value">
 
         <label class="full-text-column" for="email">Email:</label>
         <input type="text" class="full-text-column" [(ngModel)]="model.email" id="email" name="email">
@@ -55,7 +55,7 @@
         <input type="text" class="first-text-column" [(ngModel)]="model.emergName" id="emergName"  name="emergName">
         <input [(ngModel)]="model.emergPhone" type="text"
                mask="000-000-0000"
-               class="second-text-column" id="emergPhone" name="emergPhone" oninput="this.value=this.value">
+               class="second-text-column" id="emergPhone" name="emergPhone" oninput="this.value=value">
 
         <input type="text" class="third-fourth-text-column" [(ngModel)]="model.emergRelation" id="emergRelation"  name="emergRelation">
     </div>
@@ -71,7 +71,7 @@
 
         <input type="text" class="form-control first-text-column" mask="00-00-0000"
                id="birthdate" [(ngModel)]="model.birthdate" name="birthdate"
-               oninput="this.value=this.value">
+               oninput="this.value=value">
 
         <input type="text" class="form-control second-text-column" id="occupation" [(ngModel)]="model.occupation" name="occupation">
         <input type="text" class="form-control third-fourth-text-column" id="referredBy" [(ngModel)]="model.referredBy" name="referredBy">
@@ -91,7 +91,7 @@
         <label class="full-text-column" for="m-cellPhone">Phone:</label>
         <input [(ngModel)]="model.cellPhone" type="text"
                mask="000-000-0000"
-               class="full-text-column" id="m-cellphone" name="cellPhone" oninput="this.value=this.value">
+               class="full-text-column" id="m-cellphone" name="cellPhone" oninput="this.value=value">
 
         <label class="full-text-column" for="m-email">Email:</label>
         <input type="text" class="full-text-column" [(ngModel)]="model.email" id="m-email" name="email">
@@ -139,7 +139,7 @@
         <label class="full-text-column" for="m-emergPhone">Phone:</label>
         <input [(ngModel)]="model.emergPhone" type="text"
                mask="000-000-0000"
-               class="full-text-column" id="m-emergPhone" name="emergPhone" oninput="this.value=this.value">
+               class="full-text-column" id="m-emergPhone" name="emergPhone" oninput="this.value=value">
 
         <label class="full-text-column" for="m-emergRelation">Relationship:</label>
        <input type="text" class="full-text-column margin-bottom-2" [(ngModel)]="model.emergRelation" id="m-emergRelation"  name="emergRelation">
@@ -153,7 +153,7 @@
         <label class="full-text-column" for="m-birthdate">Birthdate: (mm-dd-yyyy)</label>
         <input type="text" class="form-control full-text-column" mask="00-00-0000"
                id="m-birthdate" [(ngModel)]="model.birthdate" name="birthdate"
-               oninput="this.value=this.value">
+               oninput="this.value=value">
 
         <label class="full-text-column" for="m-occupation">Occupation:</label>
         <input type="text" class="form-control full-text-column" id="m-occupation" [(ngModel)]="model.occupation" name="occupation">

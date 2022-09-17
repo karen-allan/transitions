@@ -1,4 +1,4 @@
-import {Component, ElementRef, Input, OnInit, Output, Renderer2, ViewChild} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {Client} from "../../ts-files/client";
 
 @Component({
