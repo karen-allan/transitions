@@ -34,23 +34,20 @@ and (max-width: 1279px) {
         align-content: flex-start;
     }
 
-    .header-logo, .header-name {
-        height:var(--mobile-top-menu-height);
-    }
-
     .logo {
-        background-size: auto;
         background-position: center;
-        background-image:url('src/assets/images/menu/transitionsInEnergyMobileLogo.png');
+        background-image:url('src/assets/images/menu/transitionsInEnergyLogo.png');
         background-repeat: no-repeat;
         margin:0;
     }
 
     .header-name {
-        letter-spacing: 1px;
         justify-content: center;
         text-align: center;
-        font-weight: 500;
+    }
+
+    .top-name {
+        letter-spacing: 3px;
     }
 
     /* ROW 2 slogan - energy medicine treatments - icon - end of life doula support */
@@ -59,7 +56,7 @@ and (max-width: 1279px) {
         display:inline-grid;
         grid-column:1/-1;
         width:100%;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 45% 10% 45%;
         background-color: var(--color-dark-blue);
     }
 
@@ -126,7 +123,7 @@ and (max-width: 1279px) {
         width: 20px;
         height: 2px;
         justify-content: center;
-        background-color: var(--color-darkest-purple);
+        background-color: var(--color-purple);
         margin: 2px 0;
         transition: 0.4s;
     }
@@ -143,7 +140,6 @@ and (max-width: 1279px) {
 
     .mobile-menu {
         overflow: hidden;
-        /*background-color: #333;*/
         position: relative;
     }
 
@@ -161,20 +157,20 @@ and (max-width: 1279px) {
     }
 
     .mobile-selected-top-menu-item {
-        border-bottom:thin solid var(--color-darkest-blue);
+        border-bottom:thin solid var(--color-dark-blue);
     }
 
     .mobile-selected-top-menu-item {
         cursor: default;
         background-color: var(--color-off-white);
-        color: var(--color-darkest-blue);
+        color: var(--color-dark-blue);
     }
 
     .mobile-unselected-top-menu-item a {
         text-decoration: none;
         cursor: pointer;
         color: var(--color-off-white);
-        background-color: var(--color-darkest-blue);
+        background-color: var(--color-dark-blue);
     }
 
     /* MOBILE SUB MENU ITEMS */
@@ -189,16 +185,15 @@ and (max-width: 1279px) {
 
     .mobile-selected-sub-menu-item {
         background-color: var(--color-off-white);
-        color: var(--color-darkest-blue);
+        color: var(--color-purple);
     }
 
     .mobile-unselected-sub-menu-item a {
         text-decoration: none;
         cursor: pointer;
         color: var(--color-off-white);
-        background-color: var(--color-darkest-blue);
+        background-color: var(--color-dark-blue);
     }
-
 
 }
 
@@ -209,16 +204,22 @@ and (max-width: 359px)
 and (orientation: portrait){
 
     .mobile-header-content {
-        grid-template-columns: 55% 45%;
+        grid-template-columns: 45% 55%;
+    }
+
+    .header-logo {
+        background-size: contain;
+        height:var(--banana-top-menu-height);
     }
 
     .header-name {
         font-size: var(--menu-name-banana-port-font-size);
+        height:var(--banana-top-menu-height);
     }
 
     .header-slogans p, .header-slogans span {
         font-size: var(--menu-slogan-banana-port-font-size);
-        letter-spacing: .3em;
+        letter-spacing: .1em;
     }
 
     .mobile-menu-items {
@@ -245,8 +246,14 @@ and (orientation: landscape) {
         grid-template-columns: 35% 65%;
     }
 
+    .header-logo {
+        background-size: auto;
+        height:var(--mobile-top-menu-height);
+    }
+
     .header-name {
         font-size: var(--menu-name-banana-land-font-size);
+        height:var(--mobile-top-menu-height);
     }
 
     .header-slogans p, .header-slogans span {
@@ -274,7 +281,15 @@ and (max-width: 599px)
 and (orientation: portrait) {
 
     .mobile-header-content {
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 35% 65%;
+    }
+
+    .header-logo, .header-name {
+        height:var(--mobile-top-menu-height);
+    }
+
+    .header-logo {
+        background-size: auto;
     }
 
     .header-name {
@@ -309,6 +324,14 @@ and (orientation: landscape) {
         grid-template-columns: 40% 60%;
     }
 
+    .header-logo, .header-name {
+        height:var(--mobile-top-menu-height);
+    }
+
+    .header-logo {
+        background-size: auto;
+    }
+
     .header-name {
         font-size: var(--menu-name-mobile-land-font-size);
     }
@@ -338,6 +361,14 @@ and (orientation: portrait) {
 
     .mobile-header-content {
         grid-template-columns: 40% 60%;
+    }
+
+    .header-logo, .header-name {
+        height:var(--mobile-top-menu-height);
+    }
+
+    .header-logo {
+        background-size: auto;
     }
 
     .header-name {
@@ -372,6 +403,14 @@ and (orientation: portrait) {
         grid-template-columns: 40% 60%;
     }
 
+    .header-logo, .header-name {
+        height:var(--mobile-top-menu-height);
+    }
+
+    .header-logo {
+        background-size: auto;
+    }
+
     .header-name {
         font-size: var(--menu-name-ipad-port-font-size);
     }
@@ -393,6 +432,212 @@ and (orientation: portrait) {
     }
 }
 
+/*******************************************************************************************************************
+  ALL THAT SHOW BIG DESKTOP MENU TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
+*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 1280px)
+and (orientation: landscape) {
+
+    /* header mobile displays in mobile mode and hides in desktop mode */
+    .header-mobile {
+        display: none;
+    }
+
+    /* header desktop displays in desktop mode and hides in mobile mode */
+    .desktop-header {
+        display: block;
+        width:var(--media-more-than-content-width);
+        float:left;
+        margin:auto;
+
+    }
+
+    /* DESKTOP-CONTENT-BLOCK - ROW 1 - with logo, name and slogans - it is 1280 which is tablet width 1280  */
+    .desktop-content-block {
+        display: grid;
+        width:var(--media-more-than-content-width);
+        max-width:var(--tablet-width);
+        margin:auto;
+        font-family: var(--family-menu-copy);
+    }
+
+    /* DESKTOP-CONTENT - 3 grid columns with header-logo, header-name, header-slogans on right  */
+    .desktop-content {
+        display:inline-grid;
+        width:100%;
+        grid-template-columns: 16% 30% 30% 24%;
+        height:var(--desktop-top-menu-height);
+        margin: 0 auto;
+        align-content: flex-start;
+    }
+
+    .header-logo,  .header-name, .header-slogans, .header-socials {
+        display:grid;
+        height:var(--desktop-top-menu-height);
+        align-content: center;
+    }
+
+    .header-logo {
+        grid-column: 1;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        background-size: auto;
+        background-position: center;
+        background-image:url('src/assets/images/menu/transitionsInEnergyLogo.png');
+        background-repeat: no-repeat;
+        margin:0;
+    }
+
+    .header-name {
+        grid-column: 2;
+        border-left: 1px solid #f1f1f1;
+        border-right: 1px solid #f1f1f1;
+        justify-content: center;
+        text-align: center;
+        /*font-weight:600;*/
+    }
+
+    .top-name {
+        letter-spacing: 6px;
+    }
+
+    .header-slogans {
+        grid-column: 3;
+        justify-content: center;
+        align-content: center;
+        border-right:thin solid #f1f1f1;
+    }
+
+    .header-slogans p {
+        letter-spacing: 2px;
+        margin: 0;
+    }
+
+    .slogans-line {
+        background: url("src/assets/images/icons/line.jpg") center repeat-x;
+        width:100%;
+    }
+
+    .header-slogans span {
+        letter-spacing: 3px;
+    }
+
+    .header-socials {
+        grid-column: 4;
+        align-content: center;
+    }
+
+    .top-social a, .bottom-social a {
+        display:block;
+        white-space: nowrap;
+        color:var(--color-dark-blue);
+        font-weight:400;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .bottom-social a  {
+        padding-top: 1em;
+    }
+
+    /* DESKTOP-MENU-BLOCK - ROW 2 - is the top menu for desktop and is full screen banner-width 1920px */
+    .desktop-menu-block {
+        display: grid;
+        width:100%;
+        max-width:var(--banner-width);
+        overflow: hidden;
+        margin:auto;
+        background-color: var(--color-white);
+        border-top:thin solid #f1f1f1;
+        font-family:var(--family-menu-copy);
+    }
+
+    /* DESKTOP-MENU - are a max width of 800px */
+    .desktop-menu {
+        display: inline-grid;
+        align-content: flex-start;
+        margin:auto;
+        width:var(--media-more-than-content-width);
+        grid-template-columns: repeat(2, 50%);
+        height:var(--desktop-bottom-menu-height);
+        max-width:var(--menu-width);
+        /* border-left:thin solid #f1f1f1;
+         border-right:thin solid #f1f1f1;*/
+    }
+
+    /* example uses dropdown instead of desktop-top-menu-item */
+    .desktop-top-menu-item  {
+        display: grid;
+        overflow: hidden;
+        width:100%;
+        justify-content: center;
+        align-content: center;
+        height: var(--desktop-bottom-menu-height);
+        background-color: var(--color-white);
+        font-weight:400;
+    }
+
+    .desktop-top-menu-item span {
+        color:var(--color-dark-blue);
+        cursor:pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        margin-top:var(--desktop-bottom-menu-height);
+        padding: 1.5em 0 2.5em 0;
+        background-color: #fff;
+        box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
+        z-index: 1;
+    }
+
+    .desktop-top-menu-item:hover .dropdown-content {
+        display: block;
+    }
+
+    /* float none forces text to move down row */
+    .dropdown-content a, .dropdown-content span {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        justify-content: center;
+        align-content: center;
+        padding-top: 1.5em;
+        text-decoration: none;
+        width:300px;
+        margin:auto;
+        background-color:var(--color-white);
+        font-family: var(--family-menu-copy);
+    }
+
+    .dropdown-content a {
+        color: var(--color-dark-blue);
+    }
+
+    .dropdown-content a:hover {
+        text-decoration:underline;
+    }
+
+    .dropdown-content span {
+        color: var(--color-dark-grey);
+    }
+
+    .swirl {
+        background-image:url("src/assets/images/menu/intro.gif");
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+        height:15px;
+        padding-top:.2em;
+    }
+
+
+}
+
 /*  TABLETS LANDSCAPE IS DESKTOP MENU *******************************************************************************************/
 @media only screen
 and (min-width: 1280px)
@@ -409,6 +654,7 @@ and (orientation: landscape) {
 
     .header-socials {
         padding-left:.2em;
+
     }
 
     .top-social a, .bottom-social a  {
@@ -459,24 +705,40 @@ and (orientation: landscape) {
 
 }
 
+/* LAPTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width:1919px){
+
+    .header-name {
+        font-size: var(--menu-name-laptop-font-size);
+    }
+}
+
 /* DESKTOPS ****************************************************************************************************/
 @media only screen
-and (min-width: 1440px) {
+and (min-width: 1920px) {
 
     .header-name {
         font-size: var(--menu-name-desktop-font-size);
     }
+}
+
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
 
     .header-slogans p, .header-slogans span {
         font-size: var(--menu-slogan-desktop-font-size);
     }
 
     .header-socials {
-        padding-left:2em;
+        padding-left:.2em;
     }
 
     .top-social a, .bottom-social a  {
-        font-size: var(--desktop-menu-item-desktop-font-size);
+        font-size: var(--menu-social-desktop-font-size);
     }
 
     .desktop-top-menu-item span {
@@ -489,204 +751,7 @@ and (min-width: 1440px) {
 
 }
 
-/*******************************************************************************************************************
-  ALL THAT SHOW BIG DESKTOP MENU TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
-*******************************************************************************************************************/
 
-@media only screen
-and (min-width: 1280px)
-and (orientation: landscape) {
-
-    /* header mobile displays in mobile mode and hides in desktop mode */
-    .header-mobile {
-        display: none;
-    }
-
-    /* header desktop displays in desktop mode and hides in mobile mode */
-    .desktop-header {
-        display: block;
-        width:var(--media-more-than-content-width);
-        float:left;
-        margin:auto;
-    }
-
-    /* DESKTOP-CONTENT-BLOCK - ROW 1 - with logo, name and slogans - it is 1280 which is tablet width 1280  */
-    .desktop-content-block {
-        display: grid;
-        width:var(--media-more-than-content-width);
-        max-width:var(--tablet-width);
-        margin:auto;
-    }
-
-    /* DESKTOP-CONTENT - 3 grid columns with header-logo, header-name, header-slogans on right  */
-    .desktop-content {
-        display:inline-grid;
-        width:100%;
-        grid-template-columns: 17% 36% 30% 17%;
-        height:var(--desktop-top-menu-height);
-        margin: 0 auto;
-        align-content: flex-start;
-    }
-
-    .header-logo,  .header-name, .header-slogans, .header-socials {
-        display:grid;
-        height:var(--desktop-top-menu-height);
-        align-content: center;
-    }
-
-    .header-logo {
-        grid-column: 1;
-        justify-content: flex-start;
-    }
-
-    .logo {
-        background-size: auto;
-        background-position: center;
-        background-image:url('src/assets/images/menu/transitionsInEnergyDesktopLogo.png');
-        background-repeat: no-repeat;
-        margin:0;
-    }
-
-    .header-name {
-        grid-column: 2;
-        border-left: 1px solid #f1f1f1;
-        border-right: 1px solid #f1f1f1;
-        justify-content: center;
-    }
-
-    .header-slogans {
-        grid-column: 3;
-        justify-content: center;
-        align-content: center;
-        border-right:thin solid #f1f1f1;
-    }
-
-    .header-slogans p {
-        letter-spacing: 2px;
-        margin: 0;
-    }
-
-    .slogans-line {
-        background: url("src/assets/images/details/book/line.jpg") center repeat-x;
-        width:100%;
-    }
-
-    .header-slogans span {
-        letter-spacing: 3px;
-    }
-
-    .header-socials {
-        grid-column: 4;
-        justify-content: flex-start;
-        align-content: center;
-    }
-
-    .top-social a, .bottom-social a {
-        display:block;
-        white-space: nowrap;
-        color:var(--color-dark-blue);
-        font-weight:400;
-        text-align: left;
-        text-decoration: none;
-    }
-
-    .bottom-social a  {
-        padding-top: 1em;
-    }
-
-    /* DESKTOP-MENU-BLOCK - ROW 2 - is the top menu for desktop and is full screen banner-width 1920px */
-    .desktop-menu-block {
-        display: grid;
-        width:100%;
-        max-width:var(--banner-width);
-        overflow: hidden;
-        margin:auto;
-        background-color: var(--color-white);
-        border-top:thin solid #f1f1f1;
-    }
-
-     /* DESKTOP-MENU - are a max width of 800px */
-    .desktop-menu {
-        display: inline-grid;
-        align-content: flex-start;
-        margin:auto;
-        width:var(--media-more-than-content-width);
-        grid-template-columns: repeat(4, 25%);
-        height:var(--desktop-bottom-menu-height);
-        max-width:var(--menu-width);
-        border-left:thin solid #f1f1f1;
-        border-right:thin solid #f1f1f1;
-    }
-
-   /* example uses dropdown instead of desktop-top-menu-item */
-    .desktop-top-menu-item  {
-        display: grid;
-        overflow: hidden;
-        width:100%;
-        justify-content: center;
-        align-content: center;
-        height: var(--desktop-bottom-menu-height);
-        background-color: var(--color-white);
-        font-weight:400;
-        font-family:var(--family-menu-copy);
-    }
-
-    .desktop-top-menu-item span {
-        color:var(--color-dark-blue);
-        cursor:pointer;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        margin-top:var(--desktop-bottom-menu-height);
-        padding: 1.5em 0 2.5em 0;
-        background-color: #fff;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-        z-index: 1;
-    }
-
-    .desktop-top-menu-item:hover .dropdown-content {
-        display: block;
-    }
-
-    /* float none forces text to move down row */
-    .dropdown-content a, .dropdown-content span {
-        display: grid;
-        grid-template-columns: 20% 80%;
-        justify-content: center;
-        align-content: center;
-        padding-top: 1.5em;
-        text-decoration: none;
-        width:300px;
-        margin:auto;
-        background-color:var(--color-white);
-        font-family: var(--family-menu-copy);
-    }
-
-    .dropdown-content a {
-        color: var(--color-dark-blue);
-    }
-
-    .dropdown-content a:hover {
-        text-decoration:underline;
-    }
-
-    .dropdown-content span {
-        color: var(--color-darkest-gold);
-    }
-
-    .swirl {
-        background-image:url("src/assets/images/menu/intro.gif");
-        background-position: center;
-        background-size: auto;
-        background-repeat: no-repeat;
-        height:15px;
-        padding-top:.2em;
-    }
-
-
-}
 
 /* GLOBAL *************************************************************************************************************/
 @media screen {
@@ -698,29 +763,35 @@ and (orientation: landscape) {
         align-content: center;
     }
 
+    .header-name, .header-slogans, .header-socials {
+        font-family: var(--family-menu-copy);
+        color: var(--color-dark-blue);
+    }
+
     .header-name {
         display:grid;
         grid-column: 2;
         grid-row:1;
-        text-transform: uppercase;
-        font-family: var(--family-menu-name);
-        color: var(--color-dark-blue);
         align-content: center;
+        line-height: 100%;
+    }
+
+    .top-name {
+        text-transform: uppercase;
+    }
+
+    .bottom-name {
+        padding-top: .2em;
     }
 
     .header-slogans {
         text-transform: uppercase;
-        font-family:var(--family-menu-copy);
-        color: var(--color-dark-blue);
+        text-align: center;
     }
 
     .header-socials {
-        font-family:var(--family-menu-copy);
-        color: var(--color-dark-blue);
-        background-color: var(--color-white);
+        justify-content: center;
     }
-
-
 }
 
 

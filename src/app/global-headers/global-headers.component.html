@@ -1,211 +1,57 @@
 <div id="headers">
-
-<!--    HOME   -->
+    <!--    HOME   -->
     <ng-container *ngIf="detailHeaderName === 'header-home'">
-        <div class="banner-home-image header-home"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;The special theory of relativity states that mass and energy are just different manifestations of the same
-                thing.&#8220;
-                <br>Albert Einstein
+        <div class="header-home-image header-home"></div>
+        <div class="header-copy">
+            <p>&#8220;Unable are the loved to die, for love is immortality.&#8220;
+            <br>Emily Dickinson
             </p>
         </div>
     </ng-container>
 
-<!--    ABOUT   -->
-    <!--ABOUT ME -->
-    <ng-container *ngIf="detailHeaderName === 'header-about-me'">
-        <div class="banner-header-image header-about-me"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;Two roads diverged in a wood, and I took the one less traveled by - and that has made all the difference.&#8220;
-                <br>Robert Frost
+    <!--    ABOUT   -->
+<!--    ABOUT DOULA ADVOCACY WORK -->
+    <ng-container *ngIf="detailHeaderName === 'header-about-eol-advocacy'">
+        <div class="header-detail-image header-about-eol-advocacy"></div>
+        <div class="header-copy">
+            <p>&#8220;In protecting oneself, others are protected. In protecting others, oneself is protected.&#8220;
+                <br>Gautama Buddha
             </p>
         </div>
     </ng-container>
 
-    <!--ABOUT ENERGY PRACTITIONER -->
-    <ng-container *ngIf="detailHeaderName === 'header-about-eem-pract'">
-        <div class="banner-header-image header-about-eem-pract"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;The day science begins to study non-physical phenomena, it will make more progress in one decade than in all
-                previous centuries.&#8220;
-                <br>Nicholas Tesla
+    <!--ABOUT END OF LIFE DOULA PRACTITIONER -->
+    <ng-container *ngIf="detailHeaderName === 'header-about-practitioner'">
+        <div class="header-detail-image header-about-practitioner"></div>
+        <div class="header-copy">
+            <p>&#8220;The dignity we seek in dying must be found in the dignity with which we have lived our lives.&#8220;
+                <br>Sherwin B Nuland
             </p>
         </div>
     </ng-container>
 
-    <!--ABOUT END OF LIFE DOULA -->
-    <ng-container *ngIf="detailHeaderName === 'header-about-doula-pract'">
-        <div class="banner-header-image header-about-doula-pract"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;Still round the corner, there may wait, a new road or a secret gate.&#8220;
-                <br>J.R.R. Tolkien
-            </p>
-        </div>
-    </ng-container>
+    <!-- CONSULTATIONS -->
 
-<!--ENERGY MEDICINE -->
-    <!--REDUCE ANXIETY -->
-    <ng-container *ngIf="detailHeaderName === 'header-energy-anxiety'">
-        <div class="banner-header-image header-energy-anxiety"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;The nearer a man/woman comes to a calm mind, the closer he/she is to strength.&#8220;
-                <br>Marcus Aurelius
-            </p>
-        </div>
-    </ng-container>
-
-    <!--RELIEVE BURNOUT -->
-    <ng-container *ngIf="detailHeaderName === 'header-energy-burnout'">
-        <div class="banner-header-image header-energy-burnout"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;The spirit awakens, the soul revives.&#8220;
-                <br>Lailah Gifty Akita
-            </p>
-        </div>
-    </ng-container>
-
-    <!--REDUCE PAIN -->
-    <ng-container *ngIf="detailHeaderName === 'header-energy-pain'">
-        <div class="banner-header-image header-energy-pain"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;Behind every beautiful thing, there is some kind of pain.&#8220;
-                <br>Bob Dylan
-            </p>
-        </div>
-    </ng-container>
-
-    <!--DO ENERGY EXERCISES -->
-    <ng-container *ngIf="detailHeaderName === 'header-energy-der'">
-        <div class="banner-header-image header-energy-der"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;It is health that is real wealth and not pieces of gold and silver.&#8220;
-                <br>Mahatma Gandhi
-            </p>
-        </div>
-    </ng-container>
-
-    <!--DISCOVER ELEMENT -->
-    <ng-container *ngIf="detailHeaderName === 'header-energy-element'">
-        <div class="banner-header-image header-energy-element"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;The voyage of discovery is not in seeking new landscapes but in having new eyes.&#8220;
-                <br>Marcel Proust
-            </p>
-        </div>
-    </ng-container>
-
-    <!--LEARN MERIDIANS -->
-    <ng-container *ngIf="detailHeaderName === 'header-energy-meridians'">
-        <div class="banner-header-image header-energy-meridians"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;Every moment of our lives we are creating the images and pattens that give our future energy and shape.&#8220;
-                <br>Edgar Cayce
-            </p>
-        </div>
-    </ng-container>
-
-<!-- DOULA WORK -->
-    <ng-container *ngIf="detailHeaderName === 'header-end-of-life-documents'">
-        <div class="banner-header-image header-end-of-life-documents"></div>
-        <div class="banner-header-copy">
+    <!-- ROLES OF A CONSULTANT -->
+    <ng-container *ngIf="detailHeaderName === 'header-roles-of-consultant'">
+        <div class="header-detail-image header-roles-of-consultant"></div>
+        <div class="header-copy">
             <p>&#8220;Always make decisions that prioritize your inner peace.&#8220;
                 <br>Izey Victoria Odiase
             </p>
         </div>
     </ng-container>
 
-    <!-- ADVANCED CARE PLAN FORMS -->
-    <ng-container *ngIf="detailHeaderName === 'header-end-of-life-planning'">
-        <div class="banner-header-image header-end-of-life-planning"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;It is not the length of life, but the depth.&#8220;
-                <br>Ralph Waldo Emerson
-            </p>
-        </div>
-    </ng-container>
-
-    <!-- CREATE LEGACY -->
-    <ng-container *ngIf="detailHeaderName === 'header-create-legacy'">
-        <div class="banner-header-image header-create-legacy"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;To live in the hearts we leave behind is not to die.&#8220;
-                <br>Thomas Campbell
-            </p>
-        </div>
-    </ng-container>
-
-    <!--CHOOSE CEREMONY -->
-    <ng-container *ngIf="detailHeaderName === 'header-choose-memorial'">
-        <div class="banner-header-image header-choose-memorial"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;Graves cannot contain my spirit; death is not the end of time, though my body turns to ashes, I will rest in peace
-                sublime.&#8220;
-                <br>Greta Zwaan
-            </p>
-        </div>
-    </ng-container>
-
-<!-- NON MENU SUBJECTS UNDER 'KNOW YOUR STAGE' -->
-    <!-- REPRESENTATIVE -->
-    <ng-container *ngIf="detailHeaderName === 'header-doc-rep'">
-        <div class="banner-header-image header-doc-rep"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;Strong people stand up for themselves, but stronger people stand up for others .&#8220;
-                <br>Suzy Kassem
-            </p>
-        </div>
-    </ng-container>
-
-    <!-- EDITH FORM -->
-    <ng-container *ngIf="detailHeaderName === 'header-doc-edith'">
-        <div class="banner-header-image header-doc-edith"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;Unable are the loved to die, for love is immortality .&#8220;
-                <br>Emily Dickinson
-            </p>
-        </div>
-    </ng-container>
-
-    <!-- DNR CPR FORMS -->
-    <ng-container *ngIf="detailHeaderName === 'header-doc-dnr'">
-        <div class="banner-header-image header-doc-dnr"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;The dignity we seek in dying must be found in the dignity with which we have lived our lives.&#8220;
-                <br>Sherwin B Nuland
-            </p>
-        </div>
-    </ng-container>
-
-    <!-- ACP WIZARD -->
-    <ng-container *ngIf="detailHeaderName === 'header-wizard-acp'">
-        <div class="banner-header-image header-wizard-acp"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;The dignity we seek in dying must be found in the dignity with which we have lived our lives.&#8220;
-                <br>Sherwin B Nuland
-            </p>
-        </div>
-    </ng-container>
-</div>
-
-<!-- BOOK -->
     <!-- BOOK CONSULTATION -->
     <ng-container *ngIf="detailHeaderName === 'header-book-consultation'">
-        <div class="banner-header-image header-book-consultation"></div>
-        <div class="banner-header-copy">
+        <div class="header-detail-image header-book-consultation"></div>
+        <div class="header-copy">
             <p>&#8220;Sometimes the greatest adventure is simply a conversation.&#8220;
-                <br>Amadeus Wolfe
+            <br>Amadeus Wolfe
             </p>
         </div>
     </ng-container>
 
-    <!--BOOK ENERGY SESSION -->
-    <ng-container *ngIf="detailHeaderName === 'header-book-session'">
-        <div class="banner-header-image header-book-session"></div>
-        <div class="banner-header-copy">
-            <p>&#8220;You can't stay in your corner of the forest waiting for others to come to you. You have to go to them
-                sometimes.&#8220;
-                <br>A. Milne
-            </p>
-        </div>
-    </ng-container>
+
+</div>
 

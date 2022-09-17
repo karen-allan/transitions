@@ -1,0 +1,78 @@
+<div class="forms-menu-block">
+    <div class="forms-menu-heading">
+        I WOULD LIKE TO DISCUSS:
+    </div>
+
+    <ul class="forms-menu">
+        <div class="form-menu-item">
+            <li *ngIf="showPlanningEditor">
+                <span>How to Plan for my Future Care</span>
+            </li>
+            <li *ngIf ="!showPlanningEditor">
+                <a (click)="toggleEditor('planning')">How to Plan for my Future Care</a>
+            </li>
+        </div>
+
+        <div class="form-menu-item">
+            <li *ngIf="showCaregiverEditor">
+                <span>My need for support as caregiver</span>
+            </li>
+            <li *ngIf ="!showCaregiverEditor">
+                <a (click)="toggleEditor('caregiver')">My need for support as caregiver</a>
+            </li>
+        </div>
+
+        <div class="form-menu-item">
+            <li *ngIf="showPatientEditor">
+                <span>My need for support as patient</span>
+            </li>
+            <li *ngIf ="!showPatientEditor">
+                <a (click)="toggleEditor('patient')">My need for support as patient</a>
+            </li>
+        </div>
+    </ul>
+</div>
+
+<ng-container *ngIf="showPlanningEditor">
+    <div class="screen-title pad-top-2">
+        <h2>How to Plan for my Future Care</h2>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="showCaregiverEditor">
+    <div class="screen-title pad-top-2">
+        <h2>My need for support as caregiver</h2>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="showPatientEditor">
+    <div class="screen-title pad-top-2">
+        <h2>My need for support as patient</h2>
+    </div>
+</ng-container>
+
+<div class="content-dark-copy">
+    <p>
+        Please note the information your provide on this form is confidential. You can either print it and bring it with you at our first
+        meeting or - to give me a heads up about your concerns and needs - you can send it beforehand. You can scan it, take screenshots, or
+        ideally save it as a pdf file and attach it in an email. To book an appointment email me at:
+        <a href="mailto:karen@transitionsInEnergy.com">karen@transitionsInEnergy.com</a>
+    </p>
+</div>
+
+<ng-container *ngIf="showPlanningEditor">
+    <app-data-entry-planning-consult [model]="model"></app-data-entry-planning-consult>
+</ng-container>
+
+<ng-container *ngIf="showCaregiverEditor">
+    <app-data-entry-caregiver-consult [model]="model"></app-data-entry-caregiver-consult>
+</ng-container>
+
+<ng-container *ngIf="showPatientEditor">
+    <app-data-entry-patient-consult [model]="model"></app-data-entry-patient-consult>
+</ng-container>
+
+
+
+
+

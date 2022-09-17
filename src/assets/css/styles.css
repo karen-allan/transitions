@@ -1,7 +1,5 @@
 
-/* ANGULAR 13.1.2 */
 :root {
-
 
   --menu-speed: 0.75s;
 
@@ -9,41 +7,18 @@
   --overlay-color: rgba(244,239,251, 0.95);
 
   /* global colors */
-  --color-light-purple:#b19cd9;
-  --color-purple: #5d34a5;
-  --color-dark-purple: #983096;
-  --color-darkest-purple:#623061;
-  --color-quotes-purple:#8773aa;
-
-  --color-bright-blue:#a6c2dd;
-  --color-lightest-blue:#9bb3da;
-  --color-light-blue:#5b89d5;
+  --color-purple:#8773aa;
+  --color-dark-pink:#f2f2d6;
   --color-dark-blue:#5a7d9f;
-  --color-darkest-blue:#183552;
-  --color-soft-blue:#bac9d5;
-
+  --color-soft-blue:#a3bacd;
   --color-off-white:#f7efef;
   --color-white:#ffffff;
-
   --color-grey:#666161;
   --color-dark-grey: #878787;
-
-  --color-lightest-pink:#fae8ed;
-  --color-light-pink:#ffd1dc;
-  --color-dark-pink:#d8699d;
-
-  --color-gold:#ffd700;
-  --color-light-gold:#f4c46c;
-  --color-dark-gold:#f6bd54;
-  --color-darkest-gold:#e09304;
-
-  --color-brown:#4a3f29;
-  --color-black:#362f32;
-
-  --color-grey-purple:#656281;
-  --color-orange:#f0ab26;
-
-  --color-sub-menu:#a4b5d2;
+  --color-background-purple:#4a333b;
+  --color-background-pink:#f4e6f3;
+  --color-background-blue:#7aaad8;
+  --color-background-yellow: #f0f0cf;
 
   /* CONTENT WIDTHS */
   /* if the content container --content-width (800) and the device css is smaller than 800px it needs space on either side 90%
@@ -52,15 +27,14 @@
   --menu-width:840px;
   --tablet-width:1280px;
   --screen-width:1152px;
-  --banner-width:1920px;
+  --banner-width:1440px;
+  --header-width:1920px;
 
   --media-less-than-content-width:90%;
   /* this is if the minimum width of the device css is larger than 800px (it does not need extra space on the side */
   --media-more-than-content-width:100%;
 
-
-/* MENU DESIGN */
-
+  /* MENU DESIGN */
   /* ******************************* DESKTOP MENU ROW - ADDS UP TO 205 px *********************** */
 
   /* first row has 100 for Logo, Name and Slogans  */
@@ -69,31 +43,32 @@
   --desktop-bottom-menu-height:50px;
 
   /* ******************************* MOBILE MENU is 3 rows *******************************************/
+  --banana-top-menu-height:100px;
   --mobile-top-menu-height:120px;
   --mobile-middle-menu-height:50px;
   --mobile-bottom-menu-height:45px;
 
   /* ****************************** FONT SIZES ************************************ */
-   /* ALL HEADER FONTS HERE
-   NAME = TYPE MONUMENT */
-  --family-menu-name:'Monument-Valley';
+
+  /* ****************************** MENU FONTS****************************** */
+  --family-menu-copy:'Gadugi';
 
   --menu-name-banana-port-font-size:.9em;
-  --menu-name-banana-land-font-size:2.2em;
-  --menu-name-mobile-port-font-size:1.3em;
-  --menu-name-mobile-land-font-size:3.2em;
-  --menu-name-tablet-port-font-size:2.3em;
-  --menu-name-tablet-land-font-size:2.7em;
-  --menu-name-ipad-port-font-size:2.8em;
-  --menu-name-ipad-land-font-size:2.8em;
-  --menu-name-desktop-font-size:2.9em;
+  --menu-name-banana-land-font-size:1.4em;
+  --menu-name-mobile-port-font-size:1.2em;
+  --menu-name-mobile-land-font-size:1.8em;
 
-  /* HEADER SLOGAN - TYPE RENE */
-  --family-menu-copy:'ReneB-Book';
+  --menu-name-tablet-port-font-size:1.6em;
+  --menu-name-ipad-port-font-size:1.8em;
+
+  --menu-name-tablet-land-font-size:1.9em;
+  --menu-name-ipad-land-font-size:1.9em;
+  --menu-name-laptop-font-size:1.9em;
+  --menu-name-desktop-font-size:2.0em;
 
   /* these show the mobile menu - white on blue */
   --menu-slogan-banana-port-font-size:.4em;
-  --menu-slogan-banana-land-font-size:.7em;
+  --menu-slogan-banana-land-font-size:.6em;
   --menu-slogan-mobile-port-font-size:.5em;
   --menu-slogan-mobile-land-font-size:.8em;
   --menu-slogan-tablet-port-font-size:.7em;
@@ -108,143 +83,174 @@
   --menu-social-ipad-tablet-land-font-size:.7em;
   --menu-social-desktop-font-size:.8em;
 
-  /* DESKTOP MENU ITEMS - TYPE RENE */
-  --desktop-menu-item-tablet-land-font-size:.7em;
-  --desktop-menu-item-ipad-land-font-size:.8em;
-  --desktop-menu-item-desktop-font-size:.9em;
+  /* DESKTOP MENU ITEMS  */
+  --desktop-menu-item-tablet-land-font-size:.8em;
+  --desktop-menu-item-ipad-land-font-size:.9em;
+  --desktop-menu-item-desktop-font-size:1em;
 
   /* DESKTOP SUB MENU ITEMS NOW OFF TOP MENU */
   --desktop-sub-menu-item-tablet-land-font-size:.6em;
   --desktop-sub-menu-item-ipad-land-font-size:.7em;
   --desktop-sub-menu-item-desktop-font-size:.8em;
 
-  /* MOBILE MENU ITEMS - TYPE RENE */
+  /* MOBILE MENU ITEMS  */
   --mobile-main-menu-item-banana-font-size:.7em;
   --mobile-main-menu-item-mobile-font-size:.8em;
   --mobile-main-menu-item-tablet-ipad-font-size:.9em;
 
-  /* MOBILE SUB MENU ITEMS - TYPE RENE */
+  /* MOBILE SUB MENU ITEMS  */
   --mobile-sub-menu-item-banana-font-size:.6em;
   --mobile-sub-menu-item-mobile-font-size:.7em;
   --mobile-sub-menu-item-tablet-ipad-font-size:.8em;
 
-
-  /* ALL COPY AND LISTS USE OPEN SANS */
+  /* ****************************** ALL COPY AND LISTS ****************************** */
   --family-copy: 'Open Sans';
 
-  --smallest-copy-banana-port-font-size:.6em;
-  --smallest-copy-banana-land-font-size:.7em;
+  --smallest-copy-banana-port-font-size:.4em;
   --smallest-copy-mobile-port-font-size:.7em;
-  --smallest-copy-mobile-land-font-size:.8em;
   --smallest-copy-tablet-port-font-size:.6em;
-  --smallest-copy-tablet-land-font-size:.7em;
   --smallest-copy-ipad-port-font-size:.8em;
+
+  --smallest-copy-banana-land-font-size:.7em;
+  --smallest-copy-mobile-land-font-size:.8em;
+  --smallest-copy-tablet-land-font-size:.7em;
   --smallest-copy-ipad-land-font-size:0.8em;
   --smallest-copy-desktop-font-size:0.9em;
 
   --small-copy-banana-port-font-size:.6em;
-  --small-copy-banana-land-font-size:.7em;
   --small-copy-mobile-port-font-size:.7em;
-  --small-copy-mobile-land-font-size:.8em;
   --small-copy-tablet-port-font-size:.8em;
-  --small-copy-tablet-land-font-size:.9em;
   --small-copy-ipad-port-font-size:.9em;
+
+  --small-copy-banana-land-font-size:.7em;
+  --small-copy-mobile-land-font-size:.8em;
+  --small-copy-tablet-land-font-size:.9em;
   --small-copy-ipad-land-font-size:1.0em;
   --small-copy-desktop-font-size:1.1em;
 
   /* MEDIUM */
   --med-copy-banana-port-font-size:.7em;
-  --med-copy-banana-land-font-size:.8em;
   --med-copy-mobile-port-font-size:.8em;
-  --med-copy-mobile-land-font-size:.9em;
   --med-copy-tablet-port-font-size:.9em;
-  --med-copy-tablet-land-font-size:1em;
   --med-copy-ipad-port-font-size:1em;
+
+  --med-copy-banana-land-font-size:.8em;
+  --med-copy-mobile-land-font-size:.9em;
+  --med-copy-tablet-land-font-size:1em;
   --med-copy-ipad-land-font-size:1.1em;
   --med-copy-desktop-font-size:1.2em;
 
   /* BIG not yet used */
   --big-copy-banana-port-font-size:.8em;
-  --big-copy-banana-land-font-size:.9em;
   --big-copy-mobile-port-font-size:.9em;
-  --big-copy-mobile-land-font-size:1em;
   --big-copy-tablet-port-font-size:1.2em;
-  --big-copy-tablet-land-font-size:1.3em;
   --big-copy-ipad-port-font-size:1.3em;
+
+  --big-copy-banana-land-font-size:.9em;
+  --big-copy-mobile-land-font-size:1em;
+  --big-copy-tablet-land-font-size:1.3em;
   --big-copy-ipad-land-font-size:1.4em;
   --big-copy-desktop-font-size:1.5em;
 
-  /*
+  /* H1 Whitney-Book   /*'';    */
+  --h1-copy-banana-port-font-size:.7em;
+  --h1-copy-mobile-port-font-size:.7em;
+  --h1-copy-tablet-port-font-size:1.1em;
+  --h1-copy-ipad-port-font-size:1.4em;
 
-  /* ALL QUOTES - USES FAMILY QUOTES */
-  --family-quotes:Monotype Corsiva;
-
-  --big-quote-banana-port-font-size:.6em;
-  --big-quote-banana-land-font-size:.8em;
-  --big-quote-mobile-port-font-size:.9em;
-  --big-quote-mobile-land-font-size:1.1em;
-  --big-quote-tablet-port-font-size:1.2em;
-  --big-quote-tablet-land-font-size:1.5em;
-  --big-quote-ipad-port-font-size:1.5em;
-  --big-quote-ipad-land-font-size:1.6em;
-  --big-quote-desktop-font-size:1.7em;
-
-  --small-quote-banana-port-font-size:.6em;
-  --small-quote-banana-land-font-size:.8em;
-  --small-quote-mobile-port-font-size:.9em;
-  --small-quote-mobile-land-font-size:1em;
-  --small-quote-tablet-port-font-size:1.1em;
-  --small-quote-tablet-land-font-size:1.2em;
-  --small-quote-ipad-port-font-size:1.3em;
-  --small-quote-ipad-land-font-size:1.4em;
-  --small-quote-desktop-font-size:1.5em;
-
-  /* *********************************** ALL HEADINGS - USE WHITNEY BOOK ************************************* */
-  --family-headers: 'Whitney-Book';
-  /* H1 */
-  --h1-banana-port-font-size:.8em;
-  --h1-banana-land-font-size:1.5em;
-  --h1-mobile-port-font-size:1.1em;
-  --h1-mobile-land-font-size:1.6em;
-  --h1-tablet-port-font-size:1.4em;
-  --h1-tablet-land-font-size:1.7em;
-  --h1-ipad-port-font-size:1.6em;
-  --h1-ipad-land-font-size:1.8em;
-  --h1-desktop-font-size:1.9em;
+  --h1-copy-banana-land-font-size:0.9em;
+  --h1-copy-mobile-land-font-size:1.2em;
+  --h1-copy-tablet-land-font-size:1.7em;
+  --h1-copy-ipad-land-font-size:1.8em;
+  --h1-copy-desktop-font-size:1.9em;
 
   /* H2 */
-  --h2-banana-port-font-size:.7em;
-  --h2-banana-land-font-size:1.2em;
-  --h2-mobile-port-font-size:1.0em;
-  --h2-mobile-land-font-size:1.3em;
-  --h2-tablet-port-font-size:1.1em;
-  --h2-tablet-land-font-size:1.2em;
-  --h2-ipad-port-font-size:1.3em;
-  --h2-ipad-land-font-size:1.5em;
-  --h2-desktop-font-size:1.6em;
+  --h2-copy-banana-port-font-size:0.7em;
+  --h2-copy-mobile-port-font-size:0.9em;
+  --h2-copy-tablet-port-font-size:1.2em;
+  --h2-copy-ipad-port-font-size:1.3em;
+
+  --h2-copy-banana-land-font-size:0.9em;
+  --h2-copy-mobile-land-font-size:1.3em;
+  --h2-copy-tablet-land-font-size:1.6em;
+  --h2-copy-ipad-land-font-size:1.7em;
+  --h2-copy-desktop-font-size:1.8em;
+
+  /* ALL QUOTES - USES FAMILY QUOTES */
+  --family-quotes: 'Goudy Old Style';
+
+  /* the banner quotes */
+  --big-quote-banana-port-font-size:.5em;
+  --big-quote-mobile-port-font-size:.8em;
+  --big-quote-tablet-port-font-size:1.0em;
+  --big-quote-ipad-port-font-size:1.2em;
+
+  --big-quote-banana-land-font-size:.7em;
+  --big-quote-mobile-land-font-size:1.1em;
+  --big-quote-tablet-land-font-size:1.3em;
+  --big-quote-ipad-land-font-size:1.4em;
+  --big-quote-desktop-font-size:1.5em;
+
+  /* the detail page quotes */
+  --small-quote-banana-port-font-size:.6em;
+  --small-quote-mobile-port-font-size:.7em;
+  --small-quote-tablet-port-font-size:.8em;
+  --small-quote-ipad-port-font-size:.9em;
+
+  --small-quote-banana-land-font-size:.7em;
+  --small-quote-mobile-land-font-size:.8em;
+  --small-quote-tablet-land-font-size:.9em;
+  --small-quote-ipad-land-font-size:1.0em;
+  --small-quote-desktop-font-size:1.1em;
+
+  --tiny-quote-banana-port-font-size:.5em;
+  --tiny-quote-mobile-port-font-size:.6em;
+  --tiny-quote-tablet-port-font-size:0.7em;
+  --tiny-quote-ipad-port-font-size:.9em;
+
+  --tiny-quote-banana-land-font-size:.6em;
+  --tiny-quote-mobile-land-font-size:0.7em;
+  --tiny-quote-tablet-land-font-size:0.8em;
+  --tiny-quote-ipad-land-font-size:0.9em;
+  --tiny-quote-desktop-font-size:1.0em;
+
+  /* *********************************** ALL HEADINGS - ************************************* */
+  /*--family-headers:'Gadugi', 'ReneB-Book', 'Whitney-Book';*/
+  --family-headers:'Gadugi';
+  --h1-header-banana-port-font-size:.6em;
+  --h1-header-mobile-port-font-size:.7em;
+  --h1-header-tablet-port-font-size:1.1em;
+  --h1-header-ipad-port-font-size:1.4em;
+
+  --h1-header-banana-land-font-size:0.9em;
+  --h1-header-mobile-land-font-size:1.2em;
+  --h1-header-tablet-land-font-size:1.7em;
+  --h1-header-ipad-land-font-size:1.8em;
+  --h1-header-desktop-font-size:1.9em;
+
+  /* H2 */
+  --h2-header-banana-port-font-size:.7em;
+  --h2-header-mobile-port-font-size:.8em;
+  --h2-header-tablet-port-font-size:1.1em;
+  --h2-header-ipad-port-font-size:1.3em;
+
+  --h2-header-banana-land-font-size:1.0em;
+  --h2-header-mobile-land-font-size:1.2em;
+  --h2-header-tablet-land-font-size:1.6em;
+  --h2-header-ipad-land-font-size:1.7em;
+  --h2-header-desktop-font-size:1.8em;
 
   /* H3 */
-  --h3-banana-port-font-size:.6em;
-  --h3-banana-land-font-size:1.1em;
-  --h3-mobile-port-font-size:.9em;
-  --h3-mobile-land-font-size:1.2em;
-  --h3-tablet-port-font-size:1em;
-  --h3-tablet-land-font-size:1.1em;
-  --h3-ipad-port-font-size:1.2em;
-  --h3-ipad-land-font-size:1.4em;
-  --h3-desktop-font-size:1.5em;
+  --h3-header-banana-port-font-size:.3em;
+  --h3-header-mobile-port-font-size:.4em;
+  --h3-header-tablet-port-font-size:1.0em;
+  --h3-header-ipad-port-font-size:1.1em;
 
-  /* H4 */
-  --h4-banana-port-font-size:.5em;
-  --h4-banana-land-font-size:1em;
-  --h4-mobile-port-font-size:.8em;
-  --h4-mobile-land-font-size:1.1em;
-  --h4-tablet-port-font-size:.9em;
-  --h4-tablet-land-font-size:1em;
-  --h4-ipad-port-font-size:1.1em;
-  --h4-ipad-land-font-size:1.3em;
-  --h4-desktop-font-size:1.4em;
-
+  --h3-header-banana-land-font-size:.8em;
+  --h3-header-mobile-land-font-size:0.9em;
+  --h3-header-tablet-land-font-size:1.4em;
+  --h3-header-ipad-land-font-size:1.5em;
+  --h3-header-desktop-font-size:1.6em;
 
 
   /* *********************************************** LINE HEIGHTS *****************************************************/
@@ -257,10 +263,13 @@
 
 }
 
+
+
+
+
 /* GLOBAL  ***********************************************************************************************************/
 
 @media only screen {
-
   /* constant widths */
   html, body {
     max-width: 1920px;
@@ -290,8 +299,8 @@
   }
 
   .footer-bottom {
-    padding-bottom: 1em;
-    background-color: var(--color-light-blue);
+    padding:1em;
+    background-color: var(--color-dark-blue);
   }
 
 
@@ -411,25 +420,8 @@
     border-left: thin solid var(--color-soft-blue);
   }
 
-  .with-white-border {
-    border: thin solid var(--color-off-white);
-  }
 
-  .top-white-border {
-    border-top: thin solid var(--color-off-white);
-  }
 
-  .bottom-white-border {
-    border-bottom: thin solid var(--color-off-white);
-  }
-
-  .right-white-border {
-    border-right: 1px solid var(--color-off-white);
-  }
-
-  .left-white-border {
-    border-left: 1px solid var(--color-off-white);
-  }
 
   .border-radius-left-only {
     border-top-left-radius: 3em;
@@ -460,13 +452,7 @@
     color: #ffffff;
   }
 
-  .color-dark-purple {
-    color: var(--color-dark-purple);
-  }
 
-  .color-gold {
-    color: var(--color-dark-gold);
-  }
 
   .background-blue {
     background-color: #5b89d5;
@@ -491,7 +477,7 @@
   }
 
   .backcolor-water-selected {
-    background: radial-gradient(circle at 100px 100px, #a6c2dd, #d4dee7);
+    background: radial-gradient(circle at 100px 100px, #557ea6, #000);
   }
 
   /* WOOD */
@@ -663,6 +649,18 @@
     padding-right: 6em;
   }
 
+  .with-faded-background {
+    background-image: linear-gradient(to right, var(--color-soft-blue), var(--color-off-white));
+  }
+
+  .with-underline {
+    border-bottom: dashed thin var(--color-soft-blue);
+  }
+
+  .with-solid-underline {
+    border-bottom: solid thin var(--color-dark-blue);
+  }
+
   :focus {
     outline: 0;
   }
@@ -694,95 +692,18 @@
     clear: both;
   }
 
-
-
-
-  .with-faded-background {
-    background-image: linear-gradient(to right, var(--color-lightest-blue), var(--color-off-white));
-  }
-
-  .with-underline {
-    border-bottom: dashed thin var(--color-soft-blue);
-  }
-
-  .with-solid-underline {
-    border-bottom: solid thin var(--color-dark-blue);
-  }
-
-  /* FONTS */
   @font-face {
-    font-family: Green-Hostel;
-    src: url("../fonts/GreenHostel-2OLr3.otf") format("opentype");
-  }
-
-  /* @font-face {
-     font-family: High-Billion;
-     src: url("../fonts/HighBillionSans-eZ1Kx.otf") format("opentype");
-   }*/
-  @font-face {
-    font-family: Monument-Valley;
-    src: url("../fonts/MonumentValley12-X55o.otf") format("opentype");
+    font-family: "Gadugi";
+    src: local("Gadugi"), url(../fonts/gadugi.ttf) format("truetype");
   }
 
   @font-face {
-    font-family: ReneB-Book;
-    src: url("../fonts/ReneBiederMilliardBook.otf") format("opentype");
+    font-family: "Goudy Old Style";
+    src: local("Goudy Old Style"), url(../fonts/goudi-olde-style-2.ttf) format("truetype");
   }
-
-  @font-face {
-    font-family: ReneB-Extra-Light;
-    src: url("../fonts/ReneBiederMilliardExtraLight.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: ReneB-Hairline;
-    src: url("../fonts/ReneBiederMilliardHairline.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: ReneB-Light;
-    src: url("../fonts/ReneBiederMilliardLight.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: ReneB-Medium;
-    src: url("../fonts/ReneBiederMilliardMedium.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: ReneB-Thin;
-    src: url("../fonts/ReneBiederMilliardThin.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: Whitney-Book;
-    src: url("../fonts/whitneybooksc.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: Whitney-Light;
-    src: url("../fonts/whitneylightsc.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: Whitney-Medium;
-    src: url("../fonts/whitneymediumsc.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: Whitney-Medium-Italic;
-    src: url("../fonts/whitneymediumitalicsc.otf") format("opentype");
-  }
-
-  @font-face {
-    font-family: Whitney-SSm-Book;
-    src: url("../fonts/Whitney SSm Book.ttf") format("opentype");
-  }
-
-  @font-face {
-    font-family: Whitney-SSm-Semibold;
-    src: url("../fonts/Whitney SSm Semibold.ttf") format("opentype");
-  }
-
 
 }
+
+
+
+

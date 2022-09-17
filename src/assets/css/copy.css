@@ -1,0 +1,227 @@
+
+/*******************************************************************************************************************
+  ALL BANANAS, MOBILES AND TABLET AND IPAD PORTRAIT (MAX IS 1 less than TABLET LANDSCAPE at and (min-width: 1280px))
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 1279px) {
+
+    .content-dark-copy, .content-light-copy, .content-clear-copy {
+        width:var(--media-less-than-content-width);
+    }
+}
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-banana-port-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-banana-port-font-size);
+    }
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-banana-land-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-banana-land-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-mobile-port-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-mobile-port-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-mobile-land-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-mobile-land-font-size);
+        line-height:var(--mobile-copy-line-height);
+    }
+
+}
+
+/* TABLETS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-tablet-port-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-tablet-port-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-ipad-port-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-ipad-port-font-size);
+        line-height:var(--copy-line-height);
+    }
+}
+
+/*******************************************************************************************************************
+  ALL THAT SHOW DESKTOP - TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
+*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 1280px)
+and (orientation: landscape) {
+
+    .content-dark-copy, .content-light-copy, .content-clear-copy  {
+        width: var(--media-more-than-content-width);
+    }
+
+
+}
+
+/* TABLETS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-tablet-land-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-tablet-land-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+}
+
+
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-ipad-land-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-ipad-land-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+}
+
+/* DESKTOPS AND LAPTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
+        font-size: var(--small-copy-desktop-font-size);
+        line-height:var(--copy-line-height);
+    }
+
+    .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
+        font-size: var(--smallest-copy-desktop-font-size);
+    }
+
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .content-dark-copy, .content-light-copy, .content-clear-copy, .content-bordered-copy {
+        display: grid;
+        margin: auto;
+        max-width: var(--content-width);
+    }
+
+    .content-dark-copy, .content-light-copy, .content-clear-copy, .content-white-copy, .content-bordered-copy {
+        font-family: var(--family-copy);
+    }
+
+    .content-bordered-copy {
+        width:90%;
+        padding:1em 5%;
+        border:thin solid var(--color-soft-blue);
+    }
+
+    .content-dark-copy p, .content-dark-copy p a, .content-dark-copy span, .content-dark-copy span a, .content-bordered-copy p {
+        color: var(--color-dark-blue);
+    }
+
+    .content-light-copy p, .content-light-copy p a, .content-light-copy span, .content-light-copy span a {
+        color: var(--color-white);
+        padding:1em;
+    }
+
+    .content-white-copy p, .content-white-copy p a, .content-white-copy span, .content-white-copy span a {
+        color: var(--color-white);
+    }
+
+    .content-dark-copy p a, .content-light-copy p a, .content-clear-copy p a, .content-white-copy p a,
+    .content-dark-copy span a, .content-light-copy span a, .content-clear-copy span a, content-white-copy span a {
+        font-weight:800;
+    }
+
+}

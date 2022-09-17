@@ -1,0 +1,298 @@
+
+
+/*******************************************************************************************************************
+  ALL USE THE MAXIMUM BANNER WIDTH
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 240px) {
+
+    .header-home-image, .header-detail-image, .header-copy {
+        width:var(--media-more-than-content-width);
+    }
+
+}
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .header-home-image {
+        height:122px;
+    }
+
+    .header-detail-image {
+        height:88px;
+    }
+
+    .header-copy p {
+        font-size:var(--big-quote-banana-port-font-size);
+    }
+
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .header-home-image {
+        height:289px;
+    }
+
+    .header-detail-image {
+        height:207px;
+    }
+
+    .header-copy p {
+        font-size:var(--big-quote-banana-land-font-size);
+        line-height:100%;
+    }
+
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .header-home-image {
+        height:183px;
+    }
+
+    .header-detail-image {
+        height:131px;
+    }
+
+    .header-copy p {
+        font-size:var(--big-quote-mobile-port-font-size);
+        line-height:100%;
+
+    }
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .header-home-image {
+        height:456px;
+    }
+
+    .header-detail-image {
+        height:327px;
+    }
+
+    .header-copy p {
+        font-size:var(--big-quote-mobile-land-font-size);
+        line-height:100%;
+    }
+
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .header-home-image {
+        height:306px;
+    }
+
+    .header-detail-image {
+        height:219px;
+    }
+
+    .header-copy p {
+        font-size:var(--big-quote-tablet-port-font-size);
+        line-height:150%;
+    }
+
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .header-home-image {
+        height:652px;
+    }
+
+    .header-detail-image {
+        height:467px;
+    }
+
+    .header-copy p {
+        font-size:var(--big-quote-tablet-land-font-size);
+        line-height:150%;
+    }
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .header-home-image {
+        height:522px;
+    }
+
+    .header-detail-image {
+        height:373px;
+    }
+
+    .header-copy p {
+        font-size:var(--big-quote-ipad-port-font-size);
+        line-height:150%;
+    }
+
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .header-home-image {
+        height:696px;
+    }
+
+    .header-detail-image {
+        height:498px;
+    }
+
+    .header-copy p {
+        font-size:var(--big-quote-ipad-land-font-size);
+        line-height:150%;
+    }
+
+}
+
+/* LAPTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width:1919px) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .header-home-image {
+        height:734px;
+    }
+
+    .header-detail-image {
+        height:525px;
+    }
+
+    .header-copy p {
+        font-size:var(--big-quote-desktop-font-size);
+        line-height:150%;
+    }
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .header-home-image {
+        height:700px;
+    }
+
+    /* 1920 by 700 */
+    .header-detail-image {
+        height:700px;
+    }
+
+    .header-copy p {
+        font-size:var(--big-quote-desktop-font-size);
+        line-height:150%;
+    }
+
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .header-home-image, .header-detail-image, .header-copy  {
+        max-width: var(--header-width);
+    }
+
+    /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
+    .header-detail-image {
+        display: block;
+        float: left;
+    }
+
+    .header-copy {
+        display: block;
+        float: left;
+        text-align: center;
+        background-color: var(--color-dark-blue); /* Fallback color */
+        color: var(--color-white);
+        border: 1px solid #f1f1f1;
+    }
+
+    .header-copy p {
+        font-family: var(--family-quotes);
+        font-style: italic;
+        font-weight: 400;
+        padding: 0 1em;
+        line-height: 120%;
+    }
+
+    /* HOME  */
+    .header-home {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/home/headerHome.jpg');
+    }
+
+    /* ABOUT  */
+    .header-about-eol-advocacy {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/about/headerAboutEolAdvocacy.jpg');
+    }
+
+    .header-about-practitioner {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/about/headerAboutPractitioner.jpg');
+    }
+
+    .header-roles-of-consultant {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/consultations/headerRolesOfConsultants.jpg');
+    }
+
+    .header-book-consultation {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/consultations/headerBookConsultation.jpg');
+    }
+
+
+
+
+}

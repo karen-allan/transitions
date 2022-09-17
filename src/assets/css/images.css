@@ -1,0 +1,175 @@
+
+/* THE CSS THAT IS WITHIN COMPONENTS ARE
+
+GLOBAL-MENU.CSS
+GLOBAL-FORM-SECTIONS: COVID.CSS
+MENU-ENERGY-MEDICINE-DISCOVER-ELEMENT-ELEMENT-WHEEL
+MENU-ENERGY-MEDICINE-DO-ENERGY-EXERCISES
+MENU-ENERGY-MEDICINE-MERIDIAN-TRACING-VIDEOS
+MENU-ENERGY-MEDICINE-MERIDIAN-WHEEL
+MENU-EOL-DOCS-FRAILTY-MENU-OVERVIEW
+
+ */
+
+/*******************************************************************************************************************
+  ALL BANANAS, MOBILES AND TABLET AND IPAD PORTRAIT (MAX IS 1 less than TABLET LANDSCAPE at and (min-width: 1280px))
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 1279px) {
+
+    .screen-images {
+        width:var(--media-less-than-content-width);
+    }
+
+    .background-video, .content-images  {
+        width:var(--media-less-than-content-width);
+    }
+
+}
+
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    .background-video {
+        height:150px;
+    }
+
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    .background-video {
+        height:250px;
+    }
+
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    .background-video {
+        height:150px;
+    }
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    .background-video {
+        height:250px;
+    }
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    .background-video {
+        height:300px;
+    }
+}
+
+
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    .background-video {
+        height:300px;
+    }
+}
+
+/*******************************************************************************************************************
+  ALL THAT SHOW DESKTOP - TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
+*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 1280px)
+and (orientation: landscape) {
+
+    .screen-images {
+        width:var(--media-more-than-content-width);
+    }
+
+    .content-images   {
+        width:var(--media-more-than-content-width);
+    }
+
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    .background-video {
+        height:350px;
+    }
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    .background-video {
+        height:400px;
+    }
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    .screen-images   {
+        padding-bottom:2em;
+    }
+
+    .background-video {
+        height:400px;
+    }
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .screen-images {
+        max-width: var(--header-width);
+        display:grid;
+        margin:1em auto;
+    }
+
+    .background-video, .content-images   {
+        display:grid;
+        max-width:var(--content-width);
+        margin:1em auto;
+    }
+
+    .screen-images img, .content-images img {
+        max-width:100%;
+        height:auto;
+    }
+}

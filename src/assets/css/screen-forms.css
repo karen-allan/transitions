@@ -416,7 +416,7 @@ and (orientation: landscape) {
         display: none;
     }
 
-    .forms-desktop, forms-both {
+    .forms-desktop, .forms-both {
         display: block;
         width: 100%;
         margin:auto;
@@ -646,7 +646,7 @@ and (min-width: 1440px) {
 
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
         display:inline;
-        border:1px dashed var(--color-light-blue);
+        border:1px dashed var(--color-dark-blue);
         margin-bottom:1em;
         padding:1em;
         text-align:left;
@@ -659,7 +659,7 @@ and (min-width: 1440px) {
         height: 50px;
         font-family: var(--family-headers);
         text-transform: uppercase;
-        border: solid thin var(--color-light-blue);
+        border: solid thin var(--color-soft-blue);
         letter-spacing: 3px;
         background-color: var(--color-dark-blue);
         color: var(--color-white);
@@ -689,6 +689,10 @@ and (min-width: 1440px) {
         display: grid;
         width: 100%;
     }
+
+   /* .full-line-prompt {
+        border:thin solid var(--color-dark-blue);
+    }*/
 
     .full-line-prompt p {
         font-style: italic;
@@ -810,7 +814,7 @@ and (min-width: 1440px) {
         grid-column:1;
         color: var(--color-white);
         letter-spacing: 1px;
-        background-color: var(--color-light-blue);
+        background-color: var(--color-soft-blue);
         border-radius: 1.0em;
         align-content: center;
         justify-content: center;

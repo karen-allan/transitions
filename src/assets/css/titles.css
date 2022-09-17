@@ -1,0 +1,378 @@
+
+/* THE CSS THAT IS WITHIN COMPONENTS ARE
+
+GLOBAL-MENU.CSS
+GLOBAL-FORM-SECTIONS: COVID.CSS
+MENU-ENERGY-MEDICINE-DISCOVER-ELEMENT-ELEMENT-WHEEL
+MENU-ENERGY-MEDICINE-DO-ENERGY-EXERCISES
+MENU-ENERGY-MEDICINE-MERIDIAN-TRACING-VIDEOS
+MENU-ENERGY-MEDICINE-MERIDIAN-WHEEL
+
+ */
+
+
+/*******************************************************************************************************************
+  ALL BANANAS, MOBILES AND TABLET AND IPAD PORTRAIT (MAX IS 1 less than TABLET LANDSCAPE at and (min-width: 1280px))
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 1279px) {
+
+    .screen-title {
+        width:var(--media-less-than-content-width);
+    }
+
+    /* ONLY ON HOME SO FAR */
+    .screen-title h1  {
+        text-align:center;
+    }
+
+    .content-clear-titles, .content-light-titles {
+        width:var(--media-less-than-content-width);
+    }
+}
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    .screen-title h1,.screen-title h2, .screen-title h3 {
+        font-weight:1000;
+        letter-spacing: 0;
+    }
+
+    .screen-title h1  {
+        font-size: var(--h1-header-banana-port-font-size);
+    }
+
+    .screen-title h2  {
+        font-size: var(--h2-header-banana-port-font-size);
+    }
+
+    .screen-title h3  {
+        font-size: var(--h3-header-banana-port-font-size);
+    }
+
+    .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-copy-banana-port-font-size);
+    }
+
+    .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-copy-banana-port-font-size);
+        font-weight:bold;
+    }
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    .screen-title h1,.screen-title h2 {
+        font-weight:1000;
+        letter-spacing: 0;
+    }
+
+    .screen-title h1 {
+        font-size: var(--h1-header-banana-land-font-size);
+    }
+
+    .screen-title h2  {
+        font-size: var(--h2-header-banana-land-font-size);
+    }
+
+    .screen-title h3 {
+        font-size: var(--h3-header-banana-land-font-size);
+    }
+
+    .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-copy-banana-land-font-size);
+    }
+
+    .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-copy-banana-land-font-size);
+    }
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    .screen-title h1,.screen-title h2 {
+        font-weight:1000;
+        letter-spacing: 1px;
+    }
+
+    .screen-title h1 {
+        font-size: var(--h1-header-mobile-port-font-size);
+    }
+
+    .screen-title h2  {
+        font-size: var(--h2-header-mobile-port-font-size);
+    }
+
+    .screen-title h3 {
+        font-size: var(--h3-header-mobile-port-font-size);
+    }
+
+    .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-copy-mobile-port-font-size);
+    }
+
+    .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-copy-mobile-port-font-size);
+    }
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width:896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    .screen-title h1,.screen-title h2 {
+        font-weight:1000;
+        letter-spacing: 1px;
+    }
+
+    .screen-title h1 {
+        font-size: var(--h1-header-mobile-land-font-size);
+    }
+
+    .screen-title h2  {
+        font-size: var(--h2-header-mobile-land-font-size);
+    }
+
+    .screen-title h3 {
+        font-size: var(--h3-header-mobile-land-font-size);
+    }
+
+    .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-copy-mobile-land-font-size);
+    }
+
+    .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-copy-mobile-land-font-size);
+    }
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    .screen-title h1,.screen-title h2 {
+        font-weight:800;
+        letter-spacing: 2px;
+    }
+
+    .screen-title h1 {
+        font-size: var(--h1-header-tablet-port-font-size);
+    }
+
+    .screen-title h2  {
+        font-size: var(--h2-header-tablet-port-font-size);
+    }
+
+    .screen-title h3 {
+        font-size: var(--h3-header-tablet-port-font-size);
+    }
+
+    .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-copy-tablet-port-font-size);
+    }
+
+    .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-copy-tablet-port-font-size);
+    }
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    .screen-title h1,.screen-title h2 {
+        font-weight:800;
+        letter-spacing: 2px;
+    }
+
+    .screen-title h1 {
+        font-size: var(--h1-header-ipad-port-font-size);
+    }
+
+    .screen-title h2  {
+        font-size: var(--h2-header-ipad-port-font-size);
+    }
+
+    .screen-title h3 {
+        font-size: var(--h3-header-ipad-port-font-size);
+    }
+
+    .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-copy-ipad-port-font-size);
+    }
+
+    .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-copy-ipad-port-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  ALL THAT SHOW DESKTOP - TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
+*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 1280px)
+and (orientation: landscape) {
+
+    .screen-title {
+        width:var(--media-more-than-content-width);
+    }
+
+    .content-clear-titles, .content-light-titles  {
+        width: var(--media-more-than-content-width);
+    }
+
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    .screen-title h1,.screen-title h2 {
+        font-weight:400;
+        letter-spacing: 2px;
+    }
+
+    .screen-title h1 {
+        font-size: var(--h1-header-tablet-land-font-size);
+    }
+
+    .screen-title h2  {
+        font-size: var(--h2-header-tablet-land-font-size);
+    }
+
+    .screen-title h3  {
+        font-size: var(--h3-header-tablet-land-font-size);
+    }
+
+    .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-copy-tablet-land-font-size);
+    }
+
+    .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-copy-tablet-land-font-size);
+    }
+
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    .screen-title h1,.screen-title h2 {
+        font-weight:400;
+        letter-spacing: 2px;
+    }
+
+    .screen-title h1 {
+        font-size: var(--h1-header-ipad-land-font-size);
+    }
+
+    .screen-title h2 {
+        font-size: var(--h2-header-ipad-land-font-size);
+    }
+
+    .screen-title h3  {
+        font-size: var(--h3-header-ipad-land-font-size);
+    }
+
+    .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-copy-ipad-land-font-size);
+    }
+
+    .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-copy-ipad-land-font-size);
+    }
+}
+
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    .screen-title h1,.screen-title h2 {
+        font-weight:400;
+        letter-spacing: 2px;
+    }
+
+    .screen-title h1 {
+        font-size: var(--h1-header-desktop-font-size);
+    }
+
+    .screen-title h2  {
+        font-size: var(--h2-header-desktop-font-size);
+    }
+
+    .screen-title h3  {
+        font-size: var(--h3-header-desktop-font-size);
+    }
+
+    .content-clear-titles h1, .content-light-titles h1 {
+        font-size: var(--h1-copy-desktop-font-size);
+    }
+
+    .content-clear-titles h2, .content-light-titles h2 {
+        font-size: var(--h2-copy-desktop-font-size);
+    }
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    /* ON BOOK CONSULTATION, BOOK SESSION AND HOME PAGE */
+    .screen-title   {
+        max-width: var(--screen-width);
+        display:grid;
+        margin:auto;
+    }
+
+    .screen-title h1, .screen-title h2, .screen-title h3  {
+        font-family: var(--family-headers);
+        justify-content: center;
+        align-content: center;
+        margin:0;
+        color: var(--color-dark-blue);
+    }
+
+    .screen-title h1, .screen-title h2  {
+        text-align: center;
+    }
+
+    .screen-title h3 {
+        text-align: left;
+    }
+
+    .content-clear-titles, .content-light-titles {
+        display: grid;
+        margin: auto;
+        max-width: var(--content-width);
+    }
+
+    .content-light-titles {
+        color: var(--color-white);
+    }
+
+}

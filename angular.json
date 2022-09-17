@@ -27,16 +27,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/css/headers-topics.css",
-              "src/assets/css/content-book.css",
-              "src/assets/css/content-lists.css",
-              "src/assets/css/content-special.css",
-              "src/assets/css/content-text.css",
+              "src/assets/css/copy.css",
+              "src/assets/css/headers.css",
+              "src/assets/css/images.css",
+              "src/assets/css/lists.css",
               "src/assets/css/print-forms.css",
               "src/assets/css/screen-forms.css",
-              "src/assets/css/screen-topics.css",
+              "src/assets/css/special.css",
               "src/assets/css/styles.css",
               "src/assets/css/template.css",
+              "src/assets/css/titles.css",
+              "src/assets/css/topics.css",
               "src/assets/css/wizard.css"
             ],
             "scripts": []
@@ -104,16 +105,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/css/headers-topics.css",
-              "src/assets/css/content-book.css",
-              "src/assets/css/content-lists.css",
-              "src/assets/css/content-special.css",
-              "src/assets/css/content-text.css",
+
+              "src/assets/css/copy.css",
+              "src/assets/css/headers.css",
+              "src/assets/css/images.css",
+              "src/assets/css/lists.css",
               "src/assets/css/print-forms.css",
               "src/assets/css/screen-forms.css",
-              "src/assets/css/screen-topics.css",
+              "src/assets/css/special.css",
               "src/assets/css/styles.css",
               "src/assets/css/template.css",
+              "src/assets/css/titles.css",
+              "src/assets/css/topics.css",
               "src/assets/css/wizard.css"
             ],
             "scripts": []
