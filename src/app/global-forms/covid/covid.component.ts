@@ -9,7 +9,7 @@ import {Client} from "../../ts-files/client";
 
 export class CovidComponent implements OnInit {
 
-  model: Client;
+  client: Client;
 
   showAssessmentForm: boolean = true;
 
@@ -25,7 +25,7 @@ export class CovidComponent implements OnInit {
   }
 
   setModel(newModel: Client) {
-    this.model = newModel;
+    this.client = newModel;
   }
 
   printProfile() {

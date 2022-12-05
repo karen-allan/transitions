@@ -1,5 +1,5 @@
 <div class="print-caregiver-consult-component">
-    <div class="print-session-component">
+    <div class="print-reports-component">
 
         <div class="print-heading">
             TRANSITIONS IN ENERGY <BR>
@@ -19,7 +19,7 @@
                     Name:
                 </td>
                 <td class="print-second-cell">
-                    {{model.name}}
+                    {{client.name}}
                 </td>
             </tr>
 
@@ -28,7 +28,7 @@
                     Phone:
                 </td>
                 <td class="print-second-cell">
-                    {{model.cellPhone | mask: '(000) 000-0000'}}
+                    {{client.cellPhone | mask: '(000) 000-0000'}}
                 </td>
             </tr>
 
@@ -37,7 +37,7 @@
                     Email:
                 </td>
                 <td class="print-second-cell">
-                    {{model.email}}
+                    {{client.email}}
                 </td>
             </tr>
 
@@ -46,7 +46,7 @@
                     Address:
                 </td>
                 <td class="print-second-cell">
-                    {{model.address}}
+                    {{client.address}}
                 </td>
             </tr>
 
@@ -55,7 +55,7 @@
                     Province:
                 </td>
                 <td class="print-second-cell">
-                    {{model.provState}}
+                    {{client.provState}}
                 </td>
             </tr>
 
@@ -64,7 +64,7 @@
                     Country:
                 </td>
                 <td class="print-second-cell">
-                    {{model.country}}
+                    {{client.country}}
                 </td>
             </tr>
 
@@ -73,7 +73,7 @@
                     Postal:
                 </td>
                 <td class="print-second-cell">
-                    {{model.pc | mask: "U0U-0U0"}}
+                    {{client.pc | mask: "U0U-0U0"}}
                 </td>
             </tr>
         </table>
@@ -88,7 +88,7 @@
                     Name:
                 </td>
                 <td class="print-second-cell">
-                    {{model.emergName}}
+                    {{client.emergName}}
                 </td>
             </tr>
 
@@ -97,7 +97,7 @@
                     Relationship:
                 </td>
                 <td class="print-second-cell">
-                    {{model.emergRelation}}
+                    {{client.emergRelation}}
                 </td>
             </tr>
 
@@ -106,7 +106,7 @@
                     Phone:
                 </td>
                 <td class="print-second-cell">
-                    {{model.emergPhone | mask: '(000) 000-0000'}}
+                    {{client.emergPhone | mask: '(000) 000-0000'}}
                 </td>
             </tr>
         </table>
@@ -121,7 +121,7 @@
                     Birthdate:
                 </td>
                 <td class="print-second-cell">
-                    {{model.birthdate | mask: '00-00-0000'}}
+                    {{client.birthdate | mask: '00-00-0000'}}
                 </td>
             </tr>
 
@@ -130,7 +130,7 @@
                     Occupation:
                 </td>
                 <td class="print-second-cell">
-                    {{model.occupation}}
+                    {{client.occupation}}
                 </td>
             </tr>
 
@@ -139,7 +139,7 @@
                     Referred By:
                 </td>
                 <td class="print-second-cell">
-                    {{model.referredBy}}
+                    {{client.referredBy}}
                 </td>
             </tr>
         </table>
@@ -157,39 +157,39 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.eolCaregiverFocus1">
+            <div *ngIf="client.eolCaregiverFocus1">
                 I am overwhelmed with all the decisions I need to make.
             </div>
-            <div *ngIf="model.eolCaregiverFocus2">
+            <div *ngIf="client.eolCaregiverFocus2">
                 I am exhausted and burned out and need emotional support.
             </div>
-            <div *ngIf="model.eolCaregiverFocus3">
+            <div *ngIf="client.eolCaregiverFocus3">
                 I am physically unable to care for my loved one adequately.
             </div>
-            <div *ngIf="model.eolCaregiverFocus4">
+            <div *ngIf="client.eolCaregiverFocus4">
                 My loved one is angry and lashing out at me and I don't feel safe.
             </div>
-            <div *ngIf="model.eolCaregiverFocus5">
+            <div *ngIf="client.eolCaregiverFocus5">
                 I am having conflicts with my extended family's opinions on care, even though I am the main caregiver.
             </div>
-            <div *ngIf="model.eolCaregiverFocus6">
+            <div *ngIf="client.eolCaregiverFocus6">
                 I need to ensure their last wishes and requests are respected.
             </div>
-            <div *ngIf="model.eolCaregiverFocus7">
+            <div *ngIf="client.eolCaregiverFocus7">
                 I need to discuss these issues with an impartial advocate.
             </div>
-            <div *ngIf="model.eolCaregiverFocus8">
+            <div *ngIf="client.eolCaregiverFocus8">
                 I am having difficulties with my loved one's health care team.
             </div>
-            <div *ngIf="model.eolCaregiverFocus9">
+            <div *ngIf="client.eolCaregiverFocus9">
                 My loved one will not discuss any end of life issues with me and I need to get things in order.
             </div>
-            <div *ngIf="model.eolCaregiverFocus10">
+            <div *ngIf="client.eolCaregiverFocus10">
                 They want care in one place (hospital, hospice or home) that I am unable to organize on my own.
             </div>
-            <div *ngIf="!model.eolCaregiverFocus1 && !model.eolCaregiverFocus2 && !model.eolCaregiverFocus3 && !model.eolCaregiverFocus4 &&
-            !model.eolCaregiverFocus5 && !model.eolCaregiverFocus6 && !model.eolCaregiverFocus7 && !model.eolCaregiverFocus8 &&
-            !model.eolCaregiverFocus9 && !model.eolCaregiverFocus10">
+            <div *ngIf="!client.eolCaregiverFocus1 && !client.eolCaregiverFocus2 && !client.eolCaregiverFocus3 && !client.eolCaregiverFocus4 &&
+            !client.eolCaregiverFocus5 && !client.eolCaregiverFocus6 && !client.eolCaregiverFocus7 && !client.eolCaregiverFocus8 &&
+            !client.eolCaregiverFocus9 && !client.eolCaregiverFocus10">
                 &nbsp;
             </div>
         </div>
@@ -199,10 +199,10 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.eolCaregiverDetails.length > 0">
-                {{model.eolCaregiverDetails}}
+            <div *ngIf="client.eolCaregiverDetails.length > 0">
+                {{client.eolCaregiverDetails}}
             </div>
-            <div *ngIf="model.eolCaregiverDetails.length == 0">
+            <div *ngIf="client.eolCaregiverDetails.length == 0">
                 &nbsp;
             </div>
         </div>
@@ -242,7 +242,7 @@
 
     <div class="print-signature">
         <div class="print-date-prompt">Date:(yyyy/mm/dd):</div>
-        <div class="print-date-value">{{model.defaultDate}}</div>
+        <div class="print-date-value">{{client.defaultDate}}</div>
 
         <div class="print-sig-prompt">Signature:</div>
         <div class="print-sig-value print-solid-underline">&nbsp;</div>

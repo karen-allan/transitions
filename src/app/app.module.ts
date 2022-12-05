@@ -64,18 +64,25 @@ import {HomeOverviewComponent} from './menu-home/home-overview/home-overview.com
 
 /* MENU WIZARD */
 /* REP NINE WIZARD */
-import { RepNineWizardContainerComponent } from './menu-doula-work/end-of-life-documents/wizard-temps/rep-nine-wizard-container/rep-nine-wizard-container.component';
-import { RepNineWizardOverviewComponent } from './menu-doula-work/end-of-life-documents/wizard-temps/rep-nine-wizard-overview/rep-nine-wizard-overview.component';
+import { RepNineWizardContainerComponent } from './menu-plan-ahead/plan-ahead-wizard/rep-nine-wizard-container/rep-nine-wizard-container.component';
+import { RepNineWizardOverviewComponent } from './menu-plan-ahead/plan-ahead-wizard/rep-nine-wizard-overview/rep-nine-wizard-overview.component';
 /* TSDM WIZARD */
-import { TsdmWizardContainerComponent } from './menu-doula-work/end-of-life-documents/wizard-temps/tsdm-wizard-container/tsdm-wizard-container.component';
-import { TsdmWizardOverviewComponent } from './menu-doula-work/end-of-life-documents/wizard-temps/tsdm-wizard-overview/tsdm-wizard-overview.component';
+import { TsdmWizardContainerComponent } from './menu-plan-ahead/plan-ahead-wizard/tsdm-wizard-container/tsdm-wizard-container.component';
+import { TsdmWizardOverviewComponent } from './menu-plan-ahead/plan-ahead-wizard/tsdm-wizard-overview/tsdm-wizard-overview.component';
 
-import { EndOfLifeDocumentsContainerComponent } from './menu-doula-work/end-of-life-documents/end-of-life-documents-container/end-of-life-documents-container.component';
-import { EndOfLifeDocumentsOverviewComponent } from './menu-doula-work/end-of-life-documents/end-of-life-documents-overview/end-of-life-documents-overview.component';
-import { AdvancedCareDocumentComponent } from './menu-doula-work/end-of-life-documents/documents/advanced-care-document/advanced-care-document.component';
-import { RepNineDocumentComponent } from './menu-doula-work/end-of-life-documents/documents/rep-nine-document/rep-nine-document.component';
-import { EdithDocumentComponent } from './menu-doula-work/end-of-life-documents/documents/edith-document/edith-document.component';
-import { DnrNoCprDocumentComponent } from './menu-doula-work/end-of-life-documents/documents/dnr-no-cpr-document/dnr-no-cpr-document.component';
+import { AdvancedCareDocumentComponent } from './menu-plan-ahead/documents-to-sign/advanced-care/advanced-care-document.component';
+import { RepNineDocumentComponent } from './menu-plan-ahead/documents-to-sign/representative/rep-nine-document.component';
+import { EdithDocumentComponent } from './menu-plan-ahead/documents-to-sign/edith/edith-document.component';
+import { DnrNoCprDocumentComponent } from './menu-plan-ahead/documents-to-sign/dnr-no-cpr/dnr-no-cpr-document.component';
+import { PlanAheadWizardContainerComponent } from './menu-plan-ahead/plan-ahead-wizard/plan-ahead-wizard-container/plan-ahead-wizard-container.component';
+import { PlanAheadWizardOverviewComponent } from './menu-plan-ahead/plan-ahead-wizard/plan-ahead-wizard-overview/plan-ahead-wizard-overview.component';
+import { BeProactiveNowContainerComponent } from './menu-plan-ahead/be-proactive-now/be-proactive-now-container/be-proactive-now-container.component';
+import { BeProactiveNowOverviewComponent } from './menu-plan-ahead/be-proactive-now/be-proactive-now-overview/be-proactive-now-overview.component';
+import { DocumentsToSignContainerComponent } from './menu-plan-ahead/documents-to-sign/documents-to-sign-container/documents-to-sign-container.component';
+import { DocumentsToSignOverviewComponent } from './menu-plan-ahead/documents-to-sign/documents-to-sign-overview/documents-to-sign-overview.component';
+import { PlanWizardPageLastComponent } from './menu-plan-ahead/plan-ahead-wizard/plan-wizard-page-last/plan-wizard-page-last.component';
+import { PrintPlanAheadDirectiveComponent } from './global-print/print-plan-ahead-directive/print-plan-ahead-directive.component';
+import { PlanWizardLandingPageComponent } from './menu-plan-ahead/plan-ahead-wizard/plan-wizard-landing-page/plan-wizard-landing-page.component';
 
 @NgModule({
     declarations: [
@@ -138,11 +145,6 @@ import { DnrNoCprDocumentComponent } from './menu-doula-work/end-of-life-documen
         TsdmWizardOverviewComponent,
 
 
-
-
-
-        EndOfLifeDocumentsContainerComponent,
-        EndOfLifeDocumentsOverviewComponent,
         AdvancedCareDocumentComponent,
         RepNineDocumentComponent,
         EdithDocumentComponent,
@@ -153,6 +155,20 @@ import { DnrNoCprDocumentComponent } from './menu-doula-work/end-of-life-documen
         AboutEolAdvocacyOverviewComponent,
         RolesOfConsultantContainerComponent,
         RolesOfConsultantOverviewComponent,
+        PlanAheadWizardContainerComponent,
+        PlanAheadWizardOverviewComponent,
+        BeProactiveNowContainerComponent,
+        BeProactiveNowOverviewComponent,
+        DocumentsToSignContainerComponent,
+        DocumentsToSignOverviewComponent,
+
+        PlanWizardPageLastComponent,
+
+
+        PrintPlanAheadDirectiveComponent,
+          PlanWizardLandingPageComponent,
+
+
 
   ],
     imports: [

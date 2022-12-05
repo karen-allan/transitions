@@ -1,7 +1,7 @@
 <div class="forms-content-block">
     <form (ngSubmit)="onSubmit()">
-        <app-demographic-info [model]="model"></app-demographic-info>
-        <app-support-for-caregiver [model]="model"></app-support-for-caregiver>
+        <app-demographic-info [client]="client"></app-demographic-info>
+        <app-support-for-caregiver [client]="client"></app-support-for-caregiver>
 
         <!-- DISCLAIMER-->
         <div class="disclaimer">
@@ -35,7 +35,7 @@
             <div class="date-signature">
                 <label class="first-text-column" for="date">Date: (yyyy/mm/dd):</label>
 
-                <input [(ngModel)]="model.defaultDate" type="text"
+                <input [(ngModel)]="client.defaultDate" type="text"
                 mask="0000/00/00"
                 class="second-text-column no-border text-center with-solid-underline" id="date"  name="date">
 

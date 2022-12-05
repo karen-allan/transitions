@@ -11,7 +11,8 @@ export class AboutPractitionerContainerComponent implements OnInit {
   subMenuItemId:number = 11;
 
   detailHeaderName = 'header-about-practitioner'
-  title='The Doula Path'
+  title='Why I Chose'
+  subtitle='the Doula Path'
 
   constructor() { }
 

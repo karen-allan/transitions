@@ -8,7 +8,7 @@ import {Client} from "../../ts-files/client";
 })
 export class MedicalHistoryComponent implements OnInit {
 
-  @Input()  model: Client;
+  @Input()  client: Client;
 
   constructor() { }
 

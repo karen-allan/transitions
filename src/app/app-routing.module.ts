@@ -12,6 +12,12 @@ import { BookConsultationContainerComponent } from './menu-consultations/book-co
 /* MENU HOME */
 import { HomeContainerComponent } from './menu-home/home-container/home-container.component';
 
+/* MENU PLAN AHEAD */
+import { PlanAheadWizardContainerComponent } from './menu-plan-ahead/plan-ahead-wizard/plan-ahead-wizard-container/plan-ahead-wizard-container.component';
+import { BeProactiveNowContainerComponent } from './menu-plan-ahead/be-proactive-now/be-proactive-now-container/be-proactive-now-container.component';
+import { DocumentsToSignContainerComponent } from './menu-plan-ahead/documents-to-sign/documents-to-sign-container/documents-to-sign-container.component';
+
+
 /* AS SHOWN ON MENU */
 const routes: Routes = [
     {path: '', redirectTo: '/menuHome', pathMatch: 'full'},
@@ -26,6 +32,12 @@ const routes: Routes = [
     {path: 'rolesOfConsultant', component: RolesOfConsultantContainerComponent},
     {path: 'bookConsultation', component: BookConsultationContainerComponent},
 
+    {path: 'menuPlanAhead', component: BeProactiveNowContainerComponent},
+    {path: 'beProactiveNow', component: BeProactiveNowContainerComponent},
+    {path: 'planAheadWizard', component: PlanAheadWizardContainerComponent},
+    {path: 'documentsToSign', component: DocumentsToSignContainerComponent},
+
+    // {path: 'printWizard', component: PrintPlanAheadDirectiveComponent},
 
 ];
 

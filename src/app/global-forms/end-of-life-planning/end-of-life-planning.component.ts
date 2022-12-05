@@ -9,7 +9,7 @@ import {Client} from "../../ts-files/client";
 })
 export class EndOfLifePlanningComponent implements OnInit {
 
-  @Input() @Output() model:Client;
+  @Input() @Output() client:Client;
 
   constructor() {
   }

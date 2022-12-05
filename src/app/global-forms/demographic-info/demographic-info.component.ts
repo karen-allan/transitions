@@ -9,7 +9,7 @@ import {Client} from "../../ts-files/client";
 
 export class DemographicInfoComponent implements OnInit {
 
-    @Input() @Output() model: Client;
+    @Input() @Output() client: Client;
 
     provinces = ['British Columbia', 'Alberta', 'Saskatchewan', 'Manitoba', 'Ontario', 'Quebec', 'Prince Edward Island', 'New Brunswick', 'Nova Scotia', 'Newfoundland',
         'Northwest Territories', 'Nunavut', 'Yukon'];
@@ -17,7 +17,7 @@ export class DemographicInfoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-      this.model.provState= this.provinces[0];
+      this.client.provState= this.provinces[0];
   }
 
 

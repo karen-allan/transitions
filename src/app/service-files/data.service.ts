@@ -8,12 +8,16 @@ import {ELEMENTS} from "../ts-files/elements";
 import {Element} from "../ts-files/element";
 import {MERIDIANS} from "../ts-files/meridians";
 import {Meridian} from "../ts-files/meridian";
+import {Question} from "../ts-files/question";
+import {QUESTIONS} from "../ts-files/questions";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
+  selectedQuestion = Question;
 
   constructor() { }
 
@@ -160,4 +164,19 @@ export class DataService {
       }
     }
   }
+
+  // ******************** GET EXERCISE *************************
+  getQuestion(id: number): Observable<Question> {
+    var foundQuestion = QUESTIONS[0];
+
+    for (var quest of QUESTIONS) {
+      if ((quest.question_num == id) ) {
+        foundQuestion = quest;
+      }
+    }
+
+    return of(foundQuestion);
+  }
+
+
 }

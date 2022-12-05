@@ -10,7 +10,7 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class BookConsultationOverviewComponent implements OnInit {
 
-  @Input() model: Client;
+  @Input() client: Client;
   @Input() title:string ='';
 
   metaTitle = 'Book a Consultation | End of Life Support | Care Planning'

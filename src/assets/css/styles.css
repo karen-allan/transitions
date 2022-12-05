@@ -8,7 +8,7 @@
 
   /* global colors */
   --color-purple:#8773aa;
-  --color-dark-pink:#f2f2d6;
+  --color-dark-pink:#8c3130;
   --color-dark-blue:#5a7d9f;
   --color-soft-blue:#a3bacd;
   --color-off-white:#f7efef;
@@ -161,7 +161,7 @@
   --big-copy-mobile-land-font-size:1em;
   --big-copy-tablet-land-font-size:1.3em;
   --big-copy-ipad-land-font-size:1.4em;
-  --big-copy-desktop-font-size:1.5em;
+  --big-copy-desktop-font-size:1.3em;
 
   /* H1 Whitney-Book   /*'';    */
   --h1-copy-banana-port-font-size:.7em;
@@ -431,7 +431,11 @@
     border-left: thin solid var(--color-soft-blue);
   }
 
-
+  .top-sides-border {
+    border-top: thin solid var(--color-soft-blue);
+    border-right: thin solid var(--color-soft-blue);
+    border-left: thin solid var(--color-soft-blue);
+  }
 
 
   .border-radius-left-only {

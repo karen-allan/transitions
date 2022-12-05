@@ -3,18 +3,19 @@
     <app-global-headers [detailHeaderName]="detailHeaderName" [title]="title"></app-global-headers>
 
     <div id ="bookConsultationTop"></div>
-    <app-book-consultation-overview [model]="model" [title]="title">  </app-book-consultation-overview>
+    <app-book-consultation-overview [client]="client" [title]="title">  </app-book-consultation-overview>
         <div class="print-container">
             <button class="print-form-button" (click)="printProfile()">PRINT</button>
         </div>
   <app-global-footer></app-global-footer>
 </div>
+
 <div *ngIf="selectedIntakeForm == 'caregiver'">
-  <app-print-caregiver-consult [model]="model"></app-print-caregiver-consult>
+  <app-print-caregiver-consult [client]="client"></app-print-caregiver-consult>
 </div>
 <div *ngIf="selectedIntakeForm == 'planning'">
-  <app-print-planning-consult [model]="model"></app-print-planning-consult>
+  <app-print-planning-consult [client]="client"></app-print-planning-consult>
 </div>
 <div *ngIf="selectedIntakeForm == 'patient'">
-  <app-print-patient-consult [model]="model"></app-print-patient-consult>
+  <app-print-patient-consult [client]="client"></app-print-patient-consult>
 </div>

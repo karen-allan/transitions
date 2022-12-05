@@ -1,5 +1,5 @@
 <div class="print-planning-consult-component">
-    <div class="print-session-component">
+    <div class="print-reports-component">
 
         <div class="print-heading">
             TRANSITIONS IN ENERGY <BR>
@@ -18,7 +18,7 @@
                     Name:
                 </td>
                 <td class="print-second-cell">
-                    {{model.name}}
+                    {{client.name}}
                 </td>
             </tr>
 
@@ -27,7 +27,7 @@
                     Phone:
                 </td>
                 <td class="print-second-cell">
-                    {{model.cellPhone | mask: '(000) 000-0000'}}
+                    {{client.cellPhone | mask: '(000) 000-0000'}}
                 </td>
             </tr>
 
@@ -36,7 +36,7 @@
                     Email:
                 </td>
                 <td class="print-second-cell">
-                    {{model.email}}
+                    {{client.email}}
                 </td>
             </tr>
 
@@ -45,7 +45,7 @@
                     Address:
                 </td>
                 <td class="print-second-cell">
-                    {{model.address}}
+                    {{client.address}}
                 </td>
             </tr>
 
@@ -54,7 +54,7 @@
                     Province:
                 </td>
                 <td class="print-second-cell">
-                    {{model.provState}}
+                    {{client.provState}}
                 </td>
             </tr>
 
@@ -63,7 +63,7 @@
                     Country:
                 </td>
                 <td class="print-second-cell">
-                    {{model.country}}
+                    {{client.country}}
                 </td>
             </tr>
 
@@ -72,7 +72,7 @@
                     Postal:
                 </td>
                 <td class="print-second-cell">
-                    {{model.pc | mask: "U0U-0U0"}}
+                    {{client.pc | mask: "U0U-0U0"}}
                 </td>
             </tr>
         </table>
@@ -87,7 +87,7 @@
                     Name:
                 </td>
                 <td class="print-second-cell">
-                    {{model.emergName}}
+                    {{client.emergName}}
                 </td>
             </tr>
 
@@ -96,7 +96,7 @@
                     Relationship:
                 </td>
                 <td class="print-second-cell">
-                    {{model.emergRelation}}
+                    {{client.emergRelation}}
                 </td>
             </tr>
 
@@ -105,7 +105,7 @@
                     Phone:
                 </td>
                 <td class="print-second-cell">
-                    {{model.emergPhone | mask: '(000) 000-0000'}}
+                    {{client.emergPhone | mask: '(000) 000-0000'}}
                 </td>
             </tr>
         </table>
@@ -120,7 +120,7 @@
                     Birthdate:
                 </td>
                 <td class="print-second-cell">
-                    {{model.birthdate | mask: '00-00-0000'}}
+                    {{client.birthdate | mask: '00-00-0000'}}
                 </td>
             </tr>
 
@@ -129,7 +129,7 @@
                     Occupation:
                 </td>
                 <td class="print-second-cell">
-                    {{model.occupation}}
+                    {{client.occupation}}
                 </td>
             </tr>
 
@@ -138,7 +138,7 @@
                     Referred By:
                 </td>
                 <td class="print-second-cell">
-                    {{model.referredBy}}
+                    {{client.referredBy}}
                 </td>
             </tr>
         </table>
@@ -155,22 +155,22 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.eolFrailty == 'frailtyChart-1'">
+            <div *ngIf="client.eolFrailty == 'frailtyChart-1'">
                 I am under 65 and in good health and fitness.
             </div>
-            <div *ngIf="model.eolFrailty == 'frailtyChart-2'">
+            <div *ngIf="client.eolFrailty == 'frailtyChart-2'">
                 I have one or more chronic conditions.
             </div>
-            <div *ngIf="model.eolFrailty == 'frailtyChart-3'">
+            <div *ngIf="client.eolFrailty == 'frailtyChart-3'">
                 I have a life-threatening illness and my life-expectancy is less than one to two years.
             </div>
-            <div *ngIf="model.eolFrailty == 'frailtyChart-4'">
+            <div *ngIf="client.eolFrailty == 'frailtyChart-4'">
                 I am over 65 and relatively healthy.
             </div>
-            <div *ngIf="model.eolFrailty == 'frailtyChart-5'">
+            <div *ngIf="client.eolFrailty == 'frailtyChart-5'">
                 I am over 65 and having trouble managing your day-to-day affairs and the activities of daily living.
             </div>
-            <div *ngIf="model.eolFrailty == 'frailtyChart-6'">
+            <div *ngIf="client.eolFrailty == 'frailtyChart-6'">
                 I am over 75.
             </div>
         </div>
@@ -188,32 +188,32 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.eolPlanFocus1">
+            <div *ngIf="client.eolPlanFocus1">
                 I want to name a Representative for my future care.
             </div>
-            <div *ngIf="model.eolPlanFocus2">
+            <div *ngIf="client.eolPlanFocus2">
                 I want to make an in-depth Advanced Care Plan.
             </div>
-            <div *ngIf="model.eolPlanFocus3">
+            <div *ngIf="client.eolPlanFocus3">
                 I want to arrange my end of life ceremony and/or funeral.
             </div>
-            <div *ngIf="model.eolPlanFocus4">
+            <div *ngIf="client.eolPlanFocus4">
                 I want to know about the logistics of staying home to die.
             </div>
-            <div *ngIf="model.eolPlanFocus5">
+            <div *ngIf="client.eolPlanFocus5">
                 I want to ensure my financial and estate plans are in order.
             </div>
-            <div *ngIf="model.eolPlanFocus6">
+            <div *ngIf="client.eolPlanFocus6">
                 I want help with creating a legacy project.
             </div>
-            <div *ngIf="model.eolPlanFocus7">
+            <div *ngIf="client.eolPlanFocus7">
                 I need to discuss these issues with an impartial advocate.
             </div>
-            <div *ngIf="model.eolPlanFocus8">
+            <div *ngIf="client.eolPlanFocus8">
                 I want to know more about care plan safe-keeping and sharing.
             </div>
-            <div *ngIf="!model.eolPlanFocus1 && !model.eolPlanFocus2 && !model.eolPlanFocus3 && !model.eolPlanFocus4
-                && !model.eolPlanFocus5 && !model.eolPlanFocus6 && !model.eolPlanFocus7 && !model.eolPlanFocus8">
+            <div *ngIf="!client.eolPlanFocus1 && !client.eolPlanFocus2 && !client.eolPlanFocus3 && !client.eolPlanFocus4
+                && !client.eolPlanFocus5 && !client.eolPlanFocus6 && !client.eolPlanFocus7 && !client.eolPlanFocus8">
                 &nbsp;
             </div>
         </div>
@@ -225,10 +225,10 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.eolPlanDetails.length > 0">
-                {{model.eolPlanDetails}}
+            <div *ngIf="client.eolPlanDetails.length > 0">
+                {{client.eolPlanDetails}}
             </div>
-            <div *ngIf="model.eolPlanDetails.length == 0">
+            <div *ngIf="client.eolPlanDetails.length == 0">
                 &nbsp;
             </div>
         </div>
@@ -246,10 +246,10 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.medsSupplements.length > 0">
-                {{model.medsSupplements}}
+            <div *ngIf="client.medsSupplements.length > 0">
+                {{client.medsSupplements}}
             </div>
-            <div *ngIf="model.medsSupplements.length == 0">
+            <div *ngIf="client.medsSupplements.length == 0">
                 &nbsp;
             </div>
         </div>
@@ -259,35 +259,35 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.heartDisease">
+            <div *ngIf="client.heartDisease">
                 Heart Disease
             </div>
-            <div *ngIf="model.cancer">
+            <div *ngIf="client.cancer">
                 Cancer
             </div>
-            <div *ngIf="model.stroke">
+            <div *ngIf="client.stroke">
                 Stroke
             </div>
-            <div *ngIf="model.highBloodPressure">
+            <div *ngIf="client.highBloodPressure">
                 High Blood Pressure
             </div>
-            <div *ngIf="model.diabetes">
+            <div *ngIf="client.diabetes">
                 Diabetes
             </div>
-            <div *ngIf="model.mentalIllness">
+            <div *ngIf="client.mentalIllness">
                 Emotional Illness
             </div>
-            <div *ngIf="model.seizures">
+            <div *ngIf="client.seizures">
                 Seizures
             </div>
-            <div *ngIf="model.autoImmuneDisease">
+            <div *ngIf="client.autoImmuneDisease">
                 Auto-immune Disease
             </div>
-            <div *ngIf="model.otherDisease">
+            <div *ngIf="client.otherDisease">
                 Other Illness
             </div>
-            <div *ngIf="!model.heartDisease && !model.cancer && !model.stroke && !model.highBloodPressure && !model.diabetes
-             && !model.mentalIllness && !model.seizures && !model.autoImmuneDisease && !model.otherDisease">
+            <div *ngIf="!client.heartDisease && !client.cancer && !client.stroke && !client.highBloodPressure && !client.diabetes
+             && !client.mentalIllness && !client.seizures && !client.autoImmuneDisease && !client.otherDisease">
                 &nbsp;
             </div>
         </div>
@@ -297,10 +297,10 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.illnessDetails.length > 0">
-                {{model.illnessDetails}}
+            <div *ngIf="client.illnessDetails.length > 0">
+                {{client.illnessDetails}}
             </div>
-            <div *ngIf="model.illnessDetails.length == 0">
+            <div *ngIf="client.illnessDetails.length == 0">
                 &nbsp;
             </div>
         </div>
@@ -338,7 +338,7 @@
 
     <div class="print-signature">
         <div class="print-date-prompt">Date:(yyyy/mm/dd):</div>
-        <div class="print-date-value">{{model.defaultDate}}</div>
+        <div class="print-date-value">{{client.defaultDate}}</div>
 
         <div class="print-sig-prompt">Signature:</div>
         <div class="print-sig-value print-solid-underline">&nbsp;</div>

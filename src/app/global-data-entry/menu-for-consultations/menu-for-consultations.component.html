@@ -66,15 +66,15 @@
 </div>
 
 <ng-container *ngIf="showPlanningEditor">
-    <app-data-entry-planning-consult [model]="model"></app-data-entry-planning-consult>
+    <app-data-entry-planning-consult [client]="client"></app-data-entry-planning-consult>
 </ng-container>
 
 <ng-container *ngIf="showCaregiverEditor">
-    <app-data-entry-caregiver-consult [model]="model"></app-data-entry-caregiver-consult>
+    <app-data-entry-caregiver-consult [client]="client"></app-data-entry-caregiver-consult>
 </ng-container>
 
 <ng-container *ngIf="showPatientEditor">
-    <app-data-entry-patient-consult [model]="model"></app-data-entry-patient-consult>
+    <app-data-entry-patient-consult [client]="client"></app-data-entry-patient-consult>
 </ng-container>
 
 

@@ -292,7 +292,21 @@ and (min-width: 1920px) {
         url('src/assets/images/headers/consultations/headerBookConsultation.jpg');
     }
 
+    .header-plan-ahead-wizard {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/planning/headerPlanAheadWizard.jpg");
+    }
 
+    .header-be-proactive-now {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/planning/headerBeProactiveNow.jpg");
+    }
 
-
+    .header-documents-to-sign {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/planning/headerDocumentsToSign.jpg");
+    }
 }

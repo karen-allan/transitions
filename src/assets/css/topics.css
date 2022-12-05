@@ -262,7 +262,7 @@ and (max-width:1919px) {
         align-content: center;
         justify-content: flex-start;
         text-align:center;
-        padding-left:1.5em;
+        padding-left:5.0em;
     }
 
     .topic-grid h1 {
@@ -289,7 +289,7 @@ and (min-width: 1920px) {
         align-content: center;
         justify-content: flex-start;
         text-align:center;
-        padding-left:1.5em;
+        padding-left:12.5em;
     }
 
     .topic-grid h1 {
@@ -355,8 +355,21 @@ and (min-width: 1920px) {
                 url("src/assets/images/topics/consultations/topicBookConsultation.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
     }
 
+    .topic-be-proactive-now {
+        background-repeat: no-repeat;
+        background-image:
+                url("src/assets/images/topics/planning/topicBeProactiveNow.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
+    }
 
+    .topic-plan-ahead-wizard {
+        background-repeat: no-repeat;
+        background-image:
+                url("src/assets/images/topics/planning/topicPlanAheadWizard.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
+    }
 
-
-
+    .topic-documents-to-sign {
+        background-repeat: no-repeat;
+        background-image:
+                url("src/assets/images/topics/planning/topicDocumentsToSign.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
+    }
 }

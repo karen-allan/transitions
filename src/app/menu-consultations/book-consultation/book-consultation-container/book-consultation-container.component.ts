@@ -8,15 +8,15 @@ import {Client} from "../../../ts-files/client";
 })
 export class BookConsultationContainerComponent implements OnInit {
 
-  menuItemId:number   = 2;
-  subMenuItemId:number = 21;
+  menuItemId:number   = 3;
+  subMenuItemId:number = 31;
 
   detailHeaderName = 'header-book-consultation'
   title='Book a Consultation'
   detailListName="list-book";
   selectedIntakeForm='caregiver';
 
- model= new Client(0, "", "", "", "", "", "", "", "",
+ client= new Client(0, "", "", "", "", "", "", "", "",
      "", "", "", "", "", "", "",
      false, false, false, false, false, false, false,
      false, false, "", "", "", "",

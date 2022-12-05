@@ -9,7 +9,7 @@ import {Client} from "../../ts-files/client";
 
 export class DataEntryCaregiverConsultComponent implements OnInit {
 
-  @Input() @Output() model: Client;
+  @Input() @Output() client: Client;
 
   page: number = -1;
   now:string;
@@ -34,7 +34,7 @@ export class DataEntryCaregiverConsultComponent implements OnInit {
     let yyyy = today.getFullYear();
 
     this.now = yyyy +'/' + mm +'/' + dd;
-    this.model.defaultDate = this.now;
+    this.client.defaultDate = this.now;
   }
 
 }

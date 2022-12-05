@@ -1,5 +1,5 @@
 <div class="print-patient-consult-component">
-    <div class="print-session-component">
+    <div class="print-reports-component">
 
         <div class="print-heading">
             TRANSITIONS IN ENERGY <BR>
@@ -18,7 +18,7 @@
                     Name:
                 </td>
                 <td class="print-second-cell">
-                    {{model.name}}
+                    {{client.name}}
                 </td>
             </tr>
 
@@ -27,7 +27,7 @@
                     Phone:
                 </td>
                 <td class="print-second-cell">
-                    {{model.cellPhone | mask: '(000) 000-0000'}}
+                    {{client.cellPhone | mask: '(000) 000-0000'}}
                 </td>
             </tr>
 
@@ -36,7 +36,7 @@
                     Email:
                 </td>
                 <td class="print-second-cell">
-                    {{model.email}}
+                    {{client.email}}
                 </td>
             </tr>
 
@@ -45,7 +45,7 @@
                     Address:
                 </td>
                 <td class="print-second-cell">
-                    {{model.address}}
+                    {{client.address}}
                 </td>
             </tr>
 
@@ -54,7 +54,7 @@
                     Province:
                 </td>
                 <td class="print-second-cell">
-                    {{model.provState}}
+                    {{client.provState}}
                 </td>
             </tr>
 
@@ -63,7 +63,7 @@
                     Country:
                 </td>
                 <td class="print-second-cell">
-                    {{model.country}}
+                    {{client.country}}
                 </td>
             </tr>
 
@@ -72,7 +72,7 @@
                     Postal:
                 </td>
                 <td class="print-second-cell">
-                    {{model.pc | mask: "U0U-0U0"}}
+                    {{client.pc | mask: "U0U-0U0"}}
                 </td>
             </tr>
         </table>
@@ -87,7 +87,7 @@
                     Name:
                 </td>
                 <td class="print-second-cell">
-                    {{model.emergName}}
+                    {{client.emergName}}
                 </td>
             </tr>
 
@@ -96,7 +96,7 @@
                     Relationship:
                 </td>
                 <td class="print-second-cell">
-                    {{model.emergRelation}}
+                    {{client.emergRelation}}
                 </td>
             </tr>
 
@@ -105,7 +105,7 @@
                     Phone:
                 </td>
                 <td class="print-second-cell">
-                    {{model.emergPhone | mask: '(000) 000-0000'}}
+                    {{client.emergPhone | mask: '(000) 000-0000'}}
                 </td>
             </tr>
         </table>
@@ -120,7 +120,7 @@
                     Birthdate:
                 </td>
                 <td class="print-second-cell">
-                    {{model.birthdate | mask: '00-00-0000'}}
+                    {{client.birthdate | mask: '00-00-0000'}}
                 </td>
             </tr>
 
@@ -129,7 +129,7 @@
                     Occupation:
                 </td>
                 <td class="print-second-cell">
-                    {{model.occupation}}
+                    {{client.occupation}}
                 </td>
             </tr>
 
@@ -138,7 +138,7 @@
                     Referred By:
                 </td>
                 <td class="print-second-cell">
-                    {{model.referredBy}}
+                    {{client.referredBy}}
                 </td>
             </tr>
         </table>
@@ -153,22 +153,22 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.eolFrailty == 'frailtyChart-1'">
+            <div *ngIf="client.eolFrailty == 'frailtyChart-1'">
                 I am under 65 and in good health and fitness.
             </div>
-            <div *ngIf="model.eolFrailty == 'frailtyChart-2'">
+            <div *ngIf="client.eolFrailty == 'frailtyChart-2'">
                 I have one or more chronic conditions.
             </div>
-            <div *ngIf="model.eolFrailty == 'frailtyChart-3'">
+            <div *ngIf="client.eolFrailty == 'frailtyChart-3'">
                 I have a life-threatening illness and my life-expectancy is less than one to two years.
             </div>
-            <div *ngIf="model.eolFrailty == 'frailtyChart-4'">
+            <div *ngIf="client.eolFrailty == 'frailtyChart-4'">
                 I am over 65 and relatively healthy.
             </div>
-            <div *ngIf="model.eolFrailty == 'frailtyChart-5'">
+            <div *ngIf="client.eolFrailty == 'frailtyChart-5'">
                 I am over 65 and having trouble managing your day-to-day affairs and the activities of daily living.
             </div>
-            <div *ngIf="model.eolFrailty == 'frailtyChart-6'">
+            <div *ngIf="client.eolFrailty == 'frailtyChart-6'">
                 I am over 75.
             </div>
         </div>
@@ -185,45 +185,45 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.eolPatientFocus1">
+            <div *ngIf="client.eolPatientFocus1">
                 I have been diagnosed with a terminal illness.
             </div>
-            <div *ngIf="model.eolPatientFocus2">
+            <div *ngIf="client.eolPatientFocus2">
                 I am scared, angry, depressed and need emotional support.
             </div>
-            <div *ngIf="model.eolPatientFocus3">
+            <div *ngIf="client.eolPatientFocus3">
                 I am physically unable to care for myself as I used to.
             </div>
-            <div *ngIf="model.eolPatientFocus4">
+            <div *ngIf="client.eolPatientFocus4">
                 I need to discuss things with my family but they won't listen.
             </div>
-            <div *ngIf="model.eolPatientFocus5">
+            <div *ngIf="client.eolPatientFocus5">
                 My family is fighting and arguing about my care.
             </div>
-            <div *ngIf="model.eolPatientFocus6">
+            <div *ngIf="client.eolPatientFocus6">
                 I want to write down my wishes and requests while I still can.
             </div>
-            <div *ngIf="model.eolPatientFocus7">
+            <div *ngIf="client.eolPatientFocus7">
                 I am afraid I won't be able to handle the pain.
             </div>
-            <div *ngIf="model.eolPatientFocus8">
+            <div *ngIf="client.eolPatientFocus8">
                 I want more information about life prolonging procedures.
             </div>
-            <div *ngIf="model.eolPatientFocus9">
+            <div *ngIf="client.eolPatientFocus9">
                 I want to explore who in my family I could best trust to consider and advocate for my wishes.
             </div>
-            <div *ngIf="model.eolPatientFocus10">
+            <div *ngIf="client.eolPatientFocus10">
                 I feel that the health care team doesn't explain enough to me.
             </div>
-            <div *ngIf="model.eolPatientFocus11">
+            <div *ngIf="client.eolPatientFocus11">
                 I want information about my rights to die at home.
             </div>
-            <div *ngIf="model.eolPatientFocus12">
+            <div *ngIf="client.eolPatientFocus12">
                 I need information to decide whether hospice or palliative care is available to me.
             </div>
-            <div *ngIf="!model.eolPatientFocus1 && !model.eolPatientFocus2 && !model.eolPatientFocus3 && !model.eolPatientFocus4 &&
-            !model.eolPatientFocus5 && !model.eolPatientFocus6 && !model.eolPatientFocus7 && !model.eolPatientFocus8 &&
-            !model.eolPatientFocus9 && !model.eolPatientFocus10 && !model.eolPatientFocus11 && !model.eolPatientFocus12">
+            <div *ngIf="!client.eolPatientFocus1 && !client.eolPatientFocus2 && !client.eolPatientFocus3 && !client.eolPatientFocus4 &&
+            !client.eolPatientFocus5 && !client.eolPatientFocus6 && !client.eolPatientFocus7 && !client.eolPatientFocus8 &&
+            !client.eolPatientFocus9 && !client.eolPatientFocus10 && !client.eolPatientFocus11 && !client.eolPatientFocus12">
                 &nbsp;
             </div>
         </div>
@@ -233,10 +233,10 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.eolPatientDetails.length > 0">
-                {{model.eolPatientDetails}}
+            <div *ngIf="client.eolPatientDetails.length > 0">
+                {{client.eolPatientDetails}}
             </div>
-            <div *ngIf="model.eolPatientDetails.length == 0">
+            <div *ngIf="client.eolPatientDetails.length == 0">
                 &nbsp;
             </div>
         </div>
@@ -254,10 +254,10 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.medsSupplements.length > 0">
-                {{model.medsSupplements}}
+            <div *ngIf="client.medsSupplements.length > 0">
+                {{client.medsSupplements}}
             </div>
-            <div *ngIf="model.medsSupplements.length == 0">
+            <div *ngIf="client.medsSupplements.length == 0">
                 &nbsp;
             </div>
         </div>
@@ -267,35 +267,35 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.heartDisease">
+            <div *ngIf="client.heartDisease">
                 Heart Disease
             </div>
-            <div *ngIf="model.cancer">
+            <div *ngIf="client.cancer">
                 Cancer
             </div>
-            <div *ngIf="model.stroke">
+            <div *ngIf="client.stroke">
                 Stroke
             </div>
-            <div *ngIf="model.highBloodPressure">
+            <div *ngIf="client.highBloodPressure">
                 High Blood Pressure
             </div>
-            <div *ngIf="model.diabetes">
+            <div *ngIf="client.diabetes">
                 Diabetes
             </div>
-            <div *ngIf="model.mentalIllness">
+            <div *ngIf="client.mentalIllness">
                 Emotional Illness
             </div>
-            <div *ngIf="model.seizures">
+            <div *ngIf="client.seizures">
                 Seizures
             </div>
-            <div *ngIf="model.autoImmuneDisease">
+            <div *ngIf="client.autoImmuneDisease">
                 Auto-immune Disease
             </div>
-            <div *ngIf="model.otherDisease">
+            <div *ngIf="client.otherDisease">
                 Other Illness
             </div>
-            <div *ngIf="!model.heartDisease && !model.cancer && !model.stroke && !model.highBloodPressure && !model.diabetes
-             && !model.mentalIllness && !model.seizures && !model.autoImmuneDisease && !model.otherDisease">
+            <div *ngIf="!client.heartDisease && !client.cancer && !client.stroke && !client.highBloodPressure && !client.diabetes
+             && !client.mentalIllness && !client.seizures && !client.autoImmuneDisease && !client.otherDisease">
                 &nbsp;
             </div>
         </div>
@@ -305,10 +305,10 @@
         </div>
 
         <div class="print-response">
-            <div *ngIf="model.illnessDetails.length > 0">
-                {{model.illnessDetails}}
+            <div *ngIf="client.illnessDetails.length > 0">
+                {{client.illnessDetails}}
             </div>
-            <div *ngIf="model.illnessDetails.length == 0">
+            <div *ngIf="client.illnessDetails.length == 0">
                 &nbsp;
             </div>
         </div>
@@ -346,7 +346,7 @@
 
     <div class="print-signature">
         <div class="print-date-prompt">Date:(yyyy/mm/dd):</div>
-        <div class="print-date-value">{{model.defaultDate}}</div>
+        <div class="print-date-value">{{client.defaultDate}}</div>
 
         <div class="print-sig-prompt">Signature:</div>
         <div class="print-sig-value print-solid-underline">&nbsp;</div>

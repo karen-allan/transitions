@@ -322,7 +322,7 @@ and (min-width: 1440px) {
         font-size: var(--h1-header-desktop-font-size);
     }
 
-    .screen-title h2  {
+    .screen-title h2, .screen-title a, .screen-title span   {
         font-size: var(--h2-header-desktop-font-size);
     }
 
@@ -349,12 +349,19 @@ and (min-width: 1440px) {
         margin:auto;
     }
 
-    .screen-title h1, .screen-title h2, .screen-title h3  {
+    .screen-title h1, .screen-title h2, .screen-title a, .screen-title h3  {
+        color: var(--color-dark-blue);
+    }
+
+    .screen-title span {
+        color: var(--color-dark-pink);
+    }
+
+    .screen-title h1, .screen-title h2, .screen-title a, .screen-title span, .screen-title h3  {
         font-family: var(--family-headers);
         justify-content: center;
         align-content: center;
         margin:0;
-        color: var(--color-dark-blue);
     }
 
     .screen-title h1, .screen-title h2  {
@@ -363,6 +370,10 @@ and (min-width: 1440px) {
 
     .screen-title h3 {
         text-align: left;
+    }
+
+    .screen-title a {
+        cursor: pointer;
     }
 
     .content-clear-titles, .content-light-titles {

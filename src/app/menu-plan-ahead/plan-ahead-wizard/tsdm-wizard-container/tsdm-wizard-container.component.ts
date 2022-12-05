@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import {TsdmClient} from "../../../../ts-files/tsdm-client";
-import {DoulaClientService} from "../../../../service-files/doula-client.service";
+import { Component, OnInit } from '@angular/core';
+import {TsdmClient} from "../../../ts-files/tsdm-client";
+import {DoulaClientService} from "../../../service-files/doula-client.service";
 
 @Component({
   selector: 'app-tsdm-wizard-container',

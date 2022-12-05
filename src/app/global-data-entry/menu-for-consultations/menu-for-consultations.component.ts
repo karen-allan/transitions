@@ -13,7 +13,7 @@ export type EditorType = 'assessment' | 'caregiver'  | 'patient'  | 'planning';
 
 export class MenuForConsultationsComponent implements OnInit {
 
-  @Input() model: Client;
+  @Input() client: Client;
   editor: EditorType = 'planning';
 
   constructor(private _bookConsultationOverviewComponent: BookConsultationOverviewComponent) { }

@@ -1,9 +1,9 @@
 <div class="forms-content-block">
     <form (ngSubmit)="onSubmit()">
-        <app-demographic-info [model]="model"></app-demographic-info>
-        <app-frailty-scale [model]="model"></app-frailty-scale>
-        <app-end-of-life-planning [model]="model"></app-end-of-life-planning>
-        <app-medical-history [model]="model"></app-medical-history>
+        <app-demographic-info [client]="client"></app-demographic-info>
+        <app-frailty-scale [client]="client"></app-frailty-scale>
+        <app-end-of-life-planning [client]="client"></app-end-of-life-planning>
+        <app-medical-history [client]="client"></app-medical-history>
 
         <!-- DISCLAIMER-->
         <div class="disclaimer">
@@ -37,7 +37,7 @@
             <div class="date-signature">
                 <label class="first-text-column" for="date">Date: (yyyy/mm/dd):</label>
 
-                <input [(ngModel)]="model.defaultDate" type="text"
+                <input [(ngModel)]="client.defaultDate" type="text"
                        mask="0000/00/00"
                        class="second-text-column no-border text-center with-solid-underline" id="date"  name="date">
 

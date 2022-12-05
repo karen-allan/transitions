@@ -1,5 +1,5 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
-import { RepNine} from "../../../../ts-files/rep-nine";
+import {Component, Input, OnInit} from '@angular/core';
+import { RepNine} from "../../../ts-files/rep-nine";
 
 @Component({
   selector: 'app-rep-nine-wizard-overview',
@@ -319,6 +319,8 @@ export class RepNineWizardOverviewComponent implements OnInit {
     this.setRepTwoDefaults();
 
     this.page = 0;
+    this.clearMessage()
+    this.setClientDefaults();
   }
 
   cancelClientInfo() {
@@ -330,9 +332,8 @@ export class RepNineWizardOverviewComponent implements OnInit {
     this.model.client_country ='';
     this.model.signing_date = this.now;
 */
-    this.page = 0;
-    this.clearMessage()
-    this.setClientDefaults();
+
+
   }
 
   cancelPrimaryRepInfo() {
@@ -343,9 +344,9 @@ export class RepNineWizardOverviewComponent implements OnInit {
     this.model.rep_primary_province ='';
     this.model.rep_primary_country ='';*/
 
-    this.page = this.page-1;
+   /* this.page = this.page-1;
     this.clearMessage()
-    this.setRepOneDefaults();
+    this.setRepOneDefaults();*/
   }
 
   cancelAlternateRepInfo() {

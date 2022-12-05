@@ -11,11 +11,13 @@ export class AboutEolAdvocacyContainerComponent implements OnInit {
   subMenuItemId:number = 10;
 
   detailHeaderName = 'header-about-eol-advocacy';
-  title='Advocates for Dignity';
+  title='About End-Of-Life';
+  subtitle = 'Doulas'
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

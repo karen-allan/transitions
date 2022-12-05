@@ -8,12 +8,13 @@ import {Client} from "../../ts-files/client";
 })
 export class FrailtyScaleComponent implements OnInit {
 
-  @Input() @Output() model:Client;
+  @Input() @Output() client:Client;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.model.eolFrailty = 'frailtyChart-1';
+    this.client.eolFrailty = 'frailtyChart-1';
+
   }
 
 }
