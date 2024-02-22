@@ -97,19 +97,11 @@ import { ChooseYourRepWizardHeaderComponent } from './menu-plan-ahead/choose-you
 @NgModule({
     declarations: [
         AppComponent,
-
         /******************************* GLOBALS *******************************/
         GlobalFooterComponent,
         GlobalHeadersComponent,
         GlobalMenuComponent,
-
         /******************************* MENU ABOUT *******************************/
-
-
-        
-
-
-
         /******************************* MENU BOOK *******************************/
         /* BOOK CONSULTATION */
         BookConsultationContainerComponent,
@@ -124,35 +116,22 @@ import { ChooseYourRepWizardHeaderComponent } from './menu-plan-ahead/choose-you
         PrintCaregiverConsultComponent,
         PrintPatientConsultComponent,
         PrintPlanningConsultComponent,
-
-
-
         /* GLOBAL FORM SECTIONS */
         CovidComponent,
         DemographicInfoComponent,
         EndOfLifePlanningComponent,
         FrailtyScaleComponent,
         MedicalHistoryComponent,
-
         SupportForCaregiverComponent,
         SupportForPatientComponent,
-
         /******************************* MENU DOULA WORK *******************************/
-
-
-
-
         /******************************* MENU HOME *******************************/
         HomeContainerComponent,
         HomeOverviewComponent,
-
         /* MENU WIZARD */
         /* REP 9 WIZARD */
         RepNineWizardContainerComponent,
         RepNineWizardOverviewComponent,
-
-
-
         AdvancedCareDocumentComponent,
         RepNineDocumentComponent,
         EdithDocumentComponent,
@@ -163,26 +142,18 @@ import { ChooseYourRepWizardHeaderComponent } from './menu-plan-ahead/choose-you
         AboutEolAdvocacyOverviewComponent,
         RolesOfConsultantContainerComponent,
         RolesOfConsultantOverviewComponent,
-
-
         DocumentsToSignContainerComponent,
         DocumentsToSignOverviewComponent,
-
-
-            ChooseYourRepContainerComponent,
-            ChooseYourRepOverviewComponent,
-            ThinkAboutNeedsContainerComponent,
-            ThinkAboutNeedsOverviewComponent,
-            ThinkAboutNeedsPrintoutComponent,
-            ThinkAboutNeedsWizardComponent,
-           
-            ChooseYourRepWizardComponent,
-            ThinkAboutNeedsWizardHeaderComponent,
-            ChooseYourRepWizardHeaderComponent,
-
-
-
-  ],
+        ChooseYourRepContainerComponent,
+        ChooseYourRepOverviewComponent,
+        ThinkAboutNeedsContainerComponent,
+        ThinkAboutNeedsOverviewComponent,
+        ThinkAboutNeedsPrintoutComponent,
+        ThinkAboutNeedsWizardComponent,
+        ChooseYourRepWizardComponent,
+        ThinkAboutNeedsWizardHeaderComponent,
+        ChooseYourRepWizardHeaderComponent,
+    ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
@@ -193,13 +164,10 @@ import { ChooseYourRepWizardHeaderComponent } from './menu-plan-ahead/choose-you
         MatButtonModule,
         MatDialogModule,
         NgxMaskModule.forRoot(),
-        HttpClientInMemoryWebApiModule.forRoot(
-            InMemoryDataService, { dataEncapsulation: false }
-        )
+        HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false })
     ],
     providers: [DatePipe, Meta],
-    bootstrap: [AppComponent],
-    entryComponents: [ThinkAboutNeedsWizardComponent]
+    bootstrap: [AppComponent]
 })
 
 
