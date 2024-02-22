@@ -17,7 +17,6 @@ export class RolesOfConsultantOverviewComponent implements OnInit {
   constructor(private titleService: Title, private metaService: Meta) { }
 
   ngOnInit(): void {
-
     this.titleService.setTitle(this.metaTitle);
     this.metaService.addTags([
       {

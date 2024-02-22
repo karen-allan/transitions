@@ -3,13 +3,15 @@
         display:block;
         font-family: Calibri, Cambria, 'Arial', serif;
         margin-top:1em;
+        color:saddlebrown;
     }
 
     .print-heading {
-        font-size: 1.5em;
+        font-size: 1.9em;
         font-weight: 700;
         margin-top:1em;
         margin-bottom:1em;
+        line-height: 130%;
         text-align: center;
     }
 
@@ -82,21 +84,21 @@
         float:left;
         width:95%;
         margin-right:5%;
-        /*border:thick solid red;*/
-        font-family: Calibri, Cambria, 'Arial', serif;
-        color:saddlebrown;
-        padding:0 1em;
     }
 
     .print-question p {
+        margin-top:1em;
         font-size: 1.5em;
         font-style: normal;
+        line-height: 110%;
+        /*padding:1em 0 0 0;*/
     }
 
     .print-question span {
+        display:block;
         font-size: 1.2em;
         font-style: italic;
-        padding-left:2em;
+        padding:.5em 0 0 2em;
     }
 
     .print-one-line-response {
@@ -196,10 +198,13 @@
     .print-solid-underline {
         border-bottom:solid thin var(--color-dark-blue);
     }
+
+    .desktop-header, .header-mobile, .header-detail-image, .content-dark-copy, .screen-title, .one-button-container, .screen-quote,
+    .content-images, .screen-title, .content-dark-list, #footers, .topic-grid, #headers {
+        display: none;
+    }
+
+
 }
 
-@media screen {
-    .print-plan-ahead-component, .print-caregiver-consult-component, .print-patient-consult-component, .print-planning-consult-component {
-        display:none;
-    }
-}
+

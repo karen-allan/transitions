@@ -15,6 +15,8 @@
   --color-white:#ffffff;
   --color-grey:#666161;
   --color-dark-grey: #878787;
+  --color-darkest-grey: #423f3f;
+
   --color-background-purple:#4a333b;
   --color-background-pink:#f4e6f3;
   --color-background-blue:#7aaad8;
@@ -23,6 +25,27 @@
   /* CONTENT WIDTHS */
   /* if the content container --content-width (800) and the device css is smaller than 800px it needs space on either side 90%
      which is bananas, mobile-port and tablet-port */
+
+
+  --wizard-banana-port-width:240px;
+  --wizard-banana-port-height:450px;
+
+  --wizard-banana-land-width:550px;
+  --wizard-banana-land-height:400px;
+
+  --wizard-mobile-port-width:350px;
+  --wizard-mobile-port-height:560px;
+
+  --wizard-mobile-land-width:800px;
+  --wizard-mobile-land-height:720px;
+
+  --wizard-tablet-port-width:600px;
+  --wizard-tablet-port-height:550px;
+
+  /* the ones under width 100 are desktop, laptop, ipad land, tablet land, ipad portrait */
+  --wizard-over-thousand-width:1000px;
+  --wizard-over-thousand-height:700px;
+
   --content-width:800px;
   --menu-width:840px;
   --tablet-width:1280px;
@@ -105,7 +128,10 @@
 
   /* ****************************** ALL COPY AND LISTS ****************************** */
   --family-copy: 'Open Sans';
+  --family-facts: 'Calibri';
 
+  /* TINY */
+  /*
   --tiny-copy-banana-port-font-size:.3em;
   --tiny-copy-mobile-port-font-size:.5em;
   --tiny-copy-tablet-port-font-size:.4em;
@@ -116,8 +142,10 @@
   --tiny-copy-tablet-land-font-size:.5em;
   --tiny-copy-ipad-land-font-size:0.6em;
   --tiny-copy-desktop-font-size:0.7em;
+  */
 
-  --smallest-copy-banana-port-font-size:.4em;
+  /* SMALLEST */
+  --smallest-copy-banana-port-font-size:.6em;
   --smallest-copy-mobile-port-font-size:.7em;
   --smallest-copy-tablet-port-font-size:.6em;
   --smallest-copy-ipad-port-font-size:.8em;
@@ -128,16 +156,17 @@
   --smallest-copy-ipad-land-font-size:0.8em;
   --smallest-copy-desktop-font-size:0.9em;
 
+  /* SMALL */
   --small-copy-banana-port-font-size:.6em;
   --small-copy-mobile-port-font-size:.7em;
   --small-copy-tablet-port-font-size:.8em;
   --small-copy-ipad-port-font-size:.9em;
 
-  --small-copy-banana-land-font-size:.7em;
-  --small-copy-mobile-land-font-size:.8em;
-  --small-copy-tablet-land-font-size:.9em;
-  --small-copy-ipad-land-font-size:1.0em;
-  --small-copy-desktop-font-size:1.1em;
+  --small-copy-banana-land-font-size:.6em;
+  --small-copy-mobile-land-font-size:.7em;
+  --small-copy-tablet-land-font-size:.8em;
+  --small-copy-ipad-land-font-size:.9em;
+  --small-copy-desktop-font-size:1em;
 
   /* MEDIUM */
   --med-copy-banana-port-font-size:.7em;
@@ -151,7 +180,7 @@
   --med-copy-ipad-land-font-size:1.1em;
   --med-copy-desktop-font-size:1.2em;
 
-  /* BIG not yet used */
+  /* BIG */
   --big-copy-banana-port-font-size:.8em;
   --big-copy-mobile-port-font-size:.9em;
   --big-copy-tablet-port-font-size:1.2em;
@@ -229,40 +258,78 @@
   /*--family-headers:'Gadugi', 'ReneB-Book', 'Whitney-Book';*/
   --family-headers:'Gadugi';
   --h1-header-banana-port-font-size:.6em;
-  --h1-header-mobile-port-font-size:.7em;
-  --h1-header-tablet-port-font-size:1.1em;
-  --h1-header-ipad-port-font-size:1.4em;
-
-  --h1-header-banana-land-font-size:0.9em;
-  --h1-header-mobile-land-font-size:1.2em;
-  --h1-header-tablet-land-font-size:1.7em;
-  --h1-header-ipad-land-font-size:1.8em;
-  --h1-header-desktop-font-size:1.9em;
-
-  /* H2 */
   --h2-header-banana-port-font-size:.7em;
-  --h2-header-mobile-port-font-size:.8em;
-  --h2-header-tablet-port-font-size:1.1em;
-  --h2-header-ipad-port-font-size:1.3em;
-
-  --h2-header-banana-land-font-size:1.0em;
-  --h2-header-mobile-land-font-size:1.2em;
-  --h2-header-tablet-land-font-size:1.6em;
-  --h2-header-ipad-land-font-size:1.7em;
-  --h2-header-desktop-font-size:1.8em;
-
-  /* H3 */
   --h3-header-banana-port-font-size:.3em;
+
+  --h1-header-mobile-port-font-size:.7em;
+  --h2-header-mobile-port-font-size:.8em;
   --h3-header-mobile-port-font-size:.4em;
+
+  --h1-header-tablet-port-font-size:1.1em;
+  --h2-header-tablet-port-font-size:1.1em;
   --h3-header-tablet-port-font-size:1.0em;
+
+  --h1-header-ipad-port-font-size:1.4em;
+  --h2-header-ipad-port-font-size:1.3em;
   --h3-header-ipad-port-font-size:1.1em;
 
+  --h1-header-banana-land-font-size:0.9em;
+  --h2-header-banana-land-font-size:1.0em;
   --h3-header-banana-land-font-size:.8em;
+
+  --h1-header-mobile-land-font-size:1.2em;
+  --h2-header-mobile-land-font-size:1.2em;
   --h3-header-mobile-land-font-size:0.9em;
+
+  --h1-header-tablet-land-font-size:1.7em;
+  --h2-header-tablet-land-font-size:1.6em;
   --h3-header-tablet-land-font-size:1.4em;
+
+  --h1-header-ipad-land-font-size:1.8em;
+  --h2-header-ipad-land-font-size:1.7em;
   --h3-header-ipad-land-font-size:1.5em;
+
+  --h1-header-desktop-font-size:1.9em;
+  --h2-header-desktop-font-size:1.8em;
   --h3-header-desktop-font-size:1.6em;
 
+  /* titles */
+  --h1-titles-banana-port-font-size:1.1em;
+  --h2-titles-banana-port-font-size:0.9em;
+  --h3-titles-banana-port-font-size:0.8em;
+
+  --h1-titles-banana-land-font-size:1.8em;
+  --h2-titles-banana-land-font-size:1.6em;
+  --h3-titles-banana-land-font-size:1.5em;
+
+  --h1-titles-mobile-port-font-size:1.4em;
+  --h2-titles-mobile-port-font-size:1.2em;
+  --h3-titles-mobile-port-font-size:1.1em;
+
+  --h1-titles-mobile-land-font-size:1.8em;
+  --h2-titles-mobile-land-font-size:1.6em;
+  --h3-titles-mobile-land-font-size:1.5em;
+
+  --h1-titles-tablet-port-font-size: 1.8em;
+  --h2-titles-tablet-port-font-size:1.6em;
+  --h3-titles-tablet-port-font-size:1.5em;
+
+  --h1-titles-ipad-port-font-size:2.0em;
+  --h2-titles-ipad-port-font-size:1.8em;
+  --h3-titles-ipad-port-font-size:1.7em;
+
+  --h1-titles-tablet-land-font-size:2.0em;
+  --h2-titles-tablet-land-font-size:1.8em;
+  --h3-titles-tablet-land-font-size:1.7em;
+
+  --h1-titles-ipad-land-font-size:2.1em;
+  --h2-titles-ipad-land-font-size:1.9em;
+  --h3-titles-ipad-land-font-size:1.8em;
+
+  --h1-titles-desktop-font-size:2.3em;
+  --h2-titles-desktop-font-size:2.1em;
+  --h3-titles-desktop-font-size:2.0em;
+  --h4-titles-desktop-font-size:1.5em;
 
   /* *********************************************** LINE HEIGHTS *****************************************************/
   --mobile-copy-line-height:150%;
@@ -314,6 +381,52 @@
     background-color: var(--color-dark-blue);
   }
 
+  /* Overwrite the styles of the mat-dialog-container element globally, but only for those that have an id of `modal-component` */
+  mat-dialog-container#modal-component {
+    border: 3px solid var(--color-dark-blue);
+    border-radius: 2em;
+    background-color: var(--color-background-blue);
+    margin:auto;
+
+  }
+
+  #modal-content-wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-color: white;
+    font-family: var(--family-headers);
+    color: var(--color-dark-blue);
+    overflow-y: auto;
+  }
+
+  .dark-copy-hidden {
+    display:none;
+  }
+
+  .red {
+    color:red;
+  }
+  /* Overwrite the styles of the mat-dialog-container element globally, but only for those that have an id of `modal-component` */
+  /* mat-dialog-container#modal-component {
+       border: 3px solid var(--color-dark-blue);
+       border-radius: 2em;
+       !*  width:300px;
+         height:300px;*!
+       background-color: var(--color-background-pink);
+       margin:auto;
+   }
+
+   #modal-content-wrapper {
+       width: 100%;
+       height: 100%;
+       align-content: center;
+       display: grid;
+       float: left;
+       background-color: white;
+       font-family: var(--family-headers);
+       color: var(--color-dark-blue);
+   }*/
 
   /* LIST FORMATS */
   .with-circle {
@@ -722,3 +835,6 @@
 
 
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

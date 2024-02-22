@@ -13,9 +13,18 @@ import { BookConsultationContainerComponent } from './menu-consultations/book-co
 import { HomeContainerComponent } from './menu-home/home-container/home-container.component';
 
 /* MENU PLAN AHEAD */
-import { PlanAheadWizardContainerComponent } from './menu-plan-ahead/plan-ahead-wizard/plan-ahead-wizard-container/plan-ahead-wizard-container.component';
-import { BeProactiveNowContainerComponent } from './menu-plan-ahead/be-proactive-now/be-proactive-now-container/be-proactive-now-container.component';
+
+import { ThinkAboutNeedsContainerComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-container/think-about-needs-container.component';
+
+// import { PlanAheadWizardContainerComponent } from './menu-plan-ahead/plan-ahead-wizard/plan-ahead-wizard-container/plan-ahead-wizard-container.component';
 import { DocumentsToSignContainerComponent } from './menu-plan-ahead/documents-to-sign/documents-to-sign-container/documents-to-sign-container.component';
+import { ChooseYourRepContainerComponent } from './menu-plan-ahead/choose-your-representative/choose-your-rep-container/choose-your-rep-container.component';
+
+
+
+import { RepNineWizardContainerComponent } from './global-wizards/rep-nine-wizard/rep-nine-wizard-container/rep-nine-wizard-container.component';
+
+import { ThinkAboutNeedsPrintoutComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-printout/think-about-needs-printout.component';
 
 
 /* AS SHOWN ON MENU */
@@ -28,16 +37,18 @@ const routes: Routes = [
     {path: 'aboutEndOfLifeAdvocacy', component: AboutEolAdvocacyContainerComponent},
     {path: 'aboutPractitioner', component: AboutPractitionerContainerComponent},
 
+    {path: 'menuPlanAhead', component: ThinkAboutNeedsContainerComponent},
+    {path: 'thinkAboutNeeds', component: ThinkAboutNeedsContainerComponent},
+    {path: 'chooseRep', component: ChooseYourRepContainerComponent},
+    {path: 'documentsToSign', component: DocumentsToSignContainerComponent},
+
     {path: 'menuConsultations', component: RolesOfConsultantContainerComponent},
     {path: 'rolesOfConsultant', component: RolesOfConsultantContainerComponent},
     {path: 'bookConsultation', component: BookConsultationContainerComponent},
 
-    {path: 'menuPlanAhead', component: BeProactiveNowContainerComponent},
-    {path: 'beProactiveNow', component: BeProactiveNowContainerComponent},
-    {path: 'planAheadWizard', component: PlanAheadWizardContainerComponent},
-    {path: 'documentsToSign', component: DocumentsToSignContainerComponent},
+    // {path: 'rep-wizard', component: RepNineWizardContainerComponent},
 
-    // {path: 'printWizard', component: PrintPlanAheadDirectiveComponent},
+    // {path: 'printWizard', component: ThinkAboutNeedsPrintoutComponent},
 
 ];
 

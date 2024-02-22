@@ -2,6 +2,7 @@ import { BrowserModule, Meta } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -12,6 +13,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './service-files/in-memory-data.service';
 import { NgxMaskModule } from 'ngx-mask'
 
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 /* GLOBAL FOOTER */
 import { GlobalFooterComponent } from './global-footer/global-footer.component';
@@ -64,25 +67,32 @@ import {HomeOverviewComponent} from './menu-home/home-overview/home-overview.com
 
 /* MENU WIZARD */
 /* REP NINE WIZARD */
-import { RepNineWizardContainerComponent } from './menu-plan-ahead/plan-ahead-wizard/rep-nine-wizard-container/rep-nine-wizard-container.component';
-import { RepNineWizardOverviewComponent } from './menu-plan-ahead/plan-ahead-wizard/rep-nine-wizard-overview/rep-nine-wizard-overview.component';
-/* TSDM WIZARD */
-import { TsdmWizardContainerComponent } from './menu-plan-ahead/plan-ahead-wizard/tsdm-wizard-container/tsdm-wizard-container.component';
-import { TsdmWizardOverviewComponent } from './menu-plan-ahead/plan-ahead-wizard/tsdm-wizard-overview/tsdm-wizard-overview.component';
+import { RepNineWizardContainerComponent } from './global-wizards/rep-nine-wizard/rep-nine-wizard-container/rep-nine-wizard-container.component';
+import { RepNineWizardOverviewComponent } from './global-wizards/rep-nine-wizard/rep-nine-wizard-overview/rep-nine-wizard-overview.component';
+
 
 import { AdvancedCareDocumentComponent } from './menu-plan-ahead/documents-to-sign/advanced-care/advanced-care-document.component';
 import { RepNineDocumentComponent } from './menu-plan-ahead/documents-to-sign/representative/rep-nine-document.component';
 import { EdithDocumentComponent } from './menu-plan-ahead/documents-to-sign/edith/edith-document.component';
 import { DnrNoCprDocumentComponent } from './menu-plan-ahead/documents-to-sign/dnr-no-cpr/dnr-no-cpr-document.component';
-import { PlanAheadWizardContainerComponent } from './menu-plan-ahead/plan-ahead-wizard/plan-ahead-wizard-container/plan-ahead-wizard-container.component';
-import { PlanAheadWizardOverviewComponent } from './menu-plan-ahead/plan-ahead-wizard/plan-ahead-wizard-overview/plan-ahead-wizard-overview.component';
-import { BeProactiveNowContainerComponent } from './menu-plan-ahead/be-proactive-now/be-proactive-now-container/be-proactive-now-container.component';
-import { BeProactiveNowOverviewComponent } from './menu-plan-ahead/be-proactive-now/be-proactive-now-overview/be-proactive-now-overview.component';
+
 import { DocumentsToSignContainerComponent } from './menu-plan-ahead/documents-to-sign/documents-to-sign-container/documents-to-sign-container.component';
 import { DocumentsToSignOverviewComponent } from './menu-plan-ahead/documents-to-sign/documents-to-sign-overview/documents-to-sign-overview.component';
-import { PlanWizardPageLastComponent } from './menu-plan-ahead/plan-ahead-wizard/plan-wizard-page-last/plan-wizard-page-last.component';
-import { PrintPlanAheadDirectiveComponent } from './global-print/print-plan-ahead-directive/print-plan-ahead-directive.component';
-import { PlanWizardLandingPageComponent } from './menu-plan-ahead/plan-ahead-wizard/plan-wizard-landing-page/plan-wizard-landing-page.component';
+
+
+
+
+import { ChooseYourRepContainerComponent } from './menu-plan-ahead/choose-your-representative/choose-your-rep-container/choose-your-rep-container.component';
+import { ChooseYourRepOverviewComponent } from './menu-plan-ahead/choose-your-representative/choose-your-rep-overview/choose-your-rep-overview.component';
+import { ThinkAboutNeedsContainerComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-container/think-about-needs-container.component';
+import { ThinkAboutNeedsOverviewComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-overview/think-about-needs-overview.component';
+import { ThinkAboutNeedsPrintoutComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-printout/think-about-needs-printout.component';
+import { ThinkAboutNeedsWizardComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-wizard/think-about-needs-wizard.component';
+
+import { ChooseYourRepWizardComponent } from './menu-plan-ahead/choose-your-representative/choose-your-rep-wizard/choose-your-rep-wizard.component';
+import { ThinkAboutNeedsWizardHeaderComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-wizard-header/think-about-needs-wizard-header.component';
+import { ChooseYourRepWizardHeaderComponent } from './menu-plan-ahead/choose-your-representative/choose-your-rep-wizard-header/choose-your-rep-wizard-header.component';
+
 
 @NgModule({
     declarations: [
@@ -140,9 +150,7 @@ import { PlanWizardLandingPageComponent } from './menu-plan-ahead/plan-ahead-wiz
         /* REP 9 WIZARD */
         RepNineWizardContainerComponent,
         RepNineWizardOverviewComponent,
-        /* TSDM WIZARD */
-        TsdmWizardContainerComponent,
-        TsdmWizardOverviewComponent,
+
 
 
         AdvancedCareDocumentComponent,
@@ -155,18 +163,22 @@ import { PlanWizardLandingPageComponent } from './menu-plan-ahead/plan-ahead-wiz
         AboutEolAdvocacyOverviewComponent,
         RolesOfConsultantContainerComponent,
         RolesOfConsultantOverviewComponent,
-        PlanAheadWizardContainerComponent,
-        PlanAheadWizardOverviewComponent,
-        BeProactiveNowContainerComponent,
-        BeProactiveNowOverviewComponent,
+
+
         DocumentsToSignContainerComponent,
         DocumentsToSignOverviewComponent,
 
-        PlanWizardPageLastComponent,
 
-
-        PrintPlanAheadDirectiveComponent,
-          PlanWizardLandingPageComponent,
+            ChooseYourRepContainerComponent,
+            ChooseYourRepOverviewComponent,
+            ThinkAboutNeedsContainerComponent,
+            ThinkAboutNeedsOverviewComponent,
+            ThinkAboutNeedsPrintoutComponent,
+            ThinkAboutNeedsWizardComponent,
+           
+            ChooseYourRepWizardComponent,
+            ThinkAboutNeedsWizardHeaderComponent,
+            ChooseYourRepWizardHeaderComponent,
 
 
 
@@ -178,13 +190,16 @@ import { PlanWizardLandingPageComponent } from './menu-plan-ahead/plan-ahead-wiz
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
+        MatButtonModule,
+        MatDialogModule,
         NgxMaskModule.forRoot(),
         HttpClientInMemoryWebApiModule.forRoot(
             InMemoryDataService, { dataEncapsulation: false }
         )
     ],
     providers: [DatePipe, Meta],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    entryComponents: [ThinkAboutNeedsWizardComponent]
 })
 
 

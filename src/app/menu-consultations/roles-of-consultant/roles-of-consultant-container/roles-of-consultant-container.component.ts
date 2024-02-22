@@ -16,6 +16,9 @@ export class RolesOfConsultantContainerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
+
+
 
 }

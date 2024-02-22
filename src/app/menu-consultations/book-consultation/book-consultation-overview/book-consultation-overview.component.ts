@@ -8,6 +8,7 @@ import { Meta, Title } from '@angular/platform-browser';
   templateUrl: './book-consultation-overview.component.html',
   styleUrls: ['./book-consultation-overview.component.css']
 })
+
 export class BookConsultationOverviewComponent implements OnInit {
 
   @Input() client: Client;

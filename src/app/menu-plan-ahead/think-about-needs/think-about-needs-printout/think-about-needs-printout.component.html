@@ -1,0 +1,31 @@
+<div class="print-plan-ahead-component">
+    <div class="print-reports-component">
+
+        <div class="print-heading">
+            End of Life Care Wishes for
+            <br>
+            {{wishes.client_name}}
+            on
+            <br>
+            {{now}}
+        </div>
+
+        <div class="print-question">
+            <div *ngFor="let question of wishes.questions; let questionIndex=index;">
+                <p>{{question.question_num+1}}.&nbsp;{{question.question_string}}</p>
+                <ng-container *ngFor="let response of question.responses;let responseIndex=index;">
+                    <ng-container *ngIf="question.selectedAnswer==(responseIndex)">
+                        <span>{{response.response_string}}</span>
+                    </ng-container>
+                    <ng-container *ngIf="question.question_num > 20">
+                        Transitions In Energy
+                        <br>
+                        Copyright &copy;&nbsp;2024
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+
+

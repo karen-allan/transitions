@@ -18,12 +18,12 @@ and (max-width: 359px)
 and (orientation: portrait) {
 
     .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
-        font-size: var(--small-copy-banana-port-font-size);
+        font-size: var(--med-copy-banana-port-font-size);
         line-height:var(--mobile-copy-line-height);
     }
 
     .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
-        font-size: var(--smallest-copy-banana-port-font-size);
+        font-size: var(--small-copy-banana-port-font-size);
     }
 }
 
@@ -34,12 +34,12 @@ and (max-width: 895px)
 and (orientation: landscape) {
 
     .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
-        font-size: var(--small-copy-banana-land-font-size);
+        font-size: var(--med-copy-banana-land-font-size);
         line-height:var(--mobile-copy-line-height);
     }
 
     .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
-        font-size: var(--smallest-copy-banana-land-font-size);
+        font-size: var(--small-copy-banana-land-font-size);
         line-height:var(--mobile-copy-line-height);
     }
 
@@ -52,12 +52,12 @@ and (max-width: 599px)
 and (orientation: portrait) {
 
     .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
-        font-size: var(--small-copy-mobile-port-font-size);
+        font-size: var(--med-copy-mobile-port-font-size);
         line-height:var(--mobile-copy-line-height);
     }
 
     .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
-        font-size: var(--smallest-copy-mobile-port-font-size);
+        font-size: var(--small-copy-mobile-port-font-size);
         line-height:var(--mobile-copy-line-height);
     }
 
@@ -70,12 +70,12 @@ and (max-width: 1279px)
 and (orientation: landscape) {
 
     .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
-        font-size: var(--small-copy-mobile-land-font-size);
+        font-size: var(--med-copy-mobile-land-font-size);
         line-height:var(--mobile-copy-line-height);
     }
 
     .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
-        font-size: var(--smallest-copy-mobile-land-font-size);
+        font-size: var(--small-copy-mobile-land-font-size);
         line-height:var(--mobile-copy-line-height);
     }
 
@@ -88,12 +88,12 @@ and (max-width: 1023px)
 and (orientation: portrait) {
 
     .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
-        font-size: var(--small-copy-tablet-port-font-size);
+        font-size: var(--med-copy-tablet-port-font-size);
         line-height:var(--copy-line-height);
     }
 
     .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
-        font-size: var(--smallest-copy-tablet-port-font-size);
+        font-size: var(--small-copy-tablet-port-font-size);
         line-height:var(--copy-line-height);
     }
 
@@ -106,12 +106,12 @@ and (max-width: 1366px)
 and (orientation: portrait) {
 
     .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
-        font-size: var(--small-copy-ipad-port-font-size);
+        font-size: var(--med-copy-ipad-port-font-size);
         line-height:var(--copy-line-height);
     }
 
     .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
-        font-size: var(--smallest-copy-ipad-port-font-size);
+        font-size: var(--small-copy-ipad-port-font-size);
         line-height:var(--copy-line-height);
     }
 }
@@ -139,12 +139,12 @@ and (orientation: landscape) {
 
 
     .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
-        font-size: var(--small-copy-tablet-land-font-size);
+        font-size: var(--med-copy-tablet-land-font-size);
         line-height:var(--copy-line-height);
     }
 
     .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
-        font-size: var(--smallest-copy-tablet-land-font-size);
+        font-size: var(--small-copy-tablet-land-font-size);
         line-height:var(--copy-line-height);
     }
 
@@ -161,12 +161,12 @@ and (orientation: landscape) {
 
 
     .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
-        font-size: var(--small-copy-ipad-land-font-size);
+        font-size: var(--med-copy-ipad-land-font-size);
         line-height:var(--copy-line-height);
     }
 
     .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
-        font-size: var(--smallest-copy-ipad-land-font-size);
+        font-size: var(--small-copy-ipad-land-font-size);
         line-height:var(--copy-line-height);
     }
 
@@ -177,12 +177,12 @@ and (orientation: landscape) {
 and (min-width: 1440px) {
 
     .content-dark-copy p, .content-light-copy p, .content-clear-copy p, .content-white-copy p {
-        font-size: var(--small-copy-desktop-font-size);
+        font-size: var(--med-copy-desktop-font-size);
         line-height:var(--copy-line-height);
     }
 
     .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
-        font-size: var(--smallest-copy-desktop-font-size);
+        font-size: var(--small-copy-desktop-font-size);
     }
 
 }
@@ -190,23 +190,17 @@ and (min-width: 1440px) {
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-    .content-dark-copy, .content-light-copy, .content-clear-copy, .content-bordered-copy {
+    .content-dark-copy, .content-light-copy, .content-clear-copy {
         display: grid;
         margin: auto;
         max-width: var(--content-width);
     }
 
-    .content-dark-copy, .content-light-copy, .content-clear-copy, .content-white-copy, .content-bordered-copy {
+    .content-dark-copy, .content-light-copy, .content-clear-copy, .content-white-copy {
         font-family: var(--family-copy);
     }
 
-    .content-bordered-copy {
-        width:90%;
-        padding:1em 5%;
-        border:thin solid var(--color-soft-blue);
-    }
-
-    .content-dark-copy p, .content-dark-copy p a, .content-dark-copy span, .content-dark-copy span a, .content-bordered-copy p {
+    .content-dark-copy p, .content-dark-copy p a, .content-dark-copy span, .content-dark-copy span a {
         color: var(--color-dark-blue);
     }
 

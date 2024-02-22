@@ -9,6 +9,11 @@ and (max-width: 1279px) {
         width:var(--media-less-than-content-width);
     }
 
+    .list-item {
+        line-height: 120%;
+        padding-top: .6em;
+    }
+
 }
 
 /*  BANANA PORTRAIT *******************************************************************************************/
@@ -71,7 +76,6 @@ and (orientation: portrait) {
 
 }
 
-
 /* IPADS PORTRAIT ****************************************************************************************************/
 @media only screen
 and (min-width: 1024px)
@@ -95,6 +99,16 @@ and (orientation: landscape) {
     .content-dark-list, .content-light-list, .content-clear-list {
         width:var(--media-more-than-content-width);
     }
+
+    .content-dark-list span, .content-light-list span, .content-clear-list span {
+        font-size:var(--med-copy-desktop-font-size);
+    }
+
+    .list-item {
+        line-height: 125%;
+        padding-top: 1em;
+    }
+
 }
 
 /*  TABLETS LANDSCAPE *******************************************************************************************/
@@ -135,7 +149,7 @@ and (min-width: 1440px) {
 
     /* ULs */
     .content-dark-list, .content-light-list, .content-clear-list {
-        display: block;
+        display: grid;
         margin: auto;
         max-width: var(--content-width);
     }
@@ -155,7 +169,6 @@ and (min-width: 1440px) {
         font-family: var(--family-copy);
         text-align: left;
         margin: 0 5%;
-        padding-top: .8em;
     }
 
     .list-item a {
@@ -164,23 +177,26 @@ and (min-width: 1440px) {
     }
 
     .circle {
-        list-style: circle;
+        list-style: circle inside;
     }
 
     .square {
-        list-style: square;
+        list-style: square inside;
     }
 
     .yin-yang {
         list-style-image:url("src/assets/images/icons/yinYang.png");
+        list-style-position: inside;
     }
 
     .facts {
         list-style-image:url("src/assets/images/icons/facts.png");
+        list-style-position: inside;
     }
 
     .infinity {
         list-style-image:url("src/assets/images/icons/infinity.png");
+        list-style-position: inside;
     }
 
 }

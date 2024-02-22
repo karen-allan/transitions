@@ -1,0 +1,14 @@
+<div class="wizard-block">
+    <div class="wizard-header">
+        <div class="wizard-header-logo"></div>
+        <div class="wizard-header-title">
+            The Choose Your Rep Wizard
+            <br>
+            for {{now}}
+            <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name != ''">
+                <br>
+                on {{rep.client_name}}
+            </ng-container>
+        </div>
+    </div>
+</div>

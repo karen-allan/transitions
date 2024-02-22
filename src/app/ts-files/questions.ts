@@ -82,12 +82,17 @@ export const QUESTIONS: Question[] = [
         selectedAnswer:0},
 
     {question_num:8,
-        question_string: 'How would you feel about accepting medical interventions that would affect your everyday enjoyment of life?',
+        question_string: 'Do you feel that you could adequately advocate for yourself if met with a chronic or terminal illness?',
         responses: [
-            {response_num: 0, response_string: 'I would accept any medical interventions in order to stay alive, no matter the cost.'},
-            {response_num: 1, response_string: 'I would want to try all possible alternatives first, before accepting the intervention.'},
-            {response_num: 2, response_string: 'If I was terminally ill and the interventions are only for pain control and comfort I would accept them.'},
-            {response_num: 3, response_string: 'I would not want any medical interventions if it means I lose my level of existing comfort.'}
+            {response_num: 0, response_string: 'I am very confident in my decision making abilities so I think I would advocate well for' +
+                    ' myself' +
+                    ' .'},
+            {response_num: 1, response_string: 'I am usually good at making decisions on my own behalf but my emotions might get in the' +
+                    ' way.'},
+            {response_num: 2, response_string: 'I am often unsure of my decisions so I might leave some decisions up to the health' +
+                    ' care team.'},
+            {response_num: 3, response_string: 'I would let a close family member advocate for me as I am unable to communicate my needs' +
+                    ' well.'}
         ],
         selectedAnswer:0},
 

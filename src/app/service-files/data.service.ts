@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import {EventEmitter, Injectable} from '@angular/core';
+import {Observable, of, Subscription} from 'rxjs';
 import {SUB_MENU_ITEMS} from "../ts-files/subMenuItems";
 import {SubMenuItem} from "../ts-files/subMenuItem";
 import {DerExercise} from "../ts-files/derExercise";
@@ -11,7 +11,6 @@ import {Meridian} from "../ts-files/meridian";
 import {Question} from "../ts-files/question";
 import {QUESTIONS} from "../ts-files/questions";
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -19,7 +18,14 @@ export class DataService {
 
   selectedQuestion = Question;
 
+  invokeFirstComponentFunction=new EventEmitter();
+  subsVar:Subscription
+
   constructor() { }
+
+  onFirstComponentButtonClick(name:string) {
+    this.invokeFirstComponentFunction.emit(name);
+  }
 
   // ******************** GET SUB MENU ITEMS *************************
 

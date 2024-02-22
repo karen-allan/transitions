@@ -1,13 +1,27 @@
 
-
 /*******************************************************************************************************************
-  ALL USE THE MAXIMUM BANNER WIDTH
+  ALL BANANAS, MOBILES AND TABLET AND IPAD PORTRAIT (MAX IS 1 less than TABLET LANDSCAPE at and (min-width: 1280px))
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 240px) {
+and (min-width: 240px)
+and (max-width: 1279px) {
 
     .topic-grid {
-        width:var(--media-more-than-content-width);
+        width:var(--media-less-than-content-width);
+        align-content: flex-end;
+    }
+
+    .topic-size {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .topic-grid h1, .topic-grid h2 {
+        height:auto;
+        width:100%;
+        justify-content: center;
+        background-color: var(--color-darkest-grey);
+        letter-spacing: 1px;
     }
 
 }
@@ -19,16 +33,8 @@ and (max-width: 359px)
 and (orientation: portrait) {
 
     /* IMAGE WITH TEXT AT BOTTOM */
-    .topic-size{
-        height:240px;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .topic-grid h1, .topic-grid h2 {
-        align-content: flex-end;
-        justify-content: center;
-        text-align:center;
+    .topic-size {
+        height: 240px;
     }
 
     .topic-grid h1 {
@@ -38,8 +44,6 @@ and (orientation: portrait) {
     .topic-grid h2 {
         font-size: var(--h2-header-banana-port-font-size);
     }
-
-
 
 }
 
@@ -52,14 +56,6 @@ and (orientation: landscape) {
     /* IMAGE WITH TEXT AT BOTTOM */
     .topic-size{
         height:400px;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .topic-grid h1, .topic-grid h2 {
-        align-content: flex-end;
-        justify-content: center;
-        text-align:center;
     }
 
     .topic-grid h1 {
@@ -81,14 +77,6 @@ and (orientation: portrait) {
     /* IMAGE WITH TEXT AT BOTTOM */
     .topic-size{
         height:360px;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .topic-grid h1, .topic-grid h2 {
-        align-content: flex-end;
-        justify-content: center;
-        text-align:center;
     }
 
     .topic-grid h1 {
@@ -98,8 +86,6 @@ and (orientation: portrait) {
     .topic-grid h2 {
         font-size: var(--h2-header-mobile-port-font-size);
     }
-
-
 
 }
 
@@ -112,25 +98,15 @@ and (orientation: landscape) {
     /* TEXT AT LEFT AND IMAGE AT RIGHT */
     .topic-size{
         height:400px;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .topic-grid h1, .topic-grid h2 {
-        align-content: flex-end;
-        justify-content: center;
-        text-align:center;
     }
 
     .topic-grid h1 {
         font-size:var(--h1-header-mobile-land-font-size);
-        /*padding-left:3.5em;*/
     }
 
     .topic-grid h2 {
         font-size:var(--h2-header-mobile-land-font-size);
     }
-
 
 }
 
@@ -142,14 +118,6 @@ and (orientation: portrait) {
 
     .topic-size{
         height:400px;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .topic-grid h1, .topic-grid h2 {
-        align-content: flex-end;
-        justify-content: center;
-        text-align:center;
     }
 
     .topic-grid h1 {
@@ -160,8 +128,6 @@ and (orientation: portrait) {
         font-size:var(--h2-header-tablet-port-font-size);
     }
 
-
-
 }
 
 /* IPADS PORTRAIT ****************************************************************************************************/
@@ -170,17 +136,8 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    /* IMAGE WITH TEXT AT BOTTOM */
     .topic-size{
         height:400px;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .topic-grid h1, .topic-grid h2 {
-        align-content: flex-end;
-        justify-content: center;
-        text-align:center;
     }
 
     .topic-grid h1 {
@@ -191,10 +148,33 @@ and (orientation: portrait) {
         font-size:var(--h2-header-ipad-port-font-size);
     }
 
-
-
 }
 
+/*******************************************************************************************************************
+  ALL THAT SHOW DESKTOP - TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
+*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 1280px)
+and (orientation: landscape) {
+
+    .topic-grid {
+        width:var(--media-more-than-content-width);
+        align-content: center;
+    }
+
+    .topic-size{
+        height:400px;
+        background-position: right;
+        background-size: contain;
+    }
+
+    .topic-grid h1, .topic-grid h2 {
+        justify-content: center;
+        letter-spacing: 4px;
+    }
+
+}
 
 /*  TABLETS LANDSCAPE *******************************************************************************************/
 @media only screen
@@ -202,11 +182,9 @@ and (min-width: 1280px)
 and (max-width: 1365px)
 and (orientation: landscape) {
 
+    /* 1280-800 = 480  the width of headers is total width less 800px image that are then centered within that width */
     .topic-grid h1, .topic-grid h2 {
-        align-content: center;
-        justify-content: flex-start;
-        text-align:center;
-        padding-left:1.5em;
+        width:480px;
     }
 
     .topic-grid h1 {
@@ -215,11 +193,6 @@ and (orientation: landscape) {
 
     .topic-grid h2 {
         font-size:var(--h2-header-tablet-land-font-size);
-    }
-
-    .topic-size{
-        height:400px;
-        background-position: right;
     }
 
 }
@@ -231,11 +204,9 @@ and (min-width: 1366px)
 and (max-width: 1439px)
 and (orientation: landscape) {
 
+    /* 1366-800 =566 */
     .topic-grid h1, .topic-grid h2 {
-        align-content: center;
-        justify-content: flex-start;
-        text-align:center;
-        padding-left:1.5em;
+        width:566px;
     }
 
     .topic-grid h1 {
@@ -246,11 +217,6 @@ and (orientation: landscape) {
         font-size:var(--h2-header-ipad-land-font-size);
     }
 
-    .topic-size{
-        height:400px;
-        background-position: right;
-    }
-
 }
 
 /* LAPTOPS ****************************************************************************************************/
@@ -258,11 +224,9 @@ and (orientation: landscape) {
 and (min-width: 1440px)
 and (max-width:1919px) {
 
+    /* 1440-800 = 640 */
     .topic-grid h1, .topic-grid h2 {
-        align-content: center;
-        justify-content: flex-start;
-        text-align:center;
-        padding-left:5.0em;
+        width:640px;
     }
 
     .topic-grid h1 {
@@ -271,11 +235,6 @@ and (max-width:1919px) {
 
     .topic-grid h2 {
         font-size:var(--h2-header-desktop-font-size);
-    }
-
-    .topic-size {
-        height:400px;
-        background-position: right;
     }
 
 }
@@ -284,15 +243,12 @@ and (max-width:1919px) {
 @media only screen
 and (min-width: 1920px) {
 
-    /* FOR EVERY DETAIL PAGE, UNDER THE HEADER, ARE THE TOPICS WITH TEXT AND IMAGE GRID */
+    /* 1920-800 = 1120 */
     .topic-grid h1, .topic-grid h2 {
-        align-content: center;
-        justify-content: flex-start;
-        text-align:center;
-        padding-left:12.5em;
+        width:1120px;
     }
 
-    .topic-grid h1 {
+     .topic-grid h1 {
         font-size:var(--h1-header-desktop-font-size);
     }
 
@@ -300,11 +256,6 @@ and (min-width: 1920px) {
         font-size:var(--h2-header-desktop-font-size);
     }
 
-    .topic-size{
-        height:400px;
-        background-position: right;
-
-    }
 }
 
 /* GLOBAL *************************************************************************************************************/
@@ -314,23 +265,26 @@ and (min-width: 1920px) {
         max-width:var(--header-width);
         display:grid;
         text-transform: uppercase;
-        margin:auto;
+        margin: auto;
     }
 
     .topic-grid h1, .topic-grid h2 {
         display:grid;
         font-family: var(--family-headers);
-        letter-spacing: 4px;
         color:var(--color-white);
         font-weight:400;
+
+        margin:0;
     }
 
-    .topic-home-doula {
+    /* on home page */
+    .topic-book-session {
         background-repeat: no-repeat;
         background-image:
-                url("src/assets/images/topics/home/topicHomeConsultation.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
+                url("src/assets/images/topics/home/topicBookSession.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
     }
 
+    /* ABOUT */
     .topic-about-practitioner {
         background-repeat: no-repeat;
         background-image:
@@ -343,6 +297,24 @@ and (min-width: 1920px) {
                 url("src/assets/images/topics/about/topicAboutEolAdvocacy.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
     }
 
+    .topic-think-about-needs {
+        background-repeat: no-repeat;
+        background-image:
+                url("src/assets/images/topics/planning/topicThinkAboutNeeds.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
+    }
+
+    .topic-choose-your-rep {
+        background-repeat: no-repeat;
+        background-image:
+                url("src/assets/images/topics/planning/topicChooseRep.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
+    }
+
+    .topic-documents-to-sign {
+        background-repeat: no-repeat;
+        background-image:
+                url("src/assets/images/topics/planning/topicDocumentsToSign.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
+    }
+
     .topic-roles-of-consultant {
         background-repeat: no-repeat;
         background-image:
@@ -353,23 +325,5 @@ and (min-width: 1920px) {
         background-repeat: no-repeat;
         background-image:
                 url("src/assets/images/topics/consultations/topicBookConsultation.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
-    }
-
-    .topic-be-proactive-now {
-        background-repeat: no-repeat;
-        background-image:
-                url("src/assets/images/topics/planning/topicBeProactiveNow.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
-    }
-
-    .topic-plan-ahead-wizard {
-        background-repeat: no-repeat;
-        background-image:
-                url("src/assets/images/topics/planning/topicPlanAheadWizard.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
-    }
-
-    .topic-documents-to-sign {
-        background-repeat: no-repeat;
-        background-image:
-                url("src/assets/images/topics/planning/topicDocumentsToSign.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
     }
 }

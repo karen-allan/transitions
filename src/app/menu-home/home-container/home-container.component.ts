@@ -11,8 +11,8 @@ export class HomeContainerComponent implements OnInit {
   subMenuItemId = 0
 
   detailHeaderName = 'header-home'
-  title='Dying Today'
-  slogan='can we do so with dignity?'
+  title='Facing our Mortality'
+  slogan='knowledge is power'
 
   constructor() { }
 

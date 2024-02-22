@@ -211,7 +211,7 @@ and (min-width: 1440px) {
 
     /* QUOTES */
     .screen-quote p {
-        font-size:var(--small-quote-desktop-font-size);
+        font-size:var(--big-quote-desktop-font-size);
     }
 
     .screen-quote span {
@@ -244,7 +244,7 @@ and (min-width: 1440px) {
     }
 
     .screen-quote {
-        max-width: var(--screen-width);
+        max-width: var(--banner-width);
         display:grid;
         margin:1em auto;
         align-content: center;
@@ -269,5 +269,7 @@ and (min-width: 1440px) {
     .screen-quote span {
         text-align: right;
     }
+
+
 }
 

@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/assets/css/copy.css",
               "src/assets/css/headers.css",
               "src/assets/css/images.css",
@@ -106,6 +107,7 @@
             ],
             "styles": [
 
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/assets/css/copy.css",
               "src/assets/css/headers.css",
               "src/assets/css/images.css",

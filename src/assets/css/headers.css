@@ -256,7 +256,7 @@ and (min-width: 1920px) {
         font-family: var(--family-quotes);
         font-style: italic;
         font-weight: 400;
-        padding: 0 1em;
+        padding: 1em 0;
         line-height: 120%;
     }
 
@@ -280,6 +280,21 @@ and (min-width: 1920px) {
         url('src/assets/images/headers/about/headerAboutPractitioner.jpg');
     }
 
+    /* PLAN AHEAD */
+    .header-think-about-needs {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/planning/headerThinkAboutNeeds.jpg");
+    }
+
+    .header-choose-rep {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/planning/headerChooseRep.jpg');
+    }
+
+
+
     .header-roles-of-consultant {
         background-size: cover;
         background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
@@ -298,11 +313,8 @@ and (min-width: 1920px) {
         url("src/assets/images/headers/planning/headerPlanAheadWizard.jpg");
     }
 
-    .header-be-proactive-now {
-        background-size: cover;
-        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-        url("src/assets/images/headers/planning/headerBeProactiveNow.jpg");
-    }
+
+
 
     .header-documents-to-sign {
         background-size: cover;
