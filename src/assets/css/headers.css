@@ -310,7 +310,7 @@ and (min-width: 1920px) {
     .header-plan-ahead-wizard {
         background-size: cover;
         background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-        url("src/assets/images/headers/planning/headerPlanAheadWizard.jpg");
+        url("src/assets/images/details/planning/wizardLogo.jpg");
     }
 
 

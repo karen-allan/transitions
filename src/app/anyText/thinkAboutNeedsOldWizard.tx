@@ -1,0 +1,329 @@
+
+import {Component, EventEmitter, OnInit} from '@angular/core';
+import {WishesWizard} from "../../../ts-files/wishes-wizard";
+import {Question} from "../../../ts-files/question";
+import {MatDialogRef} from "@angular/material/dialog";
+import {formatDate} from "@angular/common";
+
+@Component({
+  selector: 'app-think-about-needs-wizard',
+  templateUrl: './think-about-needs-wizard.component.html',
+  styleUrls: ['./think-about-needs-wizard.component.css']
+})
+export class ThinkAboutNeedsWizardComponent implements OnInit {
+
+  errorMessage:string;
+  wishes:WishesWizard;
+  title:string = "Title";
+  page:number=0;
+  finalPage:number=20;
+  selectedQuestion:Question;
+  now:string;
+  public event: EventEmitter<any> = new EventEmitter();
+
+  constructor(public dialogRef: MatDialogRef<ThinkAboutNeedsWizardComponent>) {
+  }
+
+  /* *************************************************************************************************************** */
+  ngOnInit(): void {
+    this.page = 0;
+    //  this.page = 16;
+    this.getCurrentDate();
+  }
+
+  printFunction(){
+    this.event.emit({wishes: this.wishes, print: true});
+  }
+
+  closeModal(): void {
+    this.event.emit({wishes: this.wishes, print: false});
+  }
+
+  onAnswerChanged(value) {
+    // this.selectedQuestion.responses[value].response_string;
+    this.selectedQuestion.selectedAnswer = value;
+  }
+
+  /* *************************************************************************************************************** */
+  checkClientName(): void {
+    if (this.wishes.client_name.length == 0) {
+      this.errorMessage = "You must enter your name here.";
+      return;
+    }
+    else if (this.wishes.client_name == '') {
+      this.errorMessage = "You must enter your name here.";
+      return;
+    }
+    else {
+      this.errorMessage='';
+      // alert('name is okay ' + this.wishes.client_name)
+      this.getNextPage();
+    }
+  }
+
+  /* *************************************************************************************************************** */
+  getNextPage() {
+    //console.log("this.page = " + this.page + " - getting next page");
+    if (this.page > 0) {
+      // Questions start on page 1, not page 0
+      this.wishes.questions[this.page-1].selectedAnswer = this.selectedQuestion.selectedAnswer;
+    }
+    this.page = this.page + 1;
+    this.getQuestion(this.page);
+  }
+
+  /* *************************************************************************************************************** */
+  getPreviousPage() {
+    this.wishes.questions[this.page-1].selectedAnswer = this.selectedQuestion.selectedAnswer;
+    this.page = this.page - 1;
+    this.getQuestion(this.page);
+  }
+
+  /* *************************************************************************************************************** */
+  finished() {
+    this.page = this.page + 1;
+  }
+
+  /* *************************************************************************************************************** */
+  getQuestion(pageNumber: number | undefined) {
+    // Question 0 is on Page 1
+    let questionNumber = pageNumber - 1;
+    this.selectedQuestion = this.wishes.questions[questionNumber];
+    // alert("question is " + this.selectedQuestion.question_string);
+  }
+
+  /* *************************************************************************************************************** */
+  setWishes(wishes:WishesWizard) {
+    this.wishes = wishes;
+    this.selectedQuestion = wishes.questions[0];
+  }
+
+  /* *************************************************************************************************************** */
+  setDate(date:string) {
+    this.now = date;
+  }
+
+  /* *************************************************************************************************************** */
+  setDefaultName(name:string) {
+    this.wishes.client_name = name;
+  }
+
+  /* *************************************************************************************************************** */
+  cancelWizard() {
+    //   alert("am cancelling for client " + this.wishes.client_name);
+    this.page = 0;
+    this.errorMessage='';
+    this.wishes.client_name='';
+    this.closeModal();
+  }
+
+  /* *************************************************************************************************************** */
+  getCurrentDate() {
+    const today = new Date();
+    this.now= formatDate(today, 'longDate',  'en-US')
+  }
+
+
+
+
+<div id="modal-content-wrapper">
+    <ng-container *ngIf="page === 0">
+        <app-think-about-needs-wizard-header [wishes]='wishes'></app-think-about-needs-wizard-header>
+        <div class="wizard-prompt align-content-">
+            <p>Please enter your name and press NEXT to start the wizard:</p>
+        </div>
+
+        <form #wizardForm="ngForm" novalidate>
+            <div class="wizard-form">
+                <div class="error-message-block">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="error-message">{{errorMessage}}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="error-message">&nbsp;</div>
+                    </ng-container>
+                </div>
+
+                <div class="planner-name-block">
+                    <label class="planner-name-column" for="name"><b>Name (required):</b></label>
+                    <input type="text" class="planner-name-column" [(ngModel)]="wishes.client_name" id="name" name="name">
+                </div>
+            </div>
+        </form>
+        <div class="two-buttons-container justify-content-end">
+            &lt;!&ndash; was closeModal &ndash;&gt;
+            <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+            <button class="save-button " (click)="checkClientName()">NEXT</button>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="page > 0 && page <= 20">
+        <app-think-about-needs-wizard-header [wishes]='wishes'></app-think-about-needs-wizard-header>
+        &lt;!&ndash;        <app-plan-wizard-questions [wishes]='wishes' [selectedQuestion]='selectedQuestion' [page]='page' [finalPage]='finalPage'></app-plan-wizard-questions>&ndash;&gt;&ndash;&gt;
+
+        <div class="wizard-prompt">
+            <span>
+                <b>Question {{page}} / {{finalPage}}:</b>
+                <br><br>
+                {{selectedQuestion.question_string}}
+                <br>
+            </span>
+        </div>
+
+        <div class="one-full-column-block">
+            <div class="first-radio-check-column" *ngFor="let response of selectedQuestion.responses">
+                <input type="radio" [value]="response.response_num" [ngModel]="selectedQuestion.selectedAnswer" name="question"
+                       (ngModelChange)="onAnswerChanged($event)">
+                <label>
+                    {{response.response_string}}
+                </label>
+            </div>
+        </div>
+
+        <div class="three-buttons-container">
+            <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+            <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+            <button class="next-button" (click)="getNextPage()">NEXT</button>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="page === 21">
+        &lt;!&ndash;        <app-plan-wizard-finished [wishes]='wishes' [page]='page' [finalPage]='finalPage'></app-plan-wizard-finished>&ndash;&gt;
+        <app-think-about-needs-wizard-header [wishes]='wishes'></app-think-about-needs-wizard-header>
+
+        <div class="wizard-end">
+            Congratulations! You are done!
+        </div>
+
+        <div class="content-dark-copy">
+            <p> Please press PRINT to get a hard copy or while on the print screen choose to save it as a PDF on your own computer and print
+                at a later date. Store this document with your other end of life documents.
+                <br><br>
+                This directive is a great start to planning for your future but there are a lot of other things to get done.
+                You can book a consultation with me either over zoom or in person for more help on a huge variety of topics around
+                end-of-life and around energy medicine therapy.
+            </p>
+        </div>
+
+        <div class="two-buttons-container">
+            <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+            <button class="print-button" (click)="printFunction()">PRINT</button>
+        </div>
+    </ng-container>
+</div>
+
+
+
+
+import {Component, Input, OnInit} from '@angular/core';
+import {WishesWizard} from "../../../ts-files/wishes-wizard";
+import {formatDate} from "@angular/common";
+
+@Component({
+  selector: 'app-think-about-needs-wizard-header',
+  templateUrl: './think-about-needs-wizard-header.component.html',
+  styleUrls: ['./think-about-needs-wizard-header.component.css']
+})
+export class ThinkAboutNeedsWizardHeaderComponent implements OnInit {
+
+  @Input() wishes:WishesWizard;
+
+  now:string;
+  name:string;
+
+  constructor() { }
+
+  /* *************************************************************************************************************** */
+  ngOnInit(): void {
+    this.getCurrentDate();
+    this.getClientName();
+  }
+
+  /* *************************************************************************************************************** */
+  getCurrentDate() {
+    const today = new Date();
+    this.now= formatDate(today, 'longDate',  'en-US')
+  }
+
+  /* *************************************************************************************************************** */
+  getClientName() {
+    this.name=this.wishes.client_name;
+  }
+
+
+}
+<div class="wizard-block">
+    <div class="wizard-header">
+        <div class="wizard-header-logo"></div>
+        <div class="wizard-header-title">
+            The Plan Ahead Wizard
+            <br>
+            for {{now}}
+            <ng-container *ngIf="name.length > 0 && name != ''">
+                <br>
+                on {{name}}
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+
+import {Component, Input, OnInit} from '@angular/core';
+import {WishesWizard} from "../../../ts-files/wishes-wizard";
+import {formatDate} from "@angular/common";
+
+@Component({
+  selector: 'app-think-about-needs-printout',
+  templateUrl: './think-about-needs-printout.component.html',
+  styleUrls: ['./think-about-needs-printout.component.css']
+})
+export class ThinkAboutNeedsPrintoutComponent implements OnInit {
+
+  @Input() wishes:WishesWizard;
+  @Input() now:string;
+
+  constructor() { }
+
+  ngOnInit(): void {
+    this.getCurrentDate();
+  }
+
+  /* *************************************************************************************************************** */
+  getCurrentDate() {
+    const today = new Date();
+    this.now= formatDate(today, 'longDate',  'en-US')
+  }
+
+}
+
+<div class="print-plan-ahead-component">
+    <div class="print-reports-component">
+
+        <div class="print-heading">
+            End of Life Care Wishes for
+            <br>
+            {{wishes.client_name}}
+            on
+            <br>
+            {{now}}
+        </div>
+
+        <div class="print-question">
+            <div *ngFor="let question of wishes.questions; let questionIndex=index;">
+                <p>{{question.question_num+1}}.&nbsp;{{question.question_string}}</p>
+                <ng-container *ngFor="let response of question.responses;let responseIndex=index;">
+                    <ng-container *ngIf="question.selectedAnswer==(responseIndex)">
+                        <span>{{response.response_string}}</span>
+                    </ng-container>
+                    <ng-container *ngIf="question.question_num > 20">
+                        Transitions In Energy
+                        <br>
+                        Copyright &copy;&nbsp;2024
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RolesOfConsultantContainerComponent implements OnInit {
 
-  menuItemId:number   = 3;
-  subMenuItemId:number = 30;
+  menuItemId:number   = 4;
+  subMenuItemId:number = 40;
 
   detailHeaderName = 'header-roles-of-consultant'
   title='End-of-Life Consulting'

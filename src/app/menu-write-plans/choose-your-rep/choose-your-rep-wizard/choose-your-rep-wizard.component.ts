@@ -2,7 +2,7 @@ import {Component, EventEmitter, OnInit} from '@angular/core';
 import {MatDialogRef} from "@angular/material/dialog";
 import {formatDate} from "@angular/common";
 import {RepNine} from "../../../ts-files/rep-nine";
-import {parse} from "@angular/compiler/src/render3/view/style_parser";
+import * as moment from 'moment';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class ChooseYourRepWizardComponent implements OnInit {
   rep:RepNine;
   title:string = "Title";
   page:number=0;
-  finalPage:number=20;
+  finalPage:number=11;
   now:string;
   legalDate:string;
 
@@ -31,7 +31,6 @@ export class ChooseYourRepWizardComponent implements OnInit {
     this.page = 0;
     //  this.page = 16;
     this.getCurrentDate();
-   // this.getLegalDate();
   }
 
   printFunction(){
@@ -58,10 +57,12 @@ export class ChooseYourRepWizardComponent implements OnInit {
       this.getNextPage();
     }
 
-    alert(this.rep.signing_date);
-    //moment()
-    let [y,M,d,h,m,s] = this.rep.signing_date.split(/[- :]/);
-
+    if (moment(this.rep.signing_date, "YYYY/MM/DD").isValid()) {
+     // alert('name is okay ' + this.rep.signing_date)
+    }
+    else {
+      this.errorMessage = "You must enter a valid date in format yyyy/mm/dd.";
+    }
   }
 
   /* *************************************************************************************************************** */
@@ -99,7 +100,8 @@ export class ChooseYourRepWizardComponent implements OnInit {
 
   /* *************************************************************************************************************** */
   setDefaultName(name:string) {
-    this.rep.client_name = name;
+    this.rep.client_name = "";
+    // this.rep.client_name = name;
   }
 
   /* *************************************************************************************************************** */

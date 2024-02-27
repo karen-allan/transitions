@@ -582,13 +582,18 @@ and (min-width: 1440px) {
     }
 
     /* IN CONSULT MEDICAL, CAREGIVER-SUPPORT, MAKING PLAN, PATIENT-SUPPORT, CLIENT SESSION, SESSION MEDICAL */
-    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
+    .first-radio-check-column, .first-signing-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
         font-size: var(--med-copy-desktop-font-size);
     }
 
     /* DEMOGRAPHICS */
-    .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column {
+    .full-text-column, .first-text-column, .second-text-column, .third-text-column, .fourth-text-column, .third-fourth-text-column,
+    .full-text-no-padding-column, .first-text-no-pad-column, .second-text-no-pad-column,  .third-text-no-pad-column, .fourth-text-no-pad-column {
         font-size: var(--big-copy-desktop-font-size);
+    }
+
+    .first-signing-text-column, .second-signing-text-column {
+        font-size: var(--smallest-copy-desktop-font-size);
     }
 
     .title-background {
@@ -636,17 +641,43 @@ and (min-width: 1440px) {
     }
 
     .full-text-column, .first-text-column, .second-text-column,  .third-text-column, .fourth-text-column, .third-fourth-text-column,
-    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column  {
+    .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column, first-signing-text-column,
+    second-signing-text-column, .first-signing-radio-check-column   {
         display:grid;
     }
 
     /* THESE ARE FOR CONTENT  */
     .full-text-column, .first-text-column, .second-text-column,  .third-text-column, .fourth-text-column, .third-fourth-text-column,
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column,
-    .full-line-prompt p, .text-area  {
+    .full-line-prompt p, .text-area, first-signing-text-column, second-signing-text-column   {
         padding-top:1em;
         font-family: var(--family-copy);
         color: var(--color-dark-blue);
+    }
+
+    .first-signing-radio-check-column {
+        display:inline;
+        border:1px dashed var(--color-dark-blue);
+        /*margin:1em 0;*/
+        padding:.5em;
+        text-align:left;
+        line-height: 110%;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+    }
+
+    .full-text-no-padding-column {
+        display:grid;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        padding:0;
+    }
+
+    .first-text-no-pad-column, .second-text-no-pad-column,  .third-text-no-pad-column, .fourth-text-no-pad-column {
+        display:grid;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        padding:0;
     }
 
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column   {
@@ -697,6 +728,11 @@ and (min-width: 1440px) {
         line-height: 110%;
     }
 
+    .half-line-column-block {
+        display: grid;
+        width: 50%;
+    }
+
     .full-line-prompt p {
         font-style: italic;
         font-weight:800;
@@ -722,10 +758,23 @@ and (min-width: 1440px) {
         padding-left:4em;
     }
 
+
     .two-even-columns-block {
         width: 100%;
         display: inline-grid;
         grid-template-columns: 50% 50%;
+    }
+
+    .two-signing-columns-block {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    .three-date-columns-block {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 40% 30% 30%;
     }
 
     .two-unequal-columns-block {
@@ -746,18 +795,36 @@ and (min-width: 1440px) {
         grid-template-columns: 20% 80%;
     }
 
+    .two-smallest-big-columns-block {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 3% 97%;
+    }
+
+    .two-smallest-medium-columns-block {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 3% 47%;
+    }
+
     .four-columns-block {
         width: 100%;
         display: inline-grid;
         grid-template-columns: 45%  20% 1fr 1fr;
     }
 
+    .four-unequal-columns-block {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 35% 12% 35% 18%;
+    }
+
     /* THESE ARE THE CONTENT ELEMENTS */
-    .first-text-column, .first-radio-check-column {
+    .first-text-column, .first-radio-check-column, .first-signing-text-column, .first-signing-radio-check-column  {
         grid-column: 1;
     }
 
-    .second-text-column, .second-radio-check-column {
+    .second-text-column, .second-radio-check-column, .second-signing-text-column {
         grid-column: 2;
     }
 
@@ -773,7 +840,7 @@ and (min-width: 1440px) {
         grid-column: 4;
     }
 
-    .full-text-column, .full-radio-check-column {
+    .full-text-column, .full-radio-check-column, .full-text-no-padding-column {
         display: grid;
         grid-column: 1/-1;
     }
@@ -849,6 +916,14 @@ and (min-width: 1440px) {
         height:5px;
         width:100%;
         background-color: var(--color-dark-blue);
+    }
+
+    .bordered-form {
+        display: block;
+        width:100%;
+        max-width: var(--screen-width);
+        margin:auto;
+        border:thin solid blue;
     }
 
 

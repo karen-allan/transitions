@@ -1,12 +1,10 @@
-
-<!--
 <ng-container *ngIf="page === 0">
     <div class="screen-title pad-top-2">
-        <h2>{{title}}</h2>
+        <h2>{{ title }}</h2>
     </div>
--->
 
-   <!-- <div class = "content-dark-copy pad-top">
+
+    <div class="content-dark-copy pad-top">
         <p>
             If you are in an accident or suffer a critical illness and end up in Emergency and are incapable of
             answering for yourself, the first thing the hospital will look for is information about your next of kin.
@@ -29,11 +27,12 @@
         <li class="list-item">have no dispute with you</li>
         <li class="list-item">must not be paid by you for personal care or health care services</li>
         <li class="list-item">must not be an employee of a facility in which you reside and receive personal care or
-            health care services from unless this person is your child, spouse or parent</li>
+            health care services from unless this person is your child, spouse or parent
+        </li>
         <li class="list-item">have been in contact with you within the year before you need care</li>
     </ul>
 
-    <div class = "content-dark-copy pad-top">
+    <div class="content-dark-copy pad-top">
         <p>
             To learn more about what a Representative Section-9 advocate can and can not do regarding advocating for your health
             should you be unable to do so (partially or completely) please go to <a routerLink="/chooseRep">Choosing your
@@ -46,23 +45,27 @@
             It may hurt a bit but you can stop anytime and come back whenever you are more ready. Once done, pat yourself on the back and
             reward yourself in any way you prefer to be rewarded :).
         </p>
-    </div>-->
+    </div>
+    -->
 
-   <!-- <div class="one-button-container pad-top">
+    <div class="one-button-container pad-top">
         <button class="start-button" (click)="getNextPage()">START</button>
     </div>
-</ng-container>-->
+</ng-container>
 
 <!-- CLIENT INFO -->
 <ng-container *ngIf="page === 1">
-    <div class = "content-dark-copy pad-top">
+    <div class="content-dark-copy pad-top">
         <p>
             Made under Section 9 of the Representation Agreement Act.
-            The use of this form is voluntary. Be advised that this form may not be appropriate for use by all persons, as it provides only one option of
-            how a Representation Agreement may be made. In addition, it does not constitute legal advice. For further information, please consult the
+            The use of this form is voluntary. Be advised that this form may not be appropriate for use by all persons, as it provides only
+            one option of
+            how a Representation Agreement may be made. In addition, it does not constitute legal advice. For further information, please
+            consult the
             Representation Agreement Act and Representation Agreement Regulation or obtain legal advice.
             <br><br>
-            This form reflects the law at the date of publication. Laws can change over time. Before using this form, you should review the relevant
+            This form reflects the law at the date of publication. Laws can change over time. Before using this form, you should review the
+            relevant
             legislation to ensure that there have not been any changes to the legislation or section numbers.
         </p>
     </div>
@@ -71,23 +74,25 @@
         <h2>THIS REPRESENTATION AGREEMENT IS MADE BY ME, THE ADULT:</h2>
     </div>
 
-    <div class = "content-dark-copy pad-top">
+    <div class="content-dark-copy pad-top">
         <p>
             'THE ADULT' means you as the person appointing your Representative(s). <br>
-            Enter your full legal name, full address and the date that you are filling out, printing and having the document witnessed. If you want to
-            leave the date to enter at the time when you can have the Reps and Witnesses together, erase this default date and enter the date later.
+            Enter your full legal name, full address and the date that you are filling out, printing and having the document witnessed. If
+            you want to
+            leave the date to enter at the time when you can have the Reps and Witnesses together, erase this default date and enter the
+            date later.
         </p>
     </div>
 
     <div class="one-button-container pad-top-2">
-        <button class = 'start-button ' (click)="openModal()">START</button>
+        <button class='start-button ' (click)="openModal()">START</button>
     </div>
 
-   <!-- <form #repNineForm="ngForm" novalidate>
+    <form #repNineForm="ngForm" novalidate>
         <div class="forms-content-block with-dark-border">
             <div class="full-text-column">
                 <ng-container *ngIf="errorMessage">
-                    <div class="errorMessage red">{{errorMessage}}</div>
+                    <div class="errorMessage red">{{ errorMessage }}</div>
                 </ng-container>
                 <ng-container *ngIf="!errorMessage">
                     <div class="errorMessage">&nbsp;</div>
@@ -98,13 +103,13 @@
                 <label class="first-text-column" for="client_name">Your Name:</label>
                 <label class="second-text-column" for="default_date">Date: (YYYY / MM / DD):</label>
 
-                <input [(ngModel)]="model.client_name"  type="text" class="first-text-column required" id="client_name" name="name">
-                <input [(ngModel)]="model.signing_date"  type="text" class="second-text-column" id="default_date" name="todaysDate">
+                <input [(ngModel)]="model.client_name" type="text" class="first-text-column required" id="client_name" name="name">
+                <input [(ngModel)]="model.signing_date" type="text" class="second-text-column" id="default_date" name="todaysDate">
             </div>
 
             <div class="full-line-prompt">
                 <label class="first-text-column" for="client_address">Your Address:</label>
-                <input [(ngModel)]="model.client_address"  type="text" id="txtArea" class="first-text-column required" id="client_address"
+                <input [(ngModel)]="model.client_address" type="text" id="txtArea" class="first-text-column required" id="client_address"
                        name="address">
             </div>
 
@@ -115,35 +120,35 @@
                 <label class="third-text-column" for="province">Province:</label>
                 <label class="fourth-text-column" for="country">Country:</label>
 
-                <input [(ngModel)]="model.client_city"  type="text" class="first-text-column required" id="city" name="city">
+                <input [(ngModel)]="model.client_city" type="text" class="first-text-column required" id="city" name="city">
 
                 <input [(ngModel)]="model.client_postal" type="text"
-                   mask="U0U-0U0"
-                   class="second-text-column required" id="postal" name="postal" oninput="this.value = this.value.toUpperCase()">
+                       mask="U0U-0U0"
+                       class="second-text-column required" id="postal" name="postal" oninput="this.value = this.value.toUpperCase()">
 
                 <div class="form-group">
                     <select class="third-text-column required" id="province" required
                             [(ngModel)]="model.client_province" name="province">
-                        <option *ngFor="let prov of provinces" [value]="prov">{{prov}}</option>
+                        <option *ngFor="let prov of provinces" [value]="prov">{{ prov }}</option>
                     </select>
                 </div>
 
                 <input [(ngModel)]="model.client_country" type="text" class="fourth-text-column required" id="country" name="country">
             </div>
 
-     &lt;!&ndash;       <div class="two-unequal-columns-block">
-                <label class="first-text-column" for="province">Province:</label>
-                <label class="second-text-column" for="country">Country:</label>
+            <!--       <div class="two-unequal-columns-block">
+                       <label class="first-text-column" for="province">Province:</label>
+                       <label class="second-text-column" for="country">Country:</label>
 
-                <div class="form-group">
-                    <select class="first-text-column required" id="province" required
-                        [(ngModel)]="model.client_province" name="province">
-                        <option *ngFor="let prov of provinces" [value]="prov">{{prov}}</option>
-                    </select>
-                </div>
+                       <div class="form-group">
+                           <select class="first-text-column required" id="province" required
+                               [(ngModel)]="model.client_province" name="province">
+                               <option *ngFor="let prov of provinces" [value]="prov">{{prov}}</option>
+                           </select>
+                       </div>
 
-                <input [(ngModel)]="model.client_country" type="text" class="second-text-column required" id="country" name="country">
-            </div>&ndash;&gt;
+                       <input [(ngModel)]="model.client_country" type="text" class="second-text-column required" id="country" name="country">
+                   </div>-->
         </div>
 
         <div class="two-buttons-container">
@@ -151,422 +156,444 @@
             <button class="next-second-button" (click)="checkClientNameAddress()">NEXT</button>
         </div>
     </form>
-</ng-container>-->
+</ng-container>
 
-<!--        &lt;!&ndash; PRIMARY REP INFO &ndash;&gt;-->
-      <!--  <ng-container *ngIf="page === 2">
-            <div class="show-page">
-                <ng-container *ngIf="model.client_name.length > 0 && model.client_address.length > 0 && model.client_city.length > 0 && model.client_province.length > 0">
-                    <h1>Rep-9 for {{model.client_name}} of
-                        <br>{{model.client_address}},
-                        <br>{{model.client_city}}, {{model.client_province}}, {{model.client_postal}}</h1>
-                </ng-container>
-
-                <span>Enter the full legal name and address for the Primary Representative you have chosen.</span>
-
-                <h2>PRIMARY REPRESENTATIVE:</h2>
-
-                <div class="page-overview">
-                    I name the following person to be my Primary Representative:
-                </div>
-
-                <form #repNineForm="ngForm" novalidate>
-                    <div class="wizard-grid">
-                        <div class="full-line">
-                            <ng-container *ngIf="errorMessage">
-                                <div class="errorMessage">{{errorMessage}}</div>
-                            </ng-container>
-                            <ng-container *ngIf="!errorMessage">
-                                <div class="errorMessage">&nbsp;</div>
-                            </ng-container>
-                        </div>
-
-                        <div class="full-line">
-                            <label class="first-text-column" for="rep_1_name">Primary Representative's Name:</label>
-                            <input [(ngModel)]="model.rep_primary_name" type="text" class="first-text-column" id="rep_1_name" name="name">
-                        </div>
-
-                        <div class="same-address-container">
-                            <button class="first-button" (click)="addSameAddressforPrimaryRep()">MY PRIMARY REPRESENTATIVE IS AT SAME ADDRESS AS ME</button>
-                        </div>
-
-                        <div class="full-line">
-                            <label class="first-text-column" for="rep_1_address">Primary Representative's Full Address:</label>
-                            <input [(ngModel)]="model.rep_primary_address" type="text" class="first-text-column" id="rep_1_address"  name="address">
-                        </div>
-
-                        <div class="two-unequal-columns-block">
-                            <label class="first-text-column" for="rep_1_city">City/Town:</label>
-                            <label class="second-text-column" for="rep_1_postal">Postal Code:</label>
-
-                            <input [(ngModel)]="model.rep_primary_city" type="text" class="first-text-column" id="rep_1_city" name="city">
-                            <input [(ngModel)]="model.rep_primary_postal" type="text" mask="U0U-0U0"
-                                   class="second-text-column" id="rep_1_postal" name="postal" oninput="this.value = this.value.toUpperCase()">
-                        </div>
-
-                        <div class="two-unequal-columns-block">
-                            <label class="first-text-column" for="rep_1_province">Province:</label>
-                            <label class="second-text-column" for="rep_1_country">Country:</label>
-
-                            <div class="form-group">
-                                <select class="first-text-column" id="rep_1_province" required
-                                        [(ngModel)]="model.rep_primary_province" name="province">
-                                    <option *ngFor="let prov of provinces" [value]="prov">{{prov}}</option>
-                                </select>
-                            </div>
-                            <input [(ngModel)]="model.rep_primary_country" type="text" class="second-text-column" id="rep_1_country" name="country">
-                        </div>
-                    </div>
-
-                    <div class="three-buttons-container">
-                        <button class="first-button uniform-width" (click)="cancelPrimaryRepInfo()">BACK</button>
-                        <button class="second-button uniform-width" (click)="cancelWizard()">CANCEL</button>
-                        <button class="third-button uniform-width" (click)="checkPrimaryRepsNameAddress()">NEXT</button>
-                    </div>
-                </form>
-            </div>
+<!-- PRIMARY REP INFO -->
+<ng-container *ngIf="page === 2">
+    <div class="show-page">
+        <ng-container
+            *ngIf="model.client_name.length > 0 && model.client_address.length > 0 && model.client_city.length > 0 && model.client_province.length > 0">
+            <h1>Rep-9 for {{ model.client_name }} of
+                <br>{{ model.client_address }},
+                <br>{{ model.client_city }}, {{ model.client_province }}, {{ model.client_postal }}</h1>
         </ng-container>
 
-        &lt;!&ndash; ALTERNATE REPRESENTATIVE &ndash;&gt;
-        <ng-container *ngIf="page === 3">
-            <div class="show-page">
-                <ng-container *ngIf="model.client_name.length > 0 && model.client_address.length > 0 && model.client_city.length > 0 && model.client_province.length > 0">
-                    <h1>Rep-9 for {{model.client_name}} of
-                        <br>{{model.client_address}},
-                        <br>{{model.client_city}}, {{model.client_province}}, {{model.client_postal}}</h1>
-                </ng-container>
+        <span>Enter the full legal name and address for the Primary Representative you have chosen.</span>
 
-                <span>Enter the full legal name and address for the Primary Representative you have chosen. If you don't want to specify an
+        <h2>PRIMARY REPRESENTATIVE:</h2>
+
+        <div class="page-overview">
+            I name the following person to be my Primary Representative:
+        </div>
+
+        <form #repNineForm="ngForm" novalidate>
+            <div class="wizard-grid">
+                <div class="full-line">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="errorMessage">{{ errorMessage }}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="errorMessage">&nbsp;</div>
+                    </ng-container>
+                </div>
+
+                <div class="full-line">
+                    <label class="first-text-column" for="rep_1_name">Primary Representative's Name:</label>
+                    <input [(ngModel)]="model.rep_primary_name" type="text" class="first-text-column" id="rep_1_name" name="name">
+                </div>
+
+                <div class="same-address-container">
+                    <button class="first-button" (click)="addSameAddressforPrimaryRep()">MY PRIMARY REPRESENTATIVE IS AT SAME ADDRESS AS
+                        ME
+                    </button>
+                </div>
+
+                <div class="full-line">
+                    <label class="first-text-column" for="rep_1_address">Primary Representative's Full Address:</label>
+                    <input [(ngModel)]="model.rep_primary_address" type="text" class="first-text-column" id="rep_1_address" name="address">
+                </div>
+
+                <div class="two-unequal-columns-block">
+                    <label class="first-text-column" for="rep_1_city">City/Town:</label>
+                    <label class="second-text-column" for="rep_1_postal">Postal Code:</label>
+
+                    <input [(ngModel)]="model.rep_primary_city" type="text" class="first-text-column" id="rep_1_city" name="city">
+                    <input [(ngModel)]="model.rep_primary_postal" type="text" mask="U0U-0U0"
+                           class="second-text-column" id="rep_1_postal" name="postal" oninput="this.value = this.value.toUpperCase()">
+                </div>
+
+                <div class="two-unequal-columns-block">
+                    <label class="first-text-column" for="rep_1_province">Province:</label>
+                    <label class="second-text-column" for="rep_1_country">Country:</label>
+
+                    <div class="form-group">
+                        <select class="first-text-column" id="rep_1_province" required
+                                [(ngModel)]="model.rep_primary_province" name="province">
+                            <option *ngFor="let prov of provinces" [value]="prov">{{ prov }}</option>
+                        </select>
+                    </div>
+                    <input [(ngModel)]="model.rep_primary_country" type="text" class="second-text-column" id="rep_1_country" name="country">
+                </div>
+            </div>
+
+            <div class="three-buttons-container">
+                <button class="first-button uniform-width" (click)="cancelPrimaryRepInfo()">BACK</button>
+                <button class="second-button uniform-width" (click)="cancelWizard()">CANCEL</button>
+                <button class="third-button uniform-width" (click)="checkPrimaryRepsNameAddress()">NEXT</button>
+            </div>
+        </form>
+    </div>
+</ng-container>
+
+<!-- ALTERNATE REPRESENTATIVE -->
+<ng-container *ngIf="page === 3">
+    <div class="show-page">
+        <ng-container
+            *ngIf="model.client_name.length > 0 && model.client_address.length > 0 && model.client_city.length > 0 && model.client_province.length > 0">
+            <h1>Rep-9 for {{ model.client_name }} of
+                <br>{{ model.client_address }},
+                <br>{{ model.client_city }}, {{ model.client_province }}, {{ model.client_postal }}</h1>
+        </ng-container>
+
+        <span>Enter the full legal name and address for the Primary Representative you have chosen. If you don't want to specify an
                 Primary Rep, then press SKIP</span>
 
-                <h2>ALTERNATE REPRESENTATIVE:</h2>
+        <h2>ALTERNATE REPRESENTATIVE:</h2>
 
-                <div class="page-overview">
-                    I name the following person to be my Alternate Representative:
+        <div class="page-overview">
+            I name the following person to be my Alternate Representative:
+        </div>
+
+        <form #repNineForm="ngForm" novalidate>
+            <div class="wizard-grid">
+                <div class="full-line">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="errorMessage">{{ errorMessage }}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="errorMessage">&nbsp;</div>
+                    </ng-container>
                 </div>
 
-                <form #repNineForm="ngForm" novalidate>
-                    <div class="wizard-grid">
-                        <div class="full-line">
-                            <ng-container *ngIf="errorMessage">
-                                <div class="errorMessage">{{errorMessage}}</div>
-                            </ng-container>
-                            <ng-container *ngIf="!errorMessage">
-                                <div class="errorMessage">&nbsp;</div>
-                            </ng-container>
-                        </div>
+                <div class="full-line">
+                    <label class="first-text-column" for="rep_2_name">Alternate Representative's Name:</label>
+                    <input [(ngModel)]="model.rep_alternate_name" type="text" class="first-text-column" id="rep_2_name" name="name">
+                </div>
 
-                        <div class="full-line">
-                            <label class="first-text-column" for="rep_2_name">Alternate Representative's Name:</label>
-                            <input [(ngModel)]="model.rep_alternate_name" type="text" class="first-text-column" id="rep_2_name" name="name">
-                        </div>
+                <div class="same-address-container">
+                    <button class="first-button  big-width" (click)="addSameAddressforAlternateRep()">MY ALTERNATE REPRESENTATIVE IS AT SAME
+                        ADDRESS AS ME
+                    </button>
+                </div>
 
-                        <div class="same-address-container">
-                            <button class="first-button  big-width" (click)="addSameAddressforAlternateRep()">MY ALTERNATE REPRESENTATIVE IS AT SAME ADDRESS AS ME</button>
-                        </div>
+                <div class="full-line">
+                    <label class="first-text-column" for="rep_2_address">Alternate Representative's Full Address:</label>
+                    <input [(ngModel)]="model.rep_alternate_address" #rep_2_address type="text" class="first-text-column" id="rep_2_address"
+                           name="address">
+                </div>
 
-                        <div class="full-line">
-                            <label class="first-text-column" for="rep_2_address">Alternate Representative's Full Address:</label>
-                            <input [(ngModel)]="model.rep_alternate_address" #rep_2_address type="text" class="first-text-column" id="rep_2_address" name="address">
-                        </div>
+                <div class="two-unequal-columns-block">
+                    <label class="first-text-column" for="rep_2_city">City/Town:</label>
+                    <label class="second-text-column" for="rep_2_postal">Postal Code:</label>
 
-                        <div class="two-unequal-columns-block">
-                            <label class="first-text-column" for="rep_2_city">City/Town:</label>
-                            <label class="second-text-column" for="rep_2_postal">Postal Code:</label>
+                    <input [(ngModel)]="model.rep_alternate_city" #rep_2_city type="text" class="first-text-column" id="rep_2_city"
+                           name="city">
+                    <input [(ngModel)]="model.rep_alternate_postal" type="text" mask="U0U-0U0"
+                           class="second-text-column" id="rep_2_postal" name="postal" oninput="this.value = this.value.toUpperCase()">
+                </div>
 
-                            <input [(ngModel)]="model.rep_alternate_city" #rep_2_city type="text" class="first-text-column" id="rep_2_city" name="city">
-                            <input [(ngModel)]="model.rep_alternate_postal" type="text" mask="U0U-0U0"
-                                   class="second-text-column" id="rep_2_postal" name="postal" oninput="this.value = this.value.toUpperCase()">
-                        </div>
+                <div class="two-unequal-columns-block">
+                    <label class="first-text-column" for="rep_2_province">Province:</label>
+                    <label class="second-text-column" for="rep_2_country">Country:</label>
 
-                        <div class="two-unequal-columns-block">
-                            <label class="first-text-column" for="rep_2_province">Province:</label>
-                            <label class="second-text-column" for="rep_2_country">Country:</label>
-
-                            <div class="form-group">
-                                <select class="first-text-column" id="rep_2_province" required
-                                        [(ngModel)]="model.rep_alternate_province" name="province">
-                                    <option *ngFor="let prov of provinces" [value]="prov">{{prov}}</option>
-                                </select>
-                            </div>
-                            <input [(ngModel)]="model.rep_alternate_country" #rep_2_country type="text" class="second-text-column" id="rep_2_country" value='Canada'
-                                   name="country">
-                        </div>
+                    <div class="form-group">
+                        <select class="first-text-column" id="rep_2_province" required
+                                [(ngModel)]="model.rep_alternate_province" name="province">
+                            <option *ngFor="let prov of provinces" [value]="prov">{{ prov }}</option>
+                        </select>
                     </div>
-
-                    <div class="four-buttons-container">
-                        <button class="first-button uniform-width" (click)="cancelAlternateRepInfo()">BACK</button>
-                        <button class="second-button uniform-width" (click)="cancelWizard()">CANCEL</button>
-                        <button class="third-button uniform-width" (click)="checkAlternateRepsNameAddress()">NEXT</button>
-                        <button class="fourth-button uniform-width" (click)="getNextPage()">SKIP</button>
-                    </div>
-                </form>
+                    <input [(ngModel)]="model.rep_alternate_country" #rep_2_country type="text" class="second-text-column"
+                           id="rep_2_country" value='Canada'
+                           name="country">
+                </div>
             </div>
+
+            <div class="four-buttons-container">
+                <button class="first-button uniform-width" (click)="cancelAlternateRepInfo()">BACK</button>
+                <button class="second-button uniform-width" (click)="cancelWizard()">CANCEL</button>
+                <button class="third-button uniform-width" (click)="checkAlternateRepsNameAddress()">NEXT</button>
+                <button class="fourth-button uniform-width" (click)="getNextPage()">SKIP</button>
+            </div>
+        </form>
+    </div>
+</ng-container>
+
+<!-- WISHES -->
+<div *ngIf="page === 4">
+    <div class="show-page">
+        <ng-container
+            *ngIf="model.client_name.length > 0 && model.client_address.length > 0 && model.client_city.length > 0 && model.client_province.length > 0">
+            <h1>Rep-9 for {{ model.client_name }} of
+                <br>{{ model.client_address }},
+                <br>{{ model.client_city }}, {{ model.client_province }}, {{ model.client_postal }}</h1>
         </ng-container>
 
-        &lt;!&ndash; WISHES &ndash;&gt;
-        <div *ngIf="page === 4">
-            <div class="show-page">
-                <ng-container *ngIf="model.client_name.length > 0 && model.client_address.length > 0 && model.client_city.length > 0 && model.client_province.length > 0">
-                    <h1>Rep-9 for {{model.client_name}} of
-                        <br>{{model.client_address}},
-                        <br>{{model.client_city}}, {{model.client_province}}, {{model.client_postal}}</h1>
-                </ng-container>
-
-                <span>This area allows you to fill in any special directives you may have related to special emergency measures such as CPR or
+        <span>This area allows you to fill in any special directives you may have related to special emergency measures such as CPR or
                     can be about your wishes. To write out a more detailed directive choose to fill out the Advanced Care Directive form
                     which allows you to narrow down your specificities, wishes and concerns about end of life care. If you do not want to
                     fill this section out, press SKIP.</span>
 
-                <h2>INSTRUCTIONS OR WISHES (OPTIONAL):</h2>
+        <h2>INSTRUCTIONS OR WISHES (OPTIONAL):</h2>
 
-                <div class="page-overview">
-                    The following are my instructions or wishes with respect to decisions that will be made within the areas of authority given to
-                    my Representative under this Representation Agreement:
-                </div>
-
-                <div class="wizard-grid">
-                    <form #repNineForm="ngForm" novalidate>
-                        <div class="full-line">
-                            <label class="first-text-column" for="wishes">My Wishes:</label>
-                            <textarea class="full-text-column" rows=12 [(ngModel)]="model.optional_wishes" id="wishes" name="optionalWishes"> </textarea>
-                        </div>
-
-                        <div class="four-buttons-container">
-                            <button class="first-button uniform-width" (click)="cancelWishesInfo()">BACK</button>
-                            <button class="second-button uniform-width" (click)="cancelWizard()">CANCEL</button>
-                            <button class="third-button uniform-width" (click)="checkClientWishes()">NEXT</button>
-                            <button class="fourth-button uniform-width" (click)="getNextPage()">SKIP</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="page-overview">
+            The following are my instructions or wishes with respect to decisions that will be made within the areas of authority given to
+            my Representative under this Representation Agreement:
         </div>
 
-        &lt;!&ndash; FIRST WITNESS &ndash;&gt;
-        <div *ngIf="page === 5">
-            <div class="show-page">
-                <ng-container *ngIf="model.client_name.length > 0 && model.client_address.length > 0 && model.client_city.length > 0 && model.client_province.length > 0">
-                    <h1>Rep-9 for {{model.client_name}} of
-                        <br>{{model.client_address}},
-                        <br>{{model.client_city}}, {{model.client_province}}, {{model.client_postal}}</h1>
-                </ng-container>
+        <div class="wizard-grid">
+            <form #repNineForm="ngForm" novalidate>
+                <div class="full-line">
+                    <label class="first-text-column" for="wishes">My Wishes:</label>
+                    <textarea class="full-text-column" rows=12 [(ngModel)]="model.optional_wishes" id="wishes"
+                              name="optionalWishes"> </textarea>
+                </div>
 
-                <span>Enter the full legal name and address for the first Witness you have chosen. If the Witness is signing the document on this day,
+                <div class="four-buttons-container">
+                    <button class="first-button uniform-width" (click)="cancelWishesInfo()">BACK</button>
+                    <button class="second-button uniform-width" (click)="cancelWizard()">CANCEL</button>
+                    <button class="third-button uniform-width" (click)="checkClientWishes()">NEXT</button>
+                    <button class="fourth-button uniform-width" (click)="getNextPage()">SKIP</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- FIRST WITNESS -->
+<div *ngIf="page === 5">
+    <div class="show-page">
+        <ng-container
+            *ngIf="model.client_name.length > 0 && model.client_address.length > 0 && model.client_city.length > 0 && model.client_province.length > 0">
+            <h1>Rep-9 for {{ model.client_name }} of
+                <br>{{ model.client_address }},
+                <br>{{ model.client_city }}, {{ model.client_province }}, {{ model.client_postal }}</h1>
+        </ng-container>
+
+        <span>Enter the full legal name and address for the first Witness you have chosen. If the Witness is signing the document on this day,
                     you can leave the default date in. If they will be signing at a later date, you can erase the default date and after printing this document
                     you can enter the date of the witnessing. You must also have the Witness sign the form at the same time you do so.
                     <br><br>
                     If you are having this witnessed by a Lawyer or a Member of the Society of Notaries Public of British Columbia, you only need this one Witness.
                 </span>
 
-                <h2>WITNESS NO. 1:</h2>
+        <h2>WITNESS NO. 1:</h2>
 
-                <div class="page-overview">
-                    Witness No. 1 must sign in the presence of the Adult and Witness No. 2.:
-                </div>
-
-                <div class="wizard-grid">
-                    <form #repNineForm="ngForm" novalidate>
-                        <div class="full-line">
-                            <ng-container *ngIf="errorMessage">
-                                <div class="errorMessage">{{errorMessage}}</div>
-                            </ng-container>
-                            <ng-container *ngIf="!errorMessage">
-                                <div class="errorMessage">&nbsp;</div>
-                            </ng-container>
-                        </div>
-
-                        <div class="two-unequal-columns-block">
-                            <label class="first-text-column" for="witness_1_name">First Witness's Name:</label>
-                            <label class="second-text-column" for="witness_1_date">Signed On: (YYYY / MM / DD):</label>
-
-                            <input [(ngModel)]="model.witness_one_name" type="text" class="first-text-column" id="witness_1_name" name="name">
-                            <input [(ngModel)]="model.signing_date" type="text" class="second-text-column" id="witness_1_date" name="todaysDate">
-                        </div>
-
-                        <div class="full-line">
-                            <label class="first-text-column" for="witness_1_address">Witness's Full Address:</label>
-                            <input [(ngModel)]="model.witness_one_address"  type="text" class="first-text-column" id="witness_1_address" name="address">
-                        </div>
-
-                        <div class="two-unequal-columns-block">
-                            <label class="first-text-column" for="witness_1_city">City/Town:</label>
-                            <label class="second-text-column" for="witness_1_postal">Postal Code:</label>
-
-                            <input [(ngModel)]="model.witness_one_city"  type="text" class="first-text-column" id="witness_1_city" name="city">
-                            <input [(ngModel)]="model.witness_one_postal" type="text" mask="U0U-0U0"
-                                   class="second-text-column" id="witness_1_postal" name="postal" oninput="this.value = this.value.toUpperCase()">
-                        </div>
-
-                        <div class="two-unequal-columns-block">
-                            <label class="first-text-column" for="witness_1_province">Province:</label>
-                            <label class="second-text-column" for="witness_1_country">Country:</label>
-
-                            <div class="form-group">
-                                <select class="first-text-column" id="witness_1_province" required
-                                        [(ngModel)]="model.witness_one_province" name="province">
-                                    <option *ngFor="let prov of provinces" [value]="prov">{{prov}}</option>
-                                </select>
-                            </div>
-                            <input [(ngModel)]="model.witness_one_country" type="text" class="second-text-column" id="witness_1_country" value='Canada' name="country">
-                        </div>
-
-                        <div class="three-buttons-container">
-                            <button class="first-button uniform-width" (click)="cancelWitnessOneInfo()">BACK</button>
-                            <button class="second-button uniform-width" (click)="cancelWizard()">CANCEL</button>
-                            <button class="third-button uniform-width" (click)="checkWitnessOneNameAddress()">NEXT</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="page-overview">
+            Witness No. 1 must sign in the presence of the Adult and Witness No. 2.:
         </div>
 
-        &lt;!&ndash; SECOND WITNESS &ndash;&gt;
-        <div *ngIf="page === 6">
-            <div class="show-page">
-                <ng-container *ngIf="model.client_name.length > 0 && model.client_address.length > 0 && model.client_city.length > 0 && model.client_province.length > 0">
-                    <h1>Rep-9 for {{model.client_name}} of
-                        <br>{{model.client_address}},
-                        <br>{{model.client_city}}, {{model.client_province}}, {{model.client_postal}}</h1>
-                </ng-container>
+        <div class="wizard-grid">
+            <form #repNineForm="ngForm" novalidate>
+                <div class="full-line">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="errorMessage">{{ errorMessage }}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="errorMessage">&nbsp;</div>
+                    </ng-container>
+                </div>
 
-                <span>Enter the full legal name and address for the second Witness you have chosen. If the Witness is signing the document on this day,
+                <div class="two-unequal-columns-block">
+                    <label class="first-text-column" for="witness_1_name">First Witness's Name:</label>
+                    <label class="second-text-column" for="witness_1_date">Signed On: (YYYY / MM / DD):</label>
+
+                    <input [(ngModel)]="model.witness_one_name" type="text" class="first-text-column" id="witness_1_name" name="name">
+                    <input [(ngModel)]="model.signing_date" type="text" class="second-text-column" id="witness_1_date" name="todaysDate">
+                </div>
+
+                <div class="full-line">
+                    <label class="first-text-column" for="witness_1_address">Witness's Full Address:</label>
+                    <input [(ngModel)]="model.witness_one_address" type="text" class="first-text-column" id="witness_1_address"
+                           name="address">
+                </div>
+
+                <div class="two-unequal-columns-block">
+                    <label class="first-text-column" for="witness_1_city">City/Town:</label>
+                    <label class="second-text-column" for="witness_1_postal">Postal Code:</label>
+
+                    <input [(ngModel)]="model.witness_one_city" type="text" class="first-text-column" id="witness_1_city" name="city">
+                    <input [(ngModel)]="model.witness_one_postal" type="text" mask="U0U-0U0"
+                           class="second-text-column" id="witness_1_postal" name="postal" oninput="this.value = this.value.toUpperCase()">
+                </div>
+
+                <div class="two-unequal-columns-block">
+                    <label class="first-text-column" for="witness_1_province">Province:</label>
+                    <label class="second-text-column" for="witness_1_country">Country:</label>
+
+                    <div class="form-group">
+                        <select class="first-text-column" id="witness_1_province" required
+                                [(ngModel)]="model.witness_one_province" name="province">
+                            <option *ngFor="let prov of provinces" [value]="prov">{{ prov }}</option>
+                        </select>
+                    </div>
+                    <input [(ngModel)]="model.witness_one_country" type="text" class="second-text-column" id="witness_1_country"
+                           value='Canada' name="country">
+                </div>
+
+                <div class="three-buttons-container">
+                    <button class="first-button uniform-width" (click)="cancelWitnessOneInfo()">BACK</button>
+                    <button class="second-button uniform-width" (click)="cancelWizard()">CANCEL</button>
+                    <button class="third-button uniform-width" (click)="checkWitnessOneNameAddress()">NEXT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- SECOND WITNESS -->
+<div *ngIf="page === 6">
+    <div class="show-page">
+        <ng-container
+            *ngIf="model.client_name.length > 0 && model.client_address.length > 0 && model.client_city.length > 0 && model.client_province.length > 0">
+            <h1>Rep-9 for {{ model.client_name }} of
+                <br>{{ model.client_address }},
+                <br>{{ model.client_city }}, {{ model.client_province }}, {{ model.client_postal }}</h1>
+        </ng-container>
+
+        <span>Enter the full legal name and address for the second Witness you have chosen. If the Witness is signing the document on this day,
                     you can leave the default date in. If they will be signing at a later date, you can erase the default date and after printing this document
                     you can enter the date of the witnessing. You must also have the Witness sign the form at the same time you do so.
                     <br><br>
                     If you are having this witnessed by a Lawyer or a Member of the Society of Notaries Public of British Columbia, you can SKIP this.
                 </span>
 
-                <h2>WITNESS NO. 2:</h2>
+        <h2>WITNESS NO. 2:</h2>
 
-                <div class="page-overview">
-                    Witness No. 2 must sign in the presence of the Adult and Witness No. 1.:
-                </div>
-
-                <div class="wizard-grid">
-                    <form #repNineForm="ngForm" novalidate>
-                        <div class="full-line">
-                            <ng-container *ngIf="errorMessage">
-                                <div class="errorMessage">{{errorMessage}}</div>
-                            </ng-container>
-                            <ng-container *ngIf="!errorMessage">
-                                <div class="errorMessage">&nbsp;</div>
-                            </ng-container>
-                        </div>
-
-                        <div class="two-unequal-columns-block">
-                            <label class="first-text-column" for="witness_2_name">Second Witness's Name:</label>
-                            <label class="second-text-column" for="witness_2_date">Signed On: (YYYY / MM / DD):</label>
-
-                            <input [(ngModel)]="model.witness_two_name" type="text" class="first-text-column" id="witness_2_name" name="name">
-                            <input [(ngModel)]="model.signing_date" type="text" class="second-text-column" id="witness_2_date" name="todaysDate">
-                        </div>
-
-                        <div class="full-line">
-                            <label class="first-text-column" for="witness_2_address">Witness's Full Address:</label>
-                            <input [(ngModel)]="model.witness_two_address" type="text" class="first-text-column" id="witness_2_address" name="address">
-                        </div>
-
-                        <div class="two-unequal-columns-block">
-                            <label class="first-text-column" for="witness_2_city">City/Town:</label>
-                            <label class="second-text-column" for="witness_2_postal">Postal Code:</label>
-
-                            <input [(ngModel)]="model.witness_two_city" type="text" class="first-text-column" id="witness_2_city" name="city">
-                            <input [(ngModel)]="model.witness_two_postal" type="text" mask="U0U-0U0"
-                            class="second-text-column" id="witness_2_postal" name="postal" oninput="this.value = this.value.toUpperCase()">
-                        </div>
-
-                        <div class="two-unequal-columns-block">
-                            <label class="first-text-column" for="witness_2_province">Province:</label>
-                            <label class="second-text-column" for="witness_2_country">Country:</label>
-
-                            <div class="form-group">
-                                <select class="first-text-column" id="witness_2_province" required
-                                        [(ngModel)]="model.witness_two_province" name="province">
-                                    <option *ngFor="let prov of provinces" [value]="prov">{{prov}}</option>
-                                </select>
-                            </div>
-                            <input [(ngModel)]="model.witness_two_country" type="text" class="second-text-column" id="witness_2_country" name="country">
-                        </div>
-
-                        <div class="four-buttons-container">
-                            <button class="first-button uniform-width" (click)="cancelWitnessTwoInfo()">BACK</button>
-                            <button class="second-button uniform-width" (click)="cancelWizard()">CANCEL</button>
-                            <button class="third-button uniform-width" (click)="checkWitnessTwoNameAddress()">NEXT</button>
-                            <button class="fourth-button uniform-width" (click)="getNextPage()">SKIP</button>
-                        </div>
-
-                    </form>
-                </div>
-            </div>
+        <div class="page-overview">
+            Witness No. 2 must sign in the presence of the Adult and Witness No. 1.:
         </div>
 
-        &lt;!&ndash; SHOW VALUES AND PRINT &ndash;&gt;
-        <div *ngIf="page === 7">
-            <div class="show-page">
-                <ng-container *ngIf="model.client_name.length > 0 && model.client_address.length > 0 && model.client_city.length > 0 && model.client_province.length > 0">
-                    <h1>Rep-9 for {{model.client_name}} of
-                        <br>{{model.client_address}},
-                        <br>{{model.client_city}}, {{model.client_province}}, {{model.client_postal}}</h1>
-                </ng-container>
+        <div class="wizard-grid">
+            <form #repNineForm="ngForm" novalidate>
+                <div class="full-line">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="errorMessage">{{ errorMessage }}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="errorMessage">&nbsp;</div>
+                    </ng-container>
+                </div>
 
-                <span>Congratulations! You have filled out your Representative Section-9 form. Select Print to print it. After printing, you
+                <div class="two-unequal-columns-block">
+                    <label class="first-text-column" for="witness_2_name">Second Witness's Name:</label>
+                    <label class="second-text-column" for="witness_2_date">Signed On: (YYYY / MM / DD):</label>
+
+                    <input [(ngModel)]="model.witness_two_name" type="text" class="first-text-column" id="witness_2_name" name="name">
+                    <input [(ngModel)]="model.signing_date" type="text" class="second-text-column" id="witness_2_date" name="todaysDate">
+                </div>
+
+                <div class="full-line">
+                    <label class="first-text-column" for="witness_2_address">Witness's Full Address:</label>
+                    <input [(ngModel)]="model.witness_two_address" type="text" class="first-text-column" id="witness_2_address"
+                           name="address">
+                </div>
+
+                <div class="two-unequal-columns-block">
+                    <label class="first-text-column" for="witness_2_city">City/Town:</label>
+                    <label class="second-text-column" for="witness_2_postal">Postal Code:</label>
+
+                    <input [(ngModel)]="model.witness_two_city" type="text" class="first-text-column" id="witness_2_city" name="city">
+                    <input [(ngModel)]="model.witness_two_postal" type="text" mask="U0U-0U0"
+                           class="second-text-column" id="witness_2_postal" name="postal" oninput="this.value = this.value.toUpperCase()">
+                </div>
+
+                <div class="two-unequal-columns-block">
+                    <label class="first-text-column" for="witness_2_province">Province:</label>
+                    <label class="second-text-column" for="witness_2_country">Country:</label>
+
+                    <div class="form-group">
+                        <select class="first-text-column" id="witness_2_province" required
+                                [(ngModel)]="model.witness_two_province" name="province">
+                            <option *ngFor="let prov of provinces" [value]="prov">{{ prov }}</option>
+                        </select>
+                    </div>
+                    <input [(ngModel)]="model.witness_two_country" type="text" class="second-text-column" id="witness_2_country"
+                           name="country">
+                </div>
+
+                <div class="four-buttons-container">
+                    <button class="first-button uniform-width" (click)="cancelWitnessTwoInfo()">BACK</button>
+                    <button class="second-button uniform-width" (click)="cancelWizard()">CANCEL</button>
+                    <button class="third-button uniform-width" (click)="checkWitnessTwoNameAddress()">NEXT</button>
+                    <button class="fourth-button uniform-width" (click)="getNextPage()">SKIP</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- SHOW VALUES AND PRINT -->
+<div *ngIf="page === 7">
+    <div class="show-page">
+        <ng-container
+            *ngIf="model.client_name.length > 0 && model.client_address.length > 0 && model.client_city.length > 0 && model.client_province.length > 0">
+            <h1>Rep-9 for {{ model.client_name }} of
+                <br>{{ model.client_address }},
+                <br>{{ model.client_city }}, {{ model.client_province }}, {{ model.client_postal }}</h1>
+        </ng-container>
+
+        <span>Congratulations! You have filled out your Representative Section-9 form. Select Print to print it. After printing, you
                     can have your Representative(s) and Witnesses sign in your presence while you sign in their presence. Put this form in
                     a safe location like a fire and water proof safe. Make sure your Reps and family know the whereabouts of this document.
                     And relax, the hard part is over!
                 </span>
 
-                <h2>YOUR INFO:</h2>
+        <h2>YOUR INFO:</h2>
 
-                <div class="page-overview">
-                    <ng-container *ngIf="model.rep_primary_name.length > 0">
-                        Your Primary Representative is {{model.rep_primary_name}}, who lives at {{model.rep_primary_address}} in {{model.rep_primary_city}},
-                        {{model.rep_primary_province}}, {{model.rep_primary_country}}.
-                    </ng-container>
+        <div class="page-overview">
+            <ng-container *ngIf="model.rep_primary_name.length > 0">
+                Your Primary Representative is {{ model.rep_primary_name }}, who lives at {{ model.rep_primary_address }}
+                in {{ model.rep_primary_city }},
+                {{ model.rep_primary_province }}, {{ model.rep_primary_country }}.
+            </ng-container>
 
-                    <ng-container *ngIf="model.rep_alternate_name.length > 0">
-                        <br><br>
-                        Your Alternate Representative is {{model.rep_alternate_name}}, who lives at {{model.rep_alternate_address}} in {{model.rep_alternate_city}},
-                        {{model.rep_alternate_province}}, {{model.rep_alternate_country}}.
-                    </ng-container>
+            <ng-container *ngIf="model.rep_alternate_name.length > 0">
+                <br><br>
+                Your Alternate Representative is {{ model.rep_alternate_name }}, who lives at {{ model.rep_alternate_address }}
+                in {{ model.rep_alternate_city }},
+                {{ model.rep_alternate_province }}, {{ model.rep_alternate_country }}.
+            </ng-container>
 
-                    <ng-container *ngIf="model.rep_alternate_name.length == 0">
-                        <br><br>
-                        Your have decided not to choose an Alternate Representative.
-                    </ng-container>
+            <ng-container *ngIf="model.rep_alternate_name.length == 0">
+                <br><br>
+                Your have decided not to choose an Alternate Representative.
+            </ng-container>
 
-                    <ng-container *ngIf="model.witness_one_name.length > 0">
-                        <br><br>
-                        Your Witness 1 is {{model.witness_one_name}}, who lives at {{model.witness_one_address}} in {{model.witness_one_city}},
-                        {{model.witness_one_province}}, {{model.witness_one_country}}.
-                    </ng-container>
+            <ng-container *ngIf="model.witness_one_name.length > 0">
+                <br><br>
+                Your Witness 1 is {{ model.witness_one_name }}, who lives at {{ model.witness_one_address }} in {{ model.witness_one_city }}
+                ,
+                {{ model.witness_one_province }}, {{ model.witness_one_country }}.
+            </ng-container>
 
-                    <ng-container *ngIf="model.witness_two_name.length > 0">
-                        <br><br>
-                        Your Witness 2 is {{model.witness_two_name}}, who lives at {{model.witness_two_address}} in {{model.witness_two_city}},
-                        {{model.witness_two_province}}, {{model.witness_two_country}}.
-                    </ng-container>
+            <ng-container *ngIf="model.witness_two_name.length > 0">
+                <br><br>
+                Your Witness 2 is {{ model.witness_two_name }}, who lives at {{ model.witness_two_address }} in {{ model.witness_two_city }}
+                ,
+                {{ model.witness_two_province }}, {{ model.witness_two_country }}.
+            </ng-container>
 
-                    <ng-container *ngIf="model.witness_two_name.length == 0">
-                        <br><br>
-                        Your have not chosen a second Witness. This means you are choosing either a Lawyer or a Notary Public to sign, in which case, only one
-                        Witness is needed.
-                    </ng-container>
+            <ng-container *ngIf="model.witness_two_name.length == 0">
+                <br><br>
+                Your have not chosen a second Witness. This means you are choosing either a Lawyer or a Notary Public to sign, in which
+                case, only one
+                Witness is needed.
+            </ng-container>
 
-                    <ng-container *ngIf="model.optional_wishes.length > 0">
-                        <br><br>
-                        Your wishes and advanced directive requests are as follows:<br>
-                        {{model.optional_wishes}}
-                    </ng-container>
+            <ng-container *ngIf="model.optional_wishes.length > 0">
+                <br><br>
+                Your wishes and advanced directive requests are as follows:<br>
+                {{ model.optional_wishes }}
+            </ng-container>
 
-                    <ng-container *ngIf="model.optional_wishes.length == 0">
-                        <br><br>
-                        Your have not added any wishes or advanced care requests.
-                    </ng-container>
-                </div>
-            </div>
+            <ng-container *ngIf="model.optional_wishes.length == 0">
+                <br><br>
+                Your have not added any wishes or advanced care requests.
+            </ng-container>
         </div>
-    </div>-->
+    </div>
+</div>
 
 
 

@@ -156,7 +156,7 @@ and (orientation: landscape) {
         grid-column:2;
         justify-content: flex-start;
         align-content: center;
-        border: thin solid darkblue;
+        /*border: thin solid darkblue;*/
     }
 
     .citations-left, .citations-right {

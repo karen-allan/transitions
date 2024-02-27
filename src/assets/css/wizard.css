@@ -11,6 +11,7 @@ and (max-width: 1279px) {
         /*height:100px;*/
     }
 
+
     .wizard-header-logo {
         grid-column:1;
         background-position: center;
@@ -67,7 +68,7 @@ and (min-width: 240px)
 and (max-width: 359px)
 and (orientation: portrait) {
 
-    mat-dialog-container#modal-component {
+    mat-dialog-container#rep-nine-modal {
         width: var(--wizard-banana-port-width);
         height: var(--wizard-banana-port-height);
     }
@@ -99,7 +100,7 @@ and (min-width: 568px)
 and (max-width: 895px)
 and (orientation: landscape) {
 
-    mat-dialog-container#modal-component {
+    mat-dialog-container#rep-nine-modal {
         width: var(--wizard-banana-land-width);
         height: var(--wizard-banana-land-height);
     }
@@ -129,7 +130,7 @@ and (min-width: 360px)
 and (max-width: 599px)
 and (orientation: portrait) {
 
-    mat-dialog-container#modal-component {
+    mat-dialog-container#rep-nine-modal {
         width: var(--wizard-mobile-port-width);
         height: var(--wizard-mobile-port-height);
     }
@@ -151,7 +152,7 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
-    mat-dialog-container#modal-component {
+    mat-dialog-container#rep-nine-modal {
         width: var(--wizard-mobile-land-width);
         height: var(--wizard-mobile-land-height);
     }
@@ -173,7 +174,7 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-    mat-dialog-container#modal-component {
+    mat-dialog-container#rep-nine-modal {
         width: var(--wizard-tablet-port-width);
         height: var(--wizard-tablet-port-height);
     }
@@ -195,7 +196,7 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
-    mat-dialog-container#modal-component {
+    mat-dialog-container#rep-nine-modal {
         width: var(--wizard-over-thousand-width);
         height: var(--wizard-over-thousand-height);
     }
@@ -219,14 +220,21 @@ and (orientation: portrait) {
 and (min-width: 1280px)
 and (orientation: landscape) {
 
-    mat-dialog-container#modal-component {
+    mat-dialog-container#rep-nine-modal {
         width: var(--wizard-over-thousand-width);
         height: var(--wizard-over-thousand-height);
     }
 
-    .wizard-block, .wizard-container {
+    mat-dialog-container#wishes-modal {
+        width: 880px;
+        height: 750px;
+    }
+
+    .wizard-block  {
         margin-top:2em;
     }
+
+
 
     .wizard-header {
         display:inline-grid;
@@ -335,18 +343,74 @@ and (min-width: 1440px) {
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-    /* THE WIZARD HEADER */
-    .wizard-block, .wizard-container {
-        display:grid;
-        justify-content: center;
+    /* Overwrite the styles of the mat-dialog-container element globally, but only for those that have an id of `modal-component` */
+    mat-dialog-container#rep-nine-modal, mat-dialog-container#wishes-modal {
+        border: 3px solid var(--color-dark-blue);
+        border-radius: 2em;
+        background-color: var(--color-background-blue);
+        margin:auto;
+        overflow-y: scroll;
+    }
+
+    #modal-content-wrapper {
+        height:100%;
         width:100%;
+        display: grid;
+        background-color: white;
+        font-family: var(--family-headers);
+        color: var(--color-dark-blue);
+        overflow-y: scroll;
+    }
+
+    .modal-inner-content {
+        display:block;
+        float:left;
+        height:100%;
+        width:90%;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    /* THE WIZARD HEADER */
+    /*.wizard-block, .wizard-container {*/
+    .wizard-block {
+        display:block;
+        float:left;
+        width:100%;
+    }
+
+    .wizard-province-stamp {
+        display:block;
+        width:100%;
+        margin:auto;
+        font-family:"sans-serif";
+        font-size:1.5em;
+        padding:0;
+    }
+
+    .wizard-padded-heading {
+        display:block;
+        width:100%;
+        margin:auto;
+        font-family:"sans-serif";
+        font-size:1.5em;
+        padding-top:1em;
+    }
+
+    .wizard-unpadded-heading {
+        display:block;
+        width:100%;
+        margin:auto;
+        font-family:"sans-serif";
+        font-size:1.5em;
     }
 
     .wizard-header {
         font-family: var(--family-headers);
         color:var(--color-dark-blue);
         width:100%;
-        border-bottom: thin dotted var(--color-darkest-grey);
+        padding-bottom: 1em;
+        /*border-bottom: 2px solid var(--color-darkest-grey);*/
     }
 
     .wizard-header-logo {
@@ -372,6 +436,13 @@ and (min-width: 1440px) {
     .wizard-form {
         display: grid;
         width:100%;
+    }
+
+    .signing-form {
+        display: grid;
+        width:100%;
+        margin:auto;
+        border:thin solid black;
     }
 
     .error-message-block {
@@ -403,7 +474,7 @@ and (min-width: 1440px) {
         display:inline-block;
         float:left;
         width: 100%;
-        font-family: var(--family-copy);
+        font-family: var(--family-rep-form);
     }
 
     .planner-name-column {
@@ -427,6 +498,7 @@ and (min-width: 1440px) {
         width:90%;
         margin:auto;
         justify-content:center;
+        align-content: flex-end;
     }
 
     .two-buttons-container, .three-buttons-container  {
@@ -477,6 +549,13 @@ and (min-width: 1440px) {
            height:auto;
        }*/
 
+    .fixed-height-90 {
+        height:90px;
+    }
 
+    .fixed-height-40 {
+        margin-top:30px;
+        height:30px;
+    }
 
 }

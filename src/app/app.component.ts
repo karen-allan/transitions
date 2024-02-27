@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CommonModule} from "@angular/common";
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({

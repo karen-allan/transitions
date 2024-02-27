@@ -1,0 +1,256 @@
+<div class="screen-title">
+    <h2>My Canadian Life</h2>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        I started my life as a typical Canadian child, although my father being in the military had us living in PMQs (Private Military
+        Quarters) and I had never really met a civilian until I was 9 years old. We moved 4 times, Armstrong, B.C. where I was born, to Fort
+        Churchill, Manitoba to Edmonton, Alberta and by the time I was 6 with a final move to Calgary, Alberta.
+        <br><br>
+        Life was full of upheavals because of all of the moving from one place to another, but I had my Mom, Dad, brother and sister and
+        I felt safe, as all children should feel. When I am asked in a meditation, for example, what my best, happiest memory is it is
+        always the times I snuck into bed with my Mom and Dad, cuddled in between them snug and warm. Or watching the hockey game with my
+        Dad while sitting in his lap, with my kitten in my arms. Or at tuck-in time, when he would make up songs, stories and tall tales
+        usually with a not too subtle twist (Princess and the Pee for example) to make us giggle with delight.
+    </p>
+</div>
+
+<div class="screen-quote">
+    <p>
+        &#8220;Dads are most ordinary men turned by love into heroes, adventurers, story-tellers and singers of song.&#8221;
+    </p>
+    <span>
+        Pam Brown
+    </span>
+</div>
+
+<div class="content-images">
+    <img src="../../../../assets/images/details/about/practitioner/dadAndMe.jpg" alt="Before the Dying Started"
+         title="Before the Dying Started">
+</div>
+
+<div class="screen-title">
+    <h2>The loss of a grandmother</h2>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        My father was sent overseas to work for the Peace Corp mission, at the Gaza Strip, in Egypt. He left when I was 8 and I didn't
+        see him again until about 8 months later when he was granted leave for Christmas. On Christmas night I was filled with pride
+        and joy to be able to sing to him in the Church Choir while he beamed back at me. That night, he had a heart attack. My brother,
+        sister and I heard it all - the paramedics taking him away, my mother crying. I have a vague memory of Dad trying to smile at us
+        and reassure us that he would be okay as they wheeled him away. My sister and I went back to our room, got on our knees and prayed.
+        <br><br>
+        After he got out of the hospital, the Army put him back to work within a couple of months. He was transferred again to Calgary and
+        travelled from Edmonton to Calgary (about 280km) every week. In the spring of that year, my grandmother from Vancouver died and
+        my Mom took a plane to be with her father. Dad took special care of us during that time - with no Mom to monitor our behavior we
+        skipped the regular bedtime hour and ate lots of take out Chinese food and other usually forbidden treats - he made sure to keep
+        us feeling safe and secure.
+    </p>
+</div>
+
+<div class="screen-quote">
+    <p>
+        &#8220;A grandmother is both a sword and a shield.&#8221;
+    </p>
+    <span>
+        Fredrik Backman
+    </span>
+</div>
+
+<div class="content-images">
+    <img src="../../../../assets/images/details/about/practitioner/grandmaAndMom.jpg" alt="Grandma and Mom" title="Grandma and Mom">
+</div>
+
+<div class="screen-title">
+    <h2>The loss of a Father</h2>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        In June while in Calgary, he had another heart attack. I was called to the principals office in grade 2 and sent home never to
+        see my classmates again. We were driven to Calgary by an uncle and set up in a new PMQ.
+        <br><br>
+        My brother may have known what was happening but my sister and I had no clue. We were just spending summer vacation in a new town
+        where we didn't know a soul. We were like any kids, watching tv and going to the store for junk food. One day my Mom asked us
+        to go with her to the hospital to see Dad. We didn't want to, we wanted to just veg out. So we didn't go. He died that night.
+        <br><br>
+        The Chaplain came to the door that morning and my sister opened the door. She knew right away Dad was gone. She looked up to see
+        my Mother meet the Chaplain's eyes and then saw that our Mother knew too. When I woke up they took me into my mom's bedroom and
+        told me. The world suddenly had no floor, there was nothing to hold onto, we all went free falling into our grief.
+        <br><br>
+        The army forced us to vacate the PMQ and my Mother, who luckily had always worked, was offered a job with them in Calgary. As my
+        grandmother had died 3 months earlier my grandfather, without discussing it with my Mom, sold his home in Vancouver and
+        moved in with us. He had money from the house sale and he helped my mom to buy a house. So it was my brother who was off to
+        university soon, my sister in high school, me still in elementary school, my mom and some scary old dude living in a strange new
+        home in a strange new city.
+        <br><br>
+        My sister, brother and I were left in our sorrow as my Mother didn't really understand that kids had feelings about death just
+        like adults did. We never saw his body at the hospital and we didn't get to attend the funeral. We were like a ghost family now.
+        Every night I could hear my Mom crying in her room and my Grandfather crying in his room. I was terrified to go to sleep as I was
+        worried Mom would die and we would be orphans.
+    </p>
+</div>
+
+<div class="screen-quote">
+    <p>
+        &#8220;Graves cannot contain my spirit; death is not the end of time, though my body turns to ashes, I will rest in peace
+        sublime.&#8221;
+    </p>
+    <span>
+        Greta Zwaan
+    </span>
+</div>
+
+<div class="content-images">
+    <img src="../../../../assets/images/details/about/practitioner/dadInGermany.jpg" alt="Before the Dying Started"
+         title="Before the Dying Started">
+</div>
+
+<div class="screen-title">
+    <h2>Other losses</h2>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        When I was 14 my cousin who was 15 (and my secret crush) stormed out of the house after a fight with his father. Later that night,
+        he felt bad about it and decided to walk home along the highway. A drunk driver hit him from behind. It took some time for the
+        police to find out who he was as he had no identification. We were on vacation - just coming home when we heard about it on the
+        news radio but of course we had no idea who this unidentified victim was at the time. My cousin's sister heard the news as well
+        and secretly took it upon herself to go to the hospital. She found her brother, still alive but without brain function. The
+        family let him go and actually they let themselves go as well. They too became a ghost family.
+        <br><br>
+        My brother's best friend in university, who was a frequent visitor to our home and was teaching me how to play guitar killed himself
+        over a lost relationship. His parents called my brother, then 20, to come and help deal with the police I guess, and with the
+        remains of a shotgun to the head. His girlfriend had killed herself a few months earlier in her dorm room. This wave of students
+        killing themselves brought to my 13 year old mind that perhaps this was an acceptable thing to do when you became a young adult.
+    </p>
+</div>
+
+<div class="screen-quote">
+    <p>
+        &#8220;The darker the night, the brighter the stars. The deeper the grief, the closer is God.&#8221;
+    </p>
+    <span>
+        Fyodor Dostoevsky
+    </span>
+</div>
+
+<div class="content-images">
+    <img src="../../../../assets/images/details/about/practitioner/family.jpg" alt="My cousin Richard" title="My cousin Richard">
+</div>
+
+<div class="screen-title">
+    <h2>The lessons keep coming</h2>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        My ex-husband had refused to grow up and be any kind of a father to my first two children. Occasionally he would reach out to them
+        when forced to due to some kind of drug or alcohol intervention. My kids didn't buy into his moments of confession, as they were
+        busy proving to him how little they needed him. He was a tough guy faller in the logging business and he loved his chainsaw. He
+        became unwell and his doctor told him he had a serious heart condition that needed surgery and rest. He had the surgery but he
+        didn't care for the rest part of the recovery. He was away visiting his other children in a town with only a small hospital. When
+        he collapsed the hospital called for the air ambulance but because of the intense fog, the paramedics couldn't land. In his
+        early 50s he died with many of his burdens left unheeded.
+    </p>
+</div>
+
+<div class="screen-quote">
+    <p>
+        &#8220;Happiness is beneficial for the body, but it is grief that develops the powers of the mind.&#8221;
+    </p>
+    <span>
+        Marcel Proust
+    </span>
+</div>
+
+<div class="content-images">
+    <img src="../../../../assets/images/details/about/practitioner/becomeAdvocatePic.jpg" alt="About Advocating" title="About Advocating">
+</div>
+
+<div class="screen-title">
+    <h2>Experiencing Hospice</h2>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        A little over ten years ago, in 2010 my step-brother died of Lung Cancer at 53. He was closer with me than my real brother and I
+        don't think a day goes by that I don't think of him. He had a chance after getting and beating Hodgkins Lymphoma years earlier,
+        if he would just quit smoking. Being stubborn and incapable of change, he smoked to the very last evening. One of us would have
+        to hold the cigarette to his mouth as he couldn't manage it. Holding the disgusting cigarette that had killed him to his lips was
+        repugnant but we all did it anyway, for him.
+        <br><br>
+        He died in a hospice. This was my first experience in a hospice and I was really impressed with the atmosphere of the place. It
+        was very hands off, they supplied the medications and would come if called but it was basically up to the families to take care
+        of the patients. I peeked in other rooms where it seemed no one was every visiting. That hit me hard, to see people dying alone...
+        <br><br>
+        His leaving was very beautiful however, with the family gathered around, singing and holding hands. The part where he drew his last
+        breath however, left us all ugly crying and lost. More broken people, because he had been our family glue. Once he was gone, the
+        family disintegrated. My Mother and Step-Father had been very dependent on him and with him gone they accelerated their decline.
+    </p>
+</div>
+
+<div class="screen-quote">
+    <p>
+        &#8220;Mostly it is loss that teaches us which teaches us about the worth of things.&#8221;
+    </p>
+    <span>
+        Arthur Schopenhauer
+    </span>
+</div>
+
+<div class="content-images">
+    <img src="../../../../assets/images/details/about/practitioner/myBrotherBrock.jpg" alt="My brother" title="My brother">
+</div>
+
+<div class="screen-title">
+    <h2>Taking on the advocate role</h2>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        After the loss of their son, it took only 8 more months for my Step-Dad to go and another few weeks to lose my Mother. My sister
+        and I were in town helping her through her battery replacement of her pace-maker surgery. The doctor had taken her off her Coumadin
+        which is a blood thinner. We showed up at her apartment one morning to find her incoherent and confused. We called 911 and she
+        was wisked away to the hospital. When we got there we couldn't even locate her. No help from anyone. We found her tucked away in
+        a small room the size of a closet.
+        <br><br>
+        Once diagnosed with multiple strokes, she was placed on a ward with 3 other people, all men in various states of dying and delusion.
+        I think of the man across from her, naked and screaming about the war. My Mother would stare at him and his bare bum and bits
+        with utter terror in her eyes. The nurse assigned to sit with them to contain the delusional chaos, spent her time reading a
+        book, ignoring them. Any questions I asked were met with annoyance. It was at that point that I decided she had to be moved to
+        the care home where her husband had died. They knew her there, she was friends with many of them and it was her second home as
+        she visited him every day.
+        <br><br>
+        Getting some of the siblings to agree to the move took everything on my part. They didn't want to spend the money. We had a
+        battle of wills standing over my Mom's bedside arguing. I won. She was transferred to the care home and all of the family
+        descended upon her room to say goodbye. Before she became unconscious for the final time, she reached her arms to me as I walked
+        in the room. She cried out to me with gratitude that I was there. And she said she was sorry for all that had gone on with my
+        Step-father. All was forgiven.
+        <br><br>
+        We sang to her, there were her children, her grand-children and a couple of great-grand babies in the room. With her eyes shut,
+        she swirled her invisible baton, orchestrating us and getting in the last laugh. When she died, she gave me the greatest gift I
+        have ever received. She let out a surprised and delighted sigh. I knew then that whoever she saw - perhaps her own Mom, perhaps
+        my Dad, brought her great joy and where ever she went was was pleasing to her and full of peace.
+    </p>
+</div>
+
+<div class="screen-quote">
+    <p>
+        &#8220;Losing a mother doesn't happen in a moment. It takes years to appreciate the impact of what's gone.&#8221;
+    </p>
+    <span>
+        Lisa-Jo Baker
+    </span>
+</div>
+
+<div class="content-images">
+    <img src="../../../../assets/images/details/about/practitioner/momAndMarcus.jpg" alt="Other Lessons" title="Other Lessons">
+</div>
+
+<div class="content-images">
+    <img src="../../../../assets/images/details/about/practitioner/meAsChild.jpg" alt="Before the Dying Started"
+         title="Before the Dying Started">
+</div>

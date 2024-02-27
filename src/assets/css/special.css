@@ -244,7 +244,7 @@ and (min-width: 1440px) {
     }
 
     .screen-quote {
-        max-width: var(--banner-width);
+        max-width: var(--content-width);
         display:grid;
         margin:1em auto;
         align-content: center;
@@ -270,6 +270,19 @@ and (min-width: 1440px) {
         text-align: right;
     }
 
+    .screen-line   {
+        display:block;
+        width:80%;
+        float:left;
+        margin:auto;
+
+    }
+
+    .screen-line h4 {
+        padding-top:3em;
+        border-top-color: black;
+        border-bottom-color: blue;
+    }
 
 }
 

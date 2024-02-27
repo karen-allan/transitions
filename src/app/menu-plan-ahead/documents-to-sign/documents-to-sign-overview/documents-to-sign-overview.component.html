@@ -1,26 +1,8 @@
-<!--<div class = "topic-grid topic-documents-to-sign topic-size">
-    <h1>{{title}}<br>{{subtitle}}</h1>
-</div>-->
-
-<div class="screen-title pad-top-3">
-    <div *ngIf="sectionSelected === 'triggeredSection1'">
-        <span>The Basics: Choose Someone Who Will Advocate For You:&#x25BC;</span>
-    </div>
-
-    <div *ngIf="sectionSelected != 'triggeredSection1'">
-        <a (click)="this.getTriggeredPromptKey(1)">
-            The Basics: Choose Someone Who Will Advocate For You:&#x25B6;
-        </a>
-    </div>
+<div class = "topic-grid topic-documents-to-sign topic-size">
+    <h1>{{title}}</h1>
 </div>
 
-<div *ngIf="sectionSelected === 'triggeredSection1'">
-     <app-rep-nine-document [title]="title"></app-rep-nine-document>
-</div>
 
-<div *ngIf="sectionSelected != 'triggeredSection1'">
-    <div class="dark-copy-hidden"></div>
-</div>
 
 <div class="screen-title pad-top-3">
     <div *ngIf="sectionSelected === 'triggeredSection2'">

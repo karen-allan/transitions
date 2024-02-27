@@ -8,8 +8,8 @@ import {Client} from "../../../ts-files/client";
 })
 export class BookConsultationContainerComponent implements OnInit {
 
-  menuItemId:number   = 3;
-  subMenuItemId:number = 31;
+  menuItemId:number   = 4;
+  subMenuItemId:number = 41;
 
   detailHeaderName = 'header-book-consultation'
   title='Book a Consultation'

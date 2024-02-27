@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DocumentsToSignContainerComponent implements OnInit {
 
   menuItemId:number  = 2;
-  subMenuItemId:number = 22;
+  subMenuItemId:number = 25;
 
   detailHeaderName="header-documents-to-sign"
   title="Before you go"

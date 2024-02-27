@@ -181,6 +181,10 @@ and (min-width: 1440px) {
         line-height:var(--copy-line-height);
     }
 
+    .content-dark-copy p a {
+        cursor: pointer;
+    }
+
     .content-dark-copy span, .content-light-copy span, .content-clear-copy span, .content-white-copy span {
         font-size: var(--small-copy-desktop-font-size);
     }

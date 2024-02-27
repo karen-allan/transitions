@@ -562,7 +562,7 @@ and (orientation: landscape) {
         align-content: flex-start;
         margin:auto;
         width:var(--media-more-than-content-width);
-        grid-template-columns: repeat(3, 33.3%);
+        grid-template-columns: repeat(4, 25%);
         height:var(--desktop-bottom-menu-height);
         max-width:var(--menu-width);
         /* border-left:thin solid #f1f1f1;

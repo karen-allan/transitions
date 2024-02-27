@@ -1,0 +1,980 @@
+<div id="modal-content-wrapper">
+    <div class="modal-inner-content">
+        <!-- LEGAL PREAMBLE -->
+        <ng-container *ngIf="page === 0">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+            <div class="screen-title pad-top">
+                <h5>
+                    <b>&nbsp;
+                        REPRESENTATION AGREEMENT (SECTION 9)
+                    </b>
+                </h5>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>
+                    Made under Section 9 of the Representation Agreement Act.<br>
+                    The use of this form is voluntary. Be advised that this form may not be appropriate for use by all persons, as it
+                    provides
+                    only one option of
+                    how a Representation Agreement may be made. In addition, it does not constitute legal advice. For further information,
+                    please consult the
+                    <i>Representation Agreement Act</i> and Representation Agreement Regulation or obtain legal advice.
+                    <br><br>
+                    This form reflects the law at the date of publication. Laws can change over time. Before using this form, you should
+                    review
+                    the relevant
+                    legislation to ensure that there have not been any changes to the legislation or section numbers.
+                    <br><br>
+                    <b>NOTES RESPECTING THIS REPRESENTATION AGREEMENT MADE UNDER SECTION 9 OF THE REPRESENTATION AGREEMENT ACT</b>
+                    <br>
+                    The notes provided here are for the purpose of providing information only, and do not constitute legal advice.
+                    These notes are prepared for the purposes of this representation agreement form. They should not be considered a
+                    complete
+                    description of matters to be taken into account in making a representation agreement. A person making a representation
+                    agreement, or acting as a representative or alternate representative, should consult the <i>Representation Agreement
+                    Act</i>
+                    and the Representation Agreement Regulation to ensure that they understand their rights and duties.
+                </p>
+            </div>
+
+            <div class="one-button-container">
+                <button class="start-button" (click)="getNextPage()">START</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 1">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                    THIS REPRESENTATION AGREEMENT IS MADE BY ME, THE ADULT:
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>
+                    'THE ADULT' means you as the person appointing your Representative(s). <br>
+                    Enter your full legal name, full address and the date that you are filling out, printing and having the document
+                    witnessed.
+                    If you want to
+                    leave the date to enter at the time when you can have the Reps and Witnesses together, erase this default date and enter
+                    the
+                    date later.
+                </p>
+            </div>
+
+            <form #repNineForm="ngForm" novalidate>
+                <div class="wizard-form">
+                    <div class="error-message-block">
+                        <ng-container *ngIf="errorMessage">
+                            <div class="error-message">{{errorMessage}}</div>
+                        </ng-container>
+                        <ng-container *ngIf="!errorMessage">
+                            <div class="error-message">&nbsp;</div>
+                        </ng-container>
+                    </div>
+
+                    <div class="two-unequal-columns-block">
+                        <label class="first-text-column" for="client_name">Full Legal Name of (you) the Adult:</label>
+                        <label class="second-text-column" for="legal_date">Date: (YYYY / MM / DD):</label>
+
+                        <input [(ngModel)]="rep.client_name" type="text" class="first-text-column required" id="client_name" name="name">
+
+                        <input [(ngModel)]="rep.signing_date" type="text" class="second-text-column" id="legal_date" name="legalDate"
+                               mask="0000/00/00">
+                    </div>
+
+                    <div class="full-line-prompt">
+                        <label class="first-text-column" for="client_address">Full Legal Address of (you) the Adult:</label>
+                        <input [(ngModel)]="rep.client_address" type="text" id="txtArea" class="first-text-column required"
+                               id="client_address"
+                               name="address">
+                    </div>
+                </div>
+            </form>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <!-- was closeModal -->
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 2">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        REVOCATION OF PREVIOUS INSTRUMENTS:
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>
+                    <b>Note 1: Actions that must be taken to revoke a previous Representation Agreement:</b>
+                    <br>
+                    To revoke a previous representation agreement you must also give written notice of the revocation to each
+                    representative, each alternate representative, and any monitor named in that representation agreement.
+                    Revocation is effective when this notice is given, or on a later date stated in the notice.
+                    <br><br>
+                    <b>Note 2: Effect of revocation on previous Representation Agreements:</b>
+                    <br>
+                    The revocation provision in this representation agreement will do all of the following:
+                    <br>
+                    * if you have previously made a section 7 representation agreement that is still effective, it
+                    will be revoked
+                    <br>
+                    * if you have previously made a section 9 representation agreement that is still effective, it
+                    will be revoked
+                </p>
+            </div>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <!-- was closeModal -->
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 3">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        REPRESENTATIVE:
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>
+                    <b>Note 3: Who may be named as Representative:</b>
+                    <br>
+                    (a) This form provides for the naming of one representative and one alternate representative. If you wish to name more
+                    than one representative to act at the same time, do not use this form.
+                    <br><br>
+                    (b) The <i>Representation Agreement Act</i> sets out who may be named as a representative. If an individual is
+                    appointed,
+                    that individual must be 19 years of age or older, and must not be an individual who provides personal care or
+                    health care services to the adult for compensation, or who is an employee of a facility in which the adult resides and
+                    through which the adult receives personal care or health care services, unless the individual is a child,
+                    parent or spouse of the adult. The information in this note also applies in respect of an alternate representative.
+                </p>
+            </div>
+
+            <div class="screen-title pad-top-2">
+                <h4><b>I name the following person to be my Representative:</b></h4>
+            </div>
+
+            <form #repNineForm="ngForm" novalidate>
+                <div class="wizard-form">
+                    <div class="error-message-block">
+                        <ng-container *ngIf="errorMessage">
+                            <div class="error-message">{{errorMessage}}</div>
+                        </ng-container>
+                        <ng-container *ngIf="!errorMessage">
+                            <div class="error-message">&nbsp;</div>
+                        </ng-container>
+                    </div>
+
+                    <div class="full-line-prompt">
+                        <label class="first-text-column" for="primary_name">Full Legal Name of Representative:</label>
+                        <input [(ngModel)]="rep.rep_primary_name" type="text" class="first-text-column required" id="primary_name"
+                               name="name">
+                    </div>
+
+                    <div class="full-line-prompt">
+                        <label class="first-text-column" for="primary_name">Full Address of Representative:</label>
+                        <input [(ngModel)]="rep.rep_primary_address" type="text" class="first-text-column required" id="primary_address"
+                               name="address">
+                    </div>
+                </div>
+            </form>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <!-- was closeModal -->
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+
+        </ng-container>
+
+        <ng-container *ngIf="page === 4">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        ALTERNATE REPRESENTATIVE (OPTIONAL):
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy">
+                <p><b>See Note 3: Who may be named as a Representative, (Note 3 is on the previous page.)</b></p>
+                <span>(Strike out this provision if you do not want to appoint an Alternate Representative)</span>
+            </div>
+
+            <div class="screen-title pad-top-2">
+                <h4><b>If my Primary Representative:</b></h4>
+            </div>
+
+            <div class="content-dark-list">
+                <li class="list-item square"> dies</li>
+                <li class="list-item square"> resigns in accordance with the Representation Agreement Act</li>
+                <li class="list-item square"> is my spouse, as defined in the Representation Agreement Act, at the time that I make this
+                    Representation Agreement, and
+                    our marriage or marriage-like relationship subsequently terminates as set out in the Representation Agreement Act, or
+                </li>
+                <li class="list-item square"> becomes incapable</li>
+            </div>
+
+            <div class="content-dark-copy pad-top-2">
+                <p>
+                    then I name the following person to be my Alternate Representative:
+                </p>
+            </div>
+
+            <form #repNineForm="ngForm" novalidate>
+                <div class="wizard-form">
+                    <div class="error-message-block">
+                        <ng-container *ngIf="errorMessage">
+                            <div class="error-message">{{errorMessage}}</div>
+                        </ng-container>
+                        <ng-container *ngIf="!errorMessage">
+                            <div class="error-message">&nbsp;</div>
+                        </ng-container>
+                    </div>
+
+                    <div class="full-line-prompt">
+                        <label class="first-text-column" for="alternate_name">Full Legal Name of Alternate Representative:</label>
+                        <input [(ngModel)]="rep.rep_alternate_name" type="text" class="first-text-column required" id="alternate_name"
+                               name="altName">
+                    </div>
+
+                    <div class="full-line-prompt">
+                        <label class="first-text-column" for="alternate_address">Full Address of Alternate Representative:</label>
+                        <input [(ngModel)]="rep.rep_alternate_address" type="text" class="first-text-column required" id="alternate_address"
+                               name="altAddress">
+                    </div>
+                </div>
+            </form>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <!-- was closeModal -->
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 5">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        EVIDENCE OF AUTHORITY OF ALTERNATE REPRESENTATIVE
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy">
+                <p><b>NOTE 4: Statutory declaration for evidence of authority of Alternate Representative</b></p>
+                <span> (Strike out this provision if you are not appointing an Alternate Representative.)</span>
+                <p>
+                    A statutory declaration that may be used is included in this form.
+                    <br>
+                    Additional evidence establishing the authority of the alternate representative to act in place of the representative may
+                    be required for some purposes.
+                </p>
+            </div>
+
+            <div class="content-dark-copy">
+                <p>
+                    A statutory declaration made by me, my Representative, or my Alternate Representative (if one is named), declaring that
+                    one of
+                    the circumstances referenced in section 4 of this Representation Agreement has occurred, and specifying that
+                    circumstance, is
+                    sufficient evidence of the authority of my Alternate Representative to act in place of my Representative.
+                </p>
+            </div>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <!-- was closeModal -->
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 6">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        AUTHORITY OF REPRESENTATIVE
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy">
+                <p><b>Note 5 - what a Representative may and may not do</b></p>
+                <span>(Please note that this list may not be complete.)</span>
+            </div>
+
+            <div class="content-dark-copy pad-top-2">
+                <p><b>What a Representative may do:</b></p>
+            </div>
+
+            <div class="content-dark-list">
+                <li class="list-item square">
+                    The authority of a representative appointed under this representation agreement includes the power to give or refuse
+                    consent to health care necessary to preserve life.
+                </li>
+            </div>
+
+            <div class="content-dark-copy pad-top-2">
+                <p><b>What a Representative may NOT do:</b></p>
+            </div>
+
+            <div class="content-dark-list">
+                <li class="list-item square"> give or refuse consent on the adult’s behalf to any type of health care prescribed under
+                    section 34 (2) (f ) of the <i>Health Care (Consent) and Care Facility (Admission) Act</i></li>
+
+                <li class="list-item square"> make arrangements for the temporary care and education of the adult’s minor children, or any
+                    other persons who are cared for or supported by the adult;
+                </li>
+
+                <li class="list-item square">interfere with the adult’s religious practices.</li>
+
+                <li class="list-item square">may not be authorized to refuse consent to those matters in relation to the <i>Mental Health
+                    Act</i>
+                    set out in
+                    section 11 of the <i>Representation Agreement Act</i>.
+                </li>
+
+                <li class="list-item square">must not consent to the provision of professional services, care or treatment to the adult for
+                    the purposes of
+                    sterilization for non-therapeutic purposes
+                </li>
+
+                <li class="list-item square">must not make or change a will for the adult.</li>
+            </div>
+
+            <div class="content-dark-copy pad-top-2">
+                <p>
+                    If you want your representative to be authorized to do the things on the above list, you should obtain legal advice.
+                </p>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>Pursuant to section 9 (1) (a) of the Representation Agreement Act, I authorize my Representative to do anything that the
+                    Representative considers necessary in relation to my personal care and health care.
+                </p>
+            </div>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 7">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        INSTRUCTIONS OR WISHES (OPTIONAL)
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy">
+                <p><b>Note 6 - Consultation with a Health Care Provider</b></p>
+            </div>
+
+            <div class="content-dark-copy">
+                <p>If you choose to include instructions or wishes in your representation agreement about your health care, you may wish
+                    to discuss with a health care provider the options and the possible implications of your choice.
+                    <br><br>
+                    If you have previously filled out our Plan Ahead Wizard form you can attach these requests and wishes to your
+                    documentation. This can serve as a more in-depth document than the one provided here.
+                    <br><br>
+                    Click on the START YOUR PLAN wizard button on the Think About Your Needs page to create a detailed document on your
+                    future wishes.
+                    <br><br>
+                    Alternatively you can fill out your wishes in the lines provided below or write your wishes on a separate form.
+                    <br><br>
+                    <b>The following are my instructions or wishes with respect to decisions that will be made within the areas of
+                        authority given to my Representative under this Representation Agreement.
+                    </b>
+                </p>
+            </div>
+
+            <div class="screen-line">
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+            </div>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 8">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        EFFECTIVE DATE
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy">
+                <p>
+                    This Representation Agreement becomes effective on the day it is executed.
+                </p>
+            </div>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 9">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        SIGNATURES
+                    </b>
+                </h4>
+            </div>
+
+            <div class="screen-title">
+                <h4><b>ADULT AND WITNESS SIGNATURES</b></h4>
+            </div>
+
+            <form #repNineForm="ngForm" novalidate>
+                <div class="signing-form with-dark-border">
+                    <div class="error-message-block">
+                        <ng-container *ngIf="errorMessage">
+                            <div class="error-message">{{errorMessage}}</div>
+                        </ng-container>
+                        <ng-container *ngIf="!errorMessage">
+                            <div class="error-message">&nbsp;</div>
+                        </ng-container>
+                    </div>
+
+                    <div class="full-text-no-padding-column">
+                        <b>ADULT'S SIGNATURE</b>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;*The Adult must sign and date in the presence of both Witnesses.
+                    </div>
+
+                    <div class="two-unequal-columns-block">
+                        <label class="first-text-column">Signature of Adult:</label>
+                        <label class="second-text-column" for="legal_date">Date Signed: (YYYY / MM / DD):</label>
+                        <input type="text" class="first-text-column required" name="name">
+
+                        <input type="text" class="second-text-column" name="legalDate">
+                    </div>
+
+                    <div class="full-text-column ">
+                        <label class="full-text-column" for="printed_name">Print Name:</label>
+                        <input type="text" class="full-text-column" [(ngModel)]="rep.client_name" id="printed_name" name="name">
+                    </div>
+                </div>
+            </form>
+
+            <div class="content-dark-copy">
+                <p><b>Note 7 - Information for Witnesses</b></p>
+            </div>
+
+            <div class="content-dark-list">
+                <span>(a) The following persons may not be a witness:</span>
+                <li class="list-item">
+                    i. A person named in the representation agreement as a representative or alternate representative;
+                </li>
+                <li class="list-item">
+                    ii. A spouse, child or parent of a person named in the representation agreement as a representative or alternate
+                    representative
+                </li>
+                <li class="list-item">
+                    iii. An employee or agent of a person named in the representation agreement as a representative or alternate
+                    representative, unless the person named as a representative or alternate representative is a lawyer, a member
+                    in good standing of the Society of Notaries Public of British Columbia, or the Public Guardian and Trustee of
+                    British Columbia
+                </li>
+                <li class="list-item">
+                    iv. A person who is under 19 years of age
+                </li>
+                <li class="list-item">
+                    v. A person who does not understand the type of communication used by the adult unless the person receives
+                    interpretive assistance to understand that type of communication
+                </li>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>(b) Only one witness is required if the witness is a lawyer or a member in good standing of the Society of
+                    Notaries
+                    Public
+                    of British Columbia.
+                </p>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>(c) Section 30 of the Representation Agreement Act provides for a number of reasons to object to the making and use
+                    of
+                    a representation agreement. If you believe that you have grounds to make an objection at this time, you should not
+                    witness the representation agreement and you may report your objection to the Public Guardian and Trustee
+                    of British Columbia
+                </p>
+            </div>
+
+            <div class="full-text-column ">
+                <b>WITNESSES TO ADULT’S SIGNATURE</b>
+            </div>
+
+            <div class="full-text-no-padding-column">
+                (see Note 7 above - Information for Witnesses)
+            </div>
+
+            <div class="full-text-column ">
+                <b>Please Note: Witness No 2 in NOT required if Witness No. 1 is a lawyer or member in good
+                    standing of the Society of Notaries Public of British Columbia
+                </b>
+            </div>
+
+            <div class="two-even-columns-block pad-bottom-2">
+                <div class="first-text-column">
+                    <b>WITNESS 1</b>
+                    <br>
+                    * Witness No. 1 must sign in the presence of the Adult and Witness No.2
+                </div>
+
+                <div class="second-text-column">
+                    <b>WITNESS 2</b>
+                    <br>
+                    * If needed, Witness No. 2 must sign in the presence of the Adult and Witness No.1
+                </div>
+            </div>
+
+            <form #repNineForm="ngForm" novalidate>
+                <div class="signing-form with-dark-border">
+                    <div class="two-even-columns-block">
+                        <div class="first-signing-text-column with-dark-border ">
+                            <div class="two-signing-columns-block ">
+                                <div class="first-signing-text-column right-colored-border fixed-height-90">
+                                    <b>Signature of Witness No 1</b>
+                                </div>
+
+                                <div class="second-signing-text-column left-colored-border fixed-height-90">
+                                    <b>Date Signed: (YYYY/MM/DD)</b>
+                                    <br>
+                                    <div class="three-date-columns-block">
+                                        <div class="first-text-column right-colored-border fixed-height-40"></div>
+                                        <div class="second-text-column right-colored-border fixed-height-40"></div>
+                                        <div class="third-text-column fixed-height-40"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="second-signing-text-column with-dark-border  ">
+                            <div class="two-signing-columns-block">
+                                <div class="first-signing-text-column right-colored-border fixed-height-90">
+                                    <b>Signature of Witness No 2</b>
+                                </div>
+                                <div class="second-signing-text-column left-colored-border fixed-height-90">
+                                    <b>Date Signed: (YYYY/MM/DD)</b>
+                                    <br>
+                                    <div class="three-date-columns-block">
+                                        <div class="first-text-column right-colored-border fixed-height-40"></div>
+                                        <div class="second-text-column right-colored-border fixed-height-40"></div>
+                                        <div class="third-text-column fixed-height-40"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="first-text-column with-dark-border">
+                            Print Name
+                        </div>
+
+                        <div class="second-text-column with-dark-border">
+                            Print Name
+                        </div>
+
+                        <div class="first-text-column with-dark-border">
+                            Print Address
+                        </div>
+
+                        <div class="second-text-column with-dark-border">
+                            Print Address
+                        </div>
+
+                        <div class="first-text-column with-dark-border">
+                            &nbsp;
+                        </div>
+
+                        <div class="second-text-column with-dark-border">
+                            &nbsp;
+                        </div>
+
+                        <div class="one-full-column-block">
+                            <div class="right-colored-dashed-border">
+                                <br><b>If witness is a lawyer or member of the Society of Notaries Public of British Columbia, check the
+                                relevant box below:</b><br>
+                            </div>
+
+                            <div class="first-signing-radio-check-column pad-left pad-right margin-top">
+                                <input type="checkbox" id="m-primaryFocus1">
+                                <label for="m-primaryFocus1">
+                                    <span>Lawyer</span>
+                                </label>
+                            </div>
+
+                            <div class="first-signing-radio-check-column pad-left pad-right">
+                                <input type="checkbox" id="m-primaryFocus2">
+                                <label for="m-primaryFocus2">
+                                    <span>Member of the Society of Notaries Public of British Columbia</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="screen-title pad-top-2">
+                <h4><b>REPRESENTATIVE'S SIGNATURE</b></h4>
+            </div>
+
+            <div class="content-dark-copy">
+                <p><b>Note 8 - when a Representative may exercise authority under this Representation Agreement</b></p>
+            </div>
+
+            <div class="content-dark-copy">
+                <p>Before a person may exercise the authority of a representative under a representation agreement, that person must
+                    sign the representation agreement</p>
+            </div>
+
+            <div class="two-even-columns-block pad-bottom-2">
+                <div class="first-text-column">
+                    <b>REPRESENTATIVE</b>
+                </div>
+
+                <div class="second-text-column">
+                    <b>ALTERNATE REPRESENTATIVE</b>
+                    <br>
+                    (Strike out if an Alternate Representative is not appointed.)
+                </div>
+            </div>
+
+            <form #repNineForm="ngForm" novalidate>
+                <div class="signing-form with-dark-border">
+                    <div class="two-even-columns-block">
+                        <div class="first-signing-text-column with-dark-border ">
+                            <div class="two-signing-columns-block ">
+                                <div class="first-signing-text-column right-colored-border fixed-height-90">
+                                    <b>Signature of Representative</b>
+                                </div>
+
+                                <div class="second-signing-text-column left-colored-border fixed-height-90">
+                                    <b>Date Signed: (YYYY/MM/DD)</b>
+                                    <br>
+                                    <div class="three-date-columns-block">
+                                        <div class="first-text-column right-colored-border fixed-height-40"></div>
+                                        <div class="second-text-column right-colored-border fixed-height-40"></div>
+                                        <div class="third-text-column fixed-height-40"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="second-signing-text-column with-dark-border  ">
+                            <div class="two-signing-columns-block">
+                                <div class="first-signing-text-column right-colored-border fixed-height-90">
+                                    <b>Signature of Alternate Representative</b>
+                                </div>
+                                <div class="second-signing-text-column left-colored-border fixed-height-90">
+                                    <b>Date Signed: (YYYY/MM/DD)</b>
+                                    <br>
+                                    <div class="three-date-columns-block">
+                                        <div class="first-text-column right-colored-border fixed-height-40"></div>
+                                        <div class="second-text-column right-colored-border fixed-height-40"></div>
+                                        <div class="third-text-column fixed-height-40"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="first-text-column with-dark-border">
+                            Print Name
+                        </div>
+
+                        <div class="second-text-column with-dark-border">
+                            Print Name
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 10">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+            <div class="screen-title pad-top">
+                <h5>
+                    <b>&nbsp;Page {{page}} / {{finalPage}}:
+                        STATUTORY DECLARATON FOR EVIDENCE OF<br>AUTHORITY OF ALTERNATE REPRESENTATIVE
+                    </b>
+                </h5>
+            </div>
+
+            <div class="screen-title pad-top">
+                <h4><b>If you are not requesting your Primary Representative to be replaced by an Alternate Rep disregard this page and
+                    select Finish to complete the form.
+                    .</b></h4>
+            </div>
+            <div class="content-dark-copy pad-top">
+                This statutory declaration may be completed by the adult, the representative, or the alternate representative, as evidence
+                of the
+                authority of the alternate representative to act in place of the representative. This statutory declaration would be
+                completed if one
+                of the circumstances in which the alternate representative is authorized to act in place of the representative occurs to
+                establish
+                the authority of the alternate representative.
+            </div>
+
+            <div class="wizard-padded-heading">
+                CANADA
+            </div>
+
+            <div class="wizard-unpadded-heading">
+                PROVINCE OF BRITISH COLUMBIA
+            </div>
+
+            <div class="wizard-padded-heading">
+                IN THE MATTER OF the Representation Agreement Act re: a Representation Agreement made by:
+            </div>
+
+            <div class="four-unequal-columns-block">
+                <div class="first-text-column bottom-colored-border"></div>
+                <div class="second-text-column justify-content-center">naming</div>
+                <div class="third-text-column bottom-colored-border"></div>
+                <div class="fourth-text-column">as Representative</div>
+            </div>
+
+            <div class="four-unequal-columns-block">
+                <div class="first-text-no-pad-column justify-content-center">name of adult</div>
+                <div class="second-text-no-pad-column ">&nbsp;</div>
+                <div class="third-text-no-pad-column justify-content-center">name of representative</div>
+                <div class="fourth-text-no-pad-column">&nbsp;</div>
+            </div>
+
+            <div class="wizard-padded-heading">
+                TO WIT:
+            </div>
+
+            <div class="two-smallest-big-columns-block">
+                <div class="first-text-column">I,</div>
+                <div class="second-text-column bottom-colored-border">&nbsp;</div>
+            </div>
+
+            <div class="two-smallest-big-columns-block">
+                <div class="first-text-no-pad-column ">&nbsp;</div>
+                <div class="second-text-no-pad-column justify-content-center">Name</div>
+            </div>
+
+            <div class="two-smallest-big-columns-block">
+                <div class="first-text-column">of</div>
+                <div class="second-text-column bottom-colored-border">&nbsp;</div>
+            </div>
+
+            <div class="two-smallest-big-columns-block">
+                <div class="first-text-no-pad-column ">&nbsp;</div>
+                <div class="second-text-no-pad-column justify-content-center">Full Address</div>
+            </div>
+
+            <div class="wizard-padded-heading">
+                SOLEMNLY DECLARE THAT:
+            </div>
+
+            <div class="content-dark-copy">
+                <p>a. I am the (strike out the descriptions that do not apply):</p>
+            </div>
+
+            <div class="content-dark-list square">
+                <li class="list-item">
+                    adult who made the representation agreement
+                </li>
+
+                <li class="list-item">
+                    representative named under the representation agreement
+                </li>
+
+                <li class="list-item">
+                    alternate representative named under the representation agreement.
+                </li>
+            </div>
+
+            <div class="content-dark-copy pad-top-2">
+                <p>b. One of the circumstances referenced in the Representation Agreement in which the alternate
+                    representative is authorized to act
+                    in place of the representative has occurred, specifically (describe the specific circumstance resulting in the alternate
+                    representative
+                    having authority to act):
+                </p>
+            </div>
+
+            <div class="full-line-prompt">
+                <div class="full-text-column bottom-colored-border">&nbsp;</div>
+                <div class="full-text-column bottom-colored-border">&nbsp;</div>
+            </div>
+
+            <div class="content-dark-copy pad-top-2">
+                <p><b>AND I make this solemn declaration conscientiously believing it to be true and knowing that it is of the same force
+                    and effect as if made under oath.
+                </b></p>
+            </div>
+
+            <div class="wizard-padded-heading">
+                DECLARED BEFORE ME AT
+            </div>
+
+            <div class="two-signing-columns-block">
+                <div class="first-text-column bottom-colored-border"></div>
+                <div class="second-text-column bottom-colored-border"></div>
+            </div>
+
+            <div class="two-signing-columns-block">
+                <div class="first-text-no-pad-column justify-content-center">location</div>
+                <div class="second-text-no-pad-column justify-content-center">Declarant's Signature</div>
+            </div>
+
+            <div class="two-smallest-medium-columns-block">
+                <div class="first-text-column">on</div>
+                <div class="second-text-column bottom-colored-border">&nbsp;</div>
+            </div>
+
+            <div class="two-smallest-medium-columns-block">
+                <div class="first-text-no-pad-column">&nbsp;</div>
+                <div class="second-text-no-pad-column justify-content-center">date</div>
+            </div>
+
+            <div class="half-line-column-block">
+                  <div class="first-text-no-pad-column bottom-colored-border">&nbsp;</div>
+            </div>
+
+            <div class="half-line-column-block">
+                <div class="first-text-no-pad-column justify-content-center">Signature of Commissioner for taking Affidavits<br>for
+                    British Columbia</div>
+            </div>
+
+            <div class="half-line-column-block pad-top-6">
+                <div class="first-text-no-pad-column bottom-colored-border">&nbsp;</div>
+            </div>
+
+            <div class="half-line-column-block">
+                <div class="first-text-no-pad-column justify-content-center">Commissioner for taking Affidavits for
+                    British Columbia<br>
+                    (Apply stamp or type or legibly print name of Commissioner)
+                </div>
+            </div>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">FINISH</button>
+            </div>
+
+        </ng-container>
+
+        <ng-container *ngIf="page === 11">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+            <div class="screen-title pad-top">
+                <h5>
+                    <b>&nbsp;Page {{page}} / {{finalPage}}:
+                        CONGRATULATIONS! You Are Done!
+                    </b>
+                </h5>
+            </div>
+
+            <div class="content-dark-copy">
+                <p> Please press PRINT to get a hard copy or while on the print screen choose to save it as a PDF on your own computer and print
+                    at a later date. Store this document with your other end of life documents.
+                    <br><br>
+                    This directive is a great start to choosing who will represent for you in case of a situation where you can not speak
+                    for yourself. Once printed get your Rep or Reps together along with 2 Witnesses (1 if an attorney or notary) and sign
+                    where needed. This will take care of this chore when planning for your future but there
+                    are a lot of other things to get done.
+                    You can book a consultation with me either over zoom or in person for more help on a huge variety of topics around
+                    end-of-life and around energy medicine therapy.
+                </p>
+            </div>
+
+            <div class="two-buttons-container">
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="print-button" (click)="printFunction()">PRINT</button>
+            </div>
+        </ng-container>
+
+    </div>
+</div>

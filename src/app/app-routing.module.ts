@@ -1,30 +1,28 @@
 import { NgModule } from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
+/* MENU HOME */
+import { HomeContainerComponent } from './menu-home/home-container/home-container.component';
+
 /* MENU ABOUT */
 import { AboutEolAdvocacyContainerComponent } from './menu-about/about-eol-advocacy/about-eol-advocacy-container/about-eol-advocacy-container.component';
 import { AboutPractitionerContainerComponent } from './menu-about/about-practitioner/about-practitioner-container/about-practitioner-container.component';
+
+
+/* MENU PLAN AHEAD */
+import { ThinkAboutNeedsContainerComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-container/think-about-needs-container.component';
+import { ChooseYourRepContainerComponent } from './menu-write-plans/choose-your-rep/choose-your-rep-container/choose-your-rep-container.component';
+import { ConsiderAdvancedCarePlanContainerComponent } from './menu-plan-ahead/considerAdvancedCarePlan/consider-advanced-care-plan-container/consider-advanced-care-plan-container.component';
 
 /* MENU CONSULTATION */
 import { RolesOfConsultantContainerComponent } from './menu-consultations/roles-of-consultant/roles-of-consultant-container/roles-of-consultant-container.component';
 import { BookConsultationContainerComponent } from './menu-consultations/book-consultation/book-consultation-container/book-consultation-container.component';
 
-/* MENU HOME */
-import { HomeContainerComponent } from './menu-home/home-container/home-container.component';
-
-/* MENU PLAN AHEAD */
-
-import { ThinkAboutNeedsContainerComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-container/think-about-needs-container.component';
-
-// import { PlanAheadWizardContainerComponent } from './menu-plan-ahead/plan-ahead-wizard/plan-ahead-wizard-container/plan-ahead-wizard-container.component';
-import { DocumentsToSignContainerComponent } from './menu-plan-ahead/documents-to-sign/documents-to-sign-container/documents-to-sign-container.component';
-import { ChooseYourRepContainerComponent } from './menu-plan-ahead/choose-your-representative/choose-your-rep-container/choose-your-rep-container.component';
+import { MakeWishesContainerComponent } from './menu-write-plans/make-wish-list/make-wishes-container/make-wishes-container.component';
 
 
-
-import { RepNineWizardContainerComponent } from './global-wizards/rep-nine-wizard/rep-nine-wizard-container/rep-nine-wizard-container.component';
-
-import { ThinkAboutNeedsPrintoutComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-printout/think-about-needs-printout.component';
+import { ConsiderAdvocatesContainerComponent } from './menu-plan-ahead/considerYourAdvocates/consider-advocates-container/consider-advocates-container.component';
+import { WriteAnAdvancedDirectiveContainerComponent } from './menu-write-plans/write-advanced-directive/write-an-advanced-directive-container/write-an-advanced-directive-container.component';
 
 
 /* AS SHOWN ON MENU */
@@ -39,16 +37,21 @@ const routes: Routes = [
 
     {path: 'menuPlanAhead', component: ThinkAboutNeedsContainerComponent},
     {path: 'thinkAboutNeeds', component: ThinkAboutNeedsContainerComponent},
-    {path: 'chooseRep', component: ChooseYourRepContainerComponent},
-    {path: 'documentsToSign', component: DocumentsToSignContainerComponent},
+    {path: 'considerAdvocates', component: ConsiderAdvocatesContainerComponent},
+    // {path: 'documentsToSign', component: DocumentsToSignContainerComponent},
+    {path: 'considerAdvancedPlan', component: ConsiderAdvancedCarePlanContainerComponent},
+
+    {path: 'menuWritePlans', component: MakeWishesContainerComponent},
+    {path: 'makeWishList', component: MakeWishesContainerComponent},
+    {path: 'chooseReps', component: ChooseYourRepContainerComponent},
+    {path: 'writeCarePlanWizard', component: WriteAnAdvancedDirectiveContainerComponent},
 
     {path: 'menuConsultations', component: RolesOfConsultantContainerComponent},
     {path: 'rolesOfConsultant', component: RolesOfConsultantContainerComponent},
     {path: 'bookConsultation', component: BookConsultationContainerComponent},
 
-    // {path: 'rep-wizard', component: RepNineWizardContainerComponent},
 
-    // {path: 'printWizard', component: ThinkAboutNeedsPrintoutComponent},
+
 
 ];
 

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {RepNine} from "../../../ts-files/rep-nine";
-import {WishesWizard} from "../../../ts-files/wishes-wizard";
 import {formatDate} from "@angular/common";
 
 @Component({
@@ -14,7 +13,7 @@ export class ChooseYourRepContainerComponent implements OnInit {
   subMenuItemId:number = 21;
 
   detailHeaderName="header-choose-rep"
-  title="Choose a representative you trust"
+  title="Assign Your Representative(s)"
   today = new Date();
   legalDate =  formatDate(this.today, 'y/MM/d',  'en-US')
 

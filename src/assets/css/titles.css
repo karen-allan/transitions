@@ -189,6 +189,7 @@ and (orientation: landscape) {
 
     .screen-title h1,.screen-title h2, .screen-title h3 {
         letter-spacing: 2px;
+
     }
 
     .screen-title h1 {
@@ -293,7 +294,10 @@ and (min-width: 1440px) {
     .screen-title   {
         display:block;
         width:100%;
+        margin:auto;
         float:left;
+        border:thin solid red;
+        /*max-width: var(--screen-width);*/
     }
 
     .screen-title h1, .screen-title h2, .screen-title a, .screen-title h3, .screen-title h4, .screen-title h5  {

@@ -3,7 +3,6 @@ import {MatDialog, MatDialogConfig, MatDialogRef} from "@angular/material/dialog
 import {formatDate} from "@angular/common";
 import {RepNine} from "../../../ts-files/rep-nine";
 import {ChooseYourRepWizardComponent} from "../choose-your-rep-wizard/choose-your-rep-wizard.component";
-import {Client} from "../../../ts-files/client";
 
 @Component({
   selector: 'app-choose-your-rep-overview',
@@ -15,6 +14,7 @@ export class ChooseYourRepOverviewComponent implements OnInit {
   @Input() title:string='';
   @Input() @Output() rep:RepNine;
 
+  sectionSelected: string ='';
   now:string;
   page:number=0;
   printForm:boolean=false;
@@ -38,7 +38,8 @@ export class ChooseYourRepOverviewComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = false;
-    dialogConfig.id = "modal-component";
+    dialogConfig.id = "rep-nine-modal";
+    //  dialogConfig.id = "modal-component";
 
     let modalDialog = this.matDialog.open(ChooseYourRepWizardComponent, dialogConfig);
 
