@@ -1,0 +1,227 @@
+<div class="choose-your-rep-wizard-printout">
+    <div class="print-reports-component">
+
+        <div class="print-heading">
+            REPRESENTATIVE AGREEMENT 9 (RA9)
+            <br>
+            {{rep.client_name}}
+            on
+            <br>
+            {{now}}
+        </div>
+
+        <div class="print-title">
+            <B>I revoke any previous Representation Agreement(s) I have made.</B>
+        </div>
+
+        <div class="print-title">
+            THIS REPRESENTATION AGREEMENT IS MADE BY ME, THE ADULT:
+            <br><br>
+            {{rep.client_name.toUpperCase()}} at<br><br>
+            {{rep.client_address}}<br><br>
+            in the Province of British Columbia
+        </div>
+
+        <div class="print-text">
+            I appoint {{rep.rep_primary_name.toUpperCase()}} at {{rep.rep_primary_address}} to be my Representative in accordance with section 9 of the
+            Representative Agreement Act.
+            <br><br>
+            I give {{rep.rep_primary_name.toUpperCase()}} authority to make decisions on my behalf for all personal care and health care matters of a
+            non-financial nature that relate to me.
+        </div>
+
+        <div class="print-text pad-top-2">
+            If the above named	should be or become at any time unable or unwilling to act in the office of attorney, then I appoint
+            {{rep.rep_alternate_name.toUpperCase()}} to be my Representative in accordance with section 9 of the Representative Agreement Act.
+            <br><br>
+            I give {{rep.rep_alternate_name.toUpperCase()}} authority to make decisions on my behalf for all personal care and health care matters of a
+            non-financial nature that relate to me.
+        </div>
+
+        <div class="print-text pad-top-2">
+            The following are my instructions or wishes with respect to decisions that will be made within the areas of
+            authority given to my Representative under this Representation Agreement.
+        </div>
+
+        <div class="print-instructions">
+            <p>{{rep.instructions_for_reps}}</p>
+        </div>
+
+        <div class="print-title pad-top-2">
+            <b>SIGNATURES</b>
+        </div>
+
+        <div class="print-title pad-top-2">
+            <b>ADULT SIGNATURE</b>
+        </div>
+
+        <div class="print-text">
+            I have signed this Representative Agreement 9 (RA9) in the presence of the witnesses whose names
+            appears below.
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Adult's Signature:
+            </div>
+
+            <div class="print-second-column">
+                &nbsp;&nbsp;
+            </div>
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Date:
+            </div>
+
+            <div class="print-second-column">
+                <ng-container *ngIf="rep.signing_date != ''">
+                   {{rep.signing_date}}
+                </ng-container>
+
+                <ng-container *ngIf="rep.signing_date === ''">
+                    &nbsp;
+                </ng-container>
+            </div>
+        </div>
+
+        <div class="print-title pad-top-2">
+            <b>WITNESSES SIGNATURES</b>
+        </div>
+
+        <div class="print-title pad-top-2">
+            <b>WITNESS # 1</b>
+        </div>
+
+        <div class="print-text pad-top-2">
+            Witness #1 is {{rep.witness_one_name}} of {{rep.witness_one_address}}.
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Witness #1's Signature:
+            </div>
+
+            <div class="print-second-column">
+                &nbsp;&nbsp;
+            </div>
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Date:
+            </div>
+
+            <div class="print-second-column">
+                <ng-container *ngIf="rep.signing_date != ''">
+                    {{rep.signing_date}}
+                </ng-container>
+
+                <ng-container *ngIf="rep.signing_date === ''">
+                    &nbsp;
+                </ng-container>
+            </div>
+        </div>
+
+
+        <div class="print-title pad-top-2">
+            <b>WITNESS # 2</b>
+        </div>
+
+        <div class="print-text pad-top-2">
+            Witness #2 is {{rep.witness_two_name}} of {{rep.witness_two_address}}.
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Witness # 2's Signature
+            </div>
+
+            <div class="print-second-column">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Date:
+            </div>
+
+            <div class="print-second-column">
+                <ng-container *ngIf="rep.signing_date != ''">
+                    {{rep.signing_date}}
+                </ng-container>
+
+                <ng-container *ngIf="rep.signing_date === ''">
+                    &nbsp;
+                </ng-container>
+            </div>
+        </div>
+
+        <div class="print-title pad-top-2">
+            <b>REPRESENTATIVES</b>
+        </div>
+
+        <div class="print-text pad-top-2">
+            My Primary Representative is {{rep.rep_primary_name}} of {{rep.rep_primary_address}}.
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Representative's Signature
+            </div>
+
+            <div class="print-second-column">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Date:
+            </div>
+
+            <div class="print-second-column">
+                <ng-container *ngIf="rep.signing_date != ''">
+                    {{rep.signing_date}}
+                </ng-container>
+
+                <ng-container *ngIf="rep.signing_date === ''">
+                    &nbsp;
+                </ng-container>
+            </div>
+        </div>
+
+        <div class="print-text pad-top-2">
+            My Alternate Representative is {{rep.rep_alternate_name}} of {{rep.rep_alternate_address}}.
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Representative's Signature
+            </div>
+
+            <div class="print-second-column">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Date:
+            </div>
+
+            <div class="print-second-column">
+                <ng-container *ngIf="rep.signing_date != ''">
+                    {{rep.signing_date}}
+                </ng-container>
+
+                <ng-container *ngIf="rep.signing_date === ''">
+                    &nbsp;
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+
