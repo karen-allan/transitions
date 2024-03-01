@@ -442,7 +442,7 @@ and (min-width: 1440px) {
         display: grid;
         width:100%;
         margin:auto;
-        border:thin solid black;
+        /*border:thin solid black;*/
     }
 
     .error-message-block {
@@ -558,4 +558,7 @@ and (min-width: 1440px) {
         height:30px;
     }
 
+    .fixed-height-20 {
+        height:20px;
+    }
 }

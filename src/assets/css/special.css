@@ -272,7 +272,7 @@ and (min-width: 1440px) {
 
     .screen-line   {
         display:block;
-        width:80%;
+        width:100%;
         float:left;
         margin:auto;
 

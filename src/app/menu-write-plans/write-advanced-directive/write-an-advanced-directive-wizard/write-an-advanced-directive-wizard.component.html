@@ -1,1 +1,495 @@
-<p>write-an-advanced-directive-wizard works!</p>
+<div id="modal-content-wrapper">
+    <div class="modal-inner-content">
+        <!-- LEGAL PREAMBLE -->
+        <ng-container *ngIf="page === 0">
+            <app-write-an-advanced-directive-wizard-header [rep]='rep'></app-write-an-advanced-directive-wizard-header>
+
+            <div class="screen-title pad-top">
+                <h4>
+                    <b>&nbsp;
+                        ADVANCE DIRECTIVE
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>
+                    <b>Made under the <i>Health Care (Consent) and Care Facility (Admission) Act</i></b>
+                    <br><br>
+                    The use of this form is voluntary. Before completing this Advance Directive, it is advisable to obtain legal advice
+                    and the advice of a health care provider about the possibile implications of this Advance Directive, and your choices
+                    about
+                    the types of health care for which you might give or refuse consent under this Advance Directive.
+                    <br><br>
+                    The notes referenced in this Advance Directive are found directly below (see Note 1) and are provided for
+                    informational purposes only. These notes should NOT be considered complete (in other words, there could be more
+                    information needed than we have
+                    provided in this form). A person making an Advance Directive should consult the <i>Health Care (Consent) and Care
+                    Facility (Admission) Act</i> to ensure that they understand their rights and duties.
+                </p>
+            </div>
+
+            <div class="screen-title pad-top">
+                <h4>NOTE 1: LIMITATIONS ON THE EFFECT OF THIS ADVANCE DIRECTIVE</h4>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>Note that the effect of this Advance Directive and the giving and refusing of consent under it is subject to the
+                    limitations set out in sections 19.2(2), 19.3(1) and 19.8 of the <i>Health Care (Consent) and Care
+                        Facility (Admission) Act.</i>
+                </p>
+            </div>
+
+
+            <div class="one-button-container">
+                <button class="start-button" (click)="getNextPage()">START</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 1">
+            <app-write-an-advanced-directive-wizard-header [rep]='rep'></app-write-an-advanced-directive-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        THIS IS THE ADVANCE DIRECTIVE OF THE "ADULT":
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>
+                    'THE ADULT' means you as the person creating your Advance Directive. <br>
+                    Enter your full legal name, full address and the date that you are filling out, printing and having the document
+                    witnessed. If you want to leave the date to enter at the time when you can have the Witnesses together, erase this
+                    default date and enter a future date they are expected to be present or leave blank to print and fill in later.
+                </p>
+            </div>
+
+            <form #repNineForm="ngForm" novalidate>
+                <div class="wizard-form">
+                    <div class="error-message-block">
+                        <ng-container *ngIf="errorMessage">
+                            <div class="error-message">{{errorMessage}}</div>
+                        </ng-container>
+                        <ng-container *ngIf="!errorMessage">
+                            <div class="error-message">&nbsp;</div>
+                        </ng-container>
+                    </div>
+
+                    <div class="two-unequal-columns-block">
+                        <label class="first-text-column " for="client_name">Full Legal Name of (you) the Adult:</label>
+                        <label class="second-text-column" for="legal_date">Date: (YYYY/MM/DD):</label>
+
+                        <input [(ngModel)]="rep.client_name" type="text" class="first-text-column required" id="client_name" name="name">
+
+                        <input [(ngModel)]="rep.signing_date" type="text" class="second-text-column" id="legal_date" name="legalDate"
+                               mask="0000/00/00">
+                    </div>
+
+                    <div class="full-line-prompt">
+                        <label class="first-text-column" for="client_address">Full Legal Address of (you) the Adult:</label>
+                        <input [(ngModel)]="rep.client_address" type="text" id="txtArea" class="first-text-column required"
+                               id="client_address"
+                               name="address">
+                    </div>
+
+                    <div class="two-medium-big-columns-block">
+                        <label class="first-text-column" for="legal_date2">Date of Birth: (YYYY/MM/DD):</label>
+                        <label class="second-text-column" for="ph-num">Personal Health Care Number (optional):</label>
+
+                        <input [(ngModel)]="rep.signing_date" type="text" class="first-text-column" id="legal_date2" name="legalDate"
+                               mask="0000/00/00">
+                        <input [(ngModel)]="rep.rep_alternate_address" type="text" class="second-text-column" id="ph-num" name="phn"
+                               mask="000-00-00">
+                    </div>
+                </div>
+            </form>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <!-- was closeModal -->
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 2">
+            <app-write-an-advanced-directive-wizard-header [rep]='rep'></app-write-an-advanced-directive-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        REVOCATION OF PREVIOUS ADVANCE DIRECTIVES:
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>
+                    I revoke all previous Advance Directives made by me.
+
+                </p>
+            </div>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <!-- was closeModal -->
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 3">
+            <app-write-an-advanced-directive-wizard-header [rep]='rep'></app-write-an-advanced-directive-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        CONSENT TO HEALTH CARE AND REFUSAL OF CONSENT TO HEALTH CARE:
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy">
+                <p>
+                    <br>
+                    If I need health care and I am not capable of giving or refusing consent to the health care at the time health
+                    care is
+                    required,
+                    <br><br>
+                    <b>I give the following instructions:</b>
+                    <br>
+                    [Note: If a health care decision is required while you are incapable but the type of health care is not addressed in
+                    this Advance Directive, the decision will be made by a substitute decision maker.]
+                    <br><br>
+                </p>
+            </div>
+
+            <div class="screen-title-no-border pad-top">
+                <h6>I consent to the following health care:</h6>
+            </div>
+
+            <div class="screen-line">
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+            </div>
+
+            <div class="screen-title-no-border pad-top">
+                <h6>I refuse to consent to the following health care:</h6>
+            </div>
+
+            <div class="screen-line">
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+                <h4>
+                    <hr>
+                </h4>
+            </div>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 4">
+            <app-write-an-advanced-directive-wizard-header [rep]='rep'></app-write-an-advanced-directive-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        ACKNOWLEDGEMENTS :
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy pad-top-2">
+                <p>I know that as a result of making this Advance Directive
+                    <br><br>
+                    a.I will not be provided with any health care for which I refuse consent in this Advance Directive, and
+                    <br><br>
+                    b. No one will be chosen to make decisions on my behalf in respect of any health care matters for which I give or
+                    refuse consent in this Advance Directive.
+                    <br><br>
+                    See Note 1 (Intro Page) - Limitations of this Advance Directive)
+                </p>
+            </div>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 5">
+            <app-write-an-advanced-directive-wizard-header [rep]='rep'></app-write-an-advanced-directive-wizard-header>
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        SIGNATURES
+                    </b>
+                </h4>
+            </div>
+
+            <form #repNineForm="ngForm" novalidate>
+                <div class="signing-form with-dark-border">
+                    <div class="error-message-block">
+                        <ng-container *ngIf="errorMessage">
+                            <div class="error-message">{{errorMessage}}</div>
+                        </ng-container>
+                        <ng-container *ngIf="!errorMessage">
+                            <div class="error-message">&nbsp;</div>
+                        </ng-container>
+                    </div>
+
+                    <div class="full-text-no-padding-column">
+                        <b>ADULT'S SIGNATURE</b>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;<b>*The Adult must sign and date in the presence of both Witnesses.</b>
+                    </div>
+
+                    <div class="two-unequal-columns-block">
+                        <label class="first-text-column">Signature of Adult:</label>
+                        <label class="second-text-column" for="legal_date">Date Signed: (YYYY / MM / DD):</label>
+                        <input type="text" class="first-text-column required" name="name">
+
+                        <input type="text" class="second-text-column" name="legalDate">
+                    </div>
+                </div>
+            </form>
+
+            <div class="full-text-column ">
+                <b>WITNESSES TO ADULT’S SIGNATURE</b>
+            </div>
+
+            <div class="content-dark-copy">
+                <p><b>Note 2 - Information for Witnesses</b></p>
+            </div>
+
+            <div class="content-dark-list">
+                <span>(a) The following persons may not be a witness:</span>
+
+                <li class="list-item">
+                    i. A person who provides personal care, health care or financial services to the adult for compensation, other than a
+                    lawyer or a notary public;
+                </li>
+                <li class="list-item">
+                    ii. A spouse, child, parent, employee or agent of a person described in paragraph (a);
+                </li>
+                <li class="list-item">
+                    iii. A person who is under 19 years of age
+                </li>
+                <li class="list-item">
+                    iv. A person who does not understand the type of communication used by the Adult, unless the person receives
+                    interpretive assistance to understand that type of communication.
+                </li>
+
+                <span> <br><br>(b) Only one witness is required if the witness is a lawyer or notary public. </span>
+                <br><br>
+
+                <span> <br><br>(c) You should not witness the Advance Directive if you have reason to believe that: </span>
+
+                <li class="list-item">
+                    i. The Adult is incapable of making, changing, or revoking an Advance Directive;
+                </li>
+
+                <li class="list-item">
+                    ii. Fraud, undue pressue or some other form of abuse or neglect was used to induce the Adult to make the Advance
+                    Directive or to change or revoke a previous Advance Directive.
+                </li>
+
+            </div>
+
+            <div class="full-text-column ">
+                <b>Please Note: Witness No 2 in NOT required if Witness No. 1 is a lawyer or member in good
+                    standing of the Society of Notaries Public of British Columbia
+                </b>
+            </div>
+
+            <div class="two-even-columns-block pad-bottom-2">
+                <div class="first-text-column">
+                    <b>WITNESS 1</b>
+                    <br>
+                    * Witness No. 1 must sign in the presence of the Adult and Witness No.2
+                </div>
+
+                <div class="second-text-column">
+                    <b>WITNESS 2</b>
+                    <br>
+                    * If needed, Witness No. 2 must sign in the presence of the Adult and Witness No.1
+                </div>
+            </div>
+
+            <form #repNineForm="ngForm" novalidate>
+                <div class="signing-form with-dark-border">
+                    <div class="two-even-columns-block">
+                        <div class="first-signing-text-column with-dark-border ">
+                            <div class="two-signing-columns-block ">
+                                <div class="first-signing-text-column right-colored-border fixed-height-90">
+                                    <b>Signature of Witness No 1</b>
+                                </div>
+
+                                <div class="second-signing-text-column left-colored-border fixed-height-90">
+                                    <b>Date Signed: (YYYY/MM/DD)</b>
+                                    <br>
+                                    <div class="three-date-columns-block">
+                                        <div class="first-text-column right-colored-border fixed-height-40"></div>
+                                        <div class="second-text-column right-colored-border fixed-height-40"></div>
+                                        <div class="third-text-column fixed-height-40"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="second-signing-text-column with-dark-border  ">
+                            <div class="two-signing-columns-block">
+                                <div class="first-signing-text-column right-colored-border fixed-height-90">
+                                    <b>Signature of Witness No 2</b>
+                                </div>
+                                <div class="second-signing-text-column left-colored-border fixed-height-90">
+                                    <b>Date Signed: (YYYY/MM/DD)</b>
+                                    <br>
+                                    <div class="three-date-columns-block">
+                                        <div class="first-text-column right-colored-border fixed-height-40"></div>
+                                        <div class="second-text-column right-colored-border fixed-height-40"></div>
+                                        <div class="third-text-column fixed-height-40"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="first-text-column with-dark-border">
+                            Print Name
+                        </div>
+
+                        <div class="second-text-column with-dark-border">
+                            Print Name
+                        </div>
+
+                        <div class="first-text-column with-dark-border">
+                            Print Address
+                        </div>
+
+                        <div class="second-text-column with-dark-border">
+                            Print Address
+                        </div>
+
+                        <div class="first-text-column with-dark-border">
+                            &nbsp;
+                        </div>
+
+                        <div class="second-text-column with-dark-border">
+                            &nbsp;
+                        </div>
+
+                        <div class="one-full-column-block">
+                            <div class="right-colored-dashed-border">
+                                <br><b>If witness is a lawyer or member of the Society of Notaries Public of British Columbia, check the
+                                relevant box below:</b><br>
+                            </div>
+
+                            <div class="first-signing-radio-check-column pad-left pad-right margin-top">
+                                <input type="checkbox" id="m-primaryFocus1">
+                                <label for="m-primaryFocus1">
+                                    <span>Lawyer</span>
+                                </label>
+                            </div>
+
+                            <div class="first-signing-radio-check-column pad-left pad-right">
+                                <input type="checkbox" id="m-primaryFocus2">
+                                <label for="m-primaryFocus2">
+                                    <span>Member of the Society of Notaries Public of British Columbia</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+
+        </ng-container>
+
+        <ng-container *ngIf="page === 6">
+            <app-write-an-advanced-directive-wizard-header [rep]='rep'></app-write-an-advanced-directive-wizard-header>
+
+            <div class="screen-title pad-top">
+                <h4>
+                    <b>CONGRATULATIONS! You Are Done!</b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy">
+                <p> Please press PRINT to get a hard copy or while on the print screen choose to save it as a PDF on your own computer and print
+                    at a later date. Store this document with your other end of life documents.
+                    <br><br>
+                    If you have also created a Wishes List from our Wishes List Wizard, you can add it to this Directive instead of
+                    having to write on the small number of lines shown on this Directive. On the first line, simply state (see my Wish
+                    List attached) on the first line.
+                    <br><br>
+                    If you have also used our Rep 9 Wizard to create and print off your Representative 9 Agreement, you should include
+                    this with this Advance Directive. Also include wills, Section 7 (a financial rep form not shown on this site) and any
+                    other documents you need to gather to make it easy for your family and health care providers to respect your wishes.
+                    <br><br>
+                    Once printed sign this in the presence of your 2 Witnesses (1 if an attorney or notary) and have them sign
+                    where needed. This will take care of this chore when planning for your future but there
+                    are a lot of other things to get done.
+                    You can book a consultation with me either over zoom or in person for more help on a huge variety of topics around
+                    end-of-life and around energy medicine therapy.
+                </p>
+            </div>
+
+            <div class="two-buttons-container">
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="print-button" (click)="printFunction()">PRINT</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

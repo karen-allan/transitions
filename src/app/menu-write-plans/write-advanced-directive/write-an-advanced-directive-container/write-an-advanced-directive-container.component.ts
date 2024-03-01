@@ -9,9 +9,8 @@ import {RepNine} from "../../../ts-files/rep-nine";
 })
 export class WriteAnAdvancedDirectiveContainerComponent {
 
-
   menuItemId:number  = 3;
-  subMenuItemId:number = 32;
+  subMenuItemId:number = 33;
 
   detailHeaderName="header-choose-rep"
   title="Write an Advanced Care Plan"
@@ -23,7 +22,12 @@ export class WriteAnAdvancedDirectiveContainerComponent {
   constructor() {
 
     //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
-    this.rep = new RepNine("Karen Gail Allan", "2608 Airstrip Road", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", this.legalDate );
+    this.rep = new RepNine("", "", "", "", "",
+        "", "", "", "", "", "", "",
+        "", "", "", "", "", "", "",
+        "", "", "", "", "", "", "",
+        "", "", "", "", "", '', '', '',
+        '', '', '', '', false );
   }
   ngOnInit(): void {
   }

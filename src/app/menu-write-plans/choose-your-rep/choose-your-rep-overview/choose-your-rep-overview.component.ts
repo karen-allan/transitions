@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {MatDialog, MatDialogConfig, MatDialogRef} from "@angular/material/dialog";
-import {formatDate} from "@angular/common";
 import {RepNine} from "../../../ts-files/rep-nine";
 import {ChooseYourRepWizardComponent} from "../choose-your-rep-wizard/choose-your-rep-wizard.component";
 
@@ -14,9 +13,7 @@ export class ChooseYourRepOverviewComponent implements OnInit {
   @Input() title:string='';
   @Input() @Output() rep:RepNine;
 
-  sectionSelected: string ='';
-  now:string;
-  page:number=0;
+ // page:number=0;
   printForm:boolean=false;
 
   constructor(public matDialog: MatDialog) { }
@@ -24,14 +21,9 @@ export class ChooseYourRepOverviewComponent implements OnInit {
 
   /* *************************************************************************************************************** */
   ngOnInit(): void {
-    this.setClientDefaults();
-    this.getCurrentDate();
+
   }
 
-  /* *************************************************************************************************************** */
-  setClientDefaults() {
-     // this.rep.client_name='';
-  }
 
   /* *************************************************************************************************************** */
   openModal() {
@@ -44,10 +36,6 @@ export class ChooseYourRepOverviewComponent implements OnInit {
     let modalDialog = this.matDialog.open(ChooseYourRepWizardComponent, dialogConfig);
 
     modalDialog.componentInstance.setRep(this.rep);
-    modalDialog.componentInstance.setDate();
-    modalDialog.componentInstance.setLegalDate(this.rep.signing_date);
-    modalDialog.componentInstance.setDefaultName(this.rep.client_name);
-    modalDialog.componentInstance.setDefaultAddress(this.rep.client_address);
     modalDialog.componentInstance.event.subscribe(resp => {
       this.rep = resp.rep;
       this.printForm = resp.print;
@@ -61,12 +49,6 @@ export class ChooseYourRepOverviewComponent implements OnInit {
     if (this.printForm) {
       window.print();
     }
-  }
-
-  /* *************************************************************************************************************** */
-  getCurrentDate() {
-    const today = new Date();
-    this.now= formatDate(today, 'longDate',  'en-US')
   }
 
 

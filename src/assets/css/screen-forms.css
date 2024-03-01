@@ -593,7 +593,7 @@ and (min-width: 1440px) {
     }
 
     .first-signing-text-column, .second-signing-text-column {
-        font-size: var(--smallest-copy-desktop-font-size);
+        font-size: var(--small-copy-desktop-font-size);
     }
 
     .title-background {
@@ -649,7 +649,7 @@ and (min-width: 1440px) {
     /* THESE ARE FOR CONTENT  */
     .full-text-column, .first-text-column, .second-text-column,  .third-text-column, .fourth-text-column, .third-fourth-text-column,
     .first-radio-check-column, .second-radio-check-column, .third-radio-check-column, .full-radio-check-column,
-    .full-line-prompt p, .text-area, first-signing-text-column, second-signing-text-column   {
+    .full-line-prompt p, .text-area, .first-signing-text-column, .second-signing-text-column   {
         padding-top:1em;
         font-family: var(--family-copy);
         color: var(--color-dark-blue);
@@ -765,28 +765,22 @@ and (min-width: 1440px) {
         grid-template-columns: 50% 50%;
     }
 
-    .two-signing-columns-block {
-        width: 100%;
-        display: inline-grid;
-        grid-template-columns: 60% 40%;
-    }
-
-    .three-date-columns-block {
-        width: 100%;
-        display: inline-grid;
-        grid-template-columns: 40% 30% 30%;
-    }
-
     .two-unequal-columns-block {
         width: 100%;
         display: inline-grid;
         grid-template-columns: 70% 30%;
     }
 
-    .three-even-columns-block {
+    .two-medium-big-columns-block {
         width: 100%;
         display: inline-grid;
-        grid-template-columns: repeat(3, 33.3%);
+        grid-template-columns: 30% 70%;
+    }
+
+    .two-signing-columns-block {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 60% 40%;
     }
 
     .two-small-big-columns-block {
@@ -806,6 +800,22 @@ and (min-width: 1440px) {
         display: inline-grid;
         grid-template-columns: 3% 47%;
     }
+
+    .three-date-columns-block {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 40% 30% 30%;
+    }
+
+
+
+    .three-even-columns-block {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+
 
     .four-columns-block {
         width: 100%;
@@ -928,7 +938,8 @@ and (min-width: 1440px) {
 
 
     @media screen {
-        .print-plan-ahead-component, .print-caregiver-consult-component, .print-patient-consult-component, .print-planning-consult-component
+        .make-wishes-wizard-printout, .choose-your-rep-wizard-printout,
+        .print-caregiver-consult-component, .print-patient-consult-component, .print-planning-consult-component
         {
             display:none;
         }

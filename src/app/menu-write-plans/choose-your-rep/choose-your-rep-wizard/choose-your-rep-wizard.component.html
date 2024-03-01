@@ -58,13 +58,11 @@
 
             <div class="content-dark-copy pad-top">
                 <p>
-                    'THE ADULT' means you as the person appointing your Representative(s). <br>
+                    'THE ADULT' means you as the person appointing your Representative(s).
+                    <br>
                     Enter your full legal name, full address and the date that you are filling out, printing and having the document
-                    witnessed.
-                    If you want to
-                    leave the date to enter at the time when you can have the Reps and Witnesses together, erase this default date and enter
-                    the
-                    date later.
+                    witnessed. If you want to leave the date to enter at the time when you can have the Reps and Witnesses together,
+                    erase this default date and enter the date later.
                 </p>
             </div>
 
@@ -81,11 +79,10 @@
 
                     <div class="two-unequal-columns-block">
                         <label class="first-text-column" for="client_name">Full Legal Name of (you) the Adult:</label>
-                        <label class="second-text-column" for="legal_date">Date: (YYYY / MM / DD):</label>
+                        <label class="second-text-column" for="pub_date">Date: (YYYY / MM / DD):</label>
 
                         <input [(ngModel)]="rep.client_name" type="text" class="first-text-column required" id="client_name" name="name">
-
-                        <input [(ngModel)]="rep.signing_date" type="text" class="second-text-column" id="legal_date" name="legalDate"
+                        <input [(ngModel)]="rep.publish_date" type="text" class="second-text-column" id="pub_date" name="pubDate"
                                mask="0000/00/00">
                     </div>
 
@@ -102,7 +99,7 @@
                 <!-- was closeModal -->
                 <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
                 <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
-                <button class="next-button " (click)="getNextPage()">NEXT</button>
+                <button class="next-button " (click)="checkClientNameAndValidDate()">NEXT</button>
             </div>
         </ng-container>
 
@@ -207,7 +204,7 @@
                 <!-- was closeModal -->
                 <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
                 <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
-                <button class="next-button " (click)="getNextPage()">NEXT</button>
+                <button class="next-button " (click)="checkPrimaryRepNameAndAddress()">NEXT</button>
             </div>
 
         </ng-container>
@@ -278,7 +275,7 @@
                 <!-- was closeModal -->
                 <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
                 <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
-                <button class="next-button " (click)="getNextPage()">NEXT</button>
+                <button class="next-button " (click)="checkAlternateRepNameAndAddress()">NEXT</button>
             </div>
         </ng-container>
 
@@ -432,29 +429,20 @@
                 </p>
             </div>
 
-            <div class="screen-line">
-                <h4>
-                    <hr>
-                </h4>
-                <h4>
-                    <hr>
-                </h4>
-                <h4>
-                    <hr>
-                </h4>
-                <h4>
-                    <hr>
-                </h4>
-                <h4>
-                    <hr>
-                </h4>
-                <h4>
-                    <hr>
-                </h4>
-                <h4>
-                    <hr>
-                </h4>
-            </div>
+            <form #wizardForm="ngForm" novalidate>
+                <div class="wizard-form">
+                    <div class="full-line-prompt">
+                        <textarea
+                            name="instructions"
+                            rows="8"
+                            class="full-text-column"
+                            ng-required="true"
+                            [(ngModel)]="rep.instructions_for_reps"
+                            placeholder="Add any instructions you have for your Rep to follow. "
+                        ></textarea>
+                   </div>
+                </div>
+            </form>
 
             <div class="three-buttons-container pad-top-2 justify-content-end">
                 <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
@@ -506,7 +494,7 @@
 
             <form #repNineForm="ngForm" novalidate>
                 <div class="signing-form with-dark-border">
-                    <div class="error-message-block">
+                    <div class="error-message-block pad-top">
                         <ng-container *ngIf="errorMessage">
                             <div class="error-message">{{errorMessage}}</div>
                         </ng-container>
@@ -515,7 +503,7 @@
                         </ng-container>
                     </div>
 
-                    <div class="full-text-no-padding-column">
+                    <div class="full-text-column">
                         <b>ADULT'S SIGNATURE</b>
                         <br>
                         &nbsp;&nbsp;&nbsp;*The Adult must sign and date in the presence of both Witnesses.
@@ -523,10 +511,10 @@
 
                     <div class="two-unequal-columns-block">
                         <label class="first-text-column">Signature of Adult:</label>
-                        <label class="second-text-column" for="legal_date">Date Signed: (YYYY / MM / DD):</label>
-                        <input type="text" class="first-text-column required" name="name">
+                        <label class="second-text-column" for="signing_date">Date Signed: (YYYY / MM / DD):</label>
 
-                        <input type="text" class="second-text-column" name="legalDate">
+                        <input type="text" class="first-text-column required" name="name">
+                        <input type="text" id="signing_date" [(ngModel)]="rep.signing_date" class="second-text-column" name="legalDate">
                     </div>
 
                     <div class="full-text-column ">
@@ -612,85 +600,79 @@
             <form #repNineForm="ngForm" novalidate>
                 <div class="signing-form with-dark-border">
                     <div class="two-even-columns-block">
-                        <div class="first-signing-text-column with-dark-border ">
+                        <div class="first-signing-text-column align-content-center">
                             <div class="two-signing-columns-block ">
-                                <div class="first-signing-text-column right-colored-border fixed-height-90">
+                                <label class="first-signing-text-column pad-top-2">
                                     <b>Signature of Witness No 1</b>
-                                </div>
+                                </label>
 
-                                <div class="second-signing-text-column left-colored-border fixed-height-90">
-                                    <b>Date Signed: (YYYY/MM/DD)</b>
-                                    <br>
-                                    <div class="three-date-columns-block">
-                                        <div class="first-text-column right-colored-border fixed-height-40"></div>
-                                        <div class="second-text-column right-colored-border fixed-height-40"></div>
-                                        <div class="third-text-column fixed-height-40"></div>
-                                    </div>
-                                </div>
+                                <label class="second-signing-text-column pad-top-2" for="signing_date_2">
+                                    <b>Date: (YYYY/MM/DD):</b>
+                                </label>
+
+                                <input type="text" class="first-signing-text-column pad-top-2">
+                                <input type="text" id="signing_date_2" class="second-signing-text-column pad-top-2" [(ngModel)]="rep.signing_date"
+                                       name="legalDate">
                             </div>
                         </div>
 
-                        <div class="second-signing-text-column with-dark-border  ">
+                        <div class="second-signing-text-column align-content-center">
                             <div class="two-signing-columns-block">
-                                <div class="first-signing-text-column right-colored-border fixed-height-90">
+                                <label class="first-signing-text-column pad-top-2">
                                     <b>Signature of Witness No 2</b>
-                                </div>
-                                <div class="second-signing-text-column left-colored-border fixed-height-90">
-                                    <b>Date Signed: (YYYY/MM/DD)</b>
-                                    <br>
-                                    <div class="three-date-columns-block">
-                                        <div class="first-text-column right-colored-border fixed-height-40"></div>
-                                        <div class="second-text-column right-colored-border fixed-height-40"></div>
-                                        <div class="third-text-column fixed-height-40"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="first-text-column with-dark-border">
-                            Print Name
-                        </div>
-
-                        <div class="second-text-column with-dark-border">
-                            Print Name
-                        </div>
-
-                        <div class="first-text-column with-dark-border">
-                            Print Address
-                        </div>
-
-                        <div class="second-text-column with-dark-border">
-                            Print Address
-                        </div>
-
-                        <div class="first-text-column with-dark-border">
-                            &nbsp;
-                        </div>
-
-                        <div class="second-text-column with-dark-border">
-                            &nbsp;
-                        </div>
-
-                        <div class="one-full-column-block">
-                            <div class="right-colored-dashed-border">
-                                <br><b>If witness is a lawyer or member of the Society of Notaries Public of British Columbia, check the
-                                relevant box below:</b><br>
-                            </div>
-
-                            <div class="first-signing-radio-check-column pad-left pad-right margin-top">
-                                <input type="checkbox" id="m-primaryFocus1">
-                                <label for="m-primaryFocus1">
-                                    <span>Lawyer</span>
                                 </label>
-                            </div>
 
-                            <div class="first-signing-radio-check-column pad-left pad-right">
-                                <input type="checkbox" id="m-primaryFocus2">
-                                <label for="m-primaryFocus2">
-                                    <span>Member of the Society of Notaries Public of British Columbia</span>
+                                <label class="second-signing-text-column pad-top-2" for="signing_date_3">
+                                    <b>Date: (YYYY/MM/DD):</b>
                                 </label>
+
+                                <input type="text" class="first-signing-text-column pad-top-2">
+                                <input type="text" id="signing_date_3" class="second-signing-text-column pad-top-2" [(ngModel)]="rep.signing_date"
+                                       name="legalDate">
                             </div>
                         </div>
+
+                        <label class="first-text-column with-dark-border" for="witness_name1"><b>Print Name:</b></label>
+                        <label class="second-text-column with-dark-border" for="witness_name2"><b>Print Name:</b></label>
+
+                        <input type="text" class="first-text-column with-dark-border" [(ngModel)]="rep.witness_one_name" id="witness_name1"
+                               name="name1">
+
+                        <input type="text" class="second-text-column with-dark-border" [(ngModel)]="rep.witness_two_name" id="witness_name2"
+                               name="name2">
+
+                        <label class="first-text-column with-dark-border" for="witness_add1"><b>Print Address:</b></label>
+
+                        <label class="second-text-column with-dark-border" for="witness_add2"><b>Print Address:</b></label>
+
+                            <textarea  name="address1" rows="3" class="first-text-column with-dark-border" ng-required="true"
+                                [(ngModel)]="rep.witness_one_address" id="witness_add1">
+                            </textarea>
+
+                            <textarea  name="address2" rows="3" class="second-text-column with-dark-border" ng-required="true"
+                                       [(ngModel)]="rep.witness_two_address" id="witness_add2">
+                            </textarea>
+
+                           <div class="one-full-column-block">
+                                 <div class="right-colored-dashed-border">
+                                     <br><b>If witness is a lawyer or member of the Society of Notaries Public of British Columbia, check the
+                                     relevant box below:</b><br>
+                                 </div>
+
+                                 <div class="first-signing-radio-check-column pad-left pad-right margin-top">
+                                     <input type="checkbox" id="m-primaryFocus1">
+                                     <label for="m-primaryFocus1">
+                                         <span>Lawyer</span>
+                                     </label>
+                                 </div>
+
+                                 <div class="first-signing-radio-check-column pad-left pad-right">
+                                     <input type="checkbox" id="m-primaryFocus2">
+                                     <label for="m-primaryFocus2">
+                                         <span>Member of the Society of Notaries Public of British Columbia</span>
+                                     </label>
+                                 </div>
+                             </div>
                     </div>
                 </div>
             </form>
@@ -710,61 +692,61 @@
 
             <div class="two-even-columns-block pad-bottom-2">
                 <div class="first-text-column">
-                    <b>REPRESENTATIVE</b>
+                    <b>PRIMARY REPRESENTATIVE</b>
                 </div>
 
                 <div class="second-text-column">
                     <b>ALTERNATE REPRESENTATIVE</b>
                     <br>
-                    (Strike out if an Alternate Representative is not appointed.)
+                    (Strike out if no Alternate Representative)
                 </div>
             </div>
 
             <form #repNineForm="ngForm" novalidate>
                 <div class="signing-form with-dark-border">
                     <div class="two-even-columns-block">
-                        <div class="first-signing-text-column with-dark-border ">
+                        <div class="first-signing-text-column align-content-center">
                             <div class="two-signing-columns-block ">
-                                <div class="first-signing-text-column right-colored-border fixed-height-90">
+                                <label class="first-signing-text-column pad-top-2">
                                     <b>Signature of Representative</b>
-                                </div>
+                                </label>
 
-                                <div class="second-signing-text-column left-colored-border fixed-height-90">
-                                    <b>Date Signed: (YYYY/MM/DD)</b>
-                                    <br>
-                                    <div class="three-date-columns-block">
-                                        <div class="first-text-column right-colored-border fixed-height-40"></div>
-                                        <div class="second-text-column right-colored-border fixed-height-40"></div>
-                                        <div class="third-text-column fixed-height-40"></div>
-                                    </div>
-                                </div>
+                                <label class="second-signing-text-column pad-top-2" for="signing_date_6">
+                                    <b>Date: (YYYY/MM/DD):</b>
+                                </label>
+
+                                <input type="text" class="first-signing-text-column pad-top-2">
+                                <input type="text" id="signing_date_6" class="second-signing-text-column pad-top-2"
+                                       [(ngModel)]="rep.signing_date"
+                                       name="legalDate">
                             </div>
                         </div>
 
-                        <div class="second-signing-text-column with-dark-border  ">
+                        <div class="second-signing-text-column align-content-center">
                             <div class="two-signing-columns-block">
-                                <div class="first-signing-text-column right-colored-border fixed-height-90">
-                                    <b>Signature of Alternate Representative</b>
-                                </div>
-                                <div class="second-signing-text-column left-colored-border fixed-height-90">
-                                    <b>Date Signed: (YYYY/MM/DD)</b>
-                                    <br>
-                                    <div class="three-date-columns-block">
-                                        <div class="first-text-column right-colored-border fixed-height-40"></div>
-                                        <div class="second-text-column right-colored-border fixed-height-40"></div>
-                                        <div class="third-text-column fixed-height-40"></div>
-                                    </div>
-                                </div>
+                                <label class="first-signing-text-column pad-top-2">
+                                    <b>Signature of Alternate Rep</b>
+                                </label>
+
+                                <label class="second-signing-text-column pad-top-2" for="signing_date_7">
+                                    <b>Date: (YYYY/MM/DD):</b>
+                                </label>
+
+                                <input type="text" class="first-signing-text-column pad-top-2">
+                                <input type="text" id="signing_date_7" class="second-signing-text-column pad-top-2"
+                                       [(ngModel)]="rep.signing_date"
+                                       name="legalDate">
                             </div>
                         </div>
 
-                        <div class="first-text-column with-dark-border">
-                            Print Name
-                        </div>
+                        <label class="first-text-column with-dark-border" for="rep_name1"><b>Print Name:</b></label>
+                        <label class="second-text-column with-dark-border" for="rep_name2"><b>Print Name:</b></label>
 
-                        <div class="second-text-column with-dark-border">
-                            Print Name
-                        </div>
+                        <input type="text" class="first-text-column with-dark-border" [(ngModel)]="rep.rep_primary_name" id="rep_name1"
+                               name="name1">
+
+                        <input type="text" class="second-text-column with-dark-border" [(ngModel)]="rep.rep_alternate_name" id="rep_name2"
+                               name="name2">
                     </div>
                 </div>
             </form>
@@ -772,16 +754,16 @@
             <div class="three-buttons-container pad-top-2 justify-content-end">
                 <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
                 <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
-                <button class="next-button " (click)="getNextPage()">NEXT</button>
+                <button class="next-button " (click)="checkForValidDate()">NEXT</button>
             </div>
         </ng-container>
 
-        <ng-container *ngIf="page === 10">
+        <!--<ng-container *ngIf="page === 10">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
             <div class="screen-title pad-top">
                 <h5>
-                    <b>&nbsp;Page {{page}} / {{finalPage}}:
+                    <b>&nbsp;Page {{page}} / {{finalPage}}:<br>
                         STATUTORY DECLARATON FOR EVIDENCE OF<br>AUTHORITY OF ALTERNATE REPRESENTATIVE
                     </b>
                 </h5>
@@ -944,17 +926,15 @@
                 <button class="next-button " (click)="getNextPage()">FINISH</button>
             </div>
 
-        </ng-container>
+        </ng-container>-->
 
-        <ng-container *ngIf="page === 11">
+        <ng-container *ngIf="page === 10">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
             <div class="screen-title pad-top">
-                <h5>
-                    <b>&nbsp;Page {{page}} / {{finalPage}}:
-                        CONGRATULATIONS! You Are Done!
-                    </b>
-                </h5>
+                <h4>
+                    <b>&nbsp;CONGRATULATIONS! You Are Done!</b>
+                </h4>
             </div>
 
             <div class="content-dark-copy">

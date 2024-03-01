@@ -38,7 +38,17 @@ export class RepNine {
         public witness_two_province: string,
         public witness_two_country:string,
 
-        public signing_date:string
+        public signing_date:string,
+        public publish_date:string,
+
+        public client_dob:string,
+        public client_phc_number:string,
+        public consent_given_notes:string,
+        public consent_refused_notes:string,
+        public instructions_for_reps:string,
+        public alternate_requested:boolean,
+
+
     )
     {}
 

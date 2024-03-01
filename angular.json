@@ -80,10 +80,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "transitions:build:production"
+              "buildTarget": "transitions:build:production"
             },
             "development": {
-              "browserTarget": "transitions:build:development"
+              "buildTarget": "transitions:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -91,7 +91,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "transitions:build"
+            "buildTarget": "transitions:build"
           }
         },
         "test": {

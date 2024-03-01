@@ -9,20 +9,26 @@ import {formatDate} from "@angular/common";
 })
 export class ChooseYourRepContainerComponent implements OnInit {
 
-  menuItemId:number  = 2;
-  subMenuItemId:number = 21;
+  menuItemId:number  = 3;
+  subMenuItemId:number = 31;
 
   detailHeaderName="header-choose-rep"
   title="Assign Your Representative(s)"
-  today = new Date();
-  legalDate =  formatDate(this.today, 'y/MM/d',  'en-US')
+  /*today = new Date();
+  legalDate =  formatDate(this.today, 'y/MM/d',  'en-US')*/
 
   rep:RepNine;
 
+  /* To append a field, put a comma at end, then space, the '' it will place next field */
   constructor() {
 
     //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
-    this.rep = new RepNine("Karen Gail Allan", "2608 Airstrip Road", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", this.legalDate );
+    this.rep = new RepNine("", "", "", "", "",
+        "", "", "", "", "", "", "",
+        "", "", "", "", "", "", "",
+        "", "", "", "", "", "", "",
+        "", "", "", "", "", '', '', '',
+        '', '', '', '', false );
   }
   ngOnInit(): void {
   }

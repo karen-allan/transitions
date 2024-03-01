@@ -4,7 +4,6 @@ import {formatDate} from "@angular/common";
 import {RepNine} from "../../../ts-files/rep-nine";
 import * as moment from 'moment';
 
-
 @Component({
   selector: 'app-choose-your-rep-wizard',
   templateUrl: './choose-your-rep-wizard.component.html',
@@ -15,54 +14,188 @@ export class ChooseYourRepWizardComponent implements OnInit {
   errorMessage:string;
   rep:RepNine;
   title:string = "Title";
+
   page:number=0;
-  finalPage:number=11;
+  finalPage:number=9;
   now:string;
-  legalDate:string;
 
-  legal:Date;
+  signingDate:string;
 
+  // legalDate =  formatDate(this.today, 'y/MM/d',  'en-US')
   public event: EventEmitter<any> = new EventEmitter();
 
   constructor(public dialogRef: MatDialogRef<ChooseYourRepWizardComponent>) { }
 
   /* *************************************************************************************************************** */
   ngOnInit(): void {
-    this.page = 0;
-    //  this.page = 16;
-    this.getCurrentDate();
-  }
+    this.page = 9;
 
-  printFunction(){
-    this.event.emit({rep: this.rep, print: true});
-  }
+    this.setCurrentDateForHeader();
+    /* will remove the defaults once done testing */
+    this.setPublishDateDefault();
+    this.setSigningDateDefault();
+    this.setClientDefaults();
 
-  closeModal(): void {
-    this.event.emit({rep: this.rep, print: false});
+    this.setRepOneDefaults();
+    this.setRepTwoDefaults();
+
+    this.setWitnessOneDefaults();
+    this.setWitnessTwoDefaults();
+
+    this.setInstructionsDefault();
+
   }
 
   /* *************************************************************************************************************** */
-  checkClientName(): void {
-    if (this.rep.client_name.length == 0) {
+  setClientDefaults() {
+      this.rep.client_name="Karen Gail Allan"
+      this.rep.client_address = "2608 Airstrip Road, Anglemont, B.C."
+  }
+
+
+  /* *************************************************************************************************************** */
+  /* called from the html */
+  checkClientNameAndValidDate(): void {
+    if (this.rep.client_name.length == 0 || this.rep.client_name == "") {
       this.errorMessage = "You must enter your name here.";
       return;
     }
-    else if (this.rep.client_name == '') {
-      this.errorMessage = "You must enter your name here.";
+    if (this.rep.publish_date.length == 0) {
+      this.errorMessage = "You must enter the date here.";
       return;
+    }
+    if (this.rep.publish_date.length != 0) {
+      if (!moment(this.rep.publish_date, "YYYY/MM/DD").isValid()) {
+        this.errorMessage = "You must enter a valid date in format yyyy/mm/dd.";
+        return;
+      }
+    }
+
+    this.errorMessage='';
+    this.getNextPage();
+  }
+
+  /* *************************************************************************************************************** */
+  /* called from the html */
+  checkPrimaryRepNameAndAddress(): void {
+    if (this.rep.rep_primary_name.length == 0 || this.rep.rep_primary_name=="") {
+      this.errorMessage = "You must enter the full name of your Representative here.";
+      return;
+    }
+    if (this.rep.rep_primary_address.length == 0 || this.rep.rep_primary_address=="") {
+      this.errorMessage = "You must enter the full address of your Representative here.";
     }
     else {
       this.errorMessage='';
-      // alert('name is okay ' + this.wishes.client_name)
       this.getNextPage();
     }
 
-    if (moment(this.rep.signing_date, "YYYY/MM/DD").isValid()) {
-     // alert('name is okay ' + this.rep.signing_date)
+  }
+
+  /* *************************************************************************************************************** */
+  /* called from the html */
+  checkAlternateRepNameAndAddress(): void {
+    if (this.rep.rep_alternate_name.length == 0 || this.rep.rep_alternate_name=="") {
+      this.errorMessage = "You must enter the full name of your Alternate Representative here.";
+      return;
+    }
+    if (this.rep.rep_alternate_address.length == 0 || this.rep.rep_alternate_address=="") {
+      this.errorMessage = "You must enter the full address of your Alternate Representative here.";
     }
     else {
-      this.errorMessage = "You must enter a valid date in format yyyy/mm/dd.";
+      this.errorMessage='';
+      this.getNextPage();
     }
+
+  }
+
+  /* *************************************************************************************************************** */
+  /* called from the html */
+  checkForValidDate(): void {
+
+    if (this.rep.signing_date.length != 0) {
+      if (!moment(this.rep.signing_date, "YYYY/MM/DD").isValid()) {
+        this.errorMessage = "You must enter a valid date in format yyyy/mm/dd.";
+        return;
+      }
+    }
+
+    this.errorMessage='';
+    this.getNextPage();
+  }
+
+  /* *************************************************************************************************************** */
+  getNextPage() {
+    this.page = this.page + 1;
+  }
+
+  /* *************************************************************************************************************** */
+  getPreviousPage() {
+    this.page = this.page - 1;
+  }
+
+  /* *************************************************************************************************************** */
+  finished() {
+    this.page = this.page + 1;
+  }
+
+  clearSigningDate() {
+    this.rep.signing_date = '';
+  }
+
+  setRepOneDefaults() {
+    this.rep.rep_primary_name='Michael Roy Allan';
+    this.rep.rep_primary_address='2608 Airstrip Road, Anglemont, B.C.'
+   /* this.rep.rep_primary_name='';
+    this.rep.rep_primary_address=''*/
+  }
+
+  setRepTwoDefaults() {
+    this.rep.rep_alternate_name='Nathan Emory Allan';
+    this.rep.rep_alternate_address='203-3163 Riverwalk Avenue, Vancouver, B.C. V5S-0A8'
+  }
+
+  setWitnessOneDefaults() {
+    this.rep.witness_one_name='Janice Lee McKai';
+    this.rep.witness_one_address='315-416, Sutton Crescent, Kelowna, B.C., V1V-2J8'
+  }
+
+  setWitnessTwoDefaults() {
+    this.rep.witness_two_name='April Jones';
+    this.rep.witness_two_address='#27 - 870 West 7th Avenue, Vancouver, B.C., V5Z-4C1'
+  }
+
+  /* *************************************************************************************************************** */
+  setInstructionsDefault() {
+    this.rep.instructions_for_reps = "Please find all of my documents in our hard shell safe found in the office. There you will find" +
+        " the wills, the advanced care plan, my wish list for care, my cpr form, edith form, insurance forms, the wealth management" +
+        " information and the bank account information.";
+  }
+
+  /* *************************************************************************************************************** */
+  cancelWizard() {
+    this.page = 0;
+    this.errorMessage='';
+    this.rep.client_name='';
+    this.closeModal();
+  }
+
+  /* *************************************************************************************************************** */
+  setCurrentDateForHeader() {
+    const today = new Date();
+    this.now= formatDate(today, 'longDate',  'en-US')
+  }
+
+  /* *************************************************************************************************************** */
+  setPublishDateDefault() {
+    const today = new Date();
+    this.rep.publish_date= formatDate(today, 'y/MM/d',  'en-US')
+  }
+
+  /* *************************************************************************************************************** */
+  setSigningDateDefault() {
+    const today = new Date();
+    this.rep.signing_date =  formatDate(today, 'y/MM/d',  'en-US')
   }
 
   /* *************************************************************************************************************** */
@@ -71,37 +204,9 @@ export class ChooseYourRepWizardComponent implements OnInit {
   }
 
   /* *************************************************************************************************************** */
-  getNextPage() {
-    //console.log("this.page = " + this.page + " - getting next page");
-   /* if (this.page > 0) {
-      // Questions start on page 1, not page 0
-      this.wishes.questions[this.page-1].selectedAnswer = this.selectedQuestion.selectedAnswer;
-    }*/
-    this.page = this.page + 1;
-    // this.getQuestion(this.page);
-  }
-
-  /* *************************************************************************************************************** */
-  getPreviousPage() {
-    // this.wishes.questions[this.page-1].selectedAnswer = this.selectedQuestion.selectedAnswer;
-    this.page = this.page - 1;
-    // this.getQuestion(this.page);
-  }
-
-  /* *************************************************************************************************************** */
-  finished() {
-    this.page = this.page + 1;
-  }
-
-  /* *************************************************************************************************************** */
-  setDate() {
-   this.getCurrentDate();
-  }
-
-  /* *************************************************************************************************************** */
   setDefaultName(name:string) {
-    this.rep.client_name = "";
-    // this.rep.client_name = name;
+     this.rep.client_name = "";
+   // this.rep.client_name = name;
   }
 
   /* *************************************************************************************************************** */
@@ -110,29 +215,13 @@ export class ChooseYourRepWizardComponent implements OnInit {
   }
 
   /* *************************************************************************************************************** */
-  setLegalDate(signingDate:string) {
-    this.rep.signing_date = signingDate;
+  printFunction(){
+    this.event.emit({rep: this.rep, print: true});
   }
 
   /* *************************************************************************************************************** */
-  cancelWizard() {
-    //   alert("am cancelling for client " + this.wishes.client_name);
-    this.page = 0;
-    this.errorMessage='';
-    this.rep.client_name='';
-    this.closeModal();
+  closeModal(): void {
+    this.event.emit({rep: this.rep, print: false});
   }
 
-  /* *************************************************************************************************************** */
-  getCurrentDate() {
-    const today = new Date();
-    this.now= formatDate(today, 'longDate',  'en-US')
-  }
-
-  /*/!* *************************************************************************************************************** *!/
-  getLegalDate() {
-    const legal = new Date();
-    this.legalDate= formatDate(legal, 'shortDate',  'en-US')
-
-  }*/
 }

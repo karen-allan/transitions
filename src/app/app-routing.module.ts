@@ -12,7 +12,7 @@ import { AboutPractitionerContainerComponent } from './menu-about/about-practiti
 /* MENU PLAN AHEAD */
 import { ThinkAboutNeedsContainerComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-container/think-about-needs-container.component';
 import { ChooseYourRepContainerComponent } from './menu-write-plans/choose-your-rep/choose-your-rep-container/choose-your-rep-container.component';
-import { ConsiderAdvancedCarePlanContainerComponent } from './menu-plan-ahead/considerAdvancedCarePlan/consider-advanced-care-plan-container/consider-advanced-care-plan-container.component';
+import { ConsiderAdvanceCarePlanContainerComponent } from './menu-plan-ahead/consider-advance-care-plan/consider-advance-care-plan-container/consider-advance-care-plan-container.component';
 
 /* MENU CONSULTATION */
 import { RolesOfConsultantContainerComponent } from './menu-consultations/roles-of-consultant/roles-of-consultant-container/roles-of-consultant-container.component';
@@ -24,6 +24,9 @@ import { MakeWishesContainerComponent } from './menu-write-plans/make-wish-list/
 import { ConsiderAdvocatesContainerComponent } from './menu-plan-ahead/considerYourAdvocates/consider-advocates-container/consider-advocates-container.component';
 import { WriteAnAdvancedDirectiveContainerComponent } from './menu-write-plans/write-advanced-directive/write-an-advanced-directive-container/write-an-advanced-directive-container.component';
 
+import { ChangeYourRepContainerComponent } from './menu-write-plans/change-your-rep/change-your-rep-container/change-your-rep-container.component';
+import { ConsiderCprDirectiveContainerComponent } from './menu-plan-ahead/consider-cpr/consider-cpr-directive-container/consider-cpr-directive-container.component';
+import { ConsiderEdithDirectiveContainerComponent } from './menu-plan-ahead/consider-edith/consider-edith-directive-container/consider-edith-directive-container.component';
 
 /* AS SHOWN ON MENU */
 const routes: Routes = [
@@ -38,13 +41,15 @@ const routes: Routes = [
     {path: 'menuPlanAhead', component: ThinkAboutNeedsContainerComponent},
     {path: 'thinkAboutNeeds', component: ThinkAboutNeedsContainerComponent},
     {path: 'considerAdvocates', component: ConsiderAdvocatesContainerComponent},
-    // {path: 'documentsToSign', component: DocumentsToSignContainerComponent},
-    {path: 'considerAdvancedPlan', component: ConsiderAdvancedCarePlanContainerComponent},
+    {path: 'considerAdvancedPlan', component: ConsiderAdvanceCarePlanContainerComponent},
 
     {path: 'menuWritePlans', component: MakeWishesContainerComponent},
     {path: 'makeWishList', component: MakeWishesContainerComponent},
     {path: 'chooseReps', component: ChooseYourRepContainerComponent},
+    {path: 'changeRep', component: ChangeYourRepContainerComponent},
     {path: 'writeCarePlanWizard', component: WriteAnAdvancedDirectiveContainerComponent},
+    {path: 'considerCPR', component: ConsiderCprDirectiveContainerComponent},
+    {path: 'considerEdith', component: ConsiderEdithDirectiveContainerComponent},
 
     {path: 'menuConsultations', component: RolesOfConsultantContainerComponent},
     {path: 'rolesOfConsultant', component: RolesOfConsultantContainerComponent},

@@ -3,6 +3,7 @@ import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {formatDate} from "@angular/common";
 import {RepNine} from "../../../ts-files/rep-nine";
 import {ChooseYourRepWizardComponent} from "../../choose-your-rep/choose-your-rep-wizard/choose-your-rep-wizard.component";
+import {WriteAnAdvancedDirectiveWizardComponent} from "../write-an-advanced-directive-wizard/write-an-advanced-directive-wizard.component";
 
 @Component({
   selector: 'app-write-an-advanced-directive-overview',
@@ -42,13 +43,15 @@ export class WriteAnAdvancedDirectiveOverviewComponent  implements OnInit {
     dialogConfig.id = "rep-nine-modal";
     //  dialogConfig.id = "modal-component";
 
-    let modalDialog = this.matDialog.open(ChooseYourRepWizardComponent, dialogConfig);
+    let modalDialog = this.matDialog.open(WriteAnAdvancedDirectiveWizardComponent, dialogConfig);
 
     modalDialog.componentInstance.setRep(this.rep);
     modalDialog.componentInstance.setDate();
     modalDialog.componentInstance.setLegalDate(this.rep.signing_date);
+    /* these 2 below will be removed
     modalDialog.componentInstance.setDefaultName(this.rep.client_name);
     modalDialog.componentInstance.setDefaultAddress(this.rep.client_address);
+    */
     modalDialog.componentInstance.event.subscribe(resp => {
       this.rep = resp.rep;
       this.printForm = resp.print;

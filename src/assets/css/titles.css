@@ -272,7 +272,7 @@ and (min-width: 1440px) {
         font-size: var(--h3-titles-desktop-font-size);
     }
 
-    .screen-title h4  {
+    .screen-title h4, .screen-title-no-border h6  {
         font-size: var(--h4-titles-desktop-font-size);
     }
 
@@ -297,18 +297,36 @@ and (min-width: 1440px) {
         margin:auto;
         float:left;
         border:thin solid red;
-        /*max-width: var(--screen-width);*/
+        height:auto;
+    }
+
+    /* just to test */
+    .screen-title-no-border  {
+        display:block;
+        width:100%;
+        margin:auto;
+        float:left;
+        height:auto;
     }
 
     .screen-title h1, .screen-title h2, .screen-title a, .screen-title h3, .screen-title h4, .screen-title h5  {
         color: var(--color-dark-blue);
     }
 
+    .screen-title-no-border h6  {
+        color: var(--color-white);
+        background-color:var(--color-darkest-grey);
+        text-align: left;
+        line-height:40px;
+        font-family: var(--family-headers);
+    }
+
     .screen-title span {
         color: var(--color-dark-pink);
     }
 
-    .screen-title h1, .screen-title h2, .screen-title h3, .screen-title h4, .screen-title h5, .screen-title a, .screen-title span {
+    .screen-title h1, .screen-title h2, .screen-title h3, .screen-title h4, .screen-title h5, .screen-title a,
+    .screen-title span {
         font-family: var(--family-headers);
     }
 
