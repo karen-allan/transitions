@@ -41,7 +41,7 @@
             </span>
         </div>
 
-        <div class="one-full-column-block">
+        <div class="question-block">
             <div class="first-radio-check-column" *ngFor="let response of selectedQuestion.responses">
                 <input type="radio" [value]="response.response_num" [ngModel]="selectedQuestion.selectedAnswer" name="question"
                        (ngModelChange)="onAnswerChanged($event)">

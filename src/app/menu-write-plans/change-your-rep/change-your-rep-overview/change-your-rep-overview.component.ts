@@ -1,7 +1,6 @@
 import {Component, Input, Output} from '@angular/core';
 import {RepNine} from "../../../ts-files/rep-nine";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
-import {formatDate} from "@angular/common";
 import {ChangeYourRepWizardComponent} from "../change-your-rep-wizard/change-your-rep-wizard.component";
 
 @Component({
@@ -14,9 +13,6 @@ export class ChangeYourRepOverviewComponent {
   @Input() title:string='';
   @Input() @Output() rep:RepNine;
 
-  sectionSelected: string ='';
-  now:string;
-  page:number=0;
   printForm:boolean=false;
 
   constructor(public matDialog: MatDialog) { }
@@ -28,9 +24,9 @@ export class ChangeYourRepOverviewComponent {
     dialogConfig.disableClose = false;
     dialogConfig.id = "change-rep-nine-modal";
 
-    let modalDialog = this.matDialog.open(ChangeYourRepWizardComponent, dialogConfig);
-
+    let modalDialog   = this.matDialog.open(ChangeYourRepWizardComponent, dialogConfig);
     modalDialog.componentInstance.setRep(this.rep);
+
     modalDialog.componentInstance.event.subscribe(resp => {
       this.rep = resp.rep;
       this.printForm = resp.print;
@@ -46,9 +42,4 @@ export class ChangeYourRepOverviewComponent {
     }
   }
 
-  /* *************************************************************************************************************** */
-  getCurrentDate() {
-    const today = new Date();
-    this.now= formatDate(today, 'longDate',  'en-US')
-  }
 }

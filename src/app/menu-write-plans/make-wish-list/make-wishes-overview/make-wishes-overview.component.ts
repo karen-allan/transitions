@@ -15,21 +15,9 @@ export class MakeWishesOverviewComponent {
   @Input() title="";
 
   now:string;
-  page:number=0;
   printForm:boolean=false;
 
   constructor(public matDialog: MatDialog) { }
-
-  /* *************************************************************************************************************** */
-  ngOnInit(): void {
-    this.setClientDefaults();
-    this.getCurrentDate();
-  }
-
-  /* *************************************************************************************************************** */
-  setClientDefaults() {
-    this.wishes.client_name='';
-  }
 
   /* *************************************************************************************************************** */
   openModal() {
@@ -37,12 +25,12 @@ export class MakeWishesOverviewComponent {
     // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = false;
     //dialogConfig.id = "modal-component";
-    dialogConfig.id = "wishes-modal";
+    dialogConfig.id = "make-wishes-modal";
 
     let modalDialog = this.matDialog.open(MakeWishesWizardComponent, dialogConfig);
     modalDialog.componentInstance.setWishes(this.wishes);
-    modalDialog.componentInstance.setDate(this.now);
-    modalDialog.componentInstance.setDefaultName(this.wishes.client_name);
+  //  modalDialog.componentInstance.setDate(this.now);
+  //  modalDialog.componentInstance.setDefaultName(this.wishes.client_name);
     modalDialog.componentInstance.event.subscribe(resp => {
       this.wishes = resp.wishes;
       this.printForm = resp.print;

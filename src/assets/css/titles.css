@@ -272,7 +272,7 @@ and (min-width: 1440px) {
         font-size: var(--h3-titles-desktop-font-size);
     }
 
-    .screen-title h4, .screen-title-no-border h6  {
+    .screen-title h4, .screen-title-no-border h6, .content-title h2  {
         font-size: var(--h4-titles-desktop-font-size);
     }
 
@@ -290,6 +290,14 @@ and (min-width: 1440px) {
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
+    .content-title {
+        display:block;
+        width:100%;
+        margin:auto;
+        height:auto;
+        max-width:var(--content-width);
+    }
+
     /* ON BOOK CONSULTATION, BOOK SESSION AND HOME PAGE */
     .screen-title   {
         display:block;
@@ -298,6 +306,7 @@ and (min-width: 1440px) {
         float:left;
         border:thin solid red;
         height:auto;
+        max-width:var(--header-width);
     }
 
     /* just to test */
@@ -309,7 +318,7 @@ and (min-width: 1440px) {
         height:auto;
     }
 
-    .screen-title h1, .screen-title h2, .screen-title a, .screen-title h3, .screen-title h4, .screen-title h5  {
+    .screen-title h1, .screen-title h2, .screen-title a, .screen-title h3, .screen-title h4, .screen-title h5, .content-title h2  {
         color: var(--color-dark-blue);
     }
 
@@ -325,16 +334,16 @@ and (min-width: 1440px) {
         color: var(--color-dark-pink);
     }
 
-    .screen-title h1, .screen-title h2, .screen-title h3, .screen-title h4, .screen-title h5, .screen-title a,
+    .screen-title h1, .screen-title h2, .screen-title h3, .screen-title h4, .screen-title h5, .content-title h2, .screen-title a,
     .screen-title span {
         font-family: var(--family-headers);
     }
 
-    .screen-title h1, .screen-title h2  {
+    .screen-title h1, .screen-title h2 {
         text-align: center;
     }
 
-    .screen-title h3, .screen-title h4 {
+    .screen-title h3, .screen-title h4, .content-title h2  {
         text-align: left;
     }
 

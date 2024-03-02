@@ -11,7 +11,7 @@ export class AboutEolAdvocacyContainerComponent implements OnInit {
   subMenuItemId:number = 10;
 
   detailHeaderName = 'header-about-eol-advocacy';
-  title='About End-Of-Life Doulas';
+  title='About End-Of-Life Consultants';
 
   constructor() { }
 

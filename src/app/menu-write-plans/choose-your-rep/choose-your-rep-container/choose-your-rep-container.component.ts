@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RepNine} from "../../../ts-files/rep-nine";
-import {formatDate} from "@angular/common";
+
 
 @Component({
   selector: 'app-choose-your-rep-container',
@@ -23,12 +23,10 @@ export class ChooseYourRepContainerComponent implements OnInit {
   constructor() {
 
     //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
+    //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
     this.rep = new RepNine("", "", "", "", "",
         "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "",
-        "", "", "", "", "", '', '', '',
-        '', '', '', '', false );
+        "", "");
   }
   ngOnInit(): void {
   }

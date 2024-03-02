@@ -15,7 +15,7 @@ export class ChangeYourRepWizardComponent {
   rep:RepNine;
   title:string = "Title";
   page:number=0;
-  finalPage:number=9;
+  finalPage:number=2;
   now:string;
   today = new Date();
 
@@ -155,18 +155,6 @@ export class ChangeYourRepWizardComponent {
   /* *************************************************************************************************************** */
   setRep(rep:RepNine) {
     this.rep = rep;
-  }
-
-
-  /* *************************************************************************************************************** */
-  setDefaultName(name:string) {
-    this.rep.client_name = "";
-    // this.rep.client_name = name;
-  }
-
-  /* *************************************************************************************************************** */
-  setDefaultAddress(address:string) {
-    this.rep.client_address = address;
   }
 
   /* *************************************************************************************************************** */

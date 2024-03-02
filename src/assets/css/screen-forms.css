@@ -728,6 +728,14 @@ and (min-width: 1440px) {
         line-height: 110%;
     }
 
+    .question-block {
+        display: grid;
+        width: 90%;
+        margin-left:5%;
+        margin-right:5%;
+        line-height: 110%;
+    }
+
     .half-line-column-block {
         display: grid;
         width: 50%;

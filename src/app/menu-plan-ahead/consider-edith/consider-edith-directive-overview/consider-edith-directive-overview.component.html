@@ -22,53 +22,119 @@
 <div class = "content-dark-copy">
     <p>
         You have the choice to die at home if the request is a reasonable one, if your family supports it and if approved by your Doctor.
-        You must have completed the No CPR Form in order to pursue this avenue. To read about the
-        implications of having CPR performed on yourself please see <a routerLink="/completeCPR"> Understanding CPR</a> page. A No CPR
-        form can be downloaded from that page.
+        You must have completed the <a href = "https://www2.gov.bc.ca/assets/gov/health/forms/302fil.pdf" target = new>No CPR Request Form</a>.
+        in order to pursue this avenue. To read about the
+        implications of having CPR performed on yourself please see <a routerLink="/completeCPR"> Understanding CPR</a> page.
     </p>
 </div>
 
 <div class = "content-dark-copy">
     <p>
-        The EDITH Form presented here is a screen shot only that allows you to read what the form entails prior to downloading it yourself.
+        Relatives and family that are permitted to take on the role of disposition of the body under the Cremation, Interment and Funeral
+        Services Act, Sec 5 (1)) after death include in the following order of priority:
         <br><br>
-        You can download the <a href = "https://www2.gov.bc.ca/assets/gov/health/forms/3987fil.pdf" target= new>
-        A Notification of an Expected Death in the Home</a> form here.
-        <br><br>
-        It must be completed by the your physician or a nurse practitioner and then sent to the funeral home before your death.
-        <br><br>
-        (please note that web pages can and may be moved at any time but this download link was valid at time of this writing.
+        <b>RELATIONSHIP TO DECEASED</b>
     </p>
 </div>
 
-<div class="screen-images with-dark-border margin-top-2">
-    <img src="../../../../assets/images/details/planning/endOfLifeDocuments/edith.jpg" title="Want to die at home"
-         alt="Want to die at home"/>
+<div class = "content-dark-list">
+    <li class="list-item">(a) personal representative named in the will</li>
+    <li class="list-item">(b) spouse of deceased</li>
+    <li class="list-item">(c) adult child of deceased</li>
+    <li class="list-item">(d) adult grandchild of deceased</li>
+    <li class="list-item">(e) if deceased a minor, legal guardian of deceased at time of death</li>
+    <li class="list-item">(f) parent of deceased</li>
+    <li class="list-item">(g) adult sibling of deceased</li>
+    <li class="list-item">(h) adult nephew or niece of deceased</li>
+    <li class="list-item">(i) adult next of kin of deceased, determined under sections 89
+        and 90 of the Estate Administration Act</li>
+    <li class="list-item">(j) minister under the Employment and Assistance Act or the official administrator under the Estate
+        Administration Act</li>
+    <li class="list-item">(k) an adult person having a personal or kinship relationship with the deceased, other than those referred to
+        in paragraphs (b) to (d) and (f) to (i)</li>
 </div>
 
-<div class = "content-dark-copy">
+<div class = "content-dark-copy pad-top-2">
     <p>
-        It states:<br>
-        "This form allows a Funeral Director to remove your body from a home without pronouncement of death. Pronouncement of death is
+        Completing this form allows a Funeral Director to remove your body from a home without pronouncement of death. Pronouncement of
+        death is
         not required by BC Law, although it is widely recognized that pronouncement is sound clinical and ethical practice for nurses and
         physicians."
         <br><br>
-        "There may be circumstances when pronouncement is difficult or families choose to waive pronouncement. If a person dies in British
+        There may be circumstances when pronouncement is difficult or families choose to waive pronouncement. If a person dies in British
         Columbia, the death must be registered with the Vital Statistics Agency. A Medical Certificate of Death form is completed by the
         physician within 48 hours after a death. The medical certificate of death is forwarded to the funeral director who will register
-        the death. The funeral director can then issue a death certificate and burial permit."
-
-        <br><br>
-        There is also a
-        <a href="https://www.consumerprotectionbc.ca/wordpress/wp-content/uploads/2017/08/Private-Transfer-Permit-Application.pdf" target="_blank">                    Private Transfer Permit
-        </a>
-        form that allows family to transport their loved one"s body to the funeral home or crematorium. This may seem strange, but it
-        allows families to gather and have more time with the deceased, perhaps to have a wake or some other kind of ritual.
+        the death. The funeral director can then issue a death certificate and burial permit.
     </p>
 </div>
 
-<!--<div class="content-images">
-    <img src="../../../../../assets/images/details/doulaWork/endOfLifeDocuments/edithDoc/privateTransfer.jpg" title="Transfer Body" alt="Transfer Body">
-</div>-->
+<div class="content-dark-copy pad-top-2">
+    <div *ngIf="sectionSelected === 'triggeredSection1'">
+        <p>
+            <a (click)="this.getTriggeredPromptKey(0)">
+                Close the Expected Death in the Home Form: &#x25BC;
+            </a>
+        </p>
+    </div>
+
+    <div *ngIf="sectionSelected != 'triggeredSection1'">
+        <p>
+            <a (click)="this.getTriggeredPromptKey(1)">
+                See the Expected Death in the Home Form: &#x25B6;
+            </a>
+        </p>
+    </div>
+</div>
+
+<div *ngIf="sectionSelected === 'triggeredSection1'">
+    <div class="screen-images with-dark-border margin-top-2">
+        <img src="../../../../assets/images/details/planning/endOfLifeDocuments/edith.jpg" title="Want to die at home"
+             alt="Want to die at home"/>
+    </div>
+
+    <div class = "content-dark-copy">
+        <p>
+            This form from the Govt of B.C. website (gov.bc.ca) is to be filled out by the Attending Medical/Nurse Practitioner. This top
+            part of the form is for the Practitioner to acknowlede the Funeral Home that is to accept the body and states:
+            <br><br>
+            "This is being sent to you in anticipation of death at home in the near future. You have been identified as the funeral home of choice. The family has been
+            instructed to call you one hour after death has occurred for transport of the body.
+            <br><br>
+            As the attending medical/nurse practitioner, I certify that this person is known to me and that to the best of my knowledge and belief this is a natural and
+            expected death. Upon death I authorize you to transfer the body and to complete the Registration of Death. I, or my designate, will complete the Medical
+            Certificate of Death within 48 hours. This authorization shall be in effect for 3 months from the date signed."
+
+
+            <br><br>
+            The family member given the authority to dispose of the body must agree to the following:
+            <br><br>
+            "I certify that I am legally authorized to make decisions after death has
+            occurred and that the plan for management of expected death at home
+            has been discussed and agreed to. I agree to the transfer of the body from
+            the home without pronouncement of death by a health care professional
+            and that we will follow the plan by noting the time of death and agreeing
+            to wait at least one hour from the time of death to call the funeral home
+            for transfer of the body. I agree to indemnify and hold harmless the Funeral
+            Home, its employees and agents, from any liability for claims, damages,
+            costs and expenses of whatever kind or nature (except any claim arising out
+            of or in connection with the wilful misconduct, malfeasance, or negligence
+            of the Funeral Home, its employees and agents) incurred in connection with
+            or arising from the Funeral Home dealing with the Patient’s body on my
+            instructions."
+            <br><br>
+            You can download the <a href = "https://www2.gov.bc.ca/assets/gov/health/forms/3987fil.pdf" target= new>
+            A Notification of an Expected Death in the Home</a> form here. It must be completed by the your physician or a nurse
+            practitioner and then sent to the funeral home before your death.
+            <br><br>
+            There is also a
+            <a href="https://www.consumerprotectionbc.ca/wordpress/wp-content/uploads/2017/08/Private-Transfer-Permit-Application.pdf" target="_blank">                    Private Transfer Permit
+            </a> form that allows family to transport their loved one"s body to the funeral home or crematorium. This may seem strange, but it
+            allows families to gather and have more time with the deceased, perhaps to have a wake or some other kind of ritual.
+            <br><br>
+            (Please note that web pages can and may be moved at any time but this download link was valid at time of this publication.
+        </p>
+    </div>
+</div>
+
 
 

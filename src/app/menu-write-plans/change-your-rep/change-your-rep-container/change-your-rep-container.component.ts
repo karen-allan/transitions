@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {formatDate} from "@angular/common";
 import {RepNine} from "../../../ts-files/rep-nine";
 
 @Component({
@@ -24,10 +23,7 @@ export class ChangeYourRepContainerComponent {
     //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
     this.rep = new RepNine("", "", "", "", "",
         "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "",
-        "", "", "", "", "", '', '', '',
-        '', '', '', '', false );
+        "", "");
   }
 
 }

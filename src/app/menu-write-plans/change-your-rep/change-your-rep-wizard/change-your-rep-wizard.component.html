@@ -1,33 +1,30 @@
 <div id="modal-content-wrapper">
     <div class="modal-inner-content">
         <!-- LEGAL PREAMBLE -->
-       <!-- <ng-container *ngIf="page === 0">
+       <ng-container *ngIf="page === 0">
             <app-change-your-rep-wizard-header [rep]='rep'></app-change-your-rep-wizard-header>
 
             <div class="screen-title pad-top">
                 <h5>
                     <b>
-                        STATUTORY DECLARATION FOR EVIDENCE OF<br>AUTHORITY OF ALTERNATE REPRESENTATIVE
+                        LEGAL DECLARATION TO REQUEST AN ALTERNATE REPRESENTATIVE
                     </b>
                 </h5>
             </div>
 
             <div class="content-dark-copy pad-top">
-                This statutory declaration may be completed by the adult, the representative, or the alternate representative, as evidence
-                of the
-                authority of the alternate representative to act in place of the representative. This statutory declaration would be
-                completed if one
-                of the circumstances in which the alternate representative is authorized to act in place of the representative occurs to
-                establish
-                the authority of the alternate representative.
+                This statutory declaration should be completed by you, the adult, or by your primary representative, or your alternate
+                representative. It gives permission for the alternate representative to act in place of the primary representative.
+                This statutory declaration should be completed and printed in the event that your primary representative dies, becomes
+                estranged or loses their mental capabilities.
             </div>
 
-            <div class="one-button-container">
+            <div class="one-button-container pad-top-2">
                 <button class="start-button" (click)="getNextPage()">START</button>
             </div>
-        </ng-container>-->
+        </ng-container>
 
-        <ng-container *ngIf="page === 0">
+        <ng-container *ngIf="page === 1">
             <app-change-your-rep-wizard-header [rep]='rep'></app-change-your-rep-wizard-header>
 
             <div class="screen-title pad-top">
@@ -62,10 +59,10 @@
             </div>
 
             <div class="four-unequal-columns-block">
-                <div class="first-text-column bottom-colored-border"></div>
+                <input [(ngModel)]="rep.client_name" type="text" class="first-text-column bottom-colored-border">
                 <div class="second-text-column justify-content-center">naming</div>
-                <div class="third-text-column bottom-colored-border"></div>
-                <div class="fourth-text-column">as Representative</div>
+                <input [(ngModel)]="rep.rep_alternate_name" type="text" class="third-text-column bottom-colored-border">
+                <div class="fourth-text-column">&nbsp;as Representative</div>
             </div>
 
             <div class="four-unequal-columns-block">
@@ -81,22 +78,22 @@
 
             <div class="two-smallest-big-columns-block">
                 <div class="first-text-column">I,</div>
-                <div class="second-text-column bottom-colored-border">&nbsp;</div>
+                <input [(ngModel)]="rep.client_name" type="text" class="second-text-column bottom-colored-border">
             </div>
 
             <div class="two-smallest-big-columns-block">
                 <div class="first-text-no-pad-column ">&nbsp;</div>
-                <div class="second-text-no-pad-column justify-content-center">Name</div>
+                <div class="second-text-no-pad-column justify-content-start">full name</div>
             </div>
 
-            <div class="two-smallest-big-columns-block">
+            <div class="two-smallest-big-columns-block pad-top-2">
                 <div class="first-text-column">of</div>
-                <div class="second-text-column bottom-colored-border">&nbsp;</div>
+                <input [(ngModel)]="rep.client_address" type="text" class="second-text-column bottom-colored-border">
             </div>
 
             <div class="two-smallest-big-columns-block">
                 <div class="first-text-no-pad-column ">&nbsp;</div>
-                <div class="second-text-no-pad-column justify-content-center">Full Address</div>
+                <div class="second-text-no-pad-column justify-content-start">full address</div>
             </div>
 
             <div class="wizard-padded-heading">
@@ -131,8 +128,15 @@
             </div>
 
             <div class="full-line-prompt">
-                <div class="full-text-column bottom-colored-border">&nbsp;</div>
-                <div class="full-text-column bottom-colored-border">&nbsp;</div>
+                <div class="full-line-prompt">
+                        <textarea
+                            name="reasons"
+                            rows="8"
+                            class="full-text-column"
+                            [(ngModel)]="rep.reasons_for_alternate_rep"
+                            placeholder="Add your reasons for changing representative here. "
+                        ></textarea>
+                </div>
             </div>
 
             <div class="content-dark-copy pad-top-2">
@@ -185,12 +189,42 @@
                 </div>
             </div>
 
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">FINISH</button>
+            </div>
+
+        </ng-container>
+
+        <ng-container *ngIf="page === 2">
+            <app-change-your-rep-wizard-header [rep]='rep'></app-change-your-rep-wizard-header>
+
+            <div class="screen-title pad-top">
+                <h4>
+                    <b>&nbsp;CONGRATULATIONS! You Are Done!</b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy">
+                <p> Please press PRINT to get a hard copy or while on the print screen choose to save it as a PDF on your own computer and print
+                    at a later date. Store this document with your other end of life documents.
+                    <br><br>
+                    This directive is a great start to choosing who will represent for you in case of a situation where you can not speak
+                    for yourself. Once printed get your Rep or Reps together along with 2 Witnesses (1 if an attorney or notary) and sign
+                    where needed. This will take care of this chore when planning for your future but there
+                    are a lot of other things to get done.
+                    You can book a consultation with me either over zoom or in person for more help on a huge variety of topics around
+                    end-of-life and around energy medicine therapy.
+                </p>
+            </div>
+
             <div class="two-buttons-container">
                 <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
                 <button class="print-button" (click)="printFunction()">PRINT</button>
             </div>
-
         </ng-container>
+
      </div>
  </div>
 

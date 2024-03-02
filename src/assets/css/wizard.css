@@ -234,8 +234,6 @@ and (orientation: landscape) {
         margin-top:2em;
     }
 
-
-
     .wizard-header {
         display:inline-grid;
         grid-template-columns: 300px 1fr;
@@ -292,11 +290,24 @@ and (orientation: landscape) {
         grid-template-columns:70% 15% 15%;
     }
 
-    .start-button, .save-button, .cancel-button, .next-button, .next-second-button, .previous-button, .print-button   {
-        /*padding:1em 0;*/
+ /*   .start-button, .save-button, .cancel-button, .next-button, .next-second-button, .previous-button, .print-button   {
+        !*padding:1em 0;*!
         font-size:1.1em;
         width:100px;
         height:50px;
+    }*/
+
+    .save-button, .cancel-button, .next-button, .next-second-button, .previous-button, .print-button   {
+        font-size:1.1em;
+        width:100px;
+        height:50px;
+    }
+
+    .start-button {
+        font-size:1.1em;
+        width: auto;
+        height:50px;
+        padding:1em 2em;
     }
 
     .start-plan-button {
@@ -344,12 +355,15 @@ and (min-width: 1440px) {
 @media only screen {
 
     /* Overwrite the styles of the mat-dialog-container element globally, but only for those that have an id of `modal-component` */
-    mat-dialog-container#rep-nine-modal, mat-dialog-container#wishes-modal {
+    mat-dialog-container#choose-rep-nine-modal,  mat-dialog-container#change-rep-nine-modal,
+    mat-dialog-container#make-wishes-modal, mat-dialog-container#advanced-directive-modal {
         border: 3px solid var(--color-dark-blue);
         border-radius: 2em;
         background-color: var(--color-background-blue);
         margin:auto;
         overflow-y: scroll;
+        width:1000px;
+        height:800px;
     }
 
     #modal-content-wrapper {
@@ -369,6 +383,7 @@ and (min-width: 1440px) {
         width:90%;
         margin-left:5%;
         margin-right:5%;
+
     }
 
     /* THE WIZARD HEADER */
@@ -458,7 +473,9 @@ and (min-width: 1440px) {
     .planner-name-block  {
         display:block;
         float:left;
-        width: 100%;
+        width: 90%;
+        margin-left:5%;
+        margin-right:5%;
         font-family: var(--family-copy);
     }
 

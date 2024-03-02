@@ -17,6 +17,9 @@ import { NgxMaskModule } from 'ngx-mask'
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 
+
+/*ng generate component write-advance-directive-wizard-printout --standalone false */
+
 /************************************************************* GLOBAL DATA ENTRY **********************************************************/
 import { DataEntryCaregiverConsultComponent } from './global-data-entry/data-entry-caregiver-consult/data-entry-caregiver-consult.component';
 import { DataEntryPatientConsultComponent } from './global-data-entry/data-entry-patient-consult/data-entry-patient-consult.component';
@@ -97,6 +100,10 @@ import { ChangeYourRepWizardComponent } from './menu-write-plans/change-your-rep
 import { ChangeYourRepWizardHeaderComponent } from './menu-write-plans/change-your-rep/change-your-rep-wizard-header/change-your-rep-wizard-header.component';
 import { ChangeYourRepWizardPrintoutComponent } from './menu-write-plans/change-your-rep/change-your-rep-wizard-printout/change-your-rep-wizard-printout.component';
 
+/** CHECK OFF TASKS LIST FOLDER **/
+import { CheckOffTasksListContainerComponent } from './menu-write-plans/check-off-tasks-list/check-off-tasks-list-container/check-off-tasks-list-container.component';
+import { CheckOffTasksListOverviewComponent } from './menu-write-plans/check-off-tasks-list/check-off-tasks-list-overview/check-off-tasks-list-overview.component';
+
 /** CHOOSE YOUR REP FOLDER **/
 import { ChooseYourRepContainerComponent } from './menu-write-plans/choose-your-rep/choose-your-rep-container/choose-your-rep-container.component';
 import { ChooseYourRepOverviewComponent } from './menu-write-plans/choose-your-rep/choose-your-rep-overview/choose-your-rep-overview.component';
@@ -111,12 +118,12 @@ import { MakeWishesWizardComponent } from './menu-write-plans/make-wish-list/mak
 import { MakeWishesWizardHeaderComponent } from './menu-write-plans/make-wish-list/make-wishes-wizard-header/make-wishes-wizard-header.component';
 import { MakeWishesWizardPrintoutComponent } from './menu-write-plans/make-wish-list/make-wishes-wizard-printout/make-wishes-wizard-printout.component';
 
-/** WRITE AN ADVANCED CARE DIRECTIVE FOLDER **/
-import { WriteAnAdvancedDirectiveContainerComponent } from './menu-write-plans/write-advanced-directive/write-an-advanced-directive-container/write-an-advanced-directive-container.component';
-import { WriteAnAdvancedDirectiveOverviewComponent } from './menu-write-plans/write-advanced-directive/write-an-advanced-directive-overview/write-an-advanced-directive-overview.component';
-import { WriteAnAdvancedDirectiveWizardComponent } from './menu-write-plans/write-advanced-directive/write-an-advanced-directive-wizard/write-an-advanced-directive-wizard.component';
-import { WriteAnAdvancedDirectiveWizardHeaderComponent } from './menu-write-plans/write-advanced-directive/write-an-advanced-directive-wizard-header/write-an-advanced-directive-wizard-header.component';
-import { WriteAnAdvancedDirectiveWizardPrintoutComponent } from './menu-write-plans/write-advanced-directive/write-an-advanced-directive-wizard-printout/write-an-advanced-directive-wizard-printout.component';
+/** WRITE AN ADVANCE CARE DIRECTIVE FOLDER **/
+import { WriteAdvanceDirectiveOverviewComponent } from './menu-write-plans/write-advance-directive/write-advance-directive-overview/write-advance-directive-overview.component';
+import { WriteAdvanceDirectiveContainerComponent } from './menu-write-plans/write-advance-directive/write-advance-directive-container/write-advance-directive-container.component';
+import { WriteAdvanceDirectiveWizardComponent } from './menu-write-plans/write-advance-directive/write-advance-directive-wizard/write-advance-directive-wizard.component';
+import { WriteAdvanceDirectiveWizardHeaderComponent } from './menu-write-plans/write-advance-directive/write-advance-directive-wizard-header/write-advance-directive-wizard-header.component';
+import { WriteAdvanceDirectiveWizardPrintoutComponent } from './menu-write-plans/write-advance-directive/write-advance-directive-wizard-printout/write-advance-directive-wizard-printout.component';
 
 @NgModule({
     declarations: [
@@ -196,12 +203,6 @@ import { WriteAnAdvancedDirectiveWizardPrintoutComponent } from './menu-write-pl
 
         /****************************** MENU WRITE PLANS ************************/
 
-        /* CHOOSE YOUR REP FOLDER */
-        ChooseYourRepContainerComponent,
-        ChooseYourRepOverviewComponent,
-        ChooseYourRepWizardComponent,
-        ChooseYourRepWizardHeaderComponent,
-        ChooseYourRepWizardPrintoutComponent,
 
         /* CHANGE YOUR REP FOLDER */
         ChangeYourRepContainerComponent,
@@ -209,6 +210,17 @@ import { WriteAnAdvancedDirectiveWizardPrintoutComponent } from './menu-write-pl
         ChangeYourRepWizardComponent,
         ChangeYourRepWizardHeaderComponent,
         ChangeYourRepWizardPrintoutComponent,
+
+        /* CHECK OFF TASKS LIST FOLDER */
+        CheckOffTasksListContainerComponent,
+        CheckOffTasksListOverviewComponent,
+
+        /* CHOOSE YOUR REP FOLDER */
+        ChooseYourRepContainerComponent,
+        ChooseYourRepOverviewComponent,
+        ChooseYourRepWizardComponent,
+        ChooseYourRepWizardHeaderComponent,
+        ChooseYourRepWizardPrintoutComponent,
 
         /* MAKE WISH LIST FOLDER */
         MakeWishesContainerComponent,
@@ -218,13 +230,11 @@ import { WriteAnAdvancedDirectiveWizardPrintoutComponent } from './menu-write-pl
         MakeWishesWizardPrintoutComponent,
 
         /* WRITE ADVANCED DIRECTIVE FOLDER */
-        WriteAnAdvancedDirectiveContainerComponent,
-        WriteAnAdvancedDirectiveOverviewComponent,
-        WriteAnAdvancedDirectiveWizardComponent,
-        WriteAnAdvancedDirectiveWizardHeaderComponent,
-        WriteAnAdvancedDirectiveWizardPrintoutComponent,
-
-
+        WriteAdvanceDirectiveOverviewComponent,
+        WriteAdvanceDirectiveContainerComponent,
+        WriteAdvanceDirectiveWizardComponent,
+        WriteAdvanceDirectiveWizardHeaderComponent,
+        WriteAdvanceDirectiveWizardPrintoutComponent,
 
 
 
@@ -241,9 +251,16 @@ import { WriteAnAdvancedDirectiveWizardPrintoutComponent } from './menu-write-pl
         MatDialogModule,
         NgxMaskModule.forRoot(),
         HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false}),
+        
+
 
     ],
     providers: [DatePipe, Meta],
+    exports: [
+        GlobalMenuComponent,
+        GlobalHeadersComponent,
+        GlobalFooterComponent
+    ],
     bootstrap: [AppComponent]
 })
 

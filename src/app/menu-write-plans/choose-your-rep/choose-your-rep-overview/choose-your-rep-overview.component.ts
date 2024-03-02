@@ -1,5 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {MatDialog, MatDialogConfig, MatDialogRef} from "@angular/material/dialog";
+import {Component, Input, Output} from '@angular/core';
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {RepNine} from "../../../ts-files/rep-nine";
 import {ChooseYourRepWizardComponent} from "../choose-your-rep-wizard/choose-your-rep-wizard.component";
 
@@ -8,31 +8,22 @@ import {ChooseYourRepWizardComponent} from "../choose-your-rep-wizard/choose-you
   templateUrl: './choose-your-rep-overview.component.html',
   styleUrls: ['./choose-your-rep-overview.component.css']
 })
-export class ChooseYourRepOverviewComponent implements OnInit {
+export class ChooseYourRepOverviewComponent {
 
   @Input() title:string='';
   @Input() @Output() rep:RepNine;
 
- // page:number=0;
   printForm:boolean=false;
 
   constructor(public matDialog: MatDialog) { }
-
-
-  /* *************************************************************************************************************** */
-  ngOnInit(): void {
-
-  }
-
 
   /* *************************************************************************************************************** */
   openModal() {
     const dialogConfig = new MatDialogConfig();
     // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = false;
-    dialogConfig.id = "rep-nine-modal";
-    //  dialogConfig.id = "modal-component";
-
+    dialogConfig.id = "choose-rep-nine-modal";
+    /* named and defined in wizard.css */
     let modalDialog = this.matDialog.open(ChooseYourRepWizardComponent, dialogConfig);
 
     modalDialog.componentInstance.setRep(this.rep);
