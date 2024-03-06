@@ -16,26 +16,20 @@
                 <p>
                     Made under Section 9 of the Representation Agreement Act.<br>
                     The use of this form is voluntary. Be advised that this form may not be appropriate for use by all persons, as it
-                    provides
-                    only one option of
-                    how a Representation Agreement may be made. In addition, it does not constitute legal advice. For further information,
-                    please consult the
-                    <i>Representation Agreement Act</i> and Representation Agreement Regulation or obtain legal advice.
+                    provides only one option of how a Representation Agreement may be made. In addition, it does not constitute legal
+                    advice. For further information, please consult the <i>Representation Agreement Act</i> and Representation Agreement
+                    Regulation or obtain legal advice.
+                    <!--<br><br>
+                    <b>NOTES RESPECTING THIS REPRESENTATION AGREEMENT MADE UNDER SECTION 9 OF THE REPRESENTATION AGREEMENT ACT</b>-->
                     <br><br>
                     This form reflects the law at the date of publication. Laws can change over time. Before using this form, you should
-                    review
-                    the relevant
-                    legislation to ensure that there have not been any changes to the legislation or section numbers.
-                    <br><br>
-                    <b>NOTES RESPECTING THIS REPRESENTATION AGREEMENT MADE UNDER SECTION 9 OF THE REPRESENTATION AGREEMENT ACT</b>
-                    <br>
+                    review the relevant legislation to ensure that there have not been any changes to the legislation or section numbers.
                     The notes provided here are for the purpose of providing information only, and do not constitute legal advice.
-                    These notes are prepared for the purposes of this representation agreement form. They should not be considered a
-                    complete
-                    description of matters to be taken into account in making a representation agreement. A person making a representation
-                    agreement, or acting as a representative or alternate representative, should consult the <i>Representation Agreement
-                    Act</i>
-                    and the Representation Agreement Regulation to ensure that they understand their rights and duties.
+<!--                    These notes are prepared for the purposes of this representation agreement form.-->
+                    They should not be considered a complete description of matters to be taken into account in making a representation
+                    agreement. A person making a representation agreement, or acting as a representative or alternate representative,
+                    should consult the <i>Representation Agreement Act</i> and the Representation Agreement Regulation to ensure that
+                    they understand their rights and duties.
                 </p>
             </div>
 
@@ -58,54 +52,55 @@
 
             <div class="content-dark-copy pad-top">
                 <p>
-                    'THE ADULT' means you as the person appointing your Representative(s).
-                    <br>
-                    Enter your full legal name, full address and the date that you are filling out, printing and having the document
+                    'THE ADULT' means you as the person appointing your Representative(s). Enter your full legal nameand full address here.
+                    <!--the date that you are filling out, printing and publishing this form.
+                    This date differs from the date of witnessing so can be left blank.-->
+                  <!--  and
+                    having the document
                     witnessed. If you want to leave the date to enter at the time when you can have the Reps and Witnesses together,
-                    erase this default date and enter the date later.
+                    erase this default date and enter the date later.-->
                 </p>
             </div>
 
-            <form #repNineForm="ngForm" novalidate>
-                <div class="wizard-form">
-                    <div class="error-message-block">
-                        <ng-container *ngIf="errorMessage">
-                            <div class="error-message">{{errorMessage}}</div>
-                        </ng-container>
-                        <ng-container *ngIf="!errorMessage">
-                            <div class="error-message">&nbsp;</div>
-                        </ng-container>
-                    </div>
-
-                    <div class="two-unequal-columns-block">
-                        <label class="first-text-column" for="client_name">Full Legal Name of (you) the Adult:</label>
-                        <label class="second-text-column" for="pub_date">Date: (YYYY / MM / DD):</label>
-
-                        <input [(ngModel)]="rep.client_name" type="text" class="first-text-column required" id="client_name" name="name">
-                        <input [(ngModel)]="rep.publish_date" type="text" class="second-text-column" id="pub_date" name="pubDate"
-                               mask="0000/00/00">
-                    </div>
-
-                    <div class="full-line-prompt">
-                        <label class="first-text-column" for="client_addr">Full Legal Address of (you) the Adult:</label>
-
-                        <textarea
-                            name="addr"
-                            rows="3"
-                            id="client_addr"
-                            class="full-text-column"
-                            [(ngModel)]="rep.client_address"
-                            placeholder="Enter your full address, city and postal code."
-                        ></textarea>
-                    </div>
+            <form #repNineForm="ngForm" class="wizard-form" novalidate>
+                <div class="error-message-block">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="error-message">{{errorMessage}}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="error-message">&nbsp;</div>
+                    </ng-container>
                 </div>
+
+                <div class="two-unequal-columns-block">
+                    <label class="first-text-column" for="client_name">Full Legal Name of (you) the Adult:</label>
+<!--                        <label class="second-text-column" for="pub_date">Date: (YYYY / MM / DD):</label>-->
+
+                    <input [(ngModel)]="rep.client_name" type="text" class="first-text-column required" id="client_name" name="name">
+                    <!--<input [(ngModel)]="rep.publish_date" type="text" class="second-text-column" id="pub_date" name="pubDate"
+                           mask="0000/00/00">-->
+                </div>
+
+                <div class="full-line-prompt">
+                    <label class="first-text-column" for="client_addr">Full Legal Address of (you) the Adult:</label>
+
+                    <textarea
+                        name="addr"
+                        rows="3"
+                        id="client_addr"
+                        class="full-text-column"
+                        [(ngModel)]="rep.client_address"
+                        placeholder="Enter your full address, city and postal code."
+                    ></textarea>
+                </div>
+<!--                </div>-->
             </form>
 
             <div class="three-buttons-container pad-top-2 justify-content-end">
                 <!-- was closeModal -->
                 <button class="cancel-button" (click)="cancelDataWizard()">CANCEL</button>
                 <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
-                <button class="next-button " (click)="checkClientNameAndValidDate()">NEXT</button>
+                <button class="next-button " (click)="checkClientNameAddress()">NEXT</button>
             </div>
         </ng-container>
 
@@ -138,6 +133,8 @@
                     <br>
                     * if you have previously made a section 9 representation agreement that is still effective, it
                     will be revoked
+                    <br><br>
+                    If you need to revoke a previous agreement you should cancel out of this wizard and follow the rules stated above.
                 </p>
             </div>
 
@@ -181,38 +178,34 @@
                 <h4><b>I name the following person to be my Representative:</b></h4>
             </div>
 
-            <form #repNineForm="ngForm" novalidate>
-                <div class="wizard-form">
-                    <div class="error-message-block">
-                        <ng-container *ngIf="errorMessage">
-                            <div class="error-message">{{errorMessage}}</div>
-                        </ng-container>
-                        <ng-container *ngIf="!errorMessage">
-                            <div class="error-message">&nbsp;</div>
-                        </ng-container>
-                    </div>
+            <form #repNineForm="ngForm" class="wizard-form" novalidate>
+                <div class="error-message-block">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="error-message">{{errorMessage}}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="error-message">&nbsp;</div>
+                    </ng-container>
+                </div>
 
-                    <div class="full-line-prompt">
-                        <label class="first-text-column" for="primary_name">Full Legal Name of Representative:</label>
-                        <input [(ngModel)]="rep.rep_primary_name" type="text" class="first-text-column required" id="primary_name"
-                               name="name">
-                    </div>
+                <div class="full-line-prompt">
+                    <label class="first-text-column" for="primary_name">Full Legal Name of Representative:</label>
+                    <input [(ngModel)]="rep.rep_primary_name" type="text" class="first-text-column required" id="primary_name"
+                           name="name">
+                </div>
 
-                    <div class="full-line-prompt">
-                        <label class="first-text-column" for="primary_name">Full Address of Representative:</label>
-                        <input [(ngModel)]="rep.rep_primary_address" type="text" class="first-text-column required" id="primary_address"
-                               name="address">
-                    </div>
+                <div class="full-line-prompt">
+                    <label class="first-text-column" for="primary_name">Full Address of Representative:</label>
+                    <input [(ngModel)]="rep.rep_primary_address" type="text" class="first-text-column required" id="primary_address"
+                           name="address">
                 </div>
             </form>
 
             <div class="three-buttons-container pad-top-2 justify-content-end">
-                <!-- was closeModal -->
                 <button class="cancel-button" (click)="cancelDataWizard()">CANCEL</button>
                 <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="next-button " (click)="checkPrimaryRepNameAndAddress()">NEXT</button>
             </div>
-
         </ng-container>
 
         <ng-container *ngIf="page === 4">
@@ -252,28 +245,26 @@
                 </p>
             </div>
 
-            <form #repNineForm="ngForm" novalidate>
-                <div class="wizard-form">
-                    <div class="error-message-block">
-                        <ng-container *ngIf="errorMessage">
-                            <div class="error-message">{{errorMessage}}</div>
-                        </ng-container>
-                        <ng-container *ngIf="!errorMessage">
-                            <div class="error-message">&nbsp;</div>
-                        </ng-container>
-                    </div>
+            <form #repNineForm="ngForm" class="wizard-form" novalidate>
+                <div class="error-message-block">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="error-message">{{errorMessage}}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="error-message">&nbsp;</div>
+                    </ng-container>
+                </div>
 
-                    <div class="full-line-prompt">
-                        <label class="first-text-column" for="alternate_name">Full Legal Name of Alternate Representative:</label>
-                        <input [(ngModel)]="rep.rep_alternate_name" type="text" class="first-text-column required" id="alternate_name"
-                               name="altName">
-                    </div>
+                <div class="full-line-prompt">
+                    <label class="first-text-column" for="alternate_name">Full Legal Name of Alternate Representative:</label>
+                    <input [(ngModel)]="rep.rep_alternate_name" type="text" class="first-text-column required" id="alternate_name"
+                           name="altName">
+                </div>
 
-                    <div class="full-line-prompt">
-                        <label class="first-text-column" for="alternate_address">Full Address of Alternate Representative:</label>
-                        <input [(ngModel)]="rep.rep_alternate_address" type="text" class="first-text-column required" id="alternate_address"
-                               name="altAddress">
-                    </div>
+                <div class="full-line-prompt">
+                    <label class="first-text-column" for="alternate_address">Full Address of Alternate Representative:</label>
+                    <input [(ngModel)]="rep.rep_alternate_address" type="text" class="first-text-column required" id="alternate_address"
+                           name="altAddress">
                 </div>
             </form>
 
@@ -435,18 +426,16 @@
                 </p>
             </div>
 
-            <form #wizardForm="ngForm" novalidate>
-                <div class="wizard-form">
-                    <div class="full-line-prompt">
-                        <textarea
-                            name="instructions"
-                            rows="8"
-                            class="full-text-column"
-                            [(ngModel)]="rep.instructions_for_reps"
-                            placeholder="Add any instructions you have for your Rep to follow. "
-                        ></textarea>
-                   </div>
-                </div>
+            <form #repNineForm="ngForm" class="wizard-form" novalidate>
+                <div class="full-line-prompt">
+                    <textarea
+                        name="instructions"
+                        rows="8"
+                        class="full-text-column"
+                        [(ngModel)]="rep.instructions_for_reps"
+                        placeholder="Add any instructions you have for your Rep to follow. "
+                    ></textarea>
+               </div>
             </form>
 
             <div class="three-buttons-container pad-top-2 justify-content-end">
@@ -456,6 +445,18 @@
             </div>
         </ng-container>
 
+     <!--   <ng-container *ngIf="page === 8">
+            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
+
+
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <button class="cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+-->
         <ng-container *ngIf="page === 8">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
@@ -463,7 +464,7 @@
                 <h4>
                     <b>
                         Page {{page}} / {{finalPage}}:
-                        EFFECTIVE DATE
+                        EFFECTIVE DATE AND SIGNATURES
                     </b>
                 </h4>
             </div>
@@ -474,59 +475,41 @@
                 </p>
             </div>
 
-            <div class="three-buttons-container pad-top-2 justify-content-end">
-                <button class="cancel-button" (click)="cancelDataWizard()">CANCEL</button>
-                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
-                <button class="next-button " (click)="getNextPage()">NEXT</button>
-            </div>
-        </ng-container>
-
-        <ng-container *ngIf="page === 9">
-            <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
-
-            <div class="screen-title pad-top-2">
-                <h4>
-                    <b>
-                        Page {{page}} / {{finalPage}}:
-                        SIGNATURES
-                    </b>
-                </h4>
-            </div>
-
             <div class="screen-title">
                 <h4><b>ADULT AND WITNESS SIGNATURES</b></h4>
             </div>
-
-            <form #repNineForm="ngForm" novalidate>
-                <div class="signing-form with-dark-border">
-                    <div class="error-message-block pad-top">
-                        <ng-container *ngIf="errorMessage">
-                            <div class="error-message">{{errorMessage}}</div>
-                        </ng-container>
-                        <ng-container *ngIf="!errorMessage">
-                            <div class="error-message">&nbsp;</div>
-                        </ng-container>
-                    </div>
-
-                    <div class="full-text-column">
-                        <b>ADULT'S SIGNATURE</b>
-                        <br>
-                        &nbsp;&nbsp;&nbsp;*The Adult must sign and date in the presence of both Witnesses.
-                    </div>
-
-                    <div class="two-unequal-columns-block">
-                        <label class="first-text-column">Signature of Adult:</label>
-                        <label class="second-text-column" for="signing_date">Date Signed: (YYYY / MM / DD):</label>
-
-                        <input type="text" class="first-text-column required" name="name">
-                        <input type="text" id="signing_date" [(ngModel)]="rep.signing_date" class="second-text-column" name="legalDate">
-                    </div>
-
-                    <div class="full-text-column ">
-                        <label class="full-text-column" for="printed_name">Print Name:</label>
-                        <input type="text" class="full-text-column" [(ngModel)]="rep.client_name" id="printed_name" name="name">
-                    </div>
+            <form #repNineForm="ngForm" class="wizard-form" novalidate>
+<!--                <div class="signing-form with-dark-border">-->
+                <div class="error-message-block pad-top">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="error-message">{{errorMessage}}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="error-message">&nbsp;</div>
+                    </ng-container>
                 </div>
+
+                <div class="full-text-column">
+                    <b>ADULT'S SIGNATURE</b>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;*The Adult must sign and date in the presence of both Witnesses.
+                </div>
+
+                <div class="two-unequal-columns-block">
+                    <label class="first-text-column"><b>Signature of Adult:</b></label>
+                    <label class="second-text-column" for="sign_date1"><b>Date Signed:</b>(YYYY/MM/DD):</label>
+
+                    <input type="text" class="first-text-column required" name="name">
+<!--                        <input type="text" id="signing_date" [(ngModel)]="rep.signing_date" class="second-text-column" name="legalDate">-->
+                    <input [(ngModel)]="rep.signing_date" type="text" class="second-text-column" id="sign_date1" name="signDate1"
+                           mask="0000/00/00">
+                </div>
+
+                <div class="full-text-column ">
+                    <label class="full-text-column" for="printed_name">Print Name:</label>
+                    <input type="text" class="full-text-column" [(ngModel)]="rep.client_name" id="printed_name" name="name">
+                </div>
+<!--                </div>-->
             </form>
 
             <div class="content-dark-copy">
@@ -588,7 +571,7 @@
                 </b>
             </div>
 
-            <div class="two-even-columns-block pad-bottom-2">
+            <div class="two-even-columns-block">
                 <div class="first-text-column">
                     <b>WITNESS 1</b>
                     <br>
@@ -602,38 +585,40 @@
                 </div>
             </div>
 
-            <form #repNineForm="ngForm" novalidate>
-                <div class="signing-form with-dark-border">
+            <form #repNineForm="ngForm" class="wizard-form" novalidate>
+<!--                <div class="signing-form">-->
                     <div class="two-even-columns-block">
                         <div class="first-signing-text-column align-content-center">
                             <div class="two-signing-columns-block ">
-                                <label class="first-signing-text-column pad-top-2">
+                                <label class="first-signing-text-column">
                                     <b>Signature of Witness No 1</b>
                                 </label>
 
-                                <label class="second-signing-text-column pad-top-2" for="signing_date_2">
-                                    <b>Date: (YYYY/MM/DD):</b>
+                                <label class="second-signing-text-column pad-top-2" for="sign_date2">
+                                    <b>Date:(YYYY/MM/DD):</b>
                                 </label>
 
                                 <input type="text" class="first-signing-text-column pad-top-2">
-                                <input type="text" id="signing_date_2" class="second-signing-text-column pad-top-2" [(ngModel)]="rep.signing_date"
-                                       name="legalDate">
+                                <input [(ngModel)]="rep.signing_date" type="text" class="second-signing-text-column" id="sign_date2"
+                                       name="signDate2"
+                                       mask="0000/00/00">
                             </div>
                         </div>
 
                         <div class="second-signing-text-column align-content-center">
-                            <div class="two-signing-columns-block">
-                                <label class="first-signing-text-column pad-top-2">
+                            <div class="two-signing-columns-block ">
+                                <label class="first-signing-text-column">
                                     <b>Signature of Witness No 2</b>
                                 </label>
 
-                                <label class="second-signing-text-column pad-top-2" for="signing_date_3">
-                                    <b>Date: (YYYY/MM/DD):</b>
+                                <label class="second-signing-text-column pad-top-2" for="sign_date3">
+                                    <b>Date:(YYYY/MM/DD):</b>
                                 </label>
 
                                 <input type="text" class="first-signing-text-column pad-top-2">
-                                <input type="text" id="signing_date_3" class="second-signing-text-column pad-top-2" [(ngModel)]="rep.signing_date"
-                                       name="legalDate">
+                                <input [(ngModel)]="rep.signing_date" type="text" class="second-signing-text-column" id="sign_date3"
+                                       name="signDate3"
+                                       mask="0000/00/00">
                             </div>
                         </div>
 
@@ -650,35 +635,36 @@
 
                         <label class="second-text-column with-dark-border" for="witness_add2"><b>Print Address:</b></label>
 
-                            <textarea  name="address1" rows="3" class="first-text-column with-dark-border"
-                                [(ngModel)]="rep.witness_one_address" id="witness_add1">
-                            </textarea>
+                        <textarea  name="address1" rows="3" class="first-text-column with-dark-border"
+                            [(ngModel)]="rep.witness_one_address" id="witness_add1">
+                        </textarea>
 
-                            <textarea  name="address2" rows="3" class="second-text-column with-dark-border"                                        [(ngModel)]="rep.witness_two_address" id="witness_add2">
-                            </textarea>
+                        <textarea  name="address2" rows="3" class="second-text-column with-dark-border"
+                            [(ngModel)]="rep.witness_two_address" id="witness_add2">
+                        </textarea>
 
-                           <div class="one-full-column-block">
-                                 <div class="right-colored-dashed-border">
-                                     <br><b>If witness is a lawyer or member of the Society of Notaries Public of British Columbia, check the
-                                     relevant box below:</b><br>
-                                 </div>
-
-                                 <div class="first-signing-radio-check-column pad-left pad-right margin-top">
-                                     <input type="checkbox" id="m-primaryFocus1">
-                                     <label for="m-primaryFocus1">
-                                         <span>Lawyer</span>
-                                     </label>
-                                 </div>
-
-                                 <div class="first-signing-radio-check-column pad-left pad-right">
-                                     <input type="checkbox" id="m-primaryFocus2">
-                                     <label for="m-primaryFocus2">
-                                         <span>Member of the Society of Notaries Public of British Columbia</span>
-                                     </label>
-                                 </div>
+                       <div class="one-full-column-block">
+                             <div class="right-colored-dashed-border">
+                                 <br><b>If witness is a lawyer or member of the Society of Notaries Public of British Columbia, check the
+                                 relevant box below:</b><br>
                              </div>
+
+                             <div class="first-signing-radio-check-column pad-left pad-right margin-top">
+                                 <input type="checkbox" id="m-primaryFocus1">
+                                 <label for="m-primaryFocus1">
+                                     <span>Lawyer</span>
+                                 </label>
+                             </div>
+
+                             <div class="first-signing-radio-check-column pad-left pad-right">
+                                 <input type="checkbox" id="m-primaryFocus2">
+                                 <label for="m-primaryFocus2">
+                                     <span>Member of the Society of Notaries Public of British Columbia</span>
+                                 </label>
+                             </div>
+                         </div>
                     </div>
-                </div>
+<!--                </div>-->
             </form>
 
             <div class="screen-title pad-top-2">
@@ -694,7 +680,7 @@
                     sign the representation agreement</p>
             </div>
 
-            <div class="two-even-columns-block pad-bottom-2">
+            <div class="two-even-columns-block">
                 <div class="first-text-column">
                     <b>PRIMARY REPRESENTATIVE</b>
                 </div>
@@ -706,40 +692,42 @@
                 </div>
             </div>
 
-            <form #repNineForm="ngForm" novalidate>
-                <div class="signing-form with-dark-border">
+            <form #repNineForm="ngForm" class="wizard-form" novalidate>
+<!--                <div class="signing-form with-dark-border">-->
                     <div class="two-even-columns-block">
                         <div class="first-signing-text-column align-content-center">
                             <div class="two-signing-columns-block ">
-                                <label class="first-signing-text-column pad-top-2">
+                                <label class="first-signing-text-column">
                                     <b>Signature of Representative</b>
                                 </label>
 
-                                <label class="second-signing-text-column pad-top-2" for="signing_date_6">
+                                <label class="second-signing-text-column pad-top-2" for="sign_date_4">
                                     <b>Date: (YYYY/MM/DD):</b>
                                 </label>
 
                                 <input type="text" class="first-signing-text-column pad-top-2">
-                                <input type="text" id="signing_date_6" class="second-signing-text-column pad-top-2"
+                                <input type="text" id="sign_date_4" class="second-signing-text-column pad-top-2"
                                        [(ngModel)]="rep.signing_date"
-                                       name="legalDate">
+                                       name="signDate4"
+                                       mask="0000/00/00">
                             </div>
                         </div>
 
                         <div class="second-signing-text-column align-content-center">
                             <div class="two-signing-columns-block">
-                                <label class="first-signing-text-column pad-top-2">
+                                <label class="first-signing-text-column">
                                     <b>Signature of Alternate Rep</b>
                                 </label>
 
-                                <label class="second-signing-text-column pad-top-2" for="signing_date_7">
+                                <label class="second-signing-text-column pad-top-2" for="sign_date_5">
                                     <b>Date: (YYYY/MM/DD):</b>
                                 </label>
 
                                 <input type="text" class="first-signing-text-column pad-top-2">
-                                <input type="text" id="signing_date_7" class="second-signing-text-column pad-top-2"
+                                <input type="text" id="sign_date_5" class="second-signing-text-column pad-top-2"
                                        [(ngModel)]="rep.signing_date"
-                                       name="legalDate">
+                                       name="signDate5"
+                                       mask="0000/00/00">
                             </div>
                         </div>
 
@@ -751,8 +739,19 @@
 
                         <input type="text" class="second-text-column with-dark-border" [(ngModel)]="rep.rep_alternate_name" id="rep_name2"
                                name="name2">
+
+                        <label class="first-text-column with-dark-border" for="primary_addr"><b>Print Address:</b></label>
+                        <label class="second-text-column with-dark-border" for="alternate_addr"><b>Print Address:</b></label>
+
+                        <textarea  name="address1" rows="3" class="first-text-column with-dark-border"
+                                   [(ngModel)]="rep.rep_primary_address" id="primary_addr">
+                        </textarea>
+
+                        <textarea  name="address2" rows="3" class="second-text-column with-dark-border"
+                                   [(ngModel)]="rep.rep_alternate_address" id="alternate_addr">
+                        </textarea>
                     </div>
-                </div>
+<!--                </div>-->
             </form>
 
             <div class="three-buttons-container pad-top-2 justify-content-end">
@@ -762,7 +761,7 @@
             </div>
         </ng-container>
 
-        <ng-container *ngIf="page === 10">
+        <ng-container *ngIf="page === 9">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
             <div class="screen-title pad-top">

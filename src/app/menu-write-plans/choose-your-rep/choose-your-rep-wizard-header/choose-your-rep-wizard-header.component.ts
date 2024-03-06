@@ -32,5 +32,4 @@ export class ChooseYourRepWizardHeaderComponent implements OnInit {
     this.name=this.rep.client_name;
   }
 
-
 }

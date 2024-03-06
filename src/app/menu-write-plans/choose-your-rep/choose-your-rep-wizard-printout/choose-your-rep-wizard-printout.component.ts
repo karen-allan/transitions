@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {RepNine} from "../../../ts-files/rep-nine";
 import {formatDate} from "@angular/common";
 
@@ -7,10 +7,10 @@ import {formatDate} from "@angular/common";
   templateUrl: './choose-your-rep-wizard-printout.component.html',
   styleUrl: './choose-your-rep-wizard-printout.component.css'
 })
-export class ChooseYourRepWizardPrintoutComponent {
+export class ChooseYourRepWizardPrintoutComponent implements OnInit {
 
-  @Input() rep: RepNine;
-  @Input() now:string;
+  @Input()  rep: RepNine;
+  now:string;
 
   constructor() { }
 
@@ -23,5 +23,7 @@ export class ChooseYourRepWizardPrintoutComponent {
     const today = new Date();
     this.now= formatDate(today, 'longDate',  'en-US')
   }
+
+
 
 }

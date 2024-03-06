@@ -18,7 +18,6 @@ export class RepNine {
 
         public signing_date:string,
         public publish_date:string,
-
         public instructions_for_reps:string,
         public reasons_for_alternate_rep:string,
     )

@@ -22,7 +22,7 @@ export class ChangeYourRepContainerComponent {
 
     //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
     this.rep = new RepNine("", "", "", "", "",
-        "", "", "", "", "", "", "",
+        "", "", "", "", "", "", '',
         "", "");
   }
 

@@ -16,24 +16,20 @@ export class ChooseYourRepWizardComponent implements OnInit {
   title:string = "Title";
 
   page:number=0;
-  finalPage:number=9;
+  finalPage:number=8;
   now:string;
 
-  signingDate:string;
-
-  // legalDate =  formatDate(this.today, 'y/MM/d',  'en-US')
   public event: EventEmitter<any> = new EventEmitter();
 
   constructor(public dialogRef: MatDialogRef<ChooseYourRepWizardComponent>) { }
 
   /* *************************************************************************************************************** */
   ngOnInit(): void {
-    this.page = 0;
+    this.page = 7;
 
     this.setCurrentDateForHeader();
     /* will remove the defaults once done testing */
-    this.setPublishDateDefault();
-    this.setSigningDateDefault();
+
     this.setClientDefaults();
 
    this.setRepOneDefaults();
@@ -50,18 +46,6 @@ export class ChooseYourRepWizardComponent implements OnInit {
   setCurrentDateForHeader() {
     const today = new Date();
     this.now= formatDate(today, 'longDate',  'en-US')
-  }
-
-  /* *************************************************************************************************************** */
-  setPublishDateDefault() {
-    const today = new Date();
-    this.rep.publish_date= formatDate(today, 'y/MM/d',  'en-US')
-  }
-
-  /* *************************************************************************************************************** */
-  setSigningDateDefault() {
-    const today = new Date();
-    this.rep.signing_date =  formatDate(today, 'y/MM/d',  'en-US')
   }
 
   /* *************************************************************************************************************** */
@@ -105,12 +89,17 @@ export class ChooseYourRepWizardComponent implements OnInit {
 
   /* *************************************************************************************************************** */
   /* Function is called from the html page. Publish date is not required. Not sure what this date is even for... */
-  checkClientNameAndValidDate(): void {
+  checkClientNameAddress(): void {
     if (this.rep.client_name.length == 0 || this.rep.client_name == "") {
       this.errorMessage = "You must enter your name here.";
       return;
     }
-    if (this.rep.publish_date.length == 0) {
+    if (this.rep.client_address.length == 0 || this.rep.client_address == "") {
+      this.errorMessage = "You must enter your full address here.";
+      return;
+    }
+
+   /* if (this.rep.publish_date.length == 0) {
       this.errorMessage = "You must enter the date here.";
       return;
     }
@@ -120,7 +109,7 @@ export class ChooseYourRepWizardComponent implements OnInit {
         return;
       }
     }
-
+*/
     this.errorMessage='';
     this.getNextPage();
   }
@@ -161,15 +150,60 @@ export class ChooseYourRepWizardComponent implements OnInit {
   /* *************************************************************************************************************** */
   /* called from the html */
   checkForValidDate(): void {
-    if (this.rep.signing_date.length != 0) {
+
+    if (this.rep.signing_date !== '' && this.rep.signing_date.length > 0) {
       if (!moment(this.rep.signing_date, "YYYY/MM/DD").isValid()) {
         this.errorMessage = "You must enter a valid date in format yyyy/mm/dd.";
         return;
+      }
+      else {
+        this.rep.publish_date = this.formatDateString(this.rep.signing_date);
+        alert("rep.publish date is " + this.rep.publish_date);
       }
     }
 
     this.errorMessage='';
     this.getNextPage();
+  }
+
+  /* *************************************************************************************************************** */
+  formatDateString(dateString:string) {
+    var formattedDate:string ='';
+
+    if (dateString != '') {
+      const yrstr = dateString.substring(0,4);
+      const mntstr = dateString.substring(4,6);
+      const daystr = dateString.substring(6);
+      formattedDate = yrstr + "/" + mntstr + "/" + daystr;
+
+      return(formattedDate);
+    }
+    else {
+      return "";
+    }
+  }
+
+  parseDate(value: any): Date | null {
+    if ((typeof value === 'string') && (value !== null)) {
+      const yrstr = value.substring(0,4);
+      alert("yrstr is " + yrstr);
+
+      const mntstr = value.substring(4,6);
+      alert("mntstr is " + mntstr);
+
+      const daystr = value.substring(6);
+      alert("daystr is " + daystr);
+
+      const year = Number(yrstr);
+      const month = Number(mntstr) - 1;
+      const date = Number(daystr);
+
+      return new Date(year, month, date);
+    } else if((typeof value === 'string') && value === '') {
+      return new Date();
+    }
+    const timestamp = typeof value === 'number' ? value : Date.parse(value);
+    return isNaN(timestamp) ? null : new Date(timestamp);
   }
 
   /* *************************************************************************************************************** */
@@ -189,7 +223,7 @@ export class ChooseYourRepWizardComponent implements OnInit {
 
     this.rep.client_name = "";
     this.rep.client_address = "";
-    this.rep.publish_date="";
+    this.rep.publish_date=null;
     this.rep.rep_primary_name='';
     this.rep.rep_primary_address='';
     this.rep.rep_alternate_name='';
@@ -220,5 +254,7 @@ export class ChooseYourRepWizardComponent implements OnInit {
   closeModal(): void {
     this.event.emit({rep: this.rep, print: false});
   }
+
+
 
 }
