@@ -179,7 +179,7 @@ and (min-width: 1440px) {
         margin:1em auto;
     }
 
-    .header-images, .screen-images img, .content-images img {
+    .header-images, .header-images a, .screen-images img, .content-images img {
         max-width:100%;
         height:auto;
     }

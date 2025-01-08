@@ -246,22 +246,22 @@ and (min-width: 1440px) {
         display:grid;
         margin:auto;
         max-width:var(--content-width);
-        background-color: var(--color-soft-blue);
+        background-color: var(--color-dark-blue);
     }
 
     .charges-grid p {
-        text-transform: uppercase;
-        font-weight:600;
+        /*text-transform: uppercase;*/
+        font-weight:500;
         color: var(--color-white);
         letter-spacing: 4px;
-        padding-left: 1em;
+        padding: 1em 1em 0 1em;
         font-family: var(--family-copy);
     }
 
     .charges-inline-grid {
         display:inline-grid;
         padding-left:1em;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 22% 78%;
         color: var(--color-white);
     }
 

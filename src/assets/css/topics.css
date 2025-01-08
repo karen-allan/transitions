@@ -163,15 +163,21 @@ and (orientation: landscape) {
         align-content: center;
     }
 
-    .topic-size{
-        height:400px;
-        background-position: right;
-        background-size: contain;
+    .topic-size {
+        height:auto;
+        width:100%;
+    }
+
+    .topic-grid h1, .topic-grid h2, .topic-grid p, .topic-grid span {
+        justify-content: center;
     }
 
     .topic-grid h1, .topic-grid h2 {
-        justify-content: center;
         letter-spacing: 4px;
+    }
+
+    .topic-grid p {
+        letter-spacing: 2px;
     }
 
 }
@@ -183,8 +189,8 @@ and (max-width: 1365px)
 and (orientation: landscape) {
 
     /* 1280-800 = 480  the width of headers is total width less 800px image that are then centered within that width */
-    .topic-grid h1, .topic-grid h2 {
-        width:480px;
+    .topic-grid h1, .topic-grid h2, .topic-grid p {
+        width:100%;
     }
 
     .topic-grid h1 {
@@ -195,6 +201,13 @@ and (orientation: landscape) {
         font-size:var(--h2-header-tablet-land-font-size);
     }
 
+    .topic-grid p {
+        font-size:var(--big-quote-tablet-land-font-size);
+    }
+
+    .topic-grid span {
+        font-size:var(--small-quote-tablet-land-font-size);
+    }
 }
 
 
@@ -205,8 +218,8 @@ and (max-width: 1439px)
 and (orientation: landscape) {
 
     /* 1366-800 =566 */
-    .topic-grid h1, .topic-grid h2 {
-        width:566px;
+    .topic-grid h1, .topic-grid h2, .topic-grid p {
+        width:100%;
     }
 
     .topic-grid h1 {
@@ -217,6 +230,13 @@ and (orientation: landscape) {
         font-size:var(--h2-header-ipad-land-font-size);
     }
 
+    .topic-grid p {
+        font-size:var(--big-quote-ipad-land-font-size);
+    }
+
+    .topic-grid span {
+        font-size:var(--small-quote-ipad-land-font-size);
+    }
 }
 
 /* LAPTOPS ****************************************************************************************************/
@@ -225,8 +245,8 @@ and (min-width: 1440px)
 and (max-width:1919px) {
 
     /* 1440-800 = 640 */
-    .topic-grid h1, .topic-grid h2 {
-        width:640px;
+    .topic-grid h1, .topic-grid h2, .topic-grid p {
+        width:100%;
     }
 
     .topic-grid h1 {
@@ -237,6 +257,13 @@ and (max-width:1919px) {
         font-size:var(--h2-header-desktop-font-size);
     }
 
+    .topic-grid p {
+        font-size:var(--big-quote-desktop-font-size);
+    }
+
+    .topic-grid span {
+        font-size:var(--small-quote-desktop-font-size);
+    }
 }
 
 /* DESKTOPS ****************************************************************************************************/
@@ -244,8 +271,8 @@ and (max-width:1919px) {
 and (min-width: 1920px) {
 
     /* 1920-800 = 1120 */
-    .topic-grid h1, .topic-grid h2 {
-        width:1120px;
+    .topic-grid h1, .topic-grid h2, .topic-grid p {
+        width:100%;
     }
 
      .topic-grid h1 {
@@ -256,74 +283,165 @@ and (min-width: 1920px) {
         font-size:var(--h2-header-desktop-font-size);
     }
 
+    .linked-topic-grid h2 {
+        font-size:var(--h1-header-desktop-font-size);
+    }
+
+    .topic-grid p {
+        font-size:var(--big-quote-desktop-font-size);
+    }
+
+    .topic-grid span {
+        font-size:var(--small-quote-desktop-font-size);
+    }
 }
 
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-    .topic-grid {
-        max-width:var(--header-width);
+    .topic-grid, .linked-topic-grid {
         display:grid;
-        text-transform: uppercase;
         margin: auto;
+        align-content: end;
+        justify-content: center;
     }
 
-    .topic-grid h1, .topic-grid h2 {
+    .topic-grid {
+        max-width:var(--header-width);
+    }
+
+    .linked-topic-grid {
+        max-width:var(--content-width);
+        height: 400px;
+    }
+
+    .topic-grid h1, .topic-grid h2, .linked-topic-grid h2 {
         display:grid;
         font-family: var(--family-headers);
         color:var(--color-white);
-        font-weight:400;
-
+        font-weight:800;
+        text-transform: uppercase;
         margin:0;
     }
 
-    /* on home page */
-    .topic-book-session {
-        background-repeat: no-repeat;
-        background-image:
-                url("src/assets/images/topics/home/topicBookSession.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
+    .linked-topic-grid h2 {
+        padding-bottom: .5em;
+    }
+
+    .topic-grid h2  {
+        padding-bottom:1em;
+    }
+
+    .topic-grid p, .topic-grid span {
+        display:grid;
+        font-family: var(--family-quotes);
+        font-style: italic;
+        color:var(--color-white);
+        padding: 1em 0 .25em 0;
+        margin:0;
+    }
+
+    .topic-grid p {
+        text-align: left;
+        font-weight: 400;
+    }
+
+    .topic-grid span {
+        text-align: center;
+        padding-top:.5em;
     }
 
     /* ABOUT */
-    .topic-about-practitioner {
+       .topic-book-consultation, .topic-roles-of-consultant,
+    .topic-consider-care-plan, .topic-consider-cpr, .topic-consider-edith, .topic-consider-your-rep, .topic-think-about-needs,
+    .topic-check-off-list,  .topic-choose-your-rep, .topic-make-wish-list,.topic-write-care-plan    {
         background-repeat: no-repeat;
-        background-image:
-                url("src/assets/images/topics/about/topicAboutPractitioner.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
-    }
+        background-image: radial-gradient(var(--color-background-lignt-purple), var(--color-off-white));
+        padding:2em 0 1em 0;
+       }
 
-    .topic-about-eol-advocacy {
-        background-repeat: no-repeat;
-        background-image:
-                url("src/assets/images/topics/about/topicAboutEolAdvocacy.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
-    }
 
-    .topic-think-about-needs {
+ /*  .topic-about-practitioner {
         background-repeat: no-repeat;
         background-image:
-                url("src/assets/images/topics/planning/topicThinkAboutNeeds.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
-    }
+                url("src/assets/images/topics/about/topicAboutPractitioner.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+    }*/
+    /*
+       !* CONSULTATIONS *!
+       .topic-book-consultation {
+           background-repeat: no-repeat;
+           background-image:
+                   url("src/assets/images/topics/consultations/topicBookConsultation.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+       }
 
-    .topic-choose-your-rep {
-        background-repeat: no-repeat;
-        background-image:
-                url("src/assets/images/topics/planning/topicChooseRep.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
-    }
+       .topic-roles-of-consultant {
+           background-repeat: no-repeat;
+           background-image:
+                   url("src/assets/images/topics/consultations/topicRolesOfConsultant.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+       }
 
-    .topic-documents-to-sign {
-        background-repeat: no-repeat;
-        background-image:
-                url("src/assets/images/topics/planning/topicDocumentsToSign.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
-    }
+       !* HOME *!
+       .topic-home-book-session {
+           background-repeat: no-repeat;
+           background-image:
+                   url("src/assets/images/topics/home/topicBookSession.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+       }
 
-    .topic-roles-of-consultant {
-        background-repeat: no-repeat;
-        background-image:
-                url("src/assets/images/topics/consultations/topicRolesOfConsultant.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
-    }
+       !* PLAN AHEAD *!
+       .topic-consider-care-plan {
+           background-repeat: no-repeat;
+           background-image:
+                   url("src/assets/images/topics/planning/topicConsiderCarePlan.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+       }
 
-    .topic-book-consultation {
-        background-repeat: no-repeat;
-        background-image:
-                url("src/assets/images/topics/consultations/topicBookConsultation.jpg"), linear-gradient(var(--color-background-purple), var(--color-background-pink));
-    }
+       .topic-consider-cpr {
+           background-repeat: no-repeat;
+           background-image:
+                   url("src/assets/images/topics/planning/topicConsiderCPR.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+       }
+
+       .topic-consider-edith {
+           background-repeat: no-repeat;
+           background-image:
+                   url("src/assets/images/topics/planning/topicConsiderEdith.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+       }
+
+       .topic-consider-your-rep {
+           background-repeat: no-repeat;
+           background-image:
+                   url("src/assets/images/topics/planning/topicConsiderRep.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+       }
+
+       .topic-think-about-needs {
+           background-repeat: no-repeat;
+           background-image:
+                   url("src/assets/images/topics/planning/topicThinkAboutNeeds.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+       }
+
+       !* WRITE PLANS *!
+       .topic-check-off-list {
+           background-repeat: no-repeat;
+           background-image:
+                   url("src/assets/images/topics/planning/topicCheckOffList.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+       }
+
+       .topic-choose-your-rep {
+           background-repeat: no-repeat;
+           background-image:
+                   url("src/assets/images/topics/planning/topicChooseRep.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+       }
+
+       .topic-make-wish-list {
+           background-repeat: no-repeat;
+           background-image:
+                   url("src/assets/images/topics/planning/topicMakeWishList.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+       }
+
+       .topic-write-care-plan {
+           background-repeat: no-repeat;
+           background-image:
+                   url("src/assets/images/topics/planning/topicWriteCarePlan.jpg"), radial-gradient(var(--color-background-dark-grey), var(--color-background-light-grey));
+       }*/
+
+
 }

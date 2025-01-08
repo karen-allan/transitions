@@ -9,7 +9,8 @@ import { Meta, Title } from '@angular/platform-browser';
 export class AboutPractitionerOverviewComponent implements OnInit {
 
   @Input() title:string ='';
-
+  @Input() quote:string='';
+  @Input() author:string='';
 
   metaTitle = 'About End of Life Doulas | Vancouver Based Doula Karen Allan'
   metaDesc='Learn about End of Life Doula Practitioner Karen Allan and why she became an advocate for End Of Life care for both patients' +

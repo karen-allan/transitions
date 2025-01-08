@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {RepNine} from "../../../ts-files/rep-nine";
-
+import * as Constants from 'src/app/ts-files/constants'
 
 @Component({
   selector: 'app-choose-your-rep-container',
@@ -9,13 +9,15 @@ import {RepNine} from "../../../ts-files/rep-nine";
 })
 export class ChooseYourRepContainerComponent implements OnInit {
 
-  menuItemId:number  = 3;
-  subMenuItemId:number = 31;
+  menuItemId:number  = 2;
+  subMenuItemId:number = 21;
 
-  detailHeaderName="header-choose-rep"
-  title="Assign Your Representative(s)"
-  /*today = new Date();
-  legalDate =  formatDate(this.today, 'y/MM/d',  'en-US')*/
+  lookupParent=Constants.PLAN_AHEAD
+  lookupChild: string=Constants.CONSIDER_YOUR_ADVOCATES
+
+  title= Constants.CHOOSE_YOUR_REPS
+  quote: string='When the world is silent, even one voice becomes powerful.';
+  author: string='Malala Yousafzai';
 
   rep:RepNine;
 

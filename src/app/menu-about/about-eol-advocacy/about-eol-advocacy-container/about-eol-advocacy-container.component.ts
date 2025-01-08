@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as Constants from 'src/app/ts-files/constants'
 
 @Component({
   selector: 'app-about-eol-advocacy-container',
@@ -7,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutEolAdvocacyContainerComponent implements OnInit {
 
-  menuItemId:number   = 1;
-  subMenuItemId:number = 10;
+  menuItemId:number   = 4;
+  subMenuItemId:number = 41;
 
   detailHeaderName = 'header-about-eol-advocacy';
-  title='About End-Of-Life Consultants';
+  title= Constants.ABOUT_HOW_WE_SUPPORT_YOU
+  quote: string='In protecting oneself, others are protected. In protecting others, oneself is protected.';
+  author: string='Gautama Buddha';
 
   constructor() { }
 

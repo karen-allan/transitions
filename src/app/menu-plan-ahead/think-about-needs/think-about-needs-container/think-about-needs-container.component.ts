@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as Constants from 'src/app/ts-files/constants'
 
 @Component({
   selector: 'app-think-about-needs-container',
@@ -7,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThinkAboutNeedsContainerComponent {
 
-  menuItemId:number  = 2;
-  subMenuItemId:number = 20;
+  menuItemId:number  = 1;
+  subMenuItemId:number = 10;
 
-  detailHeaderName="header-think-about-needs"
-  title="Think about your needs"
-
+  title=Constants.THINK_ABOUT_YOUR_NEEDS
+  quote: string='Someone\'s sitting in the shade today because someone planted a tree long ago.';
+  author: string='Warren Buffett';
 
 }

@@ -16,7 +16,7 @@ export class ChooseYourRepWizardComponent implements OnInit {
   title:string = "Title";
 
   page:number=0;
-  finalPage:number=8;
+  finalPage:number=7;
   now:string;
 
   public event: EventEmitter<any> = new EventEmitter();
@@ -25,7 +25,8 @@ export class ChooseYourRepWizardComponent implements OnInit {
 
   /* *************************************************************************************************************** */
   ngOnInit(): void {
-    this.page = 7;
+    this.page = 0;
+    this.rep.choose_alternate = 'chooseAlternateYes';
 
     this.setCurrentDateForHeader();
     /* will remove the defaults once done testing */
@@ -52,6 +53,7 @@ export class ChooseYourRepWizardComponent implements OnInit {
   setClientDefaults() {
       this.rep.client_name="Karen Gail Allan"
       this.rep.client_address = "2608 Airstrip Road, Anglemont, B.C."
+      //this.rep.skip_alternate_1=false;
   }
 
   /* *************************************************************************************************************** */
@@ -128,6 +130,23 @@ export class ChooseYourRepWizardComponent implements OnInit {
       this.errorMessage='';
       this.getNextPage();
     }
+
+  }
+
+  /* *************************************************************************************************************** */
+  /* called from the html */
+  checkRequestForAlternateRep(): void {
+
+    if (this.rep.choose_alternate == "chooseAlternateYes") {
+     // alert ('I want an alternate');
+      this.getNextPage();
+    }
+    else if (this.rep.choose_alternate == "chooseAlternateNo") {
+    //  alert ('I DO NOT want an alternate');
+      this.skipNextPage();
+    }
+
+  //  alert ('next page will be page ' + this.page);
 
   }
 
@@ -214,6 +233,11 @@ export class ChooseYourRepWizardComponent implements OnInit {
   /* *************************************************************************************************************** */
   getPreviousPage() {
     this.page = this.page - 1;
+  }
+
+  /* *************************************************************************************************************** */
+  skipNextPage() {
+    this.page = this.page + 2;
   }
 
   /* *************************************************************************************************************** */

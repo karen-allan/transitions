@@ -67,7 +67,7 @@ and (orientation: portrait) {
     }
 
     .screen-quote p {
-        font-size:var(--small-quote-mobile-port-font-size);
+        font-size:var(--big-quote-mobile-port-font-size);
     }
 
     .screen-quote span {
@@ -88,7 +88,7 @@ and (orientation: landscape) {
     }
 
     .screen-quote p  {
-        font-size:var(--small-quote-mobile-land-font-size);
+        font-size:var(--big-quote-mobile-land-font-size);
     }
 
     .screen-quote span {
@@ -108,7 +108,7 @@ and (orientation: portrait) {
     }
 
     .screen-quote p  {
-        font-size:var(--small-quote-tablet-port-font-size);
+        font-size:var(--big-quote-tablet-port-font-size);
     }
 
     .screen-quote span {
@@ -130,7 +130,7 @@ and (orientation: portrait) {
     }
 
     .screen-quote p  {
-        font-size:var(--small-quote-tablet-land-font-size);
+        font-size:var(--big-quote-tablet-land-font-size);
     }
 
     .screen-quote span {
@@ -155,6 +155,32 @@ and (orientation: landscape) {
         width:var(--media-more-than-content-width);
     }
 
+    .bio-grid {
+        width:var(--media-less-than-content-width);
+        grid-template-columns: 30% 70%;
+        margin: auto;;
+    }
+
+    .bio-image {
+        grid-column:1;
+        justify-content: flex-start;
+        height:400px;
+    }
+
+   /* .bkgrd-facts {
+        background: url("src/assets/images/details/home/backgroundFAQs.jpg") center no-repeat;
+        background-size: contain;
+    }*/
+
+    .bio-text {
+        grid-column:2;
+        justify-content: flex-start;
+        align-content: center;
+        /*border: thin solid darkblue;*/
+        /*height:400px;*/
+        padding:1em;
+    }
+
 }
 
 
@@ -170,7 +196,7 @@ and (orientation: landscape) {
     }
 
     .screen-quote p {
-        font-size:var(--small-quote-tablet-land-font-size);
+        font-size:var(--big-quote-tablet-land-font-size);
     }
 
     .screen-quote span {
@@ -192,7 +218,7 @@ and (orientation: landscape) {
 
     /* QUOTES */
     .screen-quote p  {
-        font-size:var(--small-quote-ipad-land-font-size);
+        font-size:var(--big-quote-ipad-land-font-size);
     }
 
     .screen-quote span {
@@ -217,6 +243,21 @@ and (min-width: 1440px) {
     .screen-quote span {
         font-size:var(--tiny-quote-desktop-font-size);
     }
+
+    .wizard-action-copy {
+        font-size:var(--big-quote-desktop-font-size);
+    }
+
+  /*  .bio-text h2, .bio-text h2 a {
+        font-size: var(--big-copy-desktop-font-size);
+        letter-spacing: 1px;
+    }*/
+
+    .bio-text p, .bio-text h2, .contact-text p, .contact-text h2  {
+        font-size: var(--med-copy-desktop-font-size);
+        letter-spacing: 1px;
+    }
+
 }
 
 /* GLOBAL ****************************************************************************************************/
@@ -270,18 +311,115 @@ and (min-width: 1440px) {
         text-align: right;
     }
 
+    .wizard-action-logo {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image:url("src/assets/images/details/takeAction/writeNeedsDown/wizardActionMakeWishes.jpg");
+        background-position: center;
+        height: 800px;
+        width:800px;
+        cursor: pointer;
+    }
+
+    .wizard-action-choose-reps {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image:url("src/assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseReps.jpg");
+        background-position: center;
+        height: 800px;
+        width:800px;
+        cursor: pointer;
+    }
+
+    .wizard-action-write-advance-plan {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image:url("src/assets/images/details/planning/wizardActionWriteAdvancePlan.jpg");
+        background-position: center;
+        height: 800px;
+        width:800px;
+        cursor: pointer;
+    }
+
+
+    .wizard-action-copy {
+        display: grid;
+        text-orientation: sideways;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        color: var(--color-dark-blue);
+        font-family: var(--family-quotes);
+        font-style: italic;
+        font-weight: 400;
+        padding-top: .5em;
+        cursor: pointer;
+    }
+
     .screen-line   {
         display:block;
         width:100%;
         float:left;
         margin:auto;
-
     }
 
     .screen-line h4 {
         padding-top:3em;
         border-top-color: black;
         border-bottom-color: blue;
+    }
+
+    /* bio-grid and contact-grid for about us page */
+    .bio-grid, .contact-grid {
+        display: grid;
+        max-width: var(--banner-width);
+        margin: 3em auto;
+        font-family: var(--family-copy);
+    }
+
+    .bio-grid {
+        grid-template-columns: 28% 72%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 45% 55%;
+    }
+
+    .bio-image, .bio-text, .contact-image, .contact-text {
+        display: grid;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .bio-text  {
+        border-top:thin dashed var(--color-purple);
+        border-bottom:thin dashed var(--color-purple);
+    }
+
+    .bio-image, .contact-text {
+        grid-column:1;
+    }
+
+    .bio-text, .contact-image {
+        grid-column: 2;
+    }
+
+    .bio-text h2, .bio-text h2 a, .bio-text p, .contact-text h2, .contact-text h2 a, .contact-text p  {
+        text-align: justify;
+        color: var(--color-dark-blue);
+    }
+
+    .contact-text p {
+        align-content: center;
+        padding:0 2em;
+    }
+
+    .bio-text h2 a, .contact-text h2 a {
+        text-decoration: none;
+    }
+
+    .bio-text h2 a:hover, .contact-text h2 a:hover {
+        color: var(--color-purple);
     }
 
 }

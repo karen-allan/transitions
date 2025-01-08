@@ -41,7 +41,12 @@
             <div class="desktop-menu">
                 <div *ngFor="let menuItem of menuItems">
                     <div class="desktop-top-menu-item">
-                        <span>{{menuItem.title}}&#x25BC;&nbsp;</span>
+                        <ng-container *ngIf="menuItem.id == menuItemId">
+                            <span><b>{{menuItem.title}}&#x25BC;&nbsp;</b></span>
+                        </ng-container>
+                        <ng-container *ngIf="menuItem.id != menuItemId">
+                            <span>{{menuItem.title}}&#x25BC;&nbsp;</span>
+                        </ng-container>
                         <div class="dropdown-content">
                             <ng-container *ngFor="let subMenuItem of menuItem.submenuItems">
                                 <ng-container *ngIf="subMenuItem.id == subMenuItemId">

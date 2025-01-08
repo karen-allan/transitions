@@ -29,7 +29,7 @@
         </div>
     </ng-container>
 
-    <ng-container *ngIf="page > 0 && page <= 20">
+    <ng-container *ngIf="page > 0 && page <= 30">
         <app-make-wishes-wizard-header [wishes]='wishes'></app-make-wishes-wizard-header>
 
         <div class="wizard-prompt">
@@ -51,14 +51,14 @@
             </div>
         </div>
 
-        <div class="three-buttons-container">
+        <div class="three-buttons-container pad-top-3 pad-bottom-3">
             <button class="cancel-button" (click)="cancelWizard()">CANCEL</button>
             <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
             <button class="next-button" (click)="getNextPage()">NEXT</button>
         </div>
     </ng-container>
 
-    <ng-container *ngIf="page === 21">
+    <ng-container *ngIf="page === 31">
         <app-make-wishes-wizard-header [wishes]='wishes'></app-make-wishes-wizard-header>
 
         <div class="wizard-end">

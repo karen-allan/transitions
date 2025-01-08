@@ -214,17 +214,23 @@ and (max-width:1919px) {
 and (min-width: 1920px) {
 
     /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
-    .header-home-image {
+    .header-home-image  {
         height:700px;
+    }
+
+    .header-detail-image {
+        height:400px;
     }
 
     /* 1920 by 700 */
-    .header-detail-image {
-        height:700px;
-    }
 
     .header-copy p {
         font-size:var(--big-quote-desktop-font-size);
+        line-height:70%;
+    }
+
+    .header-copy span {
+        font-size:var(--small-quote-desktop-font-size);
         line-height:150%;
     }
 
@@ -238,73 +244,118 @@ and (min-width: 1920px) {
     }
 
     /* THE MAIN BANNER WITH IMAGE AT THE TOP OF EACH PAGE WITH QUOTE UNDERNEATH EACH */
-    .header-detail-image {
+    /*.header-detail-image {
         display: block;
         float: left;
-    }
+    }*/
 
     .header-copy {
-        display: block;
+        display: grid;
         float: left;
         text-align: center;
+        align-content: end;
         background-color: var(--color-dark-blue); /* Fallback color */
         color: var(--color-white);
-        border: 1px solid #f1f1f1;
+        /*border-bottom: 1px solid #f1f1f1;*/
     }
 
-    .header-copy p {
+    .header-copy p, .header-copy span {
         font-family: var(--family-quotes);
         font-style: italic;
         font-weight: 400;
-        padding: 1em 0;
-        line-height: 120%;
+    }
+
+    .header-copy p {
+        padding-top: .5em;
     }
 
     /* HOME  */
-    .header-home {
+    .header-home-image {
         background-size: cover;
         background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
         url('src/assets/images/headers/home/headerHome.jpg');
     }
 
-    /* ABOUT  */
-    .header-about-eol-advocacy {
-        background-size: cover;
-        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-        url('src/assets/images/headers/about/headerAboutEolAdvocacy.jpg');
-    }
-
-    .header-about-practitioner {
-        background-size: cover;
-        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-        url('src/assets/images/headers/about/headerAboutPractitioner.jpg');
-    }
-
     /* PLAN AHEAD */
-    .header-think-about-needs {
+    .header-think-about-needs-image {
         background-size: cover;
         background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-        url("src/assets/images/headers/planning/headerThinkAboutNeeds.jpg");
+        url("src/assets/images/headers/planAhead/thinkAboutNeeds.jpg");
     }
 
-    .header-choose-rep {
+    .header-consider-advocates-image {
         background-size: cover;
         background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-        url('src/assets/images/headers/planning/headerChooseRep.jpg');
+        url('src/assets/images/headers/planAhead/considerAdvocates.jpg');
+    }
+
+    .header-understand-care-plan-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/planAhead/understandAdvancePlans.jpg");
+    }
+
+    .header-know-rights-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/planAhead/knowYourRights.jpg");
+    }
+
+    /* TAKE ACTION */
+    .header-write-needs-down-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/takeAction/writeNeedsDown.jpg");
+    }
+
+    .header-choose-your-rep-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/takeAction/chooseReprentatives.jpg");
+    }
+
+    .header-write-adv-care-plan-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/takeAction/writeCarePlan.jpg");
+    }
+
+    .header-create-checklist-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/takeAction/createCheckList.jpg");
+    }
+
+    /* ABOUT  */
+    .header-about-eol-advocacy-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/about/headerAboutEolAdvocacy400.jpg');
+    }
+
+    .header-about-pract-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/about/headerAboutPractitioner400.jpg');
     }
 
 
-
-    .header-roles-of-consultant {
+ /*   .header-stay-home-image {
         background-size: cover;
         background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-        url('src/assets/images/headers/consultations/headerRolesOfConsultants.jpg');
+        url("src/assets/images/headers/planning/headerStayHome400.jpg");
+    }*/
+
+    .header-testimonials-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/consultations/headerTestimonials400.jpg');
     }
 
-    .header-book-consultation {
+    .header-book-consultation-image {
         background-size: cover;
         background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-        url('src/assets/images/headers/consultations/headerBookConsultation.jpg');
+        url('src/assets/images/headers/consultations/headerBookConsultation400.jpg');
     }
 
     .header-plan-ahead-wizard {
@@ -314,11 +365,4 @@ and (min-width: 1920px) {
     }
 
 
-
-
-    .header-documents-to-sign {
-        background-size: cover;
-        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
-        url("src/assets/images/headers/planning/headerDocumentsToSign.jpg");
-    }
 }

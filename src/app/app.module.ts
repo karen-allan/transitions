@@ -26,8 +26,9 @@ import { DataEntryPatientConsultComponent } from './global-data-entry/data-entry
 import { DataEntryPlanningConsultComponent } from './global-data-entry/data-entry-planning-consult/data-entry-planning-consult.component';
 import { MenuForConsultationsComponent } from './global-data-entry/menu-for-consultations/menu-for-consultations.component';
 
-/************************************************************* GLOBAL FOOTER **************************************************************/
-import { GlobalFooterComponent } from './global-footer/global-footer.component';
+/************************************************************* GLOBAL FOOTERS **************************************************************/
+import { GlobalFooterComponent } from './global-footers/global-footer.component';
+import { PrintedFooterComponent } from './printed-footer/printed-footer.component';
 
 /************************************************************* GLOBAL FORMS ***************************************************************/
 import { CovidComponent } from './global-forms/covid/covid.component';
@@ -37,9 +38,6 @@ import { FrailtyScaleComponent } from './global-forms/frailty-scale/frailty-scal
 import { MedicalHistoryComponent } from './global-forms/medical-history/medical-history.component';
 import { SupportForCaregiverComponent } from './global-forms/support-for-caregiver/support-for-caregiver.component';
 import { SupportForPatientComponent } from './global-forms/support-for-patient/support-for-patient.component';
-
-/************************************************************* GLOBAL HEADERS *************************************************************/
-import { GlobalHeadersComponent } from './global-headers/global-headers.component';
 
 /************************************************************* GLOBAL MENU ****************************************************************/
 import { GlobalMenuComponent } from './global-menu/global-menu.component';
@@ -84,21 +82,11 @@ import { ConsiderAdvocatesOverviewComponent } from './menu-plan-ahead/considerYo
 import { ConsiderCprDirectiveContainerComponent } from './menu-plan-ahead/consider-cpr/consider-cpr-directive-container/consider-cpr-directive-container.component';
 import { ConsiderCprDirectiveOverviewComponent } from './menu-plan-ahead/consider-cpr/consider-cpr-directive-overview/consider-cpr-directive-overview.component';
 
-/** CONSIDER EDITH DIRECTIVE FOLDER **/
-import { ConsiderEdithDirectiveContainerComponent } from './menu-plan-ahead/consider-edith/consider-edith-directive-container/consider-edith-directive-container.component';
-import { ConsiderEdithDirectiveOverviewComponent } from './menu-plan-ahead/consider-edith/consider-edith-directive-overview/consider-edith-directive-overview.component';
-
 /** THINK ABOUT NEEDS FOLDER **/
 import { ThinkAboutNeedsContainerComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-container/think-about-needs-container.component';
 import { ThinkAboutNeedsOverviewComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-overview/think-about-needs-overview.component';
 
 /************************************************************* MENU WRITE PLANS ***********************************************************/
-/** CHANGE YOUR REP FOLDER **/
-import { ChangeYourRepContainerComponent } from './menu-write-plans/change-your-rep/change-your-rep-container/change-your-rep-container.component';
-import { ChangeYourRepOverviewComponent } from './menu-write-plans/change-your-rep/change-your-rep-overview/change-your-rep-overview.component';
-import { ChangeYourRepWizardComponent } from './menu-write-plans/change-your-rep/change-your-rep-wizard/change-your-rep-wizard.component';
-import { ChangeYourRepWizardHeaderComponent } from './menu-write-plans/change-your-rep/change-your-rep-wizard-header/change-your-rep-wizard-header.component';
-import { ChangeYourRepWizardPrintoutComponent } from './menu-write-plans/change-your-rep/change-your-rep-wizard-printout/change-your-rep-wizard-printout.component';
 
 /** CHECK OFF TASKS LIST FOLDER **/
 import { CheckOffTasksListContainerComponent } from './menu-write-plans/check-off-tasks-list/check-off-tasks-list-container/check-off-tasks-list-container.component';
@@ -147,9 +135,6 @@ import { WriteAdvanceDirectiveWizardPrintoutComponent } from './menu-write-plans
         SupportForCaregiverComponent,
         SupportForPatientComponent,
 
-        /******************************* GLOBAL HEADERS *******************************/
-        GlobalHeadersComponent,
-
         /******************************* GLOBAL MENU *******************************/
         GlobalMenuComponent,
 
@@ -197,18 +182,7 @@ import { WriteAdvanceDirectiveWizardPrintoutComponent } from './menu-write-plans
         ConsiderCprDirectiveContainerComponent,
         ConsiderCprDirectiveOverviewComponent,
 
-        /* CONSIDER EDITH FOLDER */
-        ConsiderEdithDirectiveContainerComponent,
-        ConsiderEdithDirectiveOverviewComponent,
-
         /****************************** MENU WRITE PLANS ************************/
-
-        /* CHANGE YOUR REP FOLDER */
-        ChangeYourRepContainerComponent,
-        ChangeYourRepOverviewComponent,
-        ChangeYourRepWizardComponent,
-        ChangeYourRepWizardHeaderComponent,
-        ChangeYourRepWizardPrintoutComponent,
 
         /* CHECK OFF TASKS LIST FOLDER */
         CheckOffTasksListContainerComponent,
@@ -234,6 +208,7 @@ import { WriteAdvanceDirectiveWizardPrintoutComponent } from './menu-write-plans
         WriteAdvanceDirectiveWizardComponent,
         WriteAdvanceDirectiveWizardHeaderComponent,
         WriteAdvanceDirectiveWizardPrintoutComponent,
+        PrintedFooterComponent,
 
 
 
@@ -258,7 +233,6 @@ import { WriteAdvanceDirectiveWizardPrintoutComponent } from './menu-write-plans
     providers: [DatePipe, Meta],
     exports: [
         GlobalMenuComponent,
-        GlobalHeadersComponent,
         GlobalFooterComponent
     ],
     bootstrap: [AppComponent]

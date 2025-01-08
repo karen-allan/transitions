@@ -9,6 +9,10 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ThinkAboutNeedsOverviewComponent {
 
   @Input() title='';
+  @Input() quote='';
+  @Input() author='';
+
+
   constructor() { }
 
 

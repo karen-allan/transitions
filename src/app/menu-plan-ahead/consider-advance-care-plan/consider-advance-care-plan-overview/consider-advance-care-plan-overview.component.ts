@@ -8,6 +8,9 @@ import {Component, Input} from '@angular/core';
 export class ConsiderAdvanceCarePlanOverviewComponent {
 
   @Input() title='';
+  @Input() quote='';
+  @Input() author='';
+
   sectionSelected: string ='';
 
   /*********************************************************************************/

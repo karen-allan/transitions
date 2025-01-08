@@ -15,7 +15,7 @@ export class MakeWishesWizardComponent implements OnInit {
   wishes:WishesWizard;
   title:string = "Title";
   page:number=0;
-  finalPage:number=20;
+  finalPage:number=30;
   selectedQuestion:Question;
   now:string;
   public event: EventEmitter<any> = new EventEmitter();
@@ -26,7 +26,6 @@ export class MakeWishesWizardComponent implements OnInit {
   /* *************************************************************************************************************** */
   ngOnInit(): void {
     this.page = 0;
-    //  this.page = 16;
     this.getCurrentDate();
   }
 

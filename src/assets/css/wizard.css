@@ -428,7 +428,7 @@ and (min-width: 1440px) {
         /*border-bottom: 2px solid var(--color-darkest-grey);*/
     }
 
-    .wizard-header-logo {
+    .wizard-header-logo  {
         display:grid;
         justify-content: center;
         background-repeat: no-repeat;

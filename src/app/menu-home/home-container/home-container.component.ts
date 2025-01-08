@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeContainerComponent implements OnInit {
 
   menuItemId:number = 0
-  subMenuItemId = 0
+  subMenuItemId = 1
 
   detailHeaderName = 'header-home'
   title='Facing our Mortality'

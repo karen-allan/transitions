@@ -18,9 +18,15 @@
   --color-darkest-grey: #423f3f;
 
   --color-background-purple:#4a333b;
+  --color-background-lignt-purple:#977d86;
+
   --color-background-pink:#f4e6f3;
-  --color-background-blue:#7aaad8;
+  --color-background-light-blue:#a3bacd;
+  --color-background-dark-blue:#5a7d9f;
+
   --color-background-yellow: #f0f0cf;
+  --color-background-dark-grey:#9c9494;
+  --color-background-light-grey:#ffffff;
 
   /* CONTENT WIDTHS */
   /* if the content container --content-width (800) and the device css is smaller than 800px it needs space on either side 90%
@@ -127,7 +133,7 @@
   --mobile-sub-menu-item-tablet-ipad-font-size:.8em;
 
   /* ****************************** ALL COPY AND LISTS ****************************** */
-  --family-copy: 'Corbel';
+  --family-copy: 'Arial';
   --family-facts: 'Calibri';
   --family-rep-form: 'Open Sans';
 
@@ -162,7 +168,7 @@
   --small-copy-ipad-port-font-size:.9em;
 
   --small-copy-banana-land-font-size:.6em;
-  --small-copy-mobile-land-font-size:.7em;
+  --small-copy-mobile-land-font-size:.75em;
   --small-copy-tablet-land-font-size:.8em;
   --small-copy-ipad-land-font-size:.9em;
   --small-copy-desktop-font-size:1.1em;
@@ -216,11 +222,12 @@
   --h2-copy-desktop-font-size:1.8em;
 
   /* ALL QUOTES - USES FAMILY QUOTES */
-  --family-quotes: 'Goudy Old Style';
+  --family-quotes: 'Sans Serif';
+  /*--family-quotes: 'Goudy Old Style';*/
 
   /* the banner quotes */
   --big-quote-banana-port-font-size:.5em;
-  --big-quote-mobile-port-font-size:.8em;
+  --big-quote-mobile-port-font-size:.9em;
   --big-quote-tablet-port-font-size:1.0em;
   --big-quote-ipad-port-font-size:1.2em;
 
@@ -372,16 +379,14 @@
 
   .footer-top {
     padding-top: 1em;
-    background-color: white;
+    background-color: var(--color-dark-blue);
+    /*background-color: white;*/
   }
 
   .footer-bottom {
     padding:1em;
     background-color: var(--color-dark-blue);
   }
-
-
-
 
   .dark-copy-hidden {
     display:none;
@@ -420,9 +425,6 @@
     font-style:italic;
   }
 
-  .list-item-with-roman {
-
-  }
   /* LIST FORMATS */
   .with-circle {
     list-style-type: circle;
@@ -446,6 +448,10 @@
 
   .cursorText {
     cursor: none;
+  }
+
+  .noHyperlink a {
+     text-decoration: none;
   }
 
   /* LINKS */

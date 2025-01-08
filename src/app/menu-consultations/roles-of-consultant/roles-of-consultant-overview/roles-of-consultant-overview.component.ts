@@ -9,6 +9,8 @@ import { Meta, Title } from '@angular/platform-browser';
 export class RolesOfConsultantOverviewComponent implements OnInit {
 
   @Input() title='';
+  @Input() quote='';
+  @Input() author='';
 
   metaTitle = 'About End-of-Life Advocacy | End-of-life Doula Roles'
   metaDesc='Learn about the many varied roles end-of-life doulas play - from helping you create a formal care plan, to supporting ' +

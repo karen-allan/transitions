@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as Constants from 'src/app/ts-files/constants'
 @Component({
   selector: 'app-about-practitioner-container',
   templateUrl: './about-practitioner-container.component.html',
@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutPractitionerContainerComponent implements OnInit {
 
-  menuItemId:number   = 1;
-  subMenuItemId:number = 11;
+  menuItemId:number   = 4;
+  subMenuItemId:number = 40;
 
   detailHeaderName = 'header-about-practitioner'
-  title='Why I Chose this Path'
+  title= Constants.ABOUT_EOL_CAREGIVERS
+  quote: string='The dignity we seek in dying must be found in the dignity with which we have lived our lives.';
+  author: string='Sherwin B Nuland';
 
   constructor() { }
 

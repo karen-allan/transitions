@@ -81,7 +81,7 @@ and (max-width: 599px)
 and (orientation: portrait) {
 
     .facts-text a,.citations-left a, .citations-right a {
-        font-size: var(--smallest-copy-mobile-port-font-size);
+        font-size: var(--big-copy-mobile-port-font-size);
     }
 
 }
@@ -93,12 +93,18 @@ and (min-width: 600px)
 and (max-width: 1023px)
 and (orientation: portrait) {
 
-    .citations-left, .citations-right {
-        padding-left:3em;
+    .citations-grid {
+        width:80%;
+        padding-left:20%;
+        grid-template-columns: 100%;
     }
 
+   /* .citations-left, .citations-right {
+        padding-left:3em;
+    }*/
+
     .facts-text a,.citations-left a, .citations-right a {
-        font-size: var(--smallest-copy-tablet-port-font-size);
+        font-size: var(--small-copy-tablet-port-font-size);
     }
 
 }
@@ -109,12 +115,18 @@ and (min-width: 1024px)
 and (max-width: 1366px)
 and (orientation: portrait) {
 
+    .citations-grid {
+        width:75%;
+        padding-left:25%;
+        grid-template-columns: 100%;
+    }
+
     .citations-left, .citations-right {
-        padding-left:3em;
+        /*padding-left:3em;*/
     }
 
     .facts-text a {
-        font-size: var(--small-copy-ipad-port-font-size);
+        font-size: var(--med-copy-ipad-port-font-size);
     }
 
 }
@@ -184,21 +196,9 @@ and (min-width:896px )
 and (max-width: 1279px)
 and (orientation: landscape) {
 
- /*   .citations-grid {
-        grid-template-columns: repeat(2, 50%);
-    }
-
-    .citations-left  {
-        grid-column:1;
-    }
-
-    .citations-right  {
-        grid-column:2;
-    }*/
-
     .facts-text a,.citations-left a, .citations-right a {
         font-size: var(--small-copy-mobile-land-font-size);
-
+        padding-left:1em;
     }
 
 }
@@ -211,7 +211,8 @@ and (max-width: 1365px)
 and (orientation: landscape) {
 
     .facts-text a, .citations-left a, .citations-right a {
-        font-size: var(--small-copy-tablet-land-font-size);
+        font-size: var(--med-copy-tablet-land-font-size);
+        padding-left:1em;
     }
 
 }
@@ -223,7 +224,8 @@ and (max-width: 1439px)
 and (orientation: landscape) {
 
     .facts-text a, .citations-left a, .citations-right a {
-        font-size: var(--small-copy-ipad-land-font-size);
+        font-size: var(--med-copy-ipad-land-font-size);
+        padding-left:2em;
     }
 
 }
@@ -246,6 +248,12 @@ and (min-width: 1440px) {
 
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
+
+    .book-session {
+        background-repeat: no-repeat;
+        background-image:
+                url("src/assets/images/details/home/bookSession.jpg");
+    }
 
     .facts-grid, .citations-grid {
         display:grid;

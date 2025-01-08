@@ -15,12 +15,10 @@ import { BookConsultationContainerComponent } from './menu-consultations/book-co
 /* MENU PLAN AHEAD */
 import { ConsiderAdvanceCarePlanContainerComponent } from './menu-plan-ahead/consider-advance-care-plan/consider-advance-care-plan-container/consider-advance-care-plan-container.component';
 import { ConsiderCprDirectiveContainerComponent } from './menu-plan-ahead/consider-cpr/consider-cpr-directive-container/consider-cpr-directive-container.component';
-import { ConsiderEdithDirectiveContainerComponent } from './menu-plan-ahead/consider-edith/consider-edith-directive-container/consider-edith-directive-container.component';
 import { ConsiderAdvocatesContainerComponent } from './menu-plan-ahead/considerYourAdvocates/consider-advocates-container/consider-advocates-container.component';
 import { ThinkAboutNeedsContainerComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-container/think-about-needs-container.component';
 
 /* MENU WRITE PLANS */
-import { ChangeYourRepContainerComponent } from './menu-write-plans/change-your-rep/change-your-rep-container/change-your-rep-container.component';
 import { CheckOffTasksListContainerComponent } from './menu-write-plans/check-off-tasks-list/check-off-tasks-list-container/check-off-tasks-list-container.component';
 import { ChooseYourRepContainerComponent } from './menu-write-plans/choose-your-rep/choose-your-rep-container/choose-your-rep-container.component';
 import { MakeWishesContainerComponent } from './menu-write-plans/make-wish-list/make-wishes-container/make-wishes-container.component';
@@ -32,27 +30,32 @@ const routes: Routes = [
 
     {path: 'menuHome', component: HomeContainerComponent},
 
-    {path: 'menuAbout', component: AboutEolAdvocacyContainerComponent},
-    {path: 'aboutEndOfLifeAdvocacy', component: AboutEolAdvocacyContainerComponent},
-    {path: 'aboutPractitioner', component: AboutPractitionerContainerComponent},
+    {path: 'menuPlanAhead', component: ThinkAboutNeedsContainerComponent},
+    {path: 'thinkAboutNeeds', component: ThinkAboutNeedsContainerComponent},
+    {path: 'considerAdvocates', component: ConsiderAdvocatesContainerComponent},
+    {path: 'considerAdvancePlan', component: ConsiderAdvanceCarePlanContainerComponent},
+    {path: 'considerCPR', component: ConsiderCprDirectiveContainerComponent},
+
+    {path: 'menuWritePlans', component: MakeWishesContainerComponent},
+    {path: 'makeWishList', component: MakeWishesContainerComponent},
+    {path: 'chooseReps', component: ChooseYourRepContainerComponent},
+    {path: 'writeCarePlan', component: WriteAdvanceDirectiveContainerComponent},
+    {path: 'checkOffList', component: CheckOffTasksListContainerComponent},
 
     {path: 'menuConsultations', component: RolesOfConsultantContainerComponent},
     {path: 'rolesOfConsultant', component: RolesOfConsultantContainerComponent},
     {path: 'bookConsultation', component: BookConsultationContainerComponent},
 
-    {path: 'menuPlanAhead', component: ThinkAboutNeedsContainerComponent},
-    {path: 'considerAdvancePlan', component: ConsiderAdvanceCarePlanContainerComponent},
-    {path: 'considerCPR', component: ConsiderCprDirectiveContainerComponent},
-    {path: 'considerEdith', component: ConsiderEdithDirectiveContainerComponent},
-    {path: 'considerAdvocates', component: ConsiderAdvocatesContainerComponent},
-    {path: 'thinkAboutNeeds', component: ThinkAboutNeedsContainerComponent},
 
-    {path: 'menuWritePlans', component: MakeWishesContainerComponent},
-    {path: 'changeRep', component: ChangeYourRepContainerComponent},
-    {path: 'checkOffList', component: CheckOffTasksListContainerComponent},
-    {path: 'chooseReps', component: ChooseYourRepContainerComponent},
-    {path: 'makeWishList', component: MakeWishesContainerComponent},
-    {path: 'writeCarePlan', component: WriteAdvanceDirectiveContainerComponent},
+    {path: 'menuAbout', component: AboutEolAdvocacyContainerComponent},
+    {path: 'aboutEndOfLifeAdvocacy', component: AboutEolAdvocacyContainerComponent},
+    {path: 'aboutPractitioner', component: AboutPractitionerContainerComponent},
+
+
+
+
+
+
 
 ];
 

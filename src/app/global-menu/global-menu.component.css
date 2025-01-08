@@ -586,6 +586,11 @@ and (orientation: landscape) {
         cursor:pointer;
     }
 
+    .desktop-top-menu-item span b {
+        color:var(--color-background-purple);
+        cursor:pointer;
+    }
+
     .dropdown-content {
         display: none;
         position: absolute;
@@ -623,7 +628,8 @@ and (orientation: landscape) {
     }
 
     .dropdown-content span {
-        color: var(--color-dark-pink);
+        color: var(--color-background-purple);
+        font-weight: bold;
     }
 
     .swirl {

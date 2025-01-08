@@ -9,6 +9,8 @@ import { Meta, Title } from '@angular/platform-browser';
 export class AboutEolAdvocacyOverviewComponent implements OnInit {
 
   @Input() title:string ='';
+  @Input() quote:string='';
+  @Input() author:string='';
   @Input() subtitle:string ='';
 
   metaTitle = 'About End-of-Life Advocacy | End-of-life Doula Help'

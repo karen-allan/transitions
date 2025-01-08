@@ -9,6 +9,9 @@ import {Component, Input} from '@angular/core';
 export class ConsiderAdvocatesOverviewComponent  {
 
   @Input() title:string='';
+  @Input() quote='';
+  @Input() author='';
+
   sectionSelected: string ='';
 
   constructor() { }

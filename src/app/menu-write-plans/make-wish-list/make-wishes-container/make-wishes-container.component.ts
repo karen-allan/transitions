@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {WishesWizard} from "../../../ts-files/wishes-wizard";
 import {Question} from "../../../ts-files/question";
 import {QUESTIONS} from "../../../ts-files/questions";
+import * as Constants from 'src/app/ts-files/constants'
 
 @Component({
   selector: 'app-make-wishes-container',
@@ -10,11 +11,15 @@ import {QUESTIONS} from "../../../ts-files/questions";
 })
 export class MakeWishesContainerComponent {
 
-  menuItemId:number  = 3;
-  subMenuItemId:number = 30;
+  menuItemId:number  = 2;
+  subMenuItemId:number = 20;
 
-  detailHeaderName="header-think-about-needs"
-  title="Think about your needs and wishes"
+  lookupParent:string= Constants.PLAN_AHEAD
+  lookupChild=Constants.THINK_ABOUT_YOUR_NEEDS
+
+  title=Constants.PUT_CHOICES_IN_WRITING
+  quote: string='Documentation is a love letter that you write to your future self.';
+  author: string='Damian Conway';
 
   wishes: WishesWizard;
   wishesQuestions: Question[] = [];

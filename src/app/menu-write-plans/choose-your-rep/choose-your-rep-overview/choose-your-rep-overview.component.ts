@@ -11,8 +11,12 @@ import {ChooseYourRepWizardComponent} from "../choose-your-rep-wizard/choose-you
 export class ChooseYourRepOverviewComponent {
 
   @Input() title:string='';
-  @Input() @Output() rep:RepNine;
+  @Input() quote:string='';
+  @Input() author:string='';
+  @Input() lookupParent:string='';
+  @Input() lookupChild:string='';
 
+  @Input() @Output() rep:RepNine;
 
   printForm:boolean=false;
 
@@ -42,6 +46,5 @@ export class ChooseYourRepOverviewComponent {
       window.print();
     }
   }
-
 
 }

@@ -948,9 +948,10 @@ and (min-width: 1440px) {
 
     @media screen {
         .make-wishes-wizard-printout, .choose-your-rep-wizard-printout, .change-your-rep-wizard-printout, .write-advanced-directive,
-        .print-caregiver-consult-component, .print-patient-consult-component, .print-planning-consult-component
-        {
-            display:none;
-        }
+        .print-caregiver-consult-component, .print-patient-consult-component, .print-planning-consult-component,
+        .print-disclaimer-table, .print-signature
+            {
+                display:none;
+            }
     }
 }

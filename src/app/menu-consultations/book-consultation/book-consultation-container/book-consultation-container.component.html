@@ -1,9 +1,9 @@
 <div class="book-consultation-screen">
     <app-global-menu [menuItemId]='menuItemId' [subMenuItemId]='subMenuItemId'></app-global-menu>
-    <app-global-headers [detailHeaderName]="detailHeaderName" [title]="title"></app-global-headers>
+<!--    <app-global-headers [detailHeaderName]="detailHeaderName" [title]="title"></app-global-headers>-->
 
     <div id ="bookConsultationTop"></div>
-    <app-book-consultation-overview [client]="client" [title]="title">  </app-book-consultation-overview>
+    <app-book-consultation-overview [client]="client" [title]="title" [quote]="quote" [author]="author">  </app-book-consultation-overview>
         <div class="print-container">
             <button class="print-form-button" (click)="printProfile()">PRINT</button>
         </div>

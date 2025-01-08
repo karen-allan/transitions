@@ -1,4 +1,4 @@
-export class TsdmClient {
+export class Tsdm {
 
     constructor(
         public id: number,

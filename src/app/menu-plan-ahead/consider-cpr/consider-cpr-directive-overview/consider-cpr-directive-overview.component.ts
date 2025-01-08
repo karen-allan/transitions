@@ -8,6 +8,9 @@ import {Component, Input} from '@angular/core';
 export class ConsiderCprDirectiveOverviewComponent {
 
   @Input() title='';
+  @Input() quote='';
+  @Input() author='';
+
   sectionSelected: string ='';
 
   /*********************************************************************************/

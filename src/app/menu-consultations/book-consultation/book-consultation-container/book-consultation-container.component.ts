@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Client} from "../../../ts-files/client";
+import {BOOK_CONSULTATION} from "src/app/ts-files/constants";
 
 @Component({
   selector: 'app-book-consultation-container',
@@ -8,11 +9,14 @@ import {Client} from "../../../ts-files/client";
 })
 export class BookConsultationContainerComponent implements OnInit {
 
-  menuItemId:number   = 4;
-  subMenuItemId:number = 41;
+  menuItemId:number   = 3;
+  subMenuItemId:number = 31;
 
   detailHeaderName = 'header-book-consultation'
-  title='Book a Consultation'
+  title= BOOK_CONSULTATION;
+  quote='Sometimes the greatest adventure is simply a conversation.';
+  author='Amadeus Wolfe'
+
   detailListName="list-book";
   selectedIntakeForm='caregiver';
 

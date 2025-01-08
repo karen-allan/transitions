@@ -45,6 +45,7 @@ export class AdvanceDirective {
         public client_phc_number:string,
         public consent_given_notes:string,
         public consent_refused_notes:string,
+        public organ_donor:string,
 
     )
     {}
