@@ -1,0 +1,251 @@
+<div class="choose-your-rep-wizard-printout">
+
+
+        <div class="print-heading">
+            ADVANCE DIRECTIVE (CARE PLAN)
+            <br>
+            {{directive.client_name}}
+            on
+            <br>
+            {{now}}
+        </div>
+
+        <div class="print-title">
+            <B>I revoke any previous Representation Agreement(s) I have made.</B>
+        </div>
+
+        <div class="print-title">
+            THIS ADVANCE DIRECTIVE (CARE PLAN) IS MADE BY ME, THE ADULT:
+            <br><br>
+            {{directive.client_name.toUpperCase()}} at<br><br>
+            {{directive.client_address}}<br><br>
+            in the Province of British Columbia
+        </div>
+
+        <div class="print-title pad-top-2">
+            <b>TREATMENTS I GIVE CONSENT TO ARE AS FOLLOWS:</b>
+        </div>
+
+        <div class="print-text pad-top-2">
+            The following are treatments that I give consent to.
+        </div>
+
+        <div class="print-instructions">
+            <p>{{directive.consent_given_notes}}</p>
+        </div>
+
+        <div class="print-title pad-top-2">
+            <b>TREATMENTS I GIVE DO NOT GIVE CONSENT TO (REFUSE) ARE AS FOLLOWS:</b>
+        </div>
+
+        <div class="print-text pad-top-2">
+            The following are treatments that I do not give consent to.
+        </div>
+
+        <div class="print-instructions">
+            <p>{{directive.consent_refused_notes}}</p>
+        </div>
+
+    <div class="print-text pad-top-2">
+        <p>I know that as a result of making this Advance Directive
+            <br><br>
+            a.I will not be provided with any health care for which I refuse consent in this Advance Directive, and
+            <br><br>
+            b. No one will be chosen to make decisions on my behalf in respect of any health care matters for which I give or
+            refuse consent in this Advance Directive.
+            <br><br>
+            See Note 1 (Intro Page) - Limitations of this Advance Directive)
+        </p>
+    </div>
+
+    <ng-container *ngIf="directive.organ_donor == 'organDonorNo'">
+        <div class="print-text pad-top-2">
+            I am not an organ donor
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="directive.organ_donor == 'organDonorYes'">
+        <div class="print-text pad-top-2">
+            I am an organ donor (have copy of organ donor directive)
+        </div>
+    </ng-container>
+
+        <div class="print-title pad-top-2">
+            <b>SIGNATURES</b>
+        </div>
+
+        <div class="print-title pad-top-2">
+            <b>ADULT SIGNATURE</b>
+        </div>
+
+        <div class="print-text">
+            I have signed this Advance Directive in the presence of the witnesses whose names
+            appears below.
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Adult's Signature:
+            </div>
+
+            <div class="print-second-column">
+                &nbsp;&nbsp;
+            </div>
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Date:
+            </div>
+
+            <div class="print-second-column">
+                <ng-container *ngIf="directive.signing_date != ''">
+                    {{directive.signing_date}}
+                </ng-container>
+
+                <ng-container *ngIf="directive.signing_date === ''">
+                    &nbsp;
+                </ng-container>
+            </div>
+        </div>
+
+        <div class="print-title pad-top-2">
+            <b>WITNESSES SIGNATURES</b>
+        </div>
+
+        <div class="print-title pad-top-2">
+            <b>WITNESS # 1</b>
+        </div>
+
+        <div class="print-text pad-top-2">
+            Witness #1 is {{directive.witness_one_name}} of {{directive.witness_one_address}}.
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Witness #1's Signature:
+            </div>
+
+            <div class="print-second-column">
+                &nbsp;&nbsp;
+            </div>
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Date:
+            </div>
+
+            <div class="print-second-column">
+                <ng-container *ngIf="directive.signing_date != ''">
+                    {{directive.signing_date}}
+                </ng-container>
+
+                <ng-container *ngIf="directive.signing_date === ''">
+                    &nbsp;
+                </ng-container>
+            </div>
+        </div>
+
+
+        <div class="print-title pad-top-2">
+            <b>WITNESS # 2</b>
+        </div>
+
+        <div class="print-text pad-top-2">
+            Witness #2 is {{directive.witness_two_name}} of {{directive.witness_two_address}}.
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Witness # 2's Signature
+            </div>
+
+            <div class="print-second-column">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Date:
+            </div>
+
+            <div class="print-second-column">
+                <ng-container *ngIf="directive.signing_date != ''">
+                    {{directive.signing_date}}
+                </ng-container>
+
+                <ng-container *ngIf="directive.signing_date === ''">
+                    &nbsp;
+                </ng-container>
+            </div>
+        </div>
+
+        <div class="print-title pad-top-2">
+            <b>REPRESENTATIVES</b>
+        </div>
+
+        <div class="print-text pad-top-2">
+            My Primary Representative is {{directive.rep_primary_name}} of {{directive.rep_primary_address}}.
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Representative's Signature
+            </div>
+
+            <div class="print-second-column">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Date:
+            </div>
+
+            <div class="print-second-column">
+                <ng-container *ngIf="directive.signing_date != ''">
+                    {{directive.signing_date}}
+                </ng-container>
+
+                <ng-container *ngIf="directive.signing_date === ''">
+                    &nbsp;
+                </ng-container>
+            </div>
+        </div>
+
+        <div class="print-text pad-top-2">
+            My Alternate Representative is {{directive.rep_alternate_name}} of {{directive.rep_alternate_address}}.
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Representative's Signature
+            </div>
+
+            <div class="print-second-column">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="print-two-columns">
+            <div class="print-first-column">
+                Date:
+            </div>
+
+            <div class="print-second-column">
+                <ng-container *ngIf="directive.signing_date != ''">
+                    {{directive.signing_date}}
+                </ng-container>
+
+                <ng-container *ngIf="directive.signing_date === ''">
+                    &nbsp;
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+
+

@@ -1,0 +1,34 @@
+<div class="header-detail-image header-write-adv-care-plan-image header-copy">
+    <p>&#8220;{{quote}}&#8220;
+    </p>
+    <span>
+        {{author}}
+    </span>
+</div>
+
+<div class="screen-title pad-top-2">
+    <h2>{{title}}</h2>
+</div>
+
+<div class="content-dark-copy pad-top-3 text-center">
+    <a (click)="openModal()"> <div class="wizard-action-copy"> Run this (free) wizard to create an Advance Care Plan!</div>
+        <div class="wizard-action-write-advance-plan "></div>
+    </a>
+</div>
+
+
+<div class="content-dark-copy pad-top-2 pad-bottom-2">
+    <p>
+        You can take the pain and stress out of having to think about all those hard decisions should you ever need advanced life
+        support by preemptively following through our Advance Care Plan Wizard. Store you advance care plan where you store your Will,
+        your Representative information, your wishes and other pertinent information that will be seen as a blessing by paramedics,
+        hospital staff and most of all, family.
+        <br><br>
+        For more information check out the <a routerLink="/considerAdvancePlan">{{ lookupParent }} > {{ lookupChild }}</a>  page.
+    </p>
+</div>
+
+<!--<div class="one-button-container pad-top-2">
+    <button class = 'start-button cursorPointer ' (click)="openModal()">WRITE YOUR ADVANCE CARE PLAN</button>
+</div>-->
+

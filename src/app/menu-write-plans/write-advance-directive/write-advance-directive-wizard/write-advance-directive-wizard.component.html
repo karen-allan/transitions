@@ -1,0 +1,439 @@
+<div id="modal-content-wrapper">
+    <div class="modal-inner-content">
+        <!-- LEGAL PREAMBLE -->
+        <ng-container *ngIf="page === 0">
+            <app-write-advance-directive-wizard-header [directive]='directive'></app-write-advance-directive-wizard-header>
+
+            <div class="screen-title pad-top">
+                <h4>
+                    <b>&nbsp;
+                        ADVANCE DIRECTIVE
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>
+                    <b>Made under the <i>Health Care (Consent) and Care Facility (Admission) Act</i></b>
+                    <br><br>
+                    The use of this form is voluntary. Before completing this Advance Directive, it is advisable to obtain legal advice
+                    and the advice of a health care provider about the possible implications of this Advance Directive, and your choices
+                    about the types of health care for which you might give or refuse consent under this Advance Directive. The questions
+                    posed here may not be all encompassing, as you may need more information than is provided here.
+                </p>
+            </div>
+
+            <div class="one-button-container pad-top-3">
+                <button class="start-button" (click)="getNextPage()">START</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 1">
+            <app-write-advance-directive-wizard-header [directive]='directive'></app-write-advance-directive-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        THIS IS THE ADVANCE DIRECTIVE OF THE "ADULT":
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy">
+                <p>I know that as a result of making this Advance Directive:</p>
+            </div>
+
+            <div class="content-dark-list">
+                <li class="list-item square">
+                    I will not be provided with any health care for which I refuse consent in this Advance Directive
+                </li>
+
+                <li class="list-item square">
+                    No one will be chosen to make decisions on my behalf in respect of any health care matters for which I give or
+                    refuse consent in this Advance Directive.
+                </li>
+            </div>
+
+            <div class="content-dark-copy pad-top">
+                <p>
+                    Enter your full legal name, full address and the date that you are filling out, printing and having the document
+                    witnessed. If you want to leave the date to enter at the time when you can have the Witnesses together, erase this
+                    default date and enter a future date they are expected to be present or leave blank to print and fill in later.
+                </p>
+            </div>
+
+            <form #adultDirectiveForm="ngForm" novalidate>
+                <div class="wizard-form">
+                    <div class="error-message-block">
+                        <ng-container *ngIf="errorMessage">
+                            <div class="error-message">{{errorMessage}}</div>
+                        </ng-container>
+                        <ng-container *ngIf="!errorMessage">
+                            <div class="error-message">&nbsp;</div>
+                        </ng-container>
+                    </div>
+
+                    <div class="two-unequal-columns-block">
+                        <label class="first-text-column " for="client_name">Full Legal Name of (you) the Adult:</label>
+                        <label class="second-text-column" for="pub_date">Date: (YYYY/MM/DD):</label>
+
+                        <input [(ngModel)]="directive.client_name" type="text" class="first-text-column required" id="client_name"
+                               name="name">
+                        <input [(ngModel)]="directive.publish_date" type="text" class="second-text-column" id="pub_date" name="pubDate"
+                               mask="0000/00/00">
+                    </div>
+
+                    <div class="full-line-prompt">
+                        <label class="first-text-column" for="client_addr">Full Legal Address of (you) the Adult:</label>
+                        <textarea
+                            name="addr"
+                            rows="3"
+                            id="client_addr"
+                            class="full-text-column"
+<!--                            ng-required="true"-->
+                            [(ngModel)]="directive.client_address"
+                            placeholder="Enter your full address, city and postal code."
+                        ></textarea>
+                    </div>
+
+                    <div class="two-medium-big-columns-block">
+                        <label class="first-text-column" for="birth_date">Date of Birth: (YYYY/MM/DD):</label>
+                        <label class="second-text-column" for="ph-num">Personal Health Care Number (optional):</label>
+
+                        <input [(ngModel)]="directive.client_dob" type="text" class="first-text-column" id="birth_date" name="birthDate"
+                               mask="0000/00/00">
+                        <input [(ngModel)]="directive.client_phc_number" type="text" class="second-text-column" id="ph-num" name="phn"
+                               mask="000-00-00">
+                    </div>
+                </div>
+            </form>
+
+            <div class="three-buttons-container pad-top-3 pad-bottom-3 justify-content-end">
+                <button class="cancel-button" (click)="cancelData()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 2">
+            <app-write-advance-directive-wizard-header [directive]='directive'></app-write-advance-directive-wizard-header>
+
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        CONSENT TO HEALTH CARE AND REFUSAL OF CONSENT TO HEALTH CARE:
+                    </b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy">
+                <p>
+                    <br>
+                    If I need health care and I am not capable of giving or refusing consent to the health care at the time health
+                    care is required, <b>I give the following instructions:</b>
+                </p>
+            </div>
+
+            <div class="screen-title-no-border pad-top-3">
+                <h6>I consent to the following health care:</h6>
+            </div>
+
+            <form #wizardForm="ngForm" novalidate>
+                <div class="wizard-form">
+                    <div class="full-line-prompt">
+                        <textarea
+                            name="consent"
+                            rows="8"
+                            class="full-text-column"
+<!--                            ng-required="true"-->
+                            [(ngModel)]="directive.consent_given_notes"
+                            placeholder="Add any of the treatments you give consent to."
+                        ></textarea>
+                    </div>
+                </div>
+            </form>
+
+            <div class="screen-title-no-border pad-top">
+                <h6>I refuse to consent to the following health care:</h6>
+            </div>
+
+            <form #wizardForm="ngForm" novalidate>
+                <div class="wizard-form">
+                    <div class="full-line-prompt">
+                        <textarea
+                            name="consent"
+                            rows="8"
+                            class="full-text-column"
+<!--                            ng-required="true"-->
+                            [(ngModel)]="directive.consent_refused_notes"
+                            placeholder="Add any of the treatments you refuse to accept."
+                        ></textarea>
+                    </div>
+                </div>
+
+                <div class="one-full-column-block pad-top-2">
+                    <div class="first-radio-check-column pad-left pad-right">
+                        <input type="radio" [(ngModel)]="directive.organ_donor" value="organDonorYes"  id="organDonor1" name="donor">
+                        <label for="organDonor1">
+                            I am an organ donor.
+                        </label>
+                    </div>
+
+                    <div class="first-radio-check-column pad-left pad-right">
+                        <input type="radio" [(ngModel)]="directive.organ_donor" value="organDonorNo" id="organDonor2" name="donor">
+                        <label for="organDonor2">
+                            I am not an organ donor.
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <div class="content-dark-copy">
+                <p>
+                    If a health care decision is required while you are incapable but the type of health care is not addressed in
+                    this Advance Directive, the decision will be made by a substitute decision maker if you have not selected a
+                    Representative or by your Representative if you have completed the Representative Section 9 form.
+                </p>
+            </div>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end pad-bottom-3">
+                <button class="cancel-button" (click)="cancelData()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 3">
+            <app-write-advance-directive-wizard-header [directive]='directive'></app-write-advance-directive-wizard-header>
+            <div class="screen-title pad-top-2">
+                <h4>
+                    <b>
+                        Page {{page}} / {{finalPage}}:
+                        SIGNATURES
+                    </b>
+                </h4>
+            </div>
+
+            <form #repNineForm="ngForm" novalidate>
+                <div class="signing-form with-dark-border">
+                    <div class="error-message-block pad-top">
+                        <ng-container *ngIf="errorMessage">
+                            <div class="error-message">{{errorMessage}}</div>
+                        </ng-container>
+                        <ng-container *ngIf="!errorMessage">
+                            <div class="error-message">&nbsp;</div>
+                        </ng-container>
+                    </div>
+
+                    <div class="full-text-column">
+                        <b>ADULT'S SIGNATURE</b>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;*The Adult must sign and date in the presence of both Witnesses.
+                    </div>
+
+                    <div class="two-unequal-columns-block">
+                        <label class="first-text-column">Signature of Adult:</label>
+                        <label class="second-text-column" for="signing_date">Date Signed: (YYYY / MM / DD):</label>
+
+                        <input type="text" class="first-text-column required" name="name">
+                        <input type="text" id="signing_date" [(ngModel)]="directive.signing_date" class="second-text-column"
+                               name="legalDate">
+                    </div>
+
+                    <div class="full-text-column ">
+                        <label class="full-text-column" for="printed_name">Print Name:</label>
+                        <input type="text" class="full-text-column" [(ngModel)]="directive.client_name" id="printed_name" name="name">
+                    </div>
+                </div>
+            </form>
+
+            <div class="full-text-column ">
+                <b>WITNESSES TO ADULT’S SIGNATURE</b>
+            </div>
+
+            <div class="content-dark-copy">
+                <p><b>Note 2 - Information for Witnesses</b></p>
+            </div>
+
+            <div class="content-dark-list">
+                <span>(a) The following persons may not be a witness:</span>
+
+                <li class="list-item">
+                    i. A person who provides personal care, health care or financial services to the adult for compensation, other than a
+                    lawyer or a notary public;
+                </li>
+                <li class="list-item">
+                    ii. A spouse, child, parent, employee or agent of a person described in paragraph (a);
+                </li>
+                <li class="list-item">
+                    iii. A person who is under 19 years of age
+                </li>
+                <li class="list-item">
+                    iv. A person who does not understand the type of communication used by the Adult, unless the person receives
+                    interpretive assistance to understand that type of communication.
+                </li>
+
+                <span> <br><br>(b) Only one witness is required if the witness is a lawyer or notary public. </span>
+                <br><br>
+
+                <span> <br><br>(c) You should not witness the Advance Directive if you have reason to believe that: </span>
+
+                <li class="list-item">
+                    i. The Adult is incapable of making, changing, or revoking an Advance Directive;
+                </li>
+
+                <li class="list-item">
+                    ii. Fraud, undue pressue or some other form of abuse or neglect was used to induce the Adult to make the Advance
+                    Directive or to change or revoke a previous Advance Directive.
+                </li>
+
+            </div>
+
+            <div class="full-text-column ">
+                <b>Please Note: Witness No 2 in NOT required if Witness No. 1 is a lawyer or member in good
+                    standing of the Society of Notaries Public of British Columbia
+                </b>
+            </div>
+
+            <div class="two-even-columns-block pad-bottom-2">
+                <div class="first-text-column">
+                    <b>WITNESS 1</b>
+                    <br>
+                    * Witness No. 1 must sign in the presence of the Adult and Witness No.2
+                </div>
+
+                <div class="second-text-column">
+                    <b>WITNESS 2</b>
+                    <br>
+                    * If needed, Witness No. 2 must sign in the presence of the Adult and Witness No.1
+                </div>
+            </div>
+
+            <form #repNineForm="ngForm" novalidate>
+                <div class="signing-form with-dark-border">
+                    <div class="two-even-columns-block">
+                        <div class="first-signing-text-column align-content-center">
+                            <div class="two-signing-columns-block ">
+                                <label class="first-signing-text-column pad-top-2">
+                                    <b>Signature of Witness No 1</b>
+                                </label>
+
+                                <label class="second-signing-text-column pad-top-2" for="signing_date_2">
+                                    <b>Date: (YYYY/MM/DD):</b>
+                                </label>
+
+                                <input type="text" class="first-signing-text-column pad-top-2">
+                                <input type="text" id="signing_date_2" class="second-signing-text-column pad-top-2"
+                                       [(ngModel)]="directive.signing_date"
+                                       name="legalDate">
+                            </div>
+                        </div>
+
+                        <div class="second-signing-text-column align-content-center">
+                            <div class="two-signing-columns-block">
+                                <label class="first-signing-text-column pad-top-2">
+                                    <b>Signature of Witness No 2</b>
+                                </label>
+
+                                <label class="second-signing-text-column pad-top-2" for="signing_date_3">
+                                    <b>Date: (YYYY/MM/DD):</b>
+                                </label>
+
+                                <input type="text" class="first-signing-text-column pad-top-2">
+                                <input type="text" id="signing_date_3" class="second-signing-text-column pad-top-2" [(ngModel)]="directive.signing_date"
+                                       name="legalDate">
+                            </div>
+                        </div>
+
+                        <label class="first-text-column with-dark-border" for="witness_name1"><b>Print Name:</b></label>
+                        <label class="second-text-column with-dark-border" for="witness_name2"><b>Print Name:</b></label>
+
+                        <input type="text" class="first-text-column with-dark-border" [(ngModel)]="directive.witness_one_name" id="witness_name1"
+                               name="name1">
+
+                        <input type="text" class="second-text-column with-dark-border" [(ngModel)]="directive.witness_two_name" id="witness_name2"
+                               name="name2">
+
+                        <label class="first-text-column with-dark-border" for="witness_add1"><b>Print Address:</b></label>
+
+                        <label class="second-text-column with-dark-border" for="witness_add2"><b>Print Address:</b></label>
+
+                        <textarea  name="address1" rows="3" class="first-text-column with-dark-border"
+                                   [(ngModel)]="directive.witness_one_address" id="witness_add1">
+                            </textarea>
+
+                        <textarea  name="address2" rows="3" class="second-text-column with-dark-border"
+                                   [(ngModel)]="directive.witness_two_address" id="witness_add2">
+                            </textarea>
+
+                        <div class="one-full-column-block">
+                            <div class="right-colored-dashed-border">
+                                <br><b>If witness is a lawyer or member of the Society of Notaries Public of British Columbia, check the
+                                relevant box below:</b><br>
+                            </div>
+
+                            <div class="first-signing-radio-check-column pad-left pad-right margin-top">
+                                <input type="checkbox" id="m-primaryFocus1">
+                                <label for="m-primaryFocus1">
+                                    <span>Lawyer</span>
+                                </label>
+                            </div>
+
+                            <div class="first-signing-radio-check-column pad-left pad-right">
+                                <input type="checkbox" id="m-primaryFocus2">
+                                <label for="m-primaryFocus2">
+                                    <span>Member of the Society of Notaries Public of British Columbia</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="three-buttons-container pad-top-2 justify-content-end">
+                <button class="cancel-button" (click)="cancelData()">CANCEL</button>
+                <button class="previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="next-button " (click)="getNextPage()">NEXT</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 4">
+            <app-write-advance-directive-wizard-header [directive]='directive'></app-write-advance-directive-wizard-header>
+
+            <div class="screen-title pad-top">
+                <h4>
+                    <b>CONGRATULATIONS! You Are Done!</b>
+                </h4>
+            </div>
+
+            <div class="content-dark-copy">
+                <p> Please press PRINT to get a hard copy or while on the print screen choose to save it as a PDF on your own computer and print
+                    at a later date. Store this document with your other end of life documents.
+                    <br><br>
+                    If you have also created a Wishes List from our Wishes List Wizard, you can add it to this Directive instead of
+                    having to write on the small number of lines shown on this Directive. On the first line, simply state (see my Wish
+                    List attached) on the first line.
+                    <br><br>
+                    If you have also used our Rep 9 Wizard to create and print off your Representative 9 Agreement, you should include
+                    this with this Advance Directive. Also include wills, Section 7 (a financial rep form not shown on this site) and any
+                    other documents you need to gather to make it easy for your family and health care providers to respect your wishes.
+                    <br><br>
+                    Once printed sign this in the presence of your 2 Witnesses (1 if an attorney or notary) and have them sign
+                    where needed. This will take care of this chore when planning for your future but there
+                    are a lot of other things to get done.
+                    You can book a consultation with me either over zoom or in person for more help on a huge variety of topics around
+                    end-of-life and around energy medicine therapy.
+                </p>
+            </div>
+
+            <div class="two-buttons-container">
+                <button class="cancel-button" (click)="cancelData()">CANCEL</button>
+                <button class="print-button" (click)="printFunction()">PRINT</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+
