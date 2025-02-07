@@ -1,0 +1,30 @@
+<!--  ******************************** FRAILTY SCALE **********************************  -->
+<div class="print-form-title">
+    Your Current Level of Frailty
+</div>
+
+<div class="print-form-sub-title">
+    You selected this answer related to your place on the Clinical Frailty Scale.
+</div>
+
+<div class="print-form-response">
+    <div *ngIf="client.eolFrailty == 'frailtyChart-1'">
+        I am under 65 and in good health and fitness.
+    </div>
+    <div *ngIf="client.eolFrailty == 'frailtyChart-2'">
+        I have one or more chronic conditions.
+    </div>
+    <div *ngIf="client.eolFrailty == 'frailtyChart-3'">
+        I have a life-threatening illness and my life-expectancy is less than one to two years.
+    </div>
+    <div *ngIf="client.eolFrailty == 'frailtyChart-4'">
+        I am over 65 and relatively healthy.
+    </div>
+    <div *ngIf="client.eolFrailty == 'frailtyChart-5'">
+        I am over 65 and having trouble managing your day-to-day affairs and the activities of daily living.
+    </div>
+    <div *ngIf="client.eolFrailty == 'frailtyChart-6'">
+        I am over 75.
+    </div>
+</div>
+

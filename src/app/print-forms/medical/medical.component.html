@@ -1,0 +1,70 @@
+<div class="print-form-title">
+    (Optional) Your Medical History
+</div>
+
+<div class="print-form-sub-title">
+    These are the medications and supplements that you are currently taking:
+</div>
+
+<div class="print-form-response">
+    <div *ngIf="client.medsSupplements.length > 0">
+        {{ client.medsSupplements }}
+    </div>
+    <div *ngIf="client.medsSupplements.length == 0">
+        &nbsp;
+    </div>
+</div>
+
+<div class="print-form-sub-title">
+    These are the health conditions you have been diagnosed with:
+</div>
+
+<div class="print-form-response">
+    <div *ngIf="client.heartDisease">
+        Heart Disease
+    </div>
+    <div *ngIf="client.cancer">
+        Cancer
+    </div>
+    <div *ngIf="client.stroke">
+        Stroke
+    </div>
+    <div *ngIf="client.highBloodPressure">
+        High Blood Pressure
+    </div>
+    <div *ngIf="client.diabetes">
+        Diabetes
+    </div>
+    <div *ngIf="client.mentalIllness">
+        Emotional Illness
+    </div>
+    <div *ngIf="client.seizures">
+        Seizures
+    </div>
+    <div *ngIf="client.autoImmuneDisease">
+        Auto-immune Disease
+    </div>
+    <div *ngIf="client.otherDisease">
+        Other Illness
+    </div>
+ <!--   <div *ngIf="!client.heartDisease && !client.cancer && !client.stroke && !client.highBloodPressure && !client.diabetes
+             && !client.mentalIllness && !client.seizures && !client.autoImmuneDisease && !client.otherDisease">
+        &nbsp;
+    </div>-->
+</div>
+
+<div class="print-form-sub-title">
+    Your description of your situation, condition and or illness:
+</div>
+
+<div class="print-form-response">
+    <div *ngIf="client.illnessDetails.length > 0">
+        {{ client.illnessDetails }}
+    </div>
+    <div *ngIf="client.illnessDetails.length == 0">
+        &nbsp;<div class="print-solid-underline"></div>
+    </div>
+</div>
+
+
+

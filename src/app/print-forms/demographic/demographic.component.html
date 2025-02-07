@@ -1,0 +1,233 @@
+<div class="print-form-title">
+    Your Contact Information
+</div>
+
+<div class="print-modal-inline-data">
+    <ng-container *ngIf="client.name.length > 0 && client.name != '' ">
+        <div class="print-modal-inline-prompt">
+            Name:
+        </div>
+        <div class="print-modal-inline-value">
+            {{ client.name }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.name.length == 0 && client.name == '' ">
+        <div class="print-modal-inline-prompt">
+            <b>Name:</b>
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-modal-inline-data">
+    <ng-container *ngIf="client.cellPhone.length > 0 && client.cellPhone != '' ">
+        <div class="print-modal-inline-prompt">
+            Phone:
+        </div>
+        <div class="print-modal-inline-value">
+            {{ client.cellPhone | mask: '(000) 000-0000' }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.cellPhone.length == 0 && client.cellPhone == '' ">
+        <div class="print-modal-inline-prompt">
+            Phone:
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-modal-inline-data">
+    <ng-container *ngIf="client.email.length > 0 && client.email != '' ">
+        <div class="print-modal-inline-prompt">
+            Email:
+        </div>
+        <div class="print-modal-inline-value">
+            {{ client.email }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.email.length == 0 && client.email == '' ">
+        <div class="print-modal-inline-prompt">
+            Email:
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-modal-inline-data">
+    <ng-container *ngIf="client.address.length > 0 && client.address != '' ">
+        <div class="print-modal-inline-prompt">
+            Address:
+        </div>
+        <div class="print-modal-inline-value">
+            {{ client.address }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.address.length == 0 && client.address == '' ">
+        <div class="print-modal-inline-prompt">
+            Address:
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-modal-inline-data">
+    <ng-container *ngIf="client.provState.length > 0 && client.provState != '' ">
+        <ng-container *ngIf="client.pc.length > 0 && client.pc != '' ">
+            <div class="print-modal-inline-prompt">
+                Province/State, Country:
+            </div>
+            <div class="print-modal-inline-value">
+                {{ client.provState }}, {{ client.country }}
+            </div>
+        </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="client.provState.length == 0 && client.provState == '' ">
+        <ng-container *ngIf="client.country.length == 0 && client.country == '' ">
+            <div class="print-modal-inline-prompt">
+                Province/State, Country:
+            </div>
+            <div class="print-modal-inline-line"></div>
+        </ng-container>
+    </ng-container>
+</div>
+
+<div class="print-modal-inline-data">
+    <ng-container *ngIf="client.pc.length > 0 && client.pc != '' ">
+        <div class="print-modal-inline-prompt">
+            Postal/Zip Code:
+        </div>
+        <div class="print-modal-inline-value">
+            {{ client.pc | mask: "U0U-0U0" }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.pc.length == 0 && client.pc == '' ">
+        <div class="print-modal-inline-prompt">
+            Postal/Zip Code:
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-form-title">
+    Emergency Contact Information
+</div>
+
+<div class="print-modal-inline-data">
+    <ng-container *ngIf="client.emergName.length > 0 && client.emergName != '' ">
+        <div class="print-modal-inline-prompt">
+            Emergency Contact:
+        </div>
+        <div class="print-modal-inline-value">
+            {{ client.emergName }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.emergName.length == 0 && client.emergName == '' ">
+        <div class="print-modal-inline-prompt">
+            Emergency Contact::
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-modal-inline-data">
+    <ng-container *ngIf="client.emergRelation.length > 0 && client.emergRelation != '' ">
+        <div class="print-modal-inline-prompt">
+            Relationship:
+        </div>
+        <div class="print-modal-inline-value">
+            {{ client.emergRelation }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.emergRelation.length == 0 && client.emergRelation == '' ">
+        <div class="print-modal-inline-prompt">
+            Relationship::
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-modal-inline-data">
+    <ng-container *ngIf="client.emergPhone.length > 0 && client.emergPhone != '' ">
+        <div class="print-modal-inline-prompt">
+            Phone:
+        </div>
+        <div class="print-modal-inline-value">
+            {{ client.emergPhone | mask: '(000) 000-0000' }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.emergPhone.length == 0 && client.emergPhone == '' ">
+        <div class="print-modal-inline-prompt">
+            Phone::
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </ng-container>
+</div>
+
+<!--<div class="page-break-before"></div>-->
+
+<div class="print-form-title">
+    Optional Details
+</div>
+
+<div class="print-modal-inline-data">
+    <ng-container *ngIf="client.birthdate.length > 0 && client.birthdate != '' ">
+        <div class="print-modal-inline-prompt">
+            Birthdate:
+        </div>
+        <div class="print-modal-inline-value">
+            {{ client.birthdate | mask: '00-00-0000' }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.birthdate.length == 0 && client.birthdate == '' ">
+        <div class="print-modal-inline-prompt">
+            Birthdate::
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-modal-inline-data">
+    <ng-container *ngIf="client.occupation.length > 0 && client.occupation != '' ">
+        <div class="print-modal-inline-prompt">
+            Occupation:
+        </div>
+        <div class="print-modal-inline-value">
+            {{ client.occupation }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.occupation.length == 0 && client.occupation == '' ">
+        <div class="print-modal-inline-prompt">
+            Occupation::
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-modal-inline-data">
+    <ng-container *ngIf="client.referredBy.length > 0 && client.referredBy != '' ">
+        <div class="print-modal-inline-prompt">
+            Referred By:
+        </div>
+        <div class="print-modal-inline-value">
+            {{ client.referredBy }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.referredBy.length == 0 && client.referredBy == '' ">
+        <div class="print-modal-inline-prompt">
+            Referred By:
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </ng-container>
+</div>

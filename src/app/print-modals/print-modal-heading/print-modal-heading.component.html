@@ -1,0 +1,59 @@
+
+<ng-container *ngIf="wishes">
+    <div class="wizard-print-header">
+        <div class="wizard-print-logo">
+            <img src="assets/images/details/takeAction/writeNeedsDown/wizardActionMakeWishes.jpg" title="write your care guide wish list"
+                 alt="write your care guide wish list">
+        </div>
+
+        <div class="wizard-print-text">
+            <h2>End of Life Care Wishes:</h2>
+            <h3>
+                <ng-container *ngIf="wishes.client_name.length > 0 && wishes.client_name != ''">
+                    for {{wishes.client_name}}
+                </ng-container>
+                <br>
+                dated {{now}}
+            </h3>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="rep">
+    <div class="wizard-print-header">
+        <div class="wizard-print-logo">
+            <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseReps.jpg" title="choose your Representatives"
+                 alt="choose your Representatives">
+        </div>
+
+        <div class="wizard-print-text">
+            <h2>Choose Your Representatives:</h2>
+            <h3>
+                <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name != ''">
+                    for {{rep.client_name}}
+                </ng-container>
+                <br>
+                dated {{now}}
+            </h3>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="directive">
+    <div class="wizard-print-header">
+        <div class="wizard-print-logo">
+            <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWriteAdvancePlan.jpg" title="facing the future" alt="facing the future">
+        </div>
+
+        <div class="wizard-print-text">
+            <h2>The Advance Directive:</h2>
+            <h3>
+                <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name != ''">
+                    for {{directive.client_name}}
+                </ng-container>
+                <br>
+                dated {{now}}
+            </h3>
+        </div>
+    </div>
+</ng-container>

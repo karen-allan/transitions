@@ -1,0 +1,13 @@
+import {Component, Input, Output} from '@angular/core';
+import {Client} from "../../ts-files/client";
+
+@Component({
+  selector: 'app-medical',
+  templateUrl: './medical.component.html',
+  styleUrl: './medical.component.css'
+})
+export class MedicalComponent {
+
+  @Input() @Output() client: Client;
+
+}

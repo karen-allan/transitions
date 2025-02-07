@@ -1,0 +1,51 @@
+<div class="print-form-title">
+    Your Concerns and Goals
+</div>
+
+<div class="print-form-sub-title">
+    These are your main areas of focus for seeking a consultation:
+</div>
+
+<div class="print-form-response">
+    <div *ngIf="client.eolPlanFocus1">
+        I want to name a Representative for my future care.
+    </div>
+    <div *ngIf="client.eolPlanFocus2">
+        I want to make an in-depth Advanced Care Plan.
+    </div>
+    <div *ngIf="client.eolPlanFocus3">
+        I want to arrange my end of life ceremony and/or funeral.
+    </div>
+    <div *ngIf="client.eolPlanFocus4">
+        I want to know about the logistics of staying home to die.
+    </div>
+    <div *ngIf="client.eolPlanFocus5">
+        I want to ensure my financial and estate plans are in order.
+    </div>
+    <div *ngIf="client.eolPlanFocus6">
+        I want help with creating a legacy project.
+    </div>
+    <div *ngIf="client.eolPlanFocus7">
+        I need to discuss these issues with an impartial advocate.
+    </div>
+    <div *ngIf="client.eolPlanFocus8">
+        I want to know more about care plan safe-keeping and sharing.
+    </div>
+    <div *ngIf="!client.eolPlanFocus1 && !client.eolPlanFocus2 && !client.eolPlanFocus3 && !client.eolPlanFocus4
+                && !client.eolPlanFocus5 && !client.eolPlanFocus6 && !client.eolPlanFocus7 && !client.eolPlanFocus8">
+        <div class="print-solid-underline"></div>
+    </div>
+</div>
+
+<div class="print-form-sub-title">
+    Your additional information regarding seeking a consultation:
+</div>
+
+<div class="print-form-response">
+    <div *ngIf="client.eolPlanDetails.length > 0">
+        {{ client.eolPlanDetails }}
+    </div>
+    <div *ngIf="client.eolPlanDetails.length == 0">
+        &nbsp;<div class="print-modal-inline-line"></div>
+    </div>
+</div>
