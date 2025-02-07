@@ -1,6 +1,34 @@
 @media print {
 
-    .make-wishes-wizard-printout, .choose-your-rep-wizard-printout, .change-your-rep-wizard-printout, .write-advanced-directive,
+    /* for double sized printing and you want different margins
+    /* Left page margin */
+ /*   @page :left {
+        margin-left: 1.5in;
+        margin-right: 0.5in;
+    }
+    !* Right page margin *!
+    @page :right {
+        margin-left: 0.5in;
+        margin-right: 1.5in;
+    }
+    */
+
+  /*  @media print {
+        h1 {
+            page-break-before: always; !* Start a new page before <h1> elements *!
+        }
+        section {
+            page-break-after: always; !* Start a new page after <section> elements *!
+        }
+    }*/
+    @page {
+        size: 8.5in 11in;
+        margin-top: 0.5in;
+        margin-bottom: 0.75in;
+        margin-left: .75in;
+        margin-right: .5in;
+    }
+
     .print-caregiver-consult-component, .print-patient-consult-component, .print-planning-consult-component {
         display:block;
         float:left;
@@ -8,45 +36,12 @@
         font-family: Calibri, Cambria, 'Arial', serif;
         margin-top:1em;
         color:#878787;
-        /*border:thick solid blue;*/
     }
 
-    .province-stamp {
-        display:block;
-        width:100%;
-        margin:auto;
-        font-family:"sans-serif";
-        font-size:1.5em;
-        padding:0;
-    }
-
-    .print-title   {
+    .print-form-heading {
         display:block;
         width:100%;
         float:left;
-        /*border:thin solid red;*/
-        padding-top:1em;
-    }
-
-    .print-title h1  {
-        font-size: 1.4em;
-        margin-top:1.3em;
-        text-align: left;
-    }
-
-    .print-title h2  {
-        font-size: 1.2em;
-        margin-top:.5em;
-        text-align: left;
-    }
-
-    .print-title h3  {
-        font-size: 1.3em;
-        text-align: right;
-        padding-right:1em;
-    }
-
-    .print-heading {
         font-size: 1.9em;
         font-weight: 700;
         margin-top:1em;
@@ -55,249 +50,100 @@
         text-align: center;
     }
 
-    .print-text {
+    .print-form-title   {
         display:block;
-        float:left;
         width:100%;
-    }
-
-    .print-text p {
-        font-size: 1.2em;
-        line-height:125%;
-        /*margin-top:1.3em;*/
-    }
-
-    .print-instructions {
-        display:block;
         float:left;
-        width:90%;
-        margin-right:5%;
-        margin-left:5%;
+        padding-top:1em;
+        font-family:var(--family-title);
+        font-size: 1.7em;
+        margin:.8em 0;
+        text-align: left;
     }
 
-    .print-instructions p {
-        /*margin-top:1em;*/
-        font-size: 1.2em;
-        font-style: italic;
-        line-height: 120%;
+    .print-form-sub-title {
+        display:block;
+        width:100%;
+        float:left;
+        font-size: 1.6em;
+        font-weight: 800;
+        margin-top:.3em;
+        margin-bottom: .1em;
+        padding:1em 0 0 .5em;
+    }
+
+    .print-form-client-info  {
+        display:block;
+        width:100%;
+        float:left;
+        font-size: .8em;
+        width: 100%;
+        border:#878787 solid 1px;
+    }
+
+    .print-form-inline-data {
+        display:inline-grid;
+        float:left;
+        grid-template-columns: 40% 60%;
+        width:100%;
         padding:1em 0;
     }
 
-    .print-two-columns {
-        display: inline-grid;
-        grid-template-columns: 33% 67%;
-        width:100%;
-        margin-top:1em;
-    }
-
-    .print-first-column {
+    .print-form-inline-prompt, .print-form-inline-value {
         display:grid;
-        grid-column:1;
-        width: 100%;
-        font-size: 1.2em;
-    }
-
-    .print-second-column {
-        display:grid;
-        grid-column:2;
-        width: 100%;
-        font-size: 1.2em;
-    }
-
-    .print-sub-title {
-        font-size: 1.2em;
-        font-weight: normal;
-        margin-top:.3em;
-        margin-bottom: .1em;
-        margin-left:1em;
-    }
-
-    .print-client-name-date {
         font-size: 1.5em;
-        font-weight: bold;
-        margin-top:1.3em;
-        margin-bottom: .1em;
-        /*margin-left:1em;*/
+        line-height: 130%;
+        width:100%;
+        font-family:var(--family-copy);
     }
 
-    .print-client-info  {
-        font-size: .8em;
-        width: 100%;
-        border-bottom:0;
-        border-top: #878787 solid 1px;
-        border-left: #878787 solid 1px;
-        border-right: #878787 solid 1px;
+    .print-form-inline-prompt {
+        grid-column: 1;
     }
 
-
-
-    .column-heading {
-        font-size: 1.8em;
-        width: 80%;
-        margin-left: 10%;
-        margin-right:10%;
+    .print-form-inline-value {
+        grid-column: 2;
     }
 
-    .print-first-cell {
+    .print-form-inline-line {
+        display:grid;
+        grid-column: 2;
+        border-bottom: 1px solid black;
+    }
+
+    .print-form-first-col {
         width: 25%;
         padding:.5em 0;
-        border-bottom:thin solid #878787;
         border-right:thin solid #878787;
     }
 
-    .print-second-cell {
+    .print-form-second-col {
         width: 75%;
         padding:.5em 0;
-        border-bottom:thin solid #878787;
     }
 
-
-
-
-
-
-    /* end of life planning directive code */
-    .print-planner-name  {
-        font-size: .8em;
-        width: 100%;
-        border-bottom:0;
-        border-top: #878787 solid 1px;
-        border-left: #878787 solid 1px;
-        border-right: #878787 solid 1px;
-    }
-
-    .print-one-line {
-        display:block;
-        float:left;
-        width:100%;
-        align-content: flex-end;
-        font-size: .9em;
-        font-style: italic;
-        padding:0 1em 0 2em;
-        height:2em;
-    }
-
-    .print-question {
+    .print-form-response {
         display:block;
         float:left;
         width:95%;
+        margin-left:5%;
         margin-right:5%;
+        font-size: 1.4em;
+        font-family:var(--family-copy);
+        padding:.5em 0;
+        line-height:160%;
+        font-style: italic;
     }
 
-    .print-question p {
-        margin-top:1em;
-        font-size: 1.5em;
-        font-style: normal;
-        line-height: 110%;
-        /*padding:1em 0 0 0;*/
-    }
-
-    .print-question span {
+    .print-form-disclaimer {
         display:block;
-        font-size: 1.2em;
-        font-style: italic;
-        padding:.5em 0 0 2em;
-    }
-
-    .print-one-line-response {
-        display:grid;
-        align-content: flex-end;
-        font-size: .9em;
-        font-style: italic;
-        padding:0 1em 0 2em;
-        height:2em;
-    }
-
-    .print-response {
-        font-size: .9em;
-        border:thin solid #878787;
-        padding:.5em 1em 0 2em;
-        height:4em;
-        font-style: italic;
-        margin-left:1em;
-    }
-
-    /*.print-notice {
-        font-size: 1.5em;
-        font-weight: 600;
-        width: 80%;
-        margin-top:1em;
-    }*/
-
-    .print-disclaimer-table {
-        font-size: .8em;
+        float:left;
+        font-size: 1em;
         border: #878787 solid 1px;
         width: 100%;
     }
 
-    .print-disclaimer-copy {
-        width: 100%;
-        padding:1em;
-    }
-
-    .print-signature {
-        display:inline-grid;
-        grid-template-columns: 30% 70%;
-        grid-template-rows: repeat(2, 1fr);
-        width:80%;
-        margin:1em 10% 0 10%;
-    }
-
-    .print-date-prompt {
-        display:grid;
-        width:100%;
-        grid-column:1;
-        grid-row:1;
-        align-content: flex-end;
-        justify-content: flex-start;
-    }
-
-    .print-date-value {
-        display:grid;
-        width:100%;
-        padding-top:.5em;
-        grid-column:2;
-        grid-row:1;
-        align-content: flex-end;
-        justify-content: flex-end;
-    }
-
-    .print-sig-prompt {
-        display:grid;
-        width:100%;
-        grid-column:1;
-        grid-row:2;
-        align-content: flex-end;
-        justify-content: flex-start;
-    }
-
-    .print-sig-value {
-        display:grid;
-        width:100%;
-        padding-top:.5em;
-        grid-column:2;
-        grid-row:2;
-        align-content: flex-end;
-        justify-content: flex-end;
-    }
-
-    .page-break {
-        page-break-before:always;
-    }
-
-    .print-margin-top-1 {
-        margin-top:1em;
-    }
-
-    .print-margin-top-2 {
-        margin-top:2em;
-    }
-
-    .print-solid-underline {
-        border-bottom:solid thin var(--color-dark-blue);
-    }
-
-    .printed-footer {
+    .print-form-footer {
         display:grid;
         width:100%;
         margin-top:20px;
@@ -305,7 +151,7 @@
         justify-content: center;
     }
 
-    .printed-footer p {
+    .print-form-footer p {
         padding-top:40px;
         font-size: 1.5em;
         line-height: 130%;
@@ -313,8 +159,9 @@
         color:var(--color-dark-blue);
     }
 
-    .desktop-header, .header-mobile, .header-detail-image, .content-dark-copy, .content-white-copy, .screen-title, .one-button-container, .screen-quote,
-    .content-images, .screen-title, .content-dark-list, #footers, .topic-grid, #headers {
+    #headers, .desktop-header, .mobile-header, .header-home-image, .header-detail-image, .content-title, .facts-container, .quotes,
+    .content-images, .content-dark-copy, .booking-link-grid, .citations-container, .content-dark-list,
+    .two-col-container, .consult-menu-block, .menu-desktop, .menu-mobile, .charges-grid, .testimonials-grid, #footers  {
         display: none;
     }
 

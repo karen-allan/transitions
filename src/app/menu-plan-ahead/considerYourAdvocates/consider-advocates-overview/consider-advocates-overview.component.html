@@ -1,16 +1,17 @@
-<div class="header-detail-image header-consider-advocates-image header-copy">
-    <p>&#8220;{{quote}}&#8220;
-    </p>
-    <span>
+<div class="header-detail-image header-consider-advocates-image">
+    <div class="quote">
+        &#8220;{{quote}}&#8220;
+    </div>
+    <div class="author">
         {{author}}
-    </span>
+    </div>
 </div>
 
-<div class="screen-title pad-top-2">
-    <h2>{{title}}</h2>
+<div class="content-title">
+    <h1>{{title}}</h1>
 </div>
 
-<div class="content-dark-copy pad-top-2">
+<div class="content-dark-copy">
     <p>
         Let's say you are in an accident or suffer a critical illness and end up in Emergency and are incapable of
         answering for yourself. When you arrive at the hospital - a health care team member must contact your
@@ -19,11 +20,11 @@
     </p>
 </div>
 
-<div class="content-title pad-top-3">
-    <h2><b>Option 1: I did not choose anyone to advocate for me so will let the health care team decide.</b></h2>
+<div class="content-title">
+    <h3><b>Option 1: You did not choose anyone to advocate for you so will let the health care team decide.</b></h3>
 </div>
 
-<div class="content-dark-copy pad-top">
+<div class="content-dark-copy">
     <p>
         If you have followed Option 1 and have not formally chosen an advocate then the hospital must follow the rules set by
         law (in B.C.) and contact your next of kin based on a specific list called the Temporary Substitute Decision Maker
@@ -35,7 +36,11 @@
     </p>
 </div>
 
-<ul class="content-dark-list square pad-top-2">
+<div class="content-title">
+    <h3>TSDM List of Next of Kin</h3>
+</div>
+
+<ul class="content-dark-list infinity">
     <li class="list-item">Spouse</li>
     <li class="list-item">Adult Children if any</li>
     <li class="list-item">Parents</li>
@@ -47,7 +52,7 @@
     <li class="list-item">Others related by marriage</li>
 </ul>
 
-<div class="content-dark-copy pad-top-3">
+<div class="content-dark-copy">
     <div *ngIf="sectionSelected === 'triggeredSection1'">
         <p>
             <a (click)="this.getTriggeredPromptKey(0)">
@@ -66,12 +71,12 @@
 </div>
 
 <div *ngIf="sectionSelected === 'triggeredSection1'">
-    <div class="content-images with-colored-border">
+    <div class="content-images with-dark-border">
         <img alt="Choose a Representative" src="assets/images/details/planAhead/considerAdvocates/tsdmForm.jpg">
     </div>
 </div>
 
-<div class="content-dark-copy pad-top">
+<div class="content-dark-copy">
     <p>
         If you have no issues with your health and life decisions being made by a family member or friend
         selected by a health care professional you have never met, then this might work for you. If, however you know that
@@ -88,15 +93,15 @@
     </p>
 </div>
 
-<div class="content-images pad-top-2">
+<div class="content-images">
     <img alt="Choose a Representative" src="assets/images/details/planAhead/considerAdvocates/walkingPath.jpg">
 </div>
 
-<div class="content-title pad-top-2">
-    <h2><b>Option 2: Take action and assign who you trust the most.</b></h2>
+<div class="content-title">
+    <h3><b>Option 2: You took action and assigned the people you trust the most to advocate for you.</b></h3>
 </div>
 
-<div class="content-dark-copy pad-top">
+<div class="content-dark-copy">
     <p>
         It is for this reason, that it is smart and proactive to designate your own preferred health care advocate(s) who will be
         able to make those life and death decisions on your behalf. By simply selecting the one or, at maximum two people you trust and
@@ -111,45 +116,49 @@
     </p>
 </div>
 
-<div class="content-title pad-top-2">
-    <h2>What care can an advocate provide?</h2>
+<div class="content-images">
+    <img src="assets/images/details/getHelp/bookConsult/subwaySleeper.jpg" alt="subway Sleeper" title="subway Sleeper">
 </div>
 
-<div class="content-dark-copy pad-top">
+<div class="content-title">
+    <h3>What care can an advocate provide?</h3>
+</div>
+
+<div class="content-dark-copy">
     <p>
         Whether you choose your advocate via a Representative Section 9 document or leave it up to the health care team to assign you one
         via the TSDM, these are some of the personal and health care decisions they can make:
     </p>
 </div>
 
-<div class="content-dark-copy pad-top-2">
+<div class="content-dark-copy">
     <p>
         <b>Personal care decisions your Advocate can make for you:</b>
     </p>
 </div>
 
-<div class="content-dark-list pad-top">
-    <li class="list-item square">where you will reside when in care (examples are a hospital, home care, hospice etc.)</li>
-    <li class="list-item square">your diet (ie alert them to foods you are allergic to, whether vegetarian etc. </li>
-    <li class="list-item square">your clothing and hygiene - they can bring you the clothes you like etc.</li>
-    <li class="list-item square">who can have contact with you and who should not.</li>
-</div>
+<ul class="content-dark-list infinity">
+    <li class="list-item">where you will reside when in care (examples are a hospital, home care, hospice etc.)</li>
+    <li class="list-item">your diet (ie alert them to foods you are allergic to, whether vegetarian etc. </li>
+    <li class="list-item">your clothing and hygiene - they can bring you the clothes you like etc.</li>
+    <li class="list-item">who can have contact with you and who should not.</li>
+</ul>
 
-<div class="content-dark-copy pad-top-2">
+<div class="content-dark-copy">
     <p>
         <b>Health care decisions your Advocate can make for you:</b>
     </p>
 </div>
 
-<div class="content-dark-list pad-top">
-    <li class="list-item square">agreeing to any tests or examinations.</li>
-    <li class="list-item square">agreeing to treatments and procedures such as surgery.</li>
-    <li class="list-item square">agreeing to the giving of medications and vaccines.</li>
-    <li class="list-item square">making decisions about life support and life prolonging procedures.</li>
-</div>
+<ul class="content-dark-list infinity">
+    <li class="list-item">agreeing to any tests or examinations.</li>
+    <li class="list-item">agreeing to treatments and procedures such as surgery.</li>
+    <li class="list-item">agreeing to the giving of medications and vaccines.</li>
+    <li class="list-item">making decisions about life support and life prolonging procedures.</li>
+</ul>
 
 
-<div class="content-dark-copy pad-top-2">
+<div class="content-dark-copy">
     <p>
         <!--You can leave the choosing of your health advocate up to the health care team by NOT setting up a Representative. They will
         choose your advocate by following the Temporary Substitute Decision Maker List moving from the top of the list down. They will
@@ -172,11 +181,11 @@
     </p>
 </div>
 
-<div class="content-title pad-top-2">
-    <h2>Legal Requirements for Assigning a Representative:</h2>
+<div class="content-title">
+    <h3>Legal Requirements for Assigning a Representative:</h3>
 </div>
 
-<ul class="content-dark-list square">
+<ul class="content-dark-list infinity">
     <li class="list-item">They must be 19 years of age or older.</li>
     <li class="list-item">they must not provides personal care or health care services to you for compensation.</li>
     <li class="list-item">they may not be an employee at a facility where you reside such as a care home
@@ -184,11 +193,11 @@
     </li>
 </ul>
 
-<div class="content-title pad-top-2">
-    <h2>Some of the things to consider:</h2>
+<div class="content-title">
+    <h3>Some of the things to consider:</h3>
 </div>
 
-<ul class="content-dark-list square">
+<ul class="content-dark-list infinity">
     <li class="list-item">Would they be accountable to you and the health care personnel?</li>
     <li class="list-item">Would they be able to exercise the duties set out for them?</li>
     <li class="list-item">Would they act honestly and honorably on your behalf?</li>
@@ -204,11 +213,11 @@
     <li class="list-item">Can they make difficult decisions?</li>
 </ul>
 
-<div class="content-title pad-top-2">
-    <h2>Your Representative has the right to:</h2>
+<div class="content-title">
+    <h3>Your Representative has the right to:</h3>
 </div>
 
-<ul class="content-dark-list square">
+<ul class="content-dark-list infinity">
     <li class="list-item">Visit and talk to you as needed with open communication.</li>
     <li class="list-item">The same medical information you would have access to.</li>
     <li class="list-item">Ask all reasonable questions about your health and prognosis.</li>
@@ -219,11 +228,11 @@
     <li class="list-item">Request compassionate leave from work to care for you.</li>
 </ul>
 
-<div class="content-title pad-top-2">
-    <h2>Your Representative has a duty to:</h2>
+<div class="content-title">
+    <h3>Your Representative has a duty to:</h3>
 </div>
 
-<ul class="content-dark-list square">
+<ul class="content-dark-list infinity">
     <li class="list-item">Consider whether your health is likely to be improved by a treatment or not.</li>
     <li class="list-item">Consider if your well-being will be improved by a proposed treatment.</li>
     <li class="list-item">Consider if the proposed treatment’s benefits outweigh the risks.</li>
@@ -236,11 +245,11 @@
     <li class="list-item">Has all advance care documents for easy access.</li>
 </ul>
 
-<div class="content-title pad-top-2">
-    <h2>Your Representative can not:</h2>
+<div class="content-title">
+    <h3>Your Representative can not:</h3>
 </div>
 
-<ul class="content-dark-list square">
+<ul class="content-dark-list infinity">
     <li class="list-item">Make some decisions related to your mental health.</li>
     <li class="list-item">Authorize removal of organs.</li>
     <li class="list-item">Allow for experimental health care practices.</li>
@@ -253,17 +262,17 @@
     </li>
 </ul>
 
-<div class="content-title pad-top-2">
-    <h2>Witness Criteria:</h2>
+<div class="content-title">
+    <h3>Witness Criteria:</h3>
 </div>
 
-<div class="content-dark-copy pad-top">
+<div class="content-dark-copy">
     <p>
         <b>The following persons may not be a Witness:</b>
     </p>
 </div>
 
-<ul class="content-dark-list square">
+<ul class="content-dark-list infinity">
     <li class="list-item">Your primary or alternate Representative.</li>
     <li class="list-item">A spouse, child, parent or employee of either Representative.</li>
     <li class="list-item">A person who provides personal care, health care or financial services to you for compensation (other than a
@@ -274,14 +283,14 @@
     </li>
 </ul>
 
-<div class="content-dark-copy pad-top">
+<div class="content-dark-copy">
     <p>
         There are a number of Rep 9 forms created by different agencies including the Attorney General of B.C., the Dying with Dignity
         Association and Palliative Care B.C. They may vary wording slightly but they must all follow the legal guidelines.
     </p>
 </div>
 
-<div class="content-dark-copy pad-top-2">
+<div class="content-dark-copy">
     <div *ngIf="sectionSelected === 'triggeredSection2'">
         <p>
             <a (click)="this.getTriggeredPromptKey(0)">
@@ -300,11 +309,11 @@
 </div>
 
 <div *ngIf="sectionSelected === 'triggeredSection2'">
-    <div class="content-images with-colored-border">
+    <div class="content-images with-dark-border">
         <img alt="Choose a Representative" src="assets/images/details/planAhead/considerAdvocates/sectionNineAll.jpg">
     </div>
 
-    <div class="content-dark-copy pad-top-2">
+    <div class="content-dark-copy">
         <p>
             This first section of the Rep 9 form states that this particular document is one of many replications available on the
             Internet. It reiterates that this form doesn't constitute legal advice, may not be suitable for everyone and can and may be
@@ -325,7 +334,7 @@
         </p>
     </div>
 
-    <div class="content-dark-copy pad-top-2">
+    <div class="content-dark-copy">
         <p>
             <b>SECTION 4</b> is where you fill in the full legal name and full address of your Alternate Substitute Decision Maker, also
             known
@@ -377,11 +386,11 @@
     </div>
 </div>
 
-<div class="content-title pad-top-2">
-    <h2>Changing your Representative(s)</h2>
+<div class="content-title">
+    <h3>Changing your Representative(s)</h3>
 </div>
 
-<div class="content-dark-copy pad-top-2">
+<div class="content-dark-copy">
     <p>
         If you already have a Representative appointed that you need to remove, you need to give written notice of the revocation to
         the representative and the alternate representative named in that representation agreement. Revocation of a
@@ -390,7 +399,7 @@
     </p>
 </div>
 
-<div class="content-dark-copy pad-top-3">
+<div class="content-dark-copy">
     <div *ngIf="sectionSelected === 'triggeredSection3'">
         <p>
             <a (click)="this.getTriggeredPromptKey(0)">
@@ -409,231 +418,14 @@
 </div>
 
 <div *ngIf="sectionSelected === 'triggeredSection3'">
-    <div class="content-images with-colored-border">
+    <div class="content-images with-dark-border">
         <img alt="Change Your Representative" src="assets/images/details/planAhead/considerAdvocates/changeRepForm.jpg">
     </div>
 </div>
 
-<!--<div class="content-dark-copy pad-top-2">
+<div class="quotes">
     <p>
-    In Canada health care documents and decision making tools are set by each Province so what works in British Columbia will not
-        necessarily work in New Brunswick. Some of the provinces make it easy and clear and some make you have to sign in to their system
-        just to see what is available. Although the links to these pages are subject to changing or moving, you may have to do your own
-        Googling to find out more but at this time of publication, the links were working.
+        &#8220;Ask for help not because you are weak, but because you want to remain strong.&#8220;
     </p>
-</div>-->
-
-<!--<div class="content-dark-copy pad-top-3">
-    <div *ngIf="sectionSelected === 'triggeredSection4'">
-        <p>
-            <a (click)="this.getTriggeredPromptKey(0)">
-                Close the Advocate Selection by Province List: &#x25BC;
-            </a>
-        </p>
-    </div>
-
-    <div *ngIf="sectionSelected != 'triggeredSection4'">
-        <p>
-            <a (click)="this.getTriggeredPromptKey(4)">
-                See the Advocate Selection by Province List: &#x25B6;
-            </a>
-        </p>
-    </div>
+    <span>Les Brown</span>
 </div>
-
-<div *ngIf="sectionSelected === 'triggeredSection4'">
-    <div class="screen-title pad-top-2">
-        <h2>Representation by Province</h2>
-    </div>
-
-    <div class="content-title pad-top-2">
-        <h2>Newfoundland and Labrador</h2>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            Every province has different forms to help you designate the advocates you want to have represent you. In <b><a
-            target="_blank" href="https://www.gov.nl.ca/cssd/files/seniors-pdf-ahcd-booklet.pdf">Newfoundland and Labrador</a></b> the
-            form is
-            called the Advance Health Care Directive and within this form there is a section where you can designate your Advocate who
-            instead of being called your Representative as in B.C., they are called your Substitute Decision Maker. Note the difference
-            between this and the Temporary Substitute Decision Maker. It could all be so much easier if it was the same across the
-            country!
-
-        </p>
-    </div>
-
-    <div class="content-title pad-top-2">
-        <h2>Nova Scotia</h2>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            In <b><a target="_blank" href="https://novascotia.ca/just/pda/_docs/PersonalDirectiveLongForm0311.pdf">Nova Scotia</a></b>
-            your Advocates are called Delegates and the Advanced Care form is called your Personal Directive. If you don't choose a
-            Delegate,
-            then the care provider will be authorized under the Personal Directives Act to use the called statutory decision-makers
-            form. As
-            with the Temporary Substitute Decision Makers form in B.C. this form will allow a health care provider to start at the top
-            of the
-            list and continue down it until they find someone who agrees to be your Delegate.
-        </p>
-    </div>
-
-    <div class="content-title pad-top-2">
-        <h2>Prince Edward Island</h2>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            In <b><a target="_blank"
-                     href="https://www.princeedwardisland.ca/sites/default/files/publications/health_care_directive_form.pdf">
-            Prince Edward Island</a></b> the Health Advocate is called the Proxy and the Advanced Care Form you fill out is called a
-            Health
-            Care Directive. Unlike B.C., a Proxy need only be over 16, whereas in B.C. the 'Representative' must be over 19.
-        </p>
-    </div>
-
-    <div class="content-title pad-top-2">
-        <h2>New Brunswick</h2>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            In <b><a target="_blank"
-                     href="http://www.legal-info-legale.nb.ca/en/uploads/file/pdfs/Advance_Health_Care_Directives_Form_EN.pdf">
-            New Brunswick</a></b> the Health Advocate is also called the Proxy and the form is also called the Advance Health Care
-            Directive.
-            It also
-            has a section where you can add those who you wish to have contacted. Only one witness is needed.
-        </p>
-    </div>
-
-    <div class="content-title pad-top-2">
-        <h2>Quebec</h2>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            In <b><a target="_blank" href="https://www.ramq.gouv.qc.ca/en/citizens/health-insurance/issue-directives-case-incapacity">Quebec</a></b>
-            the Advocate is called the Mandatary and the form is called the Advance Medical Directives. They will not allow you to view
-            this
-            form until you create a 'clicSÉQUR' account, after which a personalized form will be created for you.
-        </p>
-    </div>
-
-    <div class="content-title pad-top-2">
-        <h2>Ontario</h2>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            In <b><a target="_blank" href="https://jss.ca/wp-content/uploads/2021/08/DWDC__2020Form_Ontario.pdf">Ontario</a></b> your
-            Advocate is called the Substitute Decision Maker and the Advanced Care form is called the Advance Care Directive/Wishes
-            form. It
-            carries no legal weight, however, so anything that you have written down on this form in terms of your wishes may be
-            disregarded
-            by both your Substitute Decision Maker and by the medical team who will make decisions based on the situation at the current
-            moment in time. The link provided here is for Dying With Dignity's information about Advance Care instead.
-        </p>
-    </div>
-
-    <div class="content-title pad-top-2">
-        <h2>Manitoba</h2>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            In <b><a target="_blank" href="https://www.gov.mb.ca/health/documents/health_care_directive.pdf">Manitoba</a></b> your
-            Advocate
-            is called your Proxy and the form that you fill out is called the Heath Care Directive. There is no need to have anyone act
-            as
-            Witnesses with this simple to use form. They do not have any authority involving Medical Assistance in Dying (MAID).
-        </p>
-    </div>
-
-    <div class="content-title pad-top-2">
-        <h2>Saskatchewan</h2>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            In Saskatchewan your Advocate is also called a Proxy and the form is called an Advance Directive. If you have not designated
-            a Proxy, then the health care provider will appoint one based on the Temporary Substitute Decision Maker list. The link is
-            broken
-            at the time of publication.
-        </p>
-    </div>
-
-    <div class="content-title pad-top-2">
-        <h2>Alberta</h2>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            In <b><a target="_blank" href="https://formsmgmt.gov.ab.ca/Public/OPG5521.xdp">Alberta</a></b> your Advocate is also called
-            an
-            Agent and the form is called an Personal Directive. This form provides for a wider range of duties that can be performed by
-            the
-            Agent as compared to other forms.
-        </p>
-    </div>
-
-    <div class="content-title pad-top-2">
-        <h2>North West Territories (NWT)</h2>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            In <b><a target="_blank"
-                     href="https://d3n8a8pro7vhmx.cloudfront.net/dwdcanada/pages/3905/attachments/original/1631639150/DWDC__2021Form_NorthwestTerritories_Fillable_092021.pdf?1631639150">
-            the North West Territories (NWT)</a></b> your Advocate is called the Agent and the Advanced Care form is called the Personal
-            Directive. It also includes areas to specifically request and/or reject certain emergency or life prolonging health care
-            procedures. The link is to the Dying with Dignity website.
-        </p>
-    </div>
-
-    <div class="content-title pad-top-2">
-        <h2>Yukon</h2>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            In <b><a target="_blank"
-                     href="https://yukon.ca/sites/yukon.ca/files/hss/hss-forms/hss-careconsent-abbreviated-advance-directive.pdf"> the
-            Yukon</a></b>
-            the Advocate is called the Proxy and the Advance Care form is called the ABBREVIATED ADVANCE DIRECTIVE. This form also
-            leaves room for
-            you to add special directives related to your future care in terms of emergency or life prolonging procedures.
-        </p>
-    </div>
-
-    <div class="content-title pad-top-2">
-        <h2>Nunavut</h2>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            In <b><a target="_blank"
-                     href="ut https://www.gov.nu.ca/family-services/programs-services/guardianship">Nunavut</a></b> legally there is no
-            such
-            thing as a stated Advocate and Advance Care Directives are not recognized. Anyone wishing to act as your
-            Guardian must be willing to apply to the Nunavut Court of Justice for an order appointing them.
-        </p>
-    </div>
-</div>
-
-<div class="content-title pad-top-2">
-    <h2>Another Option: Choose Representative Section 7 instead of Representative Section 9</h2>
-</div>
-
-<div class="content-dark-copy pad-top">
-    <P>
-        If you do not have a Power of Attorney appointed, consider completing a Representative Section 7 form. This allows you to name
-        a representative who can handle your routine financial affairs, your personal care, and <b>some</b> health care treatments. Unlike
-        Rep 9, it doesn't allow your representative to make life support or life prolonging medical intervention decisions for you. This may
-        be appropriate for those who can not afford and attorney to make the power of attorney agreement.
-    </P>
-</div>-->
-
-

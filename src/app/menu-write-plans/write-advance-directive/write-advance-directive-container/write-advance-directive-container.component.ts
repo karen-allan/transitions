@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {AdvanceDirective} from "../../../ts-files/advance_directive";
 import * as Constants from 'src/app/ts-files/constants'
+import {CHOOSE_YOUR_ADVOCATES, CONSIDER_YOUR_ADVOCATES} from "src/app/ts-files/constants";
 
 @Component({
   selector: 'app-write-advance-directive-container',
@@ -13,7 +14,8 @@ export class WriteAdvanceDirectiveContainerComponent {
   subMenuItemId:number = 22;
 
   lookupParent=Constants.PLAN_AHEAD
-  lookupChild: string=Constants.UNDERSTAND_ADVANCE_PLAN
+  lookupChild1: string=Constants.UNDERSTAND_ADVANCE_PLAN
+  lookupChild2: string=Constants.CHOOSE_YOUR_ADVOCATES
 
   title=Constants.WRITE_ADVANCE_CARE_PLAN
   quote: string='The scariest moment is always just before you start.';
@@ -25,12 +27,12 @@ export class WriteAdvanceDirectiveContainerComponent {
 
   constructor() {
 
+    //check box items are true false booleans while radio button items are yes and no constants
     //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
-    this.directive = new AdvanceDirective("", "", "", "", "",
-        "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "",
-        "", "", "", "", "", "", "",
-        "", "", "", "", "", '', '', '',
-        '', '', '', '');
+    this.directive = new AdvanceDirective( "","","","", 'B.C.', "",
+        "", "", "", "", "", "", false,
+        false, "", "", "", false, false, false, "",
+        "", "", false, false, false, false, false, false, false,
+        false, false, false, false, false, "")
   }
 }

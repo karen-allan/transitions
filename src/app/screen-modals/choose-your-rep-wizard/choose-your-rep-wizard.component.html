@@ -1,0 +1,656 @@
+<div id="screen-modal-content-wrapper">
+    <app-screen-modal-heading [rep]='rep'></app-screen-modal-heading>
+    <div class="screen-modal-inner-content">
+        <!-- PAGE 0 -->
+        <ng-container *ngIf="page === 0">
+            <div class="content-title">
+                <h2>REPRESENTATION AGREEMENT FOR BRITISH COLUMBIA RESIDENTS</h2>
+            </div>
+
+            <div class="content-title">
+                <h3>Please press START to begin the wizard:</h3>
+            </div>
+
+            <div class="content-dark-copy">
+                <p>
+                    The use of this form is voluntary. Be advised that this form may not be appropriate for use by all persons, as it
+                    provides only one option of how a Representation Agreement may be made. In addition, it does not constitute legal
+                    advice. For further information, please consult the <i>Representation Agreement Act</i> and Representation Agreement
+                    Regulation or obtain legal advice.
+                    <br><br>
+                    <b>Please note: </b>You can choose to run this wizard and print and fill it in at a later date. The only required
+                    information is your name and address. Also, this form is for British Columbia residents only.</p>
+            </div>
+
+            <div class="screen-modal-two-buttons-row">
+                <button class="screen-modal-start-button " (click)="getNextPage()">START</button>
+                <button class="screen-modal-cancel-start-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 1 -->
+        <ng-container *ngIf="page === 1">
+            <form #repNineForm="ngForm" novalidate>
+                <div class="content-title">
+                    <h3>
+                        Page {{ page }} / {{ finalPage }} : THIS REPRESENTATION AGREEMENT IS MADE BY ME, THE ADULT:
+                    </h3>
+                </div>
+
+                <div class="content-title">
+                    <h3>
+                        'THE ADULT' means you as the person appointing your Representative(s). Enter your full legal name and address.
+                    </h3>
+                </div>
+
+                <ng-container *ngIf="errorMessage">
+                    <div class="screen-modal-error-message">{{ errorMessage }}</div>
+                </ng-container>
+                <ng-container *ngIf="!errorMessage">
+                    <div class="screen-modal-error-message">&nbsp;</div>
+                </ng-container>
+
+                <div class="screen-modal-full-col-block">
+                    <label class="screen-modal-first-col" for="client_name">Full Legal Name of (you) the Adult (required):</label>
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="rep.client_name" id="client_name" name="clName">
+                </div>
+
+                <div class="screen-modal-forty-sixty-cols-block">
+                    <label class="screen-modal-first-col" for="birth_date">Date of Birth: (YYYY/MM/DD):</label>
+                    <input [(ngModel)]="rep.client_dob" type="text" class="screen-modal-first-col" id="birth_date" name="birthDate"
+                           mask="0000/00/00">
+                </div>
+
+                <div class="screen-modal-full-col-block">
+                    <label class="screen-modal-first-col" for="address">Address:</label>
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="rep.client_address" id="address" name="clAddr">
+                </div>
+
+                <div class="screen-modal-three-thirty-cols-block">
+                    <label class="screen-modal-first-col" for="client_city">City:</label>
+                    <label class="screen-modal-second-col" for="postal">Postal Code:</label>
+                    <label class="screen-modal-third-col" for="prov">Province:</label>
+
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="rep.client_city" id="client_city" name="clCity">
+                    <input class="screen-modal-second-col" type="text" [(ngModel)]="rep.client_postal" id="postal" name="clPostal">
+                    <input class="screen-modal-third-col" type="text" readonly [(ngModel)]="rep.global_province" id="prov" name="clProv">
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="checkClientName()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 2 -->
+        <ng-container *ngIf="page === 2">
+            <div class="content-title">
+                <h3>
+                    Page {{ page }} / {{ finalPage }} : SECTION 2 - REVOCATION OF PREVIOUS ADVANCE DIRECTIVES:
+                </h3>
+            </div>
+
+            <div class="content-title">
+                <h3>
+                    <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name != ''">
+                        I revoke all previous Representative Section 3 agreements made by me, {{ rep.client_name }}.
+                    </ng-container>
+                    <ng-container *ngIf="rep.client_name.length == 0 && rep.client_name == ''">
+                        I revoke all Representative Section 3 agreements made by me,
+                    </ng-container>
+                </h3>
+            </div>
+
+            <div class="content-title">
+                <h3>
+                    I know that as a result of making this Representative Section 3 Agreement:
+                </h3>
+            </div>
+
+            <ul class="screen-modal-full-col-list">
+                <li class="screen-modal-med-list-item">
+                    I will not be provided with any health care for which I refuse consent in this Advance Directive
+                </li>
+
+                <li class="screen-modal-med-list-item">
+                    No one will be chosen to make decisions on my behalf in respect of any health care matters for which I give or
+                    refuse consent in this Advance Directive.
+                </li>
+            </ul>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 3 -->
+        <ng-container *ngIf="page === 3">
+            <div class="content-title">
+                <h3>
+                    Page {{ page }} / {{ finalPage }} : RULES FOR REPRESENTATIVES
+                </h3>
+            </div>
+
+            <div class="content-title">
+                <h3>
+                    What a Representative may do:
+                </h3>
+            </div>
+
+            <ul class="screen-modal-full-col-list">
+                <li class="screen-modal-small-list-item">
+                    The authority of a representative appointed under this representation agreement includes the power to give or refuse
+                    consent to health care necessary to preserve life.
+                </li>
+            </ul>
+
+            <div class="content-title">
+                <h3>
+                    What a Representative can not do:
+                </h3>
+            </div>
+
+            <ul class="screen-modal-full-col-list">
+                <li class="screen-modal-small-list-item">give or refuse consent on your behalf to any type of health care prescribed under
+                    section 34 (2) (f ) of the <i>Health Care (Consent) and Care Facility (Admission) Act</i></li>
+
+                <li class="screen-modal-small-list-item"> make arrangements for the temporary care and education of your minor children, or
+                    any
+                    other persons who are cared for or supported by you;
+                </li>
+
+                <li class="screen-modal-small-list-item">interfere with your religious practices.</li>
+
+                <li class="screen-modal-small-list-item">may not be authorized to refuse consent to those matters in relation to the
+                    <i>Mental Health Act</i>.
+                    <!--                        Act</i> set out in section 11 of the <i>Representation Agreement Act</i>.-->
+                </li>
+
+                <li class="screen-modal-small-list-item">must not consent to the provision of professional services, care or treatment to
+                    you for
+                    the purposes of sterilization for non-therapeutic purposes.
+                </li>
+
+                <li class="screen-modal-small-list-item">must not make or change your will.</li>
+            </ul>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 4 -->
+        <ng-container *ngIf="page === 4">
+            <div class="content-title">
+                <h3>
+                    Page {{ page }} / {{ finalPage }} : PRIMARY REPRESENTATIVE:
+                </h3>
+            </div>
+
+            <div class="content-title">
+                <h3>
+                    This form provides for the naming of one Primary Representative and one Alternate Representative.
+                    <br><br>
+                    The <i>Representation Agreement Act</i> sets out who may be named as a representative. They must:
+                </h3>
+            </div>
+
+            <ul class="screen-modal-full-col-list">
+                <li class="screen-modal-small-list-item">be 19 years of age or older</li>
+                <li class="screen-modal-small-list-item">not be an individual who provides personal or health care services to you for
+                    compensation
+                </li>
+                <li class="screen-modal-small-list-item">not be an employee of a facility in which you reside and receive personal or health
+                    care
+                    services (unless the employee is your child, parent or spouse)
+                </li>
+            </ul>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 5 -->
+        <ng-container *ngIf="page === 5">
+            <div class="content-title">
+                <h3>
+                    Page {{ page }} / {{ finalPage }} : PRIMARY REPRESENTATIVE:
+                </h3>
+            </div>
+
+            <div class="content-title">
+                <h3>
+                    I name the following person to be my Primary Representative and I authorize this person to do anything that the
+                    they considers necessary in relation to my personal care and health care.
+                </h3>
+            </div>
+
+            <form #repNineForm="ngForm" novalidate>
+                <div class="screen-modal-full-col-block">
+                    <label class="screen-modal-first-col" for="primary_name">Full Legal Name of Primary Representative:</label>
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="rep.rep_primary_name" id="primary_name" name="prName">
+                </div>
+
+                <div class="screen-modal-full-col-block">
+                    <label class="screen-modal-first-col" for="primaryAddr">Address:</label>
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="rep.rep_primary_address" id="primaryAddr" name="prAddr">
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="formatRep1Name()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 6 -->
+        <ng-container *ngIf="page === 6">
+            <div class="content-title">
+                <h3>
+                    Page {{ page }} / {{ finalPage }} : CONSIDER AN ALTERNATE REPRESENTATIVE:
+                </h3>
+            </div>
+
+            <div class="content-title">
+                <ng-container *ngIf="rep.rep_primary_name.length > 0 && rep.rep_primary_name != ''">
+                    <h3>If my Primary Representative <b>{{ rep.rep_primary_name }}</b> :</h3>
+                </ng-container>
+                <ng-container *ngIf="rep.rep_primary_name.length == 0 && rep.rep_primary_name == ''">
+                    <h3>If my Primary Representative :</h3>
+                </ng-container>
+            </div>
+
+            <ul class="screen-modal-full-col-list">
+                <li class="screen-modal-small-list-item">dies</li>
+                <li class="screen-modal-small-list-item">resigns</li>
+                <li class="screen-modal-small-list-item">was my spouse, but our marriage or marriage-like relationship has ended</li>
+                <li class="screen-modal-small-list-item">becomes incapable</li>
+            </ul>
+
+            <form #repNineForm="ngForm" class="wizard-form" novalidate>
+                <div class="screen-modal-full-col-radio">
+                    <div class="screen-modal-first-radio-col">
+                        <input type="radio" [(ngModel)]="rep.choose_alternate" value="chooseAlternateYes" id="chooseAlternate1"
+                               name="alternate">
+                        <label for="chooseAlternate1">
+                            I WANT TO SET UP AN ALTERNATE REPRESENTATIVE.
+                        </label>
+                    </div>
+                    <div class="screen-modal-first-radio-col">
+                        <input type="radio" [(ngModel)]="rep.choose_alternate" value="chooseAlternateNo" id="chooseAlternate2"
+                               name="alternate">
+                        <label for="chooseAlternate2">
+                            I DO NOT WANT TO SET UP AN ALTERNATE REPRESENTATIVE.
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="moveAlternateChoiceGoingForward()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 7 -->
+        <ng-container *ngIf="page === 7">
+            <div class="content-title">
+                <h3>
+                    Page {{ page }} / {{ finalPage }} : ALTERNATIVE REPRESENTATIVE:
+                </h3>
+            </div>
+
+            <div class="content-title">
+                <h3>
+                    I name the following person to be my Alternate Representative. They must:
+                </h3>
+            </div>
+
+            <ul class="screen-modal-full-col-list">
+                <li class="screen-modal-small-list-item">be 19 years of age or older</li>
+                <li class="screen-modal-small-list-item">not be an individual who provides personal or health care services to you for
+                    compensation
+                </li>
+                <li class="screen-modal-small-list-item">not be an employee of a facility in which you reside and receive personal or health
+                    care
+                    services (unless the employee is your child, parent or spouse)
+                </li>
+            </ul>
+
+            <div class="content-title">
+                <h3>
+                    and I authorize this person to do anything that the they considers necessary in relation to my personal
+                    care and health care.
+                </h3>
+            </div>
+
+            <form #repNineForm="ngForm" class="wizard-form" novalidate>
+                <div class="screen-modal-full-col-block">
+                    <label class="screen-modal-first-col" for="alternateName">Full Legal Name of Alternate Representative:</label>
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="rep.rep_alternate_name" id="alternateName"
+                           name="altName">
+                </div>
+
+                <div class="screen-modal-full-col-block">
+                    <label class="screen-modal-first-col" for="alternateAddr">Address:</label>
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="rep.rep_alternate_address" id="alternateAddr"
+                           name="altAddr">
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="formatRep2Name()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 8 -->
+        <ng-container *ngIf="page === 8">
+            <div class="content-title">
+                <h3>
+                    Page {{ page }} / {{ finalPage }} : INSTRUCTIONS OR WISHES (OPTIONAL)
+                </h3>
+            </div>
+
+            <div class="content-dark-copy">
+                <p>
+                    <ng-container *ngIf="rep.rep_primary_name.length > 0 && rep.rep_primary_name != ''">
+                        These instructions are to be followed as much as is reasonable by your Primary Representative
+                        <b>{{ rep.rep_primary_name }}</b>.
+                    </ng-container>
+
+                    <ng-container *ngIf="rep.rep_primary_name.length == 0 && rep.rep_primary_name == ''">
+                        These instructions are to be followed as much as is reasonable by your Primary Representative
+                        (who you have not yet chosen but can be entered at a later date once you have printed this form.)
+                    </ng-container>
+
+                    <ng-container *ngIf="rep.choose_alternate == 'chooseAlternateYes'">
+                        <ng-container *ngIf="rep.rep_alternate_name.length > 0 && rep.rep_alternate_name != ''">
+                            Should your Primary Representative be unable to advocate for you, your Alternate Representative
+                            <b>{{ rep.rep_alternate_name }}</b> will be called to the responsibility.
+                        </ng-container>
+
+                        <ng-container *ngIf="rep.rep_alternate_name.length == 0 && rep.rep_alternate_name == ''">
+                            Should your Primary Representative be unable to advocate for you, your Alternate Representative
+                            (who you have not yet chosen but can be entered at a later date once you have printed this form) will
+                            be called to the responsibility.
+                        </ng-container>
+                    </ng-container>
+                </p>
+            </div>
+
+            <div class="content-dark-copy">
+                <p>
+                    Enter your instructions or wishes with respect to decisions that will be made within the
+                    areas of authority given to my Representative under this Representation Agreement.
+                </p>
+            </div>
+
+            <form #repNineForm="ngForm" class="wizard-form" novalidate>
+                <div class="screen-modal-full-col-block">
+                       <textarea
+                           name="instructions"
+                           rows="10"
+                           [(ngModel)]="rep.instructions_for_reps"
+                           placeholder="Add any instructions you have for your Representative to follow.">
+                       </textarea>
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="moveAlternateChoiceGoingBackward()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 9 -->
+        <ng-container *ngIf="page === 9">
+            <div class="content-title">
+                <h3>
+                    Page {{ page }} / {{ finalPage }} : INFORMATION FOR WITNESSES
+                </h3>
+            </div>
+
+            <div class="content-title">
+                <h3>
+                    (a) The following persons may not be a witness:
+                </h3>
+            </div>
+
+            <ul class="screen-modal-full-col-list">
+                <li class="screen-modal-small-list-item">
+                    i. A person named in the representation agreement as a representative or alternate representative;
+                </li>
+                <li class="screen-modal-small-list-item">
+                    ii. A spouse, child or parent of a person named in the representation agreement as a representative or alternate
+                    representative
+                </li>
+                <li class="screen-modal-small-list-item">
+                    iii. An employee or agent of a person named in the representation agreement as a representative or alternate
+                    representative, unless the person named as a representative or alternate representative is a lawyer, a member
+                    in good standing of the Society of Notaries Public of British Columbia, or the Public Guardian and Trustee of
+                    British Columbia
+                </li>
+                <li class="screen-modal-small-list-item">
+                    iv. A person who is under 19 years of age
+                </li>
+                <li class="screen-modal-small-list-item">
+                    v. A person who does not understand the type of communication used by the adult unless the person receives
+                    interpretive assistance to understand that type of communication
+                </li>
+            </ul>
+
+            <div class="content-title">
+                <h3>(b) Only one witness is required if the witness is a lawyer or a member in good standing of the Society of
+                    Notaries Public of British Columbia.
+                </h3>
+            </div>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 10 -->
+        <ng-container *ngIf="page === 10">
+            <div class="content-title">
+                <h3>
+                    Page {{ page }} / {{ finalPage }} : WITNESS 1 TO ADULT’S SIGNATURE
+                </h3>
+            </div>
+
+            <div class="content-title">
+                <h3>
+                    WITNESS 1 must sign in the presence of the Adult and Witness No.2
+                </h3>
+            </div>
+
+            <div class="content-dark-copy ">
+                <p>
+                    <b>Please Note: Only 1 witness is required if Witness No. 1 is a lawyer or member in good standing of the
+                        Society of Notaries Public of British Columbia. If applicable please check the relevant box below:
+                    </b>
+                </p>
+            </div>
+
+            <form #repNineForm="ngForm" class="wizard-form" novalidate>
+                <div class="screen-modal-forty-sixty-cols-block">
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="rep.witness_lawyer" value="true" id="lawyer" name="Lawyer">
+                        <label for="lawyer">
+                            <span>Lawyer</span>
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-second-check-col">
+                        <input type="checkbox" [(ngModel)]="rep.witness_notary" value="false" id="notary" name="Notary">
+                        <label for="notary">
+                            <span>Member of the Society of Notaries Public of British Columbia</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="screen-modal-full-col-block">
+                    <label class="screen-modal-first-col" for="witness1Name">Print Name:</label>
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="rep.witness_one_name" id="witness1Name" name="wit1Name">
+                </div>
+
+                <div class="screen-modal-full-col-block">
+                    <label class="screen-modal-first-col" for="witness1Addr">Address:</label>
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="rep.witness_one_address" id="witness1Addr" name="addr">
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="formatWitness1Name()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 11 -->
+        <ng-container *ngIf="page === 11">
+            <div class="content-title">
+                <h3>
+                    Page {{ page }} / {{ finalPage }} : WITNESS 2 TO ADULT’S SIGNATURE
+                </h3>
+            </div>
+
+            <ng-container *ngIf="rep.witness_lawyer">
+                <div class="content-title">
+                    <ng-container *ngIf="rep.witness_one_name.length > 0 && rep.witness_one_name != ''">
+                        <h3>
+                            WITNESS 2 is not needed because you stated that {{ rep.witness_one_name }} is a
+                            Lawyer.
+                        </h3>
+                    </ng-container>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="rep.witness_notary">
+                <div class="content-title">
+                    <ng-container *ngIf="rep.witness_one_name.length > 0 && rep.witness_one_name != ''">
+                        <h3>
+                            WITNESS 2 is not needed because you stated that {{ rep.witness_one_name }} is a
+                            Notary Public.
+                        </h3>
+                    </ng-container>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="rep.witness_notary || rep.witness_lawyer">
+                <div class="content-dark-copy pad-top-3">
+                    <p>
+                        Because only 1 Witness is needed if the first Witness is a Lawyer or Notary Public, you can move to the next
+                        page. If you did not mean to select Witness 1 to be either a Lawyer or a Notary Public then simply go
+                        back (click Previous) a page and un-check the selection.
+                    </p>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="!rep.witness_notary && !rep.witness_lawyer">
+                <div class="content-title">
+                    <h3>
+                        <b>WITNESS 2 must sign in the presence of the Adult and Witness No.1</b>
+                    </h3>
+                </div>
+                <form #repNineForm="ngForm" class="wizard-form" novalidate>
+                    <div class="screen-modal-full-col-block">
+                        <label class="screen-modal-first-col" for="witness2Name">Print Name:</label>
+                        <input class="screen-modal-first-col" type="text" [(ngModel)]="rep.witness_two_name" id="witness2Name"
+                               name="wit2Name">
+                    </div>
+
+                    <div class="screen-modal-full-col-block">
+                        <label class="screen-modal-first-col" for="witness2Addr">Address:</label>
+                        <input class="screen-modal-first-col" type="text" [(ngModel)]="rep.witness_two_address" id="witness2Addr"
+                               name="wit2Addr">
+                    </div>
+                </form>
+            </ng-container>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="formatWitness2Name()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 12 -->
+        <ng-container *ngIf="page === 12">
+            <div class="content-title">
+                <h3>
+                    <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name !=''">
+                        Page {{ page }} / {{ finalPage }} : Congratulations, {{ rep.client_name }} you are done!
+                    </ng-container>
+                    <ng-container *ngIf="rep.client_name.length == 0 && rep.client_name ==''">
+                        Page {{ page }} / {{ finalPage }} : Congratulations, you are done!
+                    </ng-container>
+                </h3>
+            </div>
+
+            <div class="content-dark-copy">
+                <p> Please press PRINT to get a hard copy or while on the print screen choose to save it as a PDF on your own computer
+                    and print at a later date. Store this document with your other end of life documents.
+                    <br><br>
+
+                    <ng-container *ngIf="rep.rep_primary_name.length > 0 && rep.rep_primary_name != ''">
+                        Once printed get your primary representative&nbsp;<b>{{ rep.rep_primary_name }}</b> to sign it in the
+                        presence of the witnesses.
+                    </ng-container>
+                    <ng-container *ngIf="rep.rep_primary_name.length == 0 && rep.rep_primary_name == ''">
+                        Once printed get your primary representative to sign it in the presence of the witnesses.
+                    </ng-container>
+
+                    <ng-container *ngIf="rep.rep_alternate_name.length > 0 && rep.rep_alternate_name != ''">
+                        Your alternate representative&nbsp;<b>{{ rep.rep_alternate_name }}</b> must also sign the document in the
+                        presence of the witnesses.
+                    </ng-container>
+                    <ng-container *ngIf="rep.rep_alternate_name.length == 0 && rep.rep_alternate_name == ''">
+                        Your alternate representative, if you choose to have one, must also sign the document in the
+                        presence of the witnesses.
+                    </ng-container>
+
+                    <br><br>
+                    <ng-container *ngIf="rep.witness_one_name.length > 0 && rep.witness_one_name != ''">
+                        Ensure that your first witness, <b>{{ rep.witness_one_name }}</b> is present during the signing.
+                    </ng-container>
+                    <ng-container *ngIf="rep.witness_one_name.length == 0 && rep.witness_one_name == ''">
+                        Ensure that your witness is present for the signing.
+                    </ng-container>
+
+                    <ng-container *ngIf="!rep.witness_notary && !rep.witness_lawyer">
+                        <ng-container *ngIf="rep.witness_two_name.length > 0 && rep.witness_two_name != ''">
+                            Also ensure that your second witness, <b>{{ rep.witness_two_name }}</b> be present to witness the
+                            signing.
+                        </ng-container>
+                        <ng-container *ngIf="rep.witness_two_name.length == 0 && rep.witness_two_name == ''">
+                            Your second witness, if you need one, must also be present to witness the signing.
+                        </ng-container>
+                    </ng-container>
+                </p>
+            </div>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-print-button" (click)="formatDataForPrint()">PRINT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

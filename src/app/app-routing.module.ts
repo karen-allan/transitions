@@ -14,10 +14,10 @@ import { BookConsultationContainerComponent } from './menu-consultations/book-co
 
 /* MENU PLAN AHEAD */
 import { ConsiderAdvanceCarePlanContainerComponent } from './menu-plan-ahead/consider-advance-care-plan/consider-advance-care-plan-container/consider-advance-care-plan-container.component';
-import { ConsiderCprDirectiveContainerComponent } from './menu-plan-ahead/consider-cpr/consider-cpr-directive-container/consider-cpr-directive-container.component';
 import { ConsiderAdvocatesContainerComponent } from './menu-plan-ahead/considerYourAdvocates/consider-advocates-container/consider-advocates-container.component';
 import { ThinkAboutNeedsContainerComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-container/think-about-needs-container.component';
 
+import { ConsiderYourRightsContainerComponent } from './menu-plan-ahead/consider-your-rights/consider-your-rights-container/consider-your-rights-container.component';
 /* MENU WRITE PLANS */
 import { CheckOffTasksListContainerComponent } from './menu-write-plans/check-off-tasks-list/check-off-tasks-list-container/check-off-tasks-list-container.component';
 import { ChooseYourRepContainerComponent } from './menu-write-plans/choose-your-rep/choose-your-rep-container/choose-your-rep-container.component';
@@ -34,7 +34,7 @@ const routes: Routes = [
     {path: 'thinkAboutNeeds', component: ThinkAboutNeedsContainerComponent},
     {path: 'considerAdvocates', component: ConsiderAdvocatesContainerComponent},
     {path: 'considerAdvancePlan', component: ConsiderAdvanceCarePlanContainerComponent},
-    {path: 'considerCPR', component: ConsiderCprDirectiveContainerComponent},
+    {path: 'considerYourRights', component: ConsiderYourRightsContainerComponent},
 
     {path: 'menuWritePlans', component: MakeWishesContainerComponent},
     {path: 'makeWishList', component: MakeWishesContainerComponent},

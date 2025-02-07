@@ -1,12 +1,13 @@
 /*******************************************************************************************************************
-  ALL BANANAS, MOBILES AND TABLET AND IPAD PORTRAIT (MAX IS 1 less than TABLET LANDSCAPE at and (min-width: 1280px))
+  GLOBAL BANANAS- MOBILES, SMALL TABLETS - under 900 (content) width so need 10% space on either side of content
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 240px)
-and (max-width: 1279px) {
+and (max-width: 896px)    {
 
-    .content-dark-list, .content-light-list, .content-clear-list {
+    .content-dark-list, .content-light-list {
         width:var(--media-less-than-content-width);
+        padding:.5em 0;
     }
 
     .list-item {
@@ -16,143 +17,103 @@ and (max-width: 1279px) {
 
 }
 
-/*  BANANA PORTRAIT *******************************************************************************************/
-@media only screen
-and (min-width: 240px)
-and (max-width: 359px)
-and (orientation: portrait) {
-
-    .list-item {
-        font-size: var(--med-copy-banana-port-font-size);
-    }
-
-}
-
-/* BANANA LANDSCAPE ****************************************************************************************************/
-@media only screen
-and (min-width: 568px)
-and (max-width: 895px)
-and (orientation: landscape) {
-
-    .list-item {
-        font-size: var(--med-copy-banana-land-font-size);
-    }
-
-}
-
-/* MOBILES PORTRAIT ****************************************************************************************************/
-@media only screen
-and (min-width: 360px)
-and (max-width: 599px)
-and (orientation: portrait) {
-
-    .list-item {
-        font-size: var(--med-copy-mobile-port-font-size);
-    }
-
-}
-
-/*  MOBILES LANDSCAPE **************************************************************************************************/
-@media only screen
-and (min-width: 896px )
-and (max-width: 1279px)
-and (orientation: landscape) {
-
-    .list-item {
-        font-size: var(--med-copy-mobile-land-font-size);
-    }
-
-}
-
-/*  TABLETS PORTRAIT *******************************************************************************************/
-@media only screen
-and (min-width: 600px)
-and (max-width: 1023px)
-and (orientation: portrait) {
-
-    .list-item {
-        font-size: var(--med-copy-tablet-port-font-size);
-    }
-
-}
-
-/* IPADS PORTRAIT ****************************************************************************************************/
-@media only screen
-and (min-width: 1024px)
-and (max-width: 1366px)
-and (orientation: portrait) {
-
-    .list-item {
-        font-size: var(--med-copy-ipad-port-font-size);
-    }
-
-}
-
 /*******************************************************************************************************************
-  ALL THAT SHOW DESKTOP - TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
+  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS AND UP (over 900 so don't need to have space on either side of content)
 *******************************************************************************************************************/
-
 @media only screen
-and (min-width: 1280px)
-and (orientation: landscape) {
+and (min-width:960px)   {
 
-    .content-dark-list, .content-light-list, .content-clear-list {
+    .content-dark-list, .content-light-list {
         width:var(--media-more-than-content-width);
-    }
-
-    .content-dark-list span, .content-light-list span, .content-clear-list span {
-        font-size:var(--med-copy-desktop-font-size);
+        padding-bottom:1em;
     }
 
     .list-item {
-        line-height: 125%;
-        padding-top: 1em;
+        line-height: 200%;
     }
 
-    .list-item:first-child {
+    .list-item:first-child  {
         padding-top: 0;
     }
 
 }
 
-/*  TABLETS LANDSCAPE *******************************************************************************************/
+/*  BANANA   *******************************************************************************************/
 @media only screen
-and (min-width: 1280px)
-and (max-width: 1365px)
-and (orientation: landscape) {
+and (min-width: 240px)
+and (max-width: 320px) {
 
     .list-item {
-        font-size: var(--med-copy-tablet-land-font-size);
+        font-size: var(--med-copy-banana-font-size);
     }
 
 }
 
-/* IPADS LANDSCAPE ***************************************************************************************************/
+/* MOBILES v ****************************************************************************************************/
 @media only screen
-and (min-width: 1366px)
-and (max-width: 1439px)
-and (orientation: landscape) {
+and (min-width: 360px)
+and (max-width: 414px) {
 
     .list-item {
-        font-size: var(--med-copy-ipad-land-font-size);
+        font-size: var(--med-copy-mobile-font-size);
     }
 
 }
 
-/* DESKTOPS ***********************************************************************************************************/
+/*  TABLETS   *******************************************************************************************/
 @media only screen
-and (min-width: 1440px) {
+and (min-width: 600px)
+and (max-width: 800px)  {
+
+    .list-item {
+        font-size: var(--med-copy-tablet-font-size);
+    }
+
+}
+
+/* IPADS ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)  {
+
+    .list-item {
+        font-size: var(--med-copy-ipad-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  LAPTOPS
+*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 1440px)
+and (max-width: 1919px){
+
+    .list-item {
+        font-size: var(--med-copy-laptop-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  DESKTOP and UP
+*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 1920px){
 
     .list-item {
         font-size: var(--med-copy-desktop-font-size);
     }
 
 }
+
 /* GLOBAL *************************************************************************************************************/
 @media screen {
 
     /* ULs */
-    .content-dark-list, .content-light-list, .content-clear-list {
+    .content-dark-list, .content-light-list {
         display: grid;
         margin: auto;
         max-width: var(--content-width);
@@ -169,10 +130,8 @@ and (min-width: 1440px) {
 
     /* LIST */
     .list-item, .list-item a   {
-        width: 90%;
         font-family: var(--family-copy);
         text-align: left;
-        margin: 0 5%;
     }
 
     .list-item a {

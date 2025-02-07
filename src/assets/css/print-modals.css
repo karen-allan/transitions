@@ -1,0 +1,262 @@
+/*!*******************************************************************************************************************
+  GLOBAL BANANAS- MOBILES, SMALL TABLETS - under 900 (content) width so need 10% space on either side of content
+*******************************************************************************************************************!
+@media only screen
+and (min-width: 240px)
+and (max-width: 896px)    {
+
+
+}
+
+!*******************************************************************************************************************
+  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS (over 900 so don't need to have space on either side of content)
+*******************************************************************************************************************!
+@media only screen
+and (min-width:960px)   {
+
+
+}
+
+
+!*******************************************************************************************************************
+  BANANAS
+*******************************************************************************************************************!
+@media only screen
+and (min-width: 240px)
+and (max-width: 320px) {
+
+
+}
+
+!*******************************************************************************************************************
+  MOBILES
+*******************************************************************************************************************!
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px) {
+
+
+
+
+
+}
+
+!*******************************************************************************************************************
+  TABLETS
+*******************************************************************************************************************!
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px)  {
+
+
+
+}
+
+!*******************************************************************************************************************
+  IPADS
+*******************************************************************************************************************!
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px) {
+
+
+}
+
+!*******************************************************************************************************************
+  LAPTOPS
+*******************************************************************************************************************!
+@media only screen
+and (min-width: 1440px)
+and (max-width: 1919px) {
+
+
+}
+
+!*******************************************************************************************************************
+  DESKTOPS
+*******************************************************************************************************************!
+@media only screen
+and (min-width: 1920px) {
+
+
+
+}*/
+
+/* GLOBAL *************************************************************************************************************/
+@media print {
+
+    @page {
+        size: 8.5in 11in;
+        margin-top: 0.5in;
+        margin-bottom: 0.75in;
+        margin-left: .75in;
+        margin-right: .5in;
+    }
+
+    .make-wishes-wizard-printout, .choose-your-rep-wizard-printout, .write-advance-directive-wizard-printout {
+        display:block;
+        float:left;
+        width:95%;
+        font-family: Calibri, Cambria, 'Arial', serif;
+        margin-top:1em;
+        color:#878787;
+        /*border:thick solid blue;*/
+    }
+
+    .print-modal-block  {
+        margin-top:2em;
+    }
+
+    /* wishes */
+    .print-modal-question {
+        display:block;
+        float:left;
+        width:100%;
+        /*border:thin solid red;*/
+    }
+
+    .print-modal-question p {
+        margin-top:1em;
+        font-size: 1.5em;
+        font-style: normal;
+        line-height: 110%;
+    }
+
+    .print-modal-question span {
+        display:block;
+        font-size: 1.5em;
+        font-style: italic;
+        line-height: 100%;
+        padding-left: 2em;
+    }
+
+    /* representatives and advance directive */
+    .print-modal-title   {
+        display:block;
+        width:100%;
+        float:left;
+        /*border:thin solid red;*/
+        padding-top:1em;
+        font-family:var(--family-title);
+    }
+
+    .print-modal-title h1  {
+        font-size: 1.9em;
+        margin-top:.8em;
+        text-align: left;
+    }
+
+    .print-modal-title h2  {
+        font-size: 1.4em;
+        margin-top:.5em;
+        text-align: left;
+    }
+
+    .print-modal-title h3  {
+        font-size: 1.7em;
+        margin-top:.5em;
+        text-align: left;
+    }
+
+    .print-modal-title h4  {
+        font-size: 1.6em;
+        margin-top:.5em;
+        text-align: left;
+    }
+
+    .print-modal-text-block {
+        display:block;
+        float:left;
+        width:100%;
+        font-family: var(--family-copy);
+    }
+
+    .print-modal-text-block p {
+        font-size: 1.5em;
+        text-align: left;
+        line-height:130%;
+    }
+
+    .print-modal-text-block span {
+        font-size: 1.4em;
+        line-height:100%;
+    }
+
+    .print-modal-list-block {
+        display:block;
+        float:left;
+        width:90%;
+        margin-left: 5%;
+        margin-right:5%;
+        font-family: var(--family-copy);
+    }
+
+    .print-modal-list-item    {
+        font-size:1.5em;
+        text-align: left;
+        line-height: 120%;
+        padding-top:.25em;
+    }
+
+    .print-modal-inline-data {
+        display:inline-grid;
+        float:left;
+        grid-template-columns: 40% 60%;
+        width:100%;
+        padding:1em 0;
+    }
+
+    .print-modal-inline-prompt, .print-modal-inline-value {
+        display:grid;
+        font-size: 1.5em;
+        line-height: 130%;
+        width:100%;
+    }
+
+    .print-modal-inline-prompt {
+        grid-column: 1;
+    }
+
+    .print-modal-inline-value {
+        grid-column: 2;
+        border-bottom: 1px solid black;
+    }
+
+    .print-modal-inline-line {
+        display:grid;
+        grid-column: 2;
+        /*padding-top:1.5em;*/
+        border-bottom: 1px solid black;
+        /*line-height: 200%;*/
+    }
+
+    .print-modal-instructions {
+        display:block;
+        float:left;
+        width:90%;
+        margin-right:5%;
+        margin-left:5%;
+        font-family:var(--family-copy);
+    }
+
+    .print-modal-instructions p {
+        font-size: 1.5em;
+        font-style: italic;
+        line-height: 120%;
+        padding:1em 0;
+    }
+
+    .print-modal-province {
+        display:block;
+        width:100%;
+        margin:auto;
+        font-family:"sans-serif";
+        font-size:1.5em;
+        padding:0;
+    }
+
+
+}
+
+
+

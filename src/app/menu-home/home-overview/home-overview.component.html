@@ -1,18 +1,20 @@
-<div class="header-home-image header-copy">
-    <p>&#8220;Unable are the loved to die, for love is immortality.&#8220;
-    </p>
-    <span>
-         Emily Dickinson
-    </span>
+<div class="header-home-image">
+    <div class="quote">
+        &#8220;{{quote}}&#8220;
+    </div>
+    <div class="author">
+        {{author}}
+    </div>
 </div>
 
-<div class="screen-title pad-top-3">
-    <h1>{{title.toUpperCase()}}</h1>
-    <h2><i>{{slogan}}</i></h2>
+<div class="content-title">
+    <h1>{{title}}</h1>
 </div>
 
-<div class="facts-grid">
-    <div class="facts-image bkgrd-facts"></div>
+<div class="facts-container">
+    <div class="facts-image">
+        <img src="assets/images/details/home/backgroundFAQs.jpg" alt="Facts about dying" title="Facts about dying">
+    </div>
 
     <div class="facts-text">
         <a href="https://www150.statcan.gc.ca/n1/pub/11-630-x/11-630-x2016002-eng.htm" target="_blank">
@@ -117,19 +119,19 @@
     </div>
 </div>
 
-<div class="screen-quote">
+<div class="quotes">
     <p>
         &#8220;Hospitals were never meant to be the place we go when we are dying - it was never meant to be a place where people live
         out their last days on Earth, surrounded by strangers.&#8221;
     </p>
 </div>
 
-<div class="header-images">
+<div class="content-images">
     <img src="assets/images/details/home/helpOurselves.jpg" alt="How do we help ourselves?" title="How do we help ourselves?">
 </div>
 
-<div class="screen-title">
-    <h2>How do we do it better?</h2>
+<div class="content-title">
+    <h2>How do we do better?</h2>
 </div>
 
 <div class="content-dark-copy">
@@ -157,7 +159,7 @@
     </p>
 </div>
 
-<div class="screen-quote">
+<div class="quotes">
     <p>
         &#8220;It is not the length of life, but the depth.&#8221;
     </p>
@@ -166,7 +168,7 @@
     </span>
 </div>
 
-<div class="screen-title">
+<div class="content-title">
     <h2>Let's keep our integrity</h2>
 </div>
 
@@ -186,7 +188,7 @@
     </p>
 </div>
 
-<div class="screen-quote">
+<div class="quotes">
     <p>
         &#8220;To live in the hearts we leave behind is not to die.&#8221;
     </p>
@@ -195,67 +197,77 @@
     </span>
 </div>
 
-<a routerLink="/bookConsultation" fragment ="bookConsultationTop" style="cursor:pointer; text-decoration:none">
-    <div class = "linked-topic-grid topic-home-book-session topic-size">
+<!--<a routerLink="/bookConsultation" fragment ="bookConsultationTop" style="cursor:pointer; text-decoration:none">
+    <div class = "booking-link-grid">
         <h2>Book a Consultation</h2>
     </div>
-</a>
+</a>-->
+<!--<div class = "booking-link-grid">
+    <a routerLink="/bookConsultation" fragment ="bookConsultationTop" style="cursor:pointer; text-decoration:none">
+        <h2>Book a Consultation</h2>
+    </a>
+</div>-->
 
-<div class="screen-title pad-top-2">
-    <h2>The Death Positive Movement Principles </h2>
+<div class = "booking-link-grid">
+    <a routerLink="/bookConsultation" fragment ="bookConsultationTop" style="cursor:pointer; text-decoration:none">
+        Book a Consultation</a>
 </div>
 
-<div class="content-dark-list">
-    <li class="list-item infinity">
+
+<div class="content-title">
+    <h2>The Death Positive Movement</h2>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        From the <a href="https://www.orderofthegooddeath.com/" target="new"> Order of the Good Death website"</a>
+    </p>
+</div>
+
+<ul class="content-dark-list infinity">
+    <li class="list-item">
         We believe that by hiding death and dying behind closed doors we do more harm than good to our society.
     </li>
 
-    <li class="list-item infinity">
+    <li class="list-item">
         We believe that the culture of silence around death should be broken through discussion, gatherings, art, innovation, and
         scholarship.
     </li>
 
-    <li class="list-item infinity">
+    <li class="list-item">
         We believe that talking about and engaging with your inevitable death is not morbid, but displays a natural curiosity about the
         human condition.
     </li>
 
-    <li class="list-item infinity">
+    <li class="list-item">
         We believe that the dead body is not dangerous, and that everyone should be empowered (should they wish to be) to be involved in
         care for their own dead.
     </li>
 
-    <li class="list-item infinity">
+    <li class="list-item">
         We believe that the laws that govern death, dying and end-of-life care should ensure that a person’s wishes are honored,
         regardless of sexual, gender, racial or religious identity.
     </li>
 
-    <li class="list-item infinity">
+    <li class="list-item">
         We believe that your death should be handled in a way that does not do great harm to the environment.
     </li>
 
-    <li class="list-item infinity">
+    <li class="list-item">
         We believe that your family and friends should know your end-of-life wishes, and that you should have the necessary paperwork to
         back-up those wishes.
     </li>
 
-    <li class="list-item infinity">
+    <li class="list-item">
         We believe that your open, honest advocacy around death can make a difference, and can change the culture.
     </li>
-</div>
+</ul>
 
-<div class="content-dark-copy text-center pad-top-2">
-    <span>
-        From the <a href="https://www.orderofthegooddeath.com/" target="new"> Order of the Good Death website"</a>
-    </span>
-</div>
-
-<!--
-<div class="header-images">
+<div class="content-images">
     <img src="assets/images/details/home/livingWellTillTheEnd.jpg" alt="How do we help ourselves?" title="How do we help ourselves?">
-</div>-->
+</div>
 
-<div class="citations-grid pad-top-2 pad-bottom-3">
+<div class="citations-container">
     <div class="citations-left">
         <a href="https://www150.statcan.gc.ca/n1/pub/11-630-x/11-630-x2016002-eng.htm" target="_blank">
             1: Stats Canada: Life expectancy, 1920–1922 to 2009–2011</a>
@@ -275,7 +287,7 @@
             5: Case Western Reserve University: Funeral Homes and Funeral Practices.</a>
 
         <a href="https://sjbpublichealth.org/200-years-public-health-doubled-life-expectancy/" target="_blank">
-            6. San Juan Basin Public Health: 200 years of public health has doubled our life expectancy</a>
+            6. San Juan Basin Public Health: 200 years of public health doubles life expectancy</a>
 
         <a href="https://vanierinstitute.ca/wp-content/uploads/2015/12/CFT_2013-11-00_EN.pdf" target="_blank">
             7: Death, Dying and Canadian Families by Dr. Katherine Arnup (page 8/9)</a>
@@ -302,12 +314,12 @@
             13. Canada's Health Care System</a>
 
         <a href="https://nationalseniorsstrategy.ca/the-four-pillars/pillar-4/financial-support-caregivers/" target="_blank">
-            14: Ensuring Unpaid Caregivers Are Not Unnecessarily Financially Penalized for Caregiving
+            14: Ensuring Unpaid Caregivers Aren't Unnecessarily Financially Penalized for Caregiving
         </a>
 
         <a href="https://www.researchgate.net/publication/347838632_Describing_the_end-of-life_doula_role_and_practices_of_care_perspectives_from_four_countries/"
            target="_blank">
-            15: Describing the end-of-life doula role and practices of care: perspectives from 4 countries.</a>
+            15: Describing end-of-life doula role and practices: perspectives from four countries.</a>
 
         <a href="https://www.mcmasteroptimalaging.org/blog/detail/blog/2021/04/07/end-of-life-doulas-providing-care-and-comfort-to-the-dying-and-their-loved-ones"
            target="_blank">

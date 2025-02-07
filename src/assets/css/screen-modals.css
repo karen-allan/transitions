@@ -1,0 +1,470 @@
+/*******************************************************************************************************************
+   GLOBAL BANANAS- MOBILES AND SMALL TABLETS - under 900 (content) width so need 10% space on either side of content
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 896px)    {
+
+
+}
+
+/*******************************************************************************************************************
+   GLOBAL IPADS, LAPTOPS, DESKTOPS AND UP (over 900 so don't need to have space on either side of content)
+*******************************************************************************************************************/
+
+@media only screen
+and (min-width:960px)    {
+
+
+
+
+}
+
+/*  BANANA   *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 320px)  {
+
+
+    /* WISHES */
+    .screen-modal-wishes-prompt {
+        font-size: .9em;
+        line-height: 115%;
+        padding:0 1em;
+        font-weight:200;
+        height:50px;
+    }
+}
+
+
+
+/* MOBILES   ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)  {
+
+
+
+
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)  {
+
+
+
+
+
+}
+
+/*  TABLETS  *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px)  {
+
+
+
+
+
+}
+
+
+
+/* IPADS  ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px) {
+
+    mat-dialog-container#choose-rep-nine-modal,
+    mat-dialog-container#make-wishes-modal,
+    mat-dialog-container#advanced-directive-modal {
+        border: 3px solid var(--color-dark-blue);
+        border-radius: 2em;
+        background-color: var(--color-dark-blue);
+        margin:auto;
+        /*overflow-y: scroll;*/
+    }
+
+    mat-dialog-container#advanced-directive-modal {
+        width: var(--content-width);
+        height: var(--modal-biggest-height);
+    }
+
+    mat-dialog-container#choose-rep-nine-modal  {
+        width: var(--content-width);
+        height: var(--modal-big-height);
+    }
+
+    mat-dialog-container#make-wishes-modal {
+        width: var(--content-width);
+        height:var(--modal-small-height);
+    }
+
+}
+
+/* LAPTOPS ***************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width: 1919px) {
+
+    mat-dialog-container#choose-rep-nine-modal,
+    mat-dialog-container#make-wishes-modal,
+    mat-dialog-container#advanced-directive-modal {
+        border: 3px solid var(--color-dark-blue);
+        border-radius: 2em;
+        background-color: var(--color-dark-blue);
+        margin:auto;
+        /*overflow-y: scroll;*/
+    }
+
+    mat-dialog-container#advanced-directive-modal {
+        width: var(--content-width);
+        height: var(--modal-biggest-height);
+    }
+
+    mat-dialog-container#choose-rep-nine-modal  {
+        width: var(--content-width);
+        height: var(--modal-big-height);
+    }
+
+    mat-dialog-container#make-wishes-modal {
+        width: var(--content-width);
+        height:var(--modal-small-height);
+    }
+
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    /* GENERAL DEFINITIONS  ***********************************************************************************/
+    mat-dialog-container#choose-rep-nine-modal,
+    mat-dialog-container#make-wishes-modal,
+    mat-dialog-container#advanced-directive-modal {
+        border: 3px solid var(--color-dark-blue);
+        border-radius: 2em;
+        background-color: var(--color-dark-blue);
+        margin:auto;
+        /*overflow-y: scroll;*/
+    }
+
+    mat-dialog-container#advanced-directive-modal {
+        width: var(--content-width);
+        height: var(--modal-biggest-height);
+    }
+
+    mat-dialog-container#choose-rep-nine-modal  {
+        width: var(--content-width);
+        height: var(--modal-biggest-height);
+    }
+
+    mat-dialog-container#make-wishes-modal {
+        width: var(--content-width);
+        height:var(--modal-biggest-height);
+    }
+
+   .screen-modal-inner-content  {
+        height: 600px;
+    }
+
+    /*  .screen-modal-inner-content wishes {
+      height: 600px;
+        background-color: blueviolet;
+    }
+
+    .screen-modal-inner-content directive {
+        height: 600px;
+    } */
+
+    .screen-modal-forty-sixty-cols-block  {
+        display: inline-grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .screen-modal-three-thirty-cols-block {
+        display: inline-grid;
+        grid-template-columns: 33% 33% 34%;
+    }
+
+    .screen-modal-two-fifty-cols-block {
+        display: inline-grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .screen-modal-two-buttons-row {
+        grid-template-columns: repeat(2, 110px);
+        grid-column-gap: 10px;
+
+    }
+
+    .screen-modal-three-buttons-row {
+        grid-template-columns: repeat(3, 110px);
+        grid-column-gap: 10px;
+    }
+
+    .screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
+    .screen-modal-cancel-button, .screen-modal-print-button, .screen-modal-cancel-print-button  {
+        font-size: var(--med-copy-desktop-font-size);
+        height:50px;
+        width:110px;
+    }
+
+    /* WISHES WIZARD ********************************************************************************************************/
+    .screen-modal-wishes-prompt {
+        padding-top:2em;
+    }
+
+    .screen-modal-wishes-prompt p {
+        font-size: var(--biggest-copy-desktop-font-size);
+        font-weight:bold;
+        padding-bottom:1.5em;
+    }
+
+    .screen-modal-wishes-prompt span {
+        display:block;
+        font-size: var(--big-copy-desktop-font-size);
+        padding-bottom: 1em;
+        line-height: 140%;
+    }
+
+    .screen-modal-answer-row {
+        font-size: var(--med-copy-desktop-font-size);
+
+    }
+
+    /* REPRESENTATIVES AND ADVANCE DIRECTIVE WIZARDS ***********************************************************************************/
+        .screen-modal-error-message {
+            display:block;
+            line-height: 100%;
+            font-size: var(--big-copy-desktop-font-size);
+        }
+
+        .screen-modal-first-col, .screen-modal-second-col, .screen-modal-third-col, .screen-modal-first-radio-col,
+        .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
+            font-size: var(--med-copy-desktop-font-size);
+            padding-top:.6em;
+        }
+
+        .screen-modal-big-first-col, .screen-modal-big-second-col{
+            font-size: var(--biggest-copy-desktop-font-size);
+            padding-top:.6em;
+        }
+
+        .screen-modal-first-col, .screen-modal-big-first-col   {
+            grid-column: 1;
+            width: 100%;
+        }
+
+        .screen-modal-second-col, .screen-modal-big-second-col{
+            grid-column: 2;
+            width: 100%;
+        }
+
+        .screen-modal-third-col  {
+            grid-column: 3;
+            width: 100%;
+        }
+
+        .screen-modal-small-list-item {
+            font-size: var(--small-copy-desktop-font-size);
+            padding-top:.5em;
+        }
+
+        .screen-modal-med-list-item {
+            font-size: var(--med-copy-desktop-font-size);
+            padding-top:1em;
+        }
+
+        .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
+            display: inline;
+        }
+
+        .screen-modal-first-radio-col, .screen-modal-second-radio-col {
+            padding-top:1em;
+            margin-top:1em;
+        }
+
+        .screen-modal-first-radio-col, .screen-modal-first-check-col  {
+            grid-column:1;
+            font-size: var(--small-copy-desktop-font-size);
+        }
+
+        .screen-modal-second-radio-col, .screen-modal-second-check-col {
+            grid-column:2;
+            font-size: var(--small-copy-desktop-font-size);
+        }
+
+        .screen-modal-first-radio-col, .screen-modal-second-radio-col {
+            padding-bottom:1em;
+        }
+
+        .screen-modal-first-check-col, .screen-modal-second-check-col {
+            line-height: 110%;
+            padding:1em 0;
+        }
+    }
+
+    /* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    /* GENERAL DEFINITIONS  ***********************************************************************************/
+    /* Overwrite the styles of the mat-dialog-container element globally, but only for those that have an id of `modal-component` */
+    mat-dialog-container#choose-rep-nine-modal,  mat-dialog-container#change-rep-nine-modal,
+    mat-dialog-container#make-wishes-modal, mat-dialog-container#advanced-directive-modal {
+        border: 3px solid var(--color-dark-blue);
+        border-radius: 2em;
+        background-color: var(--color-dark-blue);
+        margin:auto;
+        /*overflow-y: scroll;*/
+    }
+
+    #screen-modal-content-wrapper {
+        height:100%;
+        width:100%;
+        display: grid;
+        background-color: white;
+    }
+
+    /* position relative here is essential to get the buttons to sit absolute at the bottom of each modal page */
+    .screen-modal-inner-content {
+        display:grid;
+        align-content: flex-start;
+        width:90%;
+        margin:auto;
+        /*height:600px;*/
+/*background-color: #91c271;*/
+        position:relative
+    }
+
+/*    .screen-modal-rep-height {
+        height:100px;
+        background-color: #91c271;
+    }
+
+    .screen-modal-wishes-height {
+        height:550px;
+        background-color: #609eeb;
+    }*/
+
+    .screen-modal-two-buttons-row, .screen-modal-three-buttons-row {
+        display:inline-grid;
+        width:100%;
+        justify-content: flex-end;
+        position:absolute;
+        bottom:1em;
+    }
+
+    .screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
+    .screen-modal-cancel-button, .screen-modal-print-button, .screen-modal-cancel-print-button  {
+        display:inline;
+        color: var(--color-white);
+        background-color: var(--color-dark-blue);
+        border-radius: 1em;
+        text-align: center;
+        align-content: center;
+     /*   position: absolute;
+        bottom: 0.5em;*/
+    }
+
+    .screen-modal-start-button, .screen-modal-next-button, .screen-modal-print-button {
+        grid-column:1;
+    }
+
+    .screen-modal-cancel-start-button, .screen-modal-previous-button  {
+        grid-column:2;
+    }
+
+    .screen-modal-cancel-button {
+        grid-column:3;
+    }
+
+    /* WISHES WIZARD ********************************************************************************************************/
+    .screen-modal-wishes-prompt {
+        display:block;
+        width:100%;
+        line-height:105%;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+    }
+
+    .screen-modal-answer-row {
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        display:inline;
+        border:1px dashed var(--color-dark-blue);
+        padding:1em;
+        text-align:left;
+        line-height: 110%;
+    }
+
+    /* REPRESENTATIVES AND ADVANCE DIRECTIVE WIZARDS ***********************************************************************************/
+    /* because we set the modal-inner-content position to relative it allows this to be absolute at the bottom with margin bottom set */
+
+    .screen-modal-error-message-block {
+        display:block;
+        float:left;
+        width:100%;
+        background-color: white;
+        text-align: left;
+    }
+
+    .screen-modal-error-message {
+        font-weight:800;
+        color:var(--color-red);
+        font-family: var(--family-copy);
+    }
+
+    .screen-modal-big-first-col, .screen-modal-big-second-col, screen-modal-first-col, .screen-modal-second-col, .screen-modal-third-col  {
+        display:grid;
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col  {
+        border:1px dashed var(--color-dark-blue);
+        width:100%;
+    }
+
+    .screen-modal-full-col-list {
+        display: block;
+        width:95%;
+        margin-top:0;
+    }
+
+    .screen-modal-small-list-item, .screen-modal-med-list-item    {
+        list-style: square inside;
+    }
+
+    .screen-modal-forty-sixty-cols-block,  .screen-modal-three-thirty-cols-block, .screen-modal-full-col-block, .screen-modal-full-col-radio,
+    .screen-modal-two-fifty-cols-block {
+        width: 100%;
+        text-align:left;
+    }
+
+
+    .screen-modal-full-col-block {
+        display:grid;
+    }
+
+    .screen-modal-full-col-block textarea {
+        display:grid;
+        overflow-y: auto;
+    }
+
+    .screen-modal-full-col-radio  {
+        display:grid;
+    }
+
+    .screen-modal-big-first-col, .screen-modal-big-second-col, .screen-modal-first-col, .screen-modal-second-col,
+    .screen-modal-third-col, .screen-modal-first-radio-col,
+    .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col,
+    .screen-modal-small-list-item, .screen-modal-med-list-item, .screen-modal-full-col-block textarea {
+        color:var(--color-dark-blue);
+        font-family: var(--family-copy);
+        text-align:left;
+    }
+
+}

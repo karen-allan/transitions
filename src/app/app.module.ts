@@ -3,49 +3,27 @@ import { NgModule } from '@angular/core';
 import { DatePipe } from '@angular/common';
 import {CommonModule} from "@angular/common";
 import { FormsModule } from '@angular/forms';
-
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './service-files/in-memory-data.service';
 import { NgxMaskModule } from 'ngx-mask'
-
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 
-
 /*ng generate component write-advance-directive-wizard-printout --standalone false */
-
-/************************************************************* GLOBAL DATA ENTRY **********************************************************/
-import { DataEntryCaregiverConsultComponent } from './global-data-entry/data-entry-caregiver-consult/data-entry-caregiver-consult.component';
-import { DataEntryPatientConsultComponent } from './global-data-entry/data-entry-patient-consult/data-entry-patient-consult.component';
-import { DataEntryPlanningConsultComponent } from './global-data-entry/data-entry-planning-consult/data-entry-planning-consult.component';
-import { MenuForConsultationsComponent } from './global-data-entry/menu-for-consultations/menu-for-consultations.component';
 
 /************************************************************* GLOBAL FOOTERS **************************************************************/
 import { GlobalFooterComponent } from './global-footers/global-footer.component';
-import { PrintedFooterComponent } from './printed-footer/printed-footer.component';
+import { PrintedFooterComponent } from './global-footers/printed-footer/printed-footer.component';
 
-/************************************************************* GLOBAL FORMS ***************************************************************/
-import { CovidComponent } from './global-forms/covid/covid.component';
-import { DemographicInfoComponent } from './global-forms/demographic-info/demographic-info.component';
-import { EndOfLifePlanningComponent } from './global-forms/end-of-life-planning/end-of-life-planning.component';
-import { FrailtyScaleComponent } from './global-forms/frailty-scale/frailty-scale.component';
-import { MedicalHistoryComponent } from './global-forms/medical-history/medical-history.component';
-import { SupportForCaregiverComponent } from './global-forms/support-for-caregiver/support-for-caregiver.component';
-import { SupportForPatientComponent } from './global-forms/support-for-patient/support-for-patient.component';
 
 /************************************************************* GLOBAL MENU ****************************************************************/
 import { GlobalMenuComponent } from './global-menu/global-menu.component';
 
-/************************************************************* GLOBAL PRINT  **************************************************************/
-import { PrintCaregiverConsultComponent } from './global-print/print-caregiver-consult/print-caregiver-consult.component';
-import { PrintPatientConsultComponent } from './global-print/print-patient-consult/print-patient-consult.component';
-import { PrintPlanningConsultComponent } from './global-print/print-planning-consult/print-planning-consult.component';
 
 /************************************************************* MENU ABOUT *****************************************************************/
 /** ABOUT EOL ADVOCACY FOLDER **/
@@ -74,13 +52,13 @@ import {HomeOverviewComponent} from './menu-home/home-overview/home-overview.com
 import { ConsiderAdvanceCarePlanContainerComponent } from './menu-plan-ahead/consider-advance-care-plan/consider-advance-care-plan-container/consider-advance-care-plan-container.component';
 import { ConsiderAdvanceCarePlanOverviewComponent } from './menu-plan-ahead/consider-advance-care-plan/consider-advance-care-plan-overview/consider-advance-care-plan-overview.component';
 
+/** CONSIDER YOUR RIGHTS FOLDER **/
+import { ConsiderYourRightsContainerComponent } from './menu-plan-ahead/consider-your-rights/consider-your-rights-container/consider-your-rights-container.component';
+import { ConsiderYourRightsOverviewComponent } from './menu-plan-ahead/consider-your-rights/consider-your-rights-overview/consider-your-rights-overview.component';
+
 /** CONSIDER YOUR ADVOCATES FOLDER **/
 import { ConsiderAdvocatesContainerComponent } from './menu-plan-ahead/considerYourAdvocates/consider-advocates-container/consider-advocates-container.component';
 import { ConsiderAdvocatesOverviewComponent } from './menu-plan-ahead/considerYourAdvocates/consider-advocates-overview/consider-advocates-overview.component';
-
-/** CONSIDER CPR DIRECTIVE FOLDER **/
-import { ConsiderCprDirectiveContainerComponent } from './menu-plan-ahead/consider-cpr/consider-cpr-directive-container/consider-cpr-directive-container.component';
-import { ConsiderCprDirectiveOverviewComponent } from './menu-plan-ahead/consider-cpr/consider-cpr-directive-overview/consider-cpr-directive-overview.component';
 
 /** THINK ABOUT NEEDS FOLDER **/
 import { ThinkAboutNeedsContainerComponent } from './menu-plan-ahead/think-about-needs/think-about-needs-container/think-about-needs-container.component';
@@ -95,59 +73,73 @@ import { CheckOffTasksListOverviewComponent } from './menu-write-plans/check-off
 /** CHOOSE YOUR REP FOLDER **/
 import { ChooseYourRepContainerComponent } from './menu-write-plans/choose-your-rep/choose-your-rep-container/choose-your-rep-container.component';
 import { ChooseYourRepOverviewComponent } from './menu-write-plans/choose-your-rep/choose-your-rep-overview/choose-your-rep-overview.component';
-import { ChooseYourRepWizardComponent } from './menu-write-plans/choose-your-rep/choose-your-rep-wizard/choose-your-rep-wizard.component';
-import { ChooseYourRepWizardHeaderComponent } from './menu-write-plans/choose-your-rep/choose-your-rep-wizard-header/choose-your-rep-wizard-header.component';
-import { ChooseYourRepWizardPrintoutComponent } from './menu-write-plans/choose-your-rep/choose-your-rep-wizard-printout/choose-your-rep-wizard-printout.component';
+
+
 
 /** MAKE WISH LIST FOLDER **/
 import { MakeWishesContainerComponent } from './menu-write-plans/make-wish-list/make-wishes-container/make-wishes-container.component';
 import { MakeWishesOverviewComponent } from './menu-write-plans/make-wish-list/make-wishes-overview/make-wishes-overview.component';
-import { MakeWishesWizardComponent } from './menu-write-plans/make-wish-list/make-wishes-wizard/make-wishes-wizard.component';
-import { MakeWishesWizardHeaderComponent } from './menu-write-plans/make-wish-list/make-wishes-wizard-header/make-wishes-wizard-header.component';
-import { MakeWishesWizardPrintoutComponent } from './menu-write-plans/make-wish-list/make-wishes-wizard-printout/make-wishes-wizard-printout.component';
+
+
 
 /** WRITE AN ADVANCE CARE DIRECTIVE FOLDER **/
 import { WriteAdvanceDirectiveOverviewComponent } from './menu-write-plans/write-advance-directive/write-advance-directive-overview/write-advance-directive-overview.component';
 import { WriteAdvanceDirectiveContainerComponent } from './menu-write-plans/write-advance-directive/write-advance-directive-container/write-advance-directive-container.component';
-import { WriteAdvanceDirectiveWizardComponent } from './menu-write-plans/write-advance-directive/write-advance-directive-wizard/write-advance-directive-wizard.component';
-import { WriteAdvanceDirectiveWizardHeaderComponent } from './menu-write-plans/write-advance-directive/write-advance-directive-wizard-header/write-advance-directive-wizard-header.component';
-import { WriteAdvanceDirectiveWizardPrintoutComponent } from './menu-write-plans/write-advance-directive/write-advance-directive-wizard-printout/write-advance-directive-wizard-printout.component';
+
+
+
+/************************************************************* PRINT FORMS ***********************************************************/
+import { CaregiverComponent } from './print-forms/caregiver/caregiver.component';
+import { DemographicComponent } from './print-forms/demographic/demographic.component';
+import { DisclaimerComponent } from './print-forms/disclaimer/disclaimer.component';
+import { FrailityComponent } from './print-forms/fraility/fraility.component';
+import { MedicalComponent } from './print-forms/medical/medical.component';
+import { PatientComponent } from './print-forms/patient/patient.component';
+import { PlanningComponent } from './print-forms/planning/planning.component';
+
+import { PrintCaregiverConsultComponent } from './print-forms/print-caregiver-consult/print-caregiver-consult.component';
+import { PrintPatientConsultComponent } from './print-forms/print-patient-consult/print-patient-consult.component';
+import { PrintPlanningConsultComponent } from './print-forms/print-planning-consult/print-planning-consult.component';
+
+/************************************************************* PRINT MODALS ***********************************************************/
+import { ChooseYourRepWizardPrintoutComponent } from './print-modals/choose-your-rep-wizard-printout/choose-your-rep-wizard-printout.component';
+import { MakeWishesWizardPrintoutComponent } from './print-modals/make-wishes-wizard-printout/make-wishes-wizard-printout.component'
+import { PrintModalHeadingComponent } from './print-modals/print-modal-heading/print-modal-heading.component';
+import { WriteAdvanceDirectiveWizardPrintoutComponent } from './print-modals/write-advance-directive-wizard-printout/write-advance-directive-wizard-printout.component';
+
+/************************************************************* SCREEN FORMS ***********************************************************/
+import { CovidComponent } from './screen-forms/covid/covid.component';
+import { DemographicInfoComponent } from './screen-forms/demographic-info/demographic-info.component';
+import { FrailtyScaleComponent } from './screen-forms/frailty-scale/frailty-scale.component';
+import { MedicalHistoryComponent } from './screen-forms/medical-history/medical-history.component';
+import { SupportForCaregiverComponent } from './screen-forms/support-for-caregiver/support-for-caregiver.component';
+import { SupportForPatientComponent } from './screen-forms/support-for-patient/support-for-patient.component';
+import { SupportForPlannerComponent } from './screen-forms/support-for-planner/support-for-planner.component';
+
+/************************************************************* SCREEN MODALS ***********************************************************/
+import { ChooseYourRepWizardComponent } from './screen-modals/choose-your-rep-wizard/choose-your-rep-wizard.component';
+import { MakeWishesWizardComponent } from './screen-modals/make-wishes-wizard/make-wishes-wizard.component';
+import { ScreenModalHeadingComponent } from './screen-modals/screen-modal-heading/screen-modal-heading.component';
+import { WriteAdvanceDirectiveWizardComponent } from './screen-modals/write-advance-directive-wizard/write-advance-directive-wizard.component';
+
+
+
 
 @NgModule({
     declarations: [
         AppComponent,
 
-        /******************************* GLOBAL DATA ENTRY *******************************/
-        DataEntryCaregiverConsultComponent,
-        DataEntryPatientConsultComponent,
-        DataEntryPlanningConsultComponent,
-        MenuForConsultationsComponent,
-
         /******************************* GLOBAL FOOTER *******************************/
         GlobalFooterComponent,
-
-        /******************************* GLOBAL FORMS *******************************/
-        CovidComponent,
-        DemographicInfoComponent,
-        EndOfLifePlanningComponent,
-        FrailtyScaleComponent,
-        MedicalHistoryComponent,
-        SupportForCaregiverComponent,
-        SupportForPatientComponent,
+        PrintedFooterComponent,
 
         /******************************* GLOBAL MENU *******************************/
         GlobalMenuComponent,
-
-        /******************************* GLOBAL PRINT *******************************/
-        PrintCaregiverConsultComponent,
-        PrintPatientConsultComponent,
-        PrintPlanningConsultComponent,
 
         /******************************* MENU ABOUT *******************************/
         /* ABOUT EOL ADVOCACY FOLDER */
         AboutEolAdvocacyContainerComponent,
         AboutEolAdvocacyOverviewComponent,
-
         /* ABOUT PRACTITIONER FOLDER */
         AboutPractitionerContainerComponent,
         AboutPractitionerOverviewComponent,
@@ -170,6 +162,10 @@ import { WriteAdvanceDirectiveWizardPrintoutComponent } from './menu-write-plans
         ConsiderAdvanceCarePlanContainerComponent,
         ConsiderAdvanceCarePlanOverviewComponent,
 
+        /* CONSIDER YOUR RIGHTS FOLDER */
+        ConsiderYourRightsContainerComponent,
+        ConsiderYourRightsOverviewComponent,
+
         /* CONSIDER YOUR ADVOCATES FOLDER */
         ConsiderAdvocatesContainerComponent,
         ConsiderAdvocatesOverviewComponent,
@@ -178,37 +174,77 @@ import { WriteAdvanceDirectiveWizardPrintoutComponent } from './menu-write-plans
         ThinkAboutNeedsContainerComponent,
         ThinkAboutNeedsOverviewComponent,
 
-        /* CONSIDER CPR FOLDER */
-        ConsiderCprDirectiveContainerComponent,
-        ConsiderCprDirectiveOverviewComponent,
-
         /****************************** MENU WRITE PLANS ************************/
-
         /* CHECK OFF TASKS LIST FOLDER */
         CheckOffTasksListContainerComponent,
         CheckOffTasksListOverviewComponent,
-
         /* CHOOSE YOUR REP FOLDER */
         ChooseYourRepContainerComponent,
         ChooseYourRepOverviewComponent,
-        ChooseYourRepWizardComponent,
-        ChooseYourRepWizardHeaderComponent,
-        ChooseYourRepWizardPrintoutComponent,
-
         /* MAKE WISH LIST FOLDER */
         MakeWishesContainerComponent,
         MakeWishesOverviewComponent,
-        MakeWishesWizardComponent,
-        MakeWishesWizardHeaderComponent,
-        MakeWishesWizardPrintoutComponent,
-
         /* WRITE ADVANCED DIRECTIVE FOLDER */
         WriteAdvanceDirectiveOverviewComponent,
         WriteAdvanceDirectiveContainerComponent,
-        WriteAdvanceDirectiveWizardComponent,
-        WriteAdvanceDirectiveWizardHeaderComponent,
+
+        /******************************* PRINT FORMS *******************************/
+        CaregiverComponent,
+        DemographicComponent,
+        DisclaimerComponent,
+        FrailityComponent,
+        MedicalComponent,
+        PatientComponent,
+        PlanningComponent,
+        PrintCaregiverConsultComponent,
+        PrintPatientConsultComponent,
+        PrintPlanningConsultComponent,
+
+        /******************************* PRINT MODALS *******************************/
+        ChooseYourRepWizardPrintoutComponent,
+        MakeWishesWizardPrintoutComponent,
+        PrintModalHeadingComponent,
         WriteAdvanceDirectiveWizardPrintoutComponent,
-        PrintedFooterComponent,
+
+        /******************************* SCREEN FORMS *******************************/
+        CovidComponent,
+        DemographicInfoComponent,
+        FrailtyScaleComponent,
+        MedicalHistoryComponent,
+        SupportForCaregiverComponent,
+        SupportForPatientComponent,
+        SupportForPlannerComponent,
+
+        /******************************* SCREEN MODALS *******************************/
+        ChooseYourRepWizardComponent,
+        MakeWishesWizardComponent,
+        ScreenModalHeadingComponent,
+        WriteAdvanceDirectiveWizardComponent,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -226,7 +262,9 @@ import { WriteAdvanceDirectiveWizardPrintoutComponent } from './menu-write-plans
         MatDialogModule,
         NgxMaskModule.forRoot(),
         HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false}),
-        
+
+
+
 
 
     ],

@@ -1,9 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {Client} from "../../../ts-files/client";
 import {BookConsultationContainerComponent} from "../book-consultation-container/book-consultation-container.component";
 import { Meta, Title } from '@angular/platform-browser';
 
-
+export type EditorType = 'assessment' | 'caregiver'  | 'patient'  | 'planning';
 @Component({
   selector: 'app-book-consultation-overview',
   templateUrl: './book-consultation-overview.component.html',
@@ -12,7 +12,11 @@ import { Meta, Title } from '@angular/platform-browser';
 
 export class BookConsultationOverviewComponent implements OnInit {
 
-  @Input() client: Client;
+  @Input() @Output() client: Client;
+  editor: EditorType = 'planning';
+
+  selectedIntakeForm:string;
+
   @Input() title:string ='';
   @Input() quote:string ='';
   @Input() author:string ='';
@@ -35,7 +39,45 @@ export class BookConsultationOverviewComponent implements OnInit {
     ]);
   }
 
+  get showPlanningEditor() {
+    return this.editor === 'planning';
+  }
+
+  get showPatientEditor() {
+    return this.editor === 'patient';
+  }
+
+  get showCaregiverEditor() {
+    return this.editor === 'caregiver';
+  }
+
+  toggleEditor(type: EditorType) {
+    this.editor = type;
+    //alert("in overview selected type is " + type)
+    this.getParentComponent().setIntakeFormType(type);
+  }
+
   getParentComponent(): BookConsultationContainerComponent {
     return this._bookConsultationContainerComponent;
   }
+
+// *************************************************************************************************************** *!/
+  //formatBirthdateToPrint(): void {
+
+    // This is a string like '19621123'
+  /*  if (this.client.birthdate === '' && this.client.birthdate.length == 0) {
+      return;
+    }
+
+    this.dataService.formatMonthStartBirthdateToPrint(this.client.birthdate)
+        .subscribe(newName => this.updatedValue = newName);
+
+    this.client.birthdate = this.updatedValue;*/
+    //alert("Date is " + this.client.birthdate);
+  //}
+
+  printProfile() {
+    window.print();
+  }
+
 }

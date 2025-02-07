@@ -4,7 +4,7 @@
        <ng-container *ngIf="page === 0">
             <app-change-your-rep-wizard-header [rep]='rep'></app-change-your-rep-wizard-header>
 
-            <div class="screen-title pad-top">
+            <div class="content-title pad-top">
                 <h5>
                     <b>
                         LEGAL DECLARATION TO REQUEST AN ALTERNATE REPRESENTATIVE
@@ -12,7 +12,7 @@
                 </h5>
             </div>
 
-            <div class="content-dark-copy pad-top">
+            <div class="content-dark-copy">
                 This statutory declaration should be completed by you, the adult, or by your primary representative, or your alternate
                 representative. It gives permission for the alternate representative to act in place of the primary representative.
                 This statutory declaration should be completed and printed in the event that your primary representative dies, becomes
@@ -27,7 +27,7 @@
         <ng-container *ngIf="page === 1">
             <app-change-your-rep-wizard-header [rep]='rep'></app-change-your-rep-wizard-header>
 
-            <div class="screen-title pad-top">
+            <div class="content-title pad-top">
 
                 <h5>
                     <b>
@@ -36,7 +36,7 @@
                 </h5>
             </div>
 
-            <div class="content-dark-copy pad-top">
+            <div class="content-dark-copy">
                 This statutory declaration may be completed by the adult, the representative, or the alternate representative, as evidence
                 of the
                 authority of the alternate representative to act in place of the representative. This statutory declaration would be
@@ -118,7 +118,7 @@
                 </li>
             </div>
 
-            <div class="content-dark-copy pad-top-2">
+            <div class="content-dark-copy">
                 <p>b. One of the circumstances referenced in the Representation Agreement in which the alternate
                     representative is authorized to act
                     in place of the representative has occurred, specifically (describe the specific circumstance resulting in the alternate
@@ -139,7 +139,7 @@
                 </div>
             </div>
 
-            <div class="content-dark-copy pad-top-2">
+            <div class="content-dark-copy">
                 <p><b>AND I make this solemn declaration conscientiously believing it to be true and knowing that it is of the same force
                     and effect as if made under oath.
                 </b></p>
@@ -200,7 +200,7 @@
         <ng-container *ngIf="page === 2">
             <app-change-your-rep-wizard-header [rep]='rep'></app-change-your-rep-wizard-header>
 
-            <div class="screen-title pad-top">
+            <div class="content-title pad-top">
                 <h4>
                     <b>&nbsp;CONGRATULATIONS! You Are Done!</b>
                 </h4>

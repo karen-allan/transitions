@@ -1,247 +1,179 @@
 /*******************************************************************************************************************
-  ALL BANANAS, MOBILE PORTRAIT, TABLET PORTRAIT AND IPAD PORTRAIT (MAX IS 1 less than TABLET LANDSCAPE at and (min-width: 1280px))
+GLOBAL BANANAS- MOBILES AND SMALL TABLETS- under 900 (content) width so need 10% space on either side of content
 *******************************************************************************************************************/
-@media only screen
-and (min-width: 240px)
-and (max-width: 1279px) {
 
-    .facts-grid,  .citations-grid {
+@media only screen
+    and (min-width: 240px)
+    and (max-width: 896px)    {
+    /*and (max-width: 1280px)    {*/
+
+    .facts-container, .citations-container {
+        display:block;
         width:var(--media-less-than-content-width);
-        grid-template-columns: 100%;
         margin: auto;
     }
 
-    .bkgrd-facts {
-        background: url("src/assets/images/details/home/backgroundFAQs.jpg") center no-repeat;
-        background-size: contain;
-    }
-
     .facts-image {
-        grid-column:1;
         text-align: center;
-        align-content: flex-start;
-        height:300px;
-        justify-content: center;
     }
 
-    .facts-text {
+    .facts-text, .citations-left, .citations-right  {
+        display:grid;
         grid-column:1;
-        justify-content: center;
-    }
-
-    .citations-left, .citations-right  {
-        grid-column:1;
-        justify-content: flex-start;
-    }
-
-    .citations-right  {
-        padding-bottom: 1em;
-    }
-
-    .facts-text a, .citations-left a, .citations-right a {
-        line-height: 110%;
-        padding-top:1em;
-        text-align: left;
-    }
-
-}
-
-/*  BANANA PORTRAIT IS MOBILE *******************************************************************************************/
-@media only screen
-and (min-width: 240px)
-and (max-width: 359px)
-and (orientation: portrait) {
-
-    .facts-text a, .citations-left a, .citations-right a {
-        font-size: var(--smallest-copy-banana-port-font-size);
-    }
-
-}
-
-/* BANANA LANDSCAPE IS MOBILE ****************************************************************************************************/
-@media only screen
-and (min-width: 568px)
-and (max-width: 895px)
-and (orientation: landscape) {
-
-    .citations-left, .citations-right  {
-        padding-left:3em;
     }
 
     .facts-text a,.citations-left a, .citations-right a {
-        font-size: var(--smallest-copy-banana-land-font-size);
+        padding-top:1.5em;
     }
 
-}
-
-/* MOBILES PORTRAIT IS MOBILE ****************************************************************************************************/
-@media only screen
-and (min-width: 360px)
-and (max-width: 599px)
-and (orientation: portrait) {
-
-    .facts-text a,.citations-left a, .citations-right a {
-        font-size: var(--big-copy-mobile-port-font-size);
-    }
-
-}
-
-
-/*  TABLETS PORTRAIT IS MOBILE *******************************************************************************************/
-@media only screen
-and (min-width: 600px)
-and (max-width: 1023px)
-and (orientation: portrait) {
-
-    .citations-grid {
-        width:80%;
-        padding-left:20%;
-        grid-template-columns: 100%;
-    }
-
-   /* .citations-left, .citations-right {
-        padding-left:3em;
-    }*/
-
-    .facts-text a,.citations-left a, .citations-right a {
-        font-size: var(--small-copy-tablet-port-font-size);
-    }
-
-}
-
-/* IPADS PORTRAIT  IS MOBILE ****************************************************************************************************/
-@media only screen
-and (min-width: 1024px)
-and (max-width: 1366px)
-and (orientation: portrait) {
-
-    .citations-grid {
-        width:75%;
-        padding-left:25%;
-        grid-template-columns: 100%;
-    }
-
-    .citations-left, .citations-right {
-        /*padding-left:3em;*/
-    }
-
-    .facts-text a {
-        font-size: var(--med-copy-ipad-port-font-size);
+    .citations-right {
+        padding-bottom:1em;
     }
 
 }
 
 /*******************************************************************************************************************
-  ALL THAT SHOW DESKTOP - MOBILE LANDSCAPE, TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP
+  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS (over 900 so don't need to have space on either side of content)
 *******************************************************************************************************************/
 
 @media only screen
-/*and (min-width: 1280px)*/
-and (min-width: 896px)
-and (orientation: landscape) {
+and (min-width: 1024px)    {
 
-    .facts-grid, .citations-grid {
-        width:var(--media-more-than-content-width);
-        margin: auto;;
+    .facts-container  {
+        display: grid;
+        max-width:var(--laptop-width);
+        margin: auto;
     }
 
-    .facts-grid {
-        grid-template-columns: 40% 60%;
+    .citations-container {
+        display: grid;
+        max-width:var(--content-width);
+        margin: auto;
     }
 
-    .citations-grid {
+    .facts-container {
+        grid-template-columns: 45% 55%;
+    }
+
+    .citations-container {
         grid-template-columns: repeat(2, 50%);
     }
 
     .facts-image {
+        display:grid;
         grid-column:1;
-        justify-content: flex-start;
-        height:600px;
-    }
-
-    .bkgrd-facts {
-        background: url("src/assets/images/details/home/backgroundFAQs.jpg") center no-repeat;
-        background-size: contain;
+        justify-content: center;
+        align-content: center;
     }
 
     .facts-text {
+        display:grid;
+        width:100%;
         grid-column:2;
-        justify-content: flex-start;
+        justify-content: center;
         align-content: center;
-        /*border: thin solid darkblue;*/
-    }
-
-    .citations-left, .citations-right {
-        text-align: left;
-        justify-content: flex-start;
-        padding:.5em 0;
     }
 
     .citations-left {
+        display:grid;
         grid-column:1;
         padding-left:1em;
         padding-bottom: 1em;
     }
 
     .citations-right {
+        display:grid;
         grid-column:2;
         padding-bottom: 1em;
     }
 
-}
-
-/*  MOBILES LANDSCAPE  **************************************************************************************************/
-@media only screen
-and (min-width:896px )
-and (max-width: 1279px)
-and (orientation: landscape) {
+    .citations-left, .citations-right {
+        text-align: left;
+    }
 
     .facts-text a,.citations-left a, .citations-right a {
-        font-size: var(--small-copy-mobile-land-font-size);
-        padding-left:1em;
+        padding-top:1.0em;
+    }
+}
+
+/*******************************************************************************************************************
+  BANANAS
+*******************************************************************************************************************/
+@media only screen
+    and (min-width: 240px)
+    and (max-width: 320px) {
+
+    .facts-text a,.citations-left a, .citations-right a {
+        line-height:100%;
+        font-size: var(--small-copy-banana-font-size);
     }
 
 }
 
-
-/*  TABLETS LANDSCAPE IS DESKTOP *******************************************************************************************/
+/*******************************************************************************************************************
+  MOBILES
+*******************************************************************************************************************/
 @media only screen
-and (min-width: 1280px)
-and (max-width: 1365px)
-and (orientation: landscape) {
+    and (min-width: 360px)
+    and (max-width: 414px) {
+
+    .facts-text a,.citations-left a, .citations-right a {
+        line-height:100%;
+        font-size: var(--small-copy-mobile-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  TABLETS
+*******************************************************************************************************************/
+@media only screen
+    and (min-width: 600px)
+    and (max-width: 800px)  {
+
+    .facts-text a,.citations-left a, .citations-right a {
+        line-height:100%;
+        font-size: var(--small-copy-tablet-font-size);
+    }
+
+}
+
+/*  IPADS  ***********************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px) {
 
     .facts-text a, .citations-left a, .citations-right a {
-        font-size: var(--med-copy-tablet-land-font-size);
-        padding-left:1em;
+        line-height:80%;
+        font-size: var(--small-copy-ipad-font-size);
     }
 
 }
 
-/* IPADS LANDSCAPE IS DESKTOP ***************************************************************************************************/
+
+/*******************************************************************************************************************
+  LAPTOPS
+*******************************************************************************************************************/
 @media only screen
-and (min-width: 1366px)
-and (max-width: 1439px)
-and (orientation: landscape) {
+and (min-width: 1440px)
+and (max-width: 1919px) {
 
     .facts-text a, .citations-left a, .citations-right a {
-        font-size: var(--med-copy-ipad-land-font-size);
-        padding-left:2em;
+        line-height:80%;
+        font-size: var(--small-copy-laptop-font-size);
     }
 
 }
 
-/* DESKTOPS ****************************************************************************************************/
+/*******************************************************************************************************************
+  DESKTOPS
+*******************************************************************************************************************/
 @media only screen
-and (min-width: 1440px) {
+and (min-width: 1920px) {
 
-    .facts-text a {
-        font-size: var(--med-copy-desktop-font-size);
-        letter-spacing: 1px;
-    }
-
-    .citations-left a, .citations-right a {
+    .facts-text a, .citations-left a, .citations-right a {
+        line-height:80%;
         font-size: var(--small-copy-desktop-font-size);
-        letter-spacing: 1px;
     }
 
 }
@@ -249,29 +181,13 @@ and (min-width: 1440px) {
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-    .book-session {
-        background-repeat: no-repeat;
-        background-image:
-                url("src/assets/images/details/home/bookSession.jpg");
-    }
-
-    .facts-grid, .citations-grid {
-        display:grid;
-        max-width: var(--banner-width);
-        margin:auto;
-    }
-
-    .facts-grid  {
-        font-family: var(--family-facts);
-    }
-
-    .citations-grid {
+    .facts-container, .citations-container {
         font-family: var(--family-copy);
     }
 
-    .facts-image, .facts-text, .citations-left, .citations-right {
-        display: grid;
-        width: 100%;
+    .facts-image img {
+        max-width:100%;
+        height:auto;
     }
 
     .facts-text a, .citations-left a, .citations-right a  {

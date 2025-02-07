@@ -1,6 +1,6 @@
 import {Component, Input, Output} from '@angular/core';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
-import {WriteAdvanceDirectiveWizardComponent} from "../write-advance-directive-wizard/write-advance-directive-wizard.component";
+import {WriteAdvanceDirectiveWizardComponent} from "../../../screen-modals/write-advance-directive-wizard/write-advance-directive-wizard.component";
 import {AdvanceDirective} from "../../../ts-files/advance_directive";
 
 @Component({
@@ -11,7 +11,8 @@ import {AdvanceDirective} from "../../../ts-files/advance_directive";
 export class WriteAdvanceDirectiveOverviewComponent {
 
   @Input() lookupParent:string='';
-  @Input() lookupChild:string='';
+  @Input() lookupChild1:string='';
+  @Input() lookupChild2:string='';
 
   @Input() title:string='';
   @Input() quote:string='';

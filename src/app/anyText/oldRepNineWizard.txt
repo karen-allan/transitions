@@ -495,7 +495,7 @@ export class RepNineWizardOverviewComponent implements OnInit {
  }
 
 <ng-container *ngIf="page === 0">
-    <div class="screen-title pad-top-2">
+    <div class="content-title pad-top-2">
         <h2>{{ title }}</h2>
     </div>
 
@@ -566,7 +566,7 @@ export class RepNineWizardOverviewComponent implements OnInit {
         </p>
     </div>
 
-    <div class="screen-title pad-top-2">
+    <div class="content-title pad-top-2">
         <h2>THIS REPRESENTATION AGREEMENT IS MADE BY ME, THE ADULT:</h2>
     </div>
 

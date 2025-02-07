@@ -1,32 +1,32 @@
-<div class="header-detail-image header-write-needs-down-image header-copy">
-    <p>&#8220;{{quote}}&#8220;
-    </p>
-    <span>
+<div class="header-detail-image header-write-needs-down-image">
+    <div class="quote">
+        &#8220;{{quote}}&#8220;
+    </div>
+    <div class="author">
         {{author}}
-    </span>
+    </div>
 </div>
 
-<div class="screen-title pad-top-2">
-    <h2>{{title}}</h2>
+<div class="content-title">
+    <h1>{{title}}</h1>
 </div>
 
-<div class="content-dark-copy pad-top-3 text-center">
-    <a (click)="openModal()"> <div class="wizard-action-copy"> Run this (free) wizard to get your wishes down in writing!</div>
-        <div class="wizard-action-logo "></div>
-    </a>.
-</div>
+<div class="two-col-container">
+    <div class="column-image">
+        <a (click)="openModal()">
+            <img src="assets/images/details/takeAction/writeNeedsDown/wizardActionMakeWishes.jpg" title="write your care guide wish list"
+                 alt="write your care guide wish list">
+        </a>
+    </div>
 
-<div class="content-dark-copy pad-top-2 pad-bottom-2">
-    <p> Follow this Wishes wizard to help you organize your thoughts, beliefs, wishes and requests related to end of life planning.
-        It may hurt a bit (like doing your taxes) but you once done, you can pat yourself on the back and reward yourself in any way you
-        prefer to be rewarded :).
-        <br><br>
-        For more information check out the <a routerLink="/thinkAboutNeeds">{{lookupParent}} > {{lookupChild}}</a>  page.
-    </p>
-</div>
+    <div class="column-text no-border">
+        <h2>Run this wizard to {{title}}!</h2>
 
-<!-- opens plan-wizard-popup -->
-<!--
-<div class="one-button-container pad-top-2">
-    <button class = 'start-plan-button cursorPointer ' (click)="openModal()">START PLANNING NOW</button>
-</div>-->
+        <p> Follow this Wishes wizard to help you organize your thoughts, beliefs, wishes and requests related to end of life planning.
+            It may hurt a bit (like doing your taxes) but you once done, you can pat yourself on the back and reward yourself in any way you
+            prefer to be rewarded :).
+            <br><br>
+            For more information check out the <a routerLink="/thinkAboutNeeds">{{lookupParent}} > {{lookupChild}}</a>  page.
+        </p>
+    </div>
+</div>

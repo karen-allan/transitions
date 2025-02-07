@@ -10,14 +10,15 @@ import { Meta, Title } from '@angular/platform-browser';
 export class HomeOverviewComponent implements OnInit {
 
    @Input() title:string =''
-   @Input() slogan:string =''
+    @Input() quote='';
+    @Input() author='';
 
     /* less than 60 */
-    metaTitle='End-of-life Doula Support Vancouver | End of life Planning'
+    metaTitle='End-of-life Support in Shuswap B.C. | End of life Planning'
 
     /* less than 160 */
     metaDesc='Get help with end-of-life planning, know the documents you need to sign. ' +
-        'Get patient and caregiver support from Practitioner Karen Allan based in Vancouver, BC'
+        'Get patient and caregiver support from Practitioner Karen Allan based in the Shuswap, BC'
 
     constructor(private titleService: Title, private metaService:Meta) { }
 

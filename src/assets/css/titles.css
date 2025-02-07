@@ -1,0 +1,220 @@
+/*******************************************************************************************************************
+  GLOBAL BANANAS- MOBILES AND SMALL TABLETS- under 900 (content) width so need 10% space on either side of content
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 896px)    {
+
+    .content-title {
+        width:var(--media-less-than-content-width);
+    }
+
+    .content-title h1, .content-title h2, .content-title h3, .content-title h4 {
+        line-height: 100%;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS AND UP (over 900 so don't need to have space on either side of content)
+*******************************************************************************************************************/
+@media only screen
+    and (min-width:960px)    {
+
+    .content-title  {
+        width:var(--media-more-than-content-width);
+    }
+}
+
+/*  BANANAS *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 320px) {
+
+    .content-title h1, .content-title h2, .content-title h3 {
+        padding-top:.6em;
+    }
+
+    .content-title h1 {
+        font-size: var(--h1-titles-banana-font-size);
+    }
+
+    .content-title h2 {
+        font-size: var(--h2-titles-banana-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-banana-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h4-titles-banana-font-size);
+    }
+
+}
+
+/* MOBILES   ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px) {
+
+    .content-title h1, .content-title h2, .content-title h3 {
+        padding-top:.8em;
+    }
+
+    .content-title h1 {
+        font-size: var(--h1-titles-mobile-font-size);
+    }
+
+    .content-title h2 {
+        font-size: var(--h2-titles-mobile-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-mobile-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h4-titles-mobile-font-size);
+    }
+
+}
+
+/*  TABLETS   *******************************************************************************************/
+@media only screen
+    and (min-width: 600px)
+    and (max-width: 800px)  {
+
+    .content-title h1, .content-title h2, .content-title h3 {
+        padding-top:.9em;
+    }
+
+    .content-title h1 {
+        font-size:var(--h1-titles-tablet-font-size);
+    }
+
+    .content-title h2 {
+        font-size: var(--h2-titles-tablet-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-tablet-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h4-titles-tablet-font-size);
+    }
+
+}
+
+/*  IPADS  *******************************************************************************************/
+@media only screen
+    and (min-width: 1024px)
+    and (max-width: 1366px) {
+
+    .content-title h1, .content-title h2, .content-title h3 {
+        padding-top:1em;
+    }
+
+    .content-title h1 {
+        font-size: var(--h1-titles-ipad-font-size);
+    }
+
+    .content-title h2 {
+         font-size: var(--h2-titles-ipad-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-ipad-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h4-titles-ipad-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  LAPTOPS
+*******************************************************************************************************************/
+
+@media only screen
+    and (min-width: 1440px)
+    and (max-width: 1919px) {
+
+    .content-title h1, .content-title h2 {
+        padding-top:1.1em;
+    }
+
+    /* .content-title h3 {
+        padding-top:.1em;
+     }*/
+
+    .content-title h1 {
+        font-size: var(--h1-titles-laptop-font-size);
+    }
+
+    .content-title h2 {
+        font-size: var(--h2-titles-laptop-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-laptop-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h4-titles-laptop-font-size);
+    }
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    .content-title h1, .content-title h2, .content-title h3 {
+        padding-top:1.2em;
+    }
+
+    .content-title h1 {
+        font-size: var(--h1-titles-desktop-font-size);
+    }
+
+    .content-title h2 {
+        font-size: var(--h2-titles-desktop-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-desktop-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h4-titles-desktop-font-size);
+    }
+
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .content-title  {
+        display:grid;
+        margin:auto;
+        max-width:var(--content-width);
+    }
+
+    .content-title h1, .content-title h2, .content-title h3, .content-title h4 {
+        color: var(--color-dark-blue);
+        font-weight: bold;
+        font-family: var(--family-title);
+    }
+
+    .content-title h1, .content-title h2 {
+        text-align:center;
+        justify-content: center;
+    }
+
+    .content-title h3, .content-title h4 {
+        text-align: left;
+    }
+
+
+}

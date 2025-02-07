@@ -1,0 +1,433 @@
+/*******************************************************************************************************************
+  GLOBAL BANANAS- MOBILES AND SMALL TABLETS - under 900 (content) width - AS Headers here we want complete coverage
+*******************************************************************************************************************/
+@media only screen
+    and (min-width: 240px)
+    and (max-width: 896px)    {
+
+    .header-home-image, .header-detail-image {
+        width: var(--media-unaffected-by-content-width);
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS AND UP (over 900 so don't need to have space on either side of content)
+*******************************************************************************************************************/
+@media only screen
+    and (min-width:960px) {
+
+    .header-home-image, .header-detail-image {
+        width: var(--media-unaffected-by-content-width);
+    }
+
+}
+
+/*  BANANAS  *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 320px) {
+
+    .quote {
+        font-size:var(--header-quote-banana-font-size);
+    }
+
+    .author {
+        font-size:var(--header-author-banana-font-size);
+    }
+
+}
+
+/*  BANANAS PORTRAIT *******************************************************************************************/
+@media only screen
+    and (min-width: 240px)
+    and (max-width: 320px)
+    and (orientation:portrait) {
+
+    /* USING 240 width
+     (home header is 1920 by 1160 so divide 1160/1920 to get ratio of 60.41%
+     so 1440 x 60.41%
+     (detail headers are 1920 by 400 so divide 400/1920 to get ratio of 20.83%)
+     so 1440 x 20.83%
+    */
+
+    .header-home-image {
+        height:145px;
+    }
+
+    .header-detail-image  {
+        height:50px;
+    }
+
+}
+
+/*  BANANAS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 320px)
+and (orientation:landscape){
+
+    /* USING 320 width
+     (home header is 1920 by 1160 so divide 1160/1920 to get ratio of 60.41%
+     so 1440 x 60.41%
+     (detail headers are 1920 by 400 so divide 400/1920 to get ratio of 20.83%)
+     so 1440 x 20.83%
+    */
+
+    .header-home-image {
+        height:193px;
+    }
+
+    .header-detail-image {
+        height:66px;
+    }
+
+}
+
+/* MOBILES ***************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)  {
+
+    .quote {
+        font-size:var(--header-quote-mobile-font-size);
+    }
+
+    .author {
+        font-size:var(--header-author-mobile-font-size);
+    }
+
+}
+
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: portrait) {
+
+    /* USING 360 width
+     (home header is 1920 by 1160 so divide 1160/1920 to get ratio of 60.41%
+     so 1440 x 60.41%
+     (detail headers are 1920 by 400 so divide 400/1920 to get ratio of 20.83%)
+     so 1440 x 20.83%
+    */
+    .header-home-image {
+        height:217px;
+    }
+
+    .header-detail-image {
+        height:75px;
+    }
+
+}
+
+/*  MOBILES LANDSCAPE **************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: landscape) {
+
+    /* USING 414 width
+     (home header is 1920 by 1160 so divide 1160/1920 to get ratio of 60.41%
+     so 1440 x 60.41%
+     (detail headers are 1920 by 400 so divide 400/1920 to get ratio of 20.83%)
+     so 1440 x 20.83%
+      (booking grid is 900 by 450 so divide 450/900 to get ratio of 50%)
+    */
+    .header-home-image {
+        height:250px;
+    }
+
+    .header-detail-image {
+        height:86px;
+    }
+
+}
+
+/*  TABLETS  *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px) {
+
+    .quote {
+        font-size:var(--header-quote-tablet-font-size);
+    }
+
+    .author {
+        font-size:var(--header-author-tablet-font-size);
+    }
+
+}
+
+/*  TABLETS PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px)
+and (orientation: portrait) {
+
+    /* USING 600 width
+     (home header is 1920 by 1160 so divide 1160/1920 to get ratio of 60.41%
+     so 1440 x 60.41%
+     (detail headers are 1920 by 400 so divide 400/1920 to get ratio of 20.83%)
+     so 1440 x 20.83%
+    */
+    .header-home-image {
+        height:362px;
+    }
+
+    .header-detail-image {
+        height:125px;
+    }
+
+}
+
+/*  TABLETS LANDSCAPE *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px)
+and (orientation: landscape) {
+
+    /* USING 800 width
+    (home header is 1920 by 1160 so divide 1160/1920 to get ratio of 60.41%
+    so 1440 x 60.41%
+    (detail headers are 1920 by 400 so divide 400/1920 to get ratio of 20.83%)
+    so 1440 x 20.83%
+   */
+    .header-home-image {
+        height:483px;
+    }
+
+    .header-detail-image {
+        height:166px;
+    }
+
+}
+
+
+/* IPADS  ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px) {
+
+    .quote {
+        font-size:var(--header-quote-ipad-font-size);
+    }
+
+    .author {
+        font-size:var(--header-author-ipad-font-size);
+    }
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    /* USING 1024 width
+     (home header is 1920 by 1160 so divide 1160/1920 to get ratio of 60.41%
+     so 1440 x 60.41%
+     (detail headers are 1920 by 400 so divide 400/1920 to get ratio of 20.83%)
+     so 1440 x 20.83%
+    */
+    .header-home-image {
+        height:618px;
+    }
+
+    .header-detail-image {
+        height:213px;
+    }
+
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: landscape) {
+
+    /*  USING 1366 width
+         (home header is 1920 by 1160 so divide 1160/1920 to get ratio of 60.41%
+         so 1440 x 60.41%
+         (detail headers are 1920 by 400 so divide 400/1920 to get ratio of 20.83%)
+         so 1440 x 20.83%
+    */
+
+    .header-home-image {
+        height:825px;
+    }
+
+    .header-detail-image {
+        height:284px;
+    }
+
+}
+
+/* LAPTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width:1919px) {
+
+    /* USING 1440
+   (home header is 1920 by 1160 so divide 1160/1920 to get ratio of 60.41%
+   so 1440 x 60.41% is 869.9
+   (detail headers are 1920 by 400 so divide 400/1920 to get ratio of 20.83%)
+   so 1440 x 20.83% is 299.95
+    (booking grid is 900 by 450 so divide 450/900 to get ratio of 50%)
+   */
+    .header-home-image {
+        height:870px;
+    }
+
+    .header-detail-image {
+        height:300px;
+    }
+
+    .quote {
+        font-size:var(--header-quote-laptop-font-size);
+    }
+
+    .author {
+        font-size:var(--header-author-laptop-font-size);
+    }
+
+}
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    /*
+    (desktop is 1920 and header image is 1920 by 1160 so it is 100% here
+    (detail headers are 1920 by 400 so it is 100% here)
+     (booking grid is 100%)
+    */
+    .header-home-image  {
+        height:1160px;
+    }
+
+    .header-detail-image {
+        height:400px;
+    }
+
+    .quote {
+        font-size:var(--header-quote-desktop-font-size);
+    }
+
+    .author {
+        font-size:var(--header-author-desktop-font-size);
+    }
+
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .header-home-image, .header-detail-image {
+        display: grid;
+        float: left;
+        text-align: center;
+        align-content: end;
+        color: var(--color-white);
+    }
+
+    /* I changed from header-copy p and span because I couldn't reduce the margins around the p even with margin:0 padding:0 */
+    .quote, .author {
+        font-family: var(--family-quotes);
+        font-style: italic;
+        font-weight: 400;
+        align-content: end;
+    }
+
+    .quote {
+        padding-top: .5em;
+        line-height: 100%;
+    }
+
+    /* HOME  */
+    .header-home-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/home/headerHome.jpg');
+
+    }
+
+    /* PLAN AHEAD */
+    .header-think-about-needs-image {
+        background-size: contain;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/planAhead/thinkAboutNeeds.jpg");
+    }
+
+    .header-consider-advocates-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/planAhead/considerAdvocates.jpg');
+    }
+
+    .header-understand-care-plan-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/planAhead/understandAdvancePlans.jpg");
+    }
+
+    .header-know-rights-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/planAhead/knowYourRights.jpg");
+    }
+
+    /* TAKE ACTION */
+    .header-write-needs-down-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/takeAction/writeNeedsDown.jpg");
+    }
+
+    .header-choose-your-rep-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/takeAction/chooseReprentatives.jpg");
+    }
+
+    .header-write-adv-care-plan-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/takeAction/writeCarePlan.jpg");
+    }
+
+    .header-create-checklist-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url("src/assets/images/headers/takeAction/createCheckList.jpg");
+    }
+
+    /* ABOUT  */
+    .header-about-eol-advocacy-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/about/headerAboutEolAdvocacy400.jpg');
+    }
+
+    .header-about-pract-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/about/headerAboutPractitioner400.jpg');
+    }
+
+    .header-testimonials-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/consultations/headerTestimonials400.jpg');
+    }
+
+    .header-book-consultation-image {
+        background-size: cover;
+        background-image:linear-gradient(transparent 50%,rgba(0,33,69,.8) 80%),
+        url('src/assets/images/headers/consultations/headerBookConsultation400.jpg');
+    }
+
+
+
+}

@@ -3,38 +3,218 @@
 
   --menu-speed: 0.75s;
 
+  /*   syntax for inline styling  <div class="facts-grid " style="background-color:red"> */
+
   /* ******************************* FONT COLORS in use ********************************** */
   --overlay-color: rgba(244,239,251, 0.95);
 
   /* global colors */
+  --color-black:#000;
+  --color-red:#FF0000;
   --color-purple:#8773aa;
-  --color-dark-pink:#8c3130;
   --color-dark-blue:#5a7d9f;
   --color-soft-blue:#a3bacd;
   --color-off-white:#f7efef;
   --color-white:#ffffff;
   --color-grey:#666161;
-  --color-dark-grey: #878787;
-  --color-darkest-grey: #423f3f;
-
-  --color-background-purple:#4a333b;
-  --color-background-lignt-purple:#977d86;
-
-  --color-background-pink:#f4e6f3;
-  --color-background-light-blue:#a3bacd;
-  --color-background-dark-blue:#5a7d9f;
-
-  --color-background-yellow: #f0f0cf;
-  --color-background-dark-grey:#9c9494;
-  --color-background-light-grey:#ffffff;
+  --color-dark-purple:#4a333b;
 
   /* CONTENT WIDTHS */
-  /* if the content container --content-width (800) and the device css is smaller than 800px it needs space on either side 90%
-     which is bananas, mobile-port and tablet-port */
+  /* if the content container --content-width (900) and the device css is smaller than 900px it needs space on either side 90% at most
+     which is bananas, mobile-port and small tablets. Bigger tablets, laptops, desktops are all over 900 so don't need the white space.
+     The unaffected media is for menu which always covers the entire width
+  */
+  --media-less-than-content-width:90%;
+  --media-more-than-content-width:100%;
+  --media-unaffected-by-content-width:100%;
+
+  --footer-icon-width:600px;
+
+  --print-width:625px;
+  /* gives space on either side of desktop menu */
+  --menu-width:840px;
+
+  --content-width:900px;
+  --modal-biggest-height:950px;
+  --modal-big-height:925px;
+  --modal-small-height:750px;
+
+  --ipad-width:1024px;
+  --laptop-width:1440px;
+  --desktop-width:1920px;
+
+  /* MENU DESIGN */
+  /* ******************************* DESKTOP MENU ROW - ADDS UP TO 205 px *********************** */
+
+  /* first row has 100 for Logo, Name and Slogans  */
+  --desktop-top-menu-height:120px;
+  /* second row is for the main menu */
+  --desktop-bottom-menu-height:50px;
+
+  /* ******************************* MOBILE MENU is 3 rows *******************************************/
+
+  /* top row is the logo and name */
+  --banana-top-menu-height:100px;
+  --mobile-top-menu-height:120px;
+  /* middle row is the slogans and in between icon */
+  --mobile-middle-menu-height:50px;
+  /* bottom row is the socials icons */
+  --mobile-bottom-menu-height:45px;
+
+  /* ****************************** FONT SIZES ************************************ */
+
+  /* ****************************** HEADER FONTS****************************** */
+  --family-menu-copy:'Gadugi';
+  /* Transitions in Energy name */
+  --header-name-banana-font-size:.9em;
+  --header-name-mobile-font-size:1.2em;
+  --header-name-tablet-font-size:1.3em;
+  --header-name-ipad-font-size:1.9em;
+  --header-name-laptop-font-size:1.9em;
+  --header-name-desktop-font-size:2.0em;
+
+  /* End of Life Planning .... these show the mobile menu - white on blue */
+  --header-slogan-banana-font-size:.4em;
+  --header-slogan-mobile-font-size:.45em;
+  --header-slogan-small-tablet-font-size:.7em;
+  --header-slogan-ipad-port-font-size:.9em;
+
+  /* the 3 below show the desktop menu - blue on white */
+  --header-slogan-tablet-land-font-size:.8em;
+  --header-slogan-ipad-land-font-size:.9em;
+  --header-slogan-desktop-font-size:1em;
+
+  /* socials in mobile are just icons but on desktop are text as well */
+  --header-socials-font-size:.8em;
+
+  /* DESKTOP MENU and SUB-MENU ITEMS  */
+  --desktop-menu-items-font-size:1em;
+  --desktop-sub-menu-items-font-size:.8em;
+
+  /* MOBILE MENU and SUB-MENU ITEMS  */
+  --mobile-main-menu-item-banana-font-size:.7em;
+  --mobile-main-menu-item-mobile-font-size:.8em;
+  --mobile-main-menu-item-tablet-font-size:.9em;
+
+  --mobile-sub-menu-item-banana-font-size:.6em;
+  --mobile-sub-menu-item-mobile-font-size:.7em;
+  --mobile-sub-menu-item-tablet-font-size:.8em;
+
+  /* ****************************** ALL COPY AND LISTS ****************************** */
+  --family-copy: 'Calibri';
+
+  /* SMALL COPY */
+  --smallest-copy-banana-font-size:.5em;
+  --smallest-copy-mobile-font-size:.6em;
+  --smallest-copy-tablet-font-size:.7em;
+  --smallest-copy-ipad-font-size:.8em;
+  --smallest-copy-laptop-font-size:.9em;
+  --smallest-copy-desktop-font-size:1.0em;
+
+  /* SMALL COPY */
+  --small-copy-banana-font-size:.6em;
+  --small-copy-mobile-font-size:.7em;
+  --small-copy-tablet-font-size:.8em;
+  --small-copy-ipad-font-size:.8em;
+  --small-copy-laptop-font-size:1.0em;
+  --small-copy-desktop-font-size:1.1em;
+
+  /* MEDIUM */
+  --med-copy-banana-font-size:.7em;
+  --med-copy-mobile-font-size:.8em;
+  --med-copy-tablet-font-size:.9em;
+  --med-copy-ipad-font-size:1.0em;
+  --med-copy-laptop-font-size:1.1em;
+  --med-copy-desktop-font-size:1.2em;
+
+  /* BIG */
+  --big-copy-banana-font-size:1.0em;
+  --big-copy-mobile-font-size:1.1em;
+  --big-copy-tablet-font-size:1.2em;
+  --big-copy-ipad-font-size:1.3em;
+  --big-copy-laptop-font-size:1.4em;
+  --big-copy-desktop-font-size:1.5em;
+
+  /* BIGGEST */
+  --biggest-copy-banana-font-size:1.3em;
+  --biggest-copy-mobile-font-size:1.4em;
+  --biggest-copy-tablet-font-size:1.5em;
+  --biggest-copy-ipad-font-size:1.6em;
+  --biggest-copy-laptop-font-size:1.7em;
+  --biggest-copy-desktop-font-size:1.8em;
+
+  /* ALL QUOTES - USES FAMILY QUOTES */
+  /*--family-quotes: 'Sans Serif';*/
+  --family-quotes: 'Goudy Old Style';
+
+  /* the home page header quotes */
+  --header-quote-banana-font-size:.7em;
+  --header-quote-mobile-font-size:.8em;
+  --header-quote-tablet-font-size:1.1em;
+  --header-quote-ipad-font-size:1.3em;
+  --header-quote-laptop-font-size:1.4em;
+  --header-quote-desktop-font-size:1.5em;
+
+  /* the detail headers quotes */
+  --header-author-banana-font-size:.7em;
+  --header-author-mobile-font-size:.8em;
+  --header-author-tablet-font-size:.9em;
+  --header-author-ipad-font-size:.9em;
+  --header-author-laptop-font-size:1em;
+  --header-author-desktop-font-size:1.1em;
+
+  /* the detail page quotes and authors */
+  --detail-quote-banana-font-size:.8em;
+  --detail-quote-mobile-font-size:.9em;
+  --detail-quote-tablet-font-size:1em;
+  --detail-quote-ipad-font-size:1.2em;
+  --detail-quote-laptop-font-size:1.4em;
+  --detail-quote-desktop-font-size:1.6em;
+
+  --detail-author-banana-font-size:.7em;
+  --detail-author-mobile-font-size:.8em;
+  --detail-author-tablet-font-size:.9em;
+  --detail-author-ipad-font-size:1.1em;
+  --detail-author-laptop-font-size:.1.3em;
+  --detail-author-desktop-font-size:1.5em;
+
+  /* *********************************** ALL HEADINGS - ************************************* */
+  /*--family-headers:'Gadugi', 'ReneB-Book', 'Whitney-Book';*/
+  --family-title:'Gadugi';
+
+  /* titles */
+  --h1-titles-banana-font-size:1.3em;
+  --h1-titles-mobile-font-size:1.4em;
+  --h1-titles-tablet-font-size: 1.5em;
+  --h1-titles-ipad-font-size:1.6em;
+  --h1-titles-laptop-font-size:1.7em;
+  --h1-titles-desktop-font-size:1.9em;
+
+  --h2-titles-banana-font-size:.85em;
+  --h2-titles-mobile-font-size:1.1em;
+  --h2-titles-tablet-font-size:1.2em;
+  --h2-titles-ipad-font-size:1.3em;
+  --h2-titles-laptop-font-size:1.4em;
+  --h2-titles-desktop-font-size:1.5em;
+
+  --h3-titles-banana-font-size:0.8em;
+  --h3-titles-mobile-font-size:0.9em;
+  --h3-titles-tablet-font-size:1.0em;
+  --h3-titles-ipad-font-size:1.1em;
+  --h3-titles-laptop-font-size:1.2em;
+  --h3-titles-desktop-font-size:1.3em;
+
+  --h4-titles-banana-font-size:0.7em;
+  --h4-titles-mobile-font-size:0.8em;
+  --h4-titles-tablet-font-size:.9em;
+  --h4-titles-ipad-font-size:1.0em;
+  --h4-titles-laptop-font-size:1.1em;
+  --h4-titles-desktop-font-size:1.2em;
 
 
+  /* Wizards */
   --wizard-banana-port-width:240px;
-  --wizard-banana-port-height:450px;
+  --wizard-banana-port-height:359px;
 
   --wizard-banana-land-width:550px;
   --wizard-banana-land-height:400px;
@@ -49,343 +229,32 @@
   --wizard-tablet-port-height:550px;
 
   /* the ones under width 1000 are desktop, laptop, ipad land, tablet land, ipad portrait */
-  --wizard-over-thousand-width:1000px;
-  --wizard-over-thousand-height:900px;
 
-  --content-width:800px;
-  --menu-width:840px;
-  --tablet-width:1280px;
-  --screen-width:1152px;
-  --banner-width:1440px;
-  --header-width:1920px;
 
-  --media-less-than-content-width:90%;
-  /* this is if the minimum width of the device css is larger than 800px (it does not need extra space on the side */
-  --media-more-than-content-width:100%;
-
-  /* MENU DESIGN */
-  /* ******************************* DESKTOP MENU ROW - ADDS UP TO 205 px *********************** */
-
-  /* first row has 100 for Logo, Name and Slogans  */
-  --desktop-top-menu-height:120px;
-  /* second row is for the main menu */
-  --desktop-bottom-menu-height:50px;
-
-  /* ******************************* MOBILE MENU is 3 rows *******************************************/
-  --banana-top-menu-height:100px;
-  --mobile-top-menu-height:120px;
-  --mobile-middle-menu-height:50px;
-  --mobile-bottom-menu-height:45px;
-
-  /* ****************************** FONT SIZES ************************************ */
-
-  /* ****************************** MENU FONTS****************************** */
-  --family-menu-copy:'Gadugi';
-
-  --menu-name-banana-port-font-size:.9em;
-  --menu-name-banana-land-font-size:1.4em;
-  --menu-name-mobile-port-font-size:1.2em;
-  --menu-name-mobile-land-font-size:1.8em;
-
-  --menu-name-tablet-port-font-size:1.6em;
-  --menu-name-ipad-port-font-size:1.8em;
-
-  --menu-name-tablet-land-font-size:1.9em;
-  --menu-name-ipad-land-font-size:1.9em;
-  --menu-name-laptop-font-size:1.9em;
-  --menu-name-desktop-font-size:2.0em;
-
-  /* these show the mobile menu - white on blue */
-  --menu-slogan-banana-port-font-size:.4em;
-  --menu-slogan-banana-land-font-size:.6em;
-  --menu-slogan-mobile-port-font-size:.5em;
-  --menu-slogan-mobile-land-font-size:.8em;
-  --menu-slogan-tablet-port-font-size:.7em;
-  --menu-slogan-ipad-port-font-size:.9em;
-
-  /* the 3 below show the desktop menu blue on white */
-  --menu-slogan-tablet-land-font-size:.8em;
-  --menu-slogan-ipad-land-font-size:.9em;
-  --menu-slogan-desktop-font-size:1em;
-
-  /* HEADER SOCIALS */
-  --menu-social-ipad-tablet-land-font-size:.7em;
-  --menu-social-desktop-font-size:.8em;
-
-  /* DESKTOP MENU ITEMS  */
-  --desktop-menu-item-tablet-land-font-size:.8em;
-  --desktop-menu-item-ipad-land-font-size:.9em;
-  --desktop-menu-item-desktop-font-size:1em;
-
-  /* DESKTOP SUB MENU ITEMS NOW OFF TOP MENU */
-  --desktop-sub-menu-item-tablet-land-font-size:.6em;
-  --desktop-sub-menu-item-ipad-land-font-size:.7em;
-  --desktop-sub-menu-item-desktop-font-size:.8em;
-
-  /* MOBILE MENU ITEMS  */
-  --mobile-main-menu-item-banana-font-size:.7em;
-  --mobile-main-menu-item-mobile-font-size:.8em;
-  --mobile-main-menu-item-tablet-ipad-font-size:.9em;
-
-  /* MOBILE SUB MENU ITEMS  */
-  --mobile-sub-menu-item-banana-font-size:.6em;
-  --mobile-sub-menu-item-mobile-font-size:.7em;
-  --mobile-sub-menu-item-tablet-ipad-font-size:.8em;
-
-  /* ****************************** ALL COPY AND LISTS ****************************** */
-  --family-copy: 'Arial';
-  --family-facts: 'Calibri';
-  --family-rep-form: 'Open Sans';
-
-  /* TINY */
-  --tiny-copy-banana-port-font-size:.3em;
-  --tiny-copy-mobile-port-font-size:.5em;
-  --tiny-copy-tablet-port-font-size:.4em;
-  --tiny-copy-ipad-port-font-size:.6em;
-
-  --tiny-copy-banana-land-font-size:.6em;
-  --tiny-copy-mobile-land-font-size:.6em;
-  --tiny-copy-tablet-land-font-size:.5em;
-  --tiny-copy-ipad-land-font-size:0.6em;
-  --tiny-copy-desktop-font-size:0.8em;
-
-  /* SMALLEST */
-  --smallest-copy-banana-port-font-size:.6em;
-  --smallest-copy-mobile-port-font-size:.7em;
-  --smallest-copy-tablet-port-font-size:.6em;
-  --smallest-copy-ipad-port-font-size:.8em;
-
-  --smallest-copy-banana-land-font-size:.7em;
-  --smallest-copy-mobile-land-font-size:.8em;
-  --smallest-copy-tablet-land-font-size:.7em;
-  --smallest-copy-ipad-land-font-size:0.8em;
-  --smallest-copy-desktop-font-size:0.9em;
-
-  /* SMALL */
-  --small-copy-banana-port-font-size:.6em;
-  --small-copy-mobile-port-font-size:.7em;
-  --small-copy-tablet-port-font-size:.8em;
-  --small-copy-ipad-port-font-size:.9em;
-
-  --small-copy-banana-land-font-size:.6em;
-  --small-copy-mobile-land-font-size:.75em;
-  --small-copy-tablet-land-font-size:.8em;
-  --small-copy-ipad-land-font-size:.9em;
-  --small-copy-desktop-font-size:1.1em;
-
-  /* MEDIUM */
-  --med-copy-banana-port-font-size:.7em;
-  --med-copy-mobile-port-font-size:.8em;
-  --med-copy-tablet-port-font-size:.9em;
-  --med-copy-ipad-port-font-size:1em;
-
-  --med-copy-banana-land-font-size:.8em;
-  --med-copy-mobile-land-font-size:.9em;
-  --med-copy-tablet-land-font-size:1em;
-  --med-copy-ipad-land-font-size:1.1em;
-  --med-copy-desktop-font-size:1.2em;
-
-  /* BIG */
-  --big-copy-banana-port-font-size:.8em;
-  --big-copy-mobile-port-font-size:.9em;
-  --big-copy-tablet-port-font-size:1.2em;
-  --big-copy-ipad-port-font-size:1.3em;
-
-  --big-copy-banana-land-font-size:.9em;
-  --big-copy-mobile-land-font-size:1em;
-  --big-copy-tablet-land-font-size:1.3em;
-  --big-copy-ipad-land-font-size:1.4em;
-  --big-copy-desktop-font-size:1.3em;
-
-  /* H1 Whitney-Book   /*'';    */
-  --h1-copy-banana-port-font-size:.7em;
-  --h1-copy-mobile-port-font-size:.7em;
-  --h1-copy-tablet-port-font-size:1.1em;
-  --h1-copy-ipad-port-font-size:1.4em;
-
-  --h1-copy-banana-land-font-size:0.9em;
-  --h1-copy-mobile-land-font-size:1.2em;
-  --h1-copy-tablet-land-font-size:1.7em;
-  --h1-copy-ipad-land-font-size:1.8em;
-  --h1-copy-desktop-font-size:1.9em;
-
-  /* H2 */
-  --h2-copy-banana-port-font-size:0.7em;
-  --h2-copy-mobile-port-font-size:0.9em;
-  --h2-copy-tablet-port-font-size:1.2em;
-  --h2-copy-ipad-port-font-size:1.3em;
-
-  --h2-copy-banana-land-font-size:0.9em;
-  --h2-copy-mobile-land-font-size:1.3em;
-  --h2-copy-tablet-land-font-size:1.6em;
-  --h2-copy-ipad-land-font-size:1.7em;
-  --h2-copy-desktop-font-size:1.8em;
-
-  /* ALL QUOTES - USES FAMILY QUOTES */
-  --family-quotes: 'Sans Serif';
-  /*--family-quotes: 'Goudy Old Style';*/
-
-  /* the banner quotes */
-  --big-quote-banana-port-font-size:.5em;
-  --big-quote-mobile-port-font-size:.9em;
-  --big-quote-tablet-port-font-size:1.0em;
-  --big-quote-ipad-port-font-size:1.2em;
-
-  --big-quote-banana-land-font-size:.7em;
-  --big-quote-mobile-land-font-size:1.1em;
-  --big-quote-tablet-land-font-size:1.3em;
-  --big-quote-ipad-land-font-size:1.4em;
-  --big-quote-desktop-font-size:1.5em;
-
-  /* the detail page quotes */
-  --small-quote-banana-port-font-size:.6em;
-  --small-quote-mobile-port-font-size:.7em;
-  --small-quote-tablet-port-font-size:.8em;
-  --small-quote-ipad-port-font-size:.9em;
-
-  --small-quote-banana-land-font-size:.7em;
-  --small-quote-mobile-land-font-size:.8em;
-  --small-quote-tablet-land-font-size:.9em;
-  --small-quote-ipad-land-font-size:1.0em;
-  --small-quote-desktop-font-size:1.1em;
-
-  --tiny-quote-banana-port-font-size:.5em;
-  --tiny-quote-mobile-port-font-size:.6em;
-  --tiny-quote-tablet-port-font-size:0.7em;
-  --tiny-quote-ipad-port-font-size:.9em;
-
-  --tiny-quote-banana-land-font-size:.6em;
-  --tiny-quote-mobile-land-font-size:0.7em;
-  --tiny-quote-tablet-land-font-size:0.8em;
-  --tiny-quote-ipad-land-font-size:0.9em;
-  --tiny-quote-desktop-font-size:1.0em;
-
-  /* *********************************** ALL HEADINGS - ************************************* */
-  /*--family-headers:'Gadugi', 'ReneB-Book', 'Whitney-Book';*/
-  --family-headers:'Gadugi';
-  --h1-header-banana-port-font-size:.6em;
-  --h2-header-banana-port-font-size:.7em;
-  --h3-header-banana-port-font-size:.3em;
-
-  --h1-header-mobile-port-font-size:.7em;
-  --h2-header-mobile-port-font-size:.8em;
-  --h3-header-mobile-port-font-size:.4em;
-
-  --h1-header-tablet-port-font-size:1.1em;
-  --h2-header-tablet-port-font-size:1.1em;
-  --h3-header-tablet-port-font-size:1.0em;
-
-  --h1-header-ipad-port-font-size:1.4em;
-  --h2-header-ipad-port-font-size:1.3em;
-  --h3-header-ipad-port-font-size:1.1em;
-
-  --h1-header-banana-land-font-size:0.9em;
-  --h2-header-banana-land-font-size:1.0em;
-  --h3-header-banana-land-font-size:.8em;
-
-  --h1-header-mobile-land-font-size:1.2em;
-  --h2-header-mobile-land-font-size:1.2em;
-  --h3-header-mobile-land-font-size:0.9em;
-
-  --h1-header-tablet-land-font-size:1.7em;
-  --h2-header-tablet-land-font-size:1.6em;
-  --h3-header-tablet-land-font-size:1.4em;
-
-  --h1-header-ipad-land-font-size:1.8em;
-  --h2-header-ipad-land-font-size:1.7em;
-  --h3-header-ipad-land-font-size:1.5em;
-
-  --h1-header-desktop-font-size:1.9em;
-  --h2-header-desktop-font-size:1.8em;
-  --h3-header-desktop-font-size:1.6em;
-
-  /* titles */
-  --h1-titles-banana-port-font-size:1.1em;
-  --h2-titles-banana-port-font-size:0.9em;
-  --h3-titles-banana-port-font-size:0.8em;
-
-  --h1-titles-banana-land-font-size:1.8em;
-  --h2-titles-banana-land-font-size:1.6em;
-  --h3-titles-banana-land-font-size:1.5em;
-
-  --h1-titles-mobile-port-font-size:1.4em;
-  --h2-titles-mobile-port-font-size:1.2em;
-  --h3-titles-mobile-port-font-size:1.1em;
-
-  --h1-titles-mobile-land-font-size:1.8em;
-  --h2-titles-mobile-land-font-size:1.6em;
-  --h3-titles-mobile-land-font-size:1.5em;
-
-  --h1-titles-tablet-port-font-size: 1.8em;
-  --h2-titles-tablet-port-font-size:1.6em;
-  --h3-titles-tablet-port-font-size:1.5em;
-
-  --h1-titles-ipad-port-font-size:2.0em;
-  --h2-titles-ipad-port-font-size:1.8em;
-  --h3-titles-ipad-port-font-size:1.7em;
-
-  --h1-titles-tablet-land-font-size:2.0em;
-  --h2-titles-tablet-land-font-size:1.8em;
-  --h3-titles-tablet-land-font-size:1.7em;
-
-  --h1-titles-ipad-land-font-size:2.1em;
-  --h2-titles-ipad-land-font-size:1.9em;
-  --h3-titles-ipad-land-font-size:1.8em;
-
-  --h1-titles-desktop-font-size:2.3em;
-  --h2-titles-desktop-font-size:2.1em;
-  --h3-titles-desktop-font-size:2.0em;
-  --h4-titles-desktop-font-size:1.5em;
 
   /* *********************************************** LINE HEIGHTS *****************************************************/
   --mobile-copy-line-height:150%;
   --copy-line-height:170%;
   --list-item-line-height:180%;
   --list-wide-item-line-height:200%;
-  --quote-line-height:130%;
-
-
+  --quote-line-height:100%;
 }
-
-
-
-
 
 /* GLOBAL  ***********************************************************************************************************/
 
 @media only screen {
-  /* constant widths */
   html, body {
-    max-width: 1920px;
+    max-width:  var(--desktop-width);
     margin: auto;
   }
 
-  /*the headers, footers and container fill the maximum width of 1920  */
-  #headers, #footers, #container {
+  /*the headers, footers and container fill the maximum width of the ipad  */
+  #headers, #container {
     display: block;
     float: left;
     width: 100%;
-    max-width: 1920px;
+    max-width: var(--desktop-width);
     margin: auto;
-  }
-
-  .footer-top, .footer-bottom {
-    display: grid;
-    justify-items: center;
-    font-family: var(--family-copy);
-    text-align: center;
-    color: var(--color-white);
-  }
-
-  .footer-top {
-    padding-top: 1em;
-    background-color: var(--color-dark-blue);
-    /*background-color: white;*/
-  }
-
-  .footer-bottom {
-    padding:1em;
-    background-color: var(--color-dark-blue);
   }
 
   .dark-copy-hidden {
@@ -396,8 +265,29 @@
     color:red;
   }
 
-  .box {
+  .page-break {
+    page-break-before:always;
+  }
 
+  .black-full-line {
+    display:block;
+    float:left;
+    width: 100%;
+    margin:1em 0;
+    border-bottom: 2px solid black;
+  }
+
+  .page-break {
+    page-break-before:always;background-color: red;
+    page-break-after:always;
+  }
+
+  .page-break-before {
+    page-break-before:always;
+  }
+
+  .print-solid-underline {
+    border-bottom:solid thin var(--color-dark-blue);
   }
 
   /* Overwrite the styles of the mat-dialog-container element globally, but only for those that have an id of `modal-component` */
@@ -525,6 +415,10 @@
     border: thin solid var(--color-dark-blue);
   }
 
+  .with-black-border {
+    border: thin solid var(--color-black);
+  }
+
   .top-colored-border {
     border-top: thin solid var(--color-soft-blue);
   }
@@ -551,6 +445,12 @@
     border-top: thin solid var(--color-soft-blue);
     border-right: thin solid var(--color-soft-blue);
     border-left: thin solid var(--color-soft-blue);
+  }
+
+  .top-bottom-right-border {
+    border-top:thin dashed var(--color-dark-purple);
+    border-bottom:thin dashed var(--color-dark-purple);
+    border-right:thin dashed var(--color-dark-purple);
   }
 
 
@@ -599,6 +499,10 @@
 
   .background-dark-purple {
     background-color: #623061;
+  }
+
+  .color-highlight {
+    color: #623061;
   }
 
   /* WATER */

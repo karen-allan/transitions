@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {WishesWizard} from "../../../ts-files/wishes-wizard";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {formatDate} from "@angular/common";
-import {MakeWishesWizardComponent} from "../make-wishes-wizard/make-wishes-wizard.component";
+import {MakeWishesWizardComponent} from "../../../screen-modals/make-wishes-wizard/make-wishes-wizard.component";
 
 @Component({
   selector: 'app-make-wishes-overview',
@@ -46,6 +46,7 @@ export class MakeWishesOverviewComponent {
       window.print();
     }
   }
+
 
 
 }

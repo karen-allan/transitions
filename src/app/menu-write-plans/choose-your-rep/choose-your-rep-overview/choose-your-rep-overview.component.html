@@ -1,36 +1,42 @@
-<div class="header-detail-image header-choose-your-rep-image header-copy">
-    <p>&#8220;{{quote}}&#8220;
-    </p>
-    <span>
+<div class="header-detail-image header-choose-your-rep-image">
+    <div class="quote">
+        &#8220;{{quote}}&#8220;
+    </div>
+    <div class="author">
         {{author}}
-    </span>
+    </div>
 </div>
 
-<div class="screen-title pad-top-2">
-    <h2>{{title}}</h2>
+<div class="content-title">
+    <h1>{{title}}</h1>
 </div>
 
+<div class="two-col-container">
+    <div class="column-image">
+        <a (click)="openModal()">
+            <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseReps.jpg" title="write your advocate plan"
+                 alt="write your advocate plan">
+        </a>
+    </div>
 
-<div class="content-dark-copy pad-top-3 text-center">
-    <a (click)="openModal()"> <div class="wizard-action-copy"> Run this (free) wizard to select your Advocates (Representatives)!</div>
-        <div class="wizard-action-choose-reps "></div>
-    </a>
+    <div class="column-text no-border">
+        <h2>Run this wizard to {{title}}!</h2>
+
+        <p>
+            Follow through this wizard to help you document who you trust to protect, defend and support you as your
+            Representative. Although there are many versions of this document found online, this document is as valid as any of the
+            other ones as long as it is properly filled out and witnessed. No need to pay a lawyer a ton of cash to do this and it literally
+            takes minutes to complete.
+            <br><br>
+            For more information regarding choosing Representatives, check out our <a routerLink="/considerAdvocates">{{ lookupParent1 }} >
+            {{ lookupChild1 }}</a> page. Then, with that knowledge plunge on ahead with this wizard.
+            <br><br>
+            There is an area on the form to provide your instructions to your Representative.
+            To delve deeper into what kind of instructions you may want to give, run our <a
+            routerLink="/menuWritePlans">{{ lookupParent2 }} > {{ lookupChild2 }}</a>
+            wizard. <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
+            as a PDF file.
+        </p>
+    </div>
 </div>
-
-<div class="content-dark-copy pad-top-2 pad-bottom-2">
-    <p>
-        Follow through this wizard to help you document the person or persons you trust to protect, defend and support you as
-        Representative(s). Although there are many versions of this document's content to be found online, this document is as valid as any of the
-        other ones as long as it is properly filled out and witnessed. No need to pay a Lawyer a ton of cash to do this and it literally
-        takes minutes to complete.
-        <br><br>
-        For more information check out the <a routerLink="/considerAdvocates">{{ lookupParent }} > {{ lookupChild }}</a>  page.
-    </p>
-</div>
-
-<!--<div class="one-button-container pad-top-2">
-    <button class = 'start-plan-button cursorPointer ' (click)="openModal()">CHOOSE YOUR REP NOW</button>
-</div>-->
-
-
 

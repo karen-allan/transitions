@@ -1,0 +1,164 @@
+<!-- clientGRAPHIC INFO -->
+<div class="screen-forms-desktop">
+    <div class="screen-form-title">
+        Your Contact Information
+    </div>
+
+    <div class="client-name-block">
+        <label class="client-first-column" for="name">Your Full Name:</label>
+        <label class="client-second-column" for="cellPhone">Phone:</label>
+
+        <input type="text" class="client-first-column" [(ngModel)]="client.name" id="name" name="name">
+        <input [(ngModel)]="client.cellPhone" type="text"
+               mask="000-000-0000" class="client-second-column" id="cellphone" name="cellPhone" oninput="this.value=value">
+    </div>
+
+    <div class="client-address-block">
+        <label class="client-full-column" for="email">Email:</label>
+        <input type="text" class="client-full-column" [(ngModel)]="client.email" id="email" name="email">
+    </div>
+
+    <div class="client-address-block">
+        <label class="client-full-column" for="address">Home Address:</label>
+        <textarea class="client-full-column" [(ngModel)]="client.address" rows=2 id="address" name="address"> </textarea>
+    </div>
+
+    <div class="client-location-block">
+        <label class="client-first-column" for="city">City/Town:</label>
+        <label class="client-second-column" for="provState">Prov:</label>
+        <label class="client-third-column" for="pc">Postal Code:</label>
+        <label class="client-fourth-column" for="country">Country:</label>
+
+        <input type="text" class="client-first-column" [(ngModel)]="client.city" id="city" name="city">
+        <div class="form-group">
+            <select class="client-second-column" id="provState" [(ngModel)]="client.provState" name="provState">
+                <option *ngFor="let prov of provinces" [value]="prov">{{ prov }}</option>
+            </select>
+        </div>
+
+        <input [(ngModel)]="client.pc" type="text" mask="U0U-0U0"
+               class="client-third-column" id="pc" name="pc" oninput="this.value = this.value.toUpperCase()">
+
+        <input type="text" class="client-fourth-column" [(ngModel)]="client.country" id="country" name="country">
+    </div>
+
+    <div class="screen-form-title">
+        Optional Details
+    </div>
+
+    <div class="client-info-block">
+        <label class="client-first-column" for="birthdate">Birthdate:</label>
+        <label class="client-second-column" for="occupation">Occupation:</label>
+        <label class="client-third-column" for="referredBy">Referred By:</label>
+
+        <input type="text" class="form-control client-first-column" mask="00-00-0000"
+               id="birthdate" [(ngModel)]="client.birthdate" name="birthdate"
+               oninput="this.value=value" placeholder="mm-dd-yyyy">
+
+        <input type="text" class="form-control client-second-column" id="occupation" [(ngModel)]="client.occupation" name="occupation">
+
+        <input type="text" class="form-control client-third-column" id="referredBy" [(ngModel)]="client.referredBy" name="referredBy">
+    </div>
+
+    <div class="screen-form-title">
+        Emergency Contact
+    </div>
+
+    <div class="client-emergency-block">
+        <label class="client-first-column" for="emergName">Contact:</label>
+        <label class="client-second-column" for="emergPhone">Phone:</label>
+        <label class="client-third-column" for="emergRelation">Relationship:</label>
+
+        <input type="text" class="client-first-column" [(ngModel)]="client.emergName" id="emergName" name="emergName">
+
+        <input [(ngModel)]="client.emergPhone" type="text"
+               mask="000-000-0000"
+               class="client-second-column" id="emergPhone" name="emergPhone" oninput="this.value=value">
+
+        <input type="text" class="client-third-column" [(ngModel)]="client.emergRelation" id="emergRelation" name="emergRelation">
+    </div>
+</div>
+
+<div class="screen-forms-mobile">
+    <div class="screen-form-title">
+        Your Contact Information
+    </div>
+
+    <div class="client-name-block">
+        <label class="client-full-column" for="name2">Your Full Name:</label>
+        <input type="text" class="client-full-column" [(ngModel)]="client.name" id="name2" name="name">
+
+        <label class="client-full-column" for="cellPhone2">Phone:</label>
+        <input [(ngModel)]="client.cellPhone" type="text"
+               mask="000-000-0000" class="client-full-column" id="cellphone2" name="cellPhone" oninput="this.value=value">
+    </div>
+
+    <div class="client-address-block">
+        <label class="client-full-column" for="email2">Email:</label>
+        <input type="text" class="client-full-column" [(ngModel)]="client.email" id="email2" name="email">
+    </div>
+
+    <div class="client-address-block">
+        <label class="client-full-column" for="address2">Home Address:</label>
+        <textarea class="client-full-column" [(ngModel)]="client.address" rows=2 id="address2" name="address"> </textarea>
+    </div>
+
+    <div class="client-location-block">
+        <label class="client-full-column" for="city2">City/Town:</label>
+        <input type="text" class="client-full-column" [(ngModel)]="client.city" id="city2" name="city">
+
+        <label class="client-full-column" for="provState2">Prov:</label>
+        <div class="form-group">
+            <select class="client-full-column" id="provState2" [(ngModel)]="client.provState" name="provState">
+                <option *ngFor="let prov of provinces" [value]="prov">{{ prov }}</option>
+            </select>
+        </div>
+
+        <label class="client-full-column" for="pc2">Postal Code:</label>
+        <input [(ngModel)]="client.pc" type="text" mask="U0U-0U0"
+               class="client-full-column" id="pc2" name="pc" oninput="this.value = this.value.toUpperCase()">
+
+        <label class="client-full-column" for="country2">Country:</label>
+        <input type="text" class="client-full-column" [(ngModel)]="client.country" id="country2" name="country">
+    </div>
+
+    <div class="screen-form-title">
+        Optional Details
+    </div>
+
+    <div class="client-info-block">
+        <label class="client-full-column" for="birthdate2">Birthdate:</label>
+
+        <input type="text" class="form-control client-full-column" mask="00-00-0000"
+               id="birthdate2" [(ngModel)]="client.birthdate" name="birthdate"
+               oninput="this.value=value" placeholder="mm-dd-yyyy">
+
+        <label class="client-full-column" for="occupation2">Occupation:</label>
+
+        <input type="text" class="form-control client-full-column" id="occupation2" [(ngModel)]="client.occupation" name="occupation">
+
+        <label class="client-full-column" for="referredBy2">Referred By:</label>
+
+        <input type="text" class="form-control client-full-column" id="referredBy2" [(ngModel)]="client.referredBy" name="referredBy">
+    </div>
+
+    <div class="screen-form-title">
+        Emergency Contact
+    </div>
+
+    <div class="client-emergency-block">
+        <label class="client-full-column" for="emergName2">Contact:</label>
+
+        <input type="text" class="client-full-column" [(ngModel)]="client.emergName" id="emergName2" name="emergName">
+
+        <label class="client-full-column" for="emergPhone2">Phone:</label>
+
+        <input [(ngModel)]="client.emergPhone" type="text"
+               mask="000-000-0000"
+               class="client-full-column" id="emergPhone2" name="emergPhone" oninput="this.value=value">
+
+        <label class="client-full-column" for="emergRelation2">Relationship:</label>
+
+        <input type="text" class="client-full-column" [(ngModel)]="client.emergRelation" id="emergRelation2" name="emergRelation">
+    </div>
+</div>

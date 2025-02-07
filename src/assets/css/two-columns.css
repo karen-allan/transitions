@@ -1,0 +1,236 @@
+/*******************************************************************************************************************
+  GLOBAL BANANAS- MOBILES AND SMALL TABLETS - under 900 (content) width so need 10% space on either side of content
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 896px)    {
+
+    .two-col-container    {
+        width:var(--media-less-than-content-width);
+        display: grid;
+    }
+
+    .column-image {
+        grid-column:1;
+        justify-content: flex-start;
+    }
+
+    .column-text {
+        grid-column: 1;
+        justify-content: flex-start;
+        line-height: 100%;
+    }
+
+    .column-text h2, .column-text h3 {
+        line-height: 110%;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS AND UP (over 900 so don't need to have space on either side of content)
+*******************************************************************************************************************/
+@media only screen
+and (min-width:960px)   {
+
+    .two-col-container    {
+        width:var(--media-more-than-content-width);
+    }
+
+    .column-text {
+        line-height: 150%;
+    }
+}
+
+/* IPADS, LAPTOPS AND DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px) {
+
+    /* image is 450px wide in a 1024 container */
+    .two-col-container {
+        max-width: var(--ipad-width);
+        display: inline-grid;
+        grid-template-columns: 43% 57%;
+    }
+
+    .column-image {
+        grid-column:1;
+        justify-content: flex-start;
+    }
+
+    .column-text {
+        grid-column:2;
+        justify-content: flex-start;
+        align-content: center;
+        padding:0 1em;
+    }
+
+}
+
+/*  BANANAS  *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 320px)  {
+
+    .column-text h2 {
+        font-size: var(--h2-titles-banana-font-size);
+    }
+
+    .column-text h3 {
+        font-size: var(--h3-titles-banana-font-size);
+    }
+
+    .column-text p {
+        font-size: var(--med-copy-banana-font-size);
+    }
+
+}
+
+/* MOBILES ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px) {
+
+    .column-text h2 {
+        font-size: var(--h2-titles-mobile-font-size);
+    }
+
+    .column-text h3 {
+        font-size: var(--h3-titles-mobile-font-size);
+    }
+
+    .column-text p {
+        font-size: var(--med-copy-mobile-font-size);
+    }
+}
+
+/*  TABLETS  *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px) {
+
+    .column-text h2 {
+        font-size: var(--h2-titles-tablet-font-size);
+    }
+
+    .column-text h3 {
+        font-size: var(--h3-titles-tablet-font-size);
+    }
+
+    .column-text p {
+        font-size: var(--med-copy-tablet-font-size);
+    }
+
+}
+
+/* IPADS   ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px) {
+
+  /*  .column-text  {
+        border-top: thin dashed var(--color-soft-blue);
+        border-bottom: thin dashed var(--color-soft-blue);
+    }*/
+
+    .column-text h2 {
+        font-size: var(--h2-titles-ipad-font-size);
+    }
+
+    .column-text h3 {
+        font-size: var(--h3-titles-ipad-font-size);
+    }
+
+    .column-text p {
+        font-size: var(--med-copy-ipad-font-size);
+    }
+
+}
+
+/* LAPTOPS  ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width:1919px) {
+
+   /* .column-text {
+        border-top: thin dashed var(--color-soft-blue);
+        border-bottom: thin dashed var(--color-soft-blue);
+        border-right: thin dashed var(--color-soft-blue);
+    }*/
+
+    .column-text h2 {
+        font-size: var(--h2-titles-laptop-font-size);
+    }
+
+    .column-text h3 {
+        font-size: var(--h3-titles-laptop-font-size);
+    }
+
+    .column-text p {
+        font-size: var(--med-copy-laptop-font-size);
+    }
+
+}
+
+/* DESKTOPS  ****************************************************************************************************/
+@media only screen
+and (min-width: 1920px)  {
+
+    .column-text h2 {
+        font-size: var(--h2-titles-desktop-font-size);
+    }
+
+    .column-text h3 {
+        font-size: var(--h3-titles-desktop-font-size);
+    }
+
+    .column-text p  {
+        font-size: var(--med-copy-desktop-font-size);
+    }
+
+}
+
+/* GLOBAL ****************************************************************************************************/
+@media only screen {
+
+    /*   about us page */
+    .two-col-container {
+        display: grid;
+        font-family: var(--family-copy);
+        margin:auto;
+    }
+
+    .column-image {
+        margin:auto;
+        cursor:pointer;
+    }
+
+    .column-image a img, .column-image img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    .column-text {
+        color: var(--color-dark-blue);
+    }
+
+    .column-text h2, .column-text h2 a {
+        text-align: left;
+    }
+
+    /* align is being set inline as left on about and right on wizard stuff */
+    .column-text h3, .column-text h3 a {
+        text-align: center;
+    }
+
+     .column-text h3 a, .column-text h2 a  {
+        text-decoration: none;
+         color: var(--color-dark-blue);
+    }
+
+    .column-text h3 a:hover, .column-text h2 a:hover {
+        color: var(--color-purple);
+    }
+
+}
+

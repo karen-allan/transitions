@@ -4,7 +4,7 @@
         <ng-container *ngIf="page === 0">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
-            <div class="screen-title pad-top">
+            <div class="content-title pad-top">
                 <h5>
                     <b>&nbsp;
                         REPRESENTATION AGREEMENT (SECTION 9)
@@ -41,7 +41,7 @@
         <ng-container *ngIf="page === 1">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
-            <div class="screen-title pad-top-2">
+            <div class="content-title pad-top-2">
                 <h4>
                     <b>
                         Page {{page}} / {{finalPage}}:
@@ -107,7 +107,7 @@
         <ng-container *ngIf="page === 2">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
-            <div class="screen-title pad-top-2">
+            <div class="content-title pad-top-2">
                 <h4>
                     <b>
                         Page {{page}} / {{finalPage}}:
@@ -149,7 +149,7 @@
         <ng-container *ngIf="page === 3">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
-            <div class="screen-title pad-top-2">
+            <div class="content-title pad-top-2">
                 <h4>
                     <b>
                         Page {{page}} / {{finalPage}}:
@@ -174,7 +174,7 @@
                 </p>
             </div>
 
-            <div class="screen-title pad-top-2">
+            <div class="content-title pad-top-2">
                 <h4><b>I name the following person to be my Representative:</b></h4>
             </div>
 
@@ -211,7 +211,7 @@
         <ng-container *ngIf="page === 4">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
-            <div class="screen-title pad-top-2">
+            <div class="content-title pad-top-2">
                 <h4>
                     <b>
                         Page {{page}} / {{finalPage}}:
@@ -225,7 +225,7 @@
                 <span>(Strike out this provision if you do not want to appoint an Alternate Representative)</span>
             </div>
 
-            <div class="screen-title pad-top-2">
+            <div class="content-title pad-top-2">
                 <h4><b>If my Primary Representative:</b></h4>
             </div>
 
@@ -279,7 +279,7 @@
         <ng-container *ngIf="page === 5">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
-            <div class="screen-title pad-top-2">
+            <div class="content-title pad-top-2">
                 <h4>
                     <b>
                         Page {{page}} / {{finalPage}}:
@@ -320,7 +320,7 @@
         <ng-container *ngIf="page === 6">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
-            <div class="screen-title pad-top-2">
+            <div class="content-title pad-top-2">
                 <h4>
                     <b>
                         Page {{page}} / {{finalPage}}:
@@ -395,7 +395,7 @@
         <ng-container *ngIf="page === 7">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
-            <div class="screen-title pad-top-2">
+            <div class="content-title pad-top-2">
                 <h4>
                     <b>
                         Page {{page}} / {{finalPage}}:
@@ -460,7 +460,7 @@
         <ng-container *ngIf="page === 8">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
-            <div class="screen-title pad-top-2">
+            <div class="content-title pad-top-2">
                 <h4>
                     <b>
                         Page {{page}} / {{finalPage}}:
@@ -475,7 +475,7 @@
                 </p>
             </div>
 
-            <div class="screen-title">
+            <div class="content-title">
                 <h4><b>ADULT AND WITNESS SIGNATURES</b></h4>
             </div>
             <form #repNineForm="ngForm" class="wizard-form" novalidate>
@@ -667,7 +667,7 @@
 <!--                </div>-->
             </form>
 
-            <div class="screen-title pad-top-2">
+            <div class="content-title pad-top-2">
                 <h4><b>REPRESENTATIVE'S SIGNATURE</b></h4>
             </div>
 
@@ -764,7 +764,7 @@
         <ng-container *ngIf="page === 9">
             <app-choose-your-rep-wizard-header [rep]='rep'></app-choose-your-rep-wizard-header>
 
-            <div class="screen-title pad-top">
+            <div class="content-title pad-top">
                 <h4>
                     <b>&nbsp;CONGRATULATIONS! You Are Done!</b>
                 </h4>

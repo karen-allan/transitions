@@ -12,7 +12,7 @@ export class CheckOffTasksListContainerComponent {
   subMenuItemId:number = 23;
 
   lookupParent=Constants.TAKE_ACTION
-  lookupChild1: string=Constants.PUT_CHOICES_IN_WRITING
+  lookupChild1: string=Constants.WRITE_WISH_LIST
   lookupChild2: string=Constants.CHOOSE_YOUR_REPS
   lookupChild3: string=Constants.WRITE_ADVANCE_CARE_PLAN
 

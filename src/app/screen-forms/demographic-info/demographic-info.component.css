@@ -1,0 +1,162 @@
+/*******************************************************************************************************************
+  GLOBAL BANANAS- MOBILES, SMALL TABLETS - under 900 (content) width so need 10% space on either side of content
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 896px)    {
+
+    .client-name-block, .client-info-block, .client-location-block, .client-address-block, .client-emergency-block     {
+        display:grid;
+        width: 100%;
+    }
+
+   /* .client-first-column, .client-second-column, .client-third-column, .client-fourth-column {
+        grid-column:1;
+    }
+*/
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS (over 900 so don't need to have space on either side of content)
+*******************************************************************************************************************/
+@media only screen
+and (min-width:960px)   {
+
+    .client-name-block {
+        display: inline-grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .client-info-block {
+        display: inline-grid;
+        grid-template-columns: 25% 35% 40%;
+    }
+
+    .client-location-block {
+        display: inline-grid;
+        grid-template-columns: 35% 1fr 20% 18%;
+    }
+
+
+
+    .client-emergency-block {
+        display: inline-grid;
+        grid-template-columns: 40% 25% 35%;
+    }
+
+}
+
+
+/*******************************************************************************************************************
+  BANANAS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 320px) {
+
+    .client-full-column, .client-first-column, .client-second-column , .client-third-column, .client-fourth-column {
+        font-size: var(--big-copy-banana-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  MOBILES
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px) {
+
+    .client-full-column, .client-first-column, .client-second-column , .client-third-column, .client-fourth-column {
+        font-size: var(--big-copy-mobile-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  TABLETS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px)  {
+
+    .client-full-column, .client-first-column, .client-second-column , .client-third-column, .client-fourth-column {
+        font-size: var(--big-copy-tablet-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  IPADS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px) {
+
+    .client-full-column, .client-first-column, .client-second-column , .client-third-column, .client-fourth-column {
+        font-size: var(--big-copy-ipad-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  LAPTOPS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width: 1919px) {
+
+    .client-full-column, .client-first-column, .client-second-column , .client-third-column, .client-fourth-column {
+        font-size: var(--big-copy-laptop-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  DESKTOPS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    .client-full-column, .client-first-column, .client-second-column, .client-third-column, .client-fourth-column {
+        font-size: var(--big-copy-desktop-font-size);
+    }
+
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    .client-name-block, .client-location-block, .client-info-block, .client-emergency-block, .client-address-block   {
+        width: 100%;
+    }
+
+    .client-address-block {
+        display:grid;
+        grid-template-columns:100%;
+    }
+
+    .client-full-column {
+        grid-column:1/-1;
+    }
+
+    .client-full-column, .client-first-column, .client-second-column, .client-third-column, .client-fourth-column {
+        display: grid;
+        padding-top: 1em;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+    }
+
+    .client-first-column {
+        grid-column: 1;
+    }
+
+    .client-second-column {
+        grid-column: 2;
+    }
+
+    .client-third-column {
+        grid-column: 3;
+    }
+
+    .client-fourth-column {
+        grid-column: 4;
+    }
+}

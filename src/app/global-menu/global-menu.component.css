@@ -1,27 +1,25 @@
-
 /*******************************************************************************************************************
-  ALL BANANAS, MOBILES AND TABLET AND IPAD PORTRAIT (MAX IS 1 less than TABLET LANDSCAPE at and (min-width: 1280px))
+  GLOBAL BANANAS, MOBILES, SMALL TABLETS - HERE WE COVER ENTIRE WIDTH OF CONTATINERS
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 240px)
-and (max-width: 1279px) {
+    and (min-width: 240px)
+    and (max-width: 896px)    {
 
     .desktop-header {
         display: none;
     }
 
-    .header-mobile {
+    .mobile-header {
         display: block;
+        width:var(--media-unaffected-by-content-width);
         float:left;
         margin:auto;
-        width:100%;
     }
 
     /* contains the mobile-header-content */
     .mobile-header-block {
         display: grid;
         width:100%;
-        max-width:1024px;
         margin:auto;
     }
 
@@ -34,6 +32,7 @@ and (max-width: 1279px) {
         align-content: flex-start;
     }
 
+    /* background position centers vertical */
     .logo {
         background-position: center;
         background-image:url('src/assets/images/menu/transitionsInEnergyLogo.png');
@@ -44,10 +43,6 @@ and (max-width: 1279px) {
     .header-name {
         justify-content: center;
         text-align: center;
-    }
-
-    .top-name {
-        letter-spacing: 3px;
     }
 
     /* ROW 2 slogan - energy medicine treatments - icon - end of life doula support */
@@ -197,268 +192,30 @@ and (max-width: 1279px) {
 
 }
 
-/* BANANA PORTRAIT IS MOBILE MENU *****************************************************************************/
-@media only screen
-and (min-width: 240px)
-and (max-width: 359px)
-and (orientation: portrait){
-
-    .mobile-header-content {
-        grid-template-columns: 45% 55%;
-    }
-
-    .header-logo {
-        background-size: contain;
-        height:var(--banana-top-menu-height);
-    }
-
-    .header-name {
-        font-size: var(--menu-name-banana-port-font-size);
-        height:var(--banana-top-menu-height);
-    }
-
-    .header-slogans p, .header-slogans span {
-        font-size: var(--menu-slogan-banana-port-font-size);
-        letter-spacing: .1em;
-    }
-
-    .mobile-menu-items {
-        grid-template-columns: 58% 14% 14% 14%;
-    }
-
-    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
-        font-size: var(--mobile-main-menu-item-banana-font-size);
-    }
-
-    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
-        font-size: var(--mobile-sub-menu-item-banana-font-size);
-    }
-
-}
-
-/* BANANA LANDSCAPE IS MOBILE MENU *****************************************************************************/
-@media only screen
-and (min-width: 568px)
-and (max-width: 895px)
-and (orientation: landscape) {
-
-    .mobile-header-content {
-        grid-template-columns: 35% 65%;
-    }
-
-    .header-logo {
-        background-size: auto;
-        height:var(--mobile-top-menu-height);
-    }
-
-    .header-name {
-        font-size: var(--menu-name-banana-land-font-size);
-        height:var(--mobile-top-menu-height);
-    }
-
-    .header-slogans p, .header-slogans span {
-        font-size: var(--menu-slogan-banana-land-font-size);
-    }
-
-    .mobile-menu-items {
-        grid-template-columns: 82% 6% 6% 6%;
-    }
-
-    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
-        font-size: var(--mobile-main-menu-item-banana-font-size);
-    }
-
-    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
-        font-size: var(--mobile-sub-menu-item-banana-font-size);
-    }
-
-}
-
-/* MOBILES PORTRAIT IS MOBILE MENU ****************************************************************************************************/
-@media only screen
-and (min-width: 360px)
-and (max-width: 599px)
-and (orientation: portrait) {
-
-    .mobile-header-content {
-        grid-template-columns: 35% 65%;
-    }
-
-    .header-logo, .header-name {
-        height:var(--mobile-top-menu-height);
-    }
-
-    .header-logo {
-        background-size: auto;
-    }
-
-    .header-name {
-        font-size: var(--menu-name-mobile-port-font-size);
-    }
-
-    .header-slogans p, .header-slogans span {
-        font-size: var(--menu-slogan-mobile-port-font-size);
-    }
-
-    .mobile-menu-items {
-        grid-template-columns: 73% 9% 9% 9%;
-    }
-
-    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
-        font-size: var(--mobile-main-menu-item-mobile-font-size);
-    }
-
-    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
-        font-size: var(--mobile-sub-menu-item-mobile-font-size);
-    }
-
-}
-
-/*  MOBILES LANDSCAPE IS MOBILE MENU **************************************************************************************************/
-@media only screen
-and (min-width:896px )
-and (max-width: 1279px)
-and (orientation: landscape) {
-
-    .mobile-header-content {
-        grid-template-columns: 40% 60%;
-    }
-
-    .header-logo, .header-name {
-        height:var(--mobile-top-menu-height);
-    }
-
-    .header-logo {
-        background-size: auto;
-    }
-
-    .header-name {
-        font-size: var(--menu-name-mobile-land-font-size);
-    }
-
-    .header-slogans p, .header-slogans span {
-        font-size: var(--menu-slogan-mobile-land-font-size);
-    }
-
-    .mobile-menu-items {
-        grid-template-columns: 88% 4% 4% 4%;
-    }
-
-    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
-        font-size: var(--mobile-main-menu-item-mobile-font-size);
-    }
-
-    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
-        font-size: var(--mobile-sub-menu-item-mobile-font-size);
-    }
-}
-
-/* TABLETS PORTRAIT IS MOBILE MENU ****************************************************************************************************/
-@media only screen
-and (min-width: 600px)
-and (max-width: 1023px)
-and (orientation: portrait) {
-
-    .mobile-header-content {
-        grid-template-columns: 40% 60%;
-    }
-
-    .header-logo, .header-name {
-        height:var(--mobile-top-menu-height);
-    }
-
-    .header-logo {
-        background-size: auto;
-    }
-
-    .header-name {
-        font-size: var(--menu-name-tablet-port-font-size);
-    }
-
-    .header-slogans p, .header-slogans span {
-        font-size: var(--menu-slogan-tablet-port-font-size);
-    }
-
-    .mobile-menu-items {
-        grid-template-columns: 79% 7% 7% 7%;
-    }
-
-    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
-        font-size: var(--mobile-main-menu-item-tablet-ipad-font-size);
-    }
-
-    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
-        font-size: var(--mobile-sub-menu-item-tablet-ipad-font-size);
-    }
-
-}
-
-/* IPADS PORTRAIT IS MOBILE MENU ****************************************************************************************************/
-@media only screen
-and (min-width: 1024px)
-and (max-width: 1366px)
-and (orientation: portrait) {
-
-    .mobile-header-content {
-        grid-template-columns: 40% 60%;
-    }
-
-    .header-logo, .header-name {
-        height:var(--mobile-top-menu-height);
-    }
-
-    .header-logo {
-        background-size: auto;
-    }
-
-    .header-name {
-        font-size: var(--menu-name-ipad-port-font-size);
-    }
-
-    .header-slogans p, .header-slogans span {
-        font-size: var(--menu-slogan-ipad-port-font-size);
-    }
-
-    .mobile-menu-items {
-        grid-template-columns: 88% 4% 4% 4%;
-    }
-
-    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
-        font-size: var(--mobile-main-menu-item-tablet-ipad-font-size);
-    }
-
-    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
-        font-size: var(--mobile-sub-menu-item-tablet-ipad-font-size);
-    }
-}
-
 /*******************************************************************************************************************
-  ALL THAT SHOW BIG DESKTOP MENU TABLET LANDSCAPE, IPAD LANDSCAPE, LAPTOP, DESKTOP and UP
+    GLOBAL FOR BIG TABLETS, IPADS, LAPTOPS and DESKTOPS
 *******************************************************************************************************************/
 
 @media only screen
-and (min-width: 1280px)
-and (orientation: landscape) {
+    and (min-width:960px)    {
 
     /* header mobile displays in mobile mode and hides in desktop mode */
-    .header-mobile {
+    .mobile-header {
         display: none;
     }
 
     /* header desktop displays in desktop mode and hides in mobile mode */
     .desktop-header {
         display: block;
-        width:var(--media-more-than-content-width);
+        width:var(--media-unaffected-by-content-width);
         float:left;
         margin:auto;
-
     }
 
     /* DESKTOP-CONTENT-BLOCK - ROW 1 - with logo, name and slogans - it is 1280 which is tablet width 1280  */
     .desktop-content-block {
         display: grid;
-        width:var(--media-more-than-content-width);
-        max-width:var(--tablet-width);
+        max-width:var(--ipad-width);
         margin:auto;
         font-family: var(--family-menu-copy);
     }
@@ -509,7 +266,6 @@ and (orientation: landscape) {
         grid-column: 3;
         justify-content: center;
         align-content: center;
-        border-right:thin solid #f1f1f1;
     }
 
     .header-slogans p {
@@ -548,7 +304,7 @@ and (orientation: landscape) {
     .desktop-menu-block {
         display: grid;
         width:100%;
-        max-width:var(--banner-width);
+        max-width:var(--ipad-width);
         overflow: hidden;
         margin:auto;
         background-color: var(--color-white);
@@ -556,17 +312,15 @@ and (orientation: landscape) {
         font-family:var(--family-menu-copy);
     }
 
-    /* DESKTOP-MENU - are a max width of 800px */
+    /* DESKTOP-MENU - max width of 840 so space on either side of smallest width */
     .desktop-menu {
         display: inline-grid;
         align-content: flex-start;
         margin:auto;
-        width:var(--media-more-than-content-width);
         grid-template-columns: repeat(4, 25%);
         height:var(--desktop-bottom-menu-height);
         max-width:var(--menu-width);
-        /* border-left:thin solid #f1f1f1;
-         border-right:thin solid #f1f1f1;*/
+        width:100%;
     }
 
     /* example uses dropdown instead of desktop-top-menu-item */
@@ -587,7 +341,7 @@ and (orientation: landscape) {
     }
 
     .desktop-top-menu-item span b {
-        color:var(--color-background-purple);
+        color:var(--color-dark-purple);
         cursor:pointer;
     }
 
@@ -628,7 +382,7 @@ and (orientation: landscape) {
     }
 
     .dropdown-content span {
-        color: var(--color-background-purple);
+        color: var(--color-dark-purple);
         font-weight: bold;
     }
 
@@ -641,74 +395,152 @@ and (orientation: landscape) {
         padding-top:.2em;
     }
 
-
 }
 
-/*  TABLETS LANDSCAPE IS DESKTOP MENU *******************************************************************************************/
+/* BANANAS *****************************************************************************/
 @media only screen
-and (min-width: 1280px)
-and (max-width: 1365px)
-and (orientation: landscape) {
+    and (min-width: 240px)
+    and (max-width: 320px){
+
+    .mobile-header-content{
+        grid-template-columns: 45% 55%;
+    }
+
+    .header-logo {
+        height:var(--banana-top-menu-height);
+        background-size: contain;
+        /*border:thin solid red;*/
+    }
 
     .header-name {
-        font-size: var(--menu-name-tablet-land-font-size);
+        font-size: var(--header-name-banana-font-size);
+        /*border:thin solid red;*/
     }
 
     .header-slogans p, .header-slogans span {
-        font-size: var(--menu-slogan-tablet-land-font-size);
+        font-size: var(--header-slogan-banana-font-size);
+        letter-spacing: .1em;
     }
 
-    .header-socials {
-        padding-left:.2em;
-
+    .mobile-menu-items {
+        grid-template-columns: 61% 13% 13% 13%;
     }
 
-    .top-social a, .bottom-social a  {
-        font-size: var(--menu-social-ipad-tablet-land-font-size);
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--mobile-main-menu-item-banana-font-size);
     }
 
-    .desktop-top-menu-item span {
-        font-size: var(--desktop-menu-item-tablet-land-font-size);
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--mobile-sub-menu-item-banana-font-size);
     }
-
-    .dropdown-content a, .dropdown-content span {
-        font-size: var(--desktop-sub-menu-item-tablet-land-font-size);
-    }
-
-
 
 }
 
-/* IPADS LANDSCAPE IS DESKTOP MENU ***************************************************************************************************/
+/* MOBILES  ****************************************************************************************************/
 @media only screen
-and (min-width: 1366px)
-and (max-width: 1439px)
-and (orientation: landscape) {
+and (min-width: 360px)
+and (max-width: 414px) {
+
+    .mobile-header-content{
+        grid-template-columns: 35% 65%;
+    }
+
+    .header-logo {
+        height:var(--mobile-top-menu-height);
+        background-size: contain;
+        /*border:thin solid blue;*/
+    }
 
     .header-name {
-        font-size: var(--menu-name-ipad-land-font-size);
+        font-size: var(--header-name-mobile-font-size);
+        /*border:thin solid blue;*/
     }
 
     .header-slogans p, .header-slogans span {
-        font-size: var(--menu-slogan-ipad-land-font-size);
+        font-size: var(--header-slogan-mobile-font-size);
     }
 
-    .header-socials {
-        padding-left:.2em;
+    .mobile-menu-items {
+        grid-template-columns: 73% 9% 9% 9%;
+    }
+
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--mobile-main-menu-item-mobile-font-size);
+    }
+
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--mobile-sub-menu-item-mobile-font-size);
+    }
+
+}
+
+/* SMALL TABLETS ****************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px) {
+
+    .mobile-header-content {
+        grid-template-columns: 40% 60%;
+    }
+
+    .header-logo {
+        height:var(--mobile-top-menu-height);
+        background-size: auto;
+        /*border:thin solid blue;*/
+    }
+
+    .header-name {
+        font-size: var(--header-name-tablet-font-size);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--header-slogan-small-tablet-font-size);
+    }
+
+    .mobile-menu-items {
+        grid-template-columns: 82% 6% 6% 6%;
+    }
+
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--mobile-main-menu-item-tablet-font-size);
+    }
+
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--mobile-sub-menu-item-tablet-font-size);
+    }
+
+}
+
+/* BIG TABLETS, IPADS, LAPTOPS AND DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 960px) {
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--header-slogan-desktop-font-size);
     }
 
     .top-social a, .bottom-social a  {
-        font-size: var(--menu-social-ipad-tablet-land-font-size);
+        font-size: var(--header-socials-font-size);
     }
 
     .desktop-top-menu-item span {
-        font-size: var(--desktop-menu-item-ipad-land-font-size);
+        font-size: var(--desktop-menu-items-font-size);
     }
 
     .dropdown-content a, .dropdown-content span {
-        font-size: var(--desktop-sub-menu-item-ipad-land-font-size);
+        font-size: var(--desktop-sub-menu-items-font-size);
     }
 
+}
+
+/* BIG TABLETS AND IPADS ****************************************************************************************************/
+@media only screen
+and (min-width: 960px)
+and (max-width: 1280px) {
+
+    .header-name {
+        font-size: var(--header-name-ipad-font-size);
+    }
 }
 
 /* LAPTOPS ****************************************************************************************************/
@@ -717,7 +549,7 @@ and (min-width: 1440px)
 and (max-width:1919px){
 
     .header-name {
-        font-size: var(--menu-name-laptop-font-size);
+        font-size: var(--header-name-laptop-font-size);
     }
 }
 
@@ -726,35 +558,8 @@ and (max-width:1919px){
 and (min-width: 1920px) {
 
     .header-name {
-        font-size: var(--menu-name-desktop-font-size);
+        font-size: var(--header-name-desktop-font-size);
     }
-}
-
-
-/* DESKTOPS ****************************************************************************************************/
-@media only screen
-and (min-width: 1440px) {
-
-    .header-slogans p, .header-slogans span {
-        font-size: var(--menu-slogan-desktop-font-size);
-    }
-
-    .header-socials {
-        padding-left:.2em;
-    }
-
-    .top-social a, .bottom-social a  {
-        font-size: var(--menu-social-desktop-font-size);
-    }
-
-    .desktop-top-menu-item span {
-        font-size: var(--desktop-menu-item-desktop-font-size);
-    }
-
-    .dropdown-content a, .dropdown-content span {
-        font-size: var(--desktop-sub-menu-item-desktop-font-size);
-    }
-
 }
 
 /* GLOBAL *************************************************************************************************************/
@@ -800,7 +605,7 @@ and (min-width: 1440px) {
 
 
 @media print {
-    .header, .menu,  .smart-menu {
+    .header, .menu {
         display: none;
     }
 }

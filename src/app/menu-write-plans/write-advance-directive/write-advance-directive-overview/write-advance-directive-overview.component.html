@@ -1,34 +1,43 @@
-<div class="header-detail-image header-write-adv-care-plan-image header-copy">
-    <p>&#8220;{{quote}}&#8220;
-    </p>
-    <span>
+<div class="header-detail-image header-write-adv-care-plan-image">
+    <div class="quote">
+        &#8220;{{quote}}&#8220;
+    </div>
+    <div class="author">
         {{author}}
-    </span>
+    </div>
 </div>
 
-<div class="screen-title pad-top-2">
-    <h2>{{title}}</h2>
+<div class="content-title">
+    <h1>{{title}}</h1>
 </div>
 
-<div class="content-dark-copy pad-top-3 text-center">
-    <a (click)="openModal()"> <div class="wizard-action-copy"> Run this (free) wizard to create an Advance Care Plan!</div>
-        <div class="wizard-action-write-advance-plan "></div>
-    </a>
+<div class="two-col-container">
+    <div class="column-image">
+        <a (click)="openModal()">
+            <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWriteAdvancePlan.jpg" title="write advance care plan"
+                 alt="write advance care plan">
+        </a>
+    </div>
+
+    <div class="column-text no-border">
+        <h2>Run this wizard to {{title}}!</h2>
+
+        <p>
+            You can take the pain and stress away from your family should they need to make emergency health decisions for you by
+            running our
+            Advance Care Plan Wizard. For more information check out the
+            <a routerLink="/considerAdvancePlan">{{ lookupParent }} > {{ lookupChild1 }}</a>  page.
+            <br><br>
+            Using this wizard you can note any treatments and procedures you want or do not want. The Representative(s) you choose must
+            abide by your directives.
+            <br><br>
+            If you have already assigned Representative(s) you can feel protected. If you haven't, your health care decisions will be
+            made from a list that the health care team compiles of your family contacts.
+            <br><br>
+            Be proactive. Run our <a routerLink="/chooseReps">{{ lookupParent }} > {{ lookupChild2 }}</a>  page to choose your
+            Representative(s). Print and store these documents and let your family and care givers know you have them.
+        </p>
+    </div>
 </div>
 
-
-<div class="content-dark-copy pad-top-2 pad-bottom-2">
-    <p>
-        You can take the pain and stress out of having to think about all those hard decisions should you ever need advanced life
-        support by preemptively following through our Advance Care Plan Wizard. Store you advance care plan where you store your Will,
-        your Representative information, your wishes and other pertinent information that will be seen as a blessing by paramedics,
-        hospital staff and most of all, family.
-        <br><br>
-        For more information check out the <a routerLink="/considerAdvancePlan">{{ lookupParent }} > {{ lookupChild }}</a>  page.
-    </p>
-</div>
-
-<!--<div class="one-button-container pad-top-2">
-    <button class = 'start-button cursorPointer ' (click)="openModal()">WRITE YOUR ADVANCE CARE PLAN</button>
-</div>-->
 

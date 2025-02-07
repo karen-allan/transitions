@@ -1,4 +1,4 @@
-<div class="screen-title">
+<div class="content-title">
     <h2>My Canadian Life</h2>
 </div>
 
@@ -16,7 +16,7 @@
     </p>
 </div>
 
-<div class="screen-quote">
+<div class="quotes">
     <p>
         &#8220;Dads are most ordinary men turned by love into heroes, adventurers, story-tellers and singers of song.&#8221;
     </p>
@@ -30,7 +30,7 @@
          title="Before the Dying Started">
 </div>
 
-<div class="screen-title">
+<div class="content-title">
     <h2>The loss of a grandmother</h2>
 </div>
 
@@ -50,7 +50,7 @@
     </p>
 </div>
 
-<div class="screen-quote">
+<div class="quotes">
     <p>
         &#8220;A grandmother is both a sword and a shield.&#8221;
     </p>
@@ -63,7 +63,7 @@
     <img src="../../../../assets/images/details/about/practitioner/grandmaAndMom.jpg" alt="Grandma and Mom" title="Grandma and Mom">
 </div>
 
-<div class="screen-title">
+<div class="content-title">
     <h2>The loss of a Father</h2>
 </div>
 
@@ -93,7 +93,7 @@
     </p>
 </div>
 
-<div class="screen-quote">
+<div class="quotes">
     <p>
         &#8220;Graves cannot contain my spirit; death is not the end of time, though my body turns to ashes, I will rest in peace
         sublime.&#8221;
@@ -108,7 +108,7 @@
          title="Before the Dying Started">
 </div>
 
-<div class="screen-title">
+<div class="content-title">
     <h2>Other losses</h2>
 </div>
 
@@ -128,7 +128,7 @@
     </p>
 </div>
 
-<div class="screen-quote">
+<div class="quotes">
     <p>
         &#8220;The darker the night, the brighter the stars. The deeper the grief, the closer is God.&#8221;
     </p>
@@ -141,7 +141,7 @@
     <img src="../../../../assets/images/details/about/practitioner/family.jpg" alt="My cousin Richard" title="My cousin Richard">
 </div>
 
-<div class="screen-title">
+<div class="content-title">
     <h2>The lessons keep coming</h2>
 </div>
 
@@ -157,7 +157,7 @@
     </p>
 </div>
 
-<div class="screen-quote">
+<div class="quotes">
     <p>
         &#8220;Happiness is beneficial for the body, but it is grief that develops the powers of the mind.&#8221;
     </p>
@@ -170,7 +170,7 @@
     <img src="../../../../assets/images/details/about/practitioner/becomeAdvocatePic.jpg" alt="About Advocating" title="About Advocating">
 </div>
 
-<div class="screen-title">
+<div class="content-title">
     <h2>Experiencing Hospice</h2>
 </div>
 
@@ -192,7 +192,7 @@
     </p>
 </div>
 
-<div class="screen-quote">
+<div class="quotes">
     <p>
         &#8220;Mostly it is loss that teaches us which teaches us about the worth of things.&#8221;
     </p>
@@ -205,7 +205,7 @@
     <img src="../../../../assets/images/details/about/practitioner/myBrotherBrock.jpg" alt="My brother" title="My brother">
 </div>
 
-<div class="screen-title">
+<div class="content-title">
     <h2>Taking on the advocate role</h2>
 </div>
 
@@ -237,7 +237,7 @@
     </p>
 </div>
 
-<div class="screen-quote">
+<div class="quotes">
     <p>
         &#8220;Losing a mother doesn't happen in a moment. It takes years to appreciate the impact of what's gone.&#8221;
     </p>

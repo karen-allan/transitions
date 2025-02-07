@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {RepNine} from "../../../ts-files/rep-nine";
 import * as Constants from 'src/app/ts-files/constants'
 
+
 @Component({
   selector: 'app-choose-your-rep-container',
   templateUrl: './choose-your-rep-container.component.html',
@@ -12,8 +13,11 @@ export class ChooseYourRepContainerComponent implements OnInit {
   menuItemId:number  = 2;
   subMenuItemId:number = 21;
 
-  lookupParent=Constants.PLAN_AHEAD
-  lookupChild: string=Constants.CONSIDER_YOUR_ADVOCATES
+  lookupParent1=Constants.PLAN_AHEAD
+  lookupChild1: string=Constants.CONSIDER_YOUR_ADVOCATES
+
+  lookupParent2=Constants.TAKE_ACTION
+  lookupChild2: string=Constants.WRITE_WISH_LIST
 
   title= Constants.CHOOSE_YOUR_REPS
   quote: string='When the world is silent, even one voice becomes powerful.';
@@ -25,10 +29,9 @@ export class ChooseYourRepContainerComponent implements OnInit {
   constructor() {
 
     //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
-    //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
-    this.rep = new RepNine("", "", "", "", "",
+    this.rep = new RepNine("", "", "", "", "B.C.",
         "", "", "", "", "", "", '',
-        "", "");
+        "", "", "", false, false, "");
   }
   ngOnInit(): void {
   }

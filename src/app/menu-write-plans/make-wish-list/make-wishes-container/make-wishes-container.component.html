@@ -1,17 +1,12 @@
-<div class="plan-ahead-component-screen">
-    <app-global-menu [menuItemId]='menuItemId' [subMenuItemId]='subMenuItemId'></app-global-menu>
+<app-global-menu [menuItemId]='menuItemId' [subMenuItemId]='subMenuItemId'></app-global-menu>
 
-<!--    <app-global-headers [detailHeaderName]="detailHeaderName"></app-global-headers>-->
+<app-make-wishes-overview [lookupParent]="lookupParent" [lookupChild]="lookupChild" [title]="title" [wishes]="wishes" [quote]="quote" [author]="author">
+</app-make-wishes-overview>
 
-    <app-make-wishes-overview [lookupParent]="lookupParent" [lookupChild]="lookupChild" [title]="title" [wishes]="wishes" [quote]="quote"
-    [author]="author"></app-make-wishes-overview>
+<app-global-footer></app-global-footer>
 
-    <app-global-footer></app-global-footer>
+<app-make-wishes-wizard-printout [wishes]="wishes"></app-make-wishes-wizard-printout>
 
-    <app-make-wishes-wizard-printout [wishes]="wishes"></app-make-wishes-wizard-printout>
-
-    <app-printed-footer></app-printed-footer>
-</div>
 
 
 

@@ -3,6 +3,7 @@ import {WishesWizard} from "../../../ts-files/wishes-wizard";
 import {Question} from "../../../ts-files/question";
 import {QUESTIONS} from "../../../ts-files/questions";
 import * as Constants from 'src/app/ts-files/constants'
+import {WRITE_WISH_LIST} from "src/app/ts-files/constants";
 
 @Component({
   selector: 'app-make-wishes-container',
@@ -17,7 +18,7 @@ export class MakeWishesContainerComponent {
   lookupParent:string= Constants.PLAN_AHEAD
   lookupChild=Constants.THINK_ABOUT_YOUR_NEEDS
 
-  title=Constants.PUT_CHOICES_IN_WRITING
+  title=Constants.WRITE_WISH_LIST;
   quote: string='Documentation is a love letter that you write to your future self.';
   author: string='Damian Conway';
 
