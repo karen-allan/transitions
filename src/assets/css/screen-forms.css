@@ -14,10 +14,15 @@ and (max-width: 896px)    {
         border-bottom: thin solid var(--color-grey);
     }
 
+    .screen-form-disclaimer-block {
+        width:var(--media-less-than-content-width);
+        max-width: var(--content-width);
+    }
+
     .screen-forms-desktop {
         display: none;
     }
-    
+
 }
 
 /*******************************************************************************************************************
@@ -30,7 +35,7 @@ and (min-width:960px)   {
         display: none;
     }
 
-    .screen-forms-desktop, .screen-forms-both {
+    .screen-forms-desktop, .screen-forms-both  {
         display: block;
         width:var(--media-more-than-content-width);
         max-width: var(--content-width);
@@ -38,6 +43,16 @@ and (min-width:960px)   {
         border-left: thin solid var(--color-grey);
         border-right: thin solid var(--color-grey);
         border-bottom: thin solid var(--color-grey);
+    }
+
+    .screen-form-disclaimer-block {
+        width:var(--media-more-than-content-width);
+        max-width: var(--content-width);
+    }
+
+    .screen-form-print-button {
+        width:110px;
+        height:60px;
     }
 
 }
@@ -70,6 +85,20 @@ and (max-width: 320px) {
     .screen-form-full-radio-col   {
         font-size: var(--med-copy-banana-font-size);
     }
+
+   /* .form-date-label, .form-date-value, .form-signature-label  {
+        font-size: var(--big-copy-banana-font-size);
+    }*/
+
+    .screen-form-disclaimer-title {
+        font-size: var(--big-copy-banana-font-size);
+    }
+
+    .screen-form-print-button   {
+        font-size:var(--small-copy-banana-font-size);
+        width:70px;
+        height:40px;
+    }
 }
 
 /* MOBILES  ****************************************************************************************************/
@@ -98,6 +127,24 @@ and (max-width: 414px) {
 
     .screen-form-full-radio-col   {
         font-size: var(--med-copy-mobile-font-size);
+    }
+
+    .form-date-sig {
+        font-size: var(--small-copy-mobile-font-size);
+    }
+
+  /*  .form-date-label, .form-date-value, .form-signature-label  {
+        font-size: var(--big-copy-mobile-font-size);
+    }*/
+
+    .screen-form-disclaimer-title {
+        font-size: var(--big-copy-mobile-font-size);
+    }
+
+    .screen-form-print-button {
+        font-size:var(--small-copy-mobile-font-size);
+        width:100px;
+        height:50px;
     }
 }
 
@@ -129,9 +176,19 @@ and (max-width: 800px) {
     .screen-form-full-radio-col   {
         font-size: var(--med-copy-tablet-font-size);
     }
+
+    .screen-form-disclaimer-title {
+        font-size: var(--big-copy-tablet-font-size);
+    }
+
+    .screen-form-print-button {
+        font-size:var(--small-copy-tablet-font-size);
+        width:100px;
+        height:50px;
+    }
 }
 
-/* IPADS PORTRAIT ****************************************************************************************************/
+/* IPADS   ****************************************************************************************************/
 @media only screen
 and (min-width: 1024px)
 and (max-width: 1366px) {
@@ -157,6 +214,22 @@ and (max-width: 1366px) {
 
     .screen-form-full-radio-col   {
         font-size: var(--med-copy-ipad-font-size);
+    }
+
+    .form-date-sig {
+        font-size: var(--small-copy-ipad-font-size);
+    }
+
+  /*  .form-date-label, .form-date-value, .form-signature-label  {
+        font-size: var(--big-copy-ipad-font-size);
+    }*/
+
+    .screen-form-disclaimer-title {
+        font-size: var(--big-copy-ipad-font-size);
+    }
+
+    .screen-form-print-button {
+        font-size:var(--small-copy-ipad-font-size);
     }
 }
 
@@ -190,6 +263,18 @@ and (max-width: 1919px) {
         font-size: var(--med-copy-laptop-font-size);
     }
 
+   /* .form-date-label, .form-date-value, .form-signature-label  {
+        font-size: var(--big-copy-laptop-font-size);
+    }*/
+
+    .screen-form-disclaimer-title {
+        font-size: var(--big-copy-laptop-font-size);
+    }
+
+    .screen-form-print-button {
+        font-size:var(--small-copy-laptop-font-size);
+    }
+
 }
 /* DESKTOPS ****************************************************************************************************/
 @media only screen
@@ -218,6 +303,17 @@ and (min-width: 1920px) {
         font-size: var(--med-copy-desktop-font-size);
     }
 
+   /* .form-date-label, .form-date-value, .form-signature-label  {
+        font-size: var(--big-copy-desktop-font-size);
+    }*/
+
+    .screen-form-disclaimer-title {
+        font-size: var(--big-copy-desktop-font-size);
+    }
+
+    .screen-form-print-button {
+        font-size:var(--small-copy-desktop-font-size);
+    }
 }
 
 /* GLOBAL *************************************************************************************************************/
@@ -246,7 +342,6 @@ and (min-width: 1920px) {
         line-height: 110%;
         padding-top:1em;
         font-family: var(--family-copy);
-
     }
 
     .screen-form-one-full-col-block p {
@@ -258,7 +353,10 @@ and (min-width: 1920px) {
     }
 
     .screen-form-one-full-col-block textarea {
-        /*padding-top:1em;*/
+        border-top:thin solid black;
+        border-bottom:thin solid black;
+        border-left:none;
+        border-right:none;
         font-family: var(--family-copy);
         color: var(--color-dark-blue);
     }
@@ -314,16 +412,49 @@ and (min-width: 1920px) {
         grid-column: 1/-1;
     }
 
-  /*  !* this is in book-consultation-container-component.html and it lets it know to show the data entry menu etc only if not in print mode *!
-    .book-consultation-screen {
-        display: block;
-    }*/
+    .screen-form-disclaimer-block {
+        color:var(--color-dark-blue);
+        display:block;
+        margin:auto;
+    }
 
+    .screen-form-disclaimer-title {
+        padding-top:.5em;
+        margin:.8em 0;
+        font-size: 1.7em;
+        text-align: left;
+        font-family:var(--family-title);
+    }
+
+    .screen-form-disclaimer-text {
+        font-size: 1em;
+        font-family: var(--family-copy);
+        border: #878787 dashed 1px;
+        padding:1em;
+    }
+
+    .screen-form-button-container {
+        width:100%;
+        justify-content: flex-end;
+        display:grid;
+        margin-top:2em;
+    }
+
+    .screen-form-print-button {
+        display:grid;
+        color: var(--color-white);
+        letter-spacing: 1px;
+        background-color: var(--color-dark-blue);
+        border-radius: 1.0em;
+        align-content: center;
+        justify-content: center;
+        padding: 1em 0;
+    }
 
     @media screen {
-        .make-wishes-wizard-printout, .choose-your-rep-wizard-printout, .write-advance-directive-wizard-printout,
-        .print-caregiver-consult-component, .print-patient-consult-component, .print-planning-consult-component,
-        .print-form-disclaimer
+        .print-modal-make-wish-list, .print-modal-choose-your-rep, .print-modal-write-advance-directive,
+        .print-form-caregiver-consult-component, .print-form-patient-consult-component, .print-form-planner-consult-component
+
             {
                 display:none;
             }

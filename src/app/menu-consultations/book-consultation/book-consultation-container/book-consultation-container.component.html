@@ -6,12 +6,12 @@
 
 <div class="book-consultation-print">
     <div *ngIf="selectedIntakeForm == 'caregiver'">
-      <app-print-caregiver-consult [client]="client"></app-print-caregiver-consult>
+      <app-print-form-caregiver-consult [client]="client"></app-print-form-caregiver-consult>
     </div>
     <div *ngIf="selectedIntakeForm == 'planning'">
-      <app-print-planning-consult [client]="client"></app-print-planning-consult>
+      <app-print-form-planner-consult [client]="client"></app-print-form-planner-consult>
     </div>
     <div *ngIf="selectedIntakeForm == 'patient'">
-      <app-print-patient-consult [client]="client"></app-print-patient-consult>
+      <app-print-form-patient-consult [client]="client"></app-print-form-patient-consult>
     </div>
 </div>

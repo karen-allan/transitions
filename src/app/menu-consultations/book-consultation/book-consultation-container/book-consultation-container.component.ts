@@ -1,7 +1,7 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component} from '@angular/core';
 import {Client} from "../../../ts-files/client";
 import {BOOK_CONSULTATION} from "src/app/ts-files/constants";
-import {BookConsultationOverviewComponent} from "../book-consultation-overview/book-consultation-overview.component";
+
 
 @Component({
   selector: 'app-book-consultation-container',
@@ -20,18 +20,16 @@ export class BookConsultationContainerComponent {
 
   selectedIntakeForm='';
 
- client= new Client(0, "", "", "", "", "", "", "", "",
-     "", "", "", "", "", "", "",
-     false, false, false, false, false, false, false,
-     false, false, "", "", "", "",
-     false, false, false, false, "",
+ client= new Client(0, "", "", "", "", "", "B.C.", "",
+     "","", "", "", "", "",
+     "", false,false, false, false, false, false,
+     false, false,false, "",
+     "", false, false, false,false, false, false,
+     false, false,"", false, false, false,
      false, false, false, false, false, false,
-     false, false, "", false, false, false,
-     false, false, false, false, false,
-     false, false, false, false, "",
-     false, false, false, false, false,
-     false, false, false, false, false,
-     "", "");
+     false, false,false, "", false, false,
+     false,false, false, false, false, false,
+     false, false, "", "");
 
 
   constructor() { }

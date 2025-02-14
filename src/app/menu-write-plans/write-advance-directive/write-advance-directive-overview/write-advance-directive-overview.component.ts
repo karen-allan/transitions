@@ -1,7 +1,7 @@
 import {Component, Input, Output} from '@angular/core';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
-import {WriteAdvanceDirectiveWizardComponent} from "../../../screen-modals/write-advance-directive-wizard/write-advance-directive-wizard.component";
 import {AdvanceDirective} from "../../../ts-files/advance_directive";
+import {ScreenModalWriteAdvanceDirectiveComponent} from "../../../screen-modals/screen-modal-write-advance-directive/screen-modal-write-advance-directive.component";
 
 @Component({
   selector: 'app-write-advance-directive-overview',
@@ -29,9 +29,9 @@ export class WriteAdvanceDirectiveOverviewComponent {
     const dialogConfig = new MatDialogConfig();
     // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = false;
-    dialogConfig.id = "advanced-directive-modal";
+    dialogConfig.id = "advance-directive-modal";
 
-    let modalDialog = this.matDialog.open(WriteAdvanceDirectiveWizardComponent, dialogConfig);
+    let modalDialog = this.matDialog.open(ScreenModalWriteAdvanceDirectiveComponent, dialogConfig);
 
     modalDialog.componentInstance.setDirective(this.directive);
     modalDialog.componentInstance.event.subscribe(resp => {

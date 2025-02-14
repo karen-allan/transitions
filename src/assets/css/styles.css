@@ -18,6 +18,7 @@
   --color-white:#ffffff;
   --color-grey:#666161;
   --color-dark-purple:#4a333b;
+  --color-yellow:#FFFF00;
 
   /* CONTENT WIDTHS */
   /* if the content container --content-width (900) and the device css is smaller than 900px it needs space on either side 90% at most
@@ -33,11 +34,12 @@
   --print-width:625px;
   /* gives space on either side of desktop menu */
   --menu-width:840px;
-
+  --modal-width:1000px;
   --content-width:900px;
   --modal-biggest-height:950px;
   --modal-big-height:925px;
   --modal-small-height:750px;
+
 
   --ipad-width:1024px;
   --laptop-width:1440px;

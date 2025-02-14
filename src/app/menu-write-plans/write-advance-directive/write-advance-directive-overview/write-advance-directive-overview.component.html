@@ -11,33 +11,65 @@
     <h1>{{title}}</h1>
 </div>
 
-<div class="two-col-container">
+<div class="two-col-backgrnd-container">
     <div class="column-image">
         <a (click)="openModal()">
-            <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWriteAdvancePlan.jpg" title="write advance care plan"
+            <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWriteAdvancePlan.gif" title="write advance care plan"
                  alt="write advance care plan">
         </a>
     </div>
 
-    <div class="column-text no-border">
-        <h2>Run this wizard to {{title}}!</h2>
+    <div class="column-backgrnd-text">
+        <a (click)="openModal()">
+            <h2>{{title}}</h2>
 
-        <p>
-            You can take the pain and stress away from your family should they need to make emergency health decisions for you by
-            running our
-            Advance Care Plan Wizard. For more information check out the
-            <a routerLink="/considerAdvancePlan">{{ lookupParent }} > {{ lookupChild1 }}</a>  page.
-            <br><br>
-            Using this wizard you can note any treatments and procedures you want or do not want. The Representative(s) you choose must
-            abide by your directives.
-            <br><br>
-            If you have already assigned Representative(s) you can feel protected. If you haven't, your health care decisions will be
-            made from a list that the health care team compiles of your family contacts.
-            <br><br>
-            Be proactive. Run our <a routerLink="/chooseReps">{{ lookupParent }} > {{ lookupChild2 }}</a>  page to choose your
-            Representative(s). Print and store these documents and let your family and care givers know you have them.
-        </p>
+            <p>
+                You can take the pain and stress away from your family should they need to make emergency health decisions for you by
+                running our Advance Care Plan Wizard.
+                <br><br>
+                Using this wizard you can note any treatments and procedures you want or do not want. The Representative(s) you choose must
+                abide by your directives.
+                <br><br>
+                If you have already assigned Representative(s) you can feel protected. If you haven't, your health care decisions will be
+                made from a list that the health care team compiles of your family contacts.
+                <br><br>
+                Be proactive.  Print and store these documents and let your family and care givers know you have them.
+            </p>
+        </a>
     </div>
 </div>
 
+<div class = "content-title pad-top-2">
+    <h3><b>Why Write an Advance Directive?</b></h3>
+</div>
 
+<ul class = "content-dark-list infinity">
+    <li class="list-item">You want to be in charge of your own health, life and death.</li>
+    <li class="list-item">Your realize that doing so now could lead to less family conflicts later.</li>
+    <li class="list-item">You trust your advocates but want to lessen the burden of them having to make difficult decisions.</li>
+    <li class="list-item">You want to eliminate confusion for your family.</li>
+    <li class="list-item">You decide what medical interventions you accept or decline.</li>
+</ul>
+
+<div class="content-title">
+    <h3>Life support and medical interventions include:</h3>
+</div>
+
+<ul class = "content-dark-list infinity">
+    <li class="list-item">Tube Feedings</li>
+    <li class="list-item">Ventilators</li>
+    <li class="list-item">Kidney Dialysis</li>
+    <li class="list-item">Medications</li>
+    <li class="list-item">CPR (Cardio Pulmonary Resuscitation)</li>
+    <li class="list-item">Intubation</li>
+    <li class="list-item">Breathing Machines</li>
+    <li class="list-item">DNR Orders</li>
+</ul>
+
+<div class="content-dark-copy">
+    <p>
+        For more information check out the <a routerLink="/considerAdvancePlan">{{ lookupParent }} > {{ lookupChild1 }}</a>  page.
+        To quickly set up the advocates you trust, go to our <a routerLink="/chooseReps">{{ lookupParent }} > {{ lookupChild2 }}</a> page
+        to choose your Representative(s).
+    </p>
+</div>

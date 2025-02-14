@@ -53,6 +53,7 @@
         width:100%;
         grid-template-columns: 45% 10% 45%;
         background-color: var(--color-dark-blue);
+
     }
 
     .header-slogans p, .slogans-line, .header-slogans span {
@@ -61,6 +62,7 @@
         align-content: center;
         justify-content: center;
         text-align: center;
+        line-height: 100%;
     }
 
     .header-slogans p {
@@ -69,6 +71,7 @@
         padding-left:1em;
         color:var(--color-white);
         margin: 0;
+
     }
 
     .slogans-line {
@@ -419,7 +422,7 @@
 
     .header-slogans p, .header-slogans span {
         font-size: var(--header-slogan-banana-font-size);
-        letter-spacing: .1em;
+        letter-spacing: 0;
     }
 
     .mobile-menu-items {
@@ -458,6 +461,7 @@ and (max-width: 414px) {
 
     .header-slogans p, .header-slogans span {
         font-size: var(--header-slogan-mobile-font-size);
+        letter-spacing: 0;
     }
 
     .mobile-menu-items {

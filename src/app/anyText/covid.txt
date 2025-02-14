@@ -1,0 +1,341 @@
+CSS
+
+/*  BANANA PORTRAIT *******************************************************************************************/
+@media only screen
+and (min-width: 240px)
+and (max-width: 359px)
+and (orientation: portrait) {
+
+    .top-prompt, .list-prompt, .question-prompt  {
+        font-size: var(--med-copy-banana-port-font-size);
+    }
+
+    .question-item, .question-radio label.radio {
+        font-size: var(--small-copy-banana-port-font-size);
+    }
+
+}
+
+/* BANANA LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 568px)
+and (max-width: 895px)
+and (orientation: landscape) {
+
+    .top-prompt, .list-prompt, .question-prompt  {
+        font-size: var(--med-copy-banana-land-font-size);
+    }
+
+    .question-item, .question-radio label.radio {
+        font-size: var(--small-copy-mobile-land-font-size);
+    }
+
+}
+/* MOBILES PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 599px)
+and (orientation: portrait) {
+
+    .top-prompt, .list-prompt, .question-prompt  {
+        font-size: var(--med-copy-mobile-port-font-size);
+    }
+
+    .question-item, .question-radio label.radio {
+        font-size: var(--small-copy-mobile-port-font-size);
+    }
+
+}
+
+/* MOBILES LANDSCAPE ****************************************************************************************************/
+@media only screen
+and (min-width: 896px )
+and (max-width: 1279px)
+and (orientation: landscape) {
+
+    .top-prompt, .list-prompt, .question-prompt  {
+        font-size: var(--med-copy-mobile-land-font-size);
+    }
+
+    .question-item, .question-radio label.radio {
+        font-size: var(--small-copy-mobile-land-font-size);
+    }
+}
+
+/* TABLETS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    .top-prompt, .list-prompt, .question-prompt  {
+        font-size: var(--med-copy-tablet-port-font-size);
+    }
+
+    .question-item, .question-radio label.radio {
+        font-size: var(--small-copy-tablet-port-font-size);
+    }
+}
+
+/* TABLETS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1280px)
+and (max-width: 1365px)
+and (orientation: landscape) {
+
+    .top-prompt, .list-prompt, .question-prompt  {
+        font-size: var(--med-copy-tablet-land-font-size);
+    }
+
+    .question-item, .question-radio label.radio {
+        font-size: var(--small-copy-tablet-land-font-size);
+    }
+
+}
+
+/* IPADS PORTRAIT ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    .top-prompt, .list-prompt, .question-prompt  {
+        font-size: var(--med-copy-ipad-port-font-size);
+    }
+
+    .question-item, .question-radio label.radio {
+        font-size: var(--small-copy-ipad-port-font-size);
+    }
+}
+
+/* IPADS LANDSCAPE ***************************************************************************************************/
+@media only screen
+and (min-width: 1366px)
+and (max-width: 1439px)
+and (orientation: landscape) {
+
+    .top-prompt, .list-prompt  {
+        font-size: var(--med-copy-ipad-land-font-size);
+    }
+
+    .question-item, .question-radio label.radio {
+        font-size: var(--small-copy-ipad-land-font-size);
+    }
+}
+
+
+
+/* DESKTOPS ****************************************************************************************************/
+@media only screen
+and (min-width: 1440px) {
+
+    .top-prompt, .list-prompt, .question-prompt  {
+        font-size: var(--med-copy-desktop-font-size);
+    }
+
+    .question-item, .question-radio label.radio {
+        font-size: var(--small-copy-desktop-font-size);
+    }
+
+}
+
+
+/* GLOBAL ************************************************************************************************************* */
+@media only screen {
+
+    .form-assessment {
+        display: block;
+        width: 95%;
+        max-width:1152px;
+        padding-left:5%;
+        padding-top:2em;
+        margin:0 auto;
+        color: var(--color-dark-blue);
+        font-family: var(--family-copy);
+        border:thin solid var(--color-dark-blue);
+    }
+
+    .top-prompt, .list-prompt, .question-prompt  {
+        width:90%;
+        margin-right:10%;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        text-align:left;
+    }
+
+    .top-prompt  {
+        padding:0;
+    }
+
+    .list-prompt {
+        padding-top:1em;
+        border-top:thin solid var(--color-grey);
+    }
+
+    .question-prompt {
+        padding:1em 0;
+        border-top:thin solid gold;
+    }
+
+
+    .question-list {
+        padding-left:2%;
+        width:98%;
+        list-style: none inside none;
+    }
+
+    .question-item {
+        width:100%;
+        line-height: 160%;
+        text-align: left;
+    }
+
+    /* this is the radio button */
+    .question-radio input[type=radio] {
+    }
+
+    /* this is yes and no labels */
+    .question-radio label.radio {
+        display: inline!important;
+        margin-left: 2px;
+    }
+}
+
+HTML
+<div class="forms-content-block">
+    <div class="content-title">
+        <h1>COVID-19 CLEARANCE</h1>
+    </div>
+
+    <div class="title-background">
+        Questionnaire
+    </div>
+
+    <div class="form-assessment">
+        <div class="top-prompt">
+            Are you experiencing any of the following symptoms?
+        </div>
+
+        <ul class="question-list">
+            <li class="question-item">&#x262f;&nbsp;Severe difficulty breathing</li>
+            <li class="question-item">&#x262f;&nbsp;Severe chest pain</li>
+            <li class="question-item">&#x262f;&nbsp;Difficulty waking up</li>
+            <li class="question-item">&#x262f;&nbsp;Feeling confused</li>
+            <li class="question-item">&#x262f;&nbsp;Losing consciousness</li>
+        </ul>
+
+        <div class="question-radio">
+            <input type="radio" class="input-radio " value="yes" name="question1" id="question1_yes">
+            <label for="question1_yes" class="radio">Yes</label>
+            <input type="radio" class="input-radio " value="no" name="question1" id="question1_no" checked="checked">
+            <label for="question1_no" class="radio">No</label>
+        </div>
+
+        <div class="list-prompt">
+            Are you experiencing any of the following health conditions?
+        </div>
+
+        <ul class="question-list">
+            <li class="question-item">&#x262f;&nbsp;Mild to moderate shortness of breath</li>
+            <li class="question-item">&#x262f;&nbsp;Difficult to breathe when lying down</li>
+            <li class="question-item">&#x262f;&nbsp;Chronic health conditions</li>
+        </ul>
+
+        <div class="question-radio">
+            <input type="radio" class="input-radio " value="yes" name="question2" id="question2_yes">
+            <label for="question2_yes" class="radio">Yes</label>
+            <input type="radio" class="input-radio " value="no" name="question2" id="question2_no" checked="checked">
+            <label for="question2_no" class="radio">No</label>
+        </div>
+
+        <div class="list-prompt">
+            Are you having any difficulties with any of the following?
+        </div>
+
+        <ul class="question-list">
+            <li class="question-item">&#x262f;&nbsp;Fever</li>
+            <li class="question-item">&#x262f;&nbsp;Cough</li>
+            <li class="question-item">&#x262f;&nbsp;Sneezing</li>
+            <li class="question-item">&#x262f;&nbsp;Sore Throat</li>
+        </ul>
+
+        <div class="question-radio">
+            <input type="radio" class="input-radio " value="yes" name="question3" id="question3_yes">
+            <label for="question3_yes" class="radio">Yes</label>
+            <input type="radio" class="input-radio " value="no" name="question3" id="question3_no" checked="checked">
+            <label for="question3_no" class="radio">No</label>
+        </div>
+
+        <div class="question-prompt">
+            Have you travelled to any countries outside Canada within the last 14 days?
+        </div>
+
+        <div class="question-radio  margin-bottom-1">
+            <input type="radio" class="input-radio " value="yes" name="question4"  id="question4_yes">
+            <label for="question4_yes" class="radio">Yes</label>
+            <input type="radio" class="input-radio " value="no" name="question4"  id="question4_no" checked="checked">
+            <label for="question4_no" class="radio">No</label>
+        </div>
+
+        <div class="question-prompt">
+            Have you been in close contact with a person with COVID-19 while they were ill?
+        </div>
+
+        <div class="question-radio margin-bottom-1">
+            <input type="radio" class="input-radio " value="yes" name="question5" id="question5_yes">
+            <label for="question5_yes" class="radio">Yes</label>
+            <input type="radio" class="input-radio " value="no" name="question5" id="question5_no" checked="checked">
+            <label for="question5_no" class="radio">No</label>
+        </div>
+
+        <div class="question-prompt">
+            Did you have close contact with a Covid infected person who travelled outside of Canada in the last 14 days?
+        </div>
+
+        <div class="question-radio margin-bottom-1">
+            <input type="radio" class="input-radio " value="yes" name="question6" id="question6_yes">
+            <label for="question6_yes" class="radio">Yes</label>
+            <input type="radio" class="input-radio " value="no" name="question6" id="question6_no" checked="checked">
+            <label for="question6_no" class="radio">No</label>
+        </div>
+
+        <div class="question-prompt">
+            Have you been double vaccinated against Covid-19 with the accepted vaccines?
+        </div>
+
+        <div class="question-radio margin-bottom-1">
+            <input type="radio" class="input-radio " value="yes" name="question7"  id="question7_yes">
+            <label for="question7_yes" class="radio">Yes</label>
+            <input type="radio" class="input-radio " value="no" name="question7"  id="question7_no" checked="checked">
+            <label for="question7_no" class="radio">No</label>
+        </div>
+
+        <div class="prompt bottom-colored-border"></div>
+    </div>
+</div>
+
+TS
+client: Client;
+
+  showAssessmentForm: boolean = true;
+
+  submitted = false;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  onSubmit() {
+    this.submitted = true;
+  }
+
+  setModel(newModel: Client) {
+    this.client = newModel;
+  }
+
+  printProfile() {
+    //this._parent.copyModelToPrintComponent(this.model);
+  }
+
+

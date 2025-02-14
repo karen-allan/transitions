@@ -209,7 +209,7 @@ and (min-width: 1920px) {
 
     .content-title h1, .content-title h2 {
         text-align:center;
-        justify-content: center;
+        /*justify-content: center;*/
     }
 
     .content-title h3, .content-title h4 {

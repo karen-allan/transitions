@@ -9,7 +9,7 @@ and (max-width: 896px)    {
         width:var(--media-less-than-content-width);
     }
 
-    .menu-mobile {
+  /*  .menu-mobile {
         width:var(--media-less-than-content-width);
         display: block;
         margin:auto;
@@ -18,20 +18,8 @@ and (max-width: 896px)    {
     .menu-desktop {
         display: none;
     }
+*/
 
-    .form-signature-block {
-        display:grid;
-        grid-template-columns: 100%;
-    }
-
-    .form-date-label, .form-date-value, .form-signature-label, .form-signature-line, .form-space, .form-print-button {
-        grid-column: 1;
-    }
-
-    .button-container {
-        width:100%;
-        justify-content: flex-end;
-    }
 
 
 }
@@ -42,7 +30,7 @@ and (max-width: 896px)    {
 @media only screen
 and (min-width:960px)   {
 
-    .menu-mobile {
+   /* .menu-mobile {
         display: none;
     }
 
@@ -51,49 +39,13 @@ and (min-width:960px)   {
         width:var(--media-more-than-content-width);
         max-width: var(--content-width);
         margin:auto;
-    }
+    }*/
 
     .consult-menu-block {
         width:var(--media-more-than-content-width);
     }
 
-    .form-signature-block {
-        display:inline-grid;
-        grid-template-columns: 15% 70% 4% 11%;
-        grid-row-gap: 1em;
-    }
 
-    .form-date-label  {
-        grid-column: 1;
-        grid-row:1;
-    }
-
-    .form-date-value {
-        grid-column:2/5;
-        grid-row:1;
-    }
-
-    .form-signature-label {
-        grid-column: 1;
-        grid-row:2;
-    }
-
-    .form-signature-line {
-        grid-column: 2;
-        grid-row:2;
-    }
-
-    .form-space {
-        grid-column: 3;
-        grid-row:2;
-    }
-
-    .form-print-button {
-        grid-column: 4;
-        grid-row: 2;
-        width:110px;
-        height:60px;
-    }
 }
 
 
@@ -114,20 +66,9 @@ and (max-width: 320px) {
         font-size: var(--med-copy-banana-font-size);
     }
 
-    /* TOP REPORT MENU ITEMS */
-    .form-menu-item span, .form-menu-item a {
-        font-size: var(--small-copy-banana-font-size);
-    }
 
-    .form-date-label, .form-date-value, .form-signature-label  {
-        font-size: var(--big-copy-banana-font-size);
-    }
 
-    .form-print-button   {
-        font-size:var(--small-copy-banana-font-size);
-        width:70px;
-        height:40px;
-    }
+
 }
 
 /*******************************************************************************************************************
@@ -145,21 +86,13 @@ and (max-width: 414px) {
         font-size: var(--med-copy-mobile-font-size);
     }
 
-    /* TOP REPORT MENU ITEMS */
-    .form-menu-item span, .form-menu-item a {
-        font-size: var(--small-copy-mobile-font-size);
-    }
 
-    .form-date-label, .form-date-value, .form-signature-label  {
-        font-size: var(--big-copy-mobile-font-size);
-    }
-
-    .form-print-button {
+  /*  .form-print-button {
         font-size:var(--small-copy-mobile-font-size);
         width:90px;
         height:50px;
 
-    }
+    }*/
 }
 
 /*******************************************************************************************************************
@@ -177,29 +110,8 @@ and (max-width: 800px)  {
         font-size: var(--med-copy-tablet-font-size);
     }
 
-    .forms-menu  {
-        width:93%;
-        padding-left:7%;
-    }
 
-    /* TOP REPORT MENU ITEMS */
-    .form-menu-item span, .form-menu-item a {
-        font-size: var(--small-copy-tablet-font-size);
-    }
 
-    .form-date-sig {
-        font-size: var(--small-copy-tablet-font-size);
-    }
-
-    .form-date-label, .form-date-value, .form-signature-label  {
-        font-size: var(--big-copy-tablet-font-size);
-    }
-
-    .form-print-button {
-        font-size:var(--small-copy-tablet-font-size);
-        width:100px;
-        height:50px;
-    }
 }
 
 /*******************************************************************************************************************
@@ -217,27 +129,8 @@ and (max-width: 1366px) {
         font-size: var(--med-copy-ipad-font-size);
     }
 
-    .forms-menu  {
-        width:95%;
-        padding-left:5%;
-    }
 
-    /* TOP REPORT MENU ITEMS */
-    .form-menu-item span, .form-menu-item a {
-        font-size: var(--small-copy-ipad-font-size);
-    }
 
-    .form-date-sig {
-        font-size: var(--small-copy-ipad-font-size);
-    }
-
-    .form-date-label, .form-date-value, .form-signature-label  {
-        font-size: var(--big-copy-ipad-font-size);
-    }
-
-    .form-print-button {
-        font-size:var(--small-copy-ipad-font-size);
-    }
 
 }
 
@@ -256,22 +149,8 @@ and (max-width: 1919px) {
         font-size: var(--med-copy-laptop-font-size);
     }
 
-    .forms-menu  {
-        width:95%;
-        padding-left:5%;
-    }
 
-    .form-menu-item span, .form-menu-item a {
-        font-size: var(--small-copy-laptop-font-size);
-    }
 
-    .form-date-label, .form-date-value, .form-signature-label  {
-        font-size: var(--big-copy-laptop-font-size);
-    }
-
-    .form-print-button {
-        font-size:var(--small-copy-laptop-font-size);
-    }
 }
 
 /*******************************************************************************************************************
@@ -288,18 +167,9 @@ and (min-width: 1920px) {
         font-size: var(--med-copy-desktop-font-size);
     }
 
-    .form-menu-item span, .form-menu-item a {
-        font-size: var(--small-copy-desktop-font-size);
 
-    }
 
-    .form-date-label, .form-date-value, .form-signature-label  {
-        font-size: var(--big-copy-desktop-font-size);
-    }
 
-    .form-print-button {
-        font-size:var(--small-copy-desktop-font-size);
-    }
 }
 
 /* GLOBAL *************************************************************************************************************/
@@ -350,52 +220,5 @@ and (min-width: 1920px) {
         font-weight:800;
     }
 
-    /* CLIENT SIGNATURE AND DATE */
-    .form-signature-block {
-        width:100%;
-    }
 
-    /* form-date-label = Date: form-date-value = Default Date spans 2 cols
-       form-signature-label = Signature: form-signature-line  = Line col2 and form-print-button = col 3 */
-    .form-date-label, .form-date-value, .form-signature-label  {
-        display:grid;
-        width:100%;
-        font-family: var(--family-copy);
-        color: var(--color-dark-blue);
-        align-content: center;
-    }
-
-    .form-date-label, .form-signature-label {
-        padding-top:1em;
-    }
-
-    .form-date-value, .form-signature-line {
-        display:grid;
-        width:100%;
-        border: 1px dashed black;
-    }
-
-    .form-date-value  {
-        padding-top:2em;
-    }
-
-    .form-signature-line  {
-        padding-top:2.5em;
-    }
-
-    .button-container {
-        display:grid;
-        margin-top:2em;
-    }
-
-    .form-print-button {
-        display:grid;
-        color: var(--color-white);
-        letter-spacing: 1px;
-        background-color: var(--color-dark-blue);
-        border-radius: 1.0em;
-        align-content: center;
-        justify-content: center;
-        padding: 1em 0;
-    }
 }

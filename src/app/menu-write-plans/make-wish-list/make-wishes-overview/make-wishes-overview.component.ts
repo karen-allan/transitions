@@ -1,8 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {WishesWizard} from "../../../ts-files/wishes-wizard";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
-import {formatDate} from "@angular/common";
-import {MakeWishesWizardComponent} from "../../../screen-modals/make-wishes-wizard/make-wishes-wizard.component";
+import {ScreenModalMakeWishListComponent} from "../../../screen-modals/screen-modal-make-wish-list/screen-modal-make-wish-list.component";
 
 @Component({
   selector: 'app-make-wishes-overview',
@@ -30,7 +29,7 @@ export class MakeWishesOverviewComponent {
     dialogConfig.disableClose = false;
     dialogConfig.id = "make-wishes-modal";
 
-    let modalDialog = this.matDialog.open(MakeWishesWizardComponent, dialogConfig);
+    let modalDialog = this.matDialog.open(ScreenModalMakeWishListComponent, dialogConfig);
     modalDialog.componentInstance.setWishes(this.wishes);
     modalDialog.componentInstance.event.subscribe(resp => {
       this.wishes = resp.wishes;

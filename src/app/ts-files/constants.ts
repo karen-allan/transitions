@@ -12,7 +12,7 @@ export const KNOW_YOUR_RIGHTS: string="Know Your Rights"
 /******************************************** TAKE ACTION MENU */
 export const TAKE_ACTION:string = "Take Action"
 
-export const WRITE_WISH_LIST: string="Write a Wish List for Care"
+export const WRITE_WISH_LIST: string="Write a Wish List"
 
 export const CHOOSE_YOUR_ADVOCATES: string="Choose Your Advocates"
 

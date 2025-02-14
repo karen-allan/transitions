@@ -75,78 +75,21 @@
 </div>
 
 <ng-container *ngIf="showPlanningEditor">
-    <app-demographic-info [client]="client"></app-demographic-info>
-    <app-frailty-scale [client]="client"></app-frailty-scale>
-    <app-support-for-planner [client]="client"></app-support-for-planner>
-    <app-medical-history [client]="client"></app-medical-history>
+    <app-screen-form-planner-consult [client]="client"></app-screen-form-planner-consult>
 </ng-container>
 
 <ng-container *ngIf="showCaregiverEditor">
-    <app-demographic-info [client]="client"></app-demographic-info>
-    <app-support-for-caregiver [client]="client"></app-support-for-caregiver>
+    <app-screen-form-caregiver-consult [client]="client"></app-screen-form-caregiver-consult>
 </ng-container>
 
 <ng-container *ngIf="showPatientEditor">
-    <app-demographic-info [client]="client"></app-demographic-info>
-    <app-frailty-scale [client]="client"></app-frailty-scale>
-    <app-support-for-patient [client]="client"></app-support-for-patient>
-    <app-medical-history [client]="client"></app-medical-history>
+    <app-screen-form-patient-consult [client]="client"></app-screen-form-patient-consult>
 </ng-container>
 
-<!-- DISCLAIMER-->
-<div class="content-title">
-    <h3>Please Read and Sign:</h3>
-</div>
 
-<div class="content-dark-copy justify-text">
-    <p>
-        I understand that the End of Life consultations I receive are provided for the basic purpose of preparing
-        myself and my family for my eventual end of life care and legacy. I know that an End of Life consultant can help with
-        health related questions and concerns allowing me to better plan, prepare and document all of my wishes
-        and hopes for a good ending.
-        <br><br>
-        But I further understand that End of Life caregivers are not a substitute for medical palliative care, hospice care or
-        emergency care but are rather meant to fill the gaps that standard medical care can not fill.
-        <br><br>
-        I also know that End of Life consultants can do much to aid in the comfort and care of a dying person but they can not
-        prescribe or give out medications of any kind.
-        <br><br>
-        I understand that I must have up-to-date Covid vaccinations in order to meet with you in person. If I have
-        not been vaccinated I can still see you via a remote call, for example a Zoom, Google Meet or a phone call.
-        <br><br>
-        I agree to provide 24 hours notice if I want to cancel an appointment. By signing below I agree and accept the above
-        conditions.
-    </p>
-</div>
 
-<div class="menu-desktop">
-    <form #disclaimerForm="ngForm" class="disclaimer-form" novalidate>
-        <div class="form-signature-block">
-            <label class="form-date-label" for="dateD">Date:</label>
-            <input [(ngModel)]="client.defaultDate" type="text" class="form-date-value with-solid-underline" id="dateD" name="date">
 
-            <label class="form-signature-label" for="sigD">Signature:</label>
-            <input type="text" class="form-signature-line" id="sigD">
-            <div class="form-space"></div>
-            <button class="form-print-button" (click)="printProfile()">PRINT</button>
-        </div>
-    </form>
-</div>
 
-<div class="menu-mobile">
-    <form #disclaimerForm="ngForm" class="disclaimer-form" novalidate>
-        <div class="form-signature-block">
-            <label class="form-date-label" for="dateM">Date:</label>
-            <input [(ngModel)]="client.defaultDate" type="text" class="form-date-value with-solid-underline" id="dateM" name="date">
 
-            <label class="form-signature-label" for="sigM">Signature:</label>
-            <input type="text" class="form-signature-line" id="sigM">
-            <div class="form-space"></div>
 
-        </div>
-        <div class="button-container">
-            <button class="form-print-button" (click)="printProfile()">PRINT</button>
-        </div>
-    </form>
-</div>
-
+ 

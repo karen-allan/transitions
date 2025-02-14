@@ -1,7 +1,7 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {AdvanceDirective} from "../../../ts-files/advance_directive";
 import * as Constants from 'src/app/ts-files/constants'
-import {CHOOSE_YOUR_ADVOCATES, CONSIDER_YOUR_ADVOCATES} from "src/app/ts-files/constants";
+
 
 @Component({
   selector: 'app-write-advance-directive-container',

@@ -10,7 +10,7 @@ export class Client {
         public city:string,
         public provState:string,
         public pc:string,
-        public country:string,
+
         public birthdate: string,
         public occupation:string,
         public referredBy:string,
@@ -30,18 +30,6 @@ export class Client {
         public autoImmuneDisease:boolean,
         public otherDisease:boolean,
         public illnessDetails:string,
-
-        /* energy medicine session */
-        /* session-goals */
-        public sessionEnergyKnowledge:string,
-        public sessionBenefits:string,
-        public sessionAltTreatments:string,
-
-        /* session-considerations */
-        public sessionPaceMaker:boolean,
-        public sessionHearingAids:boolean,
-        public sessionAromatherapy:boolean,
-        public sessionPainfulJoints:boolean,
 
         /* end of life planning */
         public eolFrailty:string,
