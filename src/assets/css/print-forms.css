@@ -195,7 +195,7 @@
 
     #headers, .desktop-header, .mobile-header, .header-home-image, .header-detail-image, .content-title, .facts-container, .quotes,
     .content-images, .content-dark-copy, .booking-link-grid, .citations-container, .content-dark-list,
-    .two-col-container, .consult-menu-block, .charges-grid, .testimonials-grid, #footers  {
+    .two-col-container, .two-col-backgrnd-container, .consult-menu-block, .charges-grid, .testimonials-grid, #footers  {
         display: none;
     }
 

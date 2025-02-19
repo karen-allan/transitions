@@ -10,7 +10,7 @@
         margin: auto;
         grid-template-columns: 45% 55%;
         width: 100%;
-        color: var(--color-dark-blue);
+        color: var(--color-black);
     }
 
     .print-modal-logo {
@@ -31,6 +31,7 @@
         width: 100%;
         align-content: center;
         justify-content: flex-end;
+        color:black;
     }
 
     .print-modal-text h2 {

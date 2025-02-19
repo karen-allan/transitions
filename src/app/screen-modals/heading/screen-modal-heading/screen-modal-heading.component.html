@@ -1,68 +1,141 @@
-<ng-container *ngIf="wishes">
-    <div class="wizard-modal-header">
-        <div class="wizard-modal-logo">
-            <img src="../../../../assets/images/details/takeAction/writeNeedsDown/wizardActionMakeWishes.jpg"
-                 title="write your care guide wish list"
-                 alt="write your care guide wish list">
-        </div>
+<div class="wizard-modal-header-mobile">
+    <ng-container *ngIf="wishes">
+        <div class="wizard-modal-header">
+             <div class="wizard-modal-text">
+                <h2><b>Your Wishes and Needs Wizard</b></h2>
+            </div>
 
-        <div class="wizard-modal-text">
-            <h2><b>Your Wishes and Needs Wizard</b></h2>
-            <p>
-                <b>
-                    dated {{ now }}
+            <div class="wizard-modal-text">
+                <p>
+                    <b>dated {{ now }}</b>
+                </p>
+            </div>
+
+            <div class="wizard-modal-text">
+                <span>
                     <ng-container *ngIf="wishes.client_name.length > 0 && wishes.client_name != ''">
-                        <br>
                         for {{ wishes.client_name }}
                     </ng-container>
-                </b>
-            </p>
+                </span>
+            </div>
         </div>
-    </div>
-</ng-container>
+    </ng-container>
 
-<ng-container *ngIf="rep">
-    <div class="wizard-modal-header">
-        <div class="wizard-modal-logo">
-            <img src="../../../../assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseReps.jpg"
-                 title="facing the future" alt="facing the future">
-        </div>
+    <ng-container *ngIf="rep">
+        <div class="wizard-modal-header">
+            <div class="wizard-modal-text">
+                <h2><b>Choose Your Rep Wizard</b></h2>
+            </div>
 
-        <div class="wizard-modal-text">
-            <h3><b>Choose Your Rep Wizard</b></h3>
-            <p>
-                <b>
-                    dated {{ now }}
+            <div class="wizard-modal-text">
+                <p>
+                    <b>dated {{ now }}</b>
+                </p>
+            </div>
+
+            <div class="wizard-modal-text">
+                <span>
                     <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name != ''">
                         <br>
                         for {{ rep.client_name }}
                     </ng-container>
-                </b>
-            </p>
+                </span>
+            </div>
         </div>
-    </div>
-</ng-container>
+    </ng-container>`
 
-<ng-container *ngIf="directive">
-    <div class="wizard-modal-header">
-        <div class="wizard-modal-logo">
-            <img src="../../../../assets/images/details/takeAction/writeCarePlan/wizardActionWriteAdvancePlan.jpg"
-                 title="facing the future" alt="facing the future">
-        </div>
+    <ng-container *ngIf="directive">
+        <div class="wizard-modal-header">
+            <div class="wizard-modal-text">
+                <h2><b>The Advance Care Directive (Plan) Wizard</b></h2>
+            </div>
 
-        <div class="wizard-modal-text">
-            <h3><b>The Advance Care Directive (Plan) Wizard</b></h3>
-            <p>
-                <b>
-                    dated {{ now }}
+            <div class="wizard-modal-text">
+                <p>
+                    <b> dated {{ now }} </b>
+                </p>
+            </div>
+
+            <div class="wizard-modal-text">
+                <span>
                     <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name != ''">
                         <br>
                         for {{ directive.client_name }}
                     </ng-container>
-                </b>
-            </p>
+                </span>
+            </div>
         </div>
-    </div>
-</ng-container>
+    </ng-container>
+</div>
 
+<div class="wizard-modal-header-desktop">
+    <ng-container *ngIf="wishes">
+        <div class="wizard-modal-header">
+            <div class="wizard-modal-logo">
+                <img src="../../../../assets/images/details/takeAction/writeNeedsDown/wizardActionMakeWishes.jpg"
+                     title="write your care guide wish list"
+                     alt="write your care guide wish list">
+            </div>
 
+            <div class="wizard-modal-text">
+                <h2><b>Your Wishes and Needs Wizard</b></h2>
+
+                <p>
+                    <b>dated {{ now }}</b>
+                </p>
+
+                <span>
+                    <ng-container *ngIf="wishes.client_name.length > 0 && wishes.client_name != ''">
+                        for {{ wishes.client_name }}
+                    </ng-container>
+                </span>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="rep">
+        <div class="wizard-modal-header">
+            <div class="wizard-modal-logo">
+                <img src="../../../../assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseReps.jpg"
+                     title="facing the future" alt="facing the future">
+            </div>
+
+            <div class="wizard-modal-text">
+                <h2><b>Choose Your Rep Wizard</b></h2>
+
+                <p>
+                    <b>dated {{ now }}</b>
+                </p>
+
+                <span>
+                    <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name != ''">
+                        for {{ rep.client_name }}
+                    </ng-container>
+                </span>
+            </div>
+        </div>
+    </ng-container>`
+
+    <ng-container *ngIf="directive">
+        <div class="wizard-modal-header">
+            <div class="wizard-modal-logo">
+                <img src="../../../../assets/images/details/takeAction/writeCarePlan/wizardActionWriteAdvancePlan.jpg"
+                     title="facing the future" alt="facing the future">
+            </div>
+
+            <div class="wizard-modal-text">
+                <h2><b>The Advance Care Directive (Plan) Wizard</b></h2>
+
+                <p>
+                    <b> dated {{ now }} </b>
+                </p>
+
+                <span>
+                    <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name != ''">
+                        for {{ directive.client_name }}
+                    </ng-container>
+                </span>
+            </div>
+        </div>
+    </ng-container>
+</div>

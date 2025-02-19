@@ -1,0 +1,73 @@
+/*******************************************************************************************************************
+   GLOBAL BANANAS- MOBILES AND SMALL TABLETS - under 900 (content) width so need 10% space on either side of content
+*******************************************************************************************************************/
+/*@media only screen
+    and (min-width: 240px)
+    and (max-width: 800px)    {*/
+
+/*.screen-modal-twenty-eighty-cols-block {
+    display: inline-grid;
+    grid-template-columns: 20% 80%;
+}
+
+.screen-modal-forty-sixty-cols-block {
+    display: inline-grid;
+    grid-template-columns: 40% 60%;
+}
+
+.screen-modal-three-thirty-cols-block {
+    display: inline-grid;
+    grid-template-columns: 33% 33% 34%;
+}
+
+.screen-modal-two-fifty-cols-block {
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+.screen-modal-two-buttons-row {
+    grid-template-columns: repeat(2, 110px);
+    grid-column-gap: 1px;
+    bottom: .7em;
+}
+
+.screen-modal-three-buttons-row {
+    grid-template-columns: repeat(3, 110px);
+    grid-column-gap: 1px;
+    bottom: .7em;
+}
+
+.screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
+.screen-modal-cancel-button, .screen-modal-print-button, .screen-modal-cancel-print-button {
+    font-size: var(--med-copy-tablet-font-size);
+    height: 40px;
+    width: 90px;
+}
+
+.screen-modal-start-button, .screen-modal-next-button, .screen-modal-print-button {
+    grid-column: 1;
+}
+
+.screen-modal-cancel-start-button, .screen-modal-previous-button {
+    grid-column: 2;
+}
+
+.screen-modal-cancel-button {
+    grid-column: 3;
+}
+
+.screen-modal-first-col  {
+    display:grid;
+    grid-column: 1;
+}
+
+.screen-modal-second-col {
+    display:grid;
+    grid-column: 2;
+}
+
+.screen-modal-third-col {
+    display:grid;
+    grid-column: 3;
+}*/

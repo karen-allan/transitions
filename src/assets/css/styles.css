@@ -40,6 +40,8 @@
   --modal-big-height:925px;
   --modal-small-height:750px;
 
+  --desktop-dialog-width:1024px;
+  --desktop-dialog-header-width:984px;
 
   --ipad-width:1024px;
   --laptop-width:1440px;

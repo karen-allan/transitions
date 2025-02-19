@@ -1,13 +1,13 @@
 import {Component, Input, Output} from '@angular/core';
-import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {RepNine} from "../../../ts-files/rep-nine";
 import {ScreenModalChooseYourRepComponent} from "../../../screen-modals/screen-modal-choose-your-rep/screen-modal-choose-your-rep.component";
-
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-choose-your-rep-overview',
   templateUrl: './choose-your-rep-overview.component.html',
-  styleUrls: ['./choose-your-rep-overview.component.css']
+  styleUrls: ['./choose-your-rep-overview.component.css'],
+
 })
 export class ChooseYourRepOverviewComponent {
 
@@ -31,8 +31,9 @@ export class ChooseYourRepOverviewComponent {
     // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = false;
     dialogConfig.id = "choose-rep-nine-modal";
-   /* dialogConfig.maxWidth=  '900px';
-    dialogConfig.minWidth= '900px';*/
+    dialogConfig.maxWidth='1024px'
+
+
 
     /* named and defined in wizard.css */
     let modalDialog = this.matDialog.open(ScreenModalChooseYourRepComponent, dialogConfig);

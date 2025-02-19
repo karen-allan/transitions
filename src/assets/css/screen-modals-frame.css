@@ -1,195 +1,170 @@
 
-/* LAPTOPS AND UP ****************************************************************************************************/
-    @media only screen
-    and (min-width: 1440px) {
-
-        .screen-modal-twenty-eighty-cols-block {
-            display: inline-grid;
-            grid-template-columns: 20% 80%;
-        }
-
-        .screen-modal-forty-sixty-cols-block {
-            display: inline-grid;
-            grid-template-columns: 40% 60%;
-        }
-
-        .screen-modal-three-thirty-cols-block {
-            display: inline-grid;
-            grid-template-columns: 33% 33% 34%;
-        }
-
-        .screen-modal-two-fifty-cols-block {
-            display: inline-grid;
-            grid-template-columns: 50% 50%;
-        }
-
-        .screen-modal-two-buttons-row {
-            grid-template-columns: repeat(2, 110px);
-            grid-column-gap: 10px;
-        }
-
-        .screen-modal-three-buttons-row {
-            grid-template-columns: repeat(3, 110px);
-            grid-column-gap: 10px;
-        }
-
-        .screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
-        .screen-modal-cancel-button, .screen-modal-print-button, .screen-modal-cancel-print-button {
-            font-size: var(--med-copy-desktop-font-size);
-            height: 50px;
-            width: 110px;
-        }
-
-        .screen-modal-start-button, .screen-modal-next-button, .screen-modal-print-button {
-            grid-column: 1;
-        }
-
-        .screen-modal-cancel-start-button, .screen-modal-previous-button {
-            grid-column: 2;
-        }
-
-        .screen-modal-cancel-button {
-            grid-column: 3;
-        }
-
-        .screen-modal-for-loop-row {
-            padding: 1em 0;
-        }
-
-        .screen-modal-first-col  {
-            display:grid;
-            grid-column: 1;
-        }
-
-        .screen-modal-second-col {
-            display:grid;
-            grid-column: 2;
-        }
-
-        .screen-modal-third-col {
-            display:grid;
-            grid-column: 3;
-        }
-
-        .screen-modal-full-col-radio {
-            display: grid;
-        }
-
-        .screen-modal-first-radio-col, .screen-modal-second-radio-col {
-            padding-top: 1em;
-            margin-top: 1em;
-        }
-
-        .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
-            /*display: inline;*/
-        }
-
-        .screen-modal-first-radio-col, .screen-modal-first-check-col {
-            grid-column: 1;
-
-        }
-
-        .screen-modal-second-radio-col, .screen-modal-second-check-col {
-            grid-column: 2;
-        }
-
-        .screen-modal-first-check-col, .screen-modal-second-check-col {
-            line-height: 110%;
-            padding: .5em 0;
-        }
-
-        .screen-modal-first-col, .screen-modal-second-col, screen-modal-third-col,
-        .screen-modal-first-radio-col, .screen-modal-second-radio-col,
-        .screen-modal-first-check-col, .screen-modal-second-check-col {
-            padding-top: .6em;
-        }
-
-    }
 
 
 /* GLOBAL ****************************************************************************************************/
 
     @media only screen {
 
-        /* This wrapper contains the mat-dialog-containers below that are instantiated inside the overview ts files for each of them */
-        #screen-modal-content-wrapper {
-            width: var(--ipad-width);
-            display: block;
-            float: left;
-            background-color: white;
-        }
-
+        /* This is the main screen you see that has the blue border. Its height is defined by the content pages that lie within it */
+        /* **************************** FRAMEWORKS **************************** */
         mat-dialog-container#choose-rep-nine-modal,
         mat-dialog-container#make-wishes-modal,
         mat-dialog-container#advance-directive-modal {
             display: grid;
-            width: 100%;
             align-content: flex-start;
             justify-content: center;
             border: 3px solid var(--color-dark-blue);
             border-radius: 2em;
             background-color: var(--color-dark-blue);
-            overflow-y: hidden;
-        }
-
-        mat-dialog-container#advance-directive-modal {
-            height: 930px;
-        }
-
-        mat-dialog-container#make-wishes-modal {
-            height: 800px;
-        }
-
-        mat-dialog-container#choose-rep-nine-modal {
-            height: 930px;
+            height: initial;
+            overflow: initial;
         }
 
         /* position relative here is essential to get the buttons to sit absolute at the bottom of each modal page */
-        .screen-modal-inner-content-make-wishes, .screen-modal-inner-content-choose-rep, .screen-modal-inner-content-write-directive {
-            display: block;
-            width: 90%;
-            margin-left: 5%;
-            margin-right: 5%;
-            background-color: orange;
-            /*position: relative;*/
-        }
-
-        .screen-modal-inner-content-make-wishes {
-            height: 470px;
-        }
-
-        .screen-modal-inner-content-choose-rep {
-            height: 600px;
-        }
-
-        .screen-modal-inner-content-write-directive {
-            height: 600px;
-        }
-
-        .screen-modal-inner-content {
+        .screen-modal-inner-block-rep, .screen-modal-inner-block-wishes, .screen-modal-inner-block-plan {
             display: block;
             float: left;
-            width: 100%;
-            height: inherit;
-            border: thick solid purple;
+            min-width:100%;
+            align-content: flex-start;
+        }
+
+        /* this is the parent to two and three buttons rows */
+        .screen-modal-data-block-wishes, .screen-modal-data-block-rep, .screen-modal-data-block-plan {
+            display:block;
+            float:left;
+            width:98%;
             position: relative;
-            background-color: var(--color-grey);
+            margin:0 1% 2em 1%;
+
         }
 
-        .screen-modal-forty-sixty-cols-block, .screen-modal-three-thirty-cols-block, .screen-modal-full-col-block, .screen-modal-full-col-radio,
-        .screen-modal-two-fifty-cols-block, .screen-modal-twenty-eighty-cols-block {
-            width: 100%;
-            text-align: left;
+        /* **************************** WIZARD HEADER **************************** */
+        .wizard-modal-header {
+            font-family: var(--family-title);
+            margin:auto;
+            align-content: flex-start;
             background-color: white;
+            border-bottom:thin solid purple;
         }
 
-        .screen-modal-two-buttons-row, .screen-modal-three-buttons-row {
-            display: inline-grid;
-            width: 100%;
+        .wizard-modal-logo {
+            margin:auto;
+            cursor:pointer;
+        }
+
+        .wizard-modal-logo img {
+            max-width: 100%;
+            height:auto;
+        }
+
+        .wizard-modal-text {
+            color: var(--color-dark-blue);
+        }
+
+        .wizard-modal-text h2 a  {
+            text-decoration: none;
+            color: var(--color-dark-blue);
+        }
+
+        .wizard-modal-text h2 a:hover {
+            color: var(--color-purple);
+        }
+
+        /* **************************** TITLES **************************** */
+        .screen-modal-title {
+            display: block;
+            float:left;
+            width:100%;
+            font-weight: bold;
+            font-family: var(--family-title);
+            color: var(--color-dark-blue);
+        }
+
+        .screen-modal-title h2, .screen-modal-title h3 {
+            text-align: left;
+        }
+
+        /* **************************** CONTENT **************************** */
+        .question-number,  .question-text, .answer-block   {
+            display:block;
+            width:100%;
             float: left;
+            color: var(--color-dark-blue);
+            font-family: var(--family-copy);
+            text-align: left;
+        }
+
+        .screen-modal-copy {
+            display: grid;
+            width:100%;
+            /*background-color: white;*/
+        }
+
+        .screen-modal-full-col-block {
+            display: block;
+            float:left;
+            width:100%;
+            line-height: 105%;
+        }
+
+        .screen-modal-full-col-block p {
+            line-height: 105%;
+            font-weight: bold;
+        }
+
+        .screen-modal-full-col-block span {
+            display: block;
+            line-height: 105%;
+        }
+
+        .screen-modal-full-col-list {
+            display: block;
+            padding-left:2em;
+            margin:0;
+        }
+
+        .screen-modal-list-item    {
+            list-style: square inside;
+        }
+
+        .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
+            border: 1px dashed var(--color-dark-blue);
+            width: 100%;
+        }
+
+        .screen-modal-full-col, .text-area {
+            display: block;
+            float:left;
+            width:100%;
+            line-height: 105%;
+        }
+
+        .screen-modal-copy,  .screen-modal-full-col-block p,  .screen-modal-full-col-block span, .text-area,
+        .screen-modal-full-col-list, .screen-modal-first-col, .screen-modal-list-item,
+        .screen-modal-second-col, .screen-modal-third-col,
+        .screen-modal-first-radio-col, .screen-modal-second-radio-col,  .screen-modal-full-col,
+        .screen-modal-first-check-col, .screen-modal-second-check-col {
+            color: var(--color-dark-blue);
+            font-family: var(--family-copy);
+            text-align: left;
+        }
+
+        /* **************************** GRIDS ********************************** */
+        .screen-modal-forty-sixty-cols-block, .screen-modal-three-thirty-cols-block,
+        .screen-modal-two-fifty-cols-block, .screen-modal-twenty-eighty-cols-block  {
+            display: inline-grid;
+            width:100%;
+            text-align: left;
+        }
+
+        /* changed from inline-grid to grid as they were moving off the page to the right side of the screen */
+        .screen-modal-two-buttons-row, .screen-modal-three-buttons-row {
+            display: grid;
+            width: 100%;
+            background-color: red;
             justify-content: flex-end;
             position: absolute;
-            bottom: 1em;
+            bottom:.5em;
         }
 
         .screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
@@ -202,24 +177,23 @@
             align-content: center;
         }
 
+        /* ********************** ERROR ***********************/
         .screen-modal-error-message-block {
             display: block;
+            width:100%;
             float: left;
-            width: 100%;
-            background-color: white;
             text-align: left;
         }
 
-        .screen-modal-full-col-list {
-            display: block;
-            margin-top: 0;
-            background-color: white;
+        .screen-modal-error-message {
+            font-weight: 800;
+            color: var(--color-red);
+            font-family: var(--family-copy);
+            line-height: 140%;
         }
 
-        .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
-            border: 1px dashed var(--color-dark-blue);
-            width: 100%;
-        }
+
+
 
 }
 

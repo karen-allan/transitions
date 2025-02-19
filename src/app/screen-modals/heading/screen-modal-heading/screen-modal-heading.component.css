@@ -1,75 +1,60 @@
-/*******************************************************************************************************************
-   GLOBAL BANANAS- MOBILES AND SMALL TABLETS - under 900 (content) width so need 10% space on either side of content
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 240px)
-and (max-width: 896px)    {
-
-    .wizard-modal-header   {
-        width:var(--media-less-than-content-width);
-        display: grid;
-    }
-
-    .wizard-modal-logo {
-        grid-column:1;
-        justify-content: flex-start;
-        width:50%;
-    }
-
-    .wizard-modal-text {
-        grid-column: 1;
-        justify-content: flex-start;
-        line-height: 100%;
-    }
-
-    .wizard-modal-text h2, .wizard-modal-text h3 {
-        line-height: 110%;
-    }
-}
-
-/*******************************************************************************************************************
-   GLOBAL IPADS, LAPTOPS, DESKTOPS AND UP (over 900 so don't need to have space on either side of content)
-*******************************************************************************************************************/
-
-@media only screen
-and (min-width:960px)    {
-
-    .wizard-modal-header {
-        display: inline-grid;
-        width:100%;
-        /*float:left;*/
-        height:260px;
-        grid-template-columns: 10% 20% 70%;
-    }
-
-    .wizard-modal-logo {
-        display:grid;
-        grid-column:2;
-        justify-content: flex-end;
-    }
-
-    .wizard-modal-text {
-        display:grid;
-        grid-column:3;
-        justify-content: center;
-        align-content: center;
-    }
-
-}
 
 /*  BANANAS  *******************************************************************************************/
 @media only screen
 and (min-width: 240px)
 and (max-width: 320px)  {
 
+   /* .wizard-modal-header-mobile {
+        display:block;
+    }
+
+    .wizard-modal-header-desktop {
+        display:none;
+    }
+
+    .wizard-modal-header {
+        display: inline-grid;
+        height:75px;
+        grid-template-columns: 30% 40% 30%;
+        width:100%;
+        color:black;
+        text-align:center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .wizard-modal-logo {
+        display: none;
+    }
+
     .wizard-modal-text h2 {
-        font-size: var(--h2-titles-banana-font-size);
+        display:grid;
+        grid-column:1;
+        height:75px;
+        font-size: var(--med-copy-banana-font-size);
+        line-height: 110%;
+        align-content: center;
+        text-align: center;
     }
 
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-banana-font-size);
+    .wizard-modal-text p {
+        display:grid;
+        height:75px;
+        grid-column:2;
+        font-size: var(--small-copy-banana-font-size);
+        line-height: 100%;
+        align-content: center;
     }
 
+    .wizard-modal-text span {
+        display:grid;
+        height:75px;
+        grid-column:3;
+        font-size: var(--small-copy-banana-font-size);
+        line-height: 100%;
+        align-content: center;
+        font-weight: bold;
+    }*/
 
 }
 
@@ -78,121 +63,237 @@ and (max-width: 320px)  {
 and (min-width: 360px)
 and (max-width: 414px) {
 
+   /* .wizard-modal-header-mobile {
+        display:block;
+    }
+
+    .wizard-modal-header-desktop {
+        display:none;
+    }
+
+    .wizard-modal-header {
+        display: inline-grid;
+        height:75px;
+        grid-template-columns: 30% 40% 30%;
+        width:100%;
+        color:black;
+        text-align:center;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .wizard-modal-logo {
+        display: none;
+    }
+
     .wizard-modal-text h2 {
-        font-size: var(--h2-titles-mobile-font-size);
+        display:grid;
+        grid-column:1;
+        height:75px;
+        font-size: var(--med-copy-banana-font-size);
+        line-height: 110%;
+        align-content: center;
+        text-align: center;
     }
 
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-mobile-font-size);
+    .wizard-modal-text p {
+        display:grid;
+        height:75px;
+        grid-column:2;
+        font-size: var(--small-copy-banana-font-size);
+        line-height: 100%;
+        align-content: center;
     }
 
+    .wizard-modal-text span {
+        display:grid;
+        height:75px;
+        grid-column:3;
+        font-size: var(--small-copy-banana-font-size);
+        line-height: 100%;
+        align-content: center;
+        font-weight: bold;
+    }*/
 }
 
-/*  TABLETS  *******************************************************************************************/
+/*  TABLETS PORTRAIT  *******************************************************************************************/
 @media only screen
 and (min-width: 600px)
-and (max-width: 800px) {
+and (max-width: 800px)
+and (orientation: portrait) {
+
+   /* .wizard-modal-header-mobile {
+        display:none;
+    }
+
+    .wizard-modal-header-desktop {
+        display:block;
+    }
+
+    .wizard-modal-header {
+        display: inline-grid;
+        height:150px;
+        grid-template-columns: 30% 70%;
+        width:100%;
+    }
+
+    .wizard-modal-logo {
+        display:grid;
+        grid-column:1;
+    }
+
+    .wizard-modal-logo img {
+        height:150px;
+        width:150px;
+    }
+
+    .wizard-modal-text {
+        display:grid;
+        grid-column:2;
+        justify-content: center;
+        align-content: center;
+    }
 
     .wizard-modal-text h2 {
         font-size: var(--h2-titles-tablet-font-size);
     }
+*/
+}
 
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-tablet-font-size);
+/*  TABLETS LANDSCAPE  *******************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px)
+and (orientation: landscape) {
+
+   /* .wizard-modal-header-mobile {
+        display:none;
     }
+
+    .wizard-modal-header-desktop {
+        display:block;
+    }
+
+    .wizard-modal-header {
+        display: inline-grid;
+        height:150px;
+        grid-template-columns: 30% 70%;
+        width:100%;
+    }
+
+    .wizard-modal-logo {
+        display:grid;
+        grid-column:1;
+    }
+
+    .wizard-modal-logo img {
+        height:150px;
+        width:150px;
+    }
+
+    .wizard-modal-text {
+        display:grid;
+        grid-column:2;
+        justify-content: center;
+        align-content: center;
+        line-height:110%;
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-tablet-font-size);
+    }
+*/
+}
+
+/* IPADS PORTRAIT  ****************************************************************************************************/
+@media only screen
+and (min-width: 1024px)
+and (max-width: 1366px)
+and (orientation: portrait){
+
+   /* .wizard-modal-header-mobile {
+        display:none;
+    }
+
+    .wizard-modal-header-desktop {
+        display:block;
+    }
+
+    .wizard-modal-header {
+        display: inline-grid;
+        height:250px;
+        grid-template-columns: 30% 70%;
+        width:var(--desktop-dialog-width);
+    }
+
+    .wizard-modal-logo {
+        display:grid;
+        grid-column:1;
+    }
+
+    .wizard-modal-text {
+        display:grid;
+        grid-column:2;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-ipad-font-size);
+    }*/
 
 }
 
-/* IPADS   ****************************************************************************************************/
+/* IPADS LANDSCAPE  ****************************************************************************************************/
 @media only screen
 and (min-width: 1024px)
-and (max-width: 1366px) {
+and (max-width: 1366px)
+and (orientation: landscape) {
+
+   /* .wizard-modal-header-mobile {
+        display:none;
+    }
+
+    .wizard-modal-header-desktop {
+        display:block;
+    }
+
+    .wizard-modal-header {
+        display: inline-grid;
+        height:250px;
+        grid-template-columns: 30% 70%;
+        width:var(--desktop-dialog-width);
+    }
+
+    .wizard-modal-logo {
+        display:grid;
+        grid-column:1;
+    }
+
+    .wizard-modal-text {
+        display:grid;
+        grid-column:2;
+        justify-content: center;
+        align-content: center;
+    }
 
     .wizard-modal-text h2 {
         font-size: var(--h2-titles-ipad-font-size);
     }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-ipad-font-size);
-    }
-
+*/
 }
 
 /* LAPTOPS ***************************************************************************************************/
 @media only screen
-and (min-width: 1440px)
-and (max-width: 1919px) {
+and (min-width: 1440px) {
 
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-laptop-font-size);
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-laptop-font-size);
-    }
-
-}
-
-/* DESKTOPS ****************************************************************************************************/
-@media only screen
-and (min-width: 1920px) {
-
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-desktop-font-size);
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-desktop-font-size);
-    }
 
 }
 
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-    /*   about us page */
-    .wizard-modal-header {
-        display: grid;
-        font-family: var(--family-title);
-        margin:auto;
-        align-content: flex-start;
-        border:thick solid purple;
-    }
 
-    .wizard-modal-logo {
-        margin:auto;
-        cursor:pointer;
-        padding-top:1em;
-
-    }
-
-    .wizard-modal-logo a img, .wizard-modal-logo img {
-        max-width: 100%;
-        height:auto;
-    }
-
-    .wizard-modal-text {
-        color: var(--color-dark-blue);
-        text-align: center;
-    }
-
-    .wizard-modal-text h2, .wizard-modal-text h2 a {
-        text-align: left;
-    }
-
-    /* align is being set inline as left on about and right on wizard stuff */
-    .wizard-modal-text h3, .wizard-modal-text h3 a {
-        text-align: center;
-    }
-
-    .wizard-modal-text h3 a, .wizard-modal-text h2 a  {
-        text-decoration: none;
-        color: var(--color-dark-blue);
-    }
-
-    .wizard-modal-text h3 a:hover, .wizard-modal-text h2 a:hover {
-        color: var(--color-purple);
-    }
 
 }
 

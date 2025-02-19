@@ -1,0 +1,62 @@
+<!--  ******************************* SUPPORT FOR CAREGIVER ****************************   -->
+<div class="print-form-title">
+    <h1>Your Concerns and Goals</h1>
+</div>
+
+<div class="print-form-prompt">
+    As Caregiver, these are your main areas of focus for seeking a consultation:
+</div>
+
+<div class="print-form-response">
+    <div *ngIf="client.eolCaregiverFocus1">
+        I am overwhelmed with all the decisions I need to make.
+    </div>
+    <div *ngIf="client.eolCaregiverFocus2">
+        I am exhausted and burned out and need emotional support.
+    </div>
+    <div *ngIf="client.eolCaregiverFocus3">
+        I am physically unable to care for my loved one adequately.
+    </div>
+    <div *ngIf="client.eolCaregiverFocus4">
+        My loved one is angry and lashing out at me and I don't feel safe.
+    </div>
+    <div *ngIf="client.eolCaregiverFocus5">
+        I am having conflicts with my extended family's opinions on care, even though I am the main caregiver.
+    </div>
+    <div *ngIf="client.eolCaregiverFocus6">
+        I need to ensure their last wishes and requests are respected.
+    </div>
+    <div *ngIf="client.eolCaregiverFocus7">
+        I need to discuss these issues with an impartial advocate.
+    </div>
+    <div *ngIf="client.eolCaregiverFocus8">
+        I am having difficulties with my loved one's health care team.
+    </div>
+    <div *ngIf="client.eolCaregiverFocus9">
+        My loved one will not discuss any end of life issues with me and I need to get things in order.
+    </div>
+    <div *ngIf="client.eolCaregiverFocus10">
+        They want care in one place (hospital, hospice or home) that I am unable to organize on my own.
+    </div>
+    <!-- <div *ngIf="!client.eolCaregiverFocus1 && !client.eolCaregiverFocus2 && !client.eolCaregiverFocus3 && !client.eolCaregiverFocus4 &&
+             !client.eolCaregiverFocus5 && !client.eolCaregiverFocus6 && !client.eolCaregiverFocus7 && !client.eolCaregiverFocus8 &&
+             !client.eolCaregiverFocus9 && !client.eolCaregiverFocus10">
+         &nbsp;
+     </div>-->
+</div>
+
+<div class="print-form-prompt">
+    These are your additional details on why assistance is needed for you in your caregiver role:
+</div>
+
+<div class="print-form-response">
+    <div *ngIf="client.eolCaregiverDetails.length > 0">
+        {{ client.eolCaregiverDetails }}
+    </div>
+    <div *ngIf="client.eolCaregiverDetails.length == 0">
+        &nbsp;<div class="print-solid-underline">
+    </div>
+    </div>
+</div>
+
+

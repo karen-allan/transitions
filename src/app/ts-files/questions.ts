@@ -2,7 +2,7 @@ import {Question} from './question';
 
 export const QUESTIONS: Question[] = [
     {question_num:0,
-        question_string: 'How open are your family members to discussing your end of life care options, wishes or concerns?',
+        question_string: 'How open are your family members to discussing your end of life care wishes or concerns?',
         responses: [
             {response_num: 0, response_string: 'My family will not let me talk about it freely.'},
             {response_num: 1, response_string: 'My family is somewhat open to hearing about some of my concerns.'},
@@ -15,7 +15,7 @@ export const QUESTIONS: Question[] = [
         question_string: 'How important is it to maintain your independence and privacy?',
         responses: [
             {response_num: 0, response_string: 'It is extremely important that I maintain my independence as much as possible.'},
-            {response_num: 1, response_string: 'It is somewhat important but I also am okay with being somewhat dependent on others.'},
+            {response_num: 1, response_string: 'I am okay with being somewhat dependent on others.'},
             {response_num: 2, response_string: 'I have no support system so I must take care of myself whether I want to or not.'},
             {response_num: 3, response_string: 'I am fine with giving up my independence as I need help.'}
         ],
@@ -36,7 +36,7 @@ export const QUESTIONS: Question[] = [
         responses: [
             {response_num: 0, response_string: 'I have a family doctor who I can speak freely with.'},
             {response_num: 1, response_string: 'I have a family doctor who I do not communicate well with.'},
-            {response_num: 2, response_string: 'I don\'t have a family doctor, so must visit walk-in or emergency rooms when I need help.'},
+            {response_num: 2, response_string: 'I don\'t have a family doctor, so must visit walk-ins or emergency when I need help.'},
             {response_num: 3, response_string: 'I do not have a family doctor, but I get support from home care nurses.' +
                     ' practitioners.'}
         ],
@@ -58,7 +58,8 @@ export const QUESTIONS: Question[] = [
             {response_num: 0, response_string: 'My faith and religious beliefs are very important to me.'},
             {response_num: 1, response_string: 'I don\'t practice any religious beliefs but I feel that I am spiritual in my own way.'},
             {response_num: 2, response_string: 'I am not religious or spiritual in any way and don\'t believe in a God of any kind.'},
-            {response_num: 3, response_string: 'I am open to the idea of religious practice should I become vulnerable in my advanced age.'}
+            {response_num: 3, response_string: 'I am open to the idea of a religious practice in my future.' +
+                    ' age.'}
         ],
         selectedAnswer:0},
 
@@ -68,7 +69,7 @@ export const QUESTIONS: Question[] = [
             {response_num: 0, response_string: 'I would accept any medical interventions in order to stay alive, no matter the cost.'},
             {response_num: 1, response_string: 'I would want to try all possible alternatives first, before accepting the intervention.'},
             {response_num: 2, response_string: 'If I was terminally ill I would accept interventions for pain control and comfort.'},
-            {response_num: 3, response_string: 'I would not want any medical interventions if it means I lose my level of existing comfort.'}
+            {response_num: 3, response_string: 'I would not want medical interventions if it means I lose my level of existing comfort.'}
         ],
         selectedAnswer:0},
 
@@ -76,23 +77,23 @@ export const QUESTIONS: Question[] = [
         question_string: 'Would you choose to be aware with some pain or be pain-free but unaware?',
         responses: [
             {response_num: 0, response_string: 'I would rather put up with some pain and be awake and aware.'},
-            {response_num: 1, response_string: 'I am very sensitive to pain and would rather be given sedating drugs, no matter the consequence.'},
-            {response_num: 2, response_string: 'I would seek out other pain lessening treatments such as massage, energy work or acupuncture.'},
-            {response_num: 3, response_string: 'I am not sure what I would do but being awake enough to talk with family is very important to me.'}
+            {response_num: 1, response_string: 'I would rather be given sedating drugs, no matter the consequence.'},
+            {response_num: 2, response_string: 'I would seek out other pain lessening treatments such as massage or energy work.'},
+            {response_num: 3, response_string: 'I would want to be still awake enough to talk with family and friends.'}
         ],
         selectedAnswer:0},
 
     {question_num:8,
-        question_string: 'Do you feel that you could adequately advocate for yourself if met with a chronic or terminal illness?',
+        question_string: 'Do you feel that you could advocate for yourself if met with a chronic or terminal illness?',
         responses: [
-            {response_num: 0, response_string: 'I am very confident in my decision making abilities so I think I would advocate well for' +
+            {response_num: 0, response_string: 'I am very confident in my decision making so I think I would advocate well for' +
                     ' myself' +
                     ' .'},
-            {response_num: 1, response_string: 'I am usually good at making decisions on my own behalf but my emotions might get in the' +
+            {response_num: 1, response_string: 'I am usually good at making decisions but my emotions might get in the' +
                     ' way.'},
-            {response_num: 2, response_string: 'I am often unsure of my decisions so I might leave some decisions up to the health' +
+            {response_num: 2, response_string: 'I am often unsure of my decisions so I might leave many up to the health' +
                     ' care team.'},
-            {response_num: 3, response_string: 'I would let a close family member advocate for me as I am unable to communicate my needs' +
+            {response_num: 3, response_string: 'I would let a close family member advocate for me as I don\'t communicate' +
                     ' well.'}
         ],
         selectedAnswer:0},
@@ -103,8 +104,7 @@ export const QUESTIONS: Question[] = [
             {response_num: 0, response_string: 'I don\'t know anything about it and I would not support it because of my beliefs.'},
             {response_num: 1, response_string: 'I have heard of it and am curious to know more about it.'},
             {response_num: 2, response_string: 'I would want MAID but my doctor is against it.'},
-            {response_num: 3, response_string: 'If I was in pain and was terminal, I would definitely ask for MAID and find doctors who' +
-                    ' supported it.'}
+            {response_num: 3, response_string: 'If I was in pain and was terminal, I would definitely ask for MAID.'}
         ],
         selectedAnswer:0},
 
@@ -121,7 +121,7 @@ export const QUESTIONS: Question[] = [
     {question_num:11,
         question_string: 'Would you accept treatments that may affect your physical attractiveness?',
         responses: [
-            {response_num: 0, response_string: 'I take great care to be attractive and would not want any treatments that reduce my attractiveness.'},
+            {response_num: 0, response_string: 'I take care to be attractive and would not want any treatments that affect it.'},
             {response_num: 1, response_string: 'I care about looking attractive, but not at the cost of saving my life or parts of my body.'},
             {response_num: 2, response_string: 'It depends on the area of my body that they want to treat.'},
             {response_num: 3, response_string: 'I do not have the interest or energy to worry about my physical attractive-ness.'}
@@ -134,19 +134,17 @@ export const QUESTIONS: Question[] = [
             {response_num: 0, response_string: 'I have one or more trusted family members who I could turn to.'},
             {response_num: 1, response_string: 'There is a lot of dissent in my family and I am not sure who I could trust.'},
             {response_num: 2, response_string: 'I am alone and have no support system to advocate for me.'},
-            {response_num: 3, response_string: 'I am not sure any of my family would want to take on the responsibility, and I am afraid' +
-                    ' to ask.'}
+            {response_num: 3, response_string: 'I am not sure any of my family would want to take on the responsibility.'}
         ],
         selectedAnswer:0},
 
     {question_num:13,
-        question_string: 'What life support or prolonging medical interventions, if any, would you most likely disagree with?',
+        question_string: 'What life support or prolonging medical interventions would you most likely disagree with?',
         responses: [
-            {response_num: 0, response_string: 'I would not want to any medical interventions if I became mentally incapacitated or brain injured.'},
+            {response_num: 0, response_string: 'I would not want to any medical interventions if I became mentally incapacitated.'},
             {response_num: 1, response_string: 'It is against my religion or other belief system to receive any medical interventions.'},
-            {response_num: 2, response_string: 'If I could select a trial period for life prolonging medical interventions, I would be open to it.'},
-            {response_num: 3, response_string: 'I am open to all medical interventions if I can be kept alive no matter the physical or' +
-                    ' mental cost.'}
+            {response_num: 2, response_string: 'I would be open to selecting a trial period for life prolonging medical interventions.'},
+            {response_num: 3, response_string: 'I am open to all medical interventions if I can be kept alive no matter the cost.'}
         ],
         selectedAnswer:0},
 
@@ -184,7 +182,7 @@ export const QUESTIONS: Question[] = [
         question_string: 'Choose the best answer related to what would make your life not worth living?',
         responses: [
             {response_num: 0, response_string: 'No longer being able to carry out my day to day activities without support from others.'},
-            {response_num: 1, response_string: 'Experiencing pain and discomfort pretty much all the time, with drugs no longer helping.'},
+            {response_num: 1, response_string: 'Experiencing pain and discomfort much of the time, with drugs no longer helping.'},
             {response_num: 2, response_string: 'Losing my intellectual capabilities, becoming forgetful and confused.'},
             {response_num: 3, response_string: 'Becoming too weak to mentally and physically to take on most challenges.'}
         ],
@@ -195,8 +193,8 @@ export const QUESTIONS: Question[] = [
         responses: [
             {response_num: 0, response_string: 'I want to be cremated and my ashes scattered at the location noted in my will.'},
             {response_num: 1, response_string: 'I want to be buried in my pre-purchased plot.'},
-            {response_num: 2, response_string: 'I care about the environment so want to have a green burial, preferably a composting burial.'},
-            {response_num: 3, response_string: 'I do not know as yet, but am open to finding out more about the options and alternatives.'}
+            {response_num: 2, response_string: 'I care about the environment so want to have a green burial.'},
+            {response_num: 3, response_string: 'I don\'t, but am open to finding out more about the options and alternatives.'}
         ],
         selectedAnswer:0},
 

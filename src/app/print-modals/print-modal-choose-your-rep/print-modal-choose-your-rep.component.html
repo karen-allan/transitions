@@ -1,0 +1,434 @@
+<div class="print-modal-choose-your-rep">
+    <app-print-modal-heading [rep]='rep'></app-print-modal-heading>
+    <div class="print-modal-block">
+        <div class="print-modal-province">
+            BRITISH COLUMBIA
+            <hr>
+        </div>
+    </div>
+
+    <div class="print-modal-title">
+        <h1>REPRESENTATION AGREEMENT (SECTION 9)</h1>
+    </div>
+
+    <div class="print-modal-title">
+        <h2>THIS REPRESENTATION AGREEMENT IS MADE BY ME, THE ADULT:
+            <br>
+            <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name != '' ">
+                {{ rep.client_name }} at
+            </ng-container>
+
+            <ng-container *ngIf="rep.client_address.length > 0 && rep.client_address != '' ">
+                <br>
+                {{ rep.client_address }}
+            </ng-container>
+
+            <ng-container *ngIf="rep.client_city.length > 0 && rep.client_city != ''
+                              && rep.client_postal.length > 0 && rep.client_postal !=''">
+                ,<br>{{ rep.client_city }} - {{ rep.client_postal }}
+            </ng-container>
+            <br>
+            in the Province of British Columbia
+        </h2>
+    </div>
+
+    <div class="print-modal-title">
+        <h2>PERSONAL INFORMATION:</h2>
+    </div>
+
+    <ng-container *ngIf="rep.client_dob.length > 0 && rep.client_dob != '' ">
+        <div class="print-modal-text-block">
+            <p>Birthdate: {{ rep.client_dob }}</p>
+        </div>
+    </ng-container>
+
+    <div class="print-modal-title">
+        <h2>REVOCATION OF PREVIOUS INSTRUMENTS:</h2>
+    </div>
+
+    <div class="print-modal-title">
+        <h3>I revoke any previous Representative Section 9 agreements I have made.</h3>
+    </div>
+
+    <div class="print-modal-title">
+        <h2>RULES FOR REPRESENTATIVE(S):</h2>
+    </div>
+
+    <div class="print-modal-text-block">
+        <p><b>The Representative(s) that I have chosen abide by the rules for appointing Representatives.
+            <br><br>
+            Pursuant to section 9 (1) (a) of the Representation Agreement Act, I authorize my Representative to do anything that the
+            Representative considers necessary in relation to my personal care and health care.
+        </b></p>
+    </div>
+
+    <div class="print-modal-title">
+        <h2>PRIMARY REPRESENTATIVE:</h2>
+    </div>
+
+    <ng-container *ngIf="rep.rep_primary_name.length > 0 && rep.rep_primary_name != '' ">
+        <div class="print-modal-text-block">
+            <p>I appoint {{ rep.rep_primary_name }} at {{ rep.rep_primary_address }}
+                to be my Representative in accordance with section 9 of the Representative Agreement Act.
+                <br><br>
+                I give {{ rep.rep_primary_name }} authority to make decisions on my behalf for all personal care and
+                health care matters of a non-financial nature that relate to me.
+            </p>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="rep.rep_primary_name.length == 0 && rep.rep_primary_name == '' ">
+        <div class="print-modal-text-block">
+            <p>I appoint _________________________________________
+                to be my Representative in accordance with section 9 of the Representative Agreement Act.
+                <br><br>
+                I give _________________________________________ authority to make decisions on my behalf for all personal care and
+                health care matters of a non-financial nature thAt relate to me.
+            </p>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="rep.choose_alternate === 'chooseAlternateYes'">
+        <ng-container *ngIf="rep.rep_alternate_name.length > 0 && rep.rep_alternate_name != '' ">
+            <div class="print-modal-title">
+                <h2>ALTERNATE REPRESENTATIVE:</h2>
+            </div>
+
+            <div class="print-modal-text-block">
+                <p>
+                    If the above named should be or become at any time unable or unwilling to act in the office of attorney, then I appoint
+                    {{ rep.rep_alternate_name }} to be my Representative in accordance with section 9 of the Representative Agreement
+                    Act.
+                    <br><br>
+                    I give {{ rep.rep_alternate_name }} authority to make decisions on my behalf for all personal care and health care
+                    matters of a non-financial nature that relate to me.
+                </p>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="rep.rep_alternate_name.length == 0 && rep.rep_alternate_name == '' ">
+            <div class="print-modal-text-block">
+                <p>
+                    If the above named should be or become at any time unable or unwilling to act in the office of attorney, then I appoint
+                    ______________________________________________ to be my Representative in accordance with section 9 of the
+                    Representative  Agreement Act.
+                    <br><br>
+                    I give
+                    ______________________________________________ authority to make decisions on my behalf for all personal care and health
+                    care matters of a non-financial nature that relate to me.
+                </p>
+            </div>
+        </ng-container>
+    </ng-container>
+
+    <div class="print-modal-title">
+        <h2>MY INSTRUCTIONS FOR CARE:</h2>
+    </div>
+
+    <div class="print-modal-text-block">
+        <p>The following are my instructions or wishes with respect to decisions that will be made within the areas of
+            authority given to my Representative under this Representation Agreement.</p>
+    </div>
+
+    <ng-container *ngIf="rep.instructions_for_reps.length > 0 && rep.instructions_for_reps != '' ">
+        <div class="print-modal-instructions">
+            <p>{{ rep.instructions_for_reps }}</p>
+            <div class="black-full-line"></div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="rep.instructions_for_reps.length == 0 && rep.instructions_for_reps == '' ">
+        <div class="print-modal-instructions">
+            <div class="black-line"></div>
+            <div class="black-line"></div>
+            <div class="black-line"></div>
+            <div class="black-line"></div>
+        </div>
+    </ng-container>
+
+    <div class="page-break-before"></div>
+
+    <div class="print-modal-text-block">
+        <p>
+            <b>Before a person may exercise the authority of a Representative under a Representation Agreement, that person
+                must sign the Representation Agreement</b>
+        </p>
+    </div>
+
+    <div class="print-modal-title">
+        <h2>SIGNATURES:</h2>
+    </div>
+
+    <div class="print-modal-title">
+        <h3>I have signed this Representation Agreement in the presence of the witnesses whose names appears below.</h3>
+    </div>
+
+    <div class="print-modal-title">
+        <h2>ADULT MAKING THIS AGREEMENT</h2>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name != '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Print Name:</b>
+            </div>
+            <div class="print-modal-inline-value">
+                {{ rep.client_name }}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="rep.client_name.length == 0 && rep.client_name == '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Print Name:</b>
+            </div>
+            <div class="print-modal-inline-line"></div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            <b>Signature:</b>
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            <b>Date Signed (YYYY/MM/DD):</b>
+        </div>
+
+        <div class="print-modal-inline-line"></div>
+    </div>
+
+    <div class="print-modal-title">
+        <h2>REPRESENTATIVES</h2>
+    </div>
+
+    <div class="print-modal-text-block">
+        <p>
+            <b>
+                The authority of a representative appointed under this representation agreement includes the power to give or refuse
+                consent to health care necessary to preserve life.
+            </b>
+        </p>
+    </div>
+
+    <div class="print-modal-title">
+        <h2>PRIMARY REPRESENTATIVE</h2>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <ng-container *ngIf="rep.rep_primary_name.length > 0 && rep.rep_primary_name != '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Print Name:</b>
+            </div>
+            <div class="print-modal-inline-value">
+                {{ rep.rep_primary_name }}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="rep.rep_primary_name.length == 0 && rep.rep_primary_name == '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Print Name:</b>
+            </div>
+            <div class="print-modal-inline-line"></div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            <b>Signature:</b>
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            <b>Date Signed (YYYY/MM/DD):</b>
+        </div>
+
+        <div class="print-modal-inline-line"></div>
+    </div>
+
+    <div class="print-modal-title">
+        <h2>ALTERNATE REPRESENTATIVE</h2>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <ng-container *ngIf="rep.rep_alternate_name.length > 0 && rep.rep_alternate_name != '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Print Name:</b>
+            </div>
+            <div class="print-modal-inline-value">
+                {{ rep.rep_alternate_name }}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="rep.rep_alternate_name.length == 0 && rep.rep_alternate_name == '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Print Name:</b>
+            </div>
+            <div class="print-modal-inline-line"></div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            <b>Signature:</b>
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            <b>Date Signed (YYYY/MM/DD):</b>
+        </div>
+
+        <div class="print-modal-inline-line"></div>
+    </div>
+
+
+    <div class="print-modal-title">
+        <h2>WITNESSES</h2>
+    </div>
+
+    <div class="print-modal-text-block">
+        <p>
+            <b>
+                Only one witness is required if the witness is a lawyer or a member in good standing of the Society of
+                Notaries Public of British Columbia.
+            </b>
+        </p>
+    </div>
+    <!-- WITNESS 1 -->
+    <div class="print-modal-title">
+        <h2>WITNESS # 1</h2>
+    </div>
+
+    <ng-container *ngIf="rep.witness_one_name.length > 0 && rep.witness_one_name != '' ">
+        <ng-container *ngIf="rep.witness_notary || rep.witness_lawyer">
+            <ng-container *ngIf="rep.witness_lawyer">
+                <div class="print-modal-text-block">
+                    <p>({{ rep.witness_one_name }} has been designated a Lawyer. In this case, they are the only witness
+                        needed. If this is not correct, you will still need 2 witnesses.
+                    </p>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="rep.witness_notary">
+                <div class="print-modal-text-block">
+                    <p>({{ rep.witness_one_name }} has been designated a Notary Public. In this case, they are the only witness
+                        needed. If this is not correct, you will still need 2 witnesses.
+                    </p>
+                </div>
+            </ng-container>
+        </ng-container>
+    </ng-container>
+
+    <div class="print-modal-inline-data">
+        <ng-container *ngIf="rep.witness_one_name.length > 0 && rep.witness_one_name != '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Print Name:</b>
+            </div>
+            <div class="print-modal-inline-value">
+                {{ rep.witness_one_name }}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="rep.witness_one_name.length == 0 && rep.witness_one_name == '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Print Name:</b>
+            </div>
+            <div class="print-modal-inline-line"></div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <ng-container *ngIf="rep.witness_one_address.length > 0 && rep.witness_one_address != '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Address:</b>
+            </div>
+            <div class="print-modal-inline-value">
+                {{ rep.witness_one_address }}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="rep.witness_one_address.length == 0 && rep.witness_one_address == '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Address:</b>
+            </div>
+            <div class="print-modal-inline-line"></div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            <b>Signature:</b>
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            <b>Date Signed (YYYY/MM/DD):</b>
+        </div>
+
+        <div class="print-modal-inline-line"></div>
+    </div>
+
+    <!-- WITNESS 2 -->
+    <div class="print-modal-title">
+        <h2>WITNESS # 2</h2>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <ng-container *ngIf="rep.witness_two_name.length > 0 && rep.witness_two_name != '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Print Name:</b>
+            </div>
+            <div class="print-modal-inline-value">
+                {{ rep.witness_two_name }}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="rep.witness_two_name.length == 0 && rep.witness_two_name == '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Name:</b>
+            </div>
+            <div class="print-modal-inline-line"></div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <ng-container *ngIf="rep.witness_two_address.length > 0 && rep.witness_two_address != '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Address:</b>
+            </div>
+            <div class="print-modal-inline-value">
+                {{ rep.witness_two_address }}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="rep.witness_two_address.length == 0 && rep.witness_two_address == '' ">
+            <div class="print-modal-inline-prompt">
+                <b>Address:</b>
+            </div>
+            <div class="print-modal-inline-line"></div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            <b>Signature:</b>
+        </div>
+        <div class="print-modal-inline-line"></div>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            <b>Date Signed (YYYY/MM/DD):</b>
+        </div>
+
+        <div class="print-modal-inline-line"></div>
+    </div>
+</div>
+
+
