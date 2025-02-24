@@ -157,9 +157,9 @@ and (min-width: 1920px){
         list-style-position: inside;
     }
 
-    .infinity {
+  /*  .infinity {
         list-style-image:url("src/assets/images/icons/infinity.png");
         list-style-position: inside;
-    }
+    }*/
 
 }

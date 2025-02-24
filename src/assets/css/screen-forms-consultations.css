@@ -451,6 +451,7 @@ and (min-width: 1920px) {
         padding: 1em 0;
     }
 
+
     @media screen {
         .print-modal-make-wish-list, .print-modal-choose-your-rep, .print-modal-write-advance-directive,
         .print-form-caregiver-consult-component, .print-form-patient-consult-component, .print-form-planner-consult-component

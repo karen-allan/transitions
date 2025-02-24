@@ -14,7 +14,7 @@ import { NgxMaskModule } from 'ngx-mask'
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 
-/*ng generate component write-advance-directive-wizard-printout --standalone false */
+/*ng generate component xxx --standalone false */
 
 /************************************************************* GLOBAL FOOTERS **************************************************************/
 import { GlobalFooterComponent } from './global-footers/global-footer.component';
@@ -94,18 +94,19 @@ import { PrintSubFormMedicalComponent } from './print-forms/sub-forms/print-sub-
 import { PrintSubFormPatientComponent } from './print-forms/sub-forms/print-sub-form-patient/print-sub-form-patient.component';
 import { PrintSubFormPlannerComponent } from './print-forms/sub-forms/print-sub-form-planner/print-sub-form-planner.component';
 
-
-
 /************************************************************* PRINT MODALS ***********************************************************/
+import { PrintModalHeadingComponent } from './print-modals/heading/print-modal-heading/print-modal-heading.component';
 import { PrintModalChooseYourRepComponent } from './print-modals/print-modal-choose-your-rep/print-modal-choose-your-rep.component';
 import { PrintModalMakeWishListComponent } from './print-modals/print-modal-make-wish-list/print-modal-make-wish-list.component';
 import { PrintModalWriteAdvanceDirectiveComponent } from './print-modals/print-modal-write-advance-directive/print-modal-write-advance-directive.component';
-import { PrintModalHeadingComponent } from './print-modals/heading/print-modal-heading/print-modal-heading.component';
 
 /************************************************************* SCREEN FORMS ***********************************************************/
 import { ScreenFormCaregiverConsultComponent } from './screen-forms/screen-form-caregiver-consult/screen-form-caregiver-consult.component';
-import { ScreenFormPlannerConsultComponent } from './screen-forms/screen-form-planner-consult/screen-form-planner-consult.component';
+import { ScreenFormMakeWishListOverviewComponent } from './screen-forms/screen-form-make-wish-list-overview/screen-form-make-wish-list-overview.component';
+import { ScreenFormMakeWishListContainerComponent } from './screen-forms/screen-form-make-wish-list-container/screen-form-make-wish-list-container.component';
+
 import { ScreenFormPatientConsultComponent } from './screen-forms/screen-form-patient-consult/screen-form-patient-consult.component';
+import { ScreenFormPlannerConsultComponent } from './screen-forms/screen-form-planner-consult/screen-form-planner-consult.component';
 
 import { ScreenSubFormCaregiverComponent } from './screen-forms/sub-forms/screen-sub-form-caregiver/screen-sub-form-caregiver.component';
 import { ScreenSubFormDemographicComponent } from './screen-forms/sub-forms/screen-sub-form-demographic/screen-sub-form-demographic.component';
@@ -115,14 +116,12 @@ import { ScreenSubFormMedicalComponent } from './screen-forms/sub-forms/screen-s
 import { ScreenSubFormPatientComponent } from './screen-forms/sub-forms/screen-sub-form-patient/screen-sub-form-patient.component';
 import { ScreenSubFormPlannerComponent } from './screen-forms/sub-forms/screen-sub-form-planner/screen-sub-form-planner.component';
 
-
 /************************************************************* SCREEN MODALS ***********************************************************/
 
 import { ScreenModalHeadingComponent } from './screen-modals/heading/screen-modal-heading/screen-modal-heading.component';
 import { ScreenModalChooseYourRepComponent } from './screen-modals/screen-modal-choose-your-rep/screen-modal-choose-your-rep.component';
 import { ScreenModalMakeWishListComponent } from './screen-modals/screen-modal-make-wish-list/screen-modal-make-wish-list.component';
 import { ScreenModalWriteAdvanceDirectiveComponent } from './screen-modals/screen-modal-write-advance-directive/screen-modal-write-advance-directive.component';
-
 
 
 
@@ -182,8 +181,7 @@ import { ScreenModalWriteAdvanceDirectiveComponent } from './screen-modals/scree
         ChooseYourRepContainerComponent,
         ChooseYourRepOverviewComponent,
         /* MAKE WISH LIST FOLDER */
-        MakeWishesContainerComponent,
-        MakeWishesOverviewComponent,
+
         /* WRITE ADVANCED DIRECTIVE FOLDER */
         WriteAdvanceDirectiveOverviewComponent,
         WriteAdvanceDirectiveContainerComponent,
@@ -230,37 +228,11 @@ import { ScreenModalWriteAdvanceDirectiveComponent } from './screen-modals/scree
         ScreenModalWriteAdvanceDirectiveComponent,
 
         PrintFormHeadingComponent,
+        ScreenFormMakeWishListOverviewComponent,
+        ScreenFormMakeWishListContainerComponent,
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        MakeWishesContainerComponent,
+        MakeWishesOverviewComponent,
 
 
     ],
@@ -276,9 +248,6 @@ import { ScreenModalWriteAdvanceDirectiveComponent } from './screen-modals/scree
         MatDialogModule,
         NgxMaskModule.forRoot(),
         HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false}),
-
-
-
 
 
     ],

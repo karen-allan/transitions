@@ -27,7 +27,7 @@ and (min-width:960px)   {
      /* 900 wide */
     .content-images, .content-images a   {
         display:grid;
-        max-width:var(--content-width);border:thin solid red;
+        max-width:var(--content-width);
         margin:1em auto;
         justify-content: center;
     }

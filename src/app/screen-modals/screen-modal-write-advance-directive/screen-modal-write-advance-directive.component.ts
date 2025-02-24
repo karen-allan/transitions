@@ -48,50 +48,26 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
   /* *************************************************************************************************************** */
   checkClientName(): void {
 
-    /* These are the only required fields */
-    if (this.directive.client_name.length == 0 && this.directive.client_name == '') {
-      this.errorMessage = "You must enter your full name here.";
-      return;
-    }
-    else {
-      this.dataService.splitNames(this.directive.client_name)
+      this.errorMessage = "";
+
+      if (this.directive.client_name.length == 0 && this.directive.client_name == '') {
+          this.errorMessage = "You must enter your full name here.";
+          return;
+      }
+      else {
+          this.dataService.splitNames(this.directive.client_name)
           .subscribe(newName => this.updatedValue = newName);
 
       this.directive.client_name = this.updatedValue;
     }
 
-    this.errorMessage = this.checkClientAddress();
-    if (this.errorMessage.length > 0 && this.errorMessage != '') {
-      return;
-    }
-
-    this.errorMessage = this.checkForValidDate();
-    if (this.errorMessage.length > 0 && this.errorMessage != '') {
-      this.directive.client_dob = "";
+    var error = this.checkForValidDate();
+    if (error.length > 0 && error != '') {
+      this.errorMessage=error;
       return;
     }
 
     this.getNextPage();
-  }
-
-  /* *************************************************************************************************************** */
-  checkClientAddress(): string {
-    if (this.directive.client_address.length == 0 && this.directive.client_address == '') {
-      this.errorMessage = "You must enter your full address here.";
-      return this.errorMessage;
-    }
-    if (this.directive.client_city.length == 0 && this.directive.client_city == '') {
-      this.errorMessage = "You must enter your city or town here.";
-      return this.errorMessage;
-    }
-    if (this.directive.client_postal.length == 0 && this.directive.client_postal == '') {
-      this.errorMessage = "You must enter your postal code here.";
-      return this.errorMessage;
-    }
-    else {
-      this.errorMessage = '';
-      return this.errorMessage;
-    }
   }
 
   /* *************************************************************************************************************** */
@@ -115,10 +91,12 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
   }
 
   /* *************************************************************************************************************** */
-  formatWitness1Name(): void {
+  checkWitness1Name(): void {
 
-    //Witness name is not required but if it exists capitalize it
+    this.errorMessage = "";
+
     if (this.directive.witness_one_name.length == 0 && this.directive.witness_one_name == '') {
+      this.errorMessage = "You must enter your first witnesses's name here.";
       return;
     }
     else {
@@ -132,10 +110,12 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
   }
 
   /* *************************************************************************************************************** */
-  formatWitness2Name(): void {
+  checkWitness2Name(): void {
 
-    //witness two may not be necessary and name is not required but if it exists, uppercase it
+    this.errorMessage = "";
+
     if (this.directive.witness_two_name.length == 0 && this.directive.witness_two_name == '') {
+      this.errorMessage = "You must enter your second witnesses's name here.";
       return;
     }
     else {
@@ -144,11 +124,10 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
     }
 
     this.directive.witness_two_name = this.updatedValue;
+
     this.getNextPage();
 
   }
-
-
 
   /* ***************************************************************************************************************
   * this is the one where on page 3 where they have chosen either Section 3 or Section 4. If Section 3 they just
@@ -227,20 +206,29 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
     this.directive.client_name = "",
     this.directive.client_address = "",
     this.directive.client_city = "",
+    //default province
     this.directive.client_postal = "",
     this.directive.client_dob = "",
-        this.directive.client_phn = "",
-        this.directive.client_organ_donor = 'organDonorNo',
+    this.directive.client_phn = "",
+    this.directive.client_organ_donor = 'organDonorNo',
 
     this.directive.witness_one_name = "",
     this.directive.witness_one_address = "",
+    this.directive.witness_one_city = "",
+    this.directive.witness_one_postal = "",
+    this.directive.witness_one_province = "",
+
     this.directive.witness_two_name = "",
     this.directive.witness_two_address = "",
+    this.directive.witness_two_city = "",
+    this.directive.witness_two_postal = "",
+    this.directive.witness_two_province = "",
+
     this.directive.witness_lawyer = false,
     this.directive.witness_notary = false,
 
     this.directive.consent_given_notes = "",
-        this.directive.consent_refused_notes = '',
+    this.directive.consent_refused_notes = '',
     this.directive.lift_sedation = 'liftSedationNo',
 
     this.directive.conditions1a = false,
@@ -248,10 +236,10 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
     this.directive.conditions1c = false,
 
     this.directive.die_at_home = "atHomeYes",
-        this.directive.request_maid = "maidNo",
-        this.directive.consent_maid_notes = "",
+    this.directive.request_maid = "maidNo",
+    this.directive.consent_maid_notes = "",
 
-        this.directive.refusals2a = false,
+    this.directive.refusals2a = false,
     this.directive.refusals2b = false,
     this.directive.refusals2c = false,
     this.directive.refusals2d = false,
@@ -273,22 +261,25 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
   /* *************************************************************************************************************** */
 
   /* Set in choose-rep-overview.ts */
-  setDirective(directive: AdvanceDirective) {
+  setDirective(directive: AdvanceDirective, title:string) {
     this.directive = directive;
+    this.title = title;
+
+    alert("the directive is being set " );
   }
 
   /* *************************************************************************************************************** */
 
   /* Set in choose-rep-overview.ts */
   printFunction() {
-    this.event.emit({rep: this.directive, print: true});
+    this.event.emit({directive: this.directive, print: true});
   }
 
   /* *************************************************************************************************************** */
 
   /* Set in choose-rep-overview.ts */
   closeModal(): void {
-    this.event.emit({rep: this.directive, print: false});
+    this.event.emit({directive: this.directive, print: false});
   }
 
   /* *************************************************************************************************************** */
@@ -358,11 +349,18 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
     //this.directive.witness_one_name = '';
     this.directive.witness_one_name = 'bette jo davis';
     //this.directive.witness_one_address = ''
-    this.directive.witness_one_address = '315-416, Sutton Crescent, Kelowna, B.C., V1V-2J8'
+
+    this.directive.witness_one_address = '315-416, Sutton Crescent'
+    this.directive.witness_one_city = 'Kelowna'
+    this.directive.witness_one_postal = 'V1V-2J8'
+    this.directive.witness_one_province = 'B.C.'
+
     //this.directive.witness_two_name = '';
     this.directive.witness_two_name = 'dirk bogart';
-    //this.directive.witness_two_address = '';
-    this.directive.witness_two_address = '#27 - 870 West 7th Avenue, Vancouver, B.C., V5Z-4C1'
+    this.directive.witness_two_address = '#27 - 870 West 7th Avenue';
+    this.directive.witness_two_city = 'Princeton'
+    this.directive.witness_two_postal = 'V5Z-4C1'
+    this.directive.witness_two_province = 'B.C.'
 
     this.directive.witness_lawyer = false;
     this.directive.witness_notary = false;

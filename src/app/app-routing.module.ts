@@ -21,8 +21,11 @@ import { ConsiderYourRightsContainerComponent } from './menu-plan-ahead/consider
 /* MENU WRITE PLANS */
 import { CheckOffTasksListContainerComponent } from './menu-write-plans/check-off-tasks-list/check-off-tasks-list-container/check-off-tasks-list-container.component';
 import { ChooseYourRepContainerComponent } from './menu-write-plans/choose-your-rep/choose-your-rep-container/choose-your-rep-container.component';
-import { MakeWishesContainerComponent } from './menu-write-plans/make-wish-list/make-wishes-container/make-wishes-container.component';
 import { WriteAdvanceDirectiveContainerComponent } from './menu-write-plans/write-advance-directive/write-advance-directive-container/write-advance-directive-container.component';
+
+import { ScreenFormMakeWishListContainerComponent } from './screen-forms/screen-form-make-wish-list-container/screen-form-make-wish-list-container.component';
+import { MakeWishesContainerComponent } from './menu-write-plans/make-wish-list/make-wishes-container/make-wishes-container.component';
+import { ScreenModalMakeWishListComponent } from './screen-modals/screen-modal-make-wish-list/screen-modal-make-wish-list.component';
 
 /* AS SHOWN ON MENU */
 const routes: Routes = [
@@ -38,6 +41,7 @@ const routes: Routes = [
 
     {path: 'menuWritePlans', component: MakeWishesContainerComponent},
     {path: 'makeWishList', component: MakeWishesContainerComponent},
+
     {path: 'chooseReps', component: ChooseYourRepContainerComponent},
     {path: 'writeCarePlan', component: WriteAdvanceDirectiveContainerComponent},
     {path: 'checkOffList', component: CheckOffTasksListContainerComponent},
@@ -46,13 +50,11 @@ const routes: Routes = [
     {path: 'rolesOfConsultant', component: RolesOfConsultantContainerComponent},
     {path: 'bookConsultation', component: BookConsultationContainerComponent},
 
-
-    {path: 'menuAbout', component: AboutEolAdvocacyContainerComponent},
+    {path: 'menuAbout', component: AboutPractitionerContainerComponent},
     {path: 'aboutEndOfLifeAdvocacy', component: AboutEolAdvocacyContainerComponent},
     {path: 'aboutPractitioner', component: AboutPractitionerContainerComponent},
 
-
-
+    {path: 'callScreenFormMakeListMobile', component: ScreenFormMakeWishListContainerComponent},
 
 
 

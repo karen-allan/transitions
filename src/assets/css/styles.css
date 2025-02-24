@@ -41,7 +41,20 @@
   --modal-small-height:750px;
 
   --desktop-dialog-width:1024px;
-  --desktop-dialog-header-width:984px;
+  --desktop-dialog-header-height:250px;
+
+  --tablet-dialog-land-width:800px;
+  --tablet-dialog-land-header-height:170px;
+
+  --tablet-dialog-port-width:600px;
+  --tablet-dialog-port-header-height:150px;
+
+  --mobile-dialog-land-width:414px;
+  --mobile-dialog-land-header-height:100px;
+
+  --mobile-dialog-port-width:360px;
+  --mobile-dialog-port-header-height:100px;
+
 
   --ipad-width:1024px;
   --laptop-width:1440px;
@@ -108,7 +121,7 @@
   --family-copy: 'Calibri';
 
   /* SMALL COPY */
-  --smallest-copy-banana-font-size:.5em;
+  --smallest-copy-banana-font-size:.45em;
   --smallest-copy-mobile-font-size:.6em;
   --smallest-copy-tablet-font-size:.7em;
   --smallest-copy-ipad-font-size:.8em;
@@ -698,6 +711,10 @@
 
   .with-solid-underline {
     border-bottom: solid thin var(--color-dark-blue);
+  }
+
+  .cdn-flag{
+    /*background:  #d80621; #fff;  #d80621;*!*/
   }
 
   :focus {

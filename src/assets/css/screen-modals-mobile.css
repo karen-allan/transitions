@@ -1,73 +1,380 @@
-/*******************************************************************************************************************
-   GLOBAL BANANAS- MOBILES AND SMALL TABLETS - under 900 (content) width so need 10% space on either side of content
-*******************************************************************************************************************/
-/*@media only screen
-    and (min-width: 240px)
-    and (max-width: 800px)    {*/
+/*
+!*************************************** MOBILE PORTRAIT ******************************************************!
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: portrait) {
 
-/*.screen-modal-twenty-eighty-cols-block {
-    display: inline-grid;
-    grid-template-columns: 20% 80%;
+    .mobileForm {
+        display: block;
+    }
+
+    .laptopForm {
+        display: none;
+    }
+
+
+
+  !*  .wizard-modal-header {
+        height:var(--mobile-dialog-port-header-height);
+    }
+
+    .wizard-modal-logo img {
+        height:var(--mobile-dialog-port-header-height);
+    }*!
+
+    !* FRAMEWORK *!
+    !* ********************************** MAKE WISHES **************************** *!
+  !*  mat-dialog-container#make-wishes-modal {
+        width:var(--mobile-dialog-port-width);
+        border-radius: 5em;
+    }
+
+    .screen-modal-inner-block-wishes {
+        height:250px;
+    }
+
+    .screen-modal-data-block-wishes {
+        height:inherit;
+    }*!
+
+    !* ********************************** ADVANCE DIRECTIVE **************************** *!
+    !*BLUE BORDER (width defined in ts file or parent overview *!
+    !*mat-dialog-container#advance-directive-modal {
+        width:var(--mobile-dialog-port-width);
+        border-radius: 5em;
+    }
+
+    .screen-modal-inner-block-plan {
+        height:240px;
+    }
+
+    .screen-modal-data-block-plan {
+        height:inherit;
+    }*!
+
+    !* ********************************** CHOOSE REPS **************************** *!
+    mat-dialog-container#choose-rep-nine-modal {
+        width:var(--mobile-dialog-port-width);
+        border-radius: 5em;
+    }
+
+    .screen-modal-inner-block-rep {
+        height:260px;
+    }
+
+    .screen-modal-data-block-rep {
+        height:inherit;
+    }
+
+    !* ********************************** FRAMEWORK **************************** *!
+    .screen-modal-two-buttons-row {
+        grid-template-columns: repeat(2, 50px);
+        grid-column-gap: 2px;
+    }
+
+    .screen-modal-three-buttons-row {
+        grid-template-columns: repeat(3, 50px);
+        grid-column-gap: 2px;
+    }
+
+    .screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
+    .screen-modal-cancel-button, .screen-modal-print-button, .screen-modal-cancel-print-button {
+        font-size: var(--smallest-copy-banana-font-size);
+        height: 25px;
+        width: 50px;
+    }
+
+    !* CONTENT *!
+    !* WIZARD HEADER *!
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-banana-font-size);
+        line-height: 110%;
+        text-align: right;
+        padding-right:1em;
+    }
+
+    .wizard-modal-text p, .wizard-modal-text span {
+        margin:0;
+        font-size: var(--small-copy-mobile-font-size);
+        line-height: 130%;
+        text-align: right;
+        padding-right:1em;
+    }
+
+    !* HEADINGS  *!
+    .screen-modal-title h2, .screen-modal-title-first h3, .screen-modal-title h3  {
+        margin:0;
+    }
+
+    .screen-modal-title h2  {
+        font-size: .6em;
+        padding-top:.5em;
+        line-height:110%;
+    }
+
+    .screen-modal-title-first h3 {
+        padding-top:.8em;
+        font-size: .5em;
+        line-height:110%;
+    }
+
+    .screen-modal-title h3 {
+        padding-top:.5em;
+        font-size: .6em;
+        line-height:110%;
+    }
+
+    .answer-block {
+        padding:.4em;
+        font-size:var(--small-copy-banana-font-size);
+    }
+
+    .screen-modal-error-message {
+        font-size: var(--small-copy-banana-font-size);
+    }
+
+    .screen-modal-copy p  {
+        font-size: var(--small-copy-banana-font-size);
+        padding-top:.8em;
+        line-height:120%;
+    }
+
+    .screen-modal-copy span  {
+        font-size: var(--small-copy-banana-font-size);
+        line-height:120%;
+    }
+
+    .screen-modal-list-item {
+        padding-top:.6em;
+        line-height: 120%;
+        font-size: var(--small-copy-banana-font-size);
+    }
+
+    .screen-modal-full-col-block p {
+        !*padding-top: .3em;*!
+        font-size: var(--small-copy-banana-font-size);
+    }
+
+    .screen-modal-full-col-block span {
+        padding:0;
+        font-size: var(--small-copy-banana-font-size);
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
+        font-size: var(--smallest-copy-banana-font-size);
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-first-check-col {
+        grid-column: 1;
+        padding: .25em;
+        line-height: 100%;
+    }
+
+    .screen-modal-second-radio-col, .screen-modal-second-check-col  {
+        grid-column: 2;
+        padding:.25em;
+        line-height: 100%;
+    }
+
+    .screen-modal-first-col, .screen-modal-second-col, .screen-modal-third-col {
+        padding: .25em;
+        font-size: var(--small-copy-banana-font-size);
+    }
+
+    .screen-modal-full-col, .text-area {
+        padding: .25em;
+        font-size: var(--small-copy-banana-font-size);
+    }
 }
 
-.screen-modal-forty-sixty-cols-block {
-    display: inline-grid;
-    grid-template-columns: 40% 60%;
+!*************************************** MOBILE LANDSCAPE ******************************************************!
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation:landscape) {
+
+    .mobileForm {
+        display: block;
+    }
+
+    .laptopForm {
+        display: none;
+    }
+
+
+    .wizard-modal-header {
+        height:var(--mobile-dialog-land-header-height);
+    }
+
+    .wizard-modal-logo img {
+        height:var(--mobile-dialog-land-header-height);
+    }
+
+    !* FRAMEWORK *!
+    !* ********************************** MAKE WISHES **************************** *!
+    mat-dialog-container#make-wishes-modal {
+        width:var(--mobile-dialog-land-width);
+        border-radius: 5em;
+    }
+
+    .screen-modal-inner-block-wishes {
+        height:180px;
+    }
+
+    .screen-modal-data-block-wishes {
+        height:inherit;
+    }
+
+    !* ********************************** ADVANCE DIRECTIVE **************************** *!
+    !*BLUE BORDER (width defined in ts file or parent overview *!
+    mat-dialog-container#advance-directive-modal {
+        width:var(--mobile-dialog-land-width);
+        border-radius: 5em;
+    }
+
+    .screen-modal-inner-block-plan {
+        height:200px;
+    }
+
+    .screen-modal-data-block-plan {
+        height:inherit;
+    }
+
+    !* ********************************** CHOOSE REPS **************************** *!
+    mat-dialog-container#choose-rep-nine-modal {
+        width:var(--mobile-dialog-land-width);
+        border-radius: 5em;
+    }
+
+    .screen-modal-inner-block-rep {
+        height:160px;
+    }
+
+    .screen-modal-data-block-rep {
+        height:inherit;
+    }
+
+    !* ********************************** FRAMEWORK **************************** *!
+    .screen-modal-two-buttons-row {
+        grid-template-columns: repeat(2, 50px);
+        grid-column-gap: 2px;
+    }
+
+    .screen-modal-three-buttons-row {
+        grid-template-columns: repeat(3, 50px);
+        grid-column-gap: 2px;
+    }
+
+    .screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
+    .screen-modal-cancel-button, .screen-modal-print-button, .screen-modal-cancel-print-button {
+        font-size: var(--smallest-copy-banana-font-size);
+        height: 25px;
+        width: 50px;
+    }
+
+    !* CONTENT *!
+    !* WIZARD HEADER *!
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-banana-font-size);
+        line-height: 110%;
+        text-align: right;
+        padding-right:1em;
+    }
+
+    .wizard-modal-text p, .wizard-modal-text span {
+        margin:0;
+        font-size: var(--small-copy-mobile-font-size);
+        line-height: 130%;
+        text-align: right;
+        padding-right:1em;
+    }
+
+    !* HEADINGS  *!
+    .screen-modal-title h2, .screen-modal-title-first h3, .screen-modal-title h3  {
+        margin:0;
+    }
+
+    .screen-modal-title h2  {
+        font-size: .6em;
+        padding-top:.5em;
+        line-height:110%;
+    }
+
+    .screen-modal-title-first h3 {
+        padding-top:.8em;
+        font-size: .5em;
+        line-height:110%;
+    }
+
+    .screen-modal-title h3 {
+        padding-top:.5em;
+        font-size: .6em;
+        line-height:110%;
+    }
+
+    .answer-block {
+        padding:.2em;
+        font-size:var(--med-copy-banana-font-size);
+    }
+
+    .screen-modal-error-message {
+        font-size: var(--smallest-copy-banana-font-size);
+    }
+
+    .screen-modal-copy p  {
+        font-size: var(--smallest-copy-banana-font-size);
+        padding-top:.2em;
+        line-height:100%;
+    }
+
+    .screen-modal-copy span  {
+        font-size: var(--smallest-copy-banana-font-size);
+        line-height:100%;
+    }
+
+    .screen-modal-list-item {
+        padding-top:0;
+        line-height: 100%;
+        font-size: var(--smallest-copy-banana-font-size);
+    }
+
+    .screen-modal-full-col-block p {
+        !*padding-top: .3em;*!
+        font-size: var(--smallest-copy-banana-font-size);
+    }
+
+    .screen-modal-full-col-block span {
+        padding:0;
+        font-size: var(--smallest-copy-banana-font-size);
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
+        font-size: var(--small-copy-banana-font-size);
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-first-check-col {
+        grid-column: 1;
+        padding: 0;
+        line-height: 100%;
+    }
+
+    .screen-modal-second-radio-col, .screen-modal-second-check-col  {
+        grid-column: 2;
+        padding:0;
+        line-height: 100%;
+    }
+
+    .screen-modal-first-col, .screen-modal-second-col, .screen-modal-third-col {
+        padding: 0;
+        font-size: var(--smallest-copy-banana-font-size);
+    }
+
+    .screen-modal-full-col, .text-area {
+        padding: 0;
+        font-size: var(--smallest-copy-banana-font-size);
+    }
+
+
 }
-
-.screen-modal-three-thirty-cols-block {
-    display: inline-grid;
-    grid-template-columns: 33% 33% 34%;
-}
-
-.screen-modal-two-fifty-cols-block {
-    display: inline-grid;
-    grid-template-columns: 50% 50%;
-
-}
-
-.screen-modal-two-buttons-row {
-    grid-template-columns: repeat(2, 110px);
-    grid-column-gap: 1px;
-    bottom: .7em;
-}
-
-.screen-modal-three-buttons-row {
-    grid-template-columns: repeat(3, 110px);
-    grid-column-gap: 1px;
-    bottom: .7em;
-}
-
-.screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
-.screen-modal-cancel-button, .screen-modal-print-button, .screen-modal-cancel-print-button {
-    font-size: var(--med-copy-tablet-font-size);
-    height: 40px;
-    width: 90px;
-}
-
-.screen-modal-start-button, .screen-modal-next-button, .screen-modal-print-button {
-    grid-column: 1;
-}
-
-.screen-modal-cancel-start-button, .screen-modal-previous-button {
-    grid-column: 2;
-}
-
-.screen-modal-cancel-button {
-    grid-column: 3;
-}
-
-.screen-modal-first-col  {
-    display:grid;
-    grid-column: 1;
-}
-
-.screen-modal-second-col {
-    display:grid;
-    grid-column: 2;
-}
-
-.screen-modal-third-col {
-    display:grid;
-    grid-column: 3;
-}*/
+*/

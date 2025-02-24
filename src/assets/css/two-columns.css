@@ -1,90 +1,91 @@
 /*******************************************************************************************************************
-  GLOBAL BANANAS- MOBILES AND SMALL TABLETS - under 900 (content) width so need 10% space on either side of content
+  GLOBAL BANANAS- MOBILES AND TABLETS -
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 240px)
-and (max-width: 896px)    {
+and (max-width: 800px)    {
 
-    .two-col-container, .two-col-backgrnd-container    {
+    .two-col-container    {
         width:var(--media-less-than-content-width);
-    }
-
-    /* the about us page */
-    .two-col-container {
         display: grid;
+        align-content: center;
+        justify-content: center;
     }
 
-    .column-image, .column-text {
+    .column-image {
         grid-column:1;
-        justify-content: flex-start;
+        display:grid;
+        justify-content: center;
+        align-content: center;
     }
 
-    .column-text h2, .column-text h3 {
+    .column-image img, .column-image a img {
+        height:250px;
+    }
+
+    .column-text, .column-backgrnd-text {
+        grid-column:1;
+        display:grid;
+    }
+
+    .column-backgrnd-text {
+        padding:0 2em;
+    }
+
+    .column-text p, .column-text h2, .column-text h2 a, .column-backgrnd-text a p, .column-backgrnd-text a h2  {
+        color:var(--color-white);
+    }
+
+    .column-text h2, .column-backgrnd-text a h2{
         line-height: 110%;
         text-align: center;
     }
 
-    .two-col-backgrnd-container {
-        display:inline-grid;
-        min-height:300px;
+    .column-text p, .column-backgrnd-text a p   {
+        text-align: justify;
+        line-height: 130%;
     }
 
-    .column-backgrnd-image {
-        grid-column: 1;
-        align-content: center;
-    }
-
-    /* the take action pages */
-    .column-backgrnd-text {
-        grid-column: 2;
-        line-height: 100%;
-
-    }
-
-    .column-backgrnd-text h2, .column-backgrnd-text h2 a {
-        text-align: center;
-        margin:0;
-    }
 }
 
+
+
 /*******************************************************************************************************************
-  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS AND UP (over 900 so don't need to have space on either side of content)
+  GLOBAL  IPADS, LAPTOPS, DESKTOPS AND UP
 *******************************************************************************************************************/
 @media only screen
-and (min-width:960px)   {
+and (min-width:1024px)    {
 
-    .two-col-container {
+    .two-col-container, .two-col-backgrnd-container {
         width:var(--media-more-than-content-width);
         display: inline-grid;
         grid-template-columns: 43% 57%;
     }
 
-    <!-- this must be 90% because of the fancy border -->
-    .two-col-backgrnd-container    {
-        width:var(--media-more-than-content-width);
-        display: inline-grid;
-        min-height:520px;
-        grid-template-columns: 43% 57%;
+    .two-col-backgrnd-container {
+        min-height:450px;
     }
 
-    .column-image, .column-backgrnd-image {
-        grid-column:1;
-        justify-content: flex-start;
-    }
+     .column-image {
+         grid-column:1;
+         justify-content: flex-start;
+     }
 
     .column-text, .column-backgrnd-text {
-        grid-column:2;
-        padding:0 1em;
-    }
+         grid-column:2;
+         padding:0 1em;
+     }
 
-    .column-backgrnd-text {
-        padding:0 1em;
-    }
+     .column-text h2, .column-text h2 a, .column-backgrnd-text a h2  {
+         text-align: center;
+         margin:0;
+     }
 
-    .column-text h2, .column-text h2 a, .column-backgrnd-text h2, .column-backgrnd-text h2 a {
-        text-align: center;
+    .column-backgrnd-text a p {
+        text-align: justify;
         margin:0;
     }
+
 }
 
 /*  BANANAS  *******************************************************************************************/
@@ -92,25 +93,29 @@ and (min-width:960px)   {
 and (min-width: 240px)
 and (max-width: 320px)  {
 
-    .two-col-backgrnd-container    {
-        min-height:180px;
+    /* this is from the ABOUT US PAGE */
+    .column-text h2  {
+        padding-top:1em;
     }
 
-    .column-text h2, .column-backgrnd-text h2 {
+    .column-text h2 {
+        font-size: 0.65em;
+        line-height:120%;
+    }
+
+    .column-text p {
+        padding-top:1em;
+        font-size: var(--med-copy-banana-font-size);
+    }
+
+    /* this is from the WIZARD ACTION PAGES */
+    .column-text a h2  {
         font-size: var(--h2-titles-banana-font-size);
     }
 
-    .column-text h3 {
-        font-size: var(--h3-titles-banana-font-size);
-    }
-
-    .column-backgrnd-text {
-        line-height: 80%;
-        padding:0 .5em;
-    }
-
-    .column-text p, .column-backgrnd-text p  {
-        font-size: var(--small-copy-banana-font-size);
+    .column-text a p   {
+        font-size: var(--med-copy-banana-font-size);
+        padding:0 1em;
     }
 
 }
@@ -120,169 +125,141 @@ and (max-width: 320px)  {
 and (min-width: 360px)
 and (max-width: 414px) {
 
-    .two-col-backgrnd-container    {
-        min-height:250px;
+    /* this is from the ABOUT US PAGE */
+    .column-text h2  {
+        padding-top:1em;
     }
 
-    .column-text h2, .column-backgrnd-text h2 {
+    .column-text h2 {
+        font-size: 0.85em;
+        line-height:120%;
+    }
+
+    .column-text p {
+        padding-top:1em;
+        font-size: var(--med-copy-mobile-font-size);
+    }
+
+    /* this is from the WIZARD ACTION PAGES */
+    .column-text a h2  {
         font-size: var(--h2-titles-mobile-font-size);
     }
 
-    .column-text h3 {
-        font-size: var(--h3-titles-mobile-font-size);
-    }
-
-    .column-backgrnd-text {
-        line-height: 90%;
-        padding:0 .5em;
-    }
-
-    .column-text p, .column-backgrnd-text p  {
+    .column-text a p   {
         font-size: var(--med-copy-mobile-font-size);
+        padding:0 1em;
     }
 }
 
-/*  TABLETS  *******************************************************************************************/
+/*  TABLETS   *******************************************************************************************/
 @media only screen
 and (min-width: 600px)
 and (max-width: 800px) {
 
-    .two-col-backgrnd-container    {
-        min-height:300px;
+    /* this is from the ABOUT US PAGE */
+    .column-text h2  {
+        padding-top:1em;
     }
 
-    .column-text h2, .column-backgrnd-text h2 {
-        font-size: var(--h2-titles-tablet-font-size);
+    .column-text h2 {
+        font-size: 1.2em;
+        line-height:120%;
     }
 
-    .column-text h3 {
-        font-size: var(--h3-titles-tablet-font-size);
-    }
-
-    .column-backgrnd-text {
-        line-height: 130%;
-        padding:0 1em;
-    }
-
-    .column-text p, .column-backgrnd-text p  {
+    .column-text p {
+        padding-top:1em;
         font-size: var(--med-copy-tablet-font-size);
     }
 
-}
-
-/* IPADS   ****************************************************************************************************/
-@media only screen
-and (min-width: 1024px)
-and (max-width: 1366px) {
-
-    .column-text h2, .column-backgrnd-text h2 {
-        font-size: var(--h2-titles-ipad-font-size);
+    /* this is from the WIZARD ACTION PAGES */
+    .column-text a h2  {
+        font-size: var(--h2-titles-tablet-font-size);
     }
 
-    .column-text h3 {
-        font-size: var(--h3-titles-ipad-font-size);
-    }
-
-    .column-text p, .column-backgrnd-text p  {
-        font-size: var(--med-copy-ipad-font-size);
+    .column-text a p   {
+        font-size: var(--med-copy-tablet-font-size);
+        padding:0 2em;
     }
 
 }
 
-/* LAPTOPS  ****************************************************************************************************/
+/* IPADS, LAPTOPS AND DESKTOPS  ****************************************************************************************************/
 @media only screen
-and (min-width: 1440px)
-and (max-width:1919px) {
+and (min-width: 1024px)  {
 
-    .column-text h2, .column-backgrnd-text h2 {
-        font-size: var(--h2-titles-laptop-font-size);
+    /* this is from the ABOUT US PAGE */
+    .column-text h2 {
+        font-size: 1.1em;
+        line-height:120%;
     }
 
-    .column-text h3 {
-        font-size: var(--h3-titles-laptop-font-size);
-    }
-
-    .column-text p, .column-backgrnd-text p  {
-        font-size: var(--med-copy-laptop-font-size);
-    }
-
-}
-
-/* DESKTOPS  ****************************************************************************************************/
-@media only screen
-and (min-width: 1920px)  {
-
-    .column-text h2, .column-backgrnd-text h2 {
-        font-size: var(--h2-titles-desktop-font-size);
-    }
-
-    .column-text h3 {
-        font-size: var(--h3-titles-desktop-font-size);
-    }
-
-    .column-text p, .column-backgrnd-text p  {
+    .column-text p {
+        padding-top:1em;
         font-size: var(--med-copy-desktop-font-size);
     }
 
+    /* this is from the WIZARD ACTION PAGES */
+    .column-text a h2  {
+        font-size: var(--h2-titles-desktop-font-size);
+        line-height:120%;
+    }
+
+    .column-text a p   {
+        font-size: var(--med-copy-desktop-font-size);
+        padding:0 1em;
+    }
 }
 
 /* GLOBAL ****************************************************************************************************/
 @media only screen {
 
     /*   two-col-container is used on the about us page */
-    .two-col-container  {
+    .two-col-container, .two-col-backgrnd-container   {
         display: grid;
         max-width: var(--ipad-width);
         font-family: var(--family-copy);
         margin:auto;
-    }
-
-    .column-image {
-        margin:auto;
-        cursor:pointer;
-    }
-
-    .column-text {
-        color: var(--color-dark-blue);
-        line-height: 150%;
-        justify-content: flex-start;
-        align-content: center;
-    }
-
-    .column-text h2 a  {
-        text-decoration: none;
-        color: var(--color-dark-blue);
-    }
-
-    .column-text h2 a:hover {
-        color: var(--color-purple);
     }
 
     /*   two-col-backgrnd-container is used on the take action pages that link to the modal pages  */
     .two-col-backgrnd-container {
-        display: grid;
-        font-family: var(--family-copy);
-        margin:auto;
-        max-width: var(--ipad-width);
         background: radial-gradient(circle at 100px 100px, #dce0e2, #000);
         border-style: groove;
         border-width: 7px;
         border-color: coral;
         border-radius: 50px 20px;
-        position:relative;
     }
 
-    .column-backgrnd-text {
-        color: var(--color-white);
-        text-align: justify;
-        cursor: pointer;
-        justify-content: flex-start;
+    .column-image img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    .column-text  {
         align-content: center;
     }
 
-    .column-image a img, .column-image img, .column-backgrnd-image a img, .column-backgrnd-image img {
-        max-width: 100%;
-        height:auto;
+    /* this is from the ABOUT PAGE - these are differentiated by the anchor tag placements */
+    .column-text p, .column-text h2 a, .column-text h2 {
+        color:var(--color-dark-blue);
+    }
+
+    .column-text h2 a:hover {
+        color:gold;
+    }
+
+    .column-text p {
+        text-align: justify;
+    }
+
+    /* this is from the write plans - action pages */
+    .column-text a p, .column-text a h2 {
+        color:var(--color-white);
+        text-align: justify;
+    }
+
+    .column-text h2 a, .column-text a h2  {
+        text-align: center;
     }
 
 }

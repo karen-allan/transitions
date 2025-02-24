@@ -1,14 +1,27 @@
-<app-screen-modal-heading [directive]='directive'></app-screen-modal-heading>
+<div class="wizard-modal-header">
+    <div class="wizard-modal-logo">
+        <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWriteAdvancePlan.gif" title= "{{title}}" alt="{{title}}">
+    </div>
+
+    <div class="wizard-modal-text">
+        <h2><b>Advance Care Directive Wizard</b></h2>
+        <p><b>dated {{ now }}</b> </p>
+        <span>
+            <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name != ''">
+                for {{ directive.client_name }}
+            </ng-container>
+        </span>
+    </div>
+</div>
 
 <div class="screen-modal-inner-block-plan">
-    <!-- PAGE 0 -->
-    <ng-container *ngIf="page === 0">
-        <div class="screen-modal-data-block-plan">
+    <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 0">
             <div class="screen-modal-title">
-                <h2>ADVANCE DIRECTIVE FOR BRITISH COLUMBIA RESIDENTS ONLY</h2>
+                <h2>ADVANCE DIRECTIVE FOR BRITISH COLUMBIA RESIDENTS</h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>Please press START to begin the wizard:</h3>
             </div>
 
@@ -32,26 +45,22 @@
                 <button class="screen-modal-start-button " (click)="getNextPage()">START</button>
                 <button class="screen-modal-cancel-start-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 1 -->
-    <ng-container *ngIf="page === 1">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 1">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : SECTION 1 - THIS IS THE ADVANCE DIRECTIVE OF THE "ADULT":
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     Enter your full legal name. Birthdate and PHN are optional. Your full legal address is required.
                 </h3>
             </div>
 
             <!-- this is the relative parent to the absolute button rows which must be within it -->
-
             <form #adultDirectiveForm="ngForm" novalidate>
                 <div class="screen-modal-error-message-block">
                     <ng-container *ngIf="errorMessage">
@@ -62,40 +71,30 @@
                     </ng-container>
                 </div>
 
-                <div class="screen-modal-full-col-block">
-                    <label class="screen-modal-full-col label" for="client_name">Full Legal Name of (you) the Adult (required):</label>
-                    <input class="screen-modal-full-col" type="text" [(ngModel)]="directive.client_name" id="client_name"
-                           name="name">
+                <div class="screen-modal-seventy-thirty-cols-block">
+                    <label class="screen-modal-first-col" for="client_name">Full Legal Name of (you) the Adult (required):</label>
+                    <label class="screen-modal-second-col" for="birth_date">Date of Birth: (YYYY/MM/DD):</label>
+
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.client_name" id="client_name" name="clName">
+                    <input [(ngModel)]="directive.client_dob" type="text" class="screen-modal-second-col" id="birth_date" name="clBirth" mask="0000/00/00">
                 </div>
 
-                <div class="screen-modal-forty-sixty-cols-block">
-                    <label class="screen-modal-first-col" for="birth_date">Date of Birth: (YYYY/MM/DD):</label>
-                    <label class="screen-modal-second-col" for="pers-health-num">Personal Health Care Number (optional):</label>
-
-                    <input [(ngModel)]="directive.client_dob" type="text" class="screen-modal-first-col" id="birth_date"
-                           name="birthDate"
-                           mask="0000/00/00">
-                    <input [(ngModel)]="directive.client_phn" type="text" class="screen-modal-second-col" id="pers-health-num"
-                           name="phn"
-                           mask="0000-000-000">
-                </div>
-
-                <div class="screen-modal-full-col-block">
-                    <label class="screen-modal-full-col" for="address">Address:</label>
-                    <input class="screen-modal-full-col" type="text" [(ngModel)]="directive.client_address" id="address" name="addr">
+                <div class="screen-modal-seventy-thirty-cols-block">
+                    <label class="screen-modal-first-col" for="address">Address:</label>
+                    <label class="screen-modal-second-col" for="client_cities">City:</label>
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.client_address" id="address" name="clAddr">
+                    <input class="screen-modal-second-col" type="text" [(ngModel)]="directive.client_city" id="client_cities" name="clCity">
                 </div>
 
                 <div class="screen-modal-three-thirty-cols-block">
-                    <label class="screen-modal-first-col" for="client_city">City:</label>
-                    <label class="screen-modal-second-col" for="postal">Postal Code:</label>
-                    <label class="screen-modal-third-col" for="prov">Province:</label>
+                    <label class="screen-modal-first-col" for="postal">Postal Code:</label>
+                    <label class="screen-modal-second-col" for="prov">Province:</label>
+                    <label class="screen-modal-third-col" for="pers-health-num">Personal Health Care Number:</label>
 
-                    <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.client_city" id="client_city"
-                           name="city">
-                    <input class="screen-modal-second-col" type="text" [(ngModel)]="directive.client_postal" id="postal"
-                           name="postal">
-                    <input class="screen-modal-third-col" type="text" readonly [(ngModel)]="directive.global_province" id="prov"
-                           name="province">
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.client_postal" id="postal" name="clPostal">
+                    <input class="screen-modal-second-col" type="text" readonly [(ngModel)]="directive.global_province" id="prov" name="clProv">
+                    <input [(ngModel)]="directive.client_phn" type="text" class="screen-modal-third-col" id="pers-health-num"
+                           name="phn" mask="0000-000-000">
                 </div>
             </form>
 
@@ -104,19 +103,16 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 2 -->
-    <ng-container *ngIf="page === 2">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 2">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : SECTION 2 - REVOCATION OF PREVIOUS ADVANCE DIRECTIVES:
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name != ''">
                         I revoke all previous Advance Directives made by me, {{ directive.client_name }}.
@@ -149,19 +145,16 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 3 -->
-    <ng-container *ngIf="page === 3">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 3">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : YOUR ADVANCE DIRECTIVE DECISIONS:
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     Health Care Decisions are Your Decisions:
                 </h3>
@@ -174,9 +167,9 @@
                     <br><br>
                     Choose <b>SECTION 3: CONDITIONS FOR HEALTH CARE</b> if you think you would
                     want to limit medical interventions (eg: you are diagnosed as terminal).
-                    <br><br>
-                    If, however you would want the medical team to do everything in their power to keep you alive, no matter your
-                    conditions please check <b>SECTION 4: HEALTH CARE CONSENT FOR ALL TREATMENTS</b>.
+                    <br>
+                    Choose <b>SECTION 4: HEALTH CARE CONSENT FOR ALL TREATMENTS</b> if you would want all possible medical interventions
+                    no matter the consequences.
                 </p>
             </div>
 
@@ -205,19 +198,16 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 4 -->
-    <ng-container *ngIf="page === 4">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 4">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : SECTION 3: CONDITIONS FOR HEALTH CARE:
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     If I am sedated and unable to communicate, I would like the sedation lifted so that I can
                     decide for myself to accept or refuse a particular therapy:
@@ -283,19 +273,16 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 5 -->
-    <ng-container *ngIf="page === 5">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 5">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : SECTION 3: CONDITIONS FOR HEALTH CARE::
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     In the circumstances set out in (1a, 1b, 1c), I specifically refuse the following:
                 </h3>
@@ -359,19 +346,16 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 6 -->
-    <ng-container *ngIf="page === 6">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 6">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : SECTION 3: CONDITIONS FOR HEALTH CARE:
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     In this Advance Directive, I specifically direct the following regarding palliative care:
                 </h3>
@@ -392,9 +376,8 @@
                             3b. Provide me with palliative care.
                         </label>
                     </div>
-                </div>
 
-                <div class="screen-modal-forty-sixty-cols-block">
+                    <!--                <div class="screen-modal-forty-sixty-cols-block">-->
                     <div class="screen-modal-first-radio-col">
                         <input type="radio" [(ngModel)]="directive.die_at_home" value="atHomeYes" id="homeYes" name="location">
                         <label for="homeYes">
@@ -402,7 +385,7 @@
                         </label>
                     </div>
 
-                    <div class="screen-modal-second-radio-col">
+                    <div class="screen-modal-first-radio-col">
                         <input type="radio" [(ngModel)]="directive.die_at_home" value="atHomeNo" id="homeNo" name="location">
                         <label for="homeNo">
                             3c. I would like to die in a hospice.
@@ -416,19 +399,16 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 7 -->
-    <ng-container *ngIf="page === 7">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 7">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : SECTION 3: CONDITIONS FOR HEALTH CARE:
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     If I need health care and I am not capable of refusing consent to the health care at the time
                     health care is required, I give the following instructions:
@@ -441,13 +421,13 @@
 
             <form #wizardForm="ngForm" novalidate>
                 <div class="screen-modal-full-col-block">
-                           <textarea
-                               name="consent"
-                               class="text-area"
-                               rows="8"
-                               [(ngModel)]="directive.consent_refused_notes"
-                               placeholder="Add any of the treatments you give consent to.">
-                           </textarea>
+                   <textarea
+                       name="consent"
+                       class="text-area"
+                       rows="6"
+                       [(ngModel)]="directive.consent_refused_notes"
+                       placeholder="Add any of the treatments you give consent to.">
+                   </textarea>
                 </div>
             </form>
 
@@ -456,19 +436,16 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 8-->
-    <ng-container *ngIf="page === 8">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 8">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : SECTION 3: CONDITIONS FOR HEALTH CARE:
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     Information regarding Medically Assisted Death (MAID) in Canada at this time.
                 </h3>
@@ -500,12 +477,13 @@
 
                 <ng-container *ngIf="directive.request_maid == 'maidYes'">
                     <div class="screen-modal-full-col-block">
-                                <textarea
-                                    name="consent"
-                                    rows="4"
-                                    [(ngModel)]="directive.consent_maid_notes"
-                                    placeholder="If MAID in advance becomes legal, I give these directions regarding my care: .">
-                                </textarea>
+                        <textarea
+                            name="consent"
+                            rows="4"
+                            class="text-area"
+                            [(ngModel)]="directive.consent_maid_notes"
+                            placeholder="If MAID in advance becomes legal, I give these directions regarding my care: .">
+                        </textarea>
                     </div>
                 </ng-container>
             </form>
@@ -515,19 +493,16 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 9 -->
-    <ng-container *ngIf="page === 9">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 9">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : SECTION 3: CONDITIONS FOR HEALTH CARE:
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     If I need health care and I am not capable of giving consent to the health care at the time
                     health care is required, I give the following instructions:
@@ -540,13 +515,13 @@
 
             <form #wizardForm="ngForm" novalidate>
                 <div class="screen-modal-full-col-block">
-                            <textarea
-                                name="consent"
-                                class="text-area"
-                                rows="8"
-                                [(ngModel)]="directive.consent_given_notes"
-                                placeholder="Add any of the treatments you give consent to.">
-                            </textarea>
+                    <textarea
+                        name="consent"
+                        class="text-area"
+                        rows="6"
+                        [(ngModel)]="directive.consent_given_notes"
+                        placeholder="Add any of the treatments you give consent to.">
+                    </textarea>
                 </div>
             </form>
 
@@ -555,19 +530,17 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 10 -->
-    <ng-container *ngIf="page === 10">
-        <div class="screen-modal-data-block-plan">
+        <!-- PAGE 10 -->
+        <ng-container *ngIf="page === 10">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : SECTION 4: HEALTH CARE CONSENT FOR ALL TREATMENTS:
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     Section 4: I specify that I do wish to have my life prolonged under any circumstances, and am requesting
                     all treatments applicable to my medical condition,
@@ -603,19 +576,16 @@
                 <button class="screen-modal-previous-button" (click)="moveSection4GoingBackwards()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!--  PAGE 11 -->
-    <ng-container *ngIf="page === 11">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 11">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : RULES FOR FOLLOWING THIS ADVANCE DIRECTIVE:
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     I specifically direct the following:
                 </h3>
@@ -649,19 +619,16 @@
                 <button class="screen-modal-previous-button" (click)="moveSection3GoingBackwards()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 12 -->
-    <ng-container *ngIf="page === 12">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 12">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : ORGAN DONATION:
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     Organ donation information:
                 </h3>
@@ -726,26 +693,17 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 13 -->
-    <ng-container *ngIf="page === 13">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 13">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : WITNESSES TO ADULT’S SIGNATURE:
-                </h3>
+                </h2>
             </div>
 
-         <!--   <div class="screen-modal-title">
-                <h3>
-                    Note 2 - INFORMATION FOR WITNESSES
-                </h3>
-            </div>-->
-
-            <div class="screen-modal-copy">
-                <p>The following persons may not be a witness:</p>
+            <div class="screen-modal-title-first">
+                <h3>The following persons may not be a witness:</h3>
             </div>
 
             <ul class="screen-modal-full-col-list">
@@ -760,14 +718,10 @@
                     A person who is under 19 years of age
                 </li>
                 <li class="screen-modal-list-item">
-                    A person who does not understand the type of communication used by the Adult, unless the person receives
-                    interpretive assistance to understand that type of communication.
+                    A person who does not understand the communication used by the adult unless the person receives
+                    interpretive assistance.
                 </li>
             </ul>
-
-        <!--    <div class="screen-modal-copy">
-                <p>Only one witness is required if the witness is a lawyer or notary public.</p>
-            </div>-->
 
             <div class="screen-modal-copy">
                 <p>You should not witness the Advance Directive if you have reason to believe that:</p>
@@ -779,8 +733,8 @@
                 </li>
 
                 <li class="screen-modal-list-item">
-                    Fraud, undue pressue or some other form of abuse or neglect was used to induce the Adult to make the Advance
-                    Directive or to change or revoke a previous Advance Directive.
+                    Fraud, undue pressure or some form of abuse or neglect was used to induce the Adult to change or revoke the Advance
+                    Directive.
                 </li>
             </ul>
 
@@ -789,19 +743,16 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 14 -->
-    <ng-container *ngIf="page === 14">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 14">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : WITNESS 1 TO ADULT’S SIGNATURE:
-                </h3>
+                </h2>
             </div>
 
-            <div class="screen-modal-title">
+            <div class="screen-modal-title-first">
                 <h3>
                     WITNESS 1 must sign in the presence of the Adult and Witness No.2.
                 </h3>
@@ -816,54 +767,69 @@
             </div>
 
             <form #wizardForm="ngForm" novalidate>
+                <div class="screen-modal-error-message-block">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="screen-modal-error-message">{{ errorMessage }}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="screen-modal-error-message">&nbsp;</div>
+                    </ng-container>
+                </div>
+
                 <div class="screen-modal-forty-sixty-cols-block">
                     <div class="screen-modal-first-check-col">
-                        <input type="checkbox" [(ngModel)]="directive.witness_lawyer" value="lawyer" id="lawyer" name="Lawyer">
+                        <input type="checkbox" [(ngModel)]="directive.witness_lawyer" value="true" id="lawyer" name="Lawyer">
                         <label for="lawyer">
-                            Lawyer
+                            <span>Lawyer</span>
                         </label>
                     </div>
 
                     <div class="screen-modal-second-check-col">
-                        <input type="checkbox" [(ngModel)]="directive.witness_notary" value="notary" id="notary" name="Notary">
+                        <input type="checkbox" [(ngModel)]="directive.witness_notary" value="false" id="notary" name="Notary">
                         <label for="notary">
-                            Member of the Society of Notaries Public of British Columbia
+                            <span>Member of the Society of Notaries Public of B.C.</span>
                         </label>
                     </div>
                 </div>
 
-                <div class="screen-modal-full-col-block">
-                    <label class="screen-modal-full-col" for="printed_name">Print Name:</label>
-                    <input class="screen-modal-full-col" type="text" [(ngModel)]="directive.witness_one_name" id="printed_name"
-                           name="name">
+                <div class="screen-modal-two-fifty-cols-block">
+                    <label class="screen-modal-first-col" for="witness1_name">Print Name:</label>
+                    <label class="screen-modal-second-col" for="witness1_address">Address:</label>
+
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.witness_one_name" id="witness1_name"
+                           name="wi1Name">
+                    <input class="screen-modal-second-col" type="text" [(ngModel)]="directive.witness_one_address" id="witness1_address"
+                           name="w1Addr">
                 </div>
 
-                <div class="screen-modal-full-col-block">
-                    <label class="screen-modal-full-col" for="addr1">Address:</label>
-                    <input class="screen-modal-full-col" type="text" [(ngModel)]="directive.witness_one_address" id="addr1"
-                           name="addr">
+                <div class="screen-modal-three-thirty-cols-block">
+                    <label class="screen-modal-first-col" for="witness1_city">City:</label>
+                    <label class="screen-modal-second-col" for="witness1_postal">Postal:</label>
+                    <label class="screen-modal-third-col" for="witness1_prov">Prov:</label>
+
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.witness_one_city" id="witness1_city" name="wi1City">
+                    <input class="screen-modal-second-col" type="text" [(ngModel)]="directive.witness_one_postal" id="witness1_postal" name="wi1Postal">
+                    <input class="screen-modal-third-col" type="text" [(ngModel)]="directive.witness_one_province" id="witness1_prov"
+                           name="wi1Prov">
                 </div>
             </form>
 
             <div class="screen-modal-three-buttons-row">
-                <button class="screen-modal-next-button" (click)="formatWitness1Name()">NEXT</button>
+                <button class="screen-modal-next-button" (click)="checkWitness1Name()">NEXT</button>
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <!-- PAGE 15 -->
-    <ng-container *ngIf="page === 15">
-        <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 15">
             <div class="screen-modal-title">
-                <h3>
+                <h2>
                     Page {{ page }} / {{ finalPage }} : WITNESS 2 TO ADULT’S SIGNATURE:
-                </h3>
+                </h2>
             </div>
 
             <ng-container *ngIf="directive.witness_lawyer">
-                <div class="screen-modal-title">
+                <div class="screen-modal-title-first">
                     <ng-container *ngIf="directive.witness_one_name.length > 0 && directive.witness_one_name != ''">
                         <h3>
                             WITNESS 2 is not needed because you stated that {{ directive.witness_one_name }} is a
@@ -874,7 +840,7 @@
             </ng-container>
 
             <ng-container *ngIf="directive.witness_notary">
-                <div class="screen-modal-title">
+                <div class="screen-modal-title-first">
                     <ng-container *ngIf="directive.witness_one_name.length > 0 && directive.witness_one_name != ''">
                         <h3>
                             WITNESS 2 is not needed because you stated that {{ directive.witness_one_name }} is a
@@ -895,49 +861,72 @@
             </ng-container>
 
             <ng-container *ngIf="!directive.witness_notary && !directive.witness_lawyer">
-                <div class="screen-modal-title">
+                <div class="screen-modal-title-first">
                     <h3>
                         WITNESS 2 must sign in the presence of the Adult and Witness No.1
                     </h3>
                 </div>
                 <form #wizardForm="ngForm" novalidate>
-                    <div class="screen-modal-full-col-block">
-                        <label class="screen-modal-full-col" for="witness2Name">Print Name:</label>
-                        <input class="screen-modal-full-col" type="text" [(ngModel)]="directive.witness_two_name" id="witness2Name"
-                               name="wit2Name">
+                    <div class="screen-modal-error-message-block">
+                        <ng-container *ngIf="errorMessage">
+                            <div class="screen-modal-error-message">{{ errorMessage }}</div>
+                        </ng-container>
+                        <ng-container *ngIf="!errorMessage">
+                            <div class="screen-modal-error-message">&nbsp;</div>
+                        </ng-container>
                     </div>
 
-                    <div class="screen-modal-full-col-block">
-                        <label class="screen-modal-full-col" for="witness2Addr">Address:</label>
-                        <input class="screen-modal-full-col" type="text" [(ngModel)]="directive.witness_two_address"
-                               id="witness2Addr"
-                               name="wit2Addr">
+                    <div class="screen-modal-two-fifty-cols-block">
+                        <label class="screen-modal-first-col" for="witness2_name">Print Name:</label>
+                        <label class="screen-modal-second-col" for="witness2_address">Address:</label>
+
+                        <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.witness_two_name" id="witness2_name"
+                               name="wi2Name">
+                        <input class="screen-modal-second-col" type="text" [(ngModel)]="directive.witness_two_address" id="witness2_address"
+                               name="w2Addr">
+                    </div>
+
+                    <div class="screen-modal-three-thirty-cols-block">
+                        <label class="screen-modal-first-col" for="witness2_city">City:</label>
+                        <label class="screen-modal-second-col" for="witness2_postal">Postal:</label>
+                        <label class="screen-modal-third-col" for="witness2_prov">Prov:</label>
+
+                        <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.witness_two_city" id="witness2_city"
+                               name="wi2City">
+                        <input class="screen-modal-second-col" type="text" [(ngModel)]="directive.witness_two_postal"
+                               id="witness2_postal" name="wi2Postal">
+                        <input class="screen-modal-third-col" type="text" [(ngModel)]="directive.witness_two_province" id="witness2_prov"
+                               name="wi2Prov">
                     </div>
                 </form>
             </ng-container>
 
             <div class="screen-modal-three-buttons-row">
-                <button class="screen-modal-next-button" (click)="formatWitness2Name()">NEXT</button>
+                <button class="screen-modal-next-button" (click)="checkWitness2Name()">NEXT</button>
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
 
-    <!-- PAGE 16 -->
-    <ng-container *ngIf="page === 16">
-        <div class="screen-modal-data-block-plan">
+        </ng-container>
+
+        <ng-container *ngIf="page === 16">
             <div class="screen-modal-title">
                 <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name !=''">
-                    <h3>
+                    <h2>
                         Congratulations, {{ directive.client_name }} you are done!
-                    </h3>
+                    </h2>
                 </ng-container>
                 <ng-container *ngIf="directive.client_name.length == 0 && directive.client_name ==''">
-                    <h3>
+                    <h2>
                         Congratulations, you are done!
-                    </h3>
+                    </h2>
                 </ng-container>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    Print, save and pat yourself on the back!
+                </h3>
             </div>
 
             <div class="screen-modal-copy">
@@ -967,6 +956,6 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
+    </div>
 </div>

@@ -33,15 +33,13 @@ export class ChooseYourRepOverviewComponent {
     dialogConfig.id = "choose-rep-nine-modal";
     dialogConfig.maxWidth='1024px'
 
-
-
     /* named and defined in wizard.css */
     let modalDialog = this.matDialog.open(ScreenModalChooseYourRepComponent, dialogConfig);
 
-    modalDialog.componentInstance.setRep(this.rep);
-    modalDialog.componentInstance.event.subscribe(resp => {
-      this.rep = resp.rep;
-      this.printForm = resp.print;
+    modalDialog.componentInstance.setRep(this.rep, this.title);
+    modalDialog.componentInstance.event.subscribe(representative => {
+      this.rep = representative.rep;
+      this.printForm = representative.print;
       modalDialog.close();
     })
     modalDialog.afterClosed().subscribe(() => {this.printRepNineForm();});

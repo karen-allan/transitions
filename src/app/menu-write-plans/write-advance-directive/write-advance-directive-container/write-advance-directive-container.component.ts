@@ -30,9 +30,10 @@ export class WriteAdvanceDirectiveContainerComponent {
     //check box items are true false booleans while radio button items are yes and no constants
     //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
     this.directive = new AdvanceDirective( "","","","", 'B.C.', "",
-        "", "", "", "", "", "", false,
-        false, "", "", "", false, false, false, "",
-        "", "", false, false, false, false, false, false, false,
-        false, false, false, false, false, "")
+        "", "", "", "", "", "", "",
+        "", "", "", "", "", false, false,
+        "", "", "", false, false, false, "",
+        "", "", false, false, false, false, false, false,
+        false, false, false, false, false, false, "")
   }
 }

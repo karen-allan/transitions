@@ -1,7 +1,8 @@
-import {EventEmitter, Injectable, OnInit} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import {Observable, of, Subscription} from 'rxjs';
 import {SUB_MENU_ITEMS} from "../ts-files/subMenuItems";
 import {SubMenuItem} from "../ts-files/subMenuItem";
+
 
 @Injectable({
   providedIn: 'root'
@@ -16,9 +17,6 @@ export class DataService {
 
   constructor() { }
 
-/*  onFirstComponentButtonClick(name:string) {
-    this.invokeFirstComponentFunction.emit(name);
-  }*/
 
   // ******************** GET SUB MENU ITEMS *************************
 
@@ -223,7 +221,7 @@ export class DataService {
     // Fri Nov 23 1962 00:00:00 GMT-0800 (Pacific Standard Time)
     const dateDOB = new Date(numYear, numMonth, numDay);
 
-    alert("dateDOB as a Date is " + dateDOB);
+    //alert("dateDOB as a Date is " + dateDOB);
 
     //this toDateString strips that stuff off to Fri Nov 23 1962
     return of(dateDOB.toDateString());

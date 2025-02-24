@@ -1,9 +1,9 @@
 import {Component, EventEmitter} from '@angular/core';
 import {WishesWizard} from "../../ts-files/wishes-wizard";
 import {Question} from "../../ts-files/question";
+import {formatDate} from "@angular/common";
 import {MatDialogRef} from "@angular/material/dialog";
 import {DataService} from "../../service-files/data.service";
-import {formatDate} from "@angular/common";
 
 @Component({
   selector: 'app-screen-modal-make-wish-list',
@@ -15,16 +15,19 @@ export class ScreenModalMakeWishListComponent {
   errorMessage:string;
   wishes:WishesWizard;
   title:string = "Title";
+
   page:number=0;
   finalPage:number=30;
-  selectedQuestion:Question;
   now:string;
-  updatedValue:string="";
+
+  updatedValue:string;
+  selectedQuestion:Question;
 
   public event: EventEmitter<any> = new EventEmitter();
 
-  constructor(public dialogRef: MatDialogRef<ScreenModalMakeWishListComponent>, private dataService: DataService) {
-  }
+  //printForm:boolean=false;
+
+ constructor(public dialogRef: MatDialogRef<ScreenModalMakeWishListComponent>, private dataService: DataService) { }
 
   /* *************************************************************************************************************** */
   ngOnInit(): void {
@@ -37,14 +40,11 @@ export class ScreenModalMakeWishListComponent {
   /* *************************************************************************************************************** */
   setClientDefaults() {
     this.wishes.client_name="benedict cucumber"
+     // alert("client_name is  " +this.wishes.client_name)
   }
 
   printFunction(){
-    this.event.emit({wishes: this.wishes, print: true});
-  }
-
-  closeModal(): void {
-    this.event.emit({wishes: this.wishes, print: false});
+     this.event.emit({wishes: this.wishes, print: true});
   }
 
   onAnswerChanged(value) {
@@ -54,21 +54,20 @@ export class ScreenModalMakeWishListComponent {
 
   /* *************************************************************************************************************** */
   checkClientName(): void {
+     if (this.wishes.client_name.length == 0 && this.wishes.client_name == "")  {
+       this.errorMessage = "Please enter your name here.";
+       return;
+     }
+     else {
+       this.errorMessage = "";
 
-    if (this.wishes.client_name.length == 0 && this.wishes.client_name == "")  {
-      this.errorMessage = "Please enter your name here.";
-      return;
-    }
-    else {
-      this.errorMessage = "";
+       this.dataService.splitNames(this.wishes.client_name)
+           .subscribe(newName => this.updatedValue = newName);
 
-      this.dataService.splitNames(this.wishes.client_name)
-          .subscribe(newName => this.updatedValue = newName);
+       this.wishes.client_name = this.updatedValue;
 
-      this.wishes.client_name = this.updatedValue;
-
-      this.getNextPage();
-    }
+       this.getNextPage();
+     }
   }
 
   /* *************************************************************************************************************** */
@@ -103,9 +102,12 @@ export class ScreenModalMakeWishListComponent {
   }
 
   /* *************************************************************************************************************** */
-  setWishes(wishes:WishesWizard) {
+
+  setWishes(wishes:WishesWizard, title:string) {
     this.wishes = wishes;
     this.selectedQuestion = wishes.questions[0];
+      // alert("the selectedQuestion is being set " + this.selectedQuestion.question_string )
+    this.title=title;
   }
 
   /* *************************************************************************************************************** */
@@ -120,17 +122,26 @@ export class ScreenModalMakeWishListComponent {
 
   /* *************************************************************************************************************** */
   cancelWizard() {
-    //   alert("am cancelling for client " + this.wishes.client_name);
+     //  alert("am cancelling for client " + this.wishes.client_name);
     this.page = 0;
     this.errorMessage='';
     this.wishes.client_name='';
-    this.closeModal();
+      this.closeModal();
+
   }
+
+    /* *************************************************************************************************************** */
+    /* Set in make-wishes-overview.ts */
+    closeModal(): void {
+        this.event.emit({rep: this.wishes, print: false});
+    }
 
   /* *************************************************************************************************************** */
   getCurrentDate() {
     const today = new Date();
     this.now= formatDate(today, 'longDate',  'en-US')
   }
+
+  /* *************************************************************************************************************** */
 
 }

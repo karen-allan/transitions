@@ -1,21 +1,41 @@
-<app-screen-modal-heading [wishes]='wishes'></app-screen-modal-heading>
+<div class="wizard-modal-header">
+    <div class="wizard-modal-logo">
+        <img src="assets/images/details/takeAction/writeNeedsDown/wizardActionMakeWishes.gif" title="{{title}}" alt="{{title}}">
+    </div>
+
+    <div class="wizard-modal-text">
+        <h2><b>Your Wishes and Needs Wizard</b></h2>
+        <p><b>dated {{ now }}</b></p>
+       <!-- <span>
+            <ng-container *ngIf="wishes.client_name.length > 0 && wishes.client_name != ''">
+                for {{ wishes.client_name }}
+            </ng-container>
+        </span>-->
+    </div>
+</div>
+
+<!--{{wishes.questions[0].question_string}}-->
 <div class="screen-modal-inner-block-wishes">
-    <ng-container *ngIf="page === 0">
-        <div class="screen-modal-data-block-wishes">
+    <div class="screen-modal-data-block-wishes">
+        <ng-container *ngIf="page === 0">
             <div class="screen-modal-title">
                 <h2>Why Writing a Wish List is Smart:</h2>
             </div>
 
+            <div class="screen-modal-title-first">
+                <h3>It will help you:</h3>
+            </div>
+
             <ul class="screen-modal-full-col-list square">
-                <li class="screen-modal-list-item">you will understand your needs better.</li>
-                <li class="screen-modal-list-item">you will be able to state your wishes clearly.</li>
-                <li class="screen-modal-list-item">by taking charge, you leave nothing to chance.</li>
-                <li class="screen-modal-list-item">printed and stored, this can serve as your legal advance care plan.</li>
-                <li class="screen-modal-list-item">knowing your wishes will make life easier for your family.</li>
+                <li class="screen-modal-list-item">understand your needs better.</li>
+                <li class="screen-modal-list-item">be able to state your wishes clearly.</li>
+                <li class="screen-modal-list-item">leave nothing to chance.</li>
+                <li class="screen-modal-list-item">use this as part of your legal advance care plan.</li>
+                <li class="screen-modal-list-item">know your wishes making life easier for your family.</li>
             </ul>
 
             <div class="screen-modal-title">
-                <h3>Please enter your name and press NEXT to start the wizard:</h3>
+                <h3>Please enter your name and press START:</h3>
             </div>
 
             <form #wizardForm="ngForm" novalidate>
@@ -38,18 +58,16 @@
                 <button class="screen-modal-start-button " (click)="checkClientName()">START</button>
                 <button class="screen-modal-cancel-start-button" (click)="cancelWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
 
-    <ng-container *ngIf="page > 0 && page <= 30">
-        <div class="screen-modal-data-block-wishes">
-<!--            <div class="screen-modal-full-col-block">-->
-                <div class="question-number">
-                    Question {{ page }} / {{ finalPage }}:
+        <ng-container *ngIf="page > 0 && page <= 30">
+            <div class="screen-modal-full-col-block">
+                <div class="screen-modal-title">
+                    <h2> Question {{ page }} / {{ finalPage }}:</h2>
                 </div>
 
-                <div class="question-text">
-                      {{ selectedQuestion.question_string }}
+                <div class="screen-modal-title-first">
+                    <h3>{{ selectedQuestion.question_string }}</h3>
                 </div>
 
                 <div class="answer-block" *ngFor="let response of selectedQuestion.responses">
@@ -60,7 +78,7 @@
                             {{ response.response_string }}
                         </label>
                     </div>
-<!--                </div>-->
+                </div>
             </div>
 
             <div class="screen-modal-three-buttons-row">
@@ -68,11 +86,10 @@
                 <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="screen-modal-cancel-button" (click)="cancelWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
 
-    <ng-container *ngIf="page === 31">
-        <div class="screen-modal-data-block-wishes">
+        </ng-container>
+
+        <ng-container *ngIf="page === 31">
             <div class="screen-modal-title">
                 <ng-container *ngIf="wishes.client_name.length > 0 && wishes.client_name !=''">
                     <h2>
@@ -82,6 +99,12 @@
                 <ng-container *ngIf="wishes.client_name.length == 0 && wishes.client_name ==''">
                     CONGRATULATIONS, you are done!
                 </ng-container>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    Print, save and pat yourself on the back!
+                </h3>
             </div>
 
             <div class="screen-modal-copy">
@@ -102,8 +125,7 @@
                 <button class="screen-modal-print-button" (click)="printFunction()">PRINT</button>
                 <button class="screen-modal-cancel-print-button" (click)="cancelWizard()">CANCEL</button>
             </div>
-        </div>
-    </ng-container>
+        </ng-container>
+    </div>
 </div>
-
 

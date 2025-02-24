@@ -1,0 +1,841 @@
+/*
+!*************************************** TABLET PORTRAIT ******************************************************!
+!*@media only screen
+and (min-width:600px)
+and (max-width:800px)
+and (orientation:portrait) {
+
+    .mobileForm {
+        display:block;
+    }
+
+    .laptopForm {
+        display:none;
+    }
+
+    .wizard-modal-header {
+        height:var(--tablet-dialog-port-header-height);
+    }
+
+    .wizard-modal-logo img {
+        height:var(--tablet-dialog-port-header-height);
+    }
+
+    !* FRAMEWORK *!
+    !* ********************************** MAKE WISHES **************************** *!
+
+
+    .screen-modal-inner-block-wishes {
+        height:350px;
+    }
+
+    .screen-modal-data-block-wishes {
+        height:inherit;
+    }
+
+    !* ********************************** ADVANCE DIRECTIVE **************************** *!
+    !*BLUE BORDER (width defined in ts file or parent overview *!
+    mat-dialog-container#advance-directive-modal {
+        width:var(--tablet-dialog-port-width);
+        border-radius: 3em;
+    }
+
+    .screen-modal-inner-block-plan {
+        height:360px;
+    }
+
+    .screen-modal-data-block-plan {
+        height:inherit;
+    }
+
+    !* ********************************** CHOOSE REPS **************************** *!
+    mat-dialog-container#choose-rep-nine-modal {
+        width:var(--tablet-dialog-port-width);
+        border-radius: 3em;
+    }
+
+    .screen-modal-inner-block-rep {
+        height:360px;
+    }
+
+    .screen-modal-data-block-rep {
+        height:inherit;
+    }
+
+    .screen-modal-two-buttons-row {
+        grid-template-columns: repeat(2, 95px);
+        grid-column-gap: 5px;
+    }
+
+    .screen-modal-three-buttons-row {
+        grid-template-columns: repeat(3, 95px);
+        grid-column-gap: 5px;
+    }
+
+    .screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
+    .screen-modal-cancel-button, .screen-modal-print-button, .screen-modal-cancel-print-button {
+        font-size: var(--smallest-copy-tablet-font-size);
+        height: 40px;
+        width: 95px;
+    }
+
+    !* CONTENT *!
+    !* WIZARD HEADER *!
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-tablet-font-size);
+        text-align: right;
+        padding-right:1em;
+    }
+
+    .wizard-modal-text p, .wizard-modal-text span {
+        font-size: var(--small-copy-tablet-font-size);
+        line-height: 110%;
+        text-align: right;
+        padding-right:1em;
+    }
+
+    !* HEADINGS  *!
+    .screen-modal-title h2  {
+        font-size: var(--h2-titles-mobile-font-size);
+        padding-top:1em;
+        line-height:110%;
+    }
+
+    .screen-modal-title-first h3 {
+        padding-top: 1em;
+        font-size: var(--h3-titles-mobile-font-size);
+        line-height:110%;
+    }
+
+    .screen-modal-title h3 {
+        padding-top: .8em;
+        font-size: var(--h3-titles-mobile-font-size);
+        line-height:110%;
+    }
+
+    .answer-block {
+        padding:.5em;
+        font-size:var(--big-copy-mobile-font-size);
+    }
+
+    .screen-modal-error-message {
+        font-size: var(--med-copy-mobile-font-size);
+    }
+
+    .screen-modal-copy p  {
+        font-size: var(--med-copy-mobile-font-size);
+        line-height:110%;
+        padding-top:.4em;
+    }
+
+    .screen-modal-copy span  {
+        font-size: var(--small-copy-mobile-font-size);
+        line-height:110%;
+    }
+
+    .screen-modal-list-item {
+        padding-top: .1em;
+        font-size: var(--med-copy-mobile-font-size);
+    }
+
+    .screen-modal-full-col-block p {
+        padding-top: .3em;
+        font-size: var(--med-copy-mobile-font-size);
+    }
+
+    .screen-modal-full-col-block span {
+        padding:.1em 0;
+        font-size: var(--med-copy-mobile-font-size);
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
+        font-size: var(--med-copy-mobile-font-size);
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-first-check-col {
+        grid-column: 1;
+        padding: .3em 0;
+        line-height: 110%;
+    }
+
+    .screen-modal-second-radio-col, .screen-modal-second-check-col  {
+        grid-column: 2;
+        padding: .3em 0;
+        line-height: 110%;
+    }
+
+    .screen-modal-first-col, .screen-modal-second-col, .screen-modal-third-col {
+        padding: .1em 0;
+        font-size: var(--med-copy-mobile-font-size);
+    }
+
+    .screen-modal-full-col, .text-area {
+        padding: .3em 0;
+        font-size: var(--med-copy-mobile-font-size);
+    }
+}
+
+!*************************************** TABLET LANDSCAPE ******************************************************!
+@media only screen
+and (min-width:600px)
+and (max-width:800px)
+and (orientation:landscape) {
+
+    .mobileForm {
+        display:block;
+    }
+
+    .laptopForm {
+        display:none;
+    }
+
+    .wizard-modal-header {
+        height:var(--tablet-dialog-land-header-height);
+    }
+
+    .wizard-modal-logo img {
+        height:var(--tablet-dialog-land-header-height);
+    }
+
+    !* FRAMEWORK *!
+    !* ********************************** MAKE WISHES **************************** *!
+  !*  mat-dialog-container#make-wishes-modal {
+        width:var(--tablet-dialog-land-width);
+    }*!
+
+    .screen-modal-inner-block-wishes {
+        height:340px;
+    }
+
+    .screen-modal-data-block-wishes {
+        height:inherit;
+    }
+
+    !* ********************************** ADVANCE DIRECTIVE **************************** *!
+    !*mat-dialog-container#advance-directive-modal {
+        width:var(--tablet-dialog-land-width);
+    }*!
+
+    .screen-modal-inner-block-plan {
+        height:370px;
+    }
+
+    .screen-modal-data-block-plan {
+        height:inherit;
+    }
+
+    !* ********************************** CHOOSE REPS **************************** *!
+   !* mat-dialog-container#choose-rep-nine-modal {
+        width:var(--tablet-dialog-land-width);
+    }*!
+
+    .screen-modal-inner-block-rep {
+        height:370px;
+    }
+
+    .screen-modal-data-block-rep {
+        height:inherit;
+    }
+
+    !* **************** GRIDS ******************* *!
+    .screen-modal-two-buttons-row {
+        grid-template-columns: repeat(2, 95px);
+        grid-column-gap: 5px;
+    }
+
+    .screen-modal-three-buttons-row {
+        grid-template-columns: repeat(3, 95px);
+        grid-column-gap: 5px;
+    }
+
+    .screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
+    .screen-modal-cancel-button, .screen-modal-print-button, .screen-modal-cancel-print-button {
+        font-size: var(--smallest-copy-tablet-font-size);
+        height: 40px;
+        width: 95px;
+    }
+
+    !* CONTENT *!
+    !* WIZARD HEADER *!
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-tablet-font-size);
+    }
+
+    .wizard-modal-text p, .wizard-modal-text span {
+        font-size: var(--med-copy-tablet-font-size);
+        line-height: 110%;
+    }
+
+    !* HEADINGS - color is declared in the parents .screen-modal-data-block-wishes, .screen-modal-data-block-rep, .screen-modal-data-block-plan *!
+    .screen-modal-title h2  {
+        font-size: var(--h2-titles-tablet-font-size);
+        padding-top:.8em;
+    }
+
+    .screen-modal-title-first h3 {
+        padding-top:.5em;
+        font-size: var(--h3-titles-tablet-font-size);
+    }
+
+    .screen-modal-title h3 {
+        font-size: var(--h3-titles-tablet-font-size);
+        padding-top: .5em;
+    }
+
+    .answer-block {
+        padding:.5em;
+        font-size:var(--big-copy-tablet-font-size);
+    }
+
+    .screen-modal-error-message {
+        font-size: var(--med-copy-tablet-font-size);
+    }
+
+    .screen-modal-copy p  {
+        font-size: var(--med-copy-tablet-font-size);
+        line-height:110%;
+        padding-top:.4em;
+    }
+
+    .screen-modal-copy span  {
+        font-size: var(--small-copy-tablet-font-size);
+        line-height:110%;
+    }
+
+    .screen-modal-list-item {
+        padding-top: .1em;
+        font-size: var(--med-copy-tablet-font-size);
+    }
+
+    .screen-modal-full-col-block p {
+        padding-top: .3em;
+        font-size: var(--med-copy-tablet-font-size);
+    }
+
+    .screen-modal-full-col-block span {
+        padding:.1em 0;
+        font-size: var(--med-copy-tablet-font-size);
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
+        font-size: var(--med-copy-tablet-font-size);
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-first-check-col {
+        padding: .3em 0;
+        line-height: 110%;
+    }
+
+    .screen-modal-second-radio-col, .screen-modal-second-check-col  {
+        padding: .3em 0;
+        line-height: 110%;
+    }
+
+    .screen-modal-first-col, .screen-modal-second-col, .screen-modal-third-col {
+        padding: .1em 0;
+        font-size: var(--med-copy-tablet-font-size);
+    }
+
+    .screen-modal-full-col, .text-area {
+        padding: .3em 0;
+        font-size: var(--med-copy-tablet-font-size);
+    }*!
+
+!*******************************************************************************************************************
+GLOBAL FOR MOBILES
+*******************************************************************************************************************!
+@media only screen
+and (min-width: 320px)
+and (max-width: 1023px) {
+
+
+
+    !* position relative here is essential to get the buttons to sit absolute at the bottom of each modal page *!
+    .screen-form-inner-block-wishes {
+        !*.screen-modal-inner-block-rep, .screen-modal-inner-block-wishes, .screen-modal-inner-block-plan {*!
+        display: grid;
+        float: left;
+        background-color: gold;
+        width: 100%;
+        margin: auto;
+        align-content: flex-start;
+        position: relative;
+    }
+
+    !* this is the parent to two and three buttons rows *!
+    .screen-form-data-block-wishes {
+        !*.screen-modal-data-block-wishes, .screen-modal-data-block-rep, .screen-modal-data-block-plan {*!
+        display: block;
+        float: left;
+        width: 98%;
+        position: relative;
+        margin: 0 1%;
+        color: var(--color-dark-blue);
+        background-color: lightpink;
+    }
+
+    !* **************************** WIZARD HEADER **************************** *!
+    .wizard-modal-header {
+        font-family: var(--family-title);
+        margin: 0 auto;
+        background-color: white;
+    }
+
+    .wizard-modal-logo {
+        margin: auto;
+        cursor: pointer;
+    }
+
+    .wizard-modal-logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .wizard-modal-text {
+        color: var(--color-dark-blue);
+    }
+
+    .wizard-modal-text h2 a {
+        text-decoration: none;
+        color: var(--color-dark-blue);
+    }
+
+    .wizard-modal-text h2 a:hover {
+        color: var(--color-purple);
+    }
+
+    !* **************************** TITLES **************************** *!
+    .screen-modal-title {
+        display: block;
+        width: 100%;
+        font-weight: bold;
+        font-family: var(--family-title);
+    }
+
+    .screen-modal-title h2, .screen-modal-title h3 {
+        display: block;
+        text-align: left;
+    }
+
+    !* **************************** CONTENT **************************** *!
+    .answer-block {
+        display: block;
+        width: 98%;
+        float: left;
+        color: var(--color-dark-blue);
+        font-family: var(--family-copy);
+        text-align: left;
+    }
+
+    .screen-modal-copy {
+        display: grid;
+        width: 100%;
+        !*background-color: white;*!
+    }
+
+    .screen-modal-full-col-block {
+        display: block;
+        float: left;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        line-height: 105%;
+    }
+
+    .screen-modal-full-col {
+        display: block;
+        float: left;
+        width: 100%;
+        line-height: 105%;
+    }
+
+    .screen-modal-full-col-block p {
+        line-height: 105%;
+        font-weight: bold;
+    }
+
+    .screen-modal-full-col-block span {
+        display: block;
+        line-height: 105%;
+    }
+
+    .screen-modal-full-col-list {
+        display: block;
+        padding-left: 2em;
+        margin: 0;
+    }
+
+    .screen-modal-list-item {
+        list-style: square inside;
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
+        border: 1px dashed var(--color-dark-blue);
+        width: 100%;
+    }
+
+    .text-area {
+        display: block;
+        float: left;
+        width: 100%;
+        line-height: 105%;
+        overflow-y: scroll;
+        scrollbar-color: red orange;
+        scrollbar-width: thin;
+    }
+
+    .screen-modal-copy, .screen-modal-full-col-block p, .screen-modal-full-col-block span, .text-area,
+    .screen-modal-full-col-list, .screen-modal-first-col, .screen-modal-list-item,
+    .screen-modal-second-col, .screen-modal-third-col, .screen-modal-forth-col,
+    .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-full-col,
+    .screen-modal-first-check-col, .screen-modal-second-check-col {
+        color: var(--color-dark-blue);
+        font-family: var(--family-copy);
+        text-align: left;
+    }
+
+    !* **************************** GRIDS ********************************** *!
+    .screen-modal-forty-sixty-cols-block, .screen-modal-three-thirty-cols-block, .screen-modal-thirty-forty-thirty-cols-block,
+    .screen-modal-two-fifty-cols-block, .screen-modal-twenty-eighty-cols-block, .screen-modal-eighty-twenty-cols-block,
+    .screen-modal-seventy-thirty-cols-block, .screen-modal-twenty-twenty-sixty-cols-block, .screen-modal-thirty-twenty-thirty-twenty-cols-block {
+        display: inline-grid;
+        width: 100%;
+        text-align: left;
+    }
+
+    !* changed from inline-grid to grid as they were moving off the page to the right side of the screen *!
+    .screen-modal-two-buttons-row, .screen-modal-three-buttons-row {
+        display: grid;
+        width: 100%;
+        background-color: red;
+        justify-content: flex-end;
+        position: absolute;
+        bottom: .5em;
+    }
+
+    .screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
+    .screen-modal-cancel-button, .screen-modal-print-button, .screen-modal-cancel-print-button {
+        display: inline;
+        color: var(--color-white);
+        background-color: var(--color-dark-blue);
+        border-radius: 1em;
+        text-align: center;
+        align-content: center;
+    }
+
+    !* ********************** ERROR ***********************!
+    .screen-modal-error-message-block {
+        display: block;
+        width: 100%;
+        float: left;
+        text-align: left;
+    }
+
+    .screen-modal-error-message {
+        font-weight: 800;
+        color: var(--color-red);
+        font-family: var(--family-copy);
+        line-height: 140%;
+    }
+
+    .wizard-modal-header-mobile {
+        display: none;
+    }
+
+    .wizard-modal-header-desktop {
+        display: block;
+    }
+
+    .wizard-modal-header {
+        display: inline-grid;
+        grid-template-columns: 30% 70%;
+        width: 100%;
+    }
+
+    .wizard-modal-logo {
+        display: grid;
+        justify-content: flex-start;
+        text-align: left;
+        grid-column: 1;
+    }
+
+    .wizard-modal-text {
+        display: grid;
+        grid-column: 2;
+        justify-content: center;
+        align-content: center;
+        !*font-size:var(--med-copy-desktop-font-size);*!
+    }
+
+    .screen-modal-title-first h3 {
+        padding-top: 2em;
+    }
+
+    !* **************** GRIDS ******************* *!
+    .screen-modal-twenty-eighty-cols-block {
+        display: inline-grid;
+        grid-template-columns: 20% 80%;
+    }
+
+    .screen-modal-seventy-thirty-cols-block {
+        display: inline-grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .screen-modal-eighty-twenty-cols-block {
+        display: inline-grid;
+        grid-template-columns: 80% 20%;
+    }
+
+    .screen-modal-forty-sixty-cols-block {
+        display: inline-grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .screen-modal-three-thirty-cols-block {
+        display: inline-grid;
+        grid-template-columns: 33% 33% 34%;
+    }
+
+    .screen-modal-thirty-forty-thirty-cols-block {
+        display: inline-grid;
+        grid-template-columns: 30% 40% 30%;
+    }
+
+    .screen-modal-thirty-twenty-thirty-twenty-cols-block {
+        display: inline-grid;
+        grid-template-columns: 40% 20% 20% 10%;
+    }
+
+    .screen-modal-twenty-twenty-sixty-cols-block {
+        display: inline-grid;
+        grid-template-columns: 20% 20% 60%;
+    }
+
+    .screen-modal-two-fifty-cols-block {
+        display: inline-grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .screen-modal-start-button, .screen-modal-next-button, .screen-modal-print-button {
+        grid-column: 1;
+    }
+
+    .screen-modal-cancel-start-button, .screen-modal-previous-button {
+        grid-column: 2;
+    }
+
+    .screen-modal-cancel-button {
+        grid-column: 3;
+    }
+
+    .screen-modal-first-col {
+        display: grid;
+        grid-column: 1;
+    }
+
+    .screen-modal-second-col {
+        display: grid;
+        grid-column: 2;
+    }
+
+    .screen-modal-third-col {
+        display: grid;
+        grid-column: 3;
+    }
+
+    .screen-modal-forth-col {
+        display: grid;
+        grid-column: 4;
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-first-check-col {
+        grid-column: 1;
+    }
+
+    .screen-modal-second-radio-col, .screen-modal-second-check-col {
+        grid-column: 2;
+    }
+
+}
+
+
+
+*/
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    /* from the old wizard */
+    /* **************************** WIZARD HEADER **************************** */
+    .wizard-form-header {
+        font-family: var(--family-title);
+        margin: 0 auto;
+        background-color: white;
+        border:thin solid blue;
+        height: var(--tablet-dialog-land-header-height);
+        display: inline-grid;
+        grid-template-columns: 30% 70%;
+        width: 100%;
+    }
+
+    .wizard-form-logo {
+        display: grid;
+        justify-content: flex-start;
+        text-align: left;
+        grid-column: 1;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    .wizard-form-logo img {
+        height: var(--tablet-dialog-land-header-height);
+    }
+
+    /*    .wizard-modal-logo img {
+            max-width: 100%;
+            height: auto;
+        }*/
+
+    .wizard-form-text {
+        display: grid;
+        grid-column: 2;
+        justify-content: center;
+        align-content: center;
+        font-size:var(--med-copy-desktop-font-size);
+        color: var(--color-dark-blue);
+    }
+
+    .wizard-form-text h2 a {
+        text-decoration: none;
+        color: var(--color-dark-blue);
+    }
+
+    .wizard-form-text h2 a:hover {
+        color: var(--color-purple);
+    }
+
+    .screen-form-error-message-block {
+        display: block;
+        width: 100%;
+        float: left;
+        text-align: left;
+    }
+
+    .screen-form-error-message {
+        font-weight: 800;
+        color: var(--color-red);
+        font-family: var(--family-copy);
+        line-height: 140%;
+    }
+
+    .screen-form-first-col, .screen-form-second-col, .screen-form-third-col {
+        padding: .4em 0;
+        font-size: var(--big-copy-desktop-font-size);
+        color: var(--color-dark-blue);
+        font-family: var(--family-copy);
+        text-align: left;
+    }
+
+    .screen-form-first-col {
+        display: grid;
+        grid-column: 1;
+    }
+
+    .screen-form-second-col {
+        display: grid;
+        grid-column: 2;
+    }
+
+    .screen-form-third-col {
+        display: grid;
+        grid-column: 3;
+    }
+
+    .screen-form-two-buttons-row, .screen-form-three-buttons-row {
+        display: grid;
+        width: 100%;
+        background-color: red;
+        justify-content: flex-end;
+        position: absolute;
+        bottom: .5em;
+    }
+
+    .screen-form-two-buttons-row {
+        grid-template-columns: repeat(2, 110px);
+        grid-column-gap: 10px;
+    }
+
+    .screen-form-start-button, .screen-form-next-button, .screen-form-print-button {
+        grid-column: 1;
+    }
+
+    .screen-form-cancel-start-button, .screen-form-previous-button {
+        grid-column: 2;
+    }
+
+    .screen-form-cancel-button {
+        grid-column: 3;
+    }
+
+    .screen-form-start-button, .screen-form-cancel-start-button, .screen-form-next-button, .screen-form-previous-button,
+    .screen-form-cancel-button, .screen-form-print-button, .screen-form-cancel-print-button {
+        display: inline;
+        color: var(--color-white);
+        background-color: var(--color-dark-blue);
+        border-radius: 1em;
+        text-align: center;
+        align-content: center;
+        font-size: var(--med-copy-desktop-font-size);
+        height: 50px;
+        width: 110px;
+    }
+
+    .screen-form-full-col-block {
+        display: block;
+        float: left;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        line-height: 105%;
+        color: var(--color-dark-blue);
+        font-family: var(--family-copy);
+        text-align: left;
+    }
+
+    .screen-form-full-col {
+        display: block;
+        float: left;
+        width: 100%;
+        line-height: 105%;
+    }
+
+    .screen-form-answer-block {
+        display: block;
+        width: 98%;
+        float: left;
+        color: var(--color-dark-blue);
+        font-family: var(--family-copy);
+        text-align: left;
+        font-size: var(--med-copy-desktop-font-size);
+    }
+
+    .screen-form-first-radio-col, .screen-form-first-check-col {
+        grid-column: 1;
+        font-size: var(--med-copy-desktop-font-size);
+        padding: 1em 0;
+        line-height: 110%;
+    }
+
+    .screen-form-second-radio-col, .screen-form-second-check-col {
+        grid-column: 2;
+        font-size: var(--med-copy-desktop-font-size);
+        padding: 1em 0;
+        line-height: 110%;
+    }
+
+    .screen-form-first-radio-col, .screen-form-first-check-col {
+        padding: 1em 0;
+        line-height: 110%;
+    }
+}

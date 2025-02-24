@@ -31,6 +31,8 @@ export class ChooseYourRepContainerComponent implements OnInit {
     //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
     this.rep = new RepNine("", "", "", "", "B.C.",
         "", "", "", "", "", "", '',
+        "", "", "", "", '', "",
+        "", "", "", "", "", "", "",
         "", "", "", false, false, "");
   }
   ngOnInit(): void {

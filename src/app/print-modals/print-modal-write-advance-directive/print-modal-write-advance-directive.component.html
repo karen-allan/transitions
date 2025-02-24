@@ -7,30 +7,68 @@
         </div>
     </div>
 
-    <div class="print-title">
+    <div class="print-modal-title">
         <h1>ADVANCE CARE DIRECTIVE</h1>
     </div>
 
-    <div class="print-title">
-        <h2>THIS ADVANCE DIRECTIVE (CARE PLAN) IS MADE BY ME, THE ADULT:
-            <br>
-            <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name != '' ">
-                {{ directive.client_name }} at
-            </ng-container>
-
-            <ng-container *ngIf="directive.client_address.length > 0 && directive.client_address != '' ">
-                <br>
-                {{ directive.client_address }}
-            </ng-container>
-
-            <ng-container *ngIf="directive.client_city.length > 0 && directive.client_city != ''
-                              && directive.client_postal.length > 0 && directive.client_postal !=''">
-                ,<br>{{ directive.client_city }} - {{ directive.client_postal }}
-            </ng-container>
-            <br>
-            in the Province of British Columbia
+    <div class="print-modal-title">
+        <h2>THIS REPRESENTATION AGREEMENT IS MADE BY ME, THE ADULT:<br>
+            {{ directive.client_name }} at
         </h2>
     </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            Address:
+        </div>
+
+        <ng-container *ngIf="directive.client_address.length > 0 && directive.client_address != '' ">
+            <div class="print-modal-inline-value">
+                {{ directive.client_address }}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="directive.client_address.length == 0 && directive.client_address == '' ">
+            <div class="print-modal-inline-line"></div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            City:
+        </div>
+
+        <ng-container *ngIf="directive.client_city.length > 0 && directive.client_city != ''">
+            <div class="print-modal-inline-value">
+                {{ directive.client_city }}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="directive.client_city.length == 0 && directive.client_city == ''">
+            <div class="print-modal-inline-line"></div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            Postal Code:
+        </div>
+
+        <ng-container *ngIf="directive.client_postal.length > 0 && directive.client_postal != ''">
+            <div class="print-modal-inline-value">
+                {{ directive.client_postal }}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="directive.client_postal.length == 0 && directive.client_postal == ''">
+            <div class="print-modal-inline-line"></div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-title">
+        <h2>in the Province of British Columbia</h2>
+    </div>
+
 
     <div class="print-title">
         <h2>PERSONAL INFORMATION:</h2>
@@ -429,6 +467,7 @@
     </div>
 
     <div class="print-title">
+        <br><br>
         <h2>WITNESSES SIGNATURES</h2>
     </div>
 
@@ -475,20 +514,50 @@
     </div>
 
     <div class="print-modal-inline-data">
-        <ng-container *ngIf="directive.witness_one_address.length > 0 && directive.witness_one_address != '' ">
-            <div class="print-modal-inline-prompt">
-                <b>Address:</b>
-            </div>
+        <div class="print-modal-inline-prompt">
+            Address:
+        </div>
+
+        <ng-container *ngIf="directive.witness_one_address.length > 0 && directive.witness_one_address  != '' ">
             <div class="print-modal-inline-value">
                 {{ directive.witness_one_address }}
             </div>
         </ng-container>
 
-        <ng-container *ngIf="directive.witness_one_address.length == 0 && directive.witness_one_address == '' ">
-            <div class="print-modal-inline-prompt">
-                <b>Address:</b>
+        <ng-container *ngIf="directive.witness_one_address.length == 0 && directive.witness_one_address  == '' ">
+            <div class="print-modal-inline-line"> </div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            City:
+        </div>
+
+        <ng-container *ngIf="directive.witness_one_city.length > 0 && directive.witness_one_city  != '' ">
+            <div class="print-modal-inline-value">
+                {{ directive.witness_one_city }}
             </div>
-            <div class="print-modal-inline-line"></div>
+        </ng-container>
+
+        <ng-container *ngIf="directive.witness_one_city.length == 0 && directive.witness_one_city  == '' ">
+            <div class="print-modal-inline-line"> </div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            Province:
+        </div>
+
+        <ng-container *ngIf="directive.witness_one_province.length > 0 && directive.witness_one_province  != '' ">
+            <div class="print-modal-inline-value">
+                {{ directive.witness_one_province }}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="directive.witness_one_province.length == 0 && directive.witness_one_province  == '' ">
+            <div class="print-modal-inline-line"> </div>
         </ng-container>
     </div>
 
@@ -508,7 +577,7 @@
     </div>
 
     <!-- WITNESS 2 -->
-    <div class="print-title">
+    <div class="print-modal-title">
         <h2>WITNESS # 2</h2>
     </div>
 
@@ -524,27 +593,57 @@
 
         <ng-container *ngIf="directive.witness_two_name.length == 0 && directive.witness_two_name == '' ">
             <div class="print-modal-inline-prompt">
-                <b>Name:</b>
+                <b>Print Name:</b>
             </div>
             <div class="print-modal-inline-line"></div>
         </ng-container>
     </div>
 
     <div class="print-modal-inline-data">
-        <ng-container *ngIf="directive.witness_two_address.length > 0 && directive.witness_two_address != '' ">
-            <div class="print-modal-inline-prompt">
-                <b>Address:</b>
-            </div>
+        <div class="print-modal-inline-prompt">
+            Address:
+        </div>
+
+        <ng-container *ngIf="directive.witness_two_address.length > 0 && directive.witness_two_address  != '' ">
             <div class="print-modal-inline-value">
                 {{ directive.witness_two_address }}
             </div>
         </ng-container>
 
-        <ng-container *ngIf="directive.witness_two_address.length == 0 && directive.witness_two_address == '' ">
-            <div class="print-modal-inline-prompt">
-                <b>Address:</b>
+        <ng-container *ngIf="directive.witness_two_address.length == 0 && directive.witness_two_address  == '' ">
+            <div class="print-modal-inline-line"> </div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            City:
+        </div>
+
+        <ng-container *ngIf="directive.witness_two_city.length > 0 && directive.witness_two_city  != '' ">
+            <div class="print-modal-inline-value">
+                {{ directive.witness_two_city }}
             </div>
-            <div class="print-modal-inline-line"></div>
+        </ng-container>
+
+        <ng-container *ngIf="directive.witness_two_city.length == 0 && directive.witness_two_city  == '' ">
+            <div class="print-modal-inline-line"> </div>
+        </ng-container>
+    </div>
+
+    <div class="print-modal-inline-data">
+        <div class="print-modal-inline-prompt">
+            Province:
+        </div>
+
+        <ng-container *ngIf="directive.witness_two_province.length > 0 && directive.witness_two_province  != '' ">
+            <div class="print-modal-inline-value">
+                {{ directive.witness_two_province }}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="directive.witness_two_province.length == 0 && directive.witness_two_province  == '' ">
+            <div class="print-modal-inline-line"> </div>
         </ng-container>
     </div>
 
@@ -557,7 +656,7 @@
 
     <div class="print-modal-inline-data">
         <div class="print-modal-inline-prompt">
-            Date Signed (YYYY/MM/DD):
+            <b>Date Signed (YYYY/MM/DD):</b>
         </div>
 
         <div class="print-modal-inline-line"></div>

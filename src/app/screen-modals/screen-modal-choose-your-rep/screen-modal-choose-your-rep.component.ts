@@ -30,10 +30,8 @@ export class ScreenModalChooseYourRepComponent {
   /* *************************************************************************************************************** */
   ngOnInit(): void {
     this.page = 0;
-
     this.initializeData();
     this.setCurrentDateForHeader();
-
   }
 
   /* *************************************************************************************************************** */
@@ -47,6 +45,7 @@ export class ScreenModalChooseYourRepComponent {
   /* *************************************************************************************************************** */
   checkClientName(): void {
 
+    this.errorMessage = "";
     /* These are the only required fields */
     if (this.rep.client_name.length == 0 && this.rep.client_name == '') {
       this.errorMessage = "You must enter your full name here.";
@@ -59,80 +58,59 @@ export class ScreenModalChooseYourRepComponent {
       this.rep.client_name = this.updatedValue;
     }
 
-    this.errorMessage = this.checkClientAddress();
-    if (this.errorMessage.length > 0 && this.errorMessage != '') {
-      return;
-    }
-
-    this.errorMessage = this.checkForValidDate();
-    if (this.errorMessage.length > 0 && this.errorMessage != '') {
+    var error = this.checkForValidDate();
+    if (error.length > 0 && error != '') {
+      this.errorMessage=error;
       return;
     }
 
     this.getNextPage();
-  }
-
-  /* *************************************************************************************************************** */
-  checkClientAddress(): string {
-    if (this.rep.client_address.length == 0 && this.rep.client_address == '') {
-      this.errorMessage = "You must enter your full address here.";
-      return this.errorMessage;
-    }
-    if (this.rep.client_city.length == 0 && this.rep.client_city == '') {
-      this.errorMessage = "You must enter your city or town here.";
-      return this.errorMessage;
-    }
-    if (this.rep.client_postal.length == 0 && this.rep.client_postal == '') {
-      this.errorMessage = "You must enter your postal code here.";
-      return this.errorMessage;
-    }
-    else {
-      this.errorMessage = '';
-      return this.errorMessage;
-    }
   }
 
   /* *************************************************************************************************************** */
   /* called from the html */
   checkForValidDate(): string {
 
+    var error = "";
     //19621123
     if (this.rep.client_dob.length > 0 && this.rep.client_dob != '') {
       this.dataService.checkIfYearStartDateIsValid(this.rep.client_dob)
           .subscribe(newVar => this.dateError = newVar);
 
-      if(this.dateError) {
-        this.errorMessage = "This is not a valid date."
-      }
-      else {
-        this.errorMessage ="";
+      if (this.dateError) {
+        error = "This is not a valid date."
       }
 
     }
-    return (this.errorMessage);
+    return (error);
   }
 
   /* *************************************************************************************************************** */
-  formatRep1Name(): void {
+  checkRep1Name(): void {
 
-    //Rep 1 name is not required but if it exists capitalize it
+    this.errorMessage = "";
+    /* These are the only required fields */
     if (this.rep.rep_primary_name.length == 0 && this.rep.rep_primary_name == '') {
+      this.errorMessage = "You must enter your primary representativ's full name here.";
       return;
     }
     else {
       this.dataService.splitNames(this.rep.rep_primary_name)
           .subscribe(newName => this.updatedValue = newName);
-    }
 
-    this.rep.rep_primary_name = this.updatedValue;
+      this.rep.rep_primary_name = this.updatedValue;
+    }
 
     this.getNextPage();
   }
 
   /* *************************************************************************************************************** */
-  formatRep2Name(): void {
+  checkRep2Name(): void {
+
+    this.errorMessage = "";
 
     if (this.rep.rep_alternate_name.length == 0 && this.rep.rep_alternate_name == '') {
+      this.errorMessage = "You must enter your alternate representative's name here.";
       return;
     }
     else {
@@ -143,13 +121,16 @@ export class ScreenModalChooseYourRepComponent {
     this.rep.rep_alternate_name = this.updatedValue;
 
     this.getNextPage();
+
   }
 
   /* *************************************************************************************************************** */
-  formatWitness1Name(): void {
+  checkWitness1Name(): void {
 
-    //Witness name is not required but if it exists capitalize it
+    this.errorMessage = "";
+
     if (this.rep.witness_one_name.length == 0 && this.rep.witness_one_name == '') {
+      this.errorMessage = "You must enter your first witnesses's name here.";
       return;
     }
     else {
@@ -163,9 +144,12 @@ export class ScreenModalChooseYourRepComponent {
   }
 
   /* *************************************************************************************************************** */
-  formatWitness2Name(): void {
+  checkWitness2Name(): void {
+
+    this.errorMessage = "";
 
     if (this.rep.witness_two_name.length == 0 && this.rep.witness_two_name == '') {
+      this.errorMessage = "You must enter your second witnesses's name here.";
       return;
     }
     else {
@@ -239,14 +223,32 @@ export class ScreenModalChooseYourRepComponent {
 
     this.rep.client_name = "";
     this.rep.client_address = "";
+    this.rep.client_city = "";
+    this.rep.client_postal = "";
+    this.rep.client_dob = "";
+
     this.rep.rep_primary_name='';
     this.rep.rep_primary_address='';
+    this.rep.rep_primary_city='';
+    this.rep.rep_primary_postal='';
+    this.rep.rep_primary_province='';
+
     this.rep.rep_alternate_name='';
     this.rep.rep_alternate_address='';
+    this.rep.rep_alternate_city='';
+    this.rep.rep_alternate_postal='';
+    this.rep.rep_alternate_province='';
+
     this.rep.witness_one_name='';
     this.rep.witness_one_address=''
+    this.rep.witness_one_city='';
+    this.rep.witness_one_postal='';
+
     this.rep.witness_two_name='';
     this.rep.witness_two_address=''
+    this.rep.witness_two_city='';
+    this.rep.witness_two_postal='';
+
     this.rep.instructions_for_reps = "";
 
     this.closeModal();
@@ -254,8 +256,9 @@ export class ScreenModalChooseYourRepComponent {
 
   /* *************************************************************************************************************** */
   /* Set in choose-rep-overview.ts */
-  setRep(rep:RepNine) {
+  setRep(rep:RepNine, title:string) {
     this.rep = rep;
+    this.title=title;
   }
 
   /* *************************************************************************************************************** */
@@ -296,31 +299,43 @@ export class ScreenModalChooseYourRepComponent {
   initializeData() {
 
     //this.rep.client_name = ""
-    this.rep.client_name="jimmy george mason";
+    this.rep.client_name="michael roy allan";
     //this.rep.client_address = "";
-    this.rep.client_address = "2633 - Smithson Avenue";
+    this.rep.client_address = "2608 Airstrip Road";
     //this.rep.client_city = "";
-    this.rep.client_city = "Cloverdale";
+    this.rep.client_city = "Anglemont";
     //this.rep.client_postal = "";
-    this.rep.client_postal = "V1E-3M4";
+    this.rep.client_postal = "V0E-1M8";
     this.rep.global_province= 'B.C.';
-        this.rep.client_dob = "";
+    this.rep.client_dob = "19621123";
 
-        this.rep.rep_primary_name='mickey j mouse';
-    this.rep.rep_primary_address='Number 5 Orange, Vancouver, B.C. V1E 0K3';
+    this.rep.rep_primary_name='marcus liam allan';
+    this.rep.rep_primary_address='207-6911 Salisbury Avenue';
+    this.rep.rep_primary_city='Burnaby';
+    this.rep.rep_primary_postal='V5E 2Z6';
+    this.rep.rep_primary_province= 'B.C.';
 
     this.rep.rep_alternate_name='nathan emory allan';
-    this.rep.rep_alternate_address='203-3163 Riverwalk Avenue, Vancouver, B.C. V5S-0A8';
+    this.rep.rep_alternate_address='203-3163 Riverwalk Avenue';
+    this.rep.rep_alternate_city='Vancouver';
+    this.rep.rep_alternate_postal='V5S-0A8';
+    this.rep.rep_alternate_province= 'B.C.';
 
     //this.rep.witness_one_name = '';
-    this.rep.witness_one_name='veronica rose lake';
+    this.rep.witness_one_name='roy allan';
     //this.rep.witness_one_address = '';
-    this.rep.witness_one_address='315-416, Sutton Crescent, Princeton, B.C., V1V-2J8';
+    this.rep.witness_one_address='5519 Huston Road';
+    this.rep.witness_one_city='Chilliwack';
+    this.rep.witness_one_postal='V4Z-1E5';
+    this.rep.witness_one_province= 'B.C.';
 
     //this.rep.witness_two_name = '';
     this.rep.witness_two_name='april jones';
     // this.rep.witness_two_address = '';
-    this.rep.witness_two_address='#27 - 870 West 7th Avenue, Vancouver, B.C., V5Z-4C1';
+    this.rep.witness_two_address='#27 - 870 West 7th Avenue';
+    this.rep.witness_two_city='Vancouver';
+    this.rep.witness_two_postal='V5Z-4C1';
+    this.rep.witness_two_province= 'B.C.';
 
     //this.rep.instructions_for_reps = '';
     this.rep.instructions_for_reps = "Please find all of my documents in our hard shell safe found in the office. There you will find" +
@@ -329,9 +344,7 @@ export class ScreenModalChooseYourRepComponent {
 
     this.rep.witness_lawyer = false;
     this.rep.witness_notary = false;
-
     this.rep.choose_alternate = 'chooseAlternateYes';
-
 
   }
 
