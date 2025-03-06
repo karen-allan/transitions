@@ -7,69 +7,69 @@
         </div>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h1>REPRESENTATION AGREEMENT (SECTION 9)</h1>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>THIS REPRESENTATION AGREEMENT IS MADE BY ME, THE ADULT:<br>
             {{ rep.client_name }} at
         </h2>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             Address:
         </div>
 
         <ng-container *ngIf="rep.client_address.length > 0 && rep.client_address != '' ">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.client_address }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.client_address.length == 0 && rep.client_address == '' ">
-            <div class="print-modal-inline-line"></div>
+            <div class="print-inline-line"></div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             City:
         </div>
 
         <ng-container *ngIf="rep.client_city.length > 0 && rep.client_city != ''">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.client_city }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.client_city.length == 0 && rep.client_city == ''">
-            <div class="print-modal-inline-line"></div>
+            <div class="print-inline-line"></div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             Postal Code:
         </div>
 
         <ng-container *ngIf="rep.client_postal.length > 0 && rep.client_postal != ''">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.client_postal }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.client_postal.length == 0 && rep.client_postal == ''">
-            <div class="print-modal-inline-line"></div>
+            <div class="print-inline-line"></div>
         </ng-container>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>in the Province of British Columbia</h2>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>PERSONAL INFORMATION:</h2>
     </div>
 
@@ -79,15 +79,15 @@
         </div>
     </ng-container>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>REVOCATION OF PREVIOUS INSTRUMENTS:</h2>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h3>I revoke any previous Representative Section 9 agreements I have made.</h3>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>RULES FOR REPRESENTATIVE(S):</h2>
     </div>
 
@@ -99,7 +99,7 @@
         </b></p>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>PRIMARY REPRESENTATIVE:</h2>
     </div>
 
@@ -113,30 +113,30 @@
         </p>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             Address:
         </div>
 
         <ng-container *ngIf="rep.rep_primary_address.length > 0 && rep.rep_primary_address != '' ">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.rep_primary_address }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.rep_primary_address.length == 0 && rep.rep_primary_address == '' ">
-            <div class="print-modal-inline-line"></div>
+            <div class="print-inline-line"></div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             City/Province:
         </div>
 
         <ng-container *ngIf="rep.rep_primary_city.length > 0 && rep.rep_primary_city != ''">
             <ng-container *ngIf="rep.rep_primary_province.length > 0 && rep.rep_primary_province != ''">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.rep_primary_city }}, {{ rep.rep_primary_province }}
             </div>
             </ng-container>
@@ -144,7 +144,7 @@
 
         <ng-container *ngIf="rep.rep_primary_city.length > 0 && rep.rep_primary_city != ''">
             <ng-container *ngIf="rep.rep_primary_province.length == 0 && rep.rep_primary_province == ''">
-                <div class="print-modal-inline-value">
+                <div class="print-inline-value">
                     {{ rep.rep_primary_city }},
                 </div>
             </ng-container>
@@ -152,7 +152,7 @@
 
         <ng-container *ngIf="rep.rep_primary_city.length == 0 && rep.rep_primary_city == ''">
             <ng-container *ngIf="rep.rep_primary_province.length > 0 && rep.rep_primary_province != ''">
-                <div class="print-modal-inline-value">
+                <div class="print-inline-value">
                     {{ rep.rep_primary_province}}
                 </div>
             </ng-container>
@@ -160,30 +160,30 @@
 
         <ng-container *ngIf="rep.rep_primary_city.length == 0 && rep.rep_primary_city == ''">
             <ng-container *ngIf="rep.rep_primary_province.length == 0 && rep.rep_primary_province == ''">
-                <div class="print-modal-inline-value">
+                <div class="print-inline-value">
                 </div>
             </ng-container>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             Postal Code:
         </div>
 
         <ng-container *ngIf="rep.rep_primary_postal.length > 0 && rep.rep_primary_postal != ''">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.rep_primary_postal }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.rep_primary_postal.length == 0 && rep.rep_primary_postal == ''">
-            <div class="print-modal-inline-line"></div>
+            <div class="print-inline-line"></div>
         </ng-container>
     </div>
 
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>ALTERNATE REPRESENTATIVE:</h2>
     </div>
 
@@ -197,30 +197,30 @@
         </p>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             Address:
         </div>
 
         <ng-container *ngIf="rep.rep_alternate_address.length > 0 && rep.rep_alternate_address != '' ">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.rep_alternate_address }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.rep_alternate_address.length == 0 && rep.rep_alternate_address == '' ">
-            <div class="print-modal-inline-line"></div>
+            <div class="print-inline-line"></div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             City/Province:
         </div>
 
         <ng-container *ngIf="rep.rep_alternate_city.length > 0 && rep.rep_alternate_city != ''">
             <ng-container *ngIf="rep.rep_alternate_province.length > 0 && rep.rep_alternate_province != ''">
-                <div class="print-modal-inline-value">
+                <div class="print-inline-value">
                     {{ rep.rep_alternate_city }}, {{ rep.rep_alternate_province }}
                 </div>
             </ng-container>
@@ -228,7 +228,7 @@
 
         <ng-container *ngIf="rep.rep_alternate_city.length > 0 && rep.rep_alternate_city != ''">
             <ng-container *ngIf="rep.rep_alternate_province.length == 0 && rep.rep_alternate_province == ''">
-                <div class="print-modal-inline-value">
+                <div class="print-inline-value">
                     {{ rep.rep_alternate_city }},
                 </div>
             </ng-container>
@@ -236,7 +236,7 @@
 
         <ng-container *ngIf="rep.rep_alternate_city.length == 0 && rep.rep_alternate_city == ''">
             <ng-container *ngIf="rep.rep_alternate_province.length > 0 && rep.rep_alternate_province != ''">
-                <div class="print-modal-inline-value">
+                <div class="print-inline-value">
                     {{ rep.rep_alternate_province}}
                 </div>
             </ng-container>
@@ -244,29 +244,29 @@
 
         <ng-container *ngIf="rep.rep_alternate_city.length == 0 && rep.rep_alternate_city == ''">
             <ng-container *ngIf="rep.rep_alternate_province.length == 0 && rep.rep_alternate_province == ''">
-                <div class="print-modal-inline-value">
+                <div class="print-inline-value">
                 </div>
             </ng-container>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             Postal Code:
         </div>
 
         <ng-container *ngIf="rep.rep_alternate_postal.length > 0 && rep.rep_alternate_postal != ''">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.rep_alternate_postal }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.rep_alternate_postal.length == 0 && rep.rep_alternate_postal == ''">
-            <div class="print-modal-inline-line"></div>
+            <div class="print-inline-line"></div>
         </ng-container>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>MY INSTRUCTIONS FOR CARE:</h2>
     </div>
 
@@ -299,52 +299,52 @@
         </p>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>SIGNATURES:</h2>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h3>I have signed this Representation Agreement in the presence of the witnesses whose names appears below.</h3>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>ADULT MAKING THIS AGREEMENT</h2>
     </div>
 
-    <div class="print-modal-inline-data">
+    <div class="print-inline-data">
         <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name != '' ">
-            <div class="print-modal-inline-prompt">
+            <div class="print-inline-prompt">
                 <b>Print Name:</b>
             </div>
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.client_name }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.client_name.length == 0 && rep.client_name == '' ">
-            <div class="print-modal-inline-prompt">
+            <div class="print-inline-prompt">
                 <b>Print Name:</b>
             </div>
-            <div class="print-modal-inline-line"></div>
+            <div class="print-inline-line"></div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             <b>Signature:</b>
         </div>
-        <div class="print-modal-inline-line"></div>
+        <div class="print-inline-line"></div>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             <b>Date Signed (YYYY/MM/DD):</b>
         </div>
 
-        <div class="print-modal-inline-line"></div>
+        <div class="print-inline-line"></div>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>REPRESENTATIVES</h2>
     </div>
 
@@ -357,82 +357,82 @@
         </p>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>PRIMARY REPRESENTATIVE</h2>
     </div>
 
-    <div class="print-modal-inline-data">
+    <div class="print-inline-data">
         <ng-container *ngIf="rep.rep_primary_name.length > 0 && rep.rep_primary_name != '' ">
-            <div class="print-modal-inline-prompt">
+            <div class="print-inline-prompt">
                 <b>Print Name:</b>
             </div>
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.rep_primary_name }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.rep_primary_name.length == 0 && rep.rep_primary_name == '' ">
-            <div class="print-modal-inline-prompt">
+            <div class="print-inline-prompt">
                 <b>Print Name:</b>
             </div>
-            <div class="print-modal-inline-line"></div>
+            <div class="print-inline-line"></div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             <b>Signature:</b>
         </div>
-        <div class="print-modal-inline-line"></div>
+        <div class="print-inline-line"></div>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             <b>Date Signed (YYYY/MM/DD):</b>
         </div>
 
-        <div class="print-modal-inline-line"></div>
+        <div class="print-inline-line"></div>
     </div>
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>ALTERNATE REPRESENTATIVE</h2>
     </div>
 
-    <div class="print-modal-inline-data">
+    <div class="print-inline-data">
         <ng-container *ngIf="rep.rep_alternate_name.length > 0 && rep.rep_alternate_name != '' ">
-            <div class="print-modal-inline-prompt">
+            <div class="print-inline-prompt">
                 <b>Print Name:</b>
             </div>
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.rep_alternate_name }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.rep_alternate_name.length == 0 && rep.rep_alternate_name == '' ">
-            <div class="print-modal-inline-prompt">
+            <div class="print-inline-prompt">
                 <b>Print Name:</b>
             </div>
-            <div class="print-modal-inline-line"></div>
+            <div class="print-inline-line"></div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             <b>Signature:</b>
         </div>
-        <div class="print-modal-inline-line"></div>
+        <div class="print-inline-line"></div>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             <b>Date Signed (YYYY/MM/DD):</b>
         </div>
 
-        <div class="print-modal-inline-line"></div>
+        <div class="print-inline-line"></div>
     </div>
 
 
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>WITNESSES</h2>
     </div>
 
@@ -445,7 +445,7 @@
         </p>
     </div>
     <!-- WITNESS 1 -->
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>WITNESS # 1</h2>
     </div>
 
@@ -468,171 +468,171 @@
         </ng-container>
     </ng-container>
 
-    <div class="print-modal-inline-data">
+    <div class="print-inline-data">
         <ng-container *ngIf="rep.witness_one_name.length > 0 && rep.witness_one_name != '' ">
-            <div class="print-modal-inline-prompt">
+            <div class="print-inline-prompt">
                 <b>Print Name:</b>
             </div>
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.witness_one_name }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.witness_one_name.length == 0 && rep.witness_one_name == '' ">
-            <div class="print-modal-inline-prompt">
+            <div class="print-inline-prompt">
                 <b>Print Name:</b>
             </div>
-            <div class="print-modal-inline-line"></div>
+            <div class="print-inline-line"></div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             Address:
         </div>
 
         <ng-container *ngIf="rep.witness_one_address.length > 0 && rep.witness_one_address  != '' ">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.witness_one_address }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.witness_one_address.length == 0 && rep.witness_one_address  == '' ">
-            <div class="print-modal-inline-line"> </div>
+            <div class="print-inline-line"> </div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             City:
         </div>
 
         <ng-container *ngIf="rep.witness_one_city.length > 0 && rep.witness_one_city  != '' ">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.witness_one_city }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.witness_one_city.length == 0 && rep.witness_one_city  == '' ">
-            <div class="print-modal-inline-line"> </div>
+            <div class="print-inline-line"> </div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             Province:
         </div>
 
         <ng-container *ngIf="rep.witness_one_province.length > 0 && rep.witness_one_province  != '' ">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.witness_one_province }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.witness_one_province.length == 0 && rep.witness_one_province  == '' ">
-            <div class="print-modal-inline-line"> </div>
+            <div class="print-inline-line"> </div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             <b>Signature:</b>
         </div>
-        <div class="print-modal-inline-line"></div>
+        <div class="print-inline-line"></div>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             <b>Date Signed (YYYY/MM/DD):</b>
         </div>
 
-        <div class="print-modal-inline-line"></div>
+        <div class="print-inline-line"></div>
     </div>
 
     <!-- WITNESS 2 -->
-    <div class="print-modal-title">
+    <div class="print-title">
         <h2>WITNESS # 2</h2>
     </div>
 
-    <div class="print-modal-inline-data">
+    <div class="print-inline-data">
         <ng-container *ngIf="rep.witness_two_name.length > 0 && rep.witness_two_name != '' ">
-            <div class="print-modal-inline-prompt">
+            <div class="print-inline-prompt">
                 <b>Print Name:</b>
             </div>
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.witness_two_name }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.witness_two_name.length == 0 && rep.witness_two_name == '' ">
-            <div class="print-modal-inline-prompt">
+            <div class="print-inline-prompt">
                 <b>Print Name:</b>
             </div>
-            <div class="print-modal-inline-line"></div>
+            <div class="print-inline-line"></div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             Address:
         </div>
 
         <ng-container *ngIf="rep.witness_two_address.length > 0 && rep.witness_two_address  != '' ">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.witness_two_address }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.witness_two_address.length == 0 && rep.witness_two_address  == '' ">
-            <div class="print-modal-inline-line"> </div>
+            <div class="print-inline-line"> </div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             City:
         </div>
 
         <ng-container *ngIf="rep.witness_two_city.length > 0 && rep.witness_two_city  != '' ">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.witness_two_city }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.witness_two_city.length == 0 && rep.witness_two_city  == '' ">
-            <div class="print-modal-inline-line"> </div>
+            <div class="print-inline-line"> </div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             Province:
         </div>
 
         <ng-container *ngIf="rep.witness_two_province.length > 0 && rep.witness_two_province  != '' ">
-            <div class="print-modal-inline-value">
+            <div class="print-inline-value">
                 {{ rep.witness_two_province }}
             </div>
         </ng-container>
 
         <ng-container *ngIf="rep.witness_two_province.length == 0 && rep.witness_two_province  == '' ">
-            <div class="print-modal-inline-line"> </div>
+            <div class="print-inline-line"> </div>
         </ng-container>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             <b>Signature:</b>
         </div>
-        <div class="print-modal-inline-line"></div>
+        <div class="print-inline-line"></div>
     </div>
 
-    <div class="print-modal-inline-data">
-        <div class="print-modal-inline-prompt">
+    <div class="print-inline-data">
+        <div class="print-inline-prompt">
             <b>Date Signed (YYYY/MM/DD):</b>
         </div>
 
-        <div class="print-modal-inline-line"></div>
+        <div class="print-inline-line"></div>
     </div>
 </div>
 

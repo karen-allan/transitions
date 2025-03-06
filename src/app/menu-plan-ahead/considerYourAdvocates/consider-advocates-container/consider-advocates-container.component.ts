@@ -13,8 +13,11 @@ export class ConsiderAdvocatesContainerComponent {
 
   detailHeaderName="header-consider-reps"
   title=Constants.CONSIDER_YOUR_ADVOCATES
-  quote: string='The best index to a person\'s character is how they treat people who can\'t do them any good and how they treat people\n' +
-      '                who can\'t fight back.';
-  author: string='Abigail Van Buren';
+
+
+  quote: string='Ask for help not because you are weak, but because you want to remain strong.';
+  author: string='Les Brown';
+
+
 
 }

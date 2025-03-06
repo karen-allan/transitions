@@ -12,7 +12,7 @@ export class AboutPractitionerContainerComponent implements OnInit {
 
   detailHeaderName = 'header-about-practitioner'
   title= Constants.ABOUT_EOL_CAREGIVERS
-  quote: string='The dignity we seek in dying must be found in the dignity with which we have lived our lives.';
+  quote: string='The dignity we seek in dying must be found in the dignity we seek in living.';
   author: string='Sherwin B Nuland';
 
   constructor() { }

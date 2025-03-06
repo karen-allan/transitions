@@ -1,184 +1,380 @@
+/* checked feb 26 2025 */
+
 /*******************************************************************************************************************
-  GLOBAL BANANAS- MOBILES AND SMALL TABLETS- under 900 (content) width so need 10% space on either side of content
+
+WIDTH 90% FOR ALL LESS THAN 900px (OUR CONTENT WINDOW)
+
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 240px)
+and (min-width: 320px)
 and (max-width: 896px)    {
 
     .content-title {
         width:var(--media-less-than-content-width);
     }
 
-    .content-title h1, .content-title h2, .content-title h3, .content-title h4 {
-        line-height: 100%;
-    }
 }
 
 /*******************************************************************************************************************
-  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS AND UP (over 900 so don't need to have space on either side of content)
+
+MAX WIDTH 100% FOR ALL OVER 900px (OUR CONTENT WINDOW)
+
 *******************************************************************************************************************/
 @media only screen
-    and (min-width:960px)    {
+and (min-width:960px)   {
 
     .content-title  {
         width:var(--media-more-than-content-width);
     }
+
 }
 
-/*  BANANAS *******************************************************************************************/
-@media only screen
-and (min-width: 240px)
-and (max-width: 320px) {
+/*******************************************************************************************************************
 
-    .content-title h1, .content-title h2, .content-title h3 {
+ SMALL BANANA PORTRAIT (320), SMALL MOBILE PORTRAIT (360), SMALL TABLET PORTRAIT (600) AND BIG MOBILE PORTRAIT (640) */
+
+/********************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 640px)
+and (orientation: portrait) {
+
+    .content-title h1, .content-title h2, .content-title h3  {
+        line-height: 100%;
         padding-top:.6em;
     }
-
-    .content-title h1 {
-        font-size: var(--h1-titles-banana-font-size);
-    }
-
-    .content-title h2 {
-        font-size: var(--h2-titles-banana-font-size);
-    }
-
-    .content-title h3  {
-        font-size: var(--h3-titles-banana-font-size);
-    }
-
-    .content-title h4  {
-        font-size: var(--h4-titles-banana-font-size);
-    }
-
 }
 
-/* MOBILES   ****************************************************************************************************/
+/*******************************************************************************************************************
+
+SMALL MOBILE (414) TO BANANA (568) LANDSCAPES
+
+/*******************************************************************************************************************/
 @media only screen
-and (min-width: 360px)
-and (max-width: 414px) {
+and (min-width: 414px)
+and (max-width: 568px)
+and (orientation: landscape) {
 
-    .content-title h1, .content-title h2, .content-title h3 {
-        padding-top:.8em;
+    .content-title h1, .content-title h2, .content-title h3  {
+        line-height: 100%;
+        padding-top:.6em;
     }
-
-    .content-title h1 {
-        font-size: var(--h1-titles-mobile-font-size);
-    }
-
-    .content-title h2 {
-        font-size: var(--h2-titles-mobile-font-size);
-    }
-
-    .content-title h3  {
-        font-size: var(--h3-titles-mobile-font-size);
-    }
-
-    .content-title h4  {
-        font-size: var(--h4-titles-mobile-font-size);
-    }
-
 }
 
-/*  TABLETS   *******************************************************************************************/
+/*******************************************************************************************************************
+
+SMALL TABLET LANDSCAPE (800) TO BIG MOBILE LANDSCAPE (896) TO BIG TABLET LANDSCAPE (1280) AND IPAD LANDSCAPE (1366) and UP
+
+/*******************************************************************************************************************/
 @media only screen
-    and (min-width: 600px)
-    and (max-width: 800px)  {
+and (min-width: 800px)
+and (max-width: 1366px)
+and (orientation: landscape) {
 
     .content-title h1, .content-title h2, .content-title h3 {
-        padding-top:.9em;
-    }
-
-    .content-title h1 {
-        font-size:var(--h1-titles-tablet-font-size);
-    }
-
-    .content-title h2 {
-        font-size: var(--h2-titles-tablet-font-size);
-    }
-
-    .content-title h3  {
-        font-size: var(--h3-titles-tablet-font-size);
-    }
-
-    .content-title h4  {
-        font-size: var(--h4-titles-tablet-font-size);
-    }
-
-}
-
-/*  IPADS  *******************************************************************************************/
-@media only screen
-    and (min-width: 1024px)
-    and (max-width: 1366px) {
-
-    .content-title h1, .content-title h2, .content-title h3 {
+        line-height: 110%;
         padding-top:1em;
-    }
-
-    .content-title h1 {
-        font-size: var(--h1-titles-ipad-font-size);
-    }
-
-    .content-title h2 {
-         font-size: var(--h2-titles-ipad-font-size);
-    }
-
-    .content-title h3  {
-        font-size: var(--h3-titles-ipad-font-size);
-    }
-
-    .content-title h4  {
-        font-size: var(--h4-titles-ipad-font-size);
     }
 
 }
 
 /*******************************************************************************************************************
-  LAPTOPS
-*******************************************************************************************************************/
+
+TABLET AND IPAD PORTRAIT
+
+/*******************************************************************************************************************/
 
 @media only screen
-    and (min-width: 1440px)
-    and (max-width: 1919px) {
+and (min-width: 960px)
+and (max-width:1024px)
+and (orientation: portrait) {
 
-    .content-title h1, .content-title h2 {
-        padding-top:1.1em;
+    .content-title h1, .content-title h2, .content-title h3 {
+        line-height: 110%;
+        padding-top:1em;
     }
 
-    /* .content-title h3 {
-        padding-top:.1em;
-     }*/
+}
 
-    .content-title h1 {
-        font-size: var(--h1-titles-laptop-font-size);
-    }
+/*******************************************************************************************************************
 
-    .content-title h2 {
-        font-size: var(--h2-titles-laptop-font-size);
-    }
+LAPTOPS and UP
 
-    .content-title h3  {
-        font-size: var(--h3-titles-laptop-font-size);
-    }
+/*******************************************************************************************************************/
 
-    .content-title h4  {
-        font-size: var(--h4-titles-laptop-font-size);
+@media only screen
+and (min-width: 1440px) {
+
+    .content-title h1, .content-title h2, .content-title h3, .content-light-title h2 {
+        line-height: 110%;
+        padding-top:1em;
     }
 }
 
-/* DESKTOPS ****************************************************************************************************/
+/*******************************************************************************************************************
+  GLOBAL BANANAS - PORTRAIT
+*******************************************************************************************************************/
 @media only screen
-and (min-width: 1920px) {
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: portrait) {
 
-    .content-title h1, .content-title h2, .content-title h3 {
-        padding-top:1.2em;
+    .content-title h1 {
+        font-size: var(--h1-titles-small-banana-font-size);
     }
+
+    .content-title h2,  .content-light-title h2 {
+        font-size: var(--h2-titles-small-banana-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-small-banana-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h3-titles-small-banana-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BANANAS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: landscape) {
+
+    .content-title h1 {
+        font-size: var(--h1-titles-big-banana-font-size);
+    }
+
+    .content-title h2,  .content-light-title h2 {
+        font-size: var(--h2-titles-big-banana-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-big-banana-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h3-titles-big-banana-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: portrait) {
+
+    .content-title h1 {
+        font-size: var(--h1-titles-small-mobile-font-size);
+    }
+
+    .content-title h2,  .content-light-title h2 {
+        font-size: var(--h2-titles-small-mobile-font-size);
+    }
+
+    .content-title h3 {
+        font-size: var(--h3-titles-small-mobile-font-size);
+    }
+
+    .content-title h4 {
+        font-size: var(--h3-titles-small-mobile-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: landscape){
+
+    .content-title h1 {
+        font-size: 1.5em;
+    }
+
+    .content-title h2,  .content-light-title h2 {
+        font-size: var(--h2-titles-small-mobile-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-small-mobile-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h3-titles-small-mobile-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width:640px)
+and (max-width:896px)
+and (orientation: portrait){
+
+    .content-title h1 {
+        font-size: var(--h1-titles-big-mobile-font-size);
+    }
+
+    .content-title h2,  .content-light-title h2 {
+        font-size: var(--h2-titles-big-mobile-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-big-mobile-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h3-titles-big-mobile-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width:640px)
+and (max-width:896px)
+and (orientation: landscape){
+
+    .content-title h1 {
+        font-size: var(--h1-titles-big-mobile-font-size);
+    }
+
+    .content-title h2,  .content-light-title h2 {
+        font-size: var(--h2-titles-big-mobile-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-big-mobile-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h3-titles-big-mobile-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width:800px)
+and (orientation: portrait){
+
+    .content-title h1 {
+        font-size:var(--h1-titles-small-tablet-font-size);
+    }
+
+    .content-title h2,  .content-light-title h2 {
+        font-size: var(--h2-titles-small-tablet-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-small-tablet-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h3-titles-small-tablet-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width:800px)
+and (orientation: landscape){
+
+    .content-title h1 {
+        font-size:var(--h1-titles-small-tablet-font-size);
+    }
+
+    .content-title h2,  .content-light-title h2 {
+        font-size: var(--h2-titles-small-tablet-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-small-tablet-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h3-titles-small-tablet-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG TABLETS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px)
+and (max-width: 1280px)
+and (orientation: portrait) {
+
+    .content-title h1 {
+        font-size:var(--h1-titles-big-tablet-font-size);
+    }
+
+    .content-title h2,  .content-light-title h2 {
+        font-size: var(--h2-titles-big-tablet-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-big-tablet-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h3-titles-big-tablet-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG TABLETS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px)
+and (max-width: 1280px)
+and (orientation: landscape) {
+
+    .content-title h1 {
+        font-size:var(--h1-titles-big-tablet-font-size);
+    }
+
+    .content-title h2,  .content-light-title h2 {
+        font-size: var(--h2-titles-big-tablet-font-size);
+    }
+
+    .content-title h3  {
+        font-size: var(--h3-titles-big-tablet-font-size);
+    }
+
+    .content-title h4  {
+        font-size: var(--h3-titles-big-tablet-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  IPADS PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1024px) {
 
     .content-title h1 {
         font-size: var(--h1-titles-desktop-font-size);
     }
 
-    .content-title h2 {
+    .content-title h2,  .content-light-title h2 {
         font-size: var(--h2-titles-desktop-font-size);
     }
 
@@ -187,7 +383,7 @@ and (min-width: 1920px) {
     }
 
     .content-title h4  {
-        font-size: var(--h4-titles-desktop-font-size);
+        font-size: var(--h3-titles-desktop-font-size);
     }
 
 }
@@ -203,18 +399,25 @@ and (min-width: 1920px) {
 
     .content-title h1, .content-title h2, .content-title h3, .content-title h4 {
         color: var(--color-dark-blue);
-        font-weight: bold;
         font-family: var(--family-title);
+        text-transform: uppercase;
     }
 
     .content-title h1, .content-title h2 {
         text-align:center;
-        /*justify-content: center;*/
     }
 
     .content-title h3, .content-title h4 {
         text-align: left;
     }
 
+    .content-title h4 {
+        padding-top:1em;
+        margin:0;
+    }
+
+    .content-title h1 a, .content-title h2 a, .content-title h3 a, .content-title h4 a {
+        cursor: pointer;
+    }
 
 }

@@ -1,0 +1,30 @@
+/*******************************************************************************************************************
+  GLOBAL BANANAS- MOBILES, SMALL TABLETS - under 900 (content) width so need 10% space on either side of content
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 1023px)    {
+
+    .laptopForm {
+        display:none;
+    }
+
+    .mobileForm {
+        display:block;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS (over 900 so don't need to have space on either side of content)
+*******************************************************************************************************************/
+@media only screen
+and (min-width:1024px)    {
+
+    .laptopForm {
+        display:block;
+    }
+
+    .mobileForm {
+        display:none;
+    }
+}

@@ -11,7 +11,7 @@ import {formatDate} from "@angular/common";
 })
 export class ScreenModalWriteAdvanceDirectiveComponent {
 
-  errorMessage: string;
+ /* errorMessage: string;
   directive: AdvanceDirective;
   title: string = "Title";
 
@@ -22,13 +22,13 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
   updatedValue:string="";
   dateError = false;
 
-  public event: EventEmitter<any> = new EventEmitter();
+  public event: EventEmitter<any> = new EventEmitter();*/
 
   constructor(public dialogRef: MatDialogRef<ScreenModalWriteAdvanceDirectiveComponent>, private dataService: DataService) {
 
   }
 
-  /* *************************************************************************************************************** */
+ /* /!* *************************************************************************************************************** *!/
   ngOnInit(): void {
 
     this.initializeData();
@@ -38,14 +38,14 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
 
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   setCurrentDateForHeader() {
     const today = new Date();
     this.now = formatDate(today, 'longDate', 'en-US')
   }
 
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   checkClientName(): void {
 
       this.errorMessage = "";
@@ -70,8 +70,8 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
     this.getNextPage();
   }
 
-  /* *************************************************************************************************************** */
-  /* called from the html */
+  /!* *************************************************************************************************************** *!/
+  /!* called from the html *!/
   checkForValidDate(): string {
 
     //19621123
@@ -90,7 +90,7 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
     return (this.errorMessage);
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   checkWitness1Name(): void {
 
     this.errorMessage = "";
@@ -109,7 +109,7 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
     this.getNextPage();
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   checkWitness2Name(): void {
 
     this.errorMessage = "";
@@ -129,9 +129,9 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
 
   }
 
-  /* ***************************************************************************************************************
+  /!* ***************************************************************************************************************
   * this is the one where on page 3 where they have chosen either Section 3 or Section 4. If Section 3 they just
-  * continue onto next page and since Section 4 is only one page (10) they go directly there. */
+  * continue onto next page and since Section 4 is only one page (10) they go directly there. *!/
   moveSectionChoiceGoingForward(): void {
     if (this.directive.choose_section == "chooseSection3") {
       this.getNextPage();
@@ -142,9 +142,9 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
 
   }
 
-  /* ***************************************************************************************************************
+  /!* ***************************************************************************************************************
   * this is the one where on page 10 (and only Section 4 people can be on this page)
-  * If they want to go back they go directly back to 3. */
+  * If they want to go back they go directly back to 3. *!/
   moveSection4GoingBackwards(): void {
 
     if (this.directive.choose_section == "chooseSection4") {
@@ -153,18 +153,18 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
 
   }
 
-  /* ***************************************************************************************************************
+  /!* ***************************************************************************************************************
   * this is the one where on page 9 (and only Section 3 people can be on this page) to move forward they must skip
-  * over page 10 which is Section 4s page */
+  * over page 10 which is Section 4s page *!/
   moveSection3GoingForwards(): void {
     if (this.directive.choose_section == "chooseSection3") {
       this.skipNextPage();
     }
   }
 
-  /* ***************************************************************************************************************
+  /!* ***************************************************************************************************************
     * this is the one where on page 11 (and both can be on this page) to move backward they must skip
-    * over page 10 which is Section 4s page and land back 2 pages back to Section 3 */
+    * over page 10 which is Section 4s page and land back 2 pages back to Section 3 *!/
   moveSection3GoingBackwards(): void {
     if (this.directive.choose_section == "chooseSection3") {
     //  alert("skip back 2 pages ")
@@ -172,33 +172,33 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
     }
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   getNextPage() {
     this.page = this.page + 1;
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   getPreviousPage() {
     this.page = this.page - 1;
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   skipNextPage() {
     this.page = this.page + 2;
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   skipPreviousPage() {
     this.page = this.page - 2;
    // alert("to this page " + this.page)
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   skipToPage(skipToPage: number) {
     this.page = skipToPage;
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   cancelDataWizard() {
     this.page = 0;
     this.errorMessage = '';
@@ -258,37 +258,36 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
     this.closeModal();
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
 
-  /* Set in choose-rep-overview.ts */
+  /!* Set in choose-rep-overview.ts *!/
   setDirective(directive: AdvanceDirective, title:string) {
     this.directive = directive;
     this.title = title;
 
-    alert("the directive is being set " );
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
 
-  /* Set in choose-rep-overview.ts */
+  /!* Set in choose-rep-overview.ts *!/
   printFunction() {
     this.event.emit({directive: this.directive, print: true});
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
 
-  /* Set in choose-rep-overview.ts */
+  /!* Set in choose-rep-overview.ts *!/
   closeModal(): void {
     this.event.emit({directive: this.directive, print: false});
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   cancelWizard() {
     this.page = 0;
     this.closeModal();
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   formatDataForPrint(): void {
 
     //format the PHN number if it exists to have dashes between the numbers
@@ -297,7 +296,7 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
     this.printFunction();
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   formatPHNToPrint(): void {
 
     if (this.directive.client_phn.length == 0 && this.directive.client_phn == '') {
@@ -315,7 +314,7 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
     this.directive.client_phn = firstPHN + "-" + secondPHN + "-" + thirdPHN;
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   formatBirthdateToPrint(): void {
 
     // This is a string like '19621123'
@@ -330,7 +329,7 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
 
   }
 
-  /* *************************************************************************************************************** */
+  /!* *************************************************************************************************************** *!/
   initializeData() {
 
     //this.directive.client_name = ""
@@ -401,5 +400,5 @@ export class ScreenModalWriteAdvanceDirectiveComponent {
     this.directive.choose_section = "chooseSection3";
 
   }
-
+*/
 }

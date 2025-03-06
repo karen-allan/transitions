@@ -1,35 +1,99 @@
+/*DONE FEB 24/25 */
+
 /*******************************************************************************************************************
-  GLOBAL BANANAS- MOBILES, SMALL TABLETS - under 900 (content) width so need 10% space on either side of content
+
+WIDTH 90% FOR ALL LESS THAN 900px (OUR CONTENT WINDOW)
+
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 240px)
+and (min-width: 320px)
 and (max-width: 896px)    {
 
-    .content-dark-list, .content-light-list {
+    .list-item,  .small-list-item {
         width:var(--media-less-than-content-width);
-        padding:.5em 0;
     }
 
-    .list-item {
-        line-height: 120%;
-        padding-top: .6em;
+    .mobile-list {
+        display:block;
+    }
+
+    .desktop-list {
+        display:none;
     }
 
 }
 
 /*******************************************************************************************************************
-  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS AND UP (over 900 so don't need to have space on either side of content)
+
+MAX WIDTH 100% FOR ALL OVER 900px (OUR CONTENT WINDOW)
+
 *******************************************************************************************************************/
 @media only screen
 and (min-width:960px)   {
 
-    .content-dark-list, .content-light-list {
+    .list-item,  .small-list-item {
         width:var(--media-more-than-content-width);
-        padding-bottom:1em;
     }
 
-    .list-item {
-        line-height: 200%;
+    .mobile-list {
+        display:none;
+    }
+
+    .desktop-list {
+        display:block;
+    }
+}
+
+/*******************************************************************************************************************
+
+ SMALL BANANA PORTRAIT (320), SMALL MOBILE PORTRAIT (360), SMALL TABLET PORTRAIT (600) AND BIG MOBILE PORTRAIT (640) */
+
+/********************************************************************************************************************/
+
+@media only screen
+and (min-width: 320px)
+and (max-width: 640px)
+and (orientation: portrait) {
+
+    .list-item,  .list-item a, .small-list-item   {
+        line-height: 120%;
+        padding-top:.5em;
+    }
+
+}
+
+/*******************************************************************************************************************
+
+SMALL MOBILE (414) TO BANANA (568) LANDSCAPES
+
+/*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 414px)
+and (max-width: 568px)
+and (orientation: landscape) {
+
+    .list-item,  .list-item a, .small-list-item   {
+        line-height: 120%;
+        padding-top:.5em;
+    }
+
+}
+
+/*******************************************************************************************************************
+
+SMALL TABLET LANDSCAPE (800) TO BIG MOBILE LANDSCAPE (896) TO BIG TABLET LANDSCAPE (1280) AND IPAD LANDSCAPE (1366)
+
+/*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 800px)
+and (max-width: 1366px)
+and (orientation: landscape) {
+
+    .list-item,  .list-item a, .small-list-item   {
+        line-height: 120%;
+        padding-top:1em;
     }
 
     .list-item:first-child  {
@@ -38,73 +102,197 @@ and (min-width:960px)   {
 
 }
 
-/*  BANANA   *******************************************************************************************/
+/*******************************************************************************************************************
+
+TABLET AND IPAD PORTRAIT
+
+/*******************************************************************************************************************/
+
 @media only screen
-and (min-width: 240px)
-and (max-width: 320px) {
+and (min-width: 960px)
+and (max-width:1024px)
+and (orientation: portrait) {
+
+    .list-item,  .list-item a, .small-list-item   {
+        line-height: 120%;
+        padding-top:1em;
+    }
+
+    .list-item:first-child {
+        padding-top:0;
+    }
+}
+
+/*******************************************************************************************************************
+
+LAPTOPS and UP
+
+/*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 1440px) {
+
+    .list-item,  .list-item a, .small-list-item   {
+        line-height: 120%;
+        padding-top:1em;
+    }
+
+    .list-item:first-child {
+        padding-top:0;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BANANAS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: portrait) {
 
     .list-item {
-        font-size: var(--med-copy-banana-font-size);
+        font-size: var(--small-p-banana-port-font-size);
+    }
+
+    .small-list-item {
+        font-size: var(--small-span-banana-port-font-size);
     }
 
 }
 
-/* MOBILES v ****************************************************************************************************/
+/*******************************************************************************************************************
+  GLOBAL BANANAS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: landscape) {
+
+    .list-item {
+        font-size: var(--big-p-banana-land-font-size);
+    }
+
+    .small-list-item {
+        font-size: var(--big-span-banana-land-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - PORTRAIT
+*******************************************************************************************************************/
 @media only screen
 and (min-width: 360px)
-and (max-width: 414px) {
+and (max-width: 414px)
+and (orientation: portrait){
 
     .list-item {
-        font-size: var(--med-copy-mobile-font-size);
+        font-size: var(--small-p-mobile-port-font-size);
+    }
+
+    .small-list-item {
+        font-size: var(--small-span-mobile-port-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: landscape){
+
+    .list-item {
+        font-size: var(--small-p-mobile-land-font-size);
+    }
+
+    .small-list-item {
+        font-size: var(--small-span-mobile-land-font-size);
     }
 
 }
 
-/*  TABLETS   *******************************************************************************************/
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width:640px)
+and (max-width:896px)
+and (orientation: portrait){
+
+    .list-item {
+        font-size: var(--big-p-mobile-port-font-size);
+    }
+
+    .small-list-item {
+        font-size: var(--big-span-mobile-port-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width:640px)
+and (max-width:896px)
+and (orientation: landscape){
+
+    .list-item {
+        font-size: var(--big-p-mobile-land-font-size);
+    }
+
+    .small-list-item {
+        font-size: var(--big-span-mobile-land-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - PORTRAIT
+*******************************************************************************************************************/
 @media only screen
 and (min-width: 600px)
-and (max-width: 800px)  {
+and (max-width:800px)
+and (orientation: portrait) {
 
     .list-item {
-        font-size: var(--med-copy-tablet-font-size);
+        font-size: var(--small-p-tablet-port-font-size);
     }
 
-}
-
-/* IPADS ****************************************************************************************************/
-@media only screen
-and (min-width: 1024px)
-and (max-width: 1366px)  {
-
-    .list-item {
-        font-size: var(--med-copy-ipad-font-size);
+    .small-list-item {
+        font-size: var(--small-span-tablet-port-font-size);
     }
-
 }
 
 /*******************************************************************************************************************
-  LAPTOPS
+  GLOBAL SMALL TABLETS - LANDSCAPE
 *******************************************************************************************************************/
-
 @media only screen
-and (min-width: 1440px)
-and (max-width: 1919px){
+and (min-width: 600px)
+and (max-width:800px)
+and (orientation: landscape){
 
     .list-item {
-        font-size: var(--med-copy-laptop-font-size);
+        font-size: var(--small-p-tablet-land-font-size);
     }
 
+    .small-list-item {
+        font-size: var(--small-span-tablet-land-font-size);
+    }
 }
 
 /*******************************************************************************************************************
-  DESKTOP and UP
+ GLOBAL BIG TABLETS - PORTRAIT
 *******************************************************************************************************************/
-
 @media only screen
-and (min-width: 1920px){
+and (min-width: 960px) {
 
     .list-item {
-        font-size: var(--med-copy-desktop-font-size);
+        font-size: var(--p-desktop-font-size);
+    }
+
+    .small-list-item {
+        font-size: var(--span-desktop-font-size);
     }
 
 }
@@ -117,26 +305,26 @@ and (min-width: 1920px){
         display: grid;
         margin: auto;
         max-width: var(--content-width);
-    }
-
-    .content-dark-list {
         color: var(--color-dark-blue);
-        background-color: white;
-    }
-
-    .content-light-list {
-        color: var(--color-white);
+        border:thin solid purple;
     }
 
     /* LIST */
-    .list-item, .list-item a   {
+    .list-item, .list-item a, .small-list-item   {
+        width:95%;
+        margin-left:5%;
         font-family: var(--family-copy);
         text-align: left;
+        color: var(--color-dark-blue);
     }
 
     .list-item a {
-        text-decoration: underline;
+        text-decoration: none;
         cursor: pointer;
+    }
+
+    .list-item a:hover {
+        text-decoration: underline;
     }
 
     .circle {
@@ -147,19 +335,19 @@ and (min-width: 1920px){
         list-style: square inside;
     }
 
-    .yin-yang {
+    .yin-yang-small {
+        list-style-image:url("src/assets/images/icons/yinYangSmall.png");
+        list-style-position: outside;
+    }
+
+    .yin-yang-big {
         list-style-image:url("src/assets/images/icons/yinYang.png");
-        list-style-position: inside;
+        list-style-position: outside;
     }
 
     .facts {
         list-style-image:url("src/assets/images/icons/facts.png");
-        list-style-position: inside;
+        list-style-position: outside;
     }
-
-  /*  .infinity {
-        list-style-image:url("src/assets/images/icons/infinity.png");
-        list-style-position: inside;
-    }*/
 
 }

@@ -1,0 +1,1015 @@
+/*DONE FEB 24/25 for HOME, ABOUT  */
+
+/*******************************************************************************************************************
+
+    SMALL BANANA PORTRAIT (320), SMALL MOBILE PORTRAIT (360), SMALL TABLET PORTRAIT (600) AND BIG MOBILE PORTRAIT (640)
+    ie ONE COLUMN
+
+/********************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 640px) {
+
+    .mobile-columns {
+        display:block;
+    }
+
+    .desktop-columns {
+        display:none;
+    }
+
+    .about-us-container, .home-facts-container, .wizard-intro-container {
+        width:var(--media-less-than-content-width);
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .home-facts-container {
+        background-color: #ffffff;
+    }
+
+    /* HOME PAGE FACTS */
+    .facts-inline-image {
+        display:grid;
+        grid-column:1;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .facts-inline-text  {
+        display:grid;
+        grid-column:1;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .facts-block-text {
+        width:var(--media-less-than-content-width);
+    }
+
+    /* ABOUT PAGE FACTS */
+    .about-image  {
+        display:grid;
+        grid-column:1;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .about-text   {
+        display:grid;
+        grid-column:1;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .separator-block {
+        display: none;
+    }
+
+    /* MENU ITEMS INTRO PAGES TO ALL MODAL AND FAKE MODALS */
+    .wizard-intro-container {
+        background: radial-gradient(circle at 100px 100px, #dce0e2, #000);
+        border-style: groove;
+        border-width: 7px;
+        border-color: coral;
+        border-radius: 20px 20px;
+    }
+
+    .wizard-image {
+        display: grid;
+        grid-column:1;
+    }
+
+    .wizard-text {
+        display: grid;
+        grid-column: 1;
+    }
+
+    /* HEADERS THAT SIT ON TOP OF EACH MODAL DIALOG PAGE */
+    .wizard-modal-header {
+        display: inline-grid;
+        width: 100%;
+        font-family: var(--family-headers);
+        margin: 0 auto;
+        background-color: white;
+        border-top: thin solid var(--color-grey);
+        border-bottom: thin solid var(--color-grey);
+    }
+
+    .wizard-modal-logo {
+        display: grid;
+        grid-column: 1;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    .wizard-modal-text {
+        display: grid;
+        grid-column: 2;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .wizard-modal-text h1, .wizard-modal-text h2, .wizard-modal-text h3 {
+        color: var(--color-dark-blue);
+        margin:0;
+        font-weight: normal;
+        font-family: var(--family-modal-headings);
+
+    }
+
+}
+
+/*******************************************************************************************************************
+
+  SMALL TABLETS LANDSCAPE (800) TO  BIG MOBILE LANDSCAPE (896) TO BIG TABLET LANDSCAPE (1280) AND IPAD LAND. (1366) AND UP
+    ie TWO COLUMNS
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width:800px)    {
+
+    .mobile-columns {
+        display:none;
+    }
+
+    .desktop-columns {
+        display:block;
+    }
+
+    /* HOME PAGE */
+    /* images are 500 square which are 49% of ipad width 1024 */
+    .home-facts-container, .about-us-container, .wizard-intro-container {
+        width:var(--media-more-than-content-width);
+        display: inline-grid;
+        grid-template-columns: 49% 51%;
+    }
+
+    .home-facts-container {
+        background-color: #363233;
+    }
+
+    .facts-inline-image {
+        display:grid;
+        grid-column:1;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    .facts-inline-text {
+        display:grid;
+        padding:0 1em;
+    }
+
+    .facts-block-text {
+        width:var(--media-more-than-content-width);
+        margin-bottom:2em;
+    }
+
+    /* ABOUT US PAGE */
+     .about-image  {
+         display:grid;
+         grid-column:1;
+         justify-content: flex-start;
+         align-content: center;
+     }
+
+    .about-text  {
+        display:grid;
+        grid-column:2;
+        padding:0 1em;
+        justify-content: center;
+        align-content: center;
+        border-right:thin solid #000;
+     }
+
+    .separator-block {
+        display:block;
+        float:left;
+        width:100%;
+        height:20px;
+        background: radial-gradient(circle at 100px 100px, #e8edef, #000);
+    }
+
+    /* INTRO TO THE WIZARDS PAGES OFF MENUS */
+    .wizard-intro-container {
+        background: radial-gradient(circle at 100px 100px, #dce0e2, #000);
+        border-style: groove;
+        border-width: 7px;
+        border-color: coral;
+        border-radius: 50px 20px;
+    }
+
+    .wizard-image {
+        display: grid;
+        grid-column:1;
+    }
+
+    .wizard-text {
+        display: grid;
+        grid-column: 2;
+    }
+
+    /* HEADER ABOVE EACH MODAL PAGE, EITHER MOBILE OR DESKTOP */
+    .wizard-modal-header {
+        display: inline-grid;
+        width: 100%;
+        font-family: var(--family-headers);
+        margin: 0 auto;
+        background-color: white;
+        border-top: thin solid var(--color-grey);
+        border-bottom: thin solid var(--color-grey);
+    }
+
+    .wizard-modal-logo {
+        display: grid;
+        justify-content: flex-start;
+        grid-column: 1;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    .wizard-modal-logo img {
+        height: var(--desktop-dialog-header-height);
+    }
+
+    .wizard-modal-text {
+        display: grid;
+        grid-column: 2;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .wizard-modal-text h1, .wizard-modal-text h2, .wizard-modal-text h3 {
+        color: var(--color-dark-blue);
+        font-weight: normal;
+        font-family: var(--family-headers);
+        line-height: 110%;
+    }
+
+    .wizard-modal-text h1 {
+        font-size: var(--h1-heading-modal-font-size);
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-heading-modal-font-size);
+    }
+
+    .wizard-modal-text h3 {
+        font-size: var(--h3-heading-modal-font-size);
+    }
+
+    .wizard-modal-text h1, .wizard-modal-text h2, .wizard-modal-text h3 {
+        color: var(--color-dark-blue);
+        font-weight: normal;
+        font-family: var(--family-headers);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BANANAS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: portrait) {
+
+    /* HOME PAGE FACTS CONTAINER there is no dark background here */
+    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
+        font-size: var(--small-p-banana-port-font-size);
+        line-height: 110%;
+        padding-top:1em;
+    }
+
+    /* ABOUT US PAGE */
+    .about-text h2 {
+        padding-top:1em;
+        font-size: var(--h2-titles-small-banana-font-size);
+        line-height:120%;
+    }
+
+    .about-text p {
+        padding-top:1em;
+        font-size: var(--small-p-banana-port-font-size);
+    }
+
+    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
+    .wizard-modal-header {
+        height: var(--banana-dialog-header-height);
+        grid-template-columns: 32% 68%;
+    }
+
+    .wizard-modal-logo img {
+        height: var(--banana-dialog-header-height);
+    }
+
+    .wizard-modal-text h1 {
+        line-height: 100%;
+        font-size: var(--h1-titles-small-banana-font-size);
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-small-banana-font-size);
+        line-height: 100%;
+    }
+
+    .wizard-modal-text h3 {
+        font-size: var(--h3-titles-small-banana-font-size);
+        line-height: 100%;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BANANAS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: landscape) {
+
+    /* HOME PAGE FACTS CONTAINER */
+    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
+        font-size: var(--big-p-banana-land-font-size);
+        line-height: 110%;
+        padding-top:1em;
+    }
+
+    /* ABOUT US PAGE */
+    .about-text h2 {
+        padding-top:1em;
+        font-size: var(--h2-titles-big-banana-font-size);
+        line-height:120%;
+    }
+
+    .about-text p {
+        padding-top:1em;
+        font-size: var(--small-p-banana-port-font-size);
+    }
+
+    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
+    .wizard-modal-header {
+        height: var(--banana-dialog-header-height);
+        grid-template-columns: 18% 82%;
+    }
+
+    .wizard-modal-logo img {
+        height: var(--banana-dialog-header-height);
+    }
+
+    .wizard-modal-text h1 {
+        line-height: 110%;
+        font-size: var(--h1-titles-big-banana-font-size);
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-big-banana-font-size);
+        line-height: 110%;
+    }
+
+    .wizard-modal-text h3 {
+        font-size: var(--h3-titles-big-banana-font-size);
+        line-height: 110%;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: portrait){
+
+    /* there is no dark background here */
+    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
+        font-size: var(--small-p-mobile-port-font-size);
+        line-height: 110%;
+        padding-top:1em;
+    }
+
+    .about-text h2  {
+        padding-top:1em;
+        font-size: var(--h2-titles-small-mobile-font-size);
+        line-height:120%;
+    }
+
+    .about-text p {
+        padding-top:1em;
+        font-size: var(--small-p-mobile-port-font-size);
+    }
+
+    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
+    .wizard-modal-header {
+        height: var(--banana-dialog-header-height);
+        grid-template-columns: 28% 72%;
+    }
+
+    .wizard-modal-logo img {
+        height: var(--banana-dialog-header-height);
+    }
+
+    .wizard-modal-text h1 {
+        line-height: 110%;
+        font-size: var(--h1-titles-small-mobile-font-size);
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-small-mobile-font-size);
+        line-height: 110%;
+    }
+
+    .wizard-modal-text h3 {
+        font-size: var(--h3-titles-small-mobile-font-size);
+        line-height: 110%;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: landscape){
+
+    /* there is no dark background here */
+    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
+        font-size: var(--small-p-mobile-land-font-size);
+        line-height: 110%;
+        padding-top:1em;
+    }
+
+    .about-text h2  {
+        padding-top:1em;
+        font-size: var(--h2-titles-small-mobile-font-size);
+        line-height:120%;
+    }
+
+    .about-text p {
+        padding-top:1em;
+        font-size: var(--small-p-mobile-land-font-size);
+    }
+
+    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
+    .wizard-modal-header {
+        height: var(--banana-dialog-header-height);
+        grid-template-columns: 24% 76%;
+    }
+
+    .wizard-modal-logo img {
+        height: var(--banana-dialog-header-height);
+    }
+
+    .wizard-modal-text h1 {
+        line-height: 110%;
+        font-size: var(--h1-titles-small-mobile-font-size);
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-small-mobile-font-size);
+        line-height: 110%;
+    }
+
+    .wizard-modal-text h3 {
+        font-size: var(--h3-titles-small-mobile-font-size);
+        line-height: 110%;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width:640px)
+and (max-width:896px)
+and (orientation: portrait){
+
+    /* there is no dark background here */
+    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
+        font-size: var(--big-p-mobile-port-font-size);
+        line-height: 110%;
+        padding-top:1em;
+    }
+
+    .about-text h2  {
+        padding-top:1em;
+        font-size: var(--h2-titles-big-mobile-font-size);
+        line-height:120%;
+    }
+
+    .about-text p {
+        padding-top:1em;
+        font-size: var(--big-p-mobile-port-font-size);
+    }
+
+    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
+    .wizard-modal-header {
+        height: var(--mobile-dialog-header-height);
+        grid-template-columns: 24% 76%;
+    }
+
+    .wizard-modal-logo img {
+        height: var(--mobile-dialog-header-height);
+    }
+
+    .wizard-modal-text h1 {
+        line-height: 120%;
+        font-size: var(--h1-titles-big-mobile-font-size);
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-big-mobile-font-size);
+        line-height: 120%;
+    }
+
+    .wizard-modal-text h3 {
+        font-size: var(--h3-titles-big-mobile-font-size);
+        line-height: 120%;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width:640px)
+and (max-width:896px)
+and (orientation: landscape){
+
+    /* image is 500x500 - .4882 there is no white background here */
+    /* HOME PAGE */
+    .facts-inline-text-dark-bkgrnd {
+        height:437px;
+        padding:0 1em;
+    }
+
+    .facts-inline-text-dark-bkgrnd a:first-child {
+        padding-top:0;
+    }
+
+    .facts-inline-text-dark-bkgrnd a  {
+        padding-top:.7em;
+        line-height: 110%;
+        font-size: var(--small-p-tablet-land-font-size);
+    }
+
+    .facts-block-text {
+        padding-top:1em;
+        line-height: 130%;
+        font-size: var(--small-p-tablet-land-font-size);
+    }
+
+    /* this is from the ABOUT US PAGE */
+    .about-text h2  {
+        padding-top: 1em;
+        font-size: var(--h2-titles-big-mobile-font-size);
+        line-height: 120%;
+    }
+
+    .about-text p {
+        padding-top: 1em;
+        font-size: var(--big-p-mobile-land-font-size);
+    }
+
+    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
+    .wizard-modal-header {
+        height: var(--mobile-dialog-header-height);
+        grid-template-columns: 20% 80%;
+    }
+
+    .wizard-modal-logo img {
+        height: var(--mobile-dialog-header-height);
+    }
+
+    .wizard-modal-text h1 {
+        line-height: 120%;
+        font-size: var(--h1-titles-big-mobile-font-size);
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-big-mobile-font-size);
+        line-height: 120%;
+    }
+
+    .wizard-modal-text h3 {
+        font-size: var(--h3-titles-big-mobile-font-size);
+        line-height: 120%;
+    }
+}
+
+/*******************************************************************************************************************
+ GLOBAL SMALL TABLETS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width:800px)
+and (orientation: portrait){
+
+    /* there is no dark background here */
+    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
+        font-size: var(--small-p-tablet-port-font-size);
+    }
+
+    /* this is from the ABOUT US PAGE */
+    .about-text h2  {
+        padding-top: 1em;
+        font-size: var(--h2-titles-small-tablet-font-size);
+        line-height: 120%;
+    }
+
+    .about-text p {
+        padding-top: 1em;
+        font-size: var(--small-p-tablet-port-font-size);
+    }
+
+    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
+    .wizard-modal-header {
+        height: var(--mobile-dialog-header-height);
+        grid-template-columns: 20% 80%;
+    }
+
+    .wizard-modal-logo img {
+        height: var(--mobile-dialog-header-height);
+    }
+
+    .wizard-modal-text h1 {
+        line-height: 120%;
+        font-size: var(--h1-titles-small-tablet-font-size);
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-small-tablet-font-size);
+        line-height: 120%;
+    }
+
+    .wizard-modal-text h3 {
+        font-size: var(--h3-titles-small-tablet-font-size);
+        line-height: 120%;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width:800px)
+and (orientation: landscape){
+
+    /* image is 500x500 - .4882 there is no white background here */
+    /* HOME PAGE */
+    .facts-inline-text-dark-bkgrnd {
+        height:390px;
+        padding:0 1em;
+    }
+
+    .facts-inline-text-dark-bkgrnd a:first-child {
+        padding-top:0;
+    }
+
+    .facts-inline-text-dark-bkgrnd a  {
+        padding-top:.5em;
+        line-height: 110%;
+        font-size: var(--small-p-tablet-land-font-size);
+    }
+
+    .facts-block-text {
+        padding-top:1em;
+        line-height: 130%;
+        font-size: var(--small-p-tablet-land-font-size);
+    }
+
+    /* ABOUT */
+    .about-text h2  {
+        padding-top: 1em;
+        font-size: var(--h2-titles-small-tablet-font-size);
+        line-height: 120%;
+    }
+
+    .about--text p {
+        padding-top: 1em;
+        font-size: var(--small-p-tablet-land-font-size);
+    }
+
+    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
+    .wizard-modal-header {
+        height: var(--mobile-dialog-header-height);
+        grid-template-columns: 20% 80%;
+    }
+
+    .wizard-modal-logo img {
+        height: var(--mobile-dialog-header-height);
+    }
+
+    .wizard-modal-text h1 {
+        line-height: 120%;
+        font-size: var(--h1-titles-small-tablet-font-size);
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-small-tablet-font-size);
+        line-height: 120%;
+    }
+
+    .wizard-modal-text h3 {
+        font-size: var(--h3-titles-small-tablet-font-size);
+        line-height: 120%;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG TABLETS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px)
+and (max-width: 1280px)
+and (orientation: portrait) {
+
+    /* image is 500x500 - .4882 there is no white background here */
+    /* HOME PAGE */
+    .facts-inline-text-dark-bkgrnd {
+        height:468px;
+        padding:0 1em;
+    }
+
+    .facts-inline-text-dark-bkgrnd a:first-child {
+        padding-top:0;
+    }
+
+    .facts-inline-text-dark-bkgrnd a  {
+        padding-top:.8em;
+        font-size: var(--big-p-tablet-port-font-size);
+    }
+
+    .facts-block-text {
+        padding-top:1em;
+        line-height: 130%;
+        font-size: var(--big-p-tablet-port-font-size);
+    }
+
+    /* ABOUT */
+    .about-text h2  {
+        padding-top: 1em;
+        font-size: var(--h2-titles-big-tablet-font-size);
+        line-height: 120%;
+    }
+
+    .about-text p {
+        padding-top: 1em;
+        font-size: var(--big-p-tablet-port-font-size);
+    }
+
+    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
+    .wizard-modal-header {
+        height: var(--mobile-dialog-header-height);
+        grid-template-columns: 20% 80%;
+    }
+
+    .wizard-modal-logo img {
+        height: var(--mobile-dialog-header-height);
+    }
+
+    .wizard-modal-text h1 {
+        line-height: 120%;
+        font-size: var(--h1-titles-big-tablet-font-size);
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-big-tablet-font-size);
+        line-height: 120%;
+    }
+
+    .wizard-modal-text h3 {
+        font-size: var(--h3-titles-big-tablet-font-size);
+        line-height: 120%;
+    }
+}
+
+/*******************************************************************************************************************
+ GLOBAL BIG TABLETS LANDSCAPE, IPADS LAPTOPS AND UP
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1024px) {
+
+    /* HOME PAGE */
+    .facts-inline-text-dark-bkgrnd {
+        height:500px;
+        padding:0 1em;
+    }
+
+    .facts-inline-text-dark-bkgrnd a:first-child {
+        padding-top:0;
+    }
+
+    .facts-inline-text-dark-bkgrnd a  {
+        padding-top:.8em;
+        font-size: var(--p-desktop-font-size);
+    }
+
+    .facts-block-text {
+        padding-top:1em;
+        line-height: 130%;
+        font-size: var(--p-desktop-font-size);
+    }
+
+    /*ABOUT US PAGE */
+    .about-text h2  {
+        padding-top: 1em;
+        font-size: var(--h2-titles-big-tablet-font-size);
+        line-height: 120%;
+    }
+
+    .about-text p {
+        padding-top: 1em;
+        font-size: var(--p-desktop-font-size);
+    }
+
+    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
+    .wizard-modal-header {
+        height: var(--desktop-dialog-header-height);
+        grid-template-columns: 20% 80%;
+    }
+
+    .wizard-modal-logo img {
+        height: var(--desktop-dialog-header-height);
+    }
+
+    .wizard-modal-text h1 {
+        line-height: 120%;
+        font-size: var(--h1-titles-big-tablet-font-size);
+    }
+
+    .wizard-modal-text h2 {
+        font-size: var(--h2-titles-big-tablet-font-size);
+        line-height: 120%;
+    }
+
+    .wizard-modal-text h3 {
+        font-size: var(--h3-titles-big-tablet-font-size);
+        line-height: 120%;
+    }
+}
+
+/* GLOBAL ****************************************************************************************************/
+@media only screen {
+
+    /* HOME PAGE FACTS */
+    .home-facts-container{
+        display: grid;
+        max-width: var(--ipad-width);
+        margin:auto;
+    }
+
+    .facts-inline-image {
+        text-align: center;
+        margin:auto;
+    }
+
+    .facts-inline-image img  {
+        max-width: 100%;
+        height:auto;
+    }
+
+    .facts-inline-text-dark-bkgrnd  {
+        display: grid;
+        justify-content: center;
+        align-content:center;
+        font-family: var(--family-copy);
+        text-align: justify;
+        background: #363233;
+    }
+
+    .facts-inline-text-dark-bkgrnd a {
+        text-decoration: none;
+        color: var(--color-white);
+    }
+
+    .facts-inline-text-white-bkgrnd {
+        padding-top:1em;
+        display: grid;
+        font-family: var(--family-copy);
+        justify-content: center;
+        text-align: left;
+        background: #FFFFFF;
+    }
+
+    .facts-inline-text-white-bkgrnd a {
+        text-decoration: none;
+        color: var(--color-dark-blue);
+    }
+
+    .facts-block-text {
+        display: grid;
+        font-family: var(--family-copy);
+        margin-left:auto;
+        margin-right:auto;
+        margin-bottom:2em;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .facts-block-text a {
+        text-decoration: none;
+        color: var(--color-dark-blue);
+    }
+    
+    /* ABOUT US PAGE */
+    .about-us-container   {
+        display: grid;
+        max-width: var(--ipad-width);
+        font-family: var(--family-copy);
+        margin:auto;
+    }
+
+    .about-image img  {
+        max-width: 100%;
+        height:auto;
+    }
+
+    .about-text {
+        align-content: center;
+        justify-content: center;
+    }
+
+    .about-text h2, .about-text h2 a   {
+        text-align: center;
+        line-height: 130%;
+        color:var(--color-dark-blue);
+    }
+
+    .about-text h2 a   {
+        text-decoration: none;
+    }
+
+    .about-text h2 a:hover {
+        text-decoration: underline;
+    }
+
+    .about-text p {
+        text-align: justify;
+        line-height: 130%;
+        color:var(--color-dark-blue);
+    }
+
+    /*  WIZARD ACTION PLANS */
+    .wizard-intro-container {
+        max-width: var(--ipad-width);
+        font-family: var(--family-copy);
+        margin:auto;
+
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .wizard-image {
+        display:grid;
+        width:100%;
+        /*grid-column:1;*/
+        justify-content: center;
+        align-content: center;
+    }
+
+    .wizard-image a {
+        cursor:pointer;
+    }
+
+    .wizard-image img  {
+        max-width: 100%;
+        height:auto;
+    }
+
+    .wizard-text {
+        display:grid;
+        /*grid-column:2;*/
+        padding:0 2em;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .wizard-text a h2  {
+        text-align: center;
+        line-height:120%;
+    }
+
+    .wizard-text a p {
+        text-align: justify;
+    }
+
+    .wizard-text a p, .wizard-text a h2 {
+        color:var(--color-white);
+    }
+
+    .wizard-text a h2 {
+        text-align: center;
+    }
+
+    .wizard-text a p   {
+        text-align: left;
+        line-height: 130%;
+    }
+}
+

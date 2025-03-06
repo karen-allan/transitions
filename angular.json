@@ -30,21 +30,20 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
 
-              "src/assets/css/bkgd-content.css",
-              "src/assets/css/bkgd-headers.css",
+              "src/assets/css/bkgd-images.css",
+              "src/assets/css/content-images.css",
               "src/assets/css/copy.css",
-              "src/assets/css/images.css",
+              "src/assets/css/fees.css",
+              "src/assets/css/footer.css",
+              "src/assets/css/grid-containers.css",
               "src/assets/css/lists.css",
-              "src/assets/css/print-forms.css",
-              "src/assets/css/print-modals.css",
-              "src/assets/css/screen-forms-consultations.css",
-              "src/assets/css/screen-forms-wizards.css",
+              "src/assets/css/main-menu.css",
+              "src/assets/css/print-reports.css",
+              "src/assets/css/screen-forms.css",
               "src/assets/css/screen-modals.css",
-              "src/assets/css/screen-modals-mobile.css",
               "src/assets/css/styles.css",
               "src/assets/css/template.css",
-              "src/assets/css/titles.css",
-              "src/assets/css/two-columns.css"
+              "src/assets/css/titles.css"
             ],
             "scripts": []
           },
@@ -113,21 +112,21 @@
             "styles": [
 
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/assets/css/bkgd-content.css",
-              "src/assets/css/bkgd-headers.css",
+
+              "src/assets/css/bkgd-images.css",
+              "src/assets/css/content-images.css",
               "src/assets/css/copy.css",
-              "src/assets/css/images.css",
+              "src/assets/css/fees.css",
+              "src/assets/css/footer.css",
+              "src/assets/css/grid-containers.css",
               "src/assets/css/lists.css",
-              "src/assets/css/print-forms.css",
-              "src/assets/css/print-modals.css",
-              "src/assets/css/screen-forms-consultations.css",
-              "src/assets/css/screen-forms-wizards.css",
+              "src/assets/css/main-menu.css",
+              "src/assets/css/print-reports.css",
+              "src/assets/css/screen-forms.css",
               "src/assets/css/screen-modals.css",
-              "src/assets/css/screen-modals-mobile.css",
               "src/assets/css/styles.css",
               "src/assets/css/template.css",
-              "src/assets/css/titles.css",
-              "src/assets/css/two-columns.css"
+              "src/assets/css/titles.css"
             ],
             "scripts": []
           }

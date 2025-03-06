@@ -1,0 +1,961 @@
+<div class="wizard-modal-header">
+    <div class="wizard-modal-logo">
+        <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWriteAdvancePlan.gif" title= "{{title}}" alt="{{title}}">
+    </div>
+
+    <div class="wizard-modal-text">
+        <h1>Advance Care Directive Wizard</h1>
+        <h2>dated {{ now }}</h2>
+        <h3>
+            <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name != ''">
+                for {{ directive.client_name }}
+            </ng-container>
+        </h3>
+    </div>
+</div>
+
+<div class="screen-modal-inner-block-plan">
+    <div class="screen-modal-data-block-plan">
+        <ng-container *ngIf="page === 0">
+            <div class="screen-modal-title">
+                <h2>ADVANCE DIRECTIVE FOR BRITISH COLUMBIA RESIDENTS</h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>Please press START to begin the wizard:</h3>
+            </div>
+
+            <div class="screen-modal-copy">
+                <p>
+                    <b>Made under the <i>Health Care (Consent) and Care Facility (Admission) Act</i></b>
+                    <br>
+                    The use of this form is voluntary. Before completing this Advance Directive, it is advisable to obtain the
+                    advice
+                    of a health care provider about the possible implications of this Advance Directive, and your choices
+                    about the types of health care for which you might give or refuse consent under this Advance Directive.
+                    <br><br>
+                    Note that the effect of this Advance Directive and the giving and refusing of consent under
+                    it is subject to the limitations set out in Sections 19.2 (2), 19.3 (1) and 19.8 of the Health Care (Consent)
+                    and
+                    Care Facility (Admission) Act.
+                </p>
+            </div>
+
+            <div class="screen-modal-two-buttons-row">
+                <button class="screen-modal-start-button " (click)="getNextPage()">START</button>
+                <button class="screen-modal-cancel-start-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 1">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : SECTION 1 - THIS IS THE ADVANCE DIRECTIVE OF THE "ADULT":
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    Enter your full legal name. Birthdate and PHN are optional. Your full legal address is required.
+                </h3>
+            </div>
+
+            <!-- this is the relative parent to the absolute button rows which must be within it -->
+            <form #adultDirectiveForm="ngForm" novalidate>
+                <div class="screen-modal-error-message-block">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="screen-modal-error-message">{{ errorMessage }}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="screen-modal-error-message">&nbsp;</div>
+                    </ng-container>
+                </div>
+
+                <div class="screen-modal-seventy-thirty-cols-block">
+                    <label class="screen-modal-first-col" for="client_name">Full Legal Name of (you) the Adult (required):</label>
+                    <label class="screen-modal-second-col" for="birth_date">Date of Birth: (YYYY/MM/DD):</label>
+
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.client_name" id="client_name" name="clName">
+                    <input [(ngModel)]="directive.client_dob" type="text" class="screen-modal-second-col" id="birth_date" name="clBirth" mask="0000/00/00">
+                </div>
+
+                <div class="screen-modal-seventy-thirty-cols-block">
+                    <label class="screen-modal-first-col" for="address">Address:</label>
+                    <label class="screen-modal-second-col" for="client_cities">City:</label>
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.client_address" id="address" name="clAddr">
+                    <input class="screen-modal-second-col" type="text" [(ngModel)]="directive.client_city" id="client_cities" name="clCity">
+                </div>
+
+                <div class="screen-modal-three-thirty-cols-block">
+                    <label class="screen-modal-first-col" for="postal">Postal Code:</label>
+                    <label class="screen-modal-second-col" for="prov">Province:</label>
+                    <label class="screen-modal-third-col" for="pers-health-num">Personal Health Care Number:</label>
+
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.client_postal" id="postal" name="clPostal">
+                    <input class="screen-modal-second-col" type="text" readonly [(ngModel)]="directive.global_province" id="prov" name="clProv">
+                    <input [(ngModel)]="directive.client_phn" type="text" class="screen-modal-third-col" id="pers-health-num"
+                           name="phn" mask="0000-000-000">
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="checkClientName()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 2">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : SECTION 2 - REVOCATION OF PREVIOUS ADVANCE DIRECTIVES:
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name != ''">
+                        I revoke all previous Advance Directives made by me, {{ directive.client_name }}.
+                    </ng-container>
+                    <ng-container *ngIf="directive.client_name.length == 0 && directive.client_name == ''">
+                        I revoke all previous Advance Directives made by me,
+                    </ng-container>
+                </h3>
+            </div>
+
+            <div class="screen-modal-copy">
+                <p>
+                    <b>I know that as a result of making this Advance Directive:</b>
+                </p>
+            </div>
+
+            <ul class="screen-modal-full-col-list">
+                <li class="screen-modal-list-item">
+                    I will not be provided with any health care for which I refuse consent in this Advance Directive
+                </li>
+
+                <li class="screen-modal-list-item">
+                    No one will be chosen to make decisions on my behalf in respect of any health care matters for which I give or
+                    refuse consent in this Advance Directive.
+                </li>
+            </ul>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 3">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : YOUR ADVANCE DIRECTIVE DECISIONS:
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    Health Care Decisions are Your Decisions:
+                </h3>
+            </div>
+
+            <div class="screen-modal-copy">
+                <p>
+                    This directive will prompt you to decide what kind of care you would want when faced with serious injury or
+                    illness. It lets you think ahead and provide answers to possible future health issues.
+                    <br><br>
+                    Choose <b>SECTION 3: CONDITIONS FOR HEALTH CARE</b> if you think you would
+                    want to limit medical interventions (eg: you are diagnosed as terminal).
+                    <br>
+                    Choose <b>SECTION 4: HEALTH CARE CONSENT FOR ALL TREATMENTS</b> if you would want all possible medical interventions
+                    no matter the consequences.
+                </p>
+            </div>
+
+            <form #adultDirectiveForm="ngForm" novalidate>
+                <div class="screen-modal-two-fifty-cols-block">
+                    <div class="screen-modal-first-radio-col">
+                        <input type="radio" [(ngModel)]="directive.choose_section" value="chooseSection3" id="choose3"
+                               name="Choose3">
+                        <label for="choose3">
+                            <b>SECTION 3: CONDITIONS FOR HEALTH CARE</b>.
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-second-radio-col">
+                        <input type="radio" [(ngModel)]="directive.choose_section" value=chooseSection4 id="choose4"
+                               name="Choose3">
+                        <label for="choose4">
+                            <b>SECTION 4: HEALTH CARE CONSENT TO ALL</b>
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="moveSectionChoiceGoingForward()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 4">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : SECTION 3: CONDITIONS FOR HEALTH CARE:
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    If I am sedated and unable to communicate, I would like the sedation lifted so that I can
+                    decide for myself to accept or refuse a particular therapy:
+                </h3>
+            </div>
+            <form #adultDirectiveForm="ngForm" novalidate>
+                <div class="screen-modal-forty-sixty-cols-block">
+                    <div class="screen-modal-first-radio-col">
+                        <input type="radio" [(ngModel)]="directive.lift_sedation" value="liftSedationYes" id="liftSedYes"
+                               name="sedation">
+                        <label for="liftSedYes">
+                            Yes, lift my sedation.
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-second-radio-col">
+                        <input type="radio" [(ngModel)]="directive.lift_sedation" value=liftSedationNo id="liftSedNo"
+                               name="sedation">
+                        <label for="liftSedNo">
+                            No, do not lift my sedation.
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <div class="screen-modal-title">
+                <h3>
+                    I direct that I receive only such care as will keep me comfortable and
+                    pain free, and that my dying not be prolonged should any of the following circumstances occur:
+                </h3>
+            </div>
+
+            <form #adultDirectiveForm="ngForm" novalidate>
+                <div class="screen-modal-full-col-block">
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.conditions1a" value="conditions1a" id="acute"
+                               name="Acute">
+                        <label for="acute">
+                            1a. An acute life-threatening illness of an irreversible nature.
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.conditions1b" value="conditions1b" id="chronic"
+                               name="Chronic">
+                        <label for="chronic">
+                            1b. Chronic debilitating suffering of a permanent nature.
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.conditions1c" value="conditions1c" id="dementia"
+                               name="Dementia">
+                        <label for="dementia">
+                            1c. Advanced dementia.
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 5">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : SECTION 3: CONDITIONS FOR HEALTH CARE::
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    In the circumstances set out in (1a, 1b, 1c), I specifically refuse the following:
+                </h3>
+            </div>
+
+            <form #wizardForm="ngForm" novalidate>
+                <div class="screen-modal-full-col-block">
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.refusals2a" value="refusals2a" id="electrical" name="ele">
+                        <label for="electrical">
+                            2a. Electrical, mechanical or other artificial stimulation of my heart.
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.refusals2b" value="refusals2b" id="respirator" name="resp">
+                        <label for="respirator">
+                            2b. Respirator or ventilator
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.refusals2c" value="refusals2c" id="feeding" name="tube">
+                        <label for="feeding">
+                            2c. Artificial feeding e.g. G tube, NG tube, or central intravenous line.
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.refusals2d" value="refusals2d" id="fed" name="fed">
+                        <label for="fed">
+                            2d. Being fed should I no longer be able to feed myself.
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.refusals2e" value="refusals2e" id="hydration" name="chron">
+                        <label for="hydration">
+                            2e. Artificial hydration by intravenous line.
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.refusals2f" value="refusals2f" id="antibiotics" name="dem">
+                        <label for="antibiotics">
+                            2f. Antibiotics
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.refusals2g" value="refusals2g" id="icu" name="dem">
+                        <label for="icu">
+                            2g. Transfer to an intensive care unit or similar facility
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 6">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : SECTION 3: CONDITIONS FOR HEALTH CARE:
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    In this Advance Directive, I specifically direct the following regarding palliative care:
+                </h3>
+            </div>
+            <form #wizardForm="ngForm" novalidate>
+                <div class="screen-modal-full-col-block">
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.palliative3a" value="palliative3a" id="meds" name="Meds">
+                        <label for="meds">
+                            3a. Provide necessary medication to control my pain and symptoms even if such
+                            medication might shorten my life.
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.palliative3b" value="palliative3b" id="care" name="Care">
+                        <label for="care">
+                            3b. Provide me with palliative care.
+                        </label>
+                    </div>
+
+                    <!--                <div class="screen-modal-forty-sixty-cols-block">-->
+                    <div class="screen-modal-first-radio-col">
+                        <input type="radio" [(ngModel)]="directive.die_at_home" value="atHomeYes" id="homeYes" name="location">
+                        <label for="homeYes">
+                            3c. I would like to die in my home.
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-first-radio-col">
+                        <input type="radio" [(ngModel)]="directive.die_at_home" value="atHomeNo" id="homeNo" name="location">
+                        <label for="homeNo">
+                            3c. I would like to die in a hospice.
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 7">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : SECTION 3: CONDITIONS FOR HEALTH CARE:
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    If I need health care and I am not capable of refusing consent to the health care at the time
+                    health care is required, I give the following instructions:
+                </h3>
+            </div>
+
+            <div class="screen-modal-copy">
+                <p><b>I refuse to consent to the following health care:</b></p>
+            </div>
+
+            <form #wizardForm="ngForm" novalidate>
+                <div class="screen-modal-full-col-block">
+                   <textarea
+                       name="consent"
+                       class="text-area"
+                       rows="6"
+                       [(ngModel)]="directive.consent_refused_notes"
+                       placeholder="Add any of the treatments you give consent to.">
+                   </textarea>
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 8">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : SECTION 3: CONDITIONS FOR HEALTH CARE:
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    Information regarding Medically Assisted Death (MAID) in Canada at this time.
+                </h3>
+            </div>
+
+            <div class="screen-modal-copy">
+                <p>
+                    You understand that current Canadian laws does not allow persons to request Medical Assistance in Dying
+                    (“MAID”) in advance, or for their Representatives to consent to MAID on their behalf.
+                    However, laws can change and if they did allow for the above, check off here your directions regarding MAID:
+                </p>
+            </div>
+            <form #wizardForm="ngForm" novalidate>
+                <div class="screen-modal-full-col-block">
+                    <div class="screen-modal-first-radio-col">
+                        <input type="radio" [(ngModel)]="directive.request_maid" value="maidYes" id="maidYes2" name="maid">
+                        <label for="maidYes2">
+                            3d. I would like to provide my requests regarding MAID (Medically Assisted Death).
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-first-radio-col">
+                        <input type="radio" [(ngModel)]="directive.request_maid" value="maidNo" id="maidNo2" name="maid">
+                        <label for="maidNo2">
+                            3d. I am not interested in pursuing MAID as an option (Medically Assisted Death).
+                        </label>
+                    </div>
+                </div>
+
+                <ng-container *ngIf="directive.request_maid == 'maidYes'">
+                    <div class="screen-modal-full-col-block">
+                        <textarea
+                            name="consent"
+                            rows="4"
+                            class="text-area"
+                            [(ngModel)]="directive.consent_maid_notes"
+                            placeholder="If MAID in advance becomes legal, I give these directions regarding my care: .">
+                        </textarea>
+                    </div>
+                </ng-container>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 9">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : SECTION 3: CONDITIONS FOR HEALTH CARE:
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    If I need health care and I am not capable of giving consent to the health care at the time
+                    health care is required, I give the following instructions:
+                </h3>
+            </div>
+
+            <div class="screen-modal-copy">
+                <p><b>I consent to the following health care:</b></p>
+            </div>
+
+            <form #wizardForm="ngForm" novalidate>
+                <div class="screen-modal-full-col-block">
+                    <textarea
+                        name="consent"
+                        class="text-area"
+                        rows="6"
+                        [(ngModel)]="directive.consent_given_notes"
+                        placeholder="Add any of the treatments you give consent to.">
+                    </textarea>
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="moveSection3GoingForwards()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <!-- PAGE 10 -->
+        <ng-container *ngIf="page === 10">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : SECTION 4: HEALTH CARE CONSENT FOR ALL TREATMENTS:
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    Section 4: I specify that I do wish to have my life prolonged under any circumstances, and am requesting
+                    all treatments applicable to my medical condition,
+                </h3>
+            </div>
+
+            <div class="screen-modal-copy">
+                <p>
+                    By checking off this box, you are requesting all interventions and procedures, including CPR, be performed on
+                    you in order to prolong your life. This is with full knowledge that you accept the possible repercussions of
+                    these
+                    procedures (broken ribs from CPR etc.). This is accepting also any and all outcomes that may occur because of
+                    these interventions and medical procedures.
+                </p>
+            </div>
+            <form #wizardForm="ngForm" novalidate>
+                <div class="screen-modal-full-col-block">
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" checked=checked [(ngModel)]="directive.prolong_life4" value=true id="prolongYes"
+                               name="pro">
+                        <label for="prolongYes">
+                            4a. I desire that my life be prolonged, and that I be provided all life-sustaining treatments applicable
+                            to
+                            my
+                            medical condition.
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="moveSection4GoingBackwards()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 11">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : RULES FOR FOLLOWING THIS ADVANCE DIRECTIVE:
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    I specifically direct the following:
+                </h3>
+            </div>
+
+            <form #wizardForm="ngForm" novalidate>
+                <div class="screen-modal-full-col-block">
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.follow_acp1" value="follow_acp1" id="acp1" name="Acp1">
+                        <label for="acp1">
+                            1. If my health care provider will not follow this Advance Health Care Directive, I ask that my care be
+                            transferred to another health care provider who will respect my legal rights.
+                        </label>
+                    </div>
+                </div>
+
+                <div class="screen-modal-full-col-block">
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.follow_acp2" value="follow_acp2" id="acp2" name="Acp2">
+                        <label for="acp2">
+                            2. If I should be a patient in a hospital, or resident in a health care or long-term care facility
+                            which will not follow this Advance Health Care Directive, I ask that I be transferred to another
+                            hospital or care facility.
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="moveSection3GoingBackwards()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 12">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : ORGAN DONATION:
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    Organ donation information:
+                </h3>
+            </div>
+
+            <form #wizardForm="ngForm" novalidate>
+                <div class="screen-modal-forty-sixty-cols-block">
+                    <div class="screen-modal-first-radio-col">
+                        <input type="radio" [(ngModel)]="directive.client_organ_donor" value="organDonorYes" id="organDonorTrue"
+                               name="donor">
+                        <label for="organDonorTrue">
+                            I am an organ donor.
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-second-radio-col">
+                        <input type="radio" [(ngModel)]="directive.client_organ_donor" value="organDonorNo" id="organDonorFalse"
+                               name="donor">
+                        <label for="organDonorFalse">
+                            I am not an organ donor.
+                        </label>
+                    </div>
+                </div>
+            </form>
+
+            <ng-container *ngIf="directive.client_organ_donor === 'organDonorNo'">
+                <div class="screen-modal-copy">
+                    <p>
+                        To register to become an organ donor, you can go to https://register.transplant.bc.ca/. You will need:
+                    </p>
+                </div>
+
+                <ul class="screen-modal-full-col-list">
+                    <li class="screen-modal-list-item">your BC Personal Health Number</li>
+                    <li class="screen-modal-list-item">your name, birth date and address in British Columbia</li>
+                    <li class="screen-modal-list-item">A parent/guardian can sign on behalf of someone who is under the age of
+                        19.
+                    </li>
+                </ul>
+            </ng-container>
+
+            <ng-container *ngIf="directive.client_organ_donor === 'organDonorYes'">
+                <div class="screen-modal-copy">
+                    <p>You have indicated that you are an organ donor. :) Ensure that you:</p>
+                </div>
+
+                <ul class="screen-modal-full-col-list">
+                    <li class="screen-modal-list-item">are officially registered as an organ donor with BC Transplant</li>
+                    <li class="screen-modal-list-item">your loved ones are aware of your organ donation decision.</li>
+                    <li class="screen-modal-list-item">have checked your status online through the BC Transplant website using
+                        your
+                        Personal Health Number.
+                    </li>
+                    <li class="screen-modal-list-item">know how to change your organ donation decision via the BC Transplant
+                        website.
+                    </li>
+                </ul>
+            </ng-container>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 13">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : WITNESSES TO ADULT’S SIGNATURE:
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>The following persons may not be a witness:</h3>
+            </div>
+
+            <ul class="screen-modal-full-col-list">
+                <li class="screen-modal-list-item">
+                    A person who provides personal care, health care or financial services to the adult for compensation, other
+                    than a lawyer or a notary public;
+                </li>
+                <li class="screen-modal-list-item">
+                    A spouse, child, parent, employee or agent of a person described in paragraph (a);
+                </li>
+                <li class="screen-modal-list-item">
+                    A person who is under 19 years of age
+                </li>
+                <li class="screen-modal-list-item">
+                    A person who does not understand the communication used by the adult unless the person receives
+                    interpretive assistance.
+                </li>
+            </ul>
+
+            <div class="screen-modal-title">
+                <h3>You should not witness the Advance Directive if you have reason to believe that:</h3>
+            </div>
+
+            <ul class="screen-modal-full-col-list">
+                <li class="screen-modal-list-item">
+                    The Adult is incapable of making, changing, or revoking an Advance Directive;
+                </li>
+
+                <li class="screen-modal-list-item">
+                    Fraud, undue pressure or some form of abuse or neglect was used to induce the Adult to change or revoke the Advance
+                    Directive.
+                </li>
+            </ul>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 14">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : WITNESS 1 TO ADULT’S SIGNATURE:
+                </h2>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    WITNESS 1 must sign in the presence of the Adult and Witness No.2.
+                </h3>
+            </div>
+
+            <div class="screen-modal-copy ">
+                <p>
+                    Please Note: Only 1 witness is required if Witness No. 1 is a lawyer or member in good
+                    standing of the Society of Notaries Public of British Columbia. If applicable please check the relevant
+                    box below:
+                </p>
+            </div>
+
+            <form #wizardForm="ngForm" novalidate>
+                <div class="screen-modal-error-message-block">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="screen-modal-error-message">{{ errorMessage }}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="screen-modal-error-message">&nbsp;</div>
+                    </ng-container>
+                </div>
+
+                <div class="screen-modal-forty-sixty-cols-block">
+                    <div class="screen-modal-first-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.witness_lawyer" value="true" id="lawyer" name="Lawyer">
+                        <label for="lawyer">
+                            <span>Lawyer</span>
+                        </label>
+                    </div>
+
+                    <div class="screen-modal-second-check-col">
+                        <input type="checkbox" [(ngModel)]="directive.witness_notary" value="false" id="notary" name="Notary">
+                        <label for="notary">
+                            <span>Member of the Society of Notaries Public of B.C.</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="screen-modal-two-fifty-cols-block">
+                    <label class="screen-modal-first-col" for="witness1_name">Print Name:</label>
+                    <label class="screen-modal-second-col" for="witness1_address">Address:</label>
+
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.witness_one_name" id="witness1_name"
+                           name="wi1Name">
+                    <input class="screen-modal-second-col" type="text" [(ngModel)]="directive.witness_one_address" id="witness1_address"
+                           name="w1Addr">
+                </div>
+
+                <div class="screen-modal-three-thirty-cols-block">
+                    <label class="screen-modal-first-col" for="witness1_city">City:</label>
+                    <label class="screen-modal-second-col" for="witness1_postal">Postal:</label>
+                    <label class="screen-modal-third-col" for="witness1_prov">Prov:</label>
+
+                    <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.witness_one_city" id="witness1_city" name="wi1City">
+                    <input class="screen-modal-second-col" type="text" [(ngModel)]="directive.witness_one_postal" id="witness1_postal" name="wi1Postal">
+                    <input class="screen-modal-third-col" type="text" [(ngModel)]="directive.witness_one_province" id="witness1_prov"
+                           name="wi1Prov">
+                </div>
+            </form>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="checkWitness1Name()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 15">
+            <div class="screen-modal-title">
+                <h2>
+                    Page {{ page }} / {{ finalPage }} : WITNESS 2 TO ADULT’S SIGNATURE:
+                </h2>
+            </div>
+
+            <ng-container *ngIf="directive.witness_lawyer">
+                <div class="screen-modal-title-first">
+                    <ng-container *ngIf="directive.witness_one_name.length > 0 && directive.witness_one_name != ''">
+                        <h3>
+                            WITNESS 2 is not needed because you stated that {{ directive.witness_one_name }} is a
+                            Lawyer.
+                        </h3>
+                    </ng-container>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="directive.witness_notary">
+                <div class="screen-modal-title-first">
+                    <ng-container *ngIf="directive.witness_one_name.length > 0 && directive.witness_one_name != ''">
+                        <h3>
+                            WITNESS 2 is not needed because you stated that {{ directive.witness_one_name }} is a
+                            Notary Public.
+                        </h3>
+                    </ng-container>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="directive.witness_notary || directive.witness_lawyer">
+                <div class="screen-modal-copy">
+                    <p>
+                        Because only 1 Witness is needed if the first Witness is a Lawyer or Notary Public, you can move to the next
+                        page. If you did not mean to select Witness 1 to be either a Lawyer or a Notary Public then simply go
+                        back (click Previous) a page and un-check the selection.
+                    </p>
+                </div>
+            </ng-container>
+
+            <ng-container *ngIf="!directive.witness_notary && !directive.witness_lawyer">
+                <div class="screen-modal-title-first">
+                    <h3>
+                        WITNESS 2 must sign in the presence of the Adult and Witness No.1
+                    </h3>
+                </div>
+                <form #wizardForm="ngForm" novalidate>
+                    <div class="screen-modal-error-message-block">
+                        <ng-container *ngIf="errorMessage">
+                            <div class="screen-modal-error-message">{{ errorMessage }}</div>
+                        </ng-container>
+                        <ng-container *ngIf="!errorMessage">
+                            <div class="screen-modal-error-message">&nbsp;</div>
+                        </ng-container>
+                    </div>
+
+                    <div class="screen-modal-two-fifty-cols-block">
+                        <label class="screen-modal-first-col" for="witness2_name">Print Name:</label>
+                        <label class="screen-modal-second-col" for="witness2_address">Address:</label>
+
+                        <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.witness_two_name" id="witness2_name"
+                               name="wi2Name">
+                        <input class="screen-modal-second-col" type="text" [(ngModel)]="directive.witness_two_address" id="witness2_address"
+                               name="w2Addr">
+                    </div>
+
+                    <div class="screen-modal-three-thirty-cols-block">
+                        <label class="screen-modal-first-col" for="witness2_city">City:</label>
+                        <label class="screen-modal-second-col" for="witness2_postal">Postal:</label>
+                        <label class="screen-modal-third-col" for="witness2_prov">Prov:</label>
+
+                        <input class="screen-modal-first-col" type="text" [(ngModel)]="directive.witness_two_city" id="witness2_city"
+                               name="wi2City">
+                        <input class="screen-modal-second-col" type="text" [(ngModel)]="directive.witness_two_postal"
+                               id="witness2_postal" name="wi2Postal">
+                        <input class="screen-modal-third-col" type="text" [(ngModel)]="directive.witness_two_province" id="witness2_prov"
+                               name="wi2Prov">
+                    </div>
+                </form>
+            </ng-container>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-next-button" (click)="checkWitness2Name()">NEXT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelDataWizard()">CANCEL</button>
+            </div>
+
+        </ng-container>
+
+        <ng-container *ngIf="page === 16">
+            <div class="screen-modal-title">
+                <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name !=''">
+                    <h2>
+                        Congratulations, {{ directive.client_name }} you are done!
+                    </h2>
+                </ng-container>
+                <ng-container *ngIf="directive.client_name.length == 0 && directive.client_name ==''">
+                    <h2>
+                        Congratulations, you are done!
+                    </h2>
+                </ng-container>
+            </div>
+
+            <div class="screen-modal-title-first">
+                <h3>
+                    Print, save and pat yourself on the back!
+                </h3>
+            </div>
+
+            <div class="screen-modal-copy">
+                <p>Please press PRINT to get a hard copy or while on the print screen choose to save it as a PDF on your own
+                    computer and print at a later date. Store this document with your other end of life documents. Remember if one of your
+                    witnesses is a lawyer or notary public you only need to have them sign, no second witness is needed.
+                    <br><br>
+                    <ng-container *ngIf="directive.witness_one_name.length > 0 && directive.witness_one_name != ''">
+                        Ensure that your first witness, <i>{{ directive.witness_one_name }}</i> is present during the signing.
+                    </ng-container>
+                    <ng-container *ngIf="directive.witness_one_name.length == 0 && directive.witness_one_name == ''">
+                        Ensure that your first witness is present for the signing.
+                    </ng-container>
+
+                    <ng-container *ngIf="directive.witness_two_name.length > 0 && directive.witness_two_name != ''">
+                        Also ensure that your second witness, <i>{{ directive.witness_two_name }}</i> be present to witness the
+                        signing.
+                    </ng-container>
+                    <ng-container *ngIf="directive.witness_two_name.length == 0 && directive.witness_two_name == ''">
+                        Your second witness, if you need one, must also be present to witness the signing.
+                    </ng-container>
+                </p>
+            </div>
+
+            <div class="screen-modal-three-buttons-row">
+                <button class="screen-modal-print-button" (click)="formatDataForPrint()">PRINT</button>
+                <button class="screen-modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="screen-modal-cancel-button" (click)="cancelWizard()">CANCEL</button>
+            </div>
+        </ng-container>
+    </div>
+</div>

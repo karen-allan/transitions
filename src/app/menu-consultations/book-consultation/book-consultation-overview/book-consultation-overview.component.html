@@ -13,8 +13,9 @@
 
 <div class="consult-menu-block">
     <div class="consult-menu-heading">
-        I WOULD LIKE TO DISCUSS:
+        <p>I WOULD LIKE TO DISCUSS:</p>
     </div>
+
     <ul class="consult-menu">
         <div class="consult-menu-item">
             <li *ngIf="showPlanningEditor">
@@ -46,24 +47,24 @@
 </div>
 
 <ng-container *ngIf="showPlanningEditor">
-    <div class="content-title">
-        <h2>How to Plan for my Future Care</h2>
+    <div class="consult-menu-text">
+        How to Plan for my Future Care
     </div>
 </ng-container>
 
 <ng-container *ngIf="showCaregiverEditor">
-    <div class="content-title">
-        <h2>My Need for Support as Caregiver</h2>
+    <div class="consult-menu-text">
+        My Need for Support as Caregiver
     </div>
 </ng-container>
 
 <ng-container *ngIf="showPatientEditor">
-    <div class="content-title">
-        <h2>My Need for Support as Patient</h2>
+    <div class="consult-menu-text">
+        My Need for Support as Patient
     </div>
 </ng-container>
 
-<div class="content-dark-copy">
+<div class="consult-intro">
     <p>
         Please note the information your provide on this form is confidential. You can either print it and bring it with you at our
         first

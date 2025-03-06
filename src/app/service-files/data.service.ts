@@ -2,6 +2,7 @@ import {EventEmitter, Injectable} from '@angular/core';
 import {Observable, of, Subscription} from 'rxjs';
 import {SUB_MENU_ITEMS} from "../ts-files/subMenuItems";
 import {SubMenuItem} from "../ts-files/subMenuItem";
+import {WishesWizard} from "../ts-files/wishes-wizard";
 
 
 @Injectable({
@@ -208,7 +209,7 @@ export class DataService {
     const birthdate = new Date(formattedDate); // Fri Nov 23 1962 00:00:00 GMT-0800 (Pacific Standard Time)
 
     // date is broken down into year, month and day with the /'s > 1962/11/23
-    const strDOB = yrstr + "/" + mntstr + "/" + daystr;
+  //  const strDOB = yrstr + "/" + mntstr + "/" + daystr;
 
     const numYear = Number(yrstr);
     //1962
@@ -242,7 +243,7 @@ export class DataService {
      //alert("year is " + yearStr);
 
     const formattedDate = monthStr + "/" + dayStr + "/" + yearStr; //'06/19/1980'
-    const birthdate = new Date(formattedDate); //
+    //const birthdate = new Date(formattedDate); //
 
     //alert("birthdaate is " + birthdate);
 

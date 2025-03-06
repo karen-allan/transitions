@@ -1,0 +1,582 @@
+
+/*******************************************************************************************************************
+
+WIDTH 90% FOR ALL LESS THAN 900px (OUR CONTENT WINDOW)
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 900px)    {
+
+    .screen-sub-intro, .consult-menu-block, .screen-sub-form-block, .screen-sub-form-disclaimer-block, .consult-intro {
+        width:var(--media-less-than-content-width);
+    }
+
+}
+
+/*******************************************************************************************************************
+
+MAX WIDTH 100% FOR ALL OVER 900px (OUR CONTENT WINDOW)
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width:960px)   {
+
+    .screen-sub-intro, .consult-menu-block, .screen-sub-form-block, .screen-sub-form-disclaimer-block, .consult-intro {
+        width:var(--media-more-than-content-width);
+    }
+
+}
+
+/*******************************************************************************************************************
+
+ SMALL BANANA PORTRAIT (320), SMALL MOBILE PORTRAIT (360), SMALL TABLET PORTRAIT (600) AND BIG MOBILE PORTRAIT (640) */
+
+/********************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 599px) {
+
+    .screen-forms-mobile, .screen-forms-both {
+        display: block;
+    }
+
+    .screen-forms-desktop  {
+        display: none;
+    }
+
+    .screen-sub-form-full-col-block, .screen-sub-form_three-even-cols-block,
+    .screen-sub-form-big-small-cols-block, .screen-sub-form-small-big-biggest-block, .screen-sub-form-thirty-forty-thirty-block  {
+        display:block;
+        width:98%;
+        padding-right:2%;
+    }
+
+    .screen-sub-form-two-even-cols-block {
+        display: inline-grid;
+        grid-template-columns: 50% 50%;
+        background-color: pink;
+        width: 99%;
+    }
+
+    .screen-sub-form-first-check-col {
+        grid-column: 1;
+    }
+
+    .screen-sub-form-second-check-col   {
+        grid-column: 2;
+    }
+
+    .screen-sub-form-print-button {
+        width:80px;
+        height:30px;
+        border-radius: .7em;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS (over 900 so don't need to have space on either side of content)
+*******************************************************************************************************************/
+@media only screen
+and (min-width:600px)   {
+
+    .screen-forms-mobile {
+        display:none;
+    }
+
+    .screen-forms-desktop, .screen-forms-both  {
+        width:var(--media-more-than-content-width);
+        display: block;
+    }
+
+    .screen-sub-form-full-col-block, .screen-sub-form-two-even-cols-block, .screen-sub-form_three-even-cols-block, .screen-sub-form-big-small-cols-block,
+    .screen-sub-form-small-big-biggest-block, .screen-sub-form-thirty-forty-thirty-block  {
+        width: 99%;
+    }
+
+    .screen-sub-form-full-col-block {
+        display:grid;
+    }
+
+    .screen-sub-form-two-even-cols-block {
+        display: inline-grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .screen-sub-form_three-even-cols-block {
+        display: inline-grid;
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+    .screen-sub-form-big-small-cols-block {
+        display: inline-grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .screen-sub-form-small-big-biggest-block {
+        display: inline-grid;
+        grid-template-columns: 25% 35% 40%;
+    }
+
+    .screen-sub-form-thirty-forty-thirty-block {
+        display: inline-grid;
+        grid-template-columns: 30% 40% 30%;
+    }
+
+    .screen-sub-form-full-check-col, .screen-sub-form-full-col   {
+        grid-column: 1/-1;
+    }
+
+    .screen-sub-form-first-check-col, .screen-sub-form-first-col   {
+        grid-column: 1;
+    }
+
+    .screen-sub-form-second-check-col, .screen-sub-form-second-col {
+        grid-column: 2;
+    }
+
+    .screen-sub-form-third-check-col, .screen-sub-form-third-col {
+        grid-column: 3;
+    }
+
+    .screen-sub-form-print-button {
+        width:110px;
+        height:50px;
+        border-radius: 1.0em;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BANANAS and MOBILES PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: portrait) {
+
+    /* BOOK CONSULTATION OVERVIEW */
+
+    /*I WOULD LIKE TO DISCUSS*/
+    .consult-menu-heading p  {
+        font-size: var(--consult-menu-small-mobile-font-size);
+    }
+
+    /* How to Plan for my Future Care menu item */
+    .consult-menu-item span, .consult-menu-item a {
+        font-size: var(--consult-menu-items-small-mobile-font-size);
+    }
+
+    /* How to Plan for my Future Care span or anchor */
+    .consult-menu-text  {
+        font-size: var(--consult-menu-items-small-mobile-font-size);
+    }
+
+    /* the  intro paragraph before the form */
+    .consult-intro p {
+        font-size: var(--consult-intro-text-small-mobile-font-size);
+        text-align: justify;
+    }
+
+    /* the various sub forms */
+    /* the form title in white with blue background */
+    .screen-sub-form-title {
+        font-size: var(--report-titles-small-mobile-font-size);
+    }
+
+    /* the questions/prompts*/
+    .screen-sub-form-full-col-block p {
+        font-size: var(--report-p-small-mobile-font-size);
+        font-weight: 600;
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .screen-sub-form-full-col, .screen-sub-form-first-col, .screen-sub-form-second-col, .screen-sub-form-third-col,
+    .screen-sub-form-full-radio-col {
+        font-size: var(--report-text-med-mobile-font-size);
+    }
+
+    /* check boxes are even smaller than the text fields and radio buttons */
+    .screen-sub-form-full-check-col, .screen-sub-form-first-check-col, .screen-sub-form-second-check-col, .screen-sub-form-third-check-col  {
+        font-size: var(--report-text-small-mobile-font-size);
+    }
+
+    .text-area {
+        font-size: var(--report-text-small-mobile-font-size);
+    }
+
+    .screen-sub-form-disclaimer-title p {
+        padding-top:1em;
+        font-size: var(--report-text-big-mobile-font-size);
+        font-weight: bold;
+    }
+
+    .screen-sub-form-disclaimer-text p {
+        font-size: var(--report-text-small-mobile-font-size);
+    }
+
+    .form-date-sig {
+        font-size: var(--report-text-small-mobile-font-size);
+    }
+
+    .screen-sub-form-print-button {
+        font-size:var(--report-text-small-mobile-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BANANAS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: landscape) {
+
+    /* BOOK CONSULTATION OVERVIEW */
+
+    /*I WOULD LIKE TO DISCUSS*/
+    .consult-menu-heading p  {
+        font-size: var(--consult-menu-big-mobile-font-size);
+    }
+
+    /* How to Plan for my Future Care menu item */
+    .consult-menu-item span, .consult-menu-item a {
+        font-size: var(--consult-menu-items-big-mobile-font-size);
+        line-height:200%;
+    }
+
+    /* How to Plan for my Future Care span or anchor - same text size as the menu items */
+    .consult-menu-text  {
+        font-size: var(--consult-menu-items-big-mobile-font-size);
+    }
+
+    /* the  intro paragraph before the form */
+    .consult-intro p {
+        font-size: var(--consult-intro-text-big-mobile-font-size);
+        text-align: justify;
+    }
+
+    /* the various sub forms */
+    /* the form title in white with blue background */
+    .screen-sub-form-title {
+        font-size: var(--report-titles-big-mobile-font-size);
+    }
+
+    /* the questions/prompts*/
+    .screen-sub-form-full-col-block p {
+        font-size: var(--report-p-big-mobile-font-size);
+        font-weight: 600;
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .screen-sub-form-full-col, .screen-sub-form-first-col, .screen-sub-form-second-col, .screen-sub-form-third-col,
+    .screen-sub-form-full-radio-col {
+        font-size: var(--report-text-big-mobile-font-size);
+    }
+
+    /* check boxes are even smaller than the text fields and radio buttons */
+    .screen-sub-form-full-check-col, .screen-sub-form-first-check-col, .screen-sub-form-second-check-col, .screen-sub-form-third-check-col  {
+        font-size: var(--report-text-med-mobile-font-size);
+    }
+
+    .text-area {
+        font-size: var(--report-text-med-mobile-font-size);
+    }
+
+    .screen-sub-form-disclaimer-title p {
+        padding-top:1em;
+        font-size: var(--report-text-big-mobile-font-size);
+        font-weight: bold;
+    }
+
+    .screen-sub-form-disclaimer-text p {
+        font-size: var(--report-text-small-mobile-font-size);
+    }
+
+    .form-date-sig {
+        font-size: var(--report-text-small-mobile-font-size);
+    }
+
+    .screen-sub-form-print-button {
+        font-size:var(--report-text-small-mobile-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG FROM TABLETS AND UP
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px) {
+
+    /* BOOK CONSULTATION OVERVIEW */
+
+    /*I WOULD LIKE TO DISCUSS*/
+    .consult-menu-heading p  {
+        font-size: var(--consult-menu-desktop-font-size);
+    }
+
+    /* How to Plan for my Future Care menu item */
+    .consult-menu-item span, .consult-menu-item a {
+        font-size: var(--consult-menu-items-desktop-font-size);
+        line-height:200%;
+    }
+
+    /* How to Plan for my Future Care span or anchor - same text size as the menu items */
+    .consult-menu-text  {
+        font-size: var(--consult-menu-items-desktop-font-size);
+    }
+
+    /* the  intro paragraph before the form */
+    .consult-intro p {
+        font-size: var(--consult-intro-text-desktop-font-size);
+        text-align: justify;
+        line-height: 130%;
+    }
+
+    /* the various sub forms */
+    /* the form title in white with blue background */
+    .screen-sub-form-title {
+        font-size: var(--report-titles-desktop-font-size);
+    }
+
+    /* the questions/prompts*/
+    .screen-sub-form-full-col-block p {
+        font-size: var(--report-p-desktop-font-size);
+        font-weight: 600;
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .screen-sub-form-full-col, .screen-sub-form-first-col, .screen-sub-form-second-col, .screen-sub-form-third-col,
+    .screen-sub-form-full-radio-col {
+        font-size: var(--report-text-big-desktop-font-size);
+    }
+
+    /* check boxes are even smaller than the text fields and radio buttons */
+    .screen-sub-form-full-check-col, .screen-sub-form-first-check-col, .screen-sub-form-second-check-col, .screen-sub-form-third-check-col  {
+        font-size: var(--report-text-small-desktop-font-size);
+    }
+
+    .text-area {
+        font-size: var(--report-text-small-desktop-font-size);
+    }
+
+    .screen-sub-form-disclaimer-title p {
+        padding-top:1em;
+        font-size: var(--report-text-big-desktop-font-size);
+        font-weight: bold;
+    }
+
+    .screen-sub-form-disclaimer-text p {
+        font-size: var(--report-text-small-desktop-font-size);
+    }
+
+    .form-date-sig {
+        font-size: var(--report-text-small-desktop-font-size);
+    }
+
+    .screen-sub-form-print-button {
+        font-size:var(--report-text-small-desktop-font-size);
+    }
+
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    /* USERS DATA ENTRY FORM CHOICES MENU: */
+    .consult-menu-block {
+        display: block;
+        max-width: var(--content-width);
+        margin:auto;
+        padding:1em 0;
+        border-top:dashed thin var(--color-grey);
+        border-bottom:dashed thin var(--color-grey);
+        font-family: var(--family-copy);
+    }
+
+    /* USERS FORM MENU -  I WOULD LIKE TO DISCUSS: */
+    .consult-menu-heading  {
+        width:98%;
+        padding-left: 2%;
+        max-width: var(--content-width);
+        padding-bottom:.5em;
+        background-color: white;
+    }
+
+    .consult-menu-heading p  {
+        font-style:normal;
+        color: var(--color-dark-blue);
+        font-weight: bold;
+        text-align: left;
+    }
+
+    /* PLANNER, CAREGIVER, PATIENT */
+    .consult-menu {
+        margin:0;
+        color: var(--color-dark-blue);
+        width:95%;
+        padding-left:5%;
+    }
+
+    .consult-menu-item {
+        text-align: left;
+        line-height:200%;;
+    }
+
+    .consult-menu-item a {
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight:400;
+    }
+
+    .consult-menu-item span {
+        cursor: default;
+        font-weight:800;
+    }
+
+    .consult-intro {
+        display: block;
+        max-width: var(--content-width);
+        margin:auto;
+        padding:1em 0;
+        font-family: var(--family-copy);
+    }
+
+    .consult-intro p, .consult-intro p a {
+        font-style:normal;
+        color: var(--color-dark-blue);
+        font-weight: normal;
+        text-align: left;
+    }
+
+    .consult-intro p a {
+        text-decoration: underline;
+    }
+
+    /* ALL SUB FORMs are CONTAINED BY THIS BLOCK */
+    .screen-sub-form-block {
+        display: block;
+        max-width: var(--content-width);
+        margin:auto;
+        border:solid thin var(--color-grey);
+
+    }
+
+    .consult-menu-text, .screen-sub-form-title {
+        display:grid;
+        height: 50px;
+        font-family: var(--family-title);
+        background-color: var(--color-dark-blue);
+        color: var(--color-white);
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        line-height: 110%;
+        max-width: var(--content-width);
+        margin:auto;
+    }
+
+    .screen-sub-form-full-check-col, .screen-sub-form-first-check-col, .screen-sub-form-second-check-col, .screen-sub-form-third-check-col   {
+        display:block;
+        border:1px dashed var(--color-dark-blue);
+        margin-bottom:1em;
+        text-align:left;
+        line-height: 110%;
+        padding: 1em 0;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+    }
+
+    .screen-sub-form-full-radio-col  {
+        width:98%;
+        padding: 1em 1%;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        border:1px dashed var(--color-dark-blue);
+        margin-bottom:1em;
+        text-align:left;
+        line-height: 110%;
+    }
+
+    .screen-sub-form-full-col, .screen-sub-form-first-col, .screen-sub-form-second-col, .screen-sub-form-third-col  {
+        display: grid;
+        padding: 1em 0;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        width:100%;
+    }
+
+    .screen-sub-form-full-col-block p {
+        display:block;
+        /*float:left;*/
+        padding: 1em 0;
+        font-family: var(--family-copy);
+        font-style: italic;
+        text-align: left;
+        color: var(--color-dark-blue);
+    }
+
+    .text-area {
+        display: block;
+        padding: 1em 0;
+        color: var(--color-dark-blue);
+        font-family: var(--family-copy);
+        text-align: left;
+        line-height: 105%;
+        overflow-y: scroll;
+        scrollbar-color: red orange;
+        scrollbar-width: thin;
+    }
+    
+    /* DISCLAIMER */
+    .screen-sub-form-disclaimer-block {
+        color:var(--color-dark-blue);
+        display:block;
+        margin:auto;
+        max-width: var(--content-width);
+    }
+
+    .screen-sub-form-disclaimer-title  {
+        display:block;
+        float:left;
+        width:100%;
+        text-align: left;
+        font-family:var(--family-title);
+    }
+
+    .screen-sub-form-disclaimer-text {
+        font-size: 1em;
+        font-family: var(--family-copy);
+        border: #878787 dashed 1px;
+        padding:1em;
+    }
+
+    .screen-sub-form-button-container {
+        width:100%;
+        justify-content: flex-end;
+        display:grid;
+        margin-top:2em;
+    }
+
+    .screen-sub-form-print-button {
+        display:grid;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        background-color: var(--color-off-white);
+
+        align-content: center;
+        justify-content: center;
+        padding: .5em 0;
+    }
+
+
+    @media screen {
+        .print-modal-make-wish-list, .print-modal-choose-your-rep, .print-modal-write-advance-directive,
+        .print-form-caregiver-consult-component, .print-form-patient-consult-component, .print-form-planner-consult-component
+
+            {
+                display:none;
+            }
+    }
+}

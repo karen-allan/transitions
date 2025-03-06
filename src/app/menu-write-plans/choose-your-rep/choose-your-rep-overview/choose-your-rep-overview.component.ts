@@ -1,7 +1,7 @@
 import {Component, Input, Output} from '@angular/core';
 import {RepNine} from "../../../ts-files/rep-nine";
-import {ScreenModalChooseYourRepComponent} from "../../../screen-modals/screen-modal-choose-your-rep/screen-modal-choose-your-rep.component";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
+import {DialogRepsComponent} from "../../../dialogs/dialog-reps/dialog-reps.component";
 
 @Component({
   selector: 'app-choose-your-rep-overview',
@@ -32,9 +32,10 @@ export class ChooseYourRepOverviewComponent {
     dialogConfig.disableClose = false;
     dialogConfig.id = "choose-rep-nine-modal";
     dialogConfig.maxWidth='1024px'
+    dialogConfig.minWidth='960px'
 
     /* named and defined in wizard.css */
-    let modalDialog = this.matDialog.open(ScreenModalChooseYourRepComponent, dialogConfig);
+    let modalDialog = this.matDialog.open(DialogRepsComponent, dialogConfig);
 
     modalDialog.componentInstance.setRep(this.rep, this.title);
     modalDialog.componentInstance.event.subscribe(representative => {

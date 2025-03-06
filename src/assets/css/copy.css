@@ -1,13 +1,14 @@
+/*DONE FEB 24/25 and text checked */
+
 /*******************************************************************************************************************
   GLOBAL BANANAS- MOBILES, SMALL TABLETS - under 900 (content) width so need 10% space on either side of content
 *******************************************************************************************************************/
 @media only screen
-    and (min-width: 240px)
-    and (max-width: 896px)    {
+and (min-width: 320px)
+and (max-width: 896px) {
 
     .content-dark-copy, .content-light-copy, .quotes {
-        width:var(--media-less-than-content-width);
-
+        width: var(--media-less-than-content-width);
     }
 }
 
@@ -15,175 +16,266 @@
   GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS (over 900 so don't need to have space on either side of content)
 *******************************************************************************************************************/
 @media only screen
-    and (min-width:960px)   {
+and (min-width: 960px) {
 
     .content-dark-copy, .content-light-copy, .quotes {
-        width:var(--media-more-than-content-width);
-
+        width: var(--media-more-than-content-width);
     }
 }
 
+
 /*******************************************************************************************************************
-  BANANAS
+  GLOBAL BANANAS - PORTRAIT
 *******************************************************************************************************************/
 @media only screen
-    and (min-width: 240px)
-    and (max-width: 320px) {
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: portrait) {
 
-    .content-dark-copy p, .content-light-copy p  {
-        font-size: var(--med-copy-banana-font-size);
-        line-height:var(--mobile-copy-line-height);
+    .content-dark-copy p, .content-light-copy p {
+        font-size: var(--small-p-banana-port-font-size);
+        line-height: 150%;
     }
 
     .content-dark-copy span, .content-light-copy span {
-        font-size: var(--small-copy-banana-font-size);
-    }
-
-    /* QUOTES */
-    .quotes p  {
-        font-size:var(--detail-quote-banana-font-size);
-    }
-
-    .quotes span {
-        font-size:var(--detail-author-banana-font-size);
-    }
-
-}
-
-/*******************************************************************************************************************
-  MOBILES
-*******************************************************************************************************************/
-@media only screen
-    and (min-width: 360px)
-    and (max-width: 414px) {
-
-    .content-dark-copy p, .content-light-copy p  {
-        font-size: var(--med-copy-mobile-font-size);
-        line-height:var(--mobile-copy-line-height);
-    }
-
-    .content-dark-copy span, .content-light-copy span {
-        font-size: var(--small-copy-mobile-font-size);
-        line-height:var(--mobile-copy-line-height);
+        font-size: var(--small-span-banana-port-font-size);
+        line-height: 150%;
     }
 
     .quotes p {
-        font-size:var(--detail-quote-mobile-font-size);
+        font-size: var(--quote-small-banana-detail-font-size);
+        line-height: 100%;
     }
 
     .quotes span {
-        font-size:var(--detail-author-mobile-font-size);
+        font-size: var(--author-small-banana-detail-font-size);
     }
 
 }
 
 /*******************************************************************************************************************
-  TABLETS
+  GLOBAL BANANAS - LANDSCAPE
 *******************************************************************************************************************/
 @media only screen
-    and (min-width: 600px)
-    and (max-width: 800px)  {
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: landscape) {
 
-    .content-dark-copy p, .content-light-copy p  {
-        font-size: var(--med-copy-tablet-font-size);
-        line-height:var(--copy-line-height);
+    .content-dark-copy p, .content-light-copy p {
+        font-size: var(--big-p-banana-land-font-size);
+        line-height: 150%;
     }
 
     .content-dark-copy span, .content-light-copy span {
-        font-size: var(--small-copy-tablet-font-size);
-        line-height:var(--copy-line-height);
+        font-size: var(--big-span-banana-land-font-size);
+        line-height: 150%;
     }
 
-    .quotes p  {
-        font-size:var(--detail-quote-tablet-font-size);
-    }
-
-    .quotes span {
-        font-size:var(--detail-author-tablet-font-size);
-    }
-
-}
-
-/*******************************************************************************************************************
-  IPADS
-*******************************************************************************************************************/
-@media only screen
-    and (min-width: 1024px)
-    and (max-width: 1366px) {
-
-    .content-dark-copy p, .content-light-copy p  {
-        font-size: var(--med-copy-ipad-font-size);
-        line-height:var(--copy-line-height);
-    }
-
-    .content-dark-copy span, .content-light-copy span {
-        font-size: var(--small-copy-ipad-font-size);
-        line-height:var(--copy-line-height);
-    }
-
-    .quotes p  {
-        font-size:var(--detail-quote-ipad-font-size);
-    }
-
-    .quotes span {
-        font-size:var(--detail-author-ipad-font-size);
-    }
-
-}
-
-/*******************************************************************************************************************
-  LAPTOPS
-*******************************************************************************************************************/
-@media only screen
-    and (min-width: 1440px)
-    and (max-width: 1919px) {
-
-    .content-dark-copy p, .content-light-copy p  {
-        font-size: var(--med-copy-laptop-font-size);
-        line-height:var(--copy-line-height);
-    }
-
-    .content-dark-copy span, .content-light-copy span {
-        font-size: var(--small-copy-laptop-font-size);
-    }
-
-    /* QUOTES */
     .quotes p {
-        font-size:var(--detail-quote-laptop-font-size);
+        font-size: var(--quote-big-banana-detail-font-size);
     }
 
     .quotes span {
-        font-size:var(--detail-author-laptop-font-size);
+        font-size: var(--author-big-banana-detail-font-size);
     }
 }
 
 /*******************************************************************************************************************
-  DESKTOPS
+  GLOBAL SMALL MOBILES - PORTRAIT
 *******************************************************************************************************************/
 @media only screen
-    and (min-width: 1920px) {
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: portrait) {
 
-    .content-dark-copy p, .content-light-copy p  {
-        font-size: var(--med-copy-desktop-font-size);
-        line-height:var(--copy-line-height);
+    .content-dark-copy p, .content-light-copy p {
+        font-size: var(--small-p-mobile-port-font-size);
+        line-height: 150%;
     }
 
     .content-dark-copy span, .content-light-copy span {
-        font-size: var(--small-copy-desktop-font-size);
+        font-size: var(--small-span-mobile-port-font-size);
+        line-height: 150%;
     }
 
-    /* QUOTES */
     .quotes p {
-        font-size:var(--detail-quote-laptop-font-size);
+        font-size: var(--quote-small-mobile-detail-font-size);
     }
 
     .quotes span {
-        font-size:var(--detail-author-laptop-font-size);
+        font-size: var(--author-small-mobile-detail-font-size);
     }
 
 }
 
-/* GLOBAL *************************************************************************************************************/
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: landscape) {
+
+    .content-dark-copy p, .content-light-copy p {
+        font-size: var(--small-p-mobile-land-font-size);
+        line-height: 150%;
+    }
+
+    .content-dark-copy span, .content-light-copy span {
+        font-size: var(--small-span-mobile-land-font-size);
+        line-height: 150%;
+    }
+
+    .quotes p {
+        font-size: var(--quote-small-mobile-detail-font-size);
+    }
+
+    .quotes span {
+        font-size: var(--author-small-mobile-detail-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 640px)
+and (max-width: 896px)
+and (orientation: portrait) {
+
+    .content-dark-copy p, .content-light-copy p {
+        font-size: var(--big-p-mobile-port-font-size);
+        line-height: 150%;
+    }
+
+    .content-dark-copy span, .content-light-copy span {
+        font-size: var(--big-span-mobile-port-font-size);
+        line-height: 150%;
+    }
+
+    .quotes p {
+        font-size: var(--quote-big-mobile-detail-font-size);
+    }
+
+    .quotes span {
+        font-size: var(--author-big-mobile-detail-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 640px)
+and (max-width: 896px)
+and (orientation: landscape) {
+
+    .content-dark-copy p, .content-light-copy p {
+        font-size: var(--big-p-mobile-land-font-size);
+        line-height: 150%;
+    }
+
+    .content-dark-copy span, .content-light-copy span {
+        font-size: var(--big-span-mobile-land-font-size);
+        line-height: 150%;
+    }
+
+    .quotes p {
+        font-size: var(--quote-big-mobile-detail-font-size);
+    }
+
+    .quotes span {
+        font-size: var(--author-big-mobile-detail-font-size);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px)
+and (orientation: portrait) {
+
+    .content-dark-copy p, .content-light-copy p {
+        font-size: var(--small-p-tablet-port-font-size);
+        line-height: 150%;
+    }
+
+    .content-dark-copy span, .content-light-copy span {
+        font-size: var(--small-span-tablet-port-font-size);
+        line-height: 150%;
+    }
+
+    .quotes p {
+        font-size: var(--quote-small-tablet-detail-font-size);
+    }
+
+    .quotes span {
+        font-size: var(--author-small-tablet-detail-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px)
+and (orientation: landscape) {
+
+    .content-dark-copy p, .content-light-copy p {
+        font-size: var(--small-p-tablet-land-font-size);
+        line-height: 150%;
+    }
+
+    .content-dark-copy span, .content-light-copy span {
+        font-size: var(--small-span-tablet-land-font-size);
+        line-height: 150%;
+    }
+
+    .quotes p {
+        font-size: var(--quote-big-tablet-detail-font-size);
+    }
+
+    .quotes span {
+        font-size: var(--author-big-tablet-detail-font-size);
+    }
+
+}
+
+/*******************************************************************************************************************
+  BIG TABLETS IPADS and UP (all widths are over the cutoff content width of 900px)
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px) {
+
+    .content-dark-copy p, .content-light-copy p {
+        font-size: var(--p-desktop-font-size);
+        line-height: 150%;
+    }
+
+    .content-dark-copy span, .content-light-copy span {
+        font-size: var(--span-desktop-font-size);
+        line-height: 150%;
+    }
+
+    .quotes p {
+        font-size: var(--quote-desktop-detail-font-size);
+        line-height: 120%;
+    }
+
+    .quotes span {
+        font-size: var(--author-desktop-detail-font-size);
+
+    }
+
+}
+
+/*************************************************************************************************************
+    GLOBAL
+*************************************************************************************************************/
 @media only screen {
 
     .content-dark-copy, .content-light-copy {
@@ -197,20 +289,24 @@
         color: var(--color-dark-blue);
     }
 
-    .content-light-copy p, .content-light-copy p a, .content-light-copy span{
+    .content-light-copy p, .content-light-copy p a, .content-light-copy span {
         color: var(--color-white);
     }
 
     .content-dark-copy p a, .content-light-copy p a {
-        /*.content-dark-copy p a, .content-light-copy p a, .content-dark-copy span a, .content-light-copy span a {*/
-        font-weight:800;
+        font-weight: 800;
+        cursor: pointer;
+    }
+
+    .content-dark-copy span a, .content-light-copy span a {
+        font-weight: normal;
         cursor: pointer;
     }
 
     .quotes {
         max-width: var(--content-width);
-        display:grid;
-        margin:1em auto;
+        display: grid;
+        margin: 1em auto;
         align-content: center;
         justify-content: center;
         font-family: var(--family-quotes);
@@ -218,15 +314,14 @@
         color: var(--color-purple);
     }
 
-    .quotes p  {
-        font-weight: 400;
-        text-align:left;
-        line-height:var(--quote-line-height);
-        margin:0;
+    .quotes p {
+        font-weight: bold;
+        text-align: left;
+        margin: 0;
     }
 
     .quotes span {
         text-align: right;
-        padding-right:1em;
+        padding-right: 1em;
     }
 }

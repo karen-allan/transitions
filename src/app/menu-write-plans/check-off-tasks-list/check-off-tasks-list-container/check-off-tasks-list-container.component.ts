@@ -17,6 +17,6 @@ export class CheckOffTasksListContainerComponent {
   lookupChild3: string=Constants.WRITE_ADVANCE_CARE_PLAN
 
   title= Constants.CREATE_YOUR_CHECK_LIST
-  quote:string='At any given moment, you have the power to say: this is not how the story is going to end.';
+  quote:string='At any time, you have the power to say: this is not how the story is going to end.';
   author:string='Christine Mason Miller';
 }

@@ -1,0 +1,142 @@
+<div class="header-detail-image header-write-needs-down-image">
+    <div class="quote">
+        &#8220;{{ quote }}&#8220;
+    </div>
+    <div class="author">
+        {{ author }}
+    </div>
+</div>
+
+<div class="content-title">
+    <h1>{{ title }}</h1>
+</div>
+
+<div class="laptopForm">
+    <div class="wizard-intro-container">
+        <div class="wizard-image">
+            <a (click)="openModal()">
+                <img src="assets/images/details/takeAction/writeNeedsDown/wizardActionMakeWishes.gif"
+                     title="make a wish list"
+                     alt="make a wish list">
+            </a>
+        </div>
+
+        <div class="wizard-text">
+            <a (click)="openModal()">
+                <h2>{{ title }}</h2>
+                <p>
+                    Follow through this wizard to help you explore your ideas, concerns, wishes and thoughts about how you would like to
+                    deal with all those end of life issues. These issues aren't just for those at the end of their lives. They are issues
+                    that everyone should address. The benefit of doing so will provide your family with invaluable input.
+                    <br><br>
+                    <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
+                    as a PDF file.
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="mobileForm">
+    <div class="wizard-intro-container">
+        <div class="wizard-image">
+            <a routerLink="/callScreenFormWishList">
+                <img src="assets/images/details/takeAction/writeNeedsDown/wizardActionMakeWishes.gif"
+                     title="make a wish list"
+                     alt="make a wish list">
+            </a>
+        </div>
+
+        <div class="wizard-text">
+            <a routerLink="/callScreenFormWishList">
+                <h2>{{ title }}</h2>
+                <p>
+                    Follow through this wizard answering the 30 questions to the best of your ability. Be honest, be strong. This is your
+                    life we are talking about. Once printed you can save this wish list along with your other important documents. It
+                    will help your family to know, not guess, your ideas, concerns, wishes and thoughts about end of life care. These
+                    issues aren't just for those at the end of their lives. They are issues that everyone should address, at any age. The
+                    benefit of doing so will provide your family with invaluable input.
+                    <br><br>
+                    <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
+                    as a PDF file.
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class = "content-title">
+    <h4>What do you Most Value About Life?</h4>
+</div>
+
+<div class="mobile-list">
+    <ul class ="content-dark-list yin-yang-small">
+        <li class="list-item">Being able to carry out your day to day activities with minimal or no support.</li>
+        <li class="list-item">Being pain free or at least feel as little discomfort as possible.</li>
+        <li class="list-item">Having confidence that you still command respect from others.</li>
+        <li class="list-item">Maintaining your self respect through your dress and appearance.</li>
+        <li class="list-item">Trusting that the medical establishment listens to you.</li>
+        <li class="list-item">Feeling valued and needed by your family and friends.</li>
+        <li class="list-item">Being able to take care of your physical needs on your own.</li>
+        <li class="list-item">Being strong enough mentally and physically to take on most challenges.</li>
+        <li class="list-item">Enjoying your independence and privacy.</li>
+        <li class="list-item">Knowing that you have the love and support of your family and friends.</li>
+        <li class="list-item">Being a valued husband/wife, son/daughter, sister/brother etc.</li>
+        <li class="list-item">Feeling that you have good relationships with people, with little conflict to resolve.</li>
+        <li class="list-item">Believing that your life has purpose.</li>
+        <li class="list-item">Enjoying your life and looking forward to the future.</li>
+        <li class="list-item">Having a belief in God or a higher power that gives you strength.</li>
+        <li class="list-item">Knowing that you have a strong intellect and are of sound mind.</li>
+        <li class="list-item">Actively pursuing your hobbies and interests.</li>
+        <li class="list-item">Being physically fit and able to do your outdoor activities.</li>
+        <li class="list-item">Feeling mentally well and able to handle life's up and downs positively.</li>
+        <li class="list-item">Acting as mediator when family conflicts arise, being counted on to resolve issues.</li>
+        <li class="list-item">Being in complete control over your life and future, as much as possible.</li>
+        <li class="list-item">Having total control over your finances.</li>
+        <li class="list-item">Spending as much time with my family and friends as you want.</li>
+        <li class="list-item">Feeling secure in your home, surrounding by my familiar things.</li>
+    </ul>
+</div>
+
+<div class="desktop-list">
+    <ul class ="content-dark-list yin-yang-big">
+        <li class="list-item">Being able to carry out your day to day activities with minimal or no support.</li>
+        <li class="list-item">Being pain free or at least feel as little discomfort as possible.</li>
+        <li class="list-item">Having confidence that you still command respect from others.</li>
+        <li class="list-item">Maintaining your self respect through your dress and appearance.</li>
+        <li class="list-item">Trusting that the medical establishment listens to you.</li>
+        <li class="list-item">Feeling valued and needed by your family and friends.</li>
+        <li class="list-item">Being able to take care of your physical needs on your own.</li>
+        <li class="list-item">Being strong enough mentally and physically to take on most challenges.</li>
+        <li class="list-item">Enjoying your independence and privacy.</li>
+        <li class="list-item">Knowing that you have the love and support of your family and friends.</li>
+        <li class="list-item">Being a valued husband/wife, son/daughter, sister/brother etc.</li>
+        <li class="list-item">Feeling that you have good relationships with people, with little conflict to resolve.</li>
+        <li class="list-item">Believing that your life has purpose.</li>
+        <li class="list-item">Enjoying your life and looking forward to the future.</li>
+        <li class="list-item">Having a belief in God or a higher power that gives you strength.</li>
+        <li class="list-item">Knowing that you have a strong intellect and are of sound mind.</li>
+        <li class="list-item">Actively pursuing your hobbies and interests.</li>
+        <li class="list-item">Being physically fit and able to do your outdoor activities.</li>
+        <li class="list-item">Feeling mentally well and able to handle life's up and downs positively.</li>
+        <li class="list-item">Acting as mediator when family conflicts arise, being counted on to resolve issues.</li>
+        <li class="list-item">Being in complete control over your life and future, as much as possible.</li>
+        <li class="list-item">Having total control over your finances.</li>
+        <li class="list-item">Spending as much time with my family and friends as you want.</li>
+        <li class="list-item">Feeling secure in your home, surrounding by my familiar things.</li>
+    </ul>
+</div>
+
+<div class="content-title">
+    <h3>
+        Need to Learn More First?
+    </h3>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        For more information about the reasons why you should think ahead and write down your own feelings, ideas and concerns about
+        end of life check out the <a routerLink="/thinkAboutNeeds">{{ lookupParent1 }} > {{ lookupChild1 }}</a> page.
+    </p>
+</div>
+

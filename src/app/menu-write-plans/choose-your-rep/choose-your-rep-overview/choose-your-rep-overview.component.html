@@ -11,50 +11,108 @@
     <h1>{{title}}</h1>
 </div>
 
-<div class="two-col-backgrnd-container">
-    <div class="column-image">
-        <a (click)="openModal()">
-            <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseReps.gif" title="write your advocate plan"
-                 alt="write your advocate plan">
-        </a>
-    </div>
+<div class="laptopForm">
+    <div class="wizard-intro-container">
+        <div class="wizard-image">
+            <a (click)="openModal()">
+                <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseReps.gif"
+                     title="choose your reps"
+                     alt="choose your reps">
+            </a>
+        </div>
 
-    <div class="column-text">
-        <a (click)="openModal()">
-            <h2>{{title}}</h2>
-            <p>
-                Follow through this wizard to help you document who you trust to protect, defend and support you as your
-                Representative. Although there are many versions of this document found online, this document is as valid as any of the
-                other ones as long as it is properly filled out and witnessed. No need to pay a lawyer a ton of cash to do this and it literally
-                takes minutes to complete.
-                <br><br>
-                There is an area on the form to provide your instructions to your Representative.
-                <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
-                as a PDF file.
-            </p>
-        </a>
+        <div class="wizard-text">
+            <a (click)="openModal()">
+                <h2>{{title}}</h2>
+                <p>
+                    Follow through this wizard to help you document who you trust to protect, defend and support you as your
+                    Representative. Although there are many versions of this document found online, this document is as valid as any of the
+                    other ones as long as it is properly filled out and witnessed. No need to pay a lawyer a ton of cash to do this and it literally
+                    takes minutes to complete.
+                    <br><br>
+                    There is an area on the form to provide your instructions to your Representative.
+                    <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
+                    as a PDF file.
+                </p>
+            </a>
+        </div>
     </div>
 </div>
 
-<div class="content-title pad-top-2">
-    <h3>Some of the things to consider:</h3>
+<div class="mobileForm">
+    <div class="wizard-intro-container">
+        <div class="wizard-image">
+            <a routerLink="/callScreenFormChooseReps">
+                <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseReps.gif"
+                     title="choose your reps"
+                     alt="choose your reps">
+            </a>
+        </div>
+
+        <div class="wizard-text">
+            <a routerLink="/callScreenFormChooseReps">
+                <h2>{{ title }}</h2>
+                <p>
+                    Follow through this wizard to help you document who you trust to protect, defend and support you as your
+                    Representative. Although there are many versions of this document found online, this document is as valid as any of the
+                    other ones as long as it is properly filled out and witnessed. No need to pay a lawyer a ton of cash to do this and it literally
+                    takes minutes to complete.
+                    <br><br>
+                    There is an area on the form to provide your instructions to your Representative.
+                    <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
+                    as a PDF file.
+                </p>
+            </a>
+        </div>
+    </div>
 </div>
 
-<ul class="content-dark-list infinity">
-    <li class="list-item">Would they be accountable to you and the health care personnel?</li>
-    <li class="list-item">Would they be able to exercise the duties set out for them?</li>
-    <li class="list-item">Would they act honestly and honorably on your behalf?</li>
-    <li class="list-item">Do they have good communication skills?</li>
-    <li class="list-item">Would they respect and abide by your wishes?</li>
-    <li class="list-item">Are they careful record keepers?</li>
-    <li class="list-item">Are they confident enough to accept sole authority for your care?</li>
-    <li class="list-item">Are they capable of also seeking advice from others?</li>
-    <li class="list-item">Can they keep all information confidential?</li>
-    <li class="list-item">Can they remain calm in a crisis?</li>
-    <li class="list-item">Are they ready and willing to take on the role?</li>
-    <li class="list-item">Do you trust them to make the proper decisions for you?</li>
-    <li class="list-item">Can they make difficult decisions?</li>
-</ul>
+
+<div class = "content-title">
+    <h4>Some of the things to consider:</h4>
+</div>
+
+<div class="mobile-list">
+    <ul class ="content-dark-list yin-yang-small">
+        <li class="list-item">Would they be accountable to you and the health care personnel?</li>
+        <li class="list-item">Would they be able to exercise the duties set out for them?</li>
+        <li class="list-item">Would they act honestly and honorably on your behalf?</li>
+        <li class="list-item">Do they have good communication skills?</li>
+        <li class="list-item">Would they respect and abide by your wishes?</li>
+        <li class="list-item">Are they careful record keepers?</li>
+        <li class="list-item">Are they confident enough to accept sole authority for your care?</li>
+        <li class="list-item">Are they capable of also seeking advice from others?</li>
+        <li class="list-item">Can they keep all information confidential?</li>
+        <li class="list-item">Can they remain calm in a crisis?</li>
+        <li class="list-item">Are they ready and willing to take on the role?</li>
+        <li class="list-item">Do you trust them to make the proper decisions for you?</li>
+        <li class="list-item">Can they make difficult decisions?</li>
+    </ul>
+</div>
+
+<div class="desktop-list">
+    <ul class ="content-dark-list yin-yang-big">
+        <li class="list-item">Would they be accountable to you and the health care personnel?</li>
+        <li class="list-item">Would they be able to exercise the duties set out for them?</li>
+        <li class="list-item">Would they act honestly and honorably on your behalf?</li>
+        <li class="list-item">Do they have good communication skills?</li>
+        <li class="list-item">Would they respect and abide by your wishes?</li>
+        <li class="list-item">Are they careful record keepers?</li>
+        <li class="list-item">Are they confident enough to accept sole authority for your care?</li>
+        <li class="list-item">Are they capable of also seeking advice from others?</li>
+        <li class="list-item">Can they keep all information confidential?</li>
+        <li class="list-item">Can they remain calm in a crisis?</li>
+        <li class="list-item">Are they ready and willing to take on the role?</li>
+        <li class="list-item">Do you trust them to make the proper decisions for you?</li>
+        <li class="list-item">Can they make difficult decisions?</li>
+    </ul>
+</div>
+
+<div class="content-title">
+    <h3>
+        Need to Learn More First?
+    </h3>
+</div>
 
 <div class="content-dark-copy">
     <p>

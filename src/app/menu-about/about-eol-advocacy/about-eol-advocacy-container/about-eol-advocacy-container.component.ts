@@ -13,7 +13,7 @@ export class AboutEolAdvocacyContainerComponent implements OnInit {
 
   detailHeaderName = 'header-about-eol-advocacy';
   title= Constants.ABOUT_HOW_WE_SUPPORT_YOU
-  quote: string='In protecting oneself, others are protected. In protecting others, oneself is protected.';
+  quote: string='In protecting yourself, others are protected. In protecting others, you are protected.';
   author: string='Gautama Buddha';
 
   constructor() { }

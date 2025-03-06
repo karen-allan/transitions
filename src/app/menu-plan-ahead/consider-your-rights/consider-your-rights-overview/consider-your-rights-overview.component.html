@@ -32,47 +32,58 @@
         medical team that you do not wish to be revived through artificial respiration methods. This is a heavy decision to make but
         being informed of the facts about CPR and Do Not Resuscitate procedures and outcomes will help give you the perspective you
         need to make these decisions.
-    </p>
-</div>
-
-<div class = "content-title">
-    <h3><b>Your Right to Accept or Refuse CPR</b></h3>
-</div>
-
-<div class = "content-dark-copy">
-    <p>
+        <br><br>
         You can choose to receive CPR or be put on a ventilator if your heart or breathing stops. Being put on a ventilator is sometimes
         referred to as "being put on life support." CPR doesn't always work to resuscitate people, or "bring them back". And the older and
         sicker you are, the less likely it is to work. Here are some of the issues to consider:
     </p>
 </div>
 
-<ul class = "content-dark-list square">
-    <li class="list-item">Pressing on the chest during CPR often breaks the person's ribs.</li>
-    <li class="list-item">People who do survive after their heart has stopped may have brain damage.</li>
-    <li class="list-item">Brain damage can affect your ability to talk, recognize loved ones, dress yourself, or manage your bathroom needs
-        .</li>
-    <li class="list-item">With CPR and life support, you may live longer than you would without life support but your remaining time may
-        be spent in a hospital connected to machines.</li>
-    <li class="list-item">If CPR does "bring you back," you will still have your chronic illness plus the new problems that led to your
-        needing CPR in the first place</li>
-</ul>
+<div class = "content-title">
+    <h4>Your Right to Accept or Refuse CPR</h4>
+</div>
 
-<div class="content-dark-copy">
+<div class="mobile-list">
+    <ul class ="content-dark-list yin-yang-small">
+        <li class="list-item">Pressing on the chest during CPR often breaks the person's ribs.</li>
+        <li class="list-item">People who do survive after their heart has stopped may have brain damage.</li>
+        <li class="list-item">Brain damage can affect your ability to talk, recognize loved ones, dress yourself, or manage your bathroom needs
+            .</li>
+        <li class="list-item">With CPR and life support, you may live longer than you would without life support but your remaining time may
+            be spent in a hospital connected to machines.</li>
+        <li class="list-item">If CPR does "bring you back," you will still have your chronic illness plus the new problems that led to your
+            needing CPR in the first place</li>
+    </ul>
+</div>
+
+<div class="desktop-list">
+    <ul class ="content-dark-list yin-yang-big">
+        <li class="list-item">Pressing on the chest during CPR often breaks the person's ribs.</li>
+        <li class="list-item">People who do survive after their heart has stopped may have brain damage.</li>
+        <li class="list-item">Brain damage can affect your ability to talk, recognize loved ones, dress yourself, or manage your bathroom needs
+            .</li>
+        <li class="list-item">With CPR and life support, you may live longer than you would without life support but your remaining time may
+            be spent in a hospital connected to machines.</li>
+        <li class="list-item">If CPR does "bring you back," you will still have your chronic illness plus the new problems that led to your
+            needing CPR in the first place</li>
+    </ul>
+</div>
+
+<div class="content-title">
     <div *ngIf="sectionSelected === 'triggeredSection1'">
-        <p>
+        <h3>
             <a (click)="this.getTriggeredPromptKey(0)">
                 Close the CPR Information Form: &#x25BC;
             </a>
-        </p>
+        </h3>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection1'">
-        <p>
+        <h3>
             <a (click)="this.getTriggeredPromptKey(1)">
                 See the CPR Information Form: &#x25B6;
             </a>
-        </p>
+        </h3>
     </div>
 </div>
 
@@ -123,7 +134,7 @@
 </div>
 
 <div class = "content-title">
-    <h3><b>Your Right to Die at Home</b></h3>
+    <h3>Your Right to Die at Home</h3>
 </div>
 
 <div class = "content-dark-copy">
@@ -142,27 +153,54 @@
     <p>
         Relatives and family that are permitted to take on the role of disposition of the body under the Cremation, Interment and Funeral
         Services Act, Sec 5 (1)) after death include in the following order of priority:
-        <br><br>
-        <b>RELATIONSHIP TO DECEASED</b>
     </p>
 </div>
 
-<ul class = "content-dark-list">
-    <li class="list-item"><b>(a)</b> personal representative named in the will</li>
-    <li class="list-item"><b>(b)</b> spouse of deceased</li>
-    <li class="list-item"><b>(c)</b> adult child of deceased</li>
-    <li class="list-item"><b>(d)</b> adult grandchild of deceased</li>
-    <li class="list-item"><b>(e)</b> if deceased a minor, legal guardian of deceased at time of death</li>
-    <li class="list-item"><b>(f)</b> parent of deceased</li>
-    <li class="list-item"><b>(g)</b> adult sibling of deceased</li>
-    <li class="list-item"><b>(h)</b> adult nephew or niece of deceased</li>
-    <li class="list-item"><b>(i)</b> adult next of kin of deceased, determined under sections 89
-        and 90 of the Estate Administration Act</li>
-    <li class="list-item"><b>(j)</b> minister under the Employment and Assistance Act or the official administrator under the Estate
-        Administration Act</li>
-    <li class="list-item"><b>(k)</b> an adult person having a personal or kinship relationship with the deceased, other than those
-        referred to in paragraphs (b) to (d) and (f) to (i)</li>
-</ul>
+<div class = "content-title">
+    <h4>Relationship to Deceased</h4>
+</div>
+
+<div class="mobile-list">
+    <ul class ="content-dark-list yin-yang-small">
+        <li class="list-item">personal representative named in the will</li>
+        <li class="list-item">spouse of deceased</li>
+        <li class="list-item">adult child of deceased</li>
+        <li class="list-item">adult grandchild of deceased</li>
+        <li class="list-item">if deceased a minor, legal guardian of deceased at time of death</li>
+        <li class="list-item">parent of deceased</li>
+        <li class="list-item">adult sibling of deceased</li>
+        <li class="list-item">adult nephew or niece of deceased</li>
+        <li class="list-item">adult next of kin of deceased, determined under sections 89
+            and 90 of the Estate Administration Act</li>
+        <li class="list-item">minister under the Employment and Assistance Act or the official administrator under the Estate
+            Administration Act</li>
+        <li class="list-item">an adult person having a personal or kinship relationship with the deceased, other than those
+            referred to in paragraphs (b) to (d) and (f) to (i)</li>
+    </ul>
+</div>
+
+<div class="desktop-list">
+    <ul class ="content-dark-list yin-yang-big">
+        <li class="list-item">personal representative named in the will</li>
+        <li class="list-item">spouse of deceased</li>
+        <li class="list-item">adult child of deceased</li>
+        <li class="list-item">adult grandchild of deceased</li>
+        <li class="list-item">if deceased a minor, legal guardian of deceased at time of death</li>
+        <li class="list-item">parent of deceased</li>
+        <li class="list-item">adult sibling of deceased</li>
+        <li class="list-item">adult nephew or niece of deceased</li>
+        <li class="list-item">adult next of kin of deceased, determined under sections 89
+            and 90 of the Estate Administration Act</li>
+        <li class="list-item">minister under the Employment and Assistance Act or the official administrator under the Estate
+            Administration Act</li>
+        <li class="list-item">an adult person having a personal or kinship relationship with the deceased, other than those
+            referred to in paragraphs (b) to (d) and (f) to (i)</li>
+    </ul>
+</div>
+
+<div class = "content-title">
+    <h3>Pronouncement of Death is not Required</h3>
+</div>
 
 <div class = "content-dark-copy">
     <p>
@@ -177,21 +215,21 @@
     </p>
 </div>
 
-<div class="content-dark-copy">
+<div class="content-title">
     <div *ngIf="sectionSelected === 'triggeredSection2'">
-        <p>
+        <h3>
             <a (click)="this.getTriggeredPromptKey(0)">
                 Close the Expected Death in the Home Form: &#x25BC;
             </a>
-        </p>
+        </h3>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection2'">
-        <p>
+        <h3>
             <a (click)="this.getTriggeredPromptKey(2)">
                 See the Expected Death in the Home Form: &#x25B6;
             </a>
-        </p>
+        </h3>
     </div>
 </div>
 
@@ -253,21 +291,21 @@
     </p>
 </div>
 
-<div class="content-dark-copy">
+<div class="content-title">
     <div *ngIf="sectionSelected === 'triggeredSection3'">
-        <p>
+        <h3>
             <a (click)="this.getTriggeredPromptKey(0)">
                 Close the Private Transfer Permit Form: &#x25BC;
             </a>
-        </p>
+        </h3>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection3'">
-        <p>
+        <h3>
             <a (click)="this.getTriggeredPromptKey(3)">
                 See the Private Transfer Permit Form: &#x25B6;
             </a>
-        </p>
+        </h3>
     </div>
 </div>
 

@@ -1,8 +1,46 @@
 /*******************************************************************************************************************
-  GLOBAL FOR IPADS, LAPTOPS AND DESKTOPS IN MODAL FORM
+  FOR MOBILE SCREENS
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 1024px) {
+and (min-width: 320px)
+and (max-width: 960px) {
+
+    laptopForm {
+        display: none;
+    }
+
+    mobileForm {
+        display: block;
+    }
+
+    /* FRAMEWORK */
+    .screen-modal-mock-dialog {
+        display: grid;
+        width: 100%;
+        margin: auto;
+        background-color: var(--color-dark-blue);
+    }
+
+    /* ********************************************** CONTAINERS  **************************************** */
+    .screen-modal-inner-block-wishes, .screen-modal-inner-block-rep, .screen-modal-inner-block-plan {
+        background-color: gold;
+        width: 90%;
+        margin: 20px 5%;
+    }
+
+    .screen-modal-data-block-wishes, .screen-modal-data-block-rep, .screen-modal-data-block-plan {
+        background-color: white;
+        width: 90%;
+        margin: 20px 5%;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL FOR SCREENS OVER 1024 PX WIDE
+*******************************************************************************************************************/
+@media only screen
+and (min-width:1024px) {
 
     laptopForm {
         display: block;
@@ -12,149 +50,385 @@ and (min-width: 1024px) {
         display: none;
     }
 
-    /* This is the main screen you see that has the blue border. Its height is defined by the content pages that lie within it */
-    /* **************************** FRAMEWORKS **************************** */
-    mat-dialog-container#choose-rep-nine-modal,
-    mat-dialog-container#make-wishes-modal,
-    mat-dialog-container#advance-directive-modal {
-        display: grid;
-        align-content: flex-start;
-        border: 3px solid var(--color-dark-blue);
-        background-color: var(--color-dark-blue);
-    }
-
-    /* position relative here is essential to get the buttons to sit absolute at the bottom of each modal page */
-    .screen-modal-inner-block-rep, .screen-modal-inner-block-wishes, .screen-modal-inner-block-plan {
-        display: grid;
-        float: left;
-        background-color: gold;
-        width: 100%;
-        margin: auto;
-        align-content: flex-start;
-        position: relative;
-    }
-
-    /* this is the parent to two and three buttons rows */
-    .screen-modal-data-block-wishes, .screen-modal-data-block-rep, .screen-modal-data-block-plan {
-        display: block;
-        float: left;
-        width: 98%;
-        position: relative;
-        margin: 0 1%;
-        color: var(--color-dark-blue);
-        background-color: lightpink;
-    }
-
-    /* FRAMEWORK */
     /* ********************************** MAKE WISHES **************************** */
-    mat-dialog-container#make-wishes-modal {
+   /* mat-dialog-container#make-wishes-modal {
         width: var(--desktop-dialog-width);
-        border-radius: 2em;
-    }
+    }*/
 
-    /* must include header height now */
     .screen-modal-inner-block-wishes {
-        height: 490px;
+        height: 580px;
+        background-color: green;
+        width:100%;
     }
 
     .screen-modal-data-block-wishes {
         height: inherit;
+        background-color: orange;
+        width:95%;
+        margin:10px 2.5%;
     }
 
     /* ********************************** ADVANCE DIRECTIVE **************************** */
-    /*BLUE BORDER (width defined in ts file or parent overview */
-    mat-dialog-container#advance-directive-modal {
+   /* mat-dialog-container#advance-directive-modal {
         width: var(--desktop-dialog-width);
-        border-radius: 2em;
-    }
+    }*/
 
     .screen-modal-inner-block-plan {
         height: 610px;
+        background-color: green;
+        width:100%;
     }
 
     .screen-modal-data-block-plan {
         height: inherit;
-
+        background-color: orange;
+        width:95%;
+        margin:10px 2.5%;
     }
 
-    /* ********************************** CHOOSE REPS **************************** */
-    mat-dialog-container#choose-rep-nine-modal {
+    /*!* ********************************** CHOOSE REPS **************************** *!*/
+ /*   mat-dialog-container#choose-rep-nine-modal {
         width: var(--desktop-dialog-width);
-        border-radius: 2em;
-    }
+    }*/
 
     .screen-modal-inner-block-rep {
-        height: 590px;
+        height: 560px;
+        background-color: green;
+        width:100%;
     }
 
     .screen-modal-data-block-rep {
         height: inherit;
+        background-color: orange;
+        width:95%;
+        margin:10px 2.5%;
     }
 
+}
 
-    /* **************************** WIZARD HEADER **************************** */
-    .wizard-modal-header {
-        font-family: var(--family-title);
-        margin: 0 auto;
-        background-color: white;
-        height: var(--desktop-dialog-header-height);
+/*******************************************************************************************************************
+  GLOBAL BANANAS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: portrait) {
+
+    .screen-modal-mock-dialog {
+        height:740px;
     }
 
-    .wizard-modal-logo {
-        margin: auto;
-        cursor: pointer;
+    .screen-modal-inner-block-wishes {
+        height: 700px;
     }
 
-    .wizard-modal-logo img {
-        height: var(--desktop-dialog-header-height);
+    .screen-modal-data-block-wishes {
+        height:660px;
     }
 
-    /*     .wizard-modal-logo img {
-             max-width: 100%;
-             height: auto;
-         }*/
-    .wizard-modal-text {
+    .screen-modal-copy p {
+        font-size: var(--med-modal-font-size);
+        line-height: 170%;
+        padding-top: 1em;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BANANAS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: landscape) {
+
+    .screen-modal-mock-dialog {
+        height:840px;
+    }
+
+    .screen-modal-inner-block-wishes {
+        height: 800px;
+    }
+
+    .screen-modal-data-block-wishes {
+        height:760px;
+    }
+
+    .screen-modal-copy p {
+        font-size: var(--med-modal-font-size);
+        line-height: 170%;
+        padding-top: 1em;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width:640px)
+and (max-width:896px)
+and (orientation: portrait){
+
+    .screen-modal-mock-dialog {
+        height:640px;
+    }
+
+    .screen-modal-inner-block-wishes {
+        height:600px;
+    }
+
+    .screen-modal-data-block-wishes  {
+        height:560px;
+    }
+
+    .screen-modal-copy p {
+        font-size: var(--med-modal-font-size);
+        line-height: 170%;
+        padding-top: 1em;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: portrait){
+
+    .screen-modal-mock-dialog {
+        height:780px;
+    }
+
+    .screen-modal-inner-block-wishes {
+        height: 740px;
+    }
+
+    .screen-modal-data-block-wishes {
+        height:700px;
+    }
+
+    .screen-modal-copy p {
+        font-size: var(--med-modal-font-size);
+        line-height: 170%;
+        padding-top: 1em;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: landscape){
+
+    .screen-modal-mock-dialog {
+        height:780px;
+    }
+
+    .screen-modal-inner-block-wishes {
+        height: 740px;
+    }
+
+    .screen-modal-data-block-wishes {
+        height:700px;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width:640px)
+and (max-width:896px)
+and (orientation: portrait){
+
+    .screen-modal-mock-dialog {
+        height:780px;
+    }
+
+    .screen-modal-inner-block-wishes {
+        height: 740px;
+    }
+
+    .screen-modal-data-block-wishes {
+        height:700px;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width:640px)
+and (max-width:896px)
+and (orientation: landscape){
+
+    .screen-modal-mock-dialog {
+        height:780px;
+    }
+
+    .screen-modal-inner-block-wishes {
+        height: 740px;
+    }
+
+    .screen-modal-data-block-wishes {
+        height:700px;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width:800px)
+and (orientation: portrait){
+
+    .screen-modal-mock-dialog {
+        height:640px;
+    }
+
+    .screen-modal-inner-block-wishes, .screen-modal-inner-block-rep {
+        height:600px;
+    }
+
+    .screen-modal-data-block-wishes, .screen-modal-data-block-rep  {
+        height:560px;
+    }
+
+    .screen-modal-copy p {
+        font-size: var(--med-modal-font-size);
+        line-height: 170%;
+        padding-top: 1em;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width:800px)
+and (orientation: landscape){
+
+    .screen-modal-mock-dialog {
+        height:7000px;
+    }
+
+    .screen-modal-inner-block-wishes, .screen-modal-inner-block-rep {
+        height:660px;
+    }
+
+    .screen-modal-data-block-wishes, .screen-modal-data-block-rep  {
+        height:600px;
+    }
+
+    .screen-modal-copy p {
+        font-size: var(--med-modal-font-size);
+        line-height: 170%;
+        padding-top: 1em;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG TABLETS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px)
+and (max-width: 1280px)
+and (orientation: portrait) {
+
+    .screen-modal-mock-dialog {
+        height:620px;
+    }
+
+    .screen-modal-inner-block-wishes {
+        height:580px;
+    }
+
+    .screen-modal-data-block-wishes  {
+        height:540px;
+    }
+
+    .screen-modal-copy p {
+        font-size: var(--med-modal-font-size);
+        line-height: 170%;
+        padding-top: 1em;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL
+*******************************************************************************************************************/
+@media only screen {
+
+    /* ******************************************* FRAMEWORKS ***************************************** */
+    /* This is the main screen you see that has the blue border. Its height is defined by the content pages that lie within it */
+    mat-dialog-container#choose-rep-nine-modal,
+    mat-dialog-container#make-wishes-modal,
+    mat-dialog-container#advance-directive-modal {
+        display: block;
+        float:left;
+        min-width:1024px;
+        margin:auto;
+
+        border: 3px solid var(--color-dark-blue);
+        background-color: var(--color-dark-blue);
+        border-radius: 2em;
+    }
+
+    .screen-modal-inner-block-wishes, .screen-modal-inner-block-rep, .screen-modal-inner-block-plan {
+        display: grid;
+        float: left;
+        align-content:center;
+        position: relative;
+
+    }
+
+    .screen-modal-data-block-wishes, .screen-modal-data-block-rep, .screen-modal-data-block-plan {
+        display: block;
+        float: left;
+        position: relative;
         color: var(--color-dark-blue);
-    }
-
-    .wizard-modal-text h2 a {
-        text-decoration: none;
-        color: var(--color-dark-blue);
-    }
-
-    .wizard-modal-text h2 a:hover {
-        color: var(--color-purple);
     }
 
     /* **************************** TITLES **************************** */
     .screen-modal-title {
         display: block;
         width: 100%;
-        font-weight: bold;
-        font-family: var(--family-title);
     }
 
-    .screen-modal-title h2, .screen-modal-title h3 {
+    .screen-modal-title h2, .screen-modal-title-first h3, .screen-modal-title h3 {
         display: block;
         text-align: left;
-    }
-
-    /* **************************** CONTENT **************************** */
-    .answer-block {
-        display: block;
-        width: 98%;
-        float: left;
+        margin: 0;
         color: var(--color-dark-blue);
-        font-family: var(--family-copy);
-        text-align: left;
+        font-family: var(--family-modal-titles);
     }
 
-    .screen-modal-copy {
-        display: grid;
-        width: 100%;
-        /*background-color: white;*/
+    .screen-modal-title h2 {
+        font-size: var(--h2-titles-modal-font-size);
+        padding-top: 1em;
     }
 
+    .screen-modal-title-first h3 {
+        padding-top: .5em;
+        font-weight: 500;
+        font-size: var(--h3-titles-modal-font-size);
+    }
+
+    .screen-modal-title h3 {
+        padding-top: .6em;
+        font-size: var(--h3-titles-modal-font-size);
+    }
+
+    /* **************************** BLOCK CONTAINERS ********************************** */
     .screen-modal-full-col-block {
         display: block;
         float: left;
@@ -162,6 +436,19 @@ and (min-width: 1024px) {
         margin-left: 2.5%;
         margin-right: 2.5%;
         line-height: 105%;
+        margin-top: 1em;
+    }
+
+    .answer-block {
+        display: block;
+        float: left;
+        width: 98%;
+        text-align: left;
+    }
+
+    .screen-modal-copy  {
+        display: grid;
+        width: 100%;
     }
 
     .screen-modal-full-col {
@@ -169,16 +456,7 @@ and (min-width: 1024px) {
         float: left;
         width: 100%;
         line-height: 105%;
-    }
-
-    .screen-modal-full-col-block p {
-        line-height: 105%;
-        font-weight: bold;
-    }
-
-    .screen-modal-full-col-block span {
-        display: block;
-        line-height: 105%;
+        padding: .8em 0;
     }
 
     .screen-modal-full-col-list {
@@ -187,36 +465,14 @@ and (min-width: 1024px) {
         margin: 0;
     }
 
-    .screen-modal-list-item {
-        list-style: square inside;
-    }
-
-    .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
-        border: 1px dashed var(--color-dark-blue);
-        width:100%;
-    }
-
-    .text-area {
+    .screen-modal-error-message-block {
         display: block;
-        float: left;
         width: 100%;
-        line-height: 105%;
-        overflow-y: scroll;
-        scrollbar-color: red orange;
-        scrollbar-width: thin;
+        float: left;
+        text-align: left;background-color: white;
     }
 
-    .screen-modal-copy, .screen-modal-full-col-block p, .screen-modal-full-col-block span, .text-area,
-    .screen-modal-full-col-list, .screen-modal-first-col, .screen-modal-list-item,
-    .screen-modal-second-col, .screen-modal-third-col, .screen-modal-forth-col,
-    .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-full-col,
-    .screen-modal-first-check-col, .screen-modal-second-check-col {
-        color: var(--color-dark-blue);
-        font-family: var(--family-copy);
-        text-align: left;
-    }
-
-    /* **************************** GRIDS ********************************** */
+    /* **************************** INLINE GRID CONTAINERS ********************************** */
     .screen-modal-forty-sixty-cols-block, .screen-modal-three-thirty-cols-block, .screen-modal-thirty-forty-thirty-cols-block,
     .screen-modal-two-fifty-cols-block, .screen-modal-twenty-eighty-cols-block, .screen-modal-eighty-twenty-cols-block,
     .screen-modal-seventy-thirty-cols-block, .screen-modal-twenty-twenty-sixty-cols-block, .screen-modal-thirty-twenty-thirty-twenty-cols-block {
@@ -225,93 +481,17 @@ and (min-width: 1024px) {
         text-align: left;
     }
 
-    /* changed from inline-grid to grid as they were moving off the page to the right side of the screen */
-    .screen-modal-two-buttons-row, .screen-modal-three-buttons-row {
-        display: grid;
-        width: 100%;
-        background-color: red;
-        justify-content: flex-end;
-        position: absolute;
-        bottom: .5em;
-    }
-
-    .screen-modal-two-buttons-row {
-        grid-template-columns: repeat(2, 110px);
-        grid-column-gap: 10px;
-    }
-
-    .screen-modal-three-buttons-row {
-        grid-template-columns: repeat(3, 110px);
-        grid-column-gap: 10px;
-    }
-
-
-
-    .screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
-    .screen-modal-cancel-button, .screen-modal-print-button, .screen-modal-cancel-print-button {
-        display: inline;
-        color: var(--color-white);
-        background-color: var(--color-dark-blue);
-        border-radius: 1em;
-        text-align: center;
-        align-content: center;
-        font-size: var(--med-copy-desktop-font-size);
-        height: 50px;
-        width: 110px;
-    }
-
-    /* ********************** ERROR ***********************/
-    .screen-modal-error-message-block {
-        display: block;
-        width: 100%;
-        float: left;
-        text-align: left;
-    }
-
-    .screen-modal-error-message {
-        font-weight: 800;
-        color: var(--color-red);
-        font-family: var(--family-copy);
-        line-height: 140%;
-    }
-
-  /*  .wizard-modal-header-mobile {
-        display: none;
-    }
-
-    .wizard-modal-header-desktop {
-        display: block;
-    }*/
-
-    .wizard-modal-header {
-        display: inline-grid;
-        grid-template-columns: 30% 70%;
-        width: 100%;
-    }
-
-    .wizard-modal-logo {
-        display: grid;
-        justify-content: flex-start;
-        text-align: left;
-        grid-column: 1;
-    }
-
-    .wizard-modal-text {
-        display: grid;
-        grid-column: 2;
-        justify-content: center;
-        align-content: center;
-        /*font-size:var(--med-copy-desktop-font-size);*/
-    }
-
-    .screen-modal-title-first h3 {
-        padding-top: 2em;
-    }
-
-    /* **************** GRIDS ******************* */
     .screen-modal-twenty-eighty-cols-block {
         display: inline-grid;
         grid-template-columns: 20% 80%;
+    }
+
+    .wishes-margin-top {
+        margin-top:.5em;
+    }
+
+    .wishes-margin-top-2 {
+        margin-top:2em;
     }
 
     .screen-modal-seventy-thirty-cols-block {
@@ -354,6 +534,41 @@ and (min-width: 1024px) {
         grid-template-columns: 50% 50%;
     }
 
+    /* changed from inline-grid to grid as they were moving off the page to the right side of the screen */
+    .screen-modal-two-buttons-row, .screen-modal-three-buttons-row {
+        display: grid;
+        width: 100%;
+        /*background-color: red;*/
+        background-color: white;
+        justify-content: flex-end;
+        position: absolute;
+        bottom: .5em;
+    }
+
+    .screen-modal-two-buttons-row {
+        grid-template-columns: repeat(2, 110px);
+        grid-column-gap: 10px;
+    }
+
+    .screen-modal-three-buttons-row {
+        grid-template-columns: repeat(3, 110px);
+        grid-column-gap: 10px;
+    }
+
+    /* ********************************** BUTTONS *****************************************************/
+    .screen-modal-start-button, .screen-modal-cancel-start-button, .screen-modal-next-button, .screen-modal-previous-button,
+    .screen-modal-cancel-button, .screen-modal-print-button, .screen-modal-cancel-print-button {
+        display: inline;
+        color: var(--color-white);
+        background-color: var(--color-dark-blue);
+        border-radius: 1em;
+        text-align: center;
+        align-content: center;
+        font-size: var(--med-modal-font-size);
+        height: 50px;
+        width: 110px;
+    }
+
     .screen-modal-start-button, .screen-modal-next-button, .screen-modal-print-button {
         grid-column: 1;
     }
@@ -364,6 +579,81 @@ and (min-width: 1024px) {
 
     .screen-modal-cancel-button {
         grid-column: 3;
+    }
+
+    /* **************************** CONTENT **************************** */
+    .screen-modal-copy p {
+        /*font-size: var(--med-modal-font-size);*/
+        font-family: var(--family-modal-copy);
+        /*line-height: 170%;*/
+        /*padding-top: 1em;*/
+    }
+
+    .screen-modal-copy span {
+        font-size: var(--small-modal-font-size);
+        font-family: var(--family-modal-copy);
+        line-height: 170%;
+    }
+
+    .screen-modal-full-col-block p {
+        line-height: 105%;
+        font-weight: bold;
+        padding-top: 1em;
+        font-size: var(--big-modal-font-size);
+        font-family: var(--family-modal-copy);
+    }
+
+    .screen-modal-full-col-block span {
+        display: block;
+        line-height: 105%;
+        padding: 1em 0;
+        font-size: var(--big-modal-font-size);
+        font-family: var(--family-modal-copy);
+    }
+
+    .screen-modal-list-item {
+        list-style: square inside;
+        padding-top: 1em;
+        font-size: var(--med-modal-font-size);
+        font-family: var(--family-modal-copy);
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
+        border: 1px dashed var(--color-dark-blue);
+        width: 100%;
+        font-size: var(--med-modal-font-size);
+        font-family: var(--family-modal-copy);
+    }
+
+    .screen-modal-first-radio-col, .screen-modal-first-check-col {
+        grid-column: 1;
+        padding: 1em 0;
+        font-family: var(--family-modal-copy);
+        line-height: 110%;
+    }
+
+    .screen-modal-second-radio-col, .screen-modal-second-check-col {
+        grid-column: 2;
+        padding: 1em 0;
+        font-family: var(--family-modal-copy);
+        line-height: 110%;
+    }
+
+    .screen-modal-copy, .screen-modal-full-col-block p, .screen-modal-full-col-block span, .text-area,
+    .screen-modal-full-col-list, .screen-modal-first-col, .screen-modal-list-item,
+    .screen-modal-second-col, .screen-modal-third-col, .screen-modal-forth-col,
+    .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-full-col,
+    .screen-modal-first-check-col, .screen-modal-second-check-col {
+        color: var(--color-dark-blue);
+        font-family: var(--family-copy);
+        text-align: left;
+    }
+
+    /* ************************************* COLUMNS ***************************************** */
+    .screen-modal-first-col, .screen-modal-second-col, .screen-modal-third-col, .screen-modal-forth-col {
+        padding: .7em 0;
+        font-family: var(--family-modal-copy);
+        font-size: var(--big-modal-font-size);
     }
 
     .screen-modal-first-col {
@@ -386,108 +676,22 @@ and (min-width: 1024px) {
         grid-column: 4;
     }
 
-    .screen-modal-first-radio-col, .screen-modal-first-check-col {
-        grid-column: 1;
-    }
-
-    .screen-modal-second-radio-col, .screen-modal-second-check-col {
-        grid-column: 2;
-    }
-
-
-    /* CONTENT */
-    /* WIZARD HEADER */
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-desktop-font-size);
-    }
-
-    .wizard-modal-text p, .wizard-modal-text span {
-        font-size: var(--med-copy-desktop-font-size);
-        line-height: 110%;
-    }
-
-    /* HEADINGS - color is declared in the parents .screen-modal-data-block-wishes, .screen-modal-data-block-rep, .screen-modal-data-block-plan */
-    .screen-modal-title h2, .screen-modal-title-first h3, .screen-modal-title h3 {
-        margin: 0;
-    }
-
-    .screen-modal-title h2 {
-        font-size: var(--h2-titles-desktop-font-size);
-        padding-top: 1em;
-    }
-
-    .screen-modal-title-first h3 {
-        padding-top: .5em;
-        font-weight: 500;
-        font-size: var(--h3-titles-desktop-font-size);
-    }
-
-    .screen-modal-title h3 {
-        padding-top: 1em;
-        font-size: var(--h3-titles-desktop-font-size);
-    }
-
-    .answer-block {
-        font-size: var(--med-copy-desktop-font-size);
+    .text-area {
+        display: block;
+        float: left;
+        width: 100%;
+        line-height: 105%;
+        overflow-y: scroll;
+        scrollbar-color: red orange;
+        scrollbar-width: thin;
     }
 
     .screen-modal-error-message {
-        font-size: var(--med-copy-desktop-font-size);
-    }
-
-    .screen-modal-copy p {
-        font-size: var(--med-copy-desktop-font-size);
-        line-height: var(--copy-line-height);
-        padding-top: 1em;
-    }
-
-    .screen-modal-copy span {
-        font-size: var(--small-copy-desktop-font-size);
-        line-height: var(--copy-line-height);
-    }
-
-    .screen-modal-list-item {
-        padding-top: 1em;
-        font-size: var(--med-copy-desktop-font-size);
-    }
-
-    .screen-modal-full-col-block {
-        margin-top: 1em;
-    }
-
-    .screen-modal-full-col-block p {
-        padding-top: 1em;
-
-        font-size: var(--big-copy-desktop-font-size);
-    }
-
-    .screen-modal-full-col-block span {
-        padding: 1em 0;
-        font-size: var(--big-copy-desktop-font-size);
-    }
-
-    .screen-modal-first-radio-col, .screen-modal-second-radio-col, .screen-modal-first-check-col, .screen-modal-second-check-col {
-        font-size: var(--med-copy-desktop-font-size);
-    }
-
-    .screen-modal-first-radio-col, .screen-modal-first-check-col {
-        padding: 1em 0;
-        line-height: 110%;
-    }
-
-    .screen-modal-second-radio-col, .screen-modal-second-check-col {
-        padding: 1em 0;
-        line-height: 110%;
-    }
-
-    .screen-modal-first-col, .screen-modal-second-col, .screen-modal-third-col, .screen-modal-forth-col {
-        padding: .4em 0;
-        font-size: var(--big-copy-desktop-font-size);
-    }
-
-    .screen-modal-full-col {
-        padding: .8em 0;
-        font-size: var(--big-copy-desktop-font-size);
+        font-weight: 800;
+        color: var(--color-red);
+        line-height: 180%;
+        font-size: var(--med-modal-font-size);
+        font-family: var(--family-modal-copy);
     }
 
 }

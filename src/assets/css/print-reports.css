@@ -1,0 +1,357 @@
+
+/**********************************************************************************************************
+    GLOBAL PRINT REPORTS
+***********************************************************************************************************/
+
+@media print {
+    /*A4 paper is 8.27 inches by 11.69 inches */
+    @page {
+        @page {
+            size: a4;
+            margin: 8.5mm 0;
+            padding: 0
+        }
+
+        @page :first{
+            size: a4;
+            margin: 0;
+            padding: 0
+        }
+    }
+
+    /* HEADER for all print reports */
+    .print-header {
+        max-width: var(--print-width);
+        display: inline-grid;
+        font-family: var(--family-title);
+        margin: auto;
+        grid-template-columns: 45% 55%;
+        width: 100%;
+        color: var(--color-black);
+    }
+
+    .print-logo {
+        display: grid;
+        grid-column: 1;
+        width: 100%;
+        margin: auto;
+    }
+
+    .print-logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .print-text {
+        display: grid;
+        grid-column: 2;
+        width: 100%;
+        align-content: center;
+        justify-content: flex-start;
+        color:black;
+    }
+
+    .print-text h1 {
+        font-size: var(--h1-print-form-font-size);
+        line-height: 150%;
+        font-weight: 500;
+    }
+
+    .print-text h2 {
+        font-size: var(--h2-print-form-font-size);
+        line-height: 120%;
+        font-weight: 500;
+    }
+
+    .print-form-text h3 {
+        font-size: var(--h3-print-form-font-size);
+        line-height: 150%;
+        font-weight: 300;
+    }
+
+    .print-title   {
+        display:block;
+        width:100%;
+        float:left;
+        font-family:var(--family-title);
+        /*padding-top:.5em;*/
+        /*margin:.8em 0;*/
+        text-align: left;
+    }
+
+    .print-title h1  {
+        font-size: var(--h1-print-form-font-size);
+        margin-top:.8em;
+        text-align: left;
+    }
+
+    .print-title h2  {
+        font-size: var(--h2-print-form-font-size);
+        margin-top:.5em;
+        text-align: left;
+    }
+
+    .print-title h3  {
+        font-size: var(--h3-print-form-font-size);
+        margin-top:.5em;
+        text-align: left;
+    }
+
+    .print-title h4  {
+        font-size: var(--h4-print-form-font-size);
+        margin-top:.5em;
+        text-align: left;
+    }
+
+    /* Demographic */
+
+    .print-inline-data {
+        display:inline-grid;
+        float:left;
+        grid-template-columns: 40% 60%;
+        width:100%;
+        padding:1em 0;
+    }
+
+    .print-inline-prompt  {
+        display:grid;
+        grid-column: 1;
+        font-size: var(--prompt-print-form-font-size);
+        line-height: 130%;
+        width:100%;
+        font-family:var(--family-copy);
+    }
+
+    .print-inline-value {
+        display:grid;
+        grid-column: 2;
+        font-size: var(--value-print-form-font-size);
+        line-height: 130%;
+        width:100%;
+        font-family:var(--family-copy);
+        border-bottom:thin solid black;
+    }
+
+    .print-inline-line {
+        display:grid;
+        grid-column: 2;
+        border-bottom: 1px solid black;
+    }
+
+    .print-form-caregiver-consult-component, .print-form-patient-consult-component, .print-form-planner-consult-component {
+        display:block;
+        float:left;
+        width:95%;
+        font-family: var(--family-copy);
+        margin-top:1em;
+        color:#878787;
+        position:relative;
+    }
+
+    /* For Frailty, Medical, Patient and Planner */
+    .print-form-prompt   {
+        display:block;
+        width:100%;
+        float:left;
+        font-family:var(--family-title);
+        color:black;
+        padding:.5em 0 0 .5em;
+        text-align: left;
+        font-size: var(--prompt-print-form-font-size);
+        font-weight: 800;
+        line-height:120%;
+    }
+
+    .print-form-response {
+        display:block;
+        float:left;
+        width:95%;
+        margin-left:5%;
+        margin-right:5%;
+        font-size: 1.4em;
+        font-size: var(--response-print-form-font-size);
+        padding:.5em 0;
+        line-height:130%;
+        font-style: italic;
+    }
+
+    /* Disclaimer */
+    .print-form-disclaimer-block {
+        display:block;
+        float:left;
+        max-width: var(--content-width);
+        width: 100%;
+        color:black;
+        margin:auto;
+    }
+
+    .print-form-disclaimer-title {
+        padding-top:.5em;
+        margin:.8em 0;
+        font-size: var(--titles-print-form-font-size);
+        text-align: left;
+        font-family:var(--family-title);
+    }
+
+    .print-form-disclaimer-text {
+        font-size: var(--small-p-copy-print-form-font-size);
+        font-family: var(--family-copy);
+        border: #878787 dashed 1px;
+        padding:1em;
+    }
+
+    .print-form-copyright {
+        display:grid;
+        width: 100%;
+        float:left;
+        margin-top:5em;
+        text-align: center;
+        align-content: flex-end;
+        justify-content: center;
+    }
+
+    .print-form-copyright p {
+        font-size: var(--small-p-copy-print-form-font-size);
+        color:black;
+        font-family:var(--family-copy);
+        font-weight:bold;
+    }
+
+    /*CLIENT SIGNATURE AND DATE*/
+    .print-form-signature-block {
+        display:inline-grid;
+        width:80%;
+        float:left;
+        margin-left:10%;
+        margin-right:10%;
+        margin-top:2em;
+        grid-template-columns: 20% 80%;
+        height:100%;
+    }
+
+    /* form-date-label = Date: form-date-value = Default Date spans 2 cols
+      form-signature-label = Signature: form-signature-line  = Line col2 and form-print-button = col 3 */
+    .print-form-date-label, .print-form-date-value, .print-form-signature-label, .print-form-signature-line {
+        display:grid;
+        width:100%;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+    }
+
+    .print-form-date-label, .print-form-signature-label {
+        grid-column:1;
+        font-size:var(--sig-print-form-font-size);
+        padding-top:1em;
+        align-content: flex-end;
+    }
+
+    .print-form-date-value, .print-form-signature-value  {
+        margin-top:1em;
+        padding:1em 0 0 0;
+        grid-column:2;
+        font-size:var(--sig-print-form-font-size);
+    }
+
+    .print-modal-make-wish-list, .print-modal-choose-your-rep, .print-modal-write-advance-directive {
+        display:block;
+        float:left;
+        width:95%;
+        font-family: var(--family-copy);
+        margin-top:1em;
+        color:#878787;
+    }
+
+    .print-modal-block  {
+        margin-top:2em;
+    }
+
+    /* wishes */
+    .print-modal-question {
+        display:block;
+        float:left;
+        width:100%;
+    }
+
+    .print-modal-question p {
+        margin-top:1em;
+        font-size: var(--big-p-copy-print-form-font-size);
+        font-style: normal;
+        line-height: 110%;
+    }
+
+    .print-modal-question span {
+        display:block;
+        font-size: var(--big-span-copy-print-form-font-size);
+        font-style: italic;
+        line-height: 100%;
+        padding-left: 2em;
+    }
+
+    /* representatives and advance directive */
+    .print-modal-text-block {
+        display:block;
+        float:left;
+        width:100%;
+        font-family: var(--family-copy);
+    }
+
+    .print-modal-text-block p {
+        font-size: var(--big-p-copy-print-form-font-size);
+        text-align: left;
+        line-height:130%;
+    }
+
+    .print-modal-text-block span {
+        font-size: var(--big-span-copy-print-form-font-size);
+        line-height:100%;
+    }
+
+    .print-modal-list-block {
+        display:block;
+        float:left;
+        width:90%;
+        margin-left: 5%;
+        margin-right:5%;
+        font-family: var(--family-copy);
+    }
+
+    .print-modal-list-item    {
+        font-size:var(--big-p-copy-print-form-font-size);
+        text-align: left;
+        line-height: 120%;
+        padding-top:.25em;
+    }
+
+    .print-modal-instructions {
+        display:block;
+        float:left;
+        width:90%;
+        margin-right:5%;
+        margin-left:5%;
+        font-family:var(--family-copy);
+    }
+
+    .print-modal-instructions p {
+        font-size: 1.5em;
+        font-style: italic;
+        line-height: 120%;
+        padding:1em 0;
+    }
+
+    .print-modal-province {
+        display:block;
+        width:100%;
+        margin:auto;
+        font-family:"sans-serif";
+        font-size:1.5em;
+        padding:0;
+    }
+
+
+    #headers, .desktop-header, .mobile-header, .header-home-image, .header-detail-image, .content-title, .home-facts-container, .quotes,
+    .content-images, .content-dark-copy, .booking-link-grid, .citations-container, .content-dark-list,
+    .about-us-container, .wizard-intro-container, .consult-menu-block, .charges-grid, .testimonials-grid, #footers  {
+        display: none;
+    }
+
+}

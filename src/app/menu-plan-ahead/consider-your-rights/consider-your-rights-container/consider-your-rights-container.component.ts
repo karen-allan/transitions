@@ -13,6 +13,6 @@ export class ConsiderYourRightsContainerComponent {
 
   detailHeaderName="header-consider-cpr"
   title=Constants.KNOW_YOUR_RIGHTS
-  quote: string='Planning is bringing the future into the present so that you can do something about it now.';
+  quote: string='Planning is bringing the future into the present to do something about it now.';
   author: string='Alan Lakein';
 }

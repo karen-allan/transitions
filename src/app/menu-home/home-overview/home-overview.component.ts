@@ -13,6 +13,8 @@ export class HomeOverviewComponent implements OnInit {
     @Input() quote='';
     @Input() author='';
 
+    sectionSelected: string ='';
+
     /* less than 60 */
     metaTitle='End-of-life Support in Shuswap B.C. | End of life Planning'
 
@@ -30,11 +32,25 @@ export class HomeOverviewComponent implements OnInit {
             {name: 'robots', content: 'index, follow'},
             {name:"viewport", content:"width=device-width,initial-scale=1" }
         ]);
-
-
-
-
     }
 
+    /*********************************************************************************/
+    getTriggeredPromptKey(id: number) {
 
+        if (id ==0) {
+            this.sectionSelected = '';
+        }
+        if (id == 1) {
+            this.sectionSelected = "triggeredSection1"
+        }
+     /*   if (id == 2) {
+            this.sectionSelected = "triggeredSection2"
+        }
+        if (id == 3) {
+            this.sectionSelected = "triggeredSection3"
+        }
+        if (id == 4) {
+            this.sectionSelected = "triggeredSection4"
+        }*/
+    }
 }
