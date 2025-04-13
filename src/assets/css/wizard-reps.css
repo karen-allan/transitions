@@ -1,0 +1,123 @@
+
+/*******************************************************************************************************************
+ GLOBAL NOW WE ARE IN THE MODAL FORMS - ADJUSTED FOR THE WIZARDS TO EXCLUDE OVERLAPPING BIG TABLETS AND IPADS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px) {
+
+    .modal-inner-block-rep   {
+        height: 540px;
+        width: 100%;
+        background-color: white;
+    }
+
+    .modal-data-block-rep {
+        height:520px;
+        width: 90%;
+        margin: 0 5%;
+        background-color: white;
+    }
+
+    .modal-rep-main-title {
+        font-size: var(--form-main-title);
+        padding-top: 1em;
+        margin-top: 1em;
+    }
+
+    .modal-rep-sub-title {
+        font-size: var(--form-sub-title);
+        padding: 1em 0;
+        line-height: 115%;
+    }
+
+    .modal-rep-last-title {
+        font-size: var(--form-last-title);
+        padding: 1em 0;
+        margin-top:1em;
+        line-height: 115%;
+    }
+
+    .modal-rep-list-item {
+        margin: 0;
+        padding: .3em;
+        font-size: var(--form-list);
+        line-height: 100%;
+    }
+
+    .modal-rep-alt-radio-item {
+        font-size: var(--form-radio);
+        padding: 1em 0;
+        line-height: 110%;
+        margin-top:1em;
+    }
+
+    .modal-rep-text-area {
+        font-size: var(--form-copy);
+        line-height: 140%;
+    }
+
+    .modal-rep-legal-radio-item {
+        font-size: var(--form-radio);
+        padding:.5em 0;
+    }
+
+    .modal-rep-copy p {
+        padding-top:1em;
+        font-size: var(--form-copy);
+        line-height: 150%;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL
+*******************************************************************************************************************/
+@media only screen {
+
+    /* modal-rep-main-title
+     modal-rep-sub-title
+     modal-rep-last-title
+
+     modal-rep-list-item
+     modal-rep-alt-radio-item
+     modal-rep-text-area
+     modal-rep-copy p
+     */
+    .modal-rep-main-title,
+    .modal-rep-sub-title,
+    .modal-rep-last-title {
+        display: block;
+        float: left;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        color: var(--color-dark-blue);
+        font-family: var(--family-title);
+    }
+
+    .modal-rep-list-item, .modal-rep-alt-radio-item, .modal-rep-legal-radio-item, .modal-rep-copy, .modal-rep-text-area {
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        text-align: left;
+    }
+
+    .modal-rep-alt-radio-item, .modal-rep-legal-radio-item {
+        border: 1px dashed var(--color-dark-blue);
+        width: 100%;
+    }
+
+    .modal-rep-text-area {
+        display: block;
+        float: left;
+        width: 100%;
+        overflow-y: scroll;
+        scrollbar-color: red orange;
+        scrollbar-width: thin;
+    }
+
+    .modal-rep-copy {
+        display: grid;
+        width: 100%;
+    }
+
+}

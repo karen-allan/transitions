@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {PathObject} from "../../../ts-files/pathObject";
 
 @Component({
   selector: 'app-consider-advocates-overview',
@@ -13,6 +14,8 @@ export class ConsiderAdvocatesOverviewComponent  {
   @Input() author='';
 
   sectionSelected: string ='';
+
+  @Input() pathObject: PathObject;
 
   constructor() { }
 

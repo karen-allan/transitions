@@ -22,8 +22,7 @@ export class AdvanceDirective {
         public witness_two_postal: string,
         public witness_two_province: string,
 
-        public witness_lawyer:boolean,
-        public witness_notary:boolean,
+        public witness_type:string,
 
         public consent_given_notes:string,
         public consent_refused_notes:string,

@@ -1,6 +1,16 @@
 <div class="book-consultation-screen">
     <app-global-menu [menuItemId]='menuItemId' [subMenuItemId]='subMenuItemId'></app-global-menu>
-    <app-book-consultation-overview [client]="client" [title]="title" [quote]="quote" [author]="author">  </app-book-consultation-overview>
+
+    <app-book-consultation-overview
+        [client]="client"
+        [title]="title"
+        [quote]="quote"
+        [author]="author"
+        [consult1]="consult1"
+        [consult2]="consult2"
+        [consult3]="consult3">
+    </app-book-consultation-overview>
+
     <app-global-footer></app-global-footer>
 </div>
 

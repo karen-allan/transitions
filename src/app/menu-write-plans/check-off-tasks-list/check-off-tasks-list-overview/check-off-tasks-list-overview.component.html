@@ -1,18 +1,18 @@
 <div class="header-detail-image header-create-checklist-image">
-    <div class="quote">
+    <div class="header-quote">
         &#8220;{{quote}}&#8220;
     </div>
-    <div class="author">
+    <div class="header-author">
         {{author}}
     </div>
 </div>
 
 <div class="content-title">
-    <h1>{{title}}</h1>
+    <h1>{{title.toUpperCase()}}</h1>
 </div>
 
 <div class="content-title">
-    <h3>Step 1: Get a Storage Space for your Papers:</h3>
+    <h4>Step 1: Get a Storage Space for your Papers:</h4>
 </div>
 
 <div class="content-dark-copy">
@@ -24,7 +24,7 @@
 </div>
 
 <div class="content-title">
-    <h3>Step 2: Do the Financial/Legal Stuff</h3>
+    <h4>Step 2: Do the Financial/Legal Stuff</h4>
 </div>
 
 <div class="content-dark-copy">
@@ -32,13 +32,16 @@
         do. Leaving it for your kids or other family to work out will undoubtedly cause a lot of needless stress and tension. Put
         yourself in the shoes of your Executor and imagine all of the information that they will need. Please note that we are focused on
         the health care aspects of dying so there can be many financial decisions and actions needed to be made. You will definitely want
-        to put together a Will either through a lawyer or notary public or by purchasing a Will kit to do yourself. Here
-        are a few basic things to consider:
+        to put together a Will either through a lawyer or notary public or by purchasing a Will kit to do yourself.
+        <br><br>
+        To know what your rights are regarding your own life and death so you can be empowered, not left in the dark, check out our
+        <a routerLink={{pathObject.child4_url}} > {{pathObject.parent_name}} > {{pathObject.child4_name}}</a>  page.
+        Here are a few basic things to consider:
     </p>
 </div>
 
 <div class = "content-title">
-    <h4>Step 3: Store this Information</h4>
+    <h4>Step 3: Share your Information with your Advocate(s)</h4>
 </div>
 
 <div class="mobile-list">
@@ -73,40 +76,51 @@
     <h4>Step 4: Do the Personal Stuff</h4>
 </div>
 
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
-        <li class="list-item">Organ donor permission form (sign up at transplant.bc.ca).</li>
-        <li class="list-item">If you have a cemetery plot paid for, the location of it.</li>
-        <li class="list-item">The contact information for all relevant people who need to be informed.</li>
-        <li class="list-item">Follow our <a  routerLink="/makeWishList">{{ lookupParent }} > {{ lookupChild1 }}</a> to nail down your wishes
-            and decisions about end of life care.</li>
-        <li class="list-item">Follow our <a routerLink="/chooseReps">{{ lookupParent }} > {{ lookupChild2 }}</a> to state the person or
-            persons you would like to advocate for you should you be unable to do so.</li>
-        <li class="list-item">Follow our <a routerLink="/writeCarePlan">{{ lookupParent }} > {{ lookupChild3 }}</a> to write down your
-            decisions regarding supportive medical procedures you may or may not want to have done.</li>
-    </ul>
-</div>
-
 <div class="desktop-list">
     <ul class ="content-dark-list yin-yang-big">
         <li class="list-item">Organ donor permission form (sign up at transplant.bc.ca).</li>
         <li class="list-item">If you have a cemetery plot paid for, the location of it.</li>
         <li class="list-item">The contact information for all relevant people who need to be informed.</li>
+    </ul>
+</div>
 
+<div class="mobile-list">
+    <ul class ="content-dark-list yin-yang-small">
+        <li class="list-item">Organ donor permission form (sign up at transplant.bc.ca).</li>
+        <li class="list-item">If you have a cemetery plot paid for, the location of it.</li>
+        <li class="list-item">The contact information for all relevant people who need to be informed.</li>
     </ul>
 </div>
 
 <div class = "content-title">
-    <h4>Step 5: Follow our Wizards!</h4>
+    <h4>Step 5: Know your Rights</h4>
 </div>
 
 <div class="content-dark-copy">
     <p>
-        Follow our <a routerLink="/makeWishList">{{ lookupParent }} > {{ lookupChild1 }}</a> to nail down your wishes
-        and decisions about end of life care. Follow our <a routerLink="/chooseReps">{{ lookupParent }} > {{ lookupChild2 }}</a> to state the person or
-        persons you would like to advocate for you should you be unable to do so. And follow our
-        <a routerLink="/writeCarePlan">{{ lookupParent }} > {{ lookupChild3 }}</a> to write down your decisions regarding supportive medical
-        procedures you may or may not want to have done.
+        <b>&#x2638;&nbsp;</b>You have more rights than you know. Read about them at
+        <b><a target="new" routerLink={{pathObject.child4_url}}> {{ pathObject.parent_name }} > {{ pathObject.child4_name }}</a> </b>
+        wizard.
+    </p>
+</div>
+
+<div class = "content-title">
+    <h4>Step 6: Follow our Wizards!</h4>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        <b>&#x2638;&nbsp;</b>To write down your wishes for end of life care, run our
+        <b><a target="new" routerLink={{pathObject.child1_url}}> {{ pathObject.parent_name }} > {{ pathObject.child1_name }}</a> </b>
+        wizard.
+        <br><br>
+        <b>&#x2638;&nbsp;</b>To nail down your advocates for your care, run our
+        <b><a target="new" routerLink={{pathObject.child2_url}}> {{ pathObject.parent_name }} > {{ pathObject.child2_name }}</a> </b>
+        wizard.
+        <br><br>
+        <b>&#x2638;&nbsp;</b>To write your Advance Care Plan run our
+        <b><a target="new" routerLink={{pathObject.child3_url}}> {{ pathObject.parent_name }} > {{ pathObject.child3_name }}</a> </b>
+        wizard.
     </p>
 </div>
 

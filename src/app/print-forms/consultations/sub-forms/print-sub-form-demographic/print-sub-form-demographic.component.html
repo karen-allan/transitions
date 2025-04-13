@@ -1,0 +1,216 @@
+<div class="print-title">
+    <h1>Your Contact Information</h1>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.name.length > 0 && client.name != '' ">
+        <div class="print-inline-label">
+            Name:
+        </div>
+        <div class="print-inline-value">
+            {{ client.name }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.name.length == 0 && client.name == '' ">
+        <div class="print-inline-label">
+            <b>Name:</b>
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.cellPhone.length > 0 && client.cellPhone != '' ">
+        <div class="print-inline-label">
+            Phone:
+        </div>
+        <div class="print-inline-value">
+            {{ client.cellPhone | mask: '(000) 000-0000' }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.cellPhone.length == 0 && client.cellPhone == '' ">
+        <div class="print-inline-label">
+            Phone:
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.email.length > 0 && client.email != '' ">
+        <div class="print-inline-label">
+            Email:
+        </div>
+        <div class="print-inline-value">
+            {{ client.email }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.email.length == 0 && client.email == '' ">
+        <div class="print-inline-label">
+            Email:
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.address.length > 0 && client.address != '' ">
+        <div class="print-inline-label">
+            Address:
+        </div>
+        <div class="print-inline-value">
+            {{ client.address }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.address.length == 0 && client.address == '' ">
+        <div class="print-inline-label">
+            Address:
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.provState.length > 0 && client.provState != '' ">
+        <ng-container *ngIf="client.pc.length > 0 && client.pc != '' ">
+            <div class="print-inline-label">
+                Province/Postal Code:
+            </div>
+            <div class="print-inline-value">
+                {{ client.provState }}, {{ client.pc | mask: "U0U-0U0" }}
+            </div>
+        </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="client.provState.length == 0 && client.provState == '' ">
+        <ng-container *ngIf="client.pc.length == 0 && client.pc == '' ">
+            <div class="print-inline-label">
+                Province/Postal Code:
+            </div>
+            <div class="print-inline-line"></div>
+        </ng-container>
+    </ng-container>
+</div>
+
+<div class="print-title">
+    <h1>Emergency Contact</h1>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.emergName.length > 0 && client.emergName != '' ">
+        <div class="print-inline-label">
+            Contact Name:
+        </div>
+        <div class="print-inline-value">
+            {{ client.emergName }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.emergName.length == 0 && client.emergName == '' ">
+        <div class="print-inline-label">
+            Contact Name:
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.emergRelation.length > 0 && client.emergRelation != '' ">
+        <div class="print-inline-label">
+            Relationship:
+        </div>
+        <div class="print-inline-value">
+            {{ client.emergRelation }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.emergRelation.length == 0 && client.emergRelation == '' ">
+        <div class="print-inline-label">
+            Relationship::
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.emergPhone.length > 0 && client.emergPhone != '' ">
+        <div class="print-inline-label">
+            Phone:
+        </div>
+        <div class="print-inline-value">
+            {{ client.emergPhone | mask: '(000) 000-0000' }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.emergPhone.length == 0 && client.emergPhone == '' ">
+        <div class="print-inline-label">
+            Phone::
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<!--<div class="page-break-before"></div>-->
+
+<div class="print-title">
+    <h1>Optional Details</h1>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.birthdate.length > 0 && client.birthdate != '' ">
+        <div class="print-inline-label">
+            Birthdate:
+        </div>
+        <div class="print-inline-value">
+            {{ client.birthdate | mask: '00-00-0000' }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.birthdate.length == 0 && client.birthdate == '' ">
+        <div class="print-inline-label">
+            Birthdate::
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.occupation.length > 0 && client.occupation != '' ">
+        <div class="print-inline-label">
+            Occupation:
+        </div>
+        <div class="print-inline-value">
+            {{ client.occupation }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.occupation.length == 0 && client.occupation == '' ">
+        <div class="print-inline-label">
+            Occupation::
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.referredBy.length > 0 && client.referredBy != '' ">
+        <div class="print-inline-label">
+            Referred By:
+        </div>
+        <div class="print-inline-value">
+            {{ client.referredBy }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.referredBy.length == 0 && client.referredBy == '' ">
+        <div class="print-inline-label">
+            Referred By:
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+

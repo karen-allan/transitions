@@ -1,0 +1,72 @@
+<div class="print-title">
+    <h1>Your Concerns and Goals for Planning Ahead</h1>
+</div>
+
+<div class="print-form-question">
+    These are your main areas of focus for seeking a consultation:
+</div>
+
+<ng-container *ngIf="client.eolPlanFocus1">
+    <div class="print-form-response">
+        I want to name a Representative for my future care.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPlanFocus2">
+    <div class="print-form-response">
+        I want to make an in-depth Advanced Care Plan.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPlanFocus3">
+    <div class="print-form-response">
+        I want to arrange my end of life ceremony and/or funeral.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPlanFocus4">
+    <div class="print-form-response">
+        I want to know about the logistics of staying home to die.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPlanFocus5">
+    <div class="print-form-response">
+        I want to ensure my financial and estate plans are in order.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPlanFocus6">
+    <div class="print-form-response">
+        I want help with creating a legacy project.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPlanFocus7">
+    <div class="print-form-response">
+        I need to discuss these issues with an impartial advocate.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPlanFocus8">
+    <div class="print-form-response">
+        I want to know more about care plan safe-keeping and sharing.
+    </div>
+</ng-container>
+
+
+<div class="print-form-question">
+    Your additional information regarding seeking a consultation:
+</div>
+
+<ng-container *ngIf="client.eolPlanDetails.length > 0">
+    <div class="print-form-response">
+        {{ client.eolPlanDetails }}
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPlanDetails.length == 0">
+    &nbsp;<div class="print-solid-underline"></div>
+</ng-container>
+
+

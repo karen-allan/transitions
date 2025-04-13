@@ -1,0 +1,94 @@
+<div class="print-title">
+    <h1>(Optional) Your Medical History</h1>
+</div>
+
+<div class="print-form-question">
+    These are the medications and supplements that you are currently taking:
+</div>
+
+<div class="print-form-response">
+    <ng-container *ngIf="client.medsSupplements.length > 0">
+        {{ client.medsSupplements }}
+    </ng-container>
+    <ng-container *ngIf="client.medsSupplements.length == 0">
+        &nbsp;
+    </ng-container>
+</div>
+
+<div class="print-form-question">
+    These are the health conditions you noted:
+</div>
+
+<ng-container *ngIf="client.heartDisease">
+    <div class="print-form-response">
+        Heart Disease
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.cancer">
+    <div class="print-form-response">
+        Cancer
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.stroke">
+    <div class="print-form-response">
+        Stroke
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.highBloodPressure">
+    <div class="print-form-response">
+        High Blood Pressure
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.diabetes">
+    <div class="print-form-response">
+        Diabetes
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.mentalIllness">
+    <div class="print-form-response">
+        Emotional Illness
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.seizures">
+    <div class="print-form-response">
+        Seizures
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.autoImmuneDisease">
+    <div class="print-form-response">
+        Auto-immune Disease
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.otherDisease">
+    <div class="print-form-response">
+        Other Illness
+    </div>
+</ng-container>
+
+
+<div class="print-form-question">
+    Your description of your situation, condition and or illness:
+</div>
+
+<ng-container *ngIf="client.illnessDetails.length > 0">
+    <div class="print-form-response">
+        {{ client.illnessDetails }}
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.illnessDetails.length == 0">
+    <div class="print-solid-underline"></div>
+</ng-container>
+
+
+
+
+

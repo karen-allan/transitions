@@ -1,0 +1,98 @@
+<!--      ******************* SUPPORT FOR PATIENT **************************       -->
+<div class="print-title">
+    <h1>Your Concerns and Goals as a Patient</h1>
+</div>
+
+<div class="print-form-question">
+    What would be your main area of focus for seeking a consultation?
+</div>
+
+
+<ng-container *ngIf="client.eolPatientFocus1">
+    <div class="print-form-response">
+        I have been diagnosed with a terminal illness.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPatientFocus2">
+    <div class="print-form-response">
+        I am scared, angry, depressed and need emotional support.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPatientFocus3">
+    <div class="print-form-response">
+        I am physically unable to care for myself as I used to.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPatientFocus4">
+    <div class="print-form-response">
+        I need to discuss things with my family but they won't listen.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPatientFocus5">
+    <div class="print-form-response">
+        My family is fighting and arguing about my care.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPatientFocus6">
+    <div class="print-form-response">
+        I want to write down my wishes and requests while I still can.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPatientFocus7">
+    <div class="print-form-response">
+        I am afraid I won't be able to handle the pain.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPatientFocus8">
+    <div class="print-form-response">
+        I want more information about life prolonging procedures.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPatientFocus9">
+    <div class="print-form-response">
+        I want to explore who in my family I could best trust to consider and advocate for my wishes.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPatientFocus10">
+    <div class="print-form-response">
+        I feel that the health care team doesn't explain enough to me.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPatientFocus11">
+    <div class="print-form-response">
+        I want information about my rights to die at home.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPatientFocus12">
+    <div class="print-form-response">
+        I need information to decide whether hospice or palliative care is available to me.
+    </div>
+</ng-container>
+
+
+<div class="print-form-question">
+    Can you expand on what you are looking for related to the above answer?
+</div>
+
+<ng-container *ngIf="client.eolPatientDetails.length > 0">
+    <div class="print-form-response">
+        {{ client.eolPatientDetails }}
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolPatientDetails.length == 0">
+    <div class="print-solid-underline"></div>
+</ng-container>
+
+

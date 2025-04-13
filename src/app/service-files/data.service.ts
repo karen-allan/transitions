@@ -2,7 +2,8 @@ import {EventEmitter, Injectable} from '@angular/core';
 import {Observable, of, Subscription} from 'rxjs';
 import {SUB_MENU_ITEMS} from "../ts-files/subMenuItems";
 import {SubMenuItem} from "../ts-files/subMenuItem";
-import {WishesWizard} from "../ts-files/wishes-wizard";
+import {PathObject} from "../ts-files/pathObject";
+import {PATH_OBJECTS} from "../ts-files/pathObjects";
 
 
 @Injectable({
@@ -20,7 +21,6 @@ export class DataService {
 
 
   // ******************** GET SUB MENU ITEMS *************************
-
   getSubMenuItems(parentId: number): Observable<SubMenuItem[]> {
     var subMenuItems=[];
     for (var item of SUB_MENU_ITEMS) {
@@ -32,6 +32,30 @@ export class DataService {
     return of(subMenuItems)
   }
 
+// ******************** GET SUB MENU ITEMS *************************
+ /* getLookupPathObjectById(id: number): Observable<PathObject[]> {
+    var lookUpItems=[];
+    for (var item of LOOKUP_PATHS) {
+      if ((item.id == id) ) {
+        lookUpItems.push(item);
+      }
+    }
+
+    return of(lookUpItems)
+  }*/
+
+// ******************** GET LOOKUP ITEM *************************
+  getLookupPathObjectById(id: number): Observable<PathObject> {
+      var foundObject = PATH_OBJECTS[0];
+
+      for (var obj of PATH_OBJECTS) {
+        if ((obj.id == id) ) {
+          foundObject = obj;
+        }
+      }
+
+      return of(foundObject);
+    }
 
   // ******************** GET QUESTION *************************
  /* getQuestion(id: number): Observable<Question> {
@@ -135,9 +159,9 @@ export class DataService {
     const birthdate = new Date(formattedDate); // Fri Nov 23 1962 00:00:00 GMT-0800 (Pacific Standard Time)
 
     if (this.isDate(birthdate)) {
-      dateError = false;
+      let dateError = false;
     } else {
-      dateError = true;
+      let dateError = true;
     }
 
     return of(dateError);
@@ -165,9 +189,9 @@ export class DataService {
    // alert("birthdate is " + birthdate);
 
     if (this.isDate(birthdate)) {
-      dateError = false;
+      let dateError = false;
     } else {
-      dateError = true;
+      let dateError = true;
     }
 
     return of(dateError);
@@ -183,7 +207,7 @@ export class DataService {
   /* *************************************************************************************************************** */
   formatPHNToPrint(phnNumber:string): Observable<string> {
 
-    let formattedPHN ="";
+
     // 9300 632 514
     //start at 0 element and stop before 4th element (6)
     let firstPHN =  phnNumber.substring(0, 4);
@@ -192,7 +216,7 @@ export class DataService {
     //start at 7th element (5) and end before 10th element (at 9th element + 1) (4) ie 1 past the end
     let thirdPHN =  phnNumber.substring(7, 10);
 
-    formattedPHN = firstPHN + "-" + secondPHN + "-" + thirdPHN;
+    let formattedPHN = firstPHN + "-" + secondPHN + "-" + thirdPHN;
 
     return of(formattedPHN);
   }
@@ -206,7 +230,7 @@ export class DataService {
     const daystr = dateString.substring(6);     //'23'
 
     const formattedDate = yrstr + "/" + mntstr + "/" + daystr; //'1962/11/23'
-    const birthdate = new Date(formattedDate); // Fri Nov 23 1962 00:00:00 GMT-0800 (Pacific Standard Time)
+   // const birthdate = new Date(formattedDate); // Fri Nov 23 1962 00:00:00 GMT-0800 (Pacific Standard Time)
 
     // date is broken down into year, month and day with the /'s > 1962/11/23
   //  const strDOB = yrstr + "/" + mntstr + "/" + daystr;
@@ -242,7 +266,7 @@ export class DataService {
     const yearStr = dateString.substring(4);   //'1980'
      //alert("year is " + yearStr);
 
-    const formattedDate = monthStr + "/" + dayStr + "/" + yearStr; //'06/19/1980'
+  //  const formattedDate = monthStr + "/" + dayStr + "/" + yearStr; //'06/19/1980'
     //const birthdate = new Date(formattedDate); //
 
     //alert("birthdaate is " + birthdate);

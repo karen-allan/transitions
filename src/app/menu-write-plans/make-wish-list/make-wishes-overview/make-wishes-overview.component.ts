@@ -1,7 +1,8 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, Output} from '@angular/core';
 import {WishesWizard} from "../../../ts-files/wishes-wizard";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
-import {DialogWishListComponent} from "../../../dialogs/dialog-wish-list/dialog-wish-list.component";
+import {DialogWishListComponent} from "../../../screen-forms/wizards/dialogs/dialog-wish-list/dialog-wish-list.component";
+import {PathObject} from "../../../ts-files/pathObject";
 
 @Component({
   selector: 'app-make-wishes-overview',
@@ -13,15 +14,11 @@ export class MakeWishesOverviewComponent  {
   @Input() title:string='';
   @Input() quote:string='';
   @Input() author:string='';
-  @Input() lookupParent1:string='';
-  @Input() lookupChild1:string='';
-  @Input() lookupParent2:string='';
-  @Input() lookupChild2:string='';
 
+  @Input() pathObject:PathObject;
   @Input() @Output() wishes:WishesWizard;
 
   printForm:boolean=false;
-
   constructor(public matDialog: MatDialog) {}
 
   /* *************************************************************************************************************** */
@@ -31,6 +28,8 @@ export class MakeWishesOverviewComponent  {
     dialogConfig.disableClose = false;
     dialogConfig.id = "make-wishes-modal";
     dialogConfig.maxWidth='1024px'
+    dialogConfig.minWidth='960px'
+    dialogConfig.height='850px'
 
     /* named and defined in wizard.css */
     let modalDialog = this.matDialog.open(DialogWishListComponent, dialogConfig);

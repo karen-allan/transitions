@@ -1,6 +1,6 @@
 import {SubMenuItem} from './subMenuItem';
 import * as Constants from 'src/app/ts-files/constants'
-import {CREATE_YOUR_CHECK_LIST, UNDERSTAND_ADVANCE_PLAN} from "src/app/ts-files/constants";
+
 
 /* requests instead of needs? */
 export const SUB_MENU_ITEMS: SubMenuItem[] = [

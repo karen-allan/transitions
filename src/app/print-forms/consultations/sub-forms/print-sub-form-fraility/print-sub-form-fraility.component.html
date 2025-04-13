@@ -1,0 +1,45 @@
+<div class="print-title">
+    <h1>Your Current Level of Frailty</h1>
+</div>
+
+<div class="print-form-question">
+    You selected this answer related to your place on the Clinical Frailty Scale.
+</div>
+
+<ng-container *ngIf="client.eolFrailty == 'frailtyChart-1'">
+    <div class="print-form-response">
+        I am under 65 and in good health and fitness.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolFrailty == 'frailtyChart-2'">
+    <div class="print-form-response">
+        I have one or more chronic conditions.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolFrailty == 'frailtyChart-3'">
+    <div class="print-form-response">
+        I have a life-threatening illness and my life-expectancy is less than one to two years.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolFrailty == 'frailtyChart-4'">
+    <div class="print-form-response">
+        I am over 65 and relatively healthy.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolFrailty == 'frailtyChart-5'">
+    <div class="print-form-response">
+        I am over 65 and having trouble managing your day-to-day affairs and the activities of daily living.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolFrailty == 'frailtyChart-6'">
+    <div class="print-form-response">
+        I am over 75.
+    </div>
+</ng-container>
+
+

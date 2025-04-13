@@ -142,39 +142,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div class="mobile-menu-block">
-             <div class="mobile-menu">
-                 <div [@popOverState]="showMenu">
-                     <ng-container *ngFor="let menuItem of menuItems">
-                         <ng-container *ngIf="menuItemId==menuItem.id">
-                             <div class="mobile-selected-top-menu-item">
-                                 {{menuItem.title}}
-                             </div>
-                             <ng-container *ngIf="menuItem.submenuItems.length > 0">
-                                 <ng-container *ngFor="let subMenuItem of menuItem.submenuItems">
-                                     <ng-container *ngIf="subMenuItemId==subMenuItem.id">
-                                         <div class="mobile-selected-sub-menu-item">{{subMenuItem.title}}</div>
-                                     </ng-container>
-
-                                     <ng-container *ngIf="subMenuItemId!=subMenuItem.id">
-                                         <div class="mobile-unselected-sub-menu-item"><a
-                                             routerLink='/{{subMenuItem.url}}'>{{subMenuItem.title}}</a></div>
-                                     </ng-container>
-                                 </ng-container>
-                             </ng-container>
-                         </ng-container>
-
-                         <ng-container *ngIf="menuItemId!=menuItem.id">
-                             <div class="mobile-unselected-top-menu-item">
-                                 <a routerLink='/{{menuItem.url}}'>{{menuItem.title}}</a>
-                             </div>
-                         </ng-container>
-                     </ng-container>
-                 </div>
-             </div>
-         </div>
-     </div>-->
     </div>
 </div>
 

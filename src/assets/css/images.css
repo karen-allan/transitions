@@ -1,0 +1,325 @@
+/*DONE FEB 24/25 and text done too */
+
+/*******************************************************************************************************************
+
+WIDTH 90% FOR ALL LESS THAN 900px (OUR CONTENT WINDOW)
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 896px)    {
+
+    .header-home-image, .header-detail-image {
+        width: var(--media-unaffected-by-content-width);
+    }
+
+    .content-images {
+        /*width:var(--media-less-than-content-width);*/
+    }
+
+}
+
+/*******************************************************************************************************************
+
+MAX WIDTH 100% FOR ALL OVER 900px (OUR CONTENT WINDOW)
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width:960px)   {
+
+    .header-home-image, .header-detail-image {
+        width: var(--media-unaffected-by-content-width);
+    }
+
+    .content-images {
+        width:var(--media-more-than-content-width);
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BANANAS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: portrait) {
+
+    /* Images - 1160/1920 is 60.41%  */
+    .header-home-image, .header-detail-image {
+        height: 161px;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BANANAS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: landscape) {
+
+    /* Images - 500/1024 48.82%  */
+    .header-home-image, .header-detail-image {
+        height: 277px;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: portrait) {
+
+    /* Images - 500/1024 48.82%  */
+    .header-home-image, .header-detail-image {
+        height: 175px;
+    }
+
+}
+
+
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: landscape) {
+
+    /* Images - 500/1024 48.82%  */
+    .header-home-image, .header-detail-image {
+        height: 202px;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px)
+and (orientation: portrait) {
+
+    /* Images - 500/1024 48.82%  */
+    .header-home-image, .header-detail-image {
+        height: 292px;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - LANDSCAPE
+*******************************************************************************************************************/
+
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px)
+and (orientation: landscape) {
+
+    /* Images - 500/1024 48.82%  */
+    .header-home-image, .header-detail-image {
+        height: 390px;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 640px)
+and (max-width: 896px)
+and (orientation: portrait) {
+
+    /* Images - 500/1024 48.82%  */
+    .header-home-image, .header-detail-image {
+        height: 312px;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 640px)
+and (max-width: 896px)
+and (orientation: landscape) {
+
+    /* Images - 500/1024 48.82%  */
+    .header-home-image, .header-detail-image {
+        height: 437px;
+    }
+
+}
+
+/*******************************************************************************************************************
+ GLOBAL BIG TABLETS - PORTRAIT and IPAD PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    /* Images - 500/1024 48.82%  */
+    .header-home-image, .header-detail-image {
+        height: 468px;
+    }
+
+}
+
+/*******************************************************************************************************************
+ GLOBAL BIG TABLETS - LANDSCAPE and IPAD LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px)
+and (max-width: 1366px)
+and (orientation: landscape) {
+
+    .header-home-image, .header-detail-image {
+        height: 600px;
+    }
+}
+
+/*******************************************************************************************************************
+ GLOBAL LAPTOPS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width:1919px) {
+
+    /* Images - 500/1024 SO 100% HERE AND UP  */
+    .header-home-image, .header-detail-image {
+        height: 600px;
+    }
+
+}
+
+/*******************************************************************************************************************
+  DESKTOPS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    /* Images - 500/1024 SO 100% HERE AND UP  */
+    .header-home-image, .header-detail-image {
+        height: 600px;
+    }
+
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    /* 900 wide */
+    .content-images, .content-images a   {
+        display:grid;
+        max-width:var(--content-width);
+        margin:auto;
+        justify-content: center;
+    }
+
+    .content-images img {
+        max-width:100%;
+        height:auto;
+    }
+
+    .header-home-image, .header-detail-image {
+        display: grid;
+        float: left;
+        text-align: center;
+        align-content: flex-end;
+        justify-content: center;
+        color: var(--color-white);
+    }
+
+    /* HOME  */
+    .header-home-image {
+        background-size: cover;
+        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 80%),
+        url('src/assets/images/headers/home/headerHome.jpg');
+    }
+
+    /* PLAN AHEAD */
+    .header-think-about-needs-image {
+        background-size: contain;
+        background-image: linear-gradient(transparent 80%, rgba(0, 33, 69, .8) 90%),
+        url("src/assets/images/headers/planAhead/headerThinkAboutNeeds.jpg");
+    }
+
+    .header-consider-advocates-image {
+        background-size: cover;
+        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
+        url('src/assets/images/headers/planAhead/headerConsiderAdvocates.jpg');
+    }
+
+    .header-understand-care-plan-image {
+        background-size: cover;
+        background-image: linear-gradient(transparent 80%, rgba(0, 33, 69, .8) 90%),
+        url("src/assets/images/headers/planAhead/headerUnderstandAdvancePlans.jpg");
+    }
+
+    .header-know-rights-image {
+        background-size: cover;
+        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 80%),
+        url("src/assets/images/headers/planAhead/headerKnowYourRights.jpg");
+    }
+
+    /* TAKE ACTION */
+    .header-write-needs-down-image {
+        background-size: cover;
+        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
+        url("src/assets/images/headers/takeAction/headerWriteNeedsDown.jpg");
+    }
+
+    .header-choose-your-rep-image {
+        background-size: cover;
+        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
+        url("src/assets/images/headers/takeAction/headerChooseReprentatives.jpg");
+    }
+
+    .header-write-adv-care-plan-image {
+        background-size: cover;
+        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
+        url("src/assets/images/headers/takeAction/headerWriteCarePlan.jpg");
+    }
+
+    .header-create-checklist-image {
+        background-size: cover;
+        background-image: linear-gradient(transparent 30%, rgba(0, 33, 69, .8) 90%),
+        url("src/assets/images/headers/takeAction/headerCreateCheckList.jpg");
+    }
+
+    /* ABOUT  */
+    .header-about-eol-advocacy-image {
+        background-size: cover;
+        background-image: linear-gradient(transparent 100%, rgba(0, 33, 69, .8) 10%),
+        url('src/assets/images/headers/about/headerAboutAdvocacy.jpg');
+    }
+
+    .header-about-pract-image {
+        background-size: cover;
+        background-image: linear-gradient(transparent 40%, rgba(0, 33, 69, .8) 90%),
+        url('src/assets/images/headers/about/headerAboutPractitioner.jpg');
+    }
+
+    /* BOOK CONSULTATION  */
+    .header-testimonials-image {
+        background-size: cover;
+        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
+        url('src/assets/images/headers/consultations/headerTestimonials2.jpg');
+    }
+
+    .header-book-consultation-image {
+        background-size: cover;
+        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
+        url('src/assets/images/headers/consultations/headerBookConsultation.jpg');
+    }
+
+}

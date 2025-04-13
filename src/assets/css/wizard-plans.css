@@ -1,0 +1,140 @@
+
+/*******************************************************************************************************************
+ GLOBAL NOW WE ARE IN THE MODAL FORMS - ADJUSTED FOR THE WIZARDS TO EXCLUDE OVERLAPPING BIG TABLETS AND IPADS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px) {
+
+    .modal-inner-block-plan {
+        height: 540px;
+        width: 100%;
+        /*background-color: green;*/
+        background-color: white;
+    }
+
+    .modal-data-block-plan {
+        height:520px;
+        width: 90%;
+        margin: 0 5%;
+        /*background-color: gold;*/
+        background-color: white;
+    }
+
+    .modal-plan-main-title {
+        font-size: var(--form-small-main-title);
+        padding-top: 1em;
+        margin-top: 1em;
+    }
+
+    .modal-plan-sub-title {
+        font-size: var(--form-small-sub-title);
+        padding: .8em 0;
+        line-height: 115%;
+    }
+
+    .modal-plan-last-title {
+        font-size: var(--form-last-title);
+        padding: 1em 0;
+        line-height: 115%;
+    }
+
+    .modal-plan-copy p {
+        padding-top:1em;
+        font-size: var(--form-copy);
+        line-height: 150%;
+    }
+
+    .modal-plan-list-item {
+        margin: 0;
+        padding: .4em;
+        font-size: var(--form-small-list);
+        line-height: 105%;
+    }
+
+    .modal-plan-text-area {
+        font-size: var(--form-copy);
+        line-height: 140%;
+    }
+
+    .modal-plan-radio-conditions-item  {
+        padding: 1em 0;
+        font-size: var(--form-radio);
+        margin-bottom: .7em;
+    }
+
+    .modal-plan-radio-sedation-item {
+        padding: .5em 0;
+        font-size: var(--form-radio);
+        border:thin dotted var(--color-soft-blue);
+    }
+
+    .modal-plan-radio-legal-item {
+        padding: .5em 0;
+        font-size: var(--form-radio);
+    }
+
+    .modal-plan-conditions-checkbox {
+        padding: .5em 0;
+        font-size: var(--form-checkbox);
+        /*margin-bottom: .5em;*/
+    }
+
+}
+
+
+/*******************************************************************************************************************
+   GLOBAL
+*******************************************************************************************************************/
+@media only screen {
+
+/*
+
+    .modal-plan-main-title
+    .modal-plan-sub-title
+    .modal-plan-last-title
+    .modal-plan-conditions-checkbox
+    .modal-plan-radio-legal-item
+    .modal-plan-radio-conditions-item,
+    .modal-plan-radio-sedation-item
+    .modal-plan-list-item
+     .modal-plan-copy
+    .modal-plan-text-area
+ */
+    .modal-plan-conditions-checkbox, .modal-plan-radio-legal-item, .modal-plan-radio-conditions-item, .modal-radio-sedation-plan-inline,
+    .modal-plan-list-item, .modal-plan-copy, .modal-plan-text-area,   .modal-plan-title h2, .modal-plan-title h3, .modal-plan-title h4  {
+        width: 100%;
+        font-family: var(--family-forms);
+        color: var(--color-dark-blue);
+        text-align: left;
+    }
+
+    .modal-plan-conditions-checkbox {
+        border: 1px dashed var(--color-dark-blue);
+    }
+
+    .modal-plan-radio-legal-item {
+        border: 1px dashed var(--color-dark-blue);
+    }
+
+    .modal-plan-radio-conditions-item, .modal-radio-sedation-plan-inline {
+        border: 1px dashed var(--color-dark-blue);
+    }
+
+    .modal-plan-text-area {
+        display: block;
+        float: left;
+        line-height: 105%;
+        overflow-y: scroll;
+        scrollbar-color: red orange;
+        scrollbar-width: thin;
+    }
+
+    .modal-plan-title h2,
+    .modal-plan-title h3,
+    .modal-plan-title h4 {
+        display: block;
+        float: left;
+        margin: 0;
+    }
+
+}

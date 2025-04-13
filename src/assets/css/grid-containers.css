@@ -1,5 +1,6 @@
 /*DONE FEB 24/25 for HOME, ABOUT  */
 
+
 /*******************************************************************************************************************
 
     SMALL BANANA PORTRAIT (320), SMALL MOBILE PORTRAIT (360), SMALL TABLET PORTRAIT (600) AND BIG MOBILE PORTRAIT (640)
@@ -8,7 +9,7 @@
 /********************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 640px) {
+and (max-width: 599px) {
 
     .mobile-columns {
         display:block;
@@ -18,19 +19,16 @@ and (max-width: 640px) {
         display:none;
     }
 
-    .about-us-container, .home-facts-container, .wizard-intro-container {
-        width:var(--media-less-than-content-width);
+    /* HOME PAGE FACTS */
+    .home-facts-container {
+        /*width:var(--media-less-than-content-width);*/
         display: grid;
         align-content: center;
         justify-content: center;
         margin: auto;
-    }
-
-    .home-facts-container {
         background-color: #ffffff;
     }
 
-    /* HOME PAGE FACTS */
     .facts-inline-image {
         display:grid;
         grid-column:1;
@@ -46,10 +44,25 @@ and (max-width: 640px) {
     }
 
     .facts-block-text {
-        width:var(--media-less-than-content-width);
+        /*width:var(--media-less-than-content-width);*/
+    }
+
+    /* HOME PAGE BOOKING LINK */
+    a .booking-link-grid {
+        /*width: var(--media-less-than-content-width);*/
     }
 
     /* ABOUT PAGE FACTS */
+    /* because this container uses content title and copy pages which are already using media less than content width */
+    .about-us-container  {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        margin: auto;
+        max-width: var(--content-width);
+        /*width: var(--media-less-than-content-width);*/
+    }
+
     .about-image  {
         display:grid;
         grid-column:1;
@@ -62,62 +75,39 @@ and (max-width: 640px) {
         grid-column:1;
         justify-content: center;
         align-content: center;
+        text-align:justify;
     }
 
     .separator-block {
         display: none;
     }
 
-    /* MENU ITEMS INTRO PAGES TO ALL MODAL AND FAKE MODALS */
+    /* INTRO PAGES INTO WIZARDS */
     .wizard-intro-container {
-        background: radial-gradient(circle at 100px 100px, #dce0e2, #000);
-        border-style: groove;
-        border-width: 7px;
-        border-color: coral;
-        border-radius: 20px 20px;
+        display: grid;
+        float:left;
+        align-content: center;
+        justify-content: center;
+        border-radius: 10px;
     }
 
-    .wizard-image {
+    .wizard-intro-image {
         display: grid;
         grid-column:1;
     }
 
-    .wizard-text {
+    .wizard-intro-text {
         display: grid;
         grid-column: 1;
     }
 
-    /* HEADERS THAT SIT ON TOP OF EACH MODAL DIALOG PAGE */
-    .wizard-modal-header {
-        display: inline-grid;
-        width: 100%;
-        font-family: var(--family-headers);
-        margin: 0 auto;
-        background-color: white;
-        border-top: thin solid var(--color-grey);
-        border-bottom: thin solid var(--color-grey);
+    /* TESTIMONIALS */
+    .charges-grid, .testimonials-grid  {
+        /*width:var(--media-less-than-content-width);*/
     }
 
-    .wizard-modal-logo {
-        display: grid;
-        grid-column: 1;
-        margin: auto;
-        cursor: pointer;
-    }
-
-    .wizard-modal-text {
-        display: grid;
-        grid-column: 2;
-        align-content: center;
-        justify-content: center;
-    }
-
-    .wizard-modal-text h1, .wizard-modal-text h2, .wizard-modal-text h3 {
-        color: var(--color-dark-blue);
-        margin:0;
-        font-weight: normal;
-        font-family: var(--family-modal-headings);
-
+    .bevelled-edges {
+        width:80%;
     }
 
 }
@@ -129,7 +119,7 @@ and (max-width: 640px) {
 
 *******************************************************************************************************************/
 @media only screen
-and (min-width:800px)    {
+and (min-width: 600px) {
 
     .mobile-columns {
         display:none;
@@ -141,13 +131,10 @@ and (min-width:800px)    {
 
     /* HOME PAGE */
     /* images are 500 square which are 49% of ipad width 1024 */
-    .home-facts-container, .about-us-container, .wizard-intro-container {
+    .home-facts-container {
         width:var(--media-more-than-content-width);
         display: inline-grid;
         grid-template-columns: 49% 51%;
-    }
-
-    .home-facts-container {
         background-color: #363233;
     }
 
@@ -168,7 +155,19 @@ and (min-width:800px)    {
         margin-bottom:2em;
     }
 
-    /* ABOUT US PAGE */
+    /* HOME BOOKING */
+    a .booking-link-grid {
+        width: var(--media-more-than-content-width);
+    }
+
+    /* ABOUT US PAGE uses content copy and title which already set the width as more than media */
+    .about-us-container {
+        display: inline-grid;
+        grid-template-columns: 49% 51%;
+        max-width: var(--ipad-width);
+        width: var(--media-more-than-content-width);
+    }
+
      .about-image  {
          display:grid;
          grid-column:1;
@@ -193,80 +192,34 @@ and (min-width:800px)    {
         background: radial-gradient(circle at 100px 100px, #e8edef, #000);
     }
 
-    /* INTRO TO THE WIZARDS PAGES OFF MENUS */
+    /* WIZARDS INTROS */
     .wizard-intro-container {
-        background: radial-gradient(circle at 100px 100px, #dce0e2, #000);
-        border-style: groove;
-        border-width: 7px;
-        border-color: coral;
-        border-radius: 50px 20px;
+        display: inline-grid;
+        grid-template-columns: 49% 51%;
+        border-radius: 10px 40px 40px 10px;
     }
 
-    .wizard-image {
+    .wizard-intro-image {
         display: grid;
         grid-column:1;
     }
 
-    .wizard-text {
+    .wizard-intro-text {
         display: grid;
         grid-column: 2;
     }
 
-    /* HEADER ABOVE EACH MODAL PAGE, EITHER MOBILE OR DESKTOP */
-    .wizard-modal-header {
-        display: inline-grid;
-        width: 100%;
-        font-family: var(--family-headers);
-        margin: 0 auto;
-        background-color: white;
-        border-top: thin solid var(--color-grey);
-        border-bottom: thin solid var(--color-grey);
+    /* TESTIMONIALS */
+    .charges-grid, .testimonials-grid  {
+        width: var(--media-more-than-content-width);
     }
 
-    .wizard-modal-logo {
-        display: grid;
-        justify-content: flex-start;
-        grid-column: 1;
-        margin: auto;
-        cursor: pointer;
+    .bevelled-edges {
+        width:70%;
     }
 
-    .wizard-modal-logo img {
-        height: var(--desktop-dialog-header-height);
-    }
-
-    .wizard-modal-text {
-        display: grid;
-        grid-column: 2;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .wizard-modal-text h1, .wizard-modal-text h2, .wizard-modal-text h3 {
-        color: var(--color-dark-blue);
-        font-weight: normal;
-        font-family: var(--family-headers);
-        line-height: 110%;
-    }
-
-    .wizard-modal-text h1 {
-        font-size: var(--h1-heading-modal-font-size);
-    }
-
-    .wizard-modal-text h2 {
-        font-size: var(--h2-heading-modal-font-size);
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-heading-modal-font-size);
-    }
-
-    .wizard-modal-text h1, .wizard-modal-text h2, .wizard-modal-text h3 {
-        color: var(--color-dark-blue);
-        font-weight: normal;
-        font-family: var(--family-headers);
-    }
 }
+
 
 /*******************************************************************************************************************
   GLOBAL BANANAS - PORTRAIT
@@ -276,48 +229,21 @@ and (min-width: 320px)
 and (max-width: 568px)
 and (orientation: portrait) {
 
-    /* HOME PAGE FACTS CONTAINER there is no dark background here */
-    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
-        font-size: var(--small-p-banana-port-font-size);
-        line-height: 110%;
+    /*image is 900x450 (90% is 810 by 405 so divide 810/405 to get ratio of 50%  */
+    a .booking-link-grid {
+        height: 160px;
+    }
+
+    .wizard-intro-text h3 {
+        font-size:var(--h3-titles-banana-port);
+        text-align:center;
         padding-top:1em;
+        line-height:110%;
     }
 
-    /* ABOUT US PAGE */
-    .about-text h2 {
-        padding-top:1em;
-        font-size: var(--h2-titles-small-banana-font-size);
-        line-height:120%;
-    }
-
-    .about-text p {
-        padding-top:1em;
-        font-size: var(--small-p-banana-port-font-size);
-    }
-
-    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
-    .wizard-modal-header {
-        height: var(--banana-dialog-header-height);
-        grid-template-columns: 32% 68%;
-    }
-
-    .wizard-modal-logo img {
-        height: var(--banana-dialog-header-height);
-    }
-
-    .wizard-modal-text h1 {
-        line-height: 100%;
-        font-size: var(--h1-titles-small-banana-font-size);
-    }
-
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-small-banana-font-size);
-        line-height: 100%;
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-small-banana-font-size);
-        line-height: 100%;
+    .wizard-intro-text p {
+        font-size:var(--p-banana-port);
+        text-align:justify;
     }
 }
 
@@ -329,48 +255,21 @@ and (min-width: 320px)
 and (max-width: 568px)
 and (orientation: landscape) {
 
-    /* HOME PAGE FACTS CONTAINER */
-    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
-        font-size: var(--big-p-banana-land-font-size);
-        line-height: 110%;
+    /*image is 900x450 (booking grid is 900 by 450 so divide 450/900 to get ratio of 50% and 50x360 is 180) */
+    a .booking-link-grid {
+        height: 284px;
+    }
+
+    .wizard-intro-text h3 {
+        font-size:var(--h3-titles-banana-land);
+        text-align:center;
         padding-top:1em;
+        line-height:110%;
     }
 
-    /* ABOUT US PAGE */
-    .about-text h2 {
-        padding-top:1em;
-        font-size: var(--h2-titles-big-banana-font-size);
-        line-height:120%;
-    }
-
-    .about-text p {
-        padding-top:1em;
-        font-size: var(--small-p-banana-port-font-size);
-    }
-
-    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
-    .wizard-modal-header {
-        height: var(--banana-dialog-header-height);
-        grid-template-columns: 18% 82%;
-    }
-
-    .wizard-modal-logo img {
-        height: var(--banana-dialog-header-height);
-    }
-
-    .wizard-modal-text h1 {
-        line-height: 110%;
-        font-size: var(--h1-titles-big-banana-font-size);
-    }
-
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-big-banana-font-size);
-        line-height: 110%;
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-big-banana-font-size);
-        line-height: 110%;
+    .wizard-intro-text p {
+        font-size:var(--p-banana-land);
+        text-align:justify;
     }
 }
 
@@ -382,48 +281,23 @@ and (min-width: 360px)
 and (max-width: 414px)
 and (orientation: portrait){
 
-    /* there is no dark background here */
-    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
-        font-size: var(--small-p-mobile-port-font-size);
-        line-height: 110%;
+    /*image is 900x450 (booking grid is 900 by 450 so divide 450/900 to get ratio of 50% and 50x360 is 180) */
+    a .booking-link-grid {
+        height: 180px;
+    }
+
+    .wizard-intro-text h3 {
+        font-size:var(--h3-titles-small-mobile-port);
+        text-align:center;
         padding-top:1em;
+        line-height:110%;
     }
 
-    .about-text h2  {
-        padding-top:1em;
-        font-size: var(--h2-titles-small-mobile-font-size);
-        line-height:120%;
+    .wizard-intro-text p {
+        font-size:var(--p-small-mobile-port);
+        text-align:justify;
     }
 
-    .about-text p {
-        padding-top:1em;
-        font-size: var(--small-p-mobile-port-font-size);
-    }
-
-    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
-    .wizard-modal-header {
-        height: var(--banana-dialog-header-height);
-        grid-template-columns: 28% 72%;
-    }
-
-    .wizard-modal-logo img {
-        height: var(--banana-dialog-header-height);
-    }
-
-    .wizard-modal-text h1 {
-        line-height: 110%;
-        font-size: var(--h1-titles-small-mobile-font-size);
-    }
-
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-small-mobile-font-size);
-        line-height: 110%;
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-small-mobile-font-size);
-        line-height: 110%;
-    }
 }
 
 /*******************************************************************************************************************
@@ -434,48 +308,87 @@ and (min-width: 360px)
 and (max-width: 414px)
 and (orientation: landscape){
 
-    /* there is no dark background here */
-    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
-        font-size: var(--small-p-mobile-land-font-size);
-        line-height: 110%;
+    /*image is 900x450 (booking grid is 900 by 450 so divide 450/900 to get ratio of 50% and 50x414 is 180) */
+    a .booking-link-grid {
+        height: 207px;
+    }
+
+    .wizard-intro-text h3 {
+        font-size:var(--h3-titles-small-mobile-land);
+        text-align:center;
         padding-top:1em;
+        line-height:110%;
     }
 
-    .about-text h2  {
+    .wizard-intro-text p {
+        font-size:var(--p-small-mobile-land);
+        text-align:justify;
+    }
+
+}
+
+/*******************************************************************************************************************
+ GLOBAL SMALL TABLETS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width:800px)
+and (orientation: portrait){
+
+    /* image is 450 height x 900 width but and width here is 810 (90% of 900) wide so 450/810 is 55% ratio */
+    a .booking-link-grid {
+        height:300px;
+    }
+
+    .wizard-intro-text h3 {
+        font-size:var(--h3-titles-small-tablet-port);
+        text-align:center;
         padding-top:1em;
-        font-size: var(--h2-titles-small-mobile-font-size);
-        line-height:120%;
+        line-height:110%;
     }
 
-    .about-text p {
+    .wizard-intro-text p {
+        font-size:var(--p-small-tablet-port);
+        text-align:justify;
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width:800px)
+and (orientation: landscape){
+
+    /* image is 500x500 - .4882 there is no white background here */
+    /* HOME PAGE */
+    .facts-inline-text-dark-bkgrnd {
+        height:390px;
+        padding:0 1em;
+    }
+
+    .facts-block-text {
         padding-top:1em;
-        font-size: var(--small-p-mobile-land-font-size);
+        line-height: 130%;
     }
 
-    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
-    .wizard-modal-header {
-        height: var(--banana-dialog-header-height);
-        grid-template-columns: 24% 76%;
+    a .booking-link-grid {
+        height:400px;
     }
 
-    .wizard-modal-logo img {
-        height: var(--banana-dialog-header-height);
+    .wizard-intro-text h3 {
+        font-size:var(--h3-titles-small-tablet-land);
+        text-align:center;
+        padding-top:1em;
+        line-height:110%;
     }
 
-    .wizard-modal-text h1 {
-        line-height: 110%;
-        font-size: var(--h1-titles-small-mobile-font-size);
+    .wizard-intro-text p {
+        font-size:var(--p-small-tablet-land);
+        text-align:justify;
     }
 
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-small-mobile-font-size);
-        line-height: 110%;
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-small-mobile-font-size);
-        line-height: 110%;
-    }
 }
 
 /*******************************************************************************************************************
@@ -486,47 +399,21 @@ and (min-width:640px)
 and (max-width:896px)
 and (orientation: portrait){
 
-    /* there is no dark background here */
-    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
-        font-size: var(--big-p-mobile-port-font-size);
-        line-height: 110%;
+    /*image is 900x450 (booking grid is 900 by 450 so divide 450/900 to get ratio of 50% and 50x640) */
+    a .booking-link-grid {
+        height: 320px;
+    }
+
+    .wizard-intro-text h3 {
+        font-size:var(--h3-titles-big-mobile-port);
+        text-align:center;
         padding-top:1em;
+        line-height:110%;
     }
 
-    .about-text h2  {
-        padding-top:1em;
-        font-size: var(--h2-titles-big-mobile-font-size);
-        line-height:120%;
-    }
-
-    .about-text p {
-        padding-top:1em;
-        font-size: var(--big-p-mobile-port-font-size);
-    }
-
-    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
-    .wizard-modal-header {
-        height: var(--mobile-dialog-header-height);
-        grid-template-columns: 24% 76%;
-    }
-
-    .wizard-modal-logo img {
-        height: var(--mobile-dialog-header-height);
-    }
-
-    .wizard-modal-text h1 {
-        line-height: 120%;
-        font-size: var(--h1-titles-big-mobile-font-size);
-    }
-
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-big-mobile-font-size);
-        line-height: 120%;
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-big-mobile-font-size);
-        line-height: 120%;
+    .wizard-intro-text p {
+        font-size:var(--p-big-mobile-port);
+        text-align:justify;
     }
 
 }
@@ -546,186 +433,36 @@ and (orientation: landscape){
         padding:0 1em;
     }
 
-    .facts-inline-text-dark-bkgrnd a:first-child {
-        padding-top:0;
-    }
-
-    .facts-inline-text-dark-bkgrnd a  {
-        padding-top:.7em;
-        line-height: 110%;
-        font-size: var(--small-p-tablet-land-font-size);
-    }
-
     .facts-block-text {
         padding-top:1em;
         line-height: 130%;
-        font-size: var(--small-p-tablet-land-font-size);
     }
 
-    /* this is from the ABOUT US PAGE */
-    .about-text h2  {
-        padding-top: 1em;
-        font-size: var(--h2-titles-big-mobile-font-size);
-        line-height: 120%;
+    /*image is 900x450 ( 50% and 50x896) */
+    a .booking-link-grid {
+        height:448px;
     }
 
-    .about-text p {
-        padding-top: 1em;
-        font-size: var(--big-p-mobile-land-font-size);
-    }
-
-    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
-    .wizard-modal-header {
-        height: var(--mobile-dialog-header-height);
-        grid-template-columns: 20% 80%;
-    }
-
-    .wizard-modal-logo img {
-        height: var(--mobile-dialog-header-height);
-    }
-
-    .wizard-modal-text h1 {
-        line-height: 120%;
-        font-size: var(--h1-titles-big-mobile-font-size);
-    }
-
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-big-mobile-font-size);
-        line-height: 120%;
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-big-mobile-font-size);
-        line-height: 120%;
-    }
-}
-
-/*******************************************************************************************************************
- GLOBAL SMALL TABLETS - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 600px)
-and (max-width:800px)
-and (orientation: portrait){
-
-    /* there is no dark background here */
-    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
-        font-size: var(--small-p-tablet-port-font-size);
-    }
-
-    /* this is from the ABOUT US PAGE */
-    .about-text h2  {
-        padding-top: 1em;
-        font-size: var(--h2-titles-small-tablet-font-size);
-        line-height: 120%;
-    }
-
-    .about-text p {
-        padding-top: 1em;
-        font-size: var(--small-p-tablet-port-font-size);
-    }
-
-    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
-    .wizard-modal-header {
-        height: var(--mobile-dialog-header-height);
-        grid-template-columns: 20% 80%;
-    }
-
-    .wizard-modal-logo img {
-        height: var(--mobile-dialog-header-height);
-    }
-
-    .wizard-modal-text h1 {
-        line-height: 120%;
-        font-size: var(--h1-titles-small-tablet-font-size);
-    }
-
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-small-tablet-font-size);
-        line-height: 120%;
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-small-tablet-font-size);
-        line-height: 120%;
-    }
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL TABLETS - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 600px)
-and (max-width:800px)
-and (orientation: landscape){
-
-    /* image is 500x500 - .4882 there is no white background here */
-    /* HOME PAGE */
-    .facts-inline-text-dark-bkgrnd {
-        height:390px;
-        padding:0 1em;
-    }
-
-    .facts-inline-text-dark-bkgrnd a:first-child {
-        padding-top:0;
-    }
-
-    .facts-inline-text-dark-bkgrnd a  {
-        padding-top:.5em;
-        line-height: 110%;
-        font-size: var(--small-p-tablet-land-font-size);
-    }
-
-    .facts-block-text {
+    .wizard-intro-text h3 {
+        font-size:var(--h3-titles-big-mobile-land);
+        text-align:center;
         padding-top:1em;
-        line-height: 130%;
-        font-size: var(--small-p-tablet-land-font-size);
+        line-height:110%;
     }
 
-    /* ABOUT */
-    .about-text h2  {
-        padding-top: 1em;
-        font-size: var(--h2-titles-small-tablet-font-size);
-        line-height: 120%;
+    .wizard-intro-text p {
+        font-size:var(--p-big-mobile-land);
+        text-align:justify;
     }
 
-    .about--text p {
-        padding-top: 1em;
-        font-size: var(--small-p-tablet-land-font-size);
-    }
-
-    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
-    .wizard-modal-header {
-        height: var(--mobile-dialog-header-height);
-        grid-template-columns: 20% 80%;
-    }
-
-    .wizard-modal-logo img {
-        height: var(--mobile-dialog-header-height);
-    }
-
-    .wizard-modal-text h1 {
-        line-height: 120%;
-        font-size: var(--h1-titles-small-tablet-font-size);
-    }
-
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-small-tablet-font-size);
-        line-height: 120%;
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-small-tablet-font-size);
-        line-height: 120%;
-    }
 }
 
 /*******************************************************************************************************************
-  GLOBAL BIG TABLETS - PORTRAIT
+  GLOBAL BIG TABLETS and IPAD - PORTRAIT
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 960px)
-and (max-width: 1280px)
+and (max-width: 1366px)
 and (orientation: portrait) {
 
     /* image is 500x500 - .4882 there is no white background here */
@@ -735,61 +472,105 @@ and (orientation: portrait) {
         padding:0 1em;
     }
 
-    .facts-inline-text-dark-bkgrnd a:first-child {
-        padding-top:0;
+    .facts-block-text {
+        padding-top:1em;
+        line-height: 130%;
     }
 
-    .facts-inline-text-dark-bkgrnd a  {
-        padding-top:.8em;
-        font-size: var(--big-p-tablet-port-font-size);
+    a .booking-link-grid {
+        height: 450px;
+    }
+
+    .wizard-intro-text h3 {
+        font-size:var(--h3-titles-big-tablet-ipad-port);
+        text-align:center;
+        padding-top:1em;
+        line-height:110%;
+    }
+
+    .wizard-intro-text p {
+        font-size:var(--p-big-tablet-ipad-port);
+        text-align:justify;
+    }
+}
+
+/*******************************************************************************************************************
+ GLOBAL BIG TABLETS - LANDSCAPE and IPAD LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px)
+and (max-width: 1366px)
+and (orientation: landscape) {
+
+    .facts-inline-text-dark-bkgrnd {
+        height:468px;
+        padding:0 1em;
     }
 
     .facts-block-text {
         padding-top:1em;
         line-height: 130%;
-        font-size: var(--big-p-tablet-port-font-size);
     }
 
-    /* ABOUT */
-    .about-text h2  {
-        padding-top: 1em;
-        font-size: var(--h2-titles-big-tablet-font-size);
-        line-height: 120%;
+    a .booking-link-grid {
+        height: 450px;
     }
 
-    .about-text p {
-        padding-top: 1em;
-        font-size: var(--big-p-tablet-port-font-size);
+    .wizard-intro-text h3 {
+        font-size:var(--h3-titles-big-tablet-ipad-land);
+        text-align:center;
+        padding-top:1em;
+        line-height:110%;
     }
 
-    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
-    .wizard-modal-header {
-        height: var(--mobile-dialog-header-height);
-        grid-template-columns: 20% 80%;
-    }
-
-    .wizard-modal-logo img {
-        height: var(--mobile-dialog-header-height);
-    }
-
-    .wizard-modal-text h1 {
-        line-height: 120%;
-        font-size: var(--h1-titles-big-tablet-font-size);
-    }
-
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-big-tablet-font-size);
-        line-height: 120%;
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-big-tablet-font-size);
-        line-height: 120%;
+    .wizard-intro-text p {
+        font-size:var(--p-big-tablet-ipad-land);
+        text-align:justify;
     }
 }
 
+
 /*******************************************************************************************************************
- GLOBAL BIG TABLETS LANDSCAPE, IPADS LAPTOPS AND UP
+ GLOBAL LAPTOPS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width:1919px) {
+
+    /* HOME PAGE */
+    .facts-inline-text-dark-bkgrnd {
+        height:500px;
+        padding:0 1em;
+    }
+
+    .facts-block-text {
+        padding-top:1em;
+        line-height: 130%;
+    }
+
+    /* IMAGE IS 450x900 so no shrinkage needed */
+    a .booking-link-grid {
+        width: var(--media-more-than-content-width);
+    }
+
+    a .booking-link-grid {
+        height: 450px;
+    }
+
+    .wizard-intro-text h3 {
+        font-size:var(--h3-titles-laptop);
+        text-align:center;
+        padding-top:1em;
+        line-height:110%;
+    }
+
+    .wizard-intro-text p {
+        font-size:var(--p-laptop);
+        text-align:justify;
+    }
+}
+/*******************************************************************************************************************
+ GLOBAL BIG TABLETS LANDSCAPE (1280), IPADS LAPTOPS AND UP
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 1024px) {
@@ -800,57 +581,27 @@ and (min-width: 1024px) {
         padding:0 1em;
     }
 
-    .facts-inline-text-dark-bkgrnd a:first-child {
-        padding-top:0;
-    }
-
-    .facts-inline-text-dark-bkgrnd a  {
-        padding-top:.8em;
-        font-size: var(--p-desktop-font-size);
-    }
-
     .facts-block-text {
         padding-top:1em;
-        line-height: 130%;
-        font-size: var(--p-desktop-font-size);
     }
 
-    /*ABOUT US PAGE */
-    .about-text h2  {
-        padding-top: 1em;
-        font-size: var(--h2-titles-big-tablet-font-size);
-        line-height: 120%;
+    /* IMAGE IS 450x900 so no shrinkage needed */
+    a .booking-link-grid {
+        height: 450px;
     }
 
-    .about-text p {
-        padding-top: 1em;
-        font-size: var(--p-desktop-font-size);
+    .wizard-intro-text h3 {
+        font-size:var(--h3-titles-desktop);
+        text-align:center;
+        padding-top:1em;
+        line-height:110%;
     }
 
-    /* WIZARD HEADING INSIDE MODALS AND FAKE MODALS */
-    .wizard-modal-header {
-        height: var(--desktop-dialog-header-height);
-        grid-template-columns: 20% 80%;
+    .wizard-intro-text p {
+        font-size:var(--p-desktop);
+        text-align:justify;
     }
 
-    .wizard-modal-logo img {
-        height: var(--desktop-dialog-header-height);
-    }
-
-    .wizard-modal-text h1 {
-        line-height: 120%;
-        font-size: var(--h1-titles-big-tablet-font-size);
-    }
-
-    .wizard-modal-text h2 {
-        font-size: var(--h2-titles-big-tablet-font-size);
-        line-height: 120%;
-    }
-
-    .wizard-modal-text h3 {
-        font-size: var(--h3-titles-big-tablet-font-size);
-        line-height: 120%;
-    }
 }
 
 /* GLOBAL ****************************************************************************************************/
@@ -877,33 +628,20 @@ and (min-width: 1024px) {
         display: grid;
         justify-content: center;
         align-content:center;
-        font-family: var(--family-copy);
         text-align: justify;
-        background: #363233;
-    }
-
-    .facts-inline-text-dark-bkgrnd a {
-        text-decoration: none;
-        color: var(--color-white);
+        background: var(--color-dark-green);
     }
 
     .facts-inline-text-white-bkgrnd {
         padding-top:1em;
         display: grid;
-        font-family: var(--family-copy);
         justify-content: center;
         text-align: left;
         background: #FFFFFF;
     }
 
-    .facts-inline-text-white-bkgrnd a {
-        text-decoration: none;
-        color: var(--color-dark-blue);
-    }
-
     .facts-block-text {
         display: grid;
-        font-family: var(--family-copy);
         margin-left:auto;
         margin-right:auto;
         margin-bottom:2em;
@@ -911,16 +649,21 @@ and (min-width: 1024px) {
         text-align: left;
     }
 
-    .facts-block-text a {
-        text-decoration: none;
-        color: var(--color-dark-blue);
+    /* HOME PAGE BOOKING LINK */
+    a .booking-link-grid {
+        display: grid;
+        max-width: var(--content-width);
+        margin: 1em auto;
+        background-repeat: no-repeat;
+        background-image: url("src/assets/images/details/home/bookSessionText.jpg");
+        background-size: contain;
+        align-content: flex-end;
+        justify-content: center;
     }
-    
+
     /* ABOUT US PAGE */
     .about-us-container   {
         display: grid;
-        max-width: var(--ipad-width);
-        font-family: var(--family-copy);
         margin:auto;
     }
 
@@ -934,82 +677,99 @@ and (min-width: 1024px) {
         justify-content: center;
     }
 
-    .about-text h2, .about-text h2 a   {
-        text-align: center;
-        line-height: 130%;
-        color:var(--color-dark-blue);
-    }
-
-    .about-text h2 a   {
-        text-decoration: none;
-    }
-
-    .about-text h2 a:hover {
-        text-decoration: underline;
-    }
-
-    .about-text p {
-        text-align: justify;
-        line-height: 130%;
-        color:var(--color-dark-blue);
-    }
-
     /*  WIZARD ACTION PLANS */
     .wizard-intro-container {
-        max-width: var(--ipad-width);
         font-family: var(--family-copy);
-        margin:auto;
-
         align-content: center;
         justify-content: center;
-        margin: auto;
+        background: white;
+        border-style: groove;
+        border-color: var(--color-soft-blue);
+        margin-top:2em;
+        margin-bottom:2em;
     }
 
-    .wizard-image {
+    .wizard-intro-image {
         display:grid;
         width:100%;
-        /*grid-column:1;*/
         justify-content: center;
         align-content: center;
     }
 
-    .wizard-image a {
+    .wizard-intro-image a {
         cursor:pointer;
     }
 
-    .wizard-image img  {
+    .wizard-intro-image img  {
         max-width: 100%;
         height:auto;
     }
 
-    .wizard-text {
+    .wizard-intro-text {
         display:grid;
-        /*grid-column:2;*/
         padding:0 2em;
+        cursor:none;
         justify-content: center;
         align-content: center;
+        text-decoration: none;
+        color:var(--color-titles);
+        font-family: var(--family-copy);
     }
 
-    .wizard-text a h2  {
-        text-align: center;
-        line-height:120%;
+    .wizard-intro-text a {
+        cursor:pointer;
     }
 
-    .wizard-text a p {
-        text-align: justify;
+    /* TESTIMONIALS AND FEES */
+    .charges-grid {
+        display:grid;
+        margin:auto;
+        max-width:var(--content-width);
+        background-color: var(--color-white);
+        padding:1em;
+        text-align:center;
     }
 
-    .wizard-text a p, .wizard-text a h2 {
-        color:var(--color-white);
+    .testimonials-grid  {
+        display:grid;
+        margin:auto;
+        max-width:var(--content-width);
+        background-color: white;
     }
 
-    .wizard-text a h2 {
-        text-align: center;
+    .testimonial-row-1, .testimonial-row-2, .testimonial-row-3, .testimonial-row-4, .testimonial-row-5, .testimonial-row-6, .testimonial-row-7  {
+        display:grid;
+        width:100%;
+        margin:auto;
+        border:thin dashed var(--color-dark-blue);
+        padding:1em;
     }
 
-    .wizard-text a p   {
-        text-align: left;
-        line-height: 130%;
+    .testimonial-row-1 {
+        grid-row:1;
     }
+
+    .testimonial-row-2 {
+        grid-row:2;
+    }
+
+    .testimonial-row-3 {
+        grid-row:3;
+    }
+
+    .testimonial-row-4 {
+        grid-row:4;
+    }
+
+    .testimonial-row-5 {
+        grid-row:5;
+    }
+
+    .testimonial-row-6 {
+        grid-row:6;
+    }
+
+
+
 }
 

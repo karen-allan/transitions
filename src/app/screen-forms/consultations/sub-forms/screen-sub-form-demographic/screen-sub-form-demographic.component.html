@@ -2,148 +2,148 @@
 
 <!-- DESKTOP -->
 <div class="screen-forms-desktop">
-    <div class="screen-sub-form-block">
-        <div class="screen-sub-form-title">
-            Your Contact Information
+    <div class="sub-form-block">
+        <div class="sub-form-title">
+            YOUR CONTACT INFORMATION
         </div>
 
-        <div class="screen-sub-form-big-small-cols-block">
-            <label class="screen-sub-form-first-col" for="name">Your Full Name:</label>
-            <label class="screen-sub-form-second-col" for="cellPhone">Phone:</label>
+        <div class="sub-form-name-phone-block">
+            <label class="sub-form-first-col-label" for="name">Your Full Name:</label>
+            <label class="sub-form-second-col-label" for="cellPhone">Phone:</label>
 
-            <input type="text" class="screen-sub-form-first-col" [(ngModel)]="client.name" id="name" name="name">
+            <input type="text" class="sub-form-first-col-value" [(ngModel)]="client.name" id="name" name="name">
             <input [(ngModel)]="client.cellPhone" type="text"
-                   mask="000-000-0000" class="screen-sub-form-second-col" id="cellphone" name="cellPhone" oninput="this.value=value">
+                   mask="000-000-0000" class="sub-form-second-col-value" id="cellphone" name="cellPhone" oninput="this.value=value">
         </div>
 
-        <div class="screen-sub-form-full-col-block">
-            <label class="screen-sub-form-full-col" for="email">Email:</label>
-            <input type="text" class="screen-sub-form-full-col" [(ngModel)]="client.email" id="email" name="email">
+        <div class="sub-form-full-block">
+            <label class="sub-form-full-col-label" for="email">Email:</label>
+            <input type="text" class="sub-form-full-col-value" [(ngModel)]="client.email" id="email" name="email">
         </div>
 
-        <div class="screen-sub-form-full-col-block">
-            <label class="screen-sub-form-full-col" for="address">Home Address:</label>
-            <input type="text" class="screen-sub-form-full-col" [(ngModel)]="client.address" id="address" name="address">
+        <div class="sub-form-full-block">
+            <label class="sub-form-full-col-label" for="address">Home Address:</label>
+            <input type="text" class="sub-form-full-col-value" [(ngModel)]="client.address" id="address" name="address">
         </div>
 
-        <div class="screen-sub-form-small-big-biggest-block">
-            <label class="screen-sub-form-first-col" for="city">City/Town:</label>
-            <label class="screen-sub-form-second-col" for="provState">Province:</label>
-            <label class="screen-sub-form-third-col" for="pc">Postal Code:</label>
+        <div class="sub-form-city-prov-post-block">
+            <label class="sub-form-first-col-label" for="city">City/Town:</label>
+            <label class="sub-form-second-col-label" for="provState">Province:</label>
+            <label class="sub-form-third-col-label" for="pc">Postal Code:</label>
 
-            <input type="text" class="screen-sub-form-first-col" [(ngModel)]="client.city" id="city" name="city">
-            <input type="text" readonly class="screen-sub-form-second-col" [(ngModel)]="client.provState" id="provState" name="provState">
+            <input type="text" class="sub-form-first-col-value" [(ngModel)]="client.city" id="city" name="city">
+            <input type="text" readonly class="sub-form-second-col-value" [(ngModel)]="client.provState" id="provState" name="provState">
 
             <input [(ngModel)]="client.pc" type="text" mask="U0U-0U0"
-                   class="screen-sub-form-third-col" id="pc" name="pc" oninput="this.value = this.value.toUpperCase()">
+                   class="sub-form-third-col-value" id="pc" name="pc" oninput="this.value = this.value.toUpperCase()">
         </div>
 
-        <div class="screen-sub-form-title">
-            Optional Details
+        <div class="sub-form-title">
+            OPTIONAL DETAILS
         </div>
 
-        <div class="screen-sub-form-small-big-biggest-block">
-            <label class="screen-sub-form-first-col" for="birthdate">Birthdate:</label>
-            <label class="screen-sub-form-second-col" for="occupation">Occupation:</label>
-            <label class="screen-sub-form-third-col" for="referredBy">Referred By:</label>
+        <div class="sub-form-bdate-occup-referred-block">
+            <label class="sub-form-first-col-label" for="birthdate">Birthdate:</label>
+            <label class="sub-form-second-col-label" for="occupation">Occupation:</label>
+            <label class="sub-form-third-col-label" for="referredBy">Referred By:</label>
 
-            <input type="text" class="form-control screen-sub-form-first-col" mask="00-00-0000"
+            <input type="text" class="form-control sub-form-first-col-value" mask="00-00-0000"
                    id="birthdate" [(ngModel)]="client.birthdate" name="birthdate"
                    oninput="this.value=value" placeholder="mm-dd-yyyy">
 
-            <input type="text" class="form-control screen-sub-form-second-col" id="occupation" [(ngModel)]="client.occupation"
+            <input type="text" class="form-control sub-form-second-col-value" id="occupation" [(ngModel)]="client.occupation"
                    name="occupation">
 
-            <input type="text" class="form-control screen-sub-form-third-col" id="referredBy" [(ngModel)]="client.referredBy"
+            <input type="text" class="form-control sub-form-third-col-value" id="referredBy" [(ngModel)]="client.referredBy"
                    name="referredBy">
         </div>
 
-        <div class="screen-sub-form-title">
-            Emergency Contact
+        <div class="sub-form-title">
+            EMERGENCY CONTACT
         </div>
 
-        <div class="screen-sub-form-thirty-forty-thirty-block">
-            <label class="screen-sub-form-first-col" for="emergName">Contact:</label>
-            <label class="screen-sub-form-second-col" for="emergPhone">Phone:</label>
-            <label class="screen-sub-form-third-col" for="emergRelation">Relationship:</label>
+        <div class="sub-form-contact-phone-relation-block">
+            <label class="sub-form-first-col-label" for="emergName">Contact:</label>
+            <label class="sub-form-second-col-label" for="emergPhone">Phone:</label>
+            <label class="sub-form-third-col-label" for="emergRelation">Relationship:</label>
 
-            <input type="text" class="screen-sub-form-first-col" [(ngModel)]="client.emergName" id="emergName" name="emergName">
+            <input type="text" class="sub-form-first-col-value" [(ngModel)]="client.emergName" id="emergName" name="emergName">
 
             <input [(ngModel)]="client.emergPhone" type="text"
                    mask="000-000-0000"
-                   class="screen-sub-form-second-col" id="emergPhone" name="emergPhone" oninput="this.value=value">
+                   class="sub-form-second-col-value" id="emergPhone" name="emergPhone" oninput="this.value=value">
 
-            <input type="text" class="screen-sub-form-third-col" [(ngModel)]="client.emergRelation" id="emergRelation" name="emergRelation">
+            <input type="text" class="sub-form-third-col-value" [(ngModel)]="client.emergRelation" id="emergRelation" name="emergRelation">
         </div>
     </div>
 </div>
 
     <!-- MOBILE -->
 <div class="screen-forms-mobile">
-    <div class="screen-sub-form-block">
-        <div class="screen-sub-form-title">
-            Your Contact Information
+    <div class="sub-form-block">
+        <div class="sub-form-title">
+            YOUR CONTACT INFORMATION
         </div>
 
-        <div class="screen-sub-form-full-col-block">
-            <label class="screen-sub-form-full-col" for="mName">Your Full Name:</label>
-            <input type="text" class="screen-sub-form-full-col" [(ngModel)]="client.name" id="mName" name="name">
+        <div class="sub-form-full-block">
+            <label class="sub-form-full-col-label" for="mName"><b>Your Full Name:</b></label>
+            <input type="text" class="sub-form-full-col-value" [(ngModel)]="client.name" id="mName" name="name">
 
-            <label class="screen-sub-form-full-col" for="mCellphone">Phone:</label>
+            <label class="sub-form-full-col-label" for="mCellphone"><b>Phone:</b></label>
             <input [(ngModel)]="client.cellPhone" type="text"
-                   mask="000-000-0000" class="screen-sub-form-full-col" id="mCellphone" name="cellPhone" oninput="this.value=value">
+                   mask="000-000-0000" class="sub-form-full-col-value" id="mCellphone" name="cellPhone" oninput="this.value=value">
 
-            <label class="screen-sub-form-full-col" for="mEmail">Email:</label>
-            <input type="text" class="screen-sub-form-full-col" [(ngModel)]="client.email" id="mEmail" name="email">
+            <label class="sub-form-full-col-label" for="mEmail"><b>Email:</b></label>
+            <input type="text" class="sub-form-full-col-value" [(ngModel)]="client.email" id="mEmail" name="email">
 
-            <label class="screen-sub-form-full-col" for="mAddress">Home Address:</label>
-            <input type="text" class="screen-sub-form-full-col" [(ngModel)]="client.address" id="mAddress" name="address">
+            <label class="sub-form-full-col-label" for="mAddress"><b>Home Address:</b></label>
+            <input type="text" class="sub-form-full-col-value" [(ngModel)]="client.address" id="mAddress" name="address">
 
-            <label class="screen-sub-form-full-col" for="mCity">City/Town:</label>
-            <input type="text" class="screen-sub-form-full-col" [(ngModel)]="client.city" id="mCity" name="city">
+            <label class="sub-form-full-col-label" for="mCity"><b>City/Town:</b></label>
+            <input type="text" class="sub-form-full-col-value" [(ngModel)]="client.city" id="mCity" name="city">
 
-            <label class="screen-sub-form-full-col" for="mProv">Prov:</label>
-            <input type="text" readonly class="screen-sub-form-full-col" [(ngModel)]="client.provState" id="mProv" name="provState">
+            <label class="sub-form-full-col-label" for="mProv"><b>Prov:</b></label>
+            <input type="text" readonly class="sub-form-full-col-value" [(ngModel)]="client.provState" id="mProv" name="provState">
 
-            <label class="screen-sub-form-full-col" for="mPC">Postal Code:</label>
+            <label class="sub-form-full-col-label" for="mPC"><b>Postal Code:</b></label>
             <input [(ngModel)]="client.pc" type="text" mask="U0U-0U0"
-                   class="screen-sub-form-full-col" id="mPC" name="pc" oninput="this.value = this.value.toUpperCase()">
+                   class="sub-form-full-col-value" id="mPC" name="pc" oninput="this.value = this.value.toUpperCase()">
         </div>
 
-        <div class="screen-sub-form-title">
-            Optional Details
+        <div class="sub-form-title">
+            OPTIONAL DETAILS
         </div>
 
-        <div class="screen-sub-form-full-col-block">
-            <label class="screen-sub-form-full-col" for="mBirthdate">Birthdate:</label>
-            <input type="text" class="form-control screen-sub-form-full-col" mask="00-00-0000"
+        <div class="sub-form-full-block">
+            <label class="sub-form-full-col-label" for="mBirthdate"><b>Birthdate:</b></label>
+            <input type="text" class="form-control sub-form-full-col-value" mask="00-00-0000"
                    id="mBirthdate" [(ngModel)]="client.birthdate" name="birthdate"
                    oninput="this.value=value" placeholder="mm-dd-yyyy">
 
-            <label class="screen-sub-form-full-col" for="mReferredBy">Referred By:</label>
-            <input type="text" class="form-control screen-sub-form-full-col" id="mReferredBy" [(ngModel)]="client.referredBy"
+            <label class="sub-form-full-col-label" for="mReferredBy"><b>Referred By:</b></label>
+            <input type="text" class="form-control sub-form-full-col-value" id="mReferredBy" [(ngModel)]="client.referredBy"
                    name="referredBy">
 
-            <label class="screen-sub-form-full-col" for="mOccupation">Occupation:</label>
-            <input type="text" class="form-control screen-sub-form-full-col" id="mOccupation" [(ngModel)]="client.occupation"
+            <label class="sub-form-full-col-label" for="mOccupation"><b>Occupation:</b></label>
+            <input type="text" class="form-control sub-form-full-col-value" id="mOccupation" [(ngModel)]="client.occupation"
                    name="occupation">
         </div>
 
-        <div class="screen-sub-form-title">
-            Emergency Contact
+        <div class="sub-form-title">
+            EMERGENCY CONTACT
         </div>
 
-        <div class="screen-sub-form-full-col-block">
-            <label class="screen-sub-form-full-col" for="emergName2">Contact:</label>
-            <input type="text" class="screen-sub-form-full-col" [(ngModel)]="client.emergName" id="emergName2" name="emergName">
+        <div class="sub-form-full-block">
+            <label class="sub-form-full-col-label" for="emergName2"><b>Contact:</b></label>
+            <input type="text" class="sub-form-full-col-value" [(ngModel)]="client.emergName" id="emergName2" name="emergName">
 
-            <label class="screen-sub-form-full-col" for="emergPhone2">Phone:</label>
+            <label class="sub-form-full-col-label" for="emergPhone2"><b>Phone:</b></label>
             <input [(ngModel)]="client.emergPhone" type="text"
                    mask="000-000-0000"
-                   class="screen-sub-form-full-col" id="emergPhone2" name="emergPhone" oninput="this.value=value">
+                   class="sub-form-full-col-value" id="emergPhone2" name="emergPhone" oninput="this.value=value">
 
-            <label class="screen-sub-form-full-col" for="emergRelation2">Relationship:</label>
-            <input type="text" class="screen-sub-form-full-col" [(ngModel)]="client.emergRelation" id="emergRelation2"
+            <label class="sub-form-full-col-label" for="emergRelation2"><b>Relationship:</b></label>
+            <input type="text" class="sub-form-full-col-value" [(ngModel)]="client.emergRelation" id="emergRelation2"
                    name="emergRelation">
         </div>
     </div>

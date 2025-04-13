@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {PathObject} from "../../../ts-files/pathObject";
 
 
 @Component({
@@ -12,6 +13,7 @@ export class ThinkAboutNeedsOverviewComponent {
   @Input() quote='';
   @Input() author='';
 
+  @Input() pathObject: PathObject;
 
   constructor() { }
 

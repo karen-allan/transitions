@@ -3,7 +3,7 @@
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 1023px)    {
+and (max-width: 959px)    {
 
     .laptopForm {
         display:none;
@@ -18,7 +18,7 @@ and (max-width: 1023px)    {
   GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS (over 900 so don't need to have space on either side of content)
 *******************************************************************************************************************/
 @media only screen
-and (min-width:1024px)    {
+and (min-width:960px)    {
 
     .laptopForm {
         display:block;

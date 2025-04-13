@@ -1,35 +1,35 @@
 /******************************************** PLAN AHEAD MENU */
-export const PLAN_AHEAD:string = "Plan Ahead"
+export const PLAN_AHEAD:string = "PLAN AHEAD"
 
-export const THINK_ABOUT_YOUR_NEEDS: string = "Think About Your Needs"
+export const THINK_ABOUT_YOUR_NEEDS: string = "THINK ABOUT YOUR NEEDS"
 
-export const CONSIDER_YOUR_ADVOCATES: string="Consider Your Advocates"
+export const CONSIDER_YOUR_ADVOCATES: string="CONSIDER YOUR ADVOCATES"
 
-export const UNDERSTAND_ADVANCE_PLAN: string="Understand Advance Plans"
+export const UNDERSTAND_ADVANCE_PLAN: string="UNDERSTAND ADVANCE PLANS"
 
-export const KNOW_YOUR_RIGHTS: string="Know Your Rights"
+export const KNOW_YOUR_RIGHTS: string="KNOW YOUR RIGHTS"
 
 /******************************************** TAKE ACTION MENU */
-export const TAKE_ACTION:string = "Take Action"
+export const TAKE_ACTION:string = "TAKE ACTION"
 
-export const WRITE_WISH_LIST: string="Write a Wish List"
+export const WRITE_WISH_LIST: string="WRITE A WISH LIST"
 
-export const CHOOSE_YOUR_ADVOCATES: string="Choose Your Advocates"
+export const CHOOSE_YOUR_REPS: string="CHOOSE YOUR REPRESENTATIVES"
 
-export const WRITE_ADVANCE_CARE_PLAN: string ="Write an Advance Care Plan"
+export const WRITE_ADVANCE_CARE_PLAN: string ="WRITE AN ADVANCE CARE PLAN"
 
-export const CREATE_YOUR_CHECK_LIST: string ="Create your Checklist"
+export const CREATE_YOUR_CHECK_LIST: string ="CREATE YOUR CHECKLIST"
 
 /******************************************** GET HELP */
 
  export const GET_HELP:string = "Get Help"
-export const CONSULTANT_TESTIMONIALS: string="Testimonials and Fees"
-export const BOOK_CONSULTATION: string="Book a Consultation"
+export const CONSULTANT_TESTIMONIALS: string="TESTIMONIALS AND FEES"
+export const BOOK_CONSULTATION: string="BOOK A CONSULTATION"
 
 /******************************************** ABOUT US */
-export const ABOUT_US:string = "About Us"
-export const ABOUT_EOL_CAREGIVERS: string="About End of Life Caregivers"
-export const ABOUT_HOW_WE_SUPPORT_YOU: string="How Caregivers Support You"
+export const ABOUT_US:string = "ABOUT US"
+export const ABOUT_EOL_CAREGIVERS: string="ABOUT END OF LIFE CAREGIVERS"
+export const ABOUT_HOW_WE_SUPPORT_YOU: string="HOW WE SUPPORT YOU"
 
 
 
@@ -38,14 +38,6 @@ export const ABOUT_HOW_WE_SUPPORT_YOU: string="How Caregivers Support You"
 
 
 
-export const STAY_AT_HOME: string="Think About Home Care"
 
-
-
-
-
-
-
-export const CHOOSE_YOUR_REPS: string="Choose Your Representatives"
 
 

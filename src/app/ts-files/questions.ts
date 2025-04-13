@@ -1,8 +1,8 @@
 import {Question} from './question';
 
 export const QUESTIONS: Question[] = [
-    {question_num:1,
-        question_string: 'How open are your family members to discussing your end of life care wishes or concerns?',
+    {question_num:0,
+        question_string: 'How open is your family to discussing your end of life care?',
         responses: [
             {response_num: 0, response_string: 'My family will not let me talk about it freely.'},
             {response_num: 1, response_string: 'My family is somewhat open to hearing about some of my concerns.'},
@@ -11,7 +11,7 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:2,
+    {question_num:1,
         question_string: 'How important is it to maintain your independence and privacy?',
         responses: [
             {response_num: 0, response_string: 'It is extremely important that I maintain my independence as much as possible.'},
@@ -21,8 +21,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-   {question_num:3,
-       question_string: 'If you have a choice of where to die, where would you be most comfortable?',
+   {question_num:2,
+       question_string: 'If you have a choice of where to die, where would you like to be?',
        responses: [
             {response_num: 0, response_string: 'I want to die at home.'},
             {response_num: 1, response_string: 'I want to die in a hospice or a care home.'},
@@ -31,8 +31,8 @@ export const QUESTIONS: Question[] = [
        ],
        selectedAnswer:0},
 
-    {question_num:4,
-        question_string: 'Choose your situation as it relates to having a primary health care provider.',
+    {question_num:3,
+        question_string: 'Who is your primary health care provider?',
         responses: [
             {response_num: 0, response_string: 'I have a family doctor who I can speak freely with.'},
             {response_num: 1, response_string: 'I have a family doctor who I do not communicate well with.'},
@@ -42,7 +42,7 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:5,
+    {question_num:4,
         question_string: 'What are your thoughts on receiving CPR?',
         responses: [
             {response_num: 0, response_string: 'I have a terminal illness and do not want CPR performed on me.'},
@@ -52,7 +52,7 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:6,
+    {question_num:5,
         question_string: 'How important to you is your religion or spirituality?',
         responses: [
             {response_num: 0, response_string: 'My faith and religious beliefs are very important to me.'},
@@ -63,8 +63,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:7,
-        question_string: 'Would you accept medical interventions that would affect your everyday enjoyment of life?',
+    {question_num:6,
+        question_string: 'What medical interventions would you accept or reject?',
         responses: [
             {response_num: 0, response_string: 'I would accept any medical interventions in order to stay alive, no matter the cost.'},
             {response_num: 1, response_string: 'I would want to try all possible alternatives first, before accepting the intervention.'},
@@ -73,8 +73,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:8,
-        question_string: 'Would you choose to be aware with some pain or be pain-free but unaware?',
+    {question_num:7,
+        question_string: 'Would you rather be aware with pain or be pain-free but unaware?',
         responses: [
             {response_num: 0, response_string: 'I would rather put up with some pain and be awake and aware.'},
             {response_num: 1, response_string: 'I would rather be given sedating drugs, no matter the consequence.'},
@@ -83,8 +83,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:9,
-        question_string: 'Do you feel that you could advocate for yourself if met with a chronic or terminal illness?',
+    {question_num:8,
+        question_string: 'Do you feel that you could advocate for your own health concerns?',
         responses: [
             {response_num: 0, response_string: 'I am very confident in my decision making so I think I would advocate well for' +
                     ' myself' +
@@ -98,8 +98,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:10,
-        question_string: 'What level of interest do you find the subject of MAID (Medical Assistance in Dying)?',
+    {question_num:9,
+        question_string: 'What level of interest do you find the subject of MAID?',
         responses: [
             {response_num: 0, response_string: 'I don\'t know anything about it and I would not support it because of my beliefs.'},
             {response_num: 1, response_string: 'I have heard of it and am curious to know more about it.'},
@@ -108,8 +108,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:11,
-        question_string: 'Have you set anyone in charge of your future financial decisions, if unable to make them?',
+    {question_num:10,
+        question_string: 'Have you set anyone in charge of your future financial decisions?',
         responses: [
             {response_num: 0, response_string: 'I have a Will with a Power of Attorney for my finances.'},
             {response_num: 1, response_string: 'I have a Will and have assigned my financial Representative(s) with Rep-Section-7.'},
@@ -118,8 +118,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:12,
-        question_string: 'Would you accept treatments that may affect your physical attractiveness?',
+    {question_num:11,
+        question_string: 'Would you accept treatments that may affect your looks?',
         responses: [
             {response_num: 0, response_string: 'I take care to be attractive and would not want any treatments that affect it.'},
             {response_num: 1, response_string: 'I care about looking attractive, but not at the cost of saving my life or parts of my body.'},
@@ -128,8 +128,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:13,
-        question_string: 'If I was incapacitated, is there a family member I trust who would advocate for me adequately?',
+    {question_num:12,
+        question_string: 'Is there a family member you trust to advocate for you?',
         responses: [
             {response_num: 0, response_string: 'I have one or more trusted family members who I could turn to.'},
             {response_num: 1, response_string: 'There is a lot of dissent in my family and I am not sure who I could trust.'},
@@ -138,8 +138,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:14,
-        question_string: 'What life support or prolonging medical interventions would you most likely disagree with?',
+    {question_num:13,
+        question_string: 'What prolonging medical interventions would you disagree with?',
         responses: [
             {response_num: 0, response_string: 'I would not want to any medical interventions if I became mentally incapacitated.'},
             {response_num: 1, response_string: 'It is against my religion or other belief system to receive any medical interventions.'},
@@ -148,8 +148,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:15,
-        question_string: 'How much information would you want to receive about your diagnosis, treatment and care?',
+    {question_num:14,
+        question_string: 'How much would you want to know about a diagnosis or treatment?',
         responses: [
             {response_num: 0, response_string: 'I would want to know absolutely everything, no matter how dire.'},
             {response_num: 1, response_string: 'I would let my family receive the information and allow them to decide what to tell me.'},
@@ -158,8 +158,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:16,
-        question_string: 'Where do you keep your important papers, such as wills, life insurance and care plans, if any?',
+    {question_num:15,
+        question_string: 'Do you keep your will, life insurance and plans securely stored away?',
         responses: [
             {response_num: 0, response_string: 'I have a safe in my home where all these papers are kept.'},
             {response_num: 1, response_string: 'I have not compiled any of this information, but my doctor knows my wishes.'},
@@ -168,7 +168,7 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:17,
+    {question_num:16,
         question_string: 'Do you believe that you have fulfilled your life has purpose?',
         responses: [
             {response_num: 0, response_string: 'I think I have absolutely fulfilled my purpose.'},
@@ -178,8 +178,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:18,
-        question_string: 'Choose the best answer related to what would make your life not worth living?',
+    {question_num:17,
+        question_string: 'What would make your life not worth living?',
         responses: [
             {response_num: 0, response_string: 'No longer being able to carry out my day to day activities without support from others.'},
             {response_num: 1, response_string: 'Experiencing pain and discomfort much of the time, with drugs no longer helping.'},
@@ -188,7 +188,7 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:19,
+    {question_num:18,
         question_string: 'What would you like done with your body after you die?',
         responses: [
             {response_num: 0, response_string: 'I want to be cremated and my ashes scattered at the location noted in my will.'},
@@ -198,8 +198,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:20,
-        question_string: 'Do you know which family members and friends you would welcome at your bedside?',
+    {question_num:19,
+        question_string: 'Do you know who you would welcome at your bedside?',
         responses: [
             {response_num: 0, response_string: 'All family members and friends are welcome as long as my comfort level is respected.'},
             {response_num: 1, response_string: 'I would want all the adults in my family to be able to visit, but not the grandchildren.'},
@@ -208,8 +208,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:21,
-        question_string: 'What are your thoughts about requesting or rejecting life support measures if dying?',
+    {question_num:20,
+        question_string: 'What are your thoughts about receiving life support measures?',
         responses: [
             {response_num: 0, response_string: 'I am opposed to suicide so I must wait to die a natural death.'},
             {response_num: 1, response_string: 'I request that I be taken off all life support and only receive pain medication.'},
@@ -218,7 +218,7 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer: 0},
 
-    {question_num:22,
+    {question_num:21,
         question_string: 'Who are the most important and trusted people in your life?',
         responses: [
             {response_num: 0, response_string: 'My immediate family: my children, spouse, grandchildren.'},
@@ -228,8 +228,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer: 0},
 
-    {question_num:23,
-        question_string: 'If your doctor says your condition is terminal, how much information would you want?',
+    {question_num:22,
+        question_string: 'How much would you want to know if your condition was terminal?',
         responses: [
             {response_num: 0, response_string: 'I want to know absolutely everything, including time line, treatments etc.'},
             {response_num: 1, response_string: 'I want my family to know the details while I focus on the time I have left.'},
@@ -238,18 +238,18 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer: 0},
 
-    {question_num:24,
-        question_string: 'What treatments would you consent to even if there is a high risk of death or impairment?',
+    {question_num:23,
+        question_string: 'Do you worry that your family will squabble about your Will?',
         responses: [
-            {response_num: 0, response_string: 'I want every possible intervention done no matter the outcome.'},
-            {response_num: 1, response_string: 'I would want my family to make the choice after learning the possibilities.'},
-            {response_num: 2, response_string: 'I would only want interventions that carry little risk.'},
-            {response_num: 3, response_string: 'I would not want any high risk treatments.'}
+            {response_num: 0, response_string: 'I have written down very specific instructions to eliminate in-fighting.'},
+            {response_num: 1, response_string: 'I don\'t have much left to leave them so I am not worried about this.'},
+            {response_num: 2, response_string: 'I have discussed this with close family and they have promised to be respectful.'},
+            {response_num: 3, response_string: 'I think it is inevitable that some will feel slighted but am not worried.'},
         ],
         selectedAnswer: 0},
 
-    {question_num:25,
-        question_string: 'Are there any items, sentimental photos, music, sights, smells you would like in your room?',
+    {question_num:24,
+        question_string: 'Are there any photos, music, scents you would like in your room?',
         responses: [
             {response_num: 0, response_string: 'I have some aromatherapy scents that I would love to have in my room.'},
             {response_num: 1, response_string: 'I would love my favorite music to be played or my family to sing to me.'},
@@ -258,7 +258,7 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer: 0},
 
-    {question_num:26,
+    {question_num:25,
         question_string: 'What do you feel about being on a ventilator?',
         responses: [
             {response_num: 0, response_string: 'If my condition was curable I would be fine with one.'},
@@ -268,7 +268,7 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer: 0},
 
-    {question_num:27,
+    {question_num:26,
         question_string: 'What do you feel about tube feeding?',
         responses: [
             {response_num: 0, response_string: 'If my condition was curable I would be fine with tube feeding.'},
@@ -278,8 +278,8 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer: 0},
 
-    {question_num:28,
-        question_string: 'Is there anyone you would absolutely not want at your bedside while dying?',
+    {question_num:27,
+        question_string: 'Is there anyone you would not want at your bedside while dying?',
         responses: [
             {response_num: 0, response_string: 'I have written down a list of those who I do not want at my bedside.'},
             {response_num: 1, response_string: 'I may welcome family but reserve the right to ban anyone if I no longer feel safe.'},
@@ -288,7 +288,7 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:29,
+    {question_num:28,
         question_string: 'How do you feel when thinking about your own death?',
         responses: [
             {response_num: 0, response_string: 'I have had a long life and am accepting of my own impending death.'},
@@ -298,7 +298,7 @@ export const QUESTIONS: Question[] = [
         ],
         selectedAnswer:0},
 
-    {question_num:30,
+    {question_num:29,
         question_string: 'What kind of a celebration would you like to honor you?',
         responses: [
             {response_num: 0, response_string: 'I would like a proper funeral, with a church service, burial and reception.'},
@@ -311,10 +311,7 @@ export const QUESTIONS: Question[] = [
    /* {question_num:30,
         question_string: 'Do you worry that your family will squabble about the money and/or possessions that you leave in your Will?',
         responses: [
-            {response_num: 0, response_string: 'I have written down very specific instructions to eliminate in-fighting.'},
-            {response_num: 1, response_string: 'I don\'t have much left to leave them so I am not worried about this.'},
-            {response_num: 2, response_string: 'I have discussed this with close family and they have promised to be respectful.'},
-            {response_num: 3, response_string: 'I think it is inevitable that some will feel slighted but I really don\'t worry about it.'},
+
         ],
         selectedAnswer:0},*/
 ];

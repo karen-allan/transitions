@@ -1,124 +1,117 @@
 <div class="header-detail-image header-choose-your-rep-image">
-    <div class="quote">
+    <div class="header-quote">
         &#8220;{{quote}}&#8220;
     </div>
-    <div class="author">
+    <div class="header-author">
         {{author}}
     </div>
 </div>
 
-<div class="content-title">
-    <h1>{{title}}</h1>
-</div>
-
 <div class="laptopForm">
     <div class="wizard-intro-container">
-        <div class="wizard-image">
+        <div class="wizard-intro-image">
             <a (click)="openModal()">
-                <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseReps.gif"
-                     title="choose your reps"
-                     alt="choose your reps">
+                <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsIntro.jpg"
+                title="{{title}}" alt= "{{title}}">
             </a>
         </div>
 
-        <div class="wizard-text">
+        <div class="wizard-intro-text">
             <a (click)="openModal()">
-                <h2>{{title}}</h2>
+                <h3>{{ title.toUpperCase() }}</h3>
                 <p>
-                    Follow through this wizard to help you document who you trust to protect, defend and support you as your
-                    Representative. Although there are many versions of this document found online, this document is as valid as any of the
-                    other ones as long as it is properly filled out and witnessed. No need to pay a lawyer a ton of cash to do this and it literally
-                    takes minutes to complete.
-                    <br><br>
-                    There is an area on the form to provide your instructions to your Representative.
                     <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
-                    as a PDF file.
+                    as a PDF file. This wizard is only available on an ipad, laptop or desktop.
+                </p>
+
+                <h3>Why Run this Wizard?</h3>
+
+                <p>
+                    Filling this wizard out will help you document who you trust to protect, defend and
+                    support you as your Representative. Although there are many versions of this document, this document is valid as long
+                    as it is properly filled out and witnessed. No need to pay a lawyer!
                 </p>
             </a>
         </div>
     </div>
 </div>
+
 
 <div class="mobileForm">
     <div class="wizard-intro-container">
-        <div class="wizard-image">
-            <a routerLink="/callScreenFormChooseReps">
-                <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseReps.gif"
-                     title="choose your reps"
-                     alt="choose your reps">
-            </a>
+        <div class="wizard-intro-image">
+            <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsIntro.jpg"
+                 title="{{title}}" alt= "{{title}}">
         </div>
 
-        <div class="wizard-text">
-            <a routerLink="/callScreenFormChooseReps">
-                <h2>{{ title }}</h2>
-                <p>
-                    Follow through this wizard to help you document who you trust to protect, defend and support you as your
-                    Representative. Although there are many versions of this document found online, this document is as valid as any of the
-                    other ones as long as it is properly filled out and witnessed. No need to pay a lawyer a ton of cash to do this and it literally
-                    takes minutes to complete.
-                    <br><br>
-                    There is an area on the form to provide your instructions to your Representative.
-                    <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
-                    as a PDF file.
-                </p>
-            </a>
+        <div class="wizard-intro-text">
+            <h3>{{ title.toUpperCase() }}</h3>
+
+            <p>
+                <b>Please Note:</b> At this time the {{ title }} wizard is only available on ipads, laptops, desktops and up. To
+                follow this wizard please connect to it via one of these devices.
+            </p>
+
+            <h3>Why Run this Wizard?</h3>
+
+            <p>
+                Filling this wizard out will help you document who you trust to protect, defend and
+                support you as your Representative. Although there are many versions of this document, this document is valid as long
+                as it is properly filled out and witnessed. No need to pay a lawyer!
+            </p>
         </div>
     </div>
 </div>
 
-
-<div class = "content-title">
-    <h4>Some of the things to consider:</h4>
-</div>
-
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
-        <li class="list-item">Would they be accountable to you and the health care personnel?</li>
-        <li class="list-item">Would they be able to exercise the duties set out for them?</li>
-        <li class="list-item">Would they act honestly and honorably on your behalf?</li>
-        <li class="list-item">Do they have good communication skills?</li>
-        <li class="list-item">Would they respect and abide by your wishes?</li>
-        <li class="list-item">Are they careful record keepers?</li>
-        <li class="list-item">Are they confident enough to accept sole authority for your care?</li>
-        <li class="list-item">Are they capable of also seeking advice from others?</li>
-        <li class="list-item">Can they keep all information confidential?</li>
-        <li class="list-item">Can they remain calm in a crisis?</li>
-        <li class="list-item">Are they ready and willing to take on the role?</li>
-        <li class="list-item">Do you trust them to make the proper decisions for you?</li>
-        <li class="list-item">Can they make difficult decisions?</li>
-    </ul>
-</div>
-
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">Would they be accountable to you and the health care personnel?</li>
-        <li class="list-item">Would they be able to exercise the duties set out for them?</li>
-        <li class="list-item">Would they act honestly and honorably on your behalf?</li>
-        <li class="list-item">Do they have good communication skills?</li>
-        <li class="list-item">Would they respect and abide by your wishes?</li>
-        <li class="list-item">Are they careful record keepers?</li>
-        <li class="list-item">Are they confident enough to accept sole authority for your care?</li>
-        <li class="list-item">Are they capable of also seeking advice from others?</li>
-        <li class="list-item">Can they keep all information confidential?</li>
-        <li class="list-item">Can they remain calm in a crisis?</li>
-        <li class="list-item">Are they ready and willing to take on the role?</li>
-        <li class="list-item">Do you trust them to make the proper decisions for you?</li>
-        <li class="list-item">Can they make difficult decisions?</li>
-    </ul>
-</div>
-
-<div class="content-title">
-    <h3>
+<div class="content-title pad-top">
+    <h2>
         Need to Learn More First?
-    </h3>
+    </h2>
 </div>
 
-<div class="content-dark-copy">
+<div class="content-dark-copy pad-top-2">
     <p>
-        For more information regarding choosing Representatives, check out our <a routerLink="/considerAdvocates">{{ lookupParent1 }} >
-        {{ lookupChild1 }}</a> page. To delve deeper into what kind of instructions you may want to give, run our <a
-        routerLink="/menuWritePlans">{{ lookupParent2 }} > {{ lookupChild2 }}</a>
-        wizard.
+        If you are unsure about the need to nail down one or two trusted advocates to represent you should you need them in the future,
+        please read more about this important subject on our
+        <b><a target="new" routerLink={{pathObject.child2_url}} > {{pathObject.parent_name}} > {{pathObject.child2_name}}</a></b> page.
+        <br><br>
+        Preparing is smart, it is thoughtful and it is the mature thing to do, no matter how uncomfortable. And once done, you will feel a
+        sense of relief!
     </p>
 </div>
+
+<!--
+<div class="mobileForm">
+    <div class="wizard-intro-container">
+        <div class="wizard-intro-image">
+            <a routerLink="/callScreenFormChooseReps">
+                <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsIntro.jpg"
+                 title="choose your reps"
+                 alt="choose your reps">
+            </a>
+        </div>
+
+        <div class="wizard-intro-text">
+            <a routerLink="/callScreenFormChooseReps">
+                <div class="content-title">
+                    <h1>{{ title.toUpperCase() }}</h1>
+                </div>
+                <div class="content-dark-copy text-align-justify">
+                    <p>
+                        Please Note: At this time the {{title}} wizard is only available on ipads, laptops, desktops and up. To
+                        follow this wizard please connect to it via one of these devices.
+                        <br><br>
+                        Filling this wizard out will help you document who you trust to protect, defend and
+                        support you as your
+                        Representative. Although there are many versions of this document found online, this document is as valid as any of the
+                        other ones as long as it is properly filled out and witnessed. No need to pay a lawyer a ton of cash to do this and it literally
+                        takes minutes to complete.
+                        <br><br>
+                        <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
+                        as a PDF file.
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>-->

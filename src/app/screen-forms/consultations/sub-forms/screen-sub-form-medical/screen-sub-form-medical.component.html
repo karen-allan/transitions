@@ -1,133 +1,133 @@
 <!-- DESKTOP -->
 <div class="screen-forms-desktop">
-    <div class="screen-sub-form-block">
-        <div class="screen-sub-form-title">
-            (Optional) Your Medical History
+    <div class="sub-form-block">
+        <div class="sub-form-title">
+            YOUR MEDICAL HISTORY (optional)
         </div>
 
-        <div class="screen-sub-form-full-col-block">
+        <div class="sub-form-full-block">
             <p>Please list medications and supplements that your are currently taking.</p>
         </div>
 
-        <div class="screen-sub-form-full-col-block">
-            <textarea class="text-area" rows=8 id="mainTreatments" [(ngModel)]="client.medsSupplements"> </textarea>
+        <div class="sub-form-full-block">
+            <textarea class="sub-form-text-area" rows=8 id="mainTreatments" [(ngModel)]="client.medsSupplements"> </textarea>
         </div>
 
-        <div class="screen-sub-form-full-col-block">
+        <div class="sub-form-full-block">
             <p>Please select any health conditions you have been diagnosed with:</p>
         </div>
 
-        <div class="screen-sub-form_three-even-cols-block">
-            <div class="screen-sub-form-first-check-col">
+        <div class="sub-form_three-medical-block">
+            <div class="sub-form-first-check-col">
                 <input type="checkbox" [(ngModel)]="client.heartDisease" name="heartDisease">Heart Disease
             </div>
 
-            <div class="screen-sub-form-second-check-col">
+            <div class="sub-form-second-check-col">
                 <input type="checkbox" [(ngModel)]="client.cancer" name="cancer">Cancer
             </div>
 
-            <div class="screen-sub-form-third-check-col">
+            <div class="sub-form-third-check-col">
                 <input type="checkbox" [(ngModel)]="client.stroke" name="stroke">Stroke
             </div>
 
-            <div class="screen-sub-form-first-check-col">
+            <div class="sub-form-first-check-col">
                 <input type="checkbox" [(ngModel)]="client.highBloodPressure" name="highBloodPressure">High Blood Pressure
             </div>
 
-            <div class="screen-sub-form-second-check-col">
+            <div class="sub-form-second-check-col">
                 <input type="checkbox" [(ngModel)]="client.diabetes" name="diabetes">Diabetes
             </div>
 
-            <div class="screen-sub-form-third-check-col">
+            <div class="sub-form-third-check-col">
                 <input type="checkbox" [(ngModel)]="client.mentalIllness" name="mentalIllness">Emotional
             </div>
 
-            <div class="screen-sub-form-first-check-col">
+            <div class="sub-form-first-check-col">
                 <input type="checkbox" [(ngModel)]="client.seizures" name="seizures">Seizures
             </div>
 
-            <div class="screen-sub-form-second-check-col">
+            <div class="sub-form-second-check-col">
                 <input type="checkbox" [(ngModel)]="client.autoImmuneDisease" name="autoImmuneDisease">Auto-immune
             </div>
 
-            <div class="screen-sub-form-third-check-col">
+            <div class="sub-form-third-check-col">
                 <input type="checkbox" [(ngModel)]="client.seizures" name="seizures">Other
             </div>
         </div>
 
-        <div class="screen-sub-form-full-col-block">
+        <div class="sub-form-full-block">
             <p>Please further describe your situation, condition and or illness, if applicable:</p>
         </div>
 
-        <div class="screen-sub-form-full-col-block">
-            <textarea class="text-area" rows=8 [(ngModel)]="client.illnessDetails"> </textarea>
+        <div class="sub-form-full-block">
+            <textarea class="sub-form-text-area" rows=8 [(ngModel)]="client.illnessDetails"> </textarea>
         </div>
     </div>
 </div>
 
 <!-- MOBILE -->
 <div class="screen-forms-mobile">
-    <div class="screen-sub-form-block">
-        <div class="screen-sub-form-title">
-            (Optional) Medical History
+    <div class="sub-form-block">
+        <div class="sub-form-title">
+            YOUR MEDICAL HISTORY (optional)
         </div>
 
-        <div class="screen-sub-form-full-col-block">
+        <div class="sub-form-full-block">
             <p>Please list medications and supplements that your are currently taking.</p>
         </div>
 
-        <div class="screen-sub-form-full-col-block">
-            <textarea class="text-area" rows=8 id="m-mainTreatments" [(ngModel)]="client.medsSupplements"> </textarea>
+        <div class="sub-form-full-block">
+            <textarea class="sub-form-text-area" rows=8 id="m-mainTreatments" [(ngModel)]="client.medsSupplements"> </textarea>
         </div>
 
-        <div class="screen-sub-form-full-col-block">
+        <div class="sub-form-full-block">
             <p>Please select any health conditions you have been diagnosed with:</p>
         </div>
 
-        <div class="screen-sub-form-two-even-cols-block">
-            <div class="screen-sub-form-first-check-col">
+        <div class="sub-form-two-checkboxes-block">
+            <div class="sub-form-first-check-col">
                 <input type="checkbox" [(ngModel)]="client.heartDisease" name="heartDisease">Heart Disease
             </div>
 
-            <div class="screen-sub-form-second-check-col">
+            <div class="sub-form-second-check-col">
                 <input type="checkbox" [(ngModel)]="client.cancer" name="cancer">Cancer
             </div>
 
-            <div class="screen-sub-form-first-check-col">
+            <div class="sub-form-first-check-col">
                 <input type="checkbox" [(ngModel)]="client.stroke" name="stroke">Stroke
             </div>
 
-            <div class="screen-sub-form-second-check-col">
+            <div class="sub-form-second-check-col">
                 <input type="checkbox" [(ngModel)]="client.highBloodPressure" name="highBloodPressure">High Blood Pressure
             </div>
 
-            <div class="screen-sub-form-first-check-col">
+            <div class="sub-form-first-check-col">
                 <input type="checkbox" [(ngModel)]="client.diabetes" name="diabetes">Diabetes
             </div>
 
-            <div class="screen-sub-form-second-check-col">
+            <div class="sub-form-second-check-col">
                 <input type="checkbox" [(ngModel)]="client.mentalIllness" name="mentalIllness">Emotional
             </div>
 
-            <div class="screen-sub-form-first-check-col">
+            <div class="sub-form-first-check-col">
                 <input type="checkbox" [(ngModel)]="client.seizures" name="seizures">Seizures
             </div>
 
-            <div class="screen-sub-form-second-check-col">
+            <div class="sub-form-second-check-col">
                 <input type="checkbox" [(ngModel)]="client.autoImmuneDisease" name="autoImmuneDisease">Auto-immune
             </div>
 
-            <div class="screen-sub-form-first-check-col">
+            <div class="sub-form-first-check-col">
                 <input type="checkbox" [(ngModel)]="client.seizures" name="seizures">Other
             </div>
         </div>
 
-        <div class="screen-sub-form-full-col-block">
+        <div class="sub-form-full-block">
             <p>Please further describe your situation, condition and or illness, if applicable:</p>
         </div>
 
-        <div class="screen-sub-form-full-col-block">
-            <textarea class="text-area" rows=8 id="m-conditions" [(ngModel)]="client.illnessDetails"> </textarea>
+        <div class="sub-form-full-block">
+            <textarea class="sub-form-text-area" rows=8 id="m-conditions" [(ngModel)]="client.illnessDetails"> </textarea>
         </div>
     </div>
 </div>

@@ -30,20 +30,18 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
 
-              "src/assets/css/bkgd-images.css",
-              "src/assets/css/content-images.css",
               "src/assets/css/copy.css",
-              "src/assets/css/fees.css",
               "src/assets/css/footer.css",
+              "src/assets/css/forms.css",
               "src/assets/css/grid-containers.css",
-              "src/assets/css/lists.css",
+              "src/assets/css/images.css",
               "src/assets/css/main-menu.css",
               "src/assets/css/print-reports.css",
-              "src/assets/css/screen-forms.css",
-              "src/assets/css/screen-modals.css",
               "src/assets/css/styles.css",
-              "src/assets/css/template.css",
-              "src/assets/css/titles.css"
+              "src/assets/css/wizard-global.css",
+              "src/assets/css/wizard-plans.css",
+              "src/assets/css/wizard-reps.css",
+              "src/assets/css/wizard-wishes.css"
             ],
             "scripts": []
           },
@@ -113,26 +111,23 @@
 
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
 
-              "src/assets/css/bkgd-images.css",
-              "src/assets/css/content-images.css",
               "src/assets/css/copy.css",
-              "src/assets/css/fees.css",
               "src/assets/css/footer.css",
+              "src/assets/css/forms.css",
               "src/assets/css/grid-containers.css",
-              "src/assets/css/lists.css",
+              "src/assets/css/images.css",
               "src/assets/css/main-menu.css",
               "src/assets/css/print-reports.css",
-              "src/assets/css/screen-forms.css",
-              "src/assets/css/screen-modals.css",
               "src/assets/css/styles.css",
-              "src/assets/css/template.css",
-              "src/assets/css/titles.css"
+              "src/assets/css/wizard-global.css",
+              "src/assets/css/wizard-plans.css",
+              "src/assets/css/wizard-reps.css",
+              "src/assets/css/wizard-wishes.css"
             ],
             "scripts": []
           }
         }
       }
     }
-  },
-  "defaultProject": "transitions"
+  }
 }

@@ -1,17 +1,17 @@
 <div class="header-detail-image header-understand-care-plan-image">
-    <div class="quote">
+    <div class="header-quote">
         &#8220;{{quote}}&#8220;
     </div>
-    <div class="author">
+    <div class="header-author">
         {{author}}
     </div>
 </div>
 
 <div class="content-title">
-    <h1>{{title}}</h1>
+    <h1>{{title.toUpperCase()}}</h1>
 </div>
 
-<div class="content-dark-copy">
+<div class="content-dark-copy pad-top">
     <p>
         Let's say you are in an accident or suffer a critical illness and end up in Emergency and are incapable of
         answering for yourself. When you arrive at the hospital - a health care team member must contact your
@@ -58,7 +58,7 @@
 </div>
 
 <div class = "content-title">
-    <h3>It's Time to Plan</h3>
+    <h4>It's Time to Plan</h4>
 </div>
 
 <div class="content-dark-copy">
@@ -116,21 +116,21 @@
     </ul>
 </div>
 
-<div class="content-title">
+<div class="content-title pad-bottom">
     <div *ngIf="sectionSelected === 'triggeredSection1'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(0)">
                 Close the Advance Directive Form: &#x25BC;
             </a>
-        </h3>
+        </h6>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection1'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(1)">
                 See the Advance Directive Form: &#x25B6;
             </a>
-        </h3>
+        </h6>
     </div>
 </div>
 
@@ -164,7 +164,7 @@
 </div>
 
 <div class = "content-title">
-    <h3>Let your Needs be Known</h3>
+    <h4>Let your Needs be Known</h4>
 </div>
 
 <div class="content-dark-copy">
@@ -177,48 +177,33 @@
         doesn’t mention being intubated then the decision will be made by your advocate. If you don’t have an advocate, the
         decision will be made by the health care team.
         <br><br>
+        You can ask your doctor to add a copy of your directive to your medical records.
+        Keep a copy where it can be easily found in an emergency, and let your family and advocates know this location. Do not store your
+        Advance Directive in a safety deposit box or in any locked box which could prove difficult for your family to open.
+    </p>
+</div>
+
+<div class="content-title">
+    <h4>
+        Want to Write your Plan Now?
+    </h4>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        If you have always been independent and self-sufficient, you will likely want to keep that going even as you near the end of your
+        days on earth. It is possible to die with dignity but it may take some thoughtful discussions with family, friends and most
+        importantly, yourself.
         <br><br>
-        VERBATIM FROM DYING WITH DIGNITY
-        Talk to your physician and ask that a copy of the directive be entered in your medical records.
-        Give a copy to whoever will be making decisions on your behalf if you cannot do so for yourself. Keep a copy where it can be
-        easily found in an emergency situation. Leave a note in a prominent place – perhaps with a fridge magnet – saying where to
-        find your Advance Directive and who to call in an emergency. Do not store your Advance Directive in a safety deposit box.
-        If your medical condition has changed, or if you have reconsidered some of the answers you wrote down,
-    </p>
-
-</div>
-
-<!--<div class="content-dark-copy pad-top-2 text-center with-faded-background">
-    <p>Write your (free) Advance Care Plan with our Advance Care Plan Wizard!</p>
-    <br>
-    <a routerLink="/writeCarePlan"><div class="wizard-action-logo"></div></a>.
-</div>-->
-
-<!--<div class="content-light-copy backcolor-metal-selected">
-    <p>
-        The first document is a check list, that lets you check off the documents that you have decided to fill out. You may have filled
-        out your wishes as a separate paper you write up on your own OR you can follow the wizard here that will prompt you through a
-        list of questions and scenarios to produce your own ready-to-use wishes, personal wishes
-        document. The TSDM form lets you write down your preferred Representative(s). If you want a document that will assign a person to
-        take on the role of financial representative (if you don't want a Power of Attorney), you can fill out Rep-7. Rep-9 does not
-        cover the financial situation, but rather allows you to assign one or two people to act as your personal health care decision
-        maker. Finally, you can check off an advanced care plan should you have created one.
+        You can run our
+        <b><a target="new" routerLink={{pathObject.child3_url}} > {{pathObject.parent_name}} > {{pathObject.child3_name}}</a> </b> wizard
+        as often
+        as
+        you like
+        while you consider all your questions and concerns. No data is saved so you have complete privacy.
+       Once you feel good about your decisions, print it out and store it along with your other important papers.
     </p>
 </div>
-
-<div class="content-images">
-    <img src="assets/images/details/planning/endOfLifeDocuments/advCarePlan/papersInOrder1.jpg"
-         alt="Choose a Representative">
-</div>-->
-
-<!--<div class="content-dark-copy">
-    <p>
-        The second document is an example of an advanced directive that you can use to enter in your requests related to no-cpr, dnr, any
-        procedures that you want or do not want. &lt;!&ndash;By using the <a routerLink="/planAheadWizard">my wishes wizard here</a>many of these
-        issues will already have been addressed so can be placed in this document.&ndash;&gt;
-    </p>
-</div>-->
-
 
 
 

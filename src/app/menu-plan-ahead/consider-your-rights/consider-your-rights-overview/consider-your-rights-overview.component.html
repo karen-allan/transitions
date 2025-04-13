@@ -1,17 +1,17 @@
 <div class="header-detail-image header-know-rights-image">
-    <div class="quote">
+    <div class="header-quote">
         &#8220;{{quote}}&#8220;
     </div>
-    <div class="author">
+    <div class="header-author">
         {{author}}
     </div>
 </div>
 
 <div class="content-title">
-    <h1>{{title}}</h1>
+    <h1>{{title.toUpperCase()}}</h1>
 </div>
 
-<div class = "content-dark-copy">
+<div class = "content-dark-copy pad-top">
     <p>
         You may be at a stage in your life where you would not want life-prolonging measures administered to you. But if you don't make
         your wishes known, your doctor and loved ones may face some tough decisions. In an emergency, you would
@@ -24,10 +24,12 @@
         that your instructions will be followed - as doctors are in the business of keeping people alive - but it does give you more
         control over your decisions.
         <br><br>
-        Ideally you should have these forms filled out along with your <a routerLink="/chooseReps">Representatives Section 9</a> printout,
+     <!--   Ideally you should have these forms filled out along with your <a routerLink="/chooseReps">Representatives Section 9</a> printout,
         your
         <a routerLink="/writeCarePlan">advance care plan</a> printout,
-        <a routerLink="/makeWishList"> wish list</a> printout and your will. Have them stored in a known place for your family and
+        <a routerLink="/makeWishList"> wish list</a> printout and your will. -->
+
+        Have them stored in a known place for your family and
         the medical team to find and follow. This tells Paramedics and the
         medical team that you do not wish to be revived through artificial respiration methods. This is a heavy decision to make but
         being informed of the facts about CPR and Do Not Resuscitate procedures and outcomes will help give you the perspective you
@@ -69,21 +71,21 @@
     </ul>
 </div>
 
-<div class="content-title">
+<div class="content-title pad-bottom">
     <div *ngIf="sectionSelected === 'triggeredSection1'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(0)">
                 Close the CPR Information Form: &#x25BC;
             </a>
-        </h3>
+        </h6>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection1'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(1)">
                 See the CPR Information Form: &#x25B6;
             </a>
-        </h3>
+        </h6>
     </div>
 </div>
 
@@ -98,35 +100,7 @@
             <a href = "https://www2.gov.bc.ca/assets/gov/health/forms/302fil.pdf" target = new>No CPR Request Form</a>.
             To order a free Medic Alert&reg; - No CPR bracelet or 'necklet' you also need to download and complete a form called:
             No CPR Bracelet.
-
-            <!--   <b>This form from the Govt of B.C. website (gov.bc.ca) states:</b>:<br><br>
-               "Capable patients may request that no cardiopulmonary resuscitation be started on their behalf. This should be
-               done after discussions with their doctor or nurse practitioner. No "cardiopulmonary resuscitation" is defined as no cardiopulmonary
-               resuscitation (no CPR) in the event of a respiratory and/or cardiac arrest.
-               <br><br>
-               This form is provided to you or your Substitute Decision Maker or Representative Section-9 representative to acknowledge that
-               you have had a
-               conversation with a doctor or a nurse practitioner about a No CPR Order, and understand that no CPR will be provided in
-               circumstances where you can no longer make decisions for yourself. It instructs people such as first responders, paramedics and
-               health care providers not to start CPR on your behalf whether you are at home, in the community or in a residential care
-               facility.
-               <br><br>
-               The personal information collected on this form assists the health professionals noted above to carry out your wishes.
-               If you have any questions about the collection of this information contact Health Link BC at 8-1-1 or go to
-               www.gov.bc.ca/expectedhomedeath."
-               <br><br>
-               You or someone at your location should have the form available to show emergency help if they come to your aid. It is desirable
-               that you wear a MedicAlert or No CPR bracelet or necklet to enable quick verification that you have a No CPR Order in place."
-               <br><br>
-               This form goes on to say that you can request a free No CPR bracelet or necklet by filling out this form, by also filling out a
-               MedicAlert Registration form and mailing them to the appropriate place.
-               <br><br>
-               This form must be signed by you if you are still capable or by your advocate if you are no longer capable. It must also
-               be signed by your Doctor or Nurse Practitioner who are agreeing to the order after having had a conversation with either you or
-               your Representatives.
-               <br><br>
-              The link at this time is broken so not provided here.
-               <br><br>-->
+            <br><br>
             If you change your mind you need to let your physician, care-givers and family know, tear up the No CPR form and let Medic Alert
             know you have reversed your decision.
         </p>
@@ -134,7 +108,7 @@
 </div>
 
 <div class = "content-title">
-    <h3>Your Right to Die at Home</h3>
+    <h4>Your Right to Die at Home</h4>
 </div>
 
 <div class = "content-dark-copy">
@@ -199,7 +173,7 @@
 </div>
 
 <div class = "content-title">
-    <h3>Pronouncement of Death is not Required</h3>
+    <h4>Pronouncement of Death is not Required</h4>
 </div>
 
 <div class = "content-dark-copy">
@@ -215,21 +189,21 @@
     </p>
 </div>
 
-<div class="content-title">
+<div class="content-title pad-bottom">
     <div *ngIf="sectionSelected === 'triggeredSection2'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(0)">
                 Close the Expected Death in the Home Form: &#x25BC;
             </a>
-        </h3>
+        </h6>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection2'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(2)">
                 See the Expected Death in the Home Form: &#x25B6;
             </a>
-        </h3>
+        </h6>
     </div>
 </div>
 
@@ -243,32 +217,6 @@
         <p>
             This form from the Govt of B.C. website (gov.bc.ca) is to be filled out by the Attending Medical/Nurse Practitioner. This top
             part of the form is for the Practitioner to acknowledge the Funeral Home that is to accept the body.
-            <!--and states:
-            <br><br>
-            "This is being sent to you in anticipation of death at home in the near future. You have been identified as the funeral home of choice. The family has been
-            instructed to call you one hour after death has occurred for transport of the body.
-            <br><br>
-            As the attending medical/nurse practitioner, I certify that this person is known to me and that to the best of my knowledge and belief this is a natural and
-            expected death. Upon death I authorize you to transfer the body and to complete the Registration of Death. I, or my designate, will complete the Medical
-            Certificate of Death within 48 hours. This authorization shall be in effect for 3 months from the date signed."
-
-
-            <br><br>
-            The family member given the authority to dispose of the body must agree to the following:
-            <br><br>
-            "I certify that I am legally authorized to make decisions after death has
-            occurred and that the plan for management of expected death at home
-            has been discussed and agreed to. I agree to the transfer of the body from
-            the home without pronouncement of death by a health care professional
-            and that we will follow the plan by noting the time of death and agreeing
-            to wait at least one hour from the time of death to call the funeral home
-            for transfer of the body. I agree to indemnify and hold harmless the Funeral
-            Home, its employees and agents, from any liability for claims, damages,
-            costs and expenses of whatever kind or nature (except any claim arising out
-            of or in connection with the wilful misconduct, malfeasance, or negligence
-            of the Funeral Home, its employees and agents) incurred in connection with
-            or arising from the Funeral Home dealing with the Patient’s body on my
-            instructions."-->
             <br><br>
             You can download the <a href = "https://www2.gov.bc.ca/assets/gov/health/forms/3987fil.pdf" target= new>
             A Notification of an Expected Death in the Home</a> form here. It must be completed by the your physician or a nurse
@@ -278,7 +226,7 @@
 </div>
 
 <div class = "content-title">
-    <h3><b>Your Right to have Your Body Moved by Family</b></h3>
+    <h4><b>Your Right to have Your Body Moved by Family</b></h4>
 </div>
 
 <div class = "content-dark-copy">
@@ -291,21 +239,21 @@
     </p>
 </div>
 
-<div class="content-title">
+<div class="content-title pad-bottom">
     <div *ngIf="sectionSelected === 'triggeredSection3'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(0)">
                 Close the Private Transfer Permit Form: &#x25BC;
             </a>
-        </h3>
+        </h6>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection3'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(3)">
                 See the Private Transfer Permit Form: &#x25B6;
             </a>
-        </h3>
+        </h6>
     </div>
 </div>
 
@@ -324,5 +272,23 @@
         You can download this form <a href="https://www.consumerprotectionbc.ca/wordpress/wp-content/uploads/2017/08/Private-Transfer-Permit-Application.pdf" target="_blank">                    Private Transfer Permit
     </a>here
         (Please note that web pages can and may be moved at any time but this download link was valid at time of this publication.
+    </p>
+</div>
+
+<div class="content-title">
+    <h4>
+        Want to Write a Checklist Now?
+    </h4>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        There is a lot to think about. Don't leave it rolling around in your head, write everything down. You will have a sense of
+        completion and can pat yourself on the back for a job well faced.
+        <br><br>
+        Check out our
+        <b><a target="new" routerLink={{pathObject.child4_url}} > {{pathObject.parent_name}} > {{pathObject.child4_name}}</a> </b>
+        to help you get your 't's' crossed and 'i's' dotted. Print it out and follow it along while you put together all your important
+        papers.
     </p>
 </div>

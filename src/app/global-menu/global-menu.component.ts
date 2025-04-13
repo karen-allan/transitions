@@ -10,6 +10,7 @@ import {
   // query,
   transition
 } from '@angular/animations';
+
 import {DataService} from "../service-files/data.service";
 
 @Component({

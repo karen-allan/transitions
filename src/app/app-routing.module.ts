@@ -25,9 +25,9 @@ import { AboutEolAdvocacyContainerComponent } from './menu-about/about-eol-advoc
 import { AboutPractitionerContainerComponent } from './menu-about/about-practitioner/about-practitioner-container/about-practitioner-container.component';
 
 /* non menu related paths */
-import { ScreenFormMakeWishListContainerComponent } from './screen-forms/wizards/screen-form-make-wish-list-container/screen-form-make-wish-list-container.component';
-import { ScreenFormChooseRepContainerComponent } from './screen-forms/wizards/screen-form-choose-rep-container/screen-form-choose-rep-container.component';
-import { ScreenFormWriteDirectiveContainerComponent } from './screen-forms/wizards/screen-form-write-directive-container/screen-form-write-directive-container.component';
+import { ScreenFormMakeWishListContainerComponent } from './screen-forms/wizards/make-wish-list/screen-form-make-wish-list-container/screen-form-make-wish-list-container.component';
+import { ScreenFormChooseRepContainerComponent } from './screen-forms/wizards/choose-rep/screen-form-choose-rep-container/screen-form-choose-rep-container.component';
+import { ScreenFormWriteDirectiveContainerComponent } from './screen-forms/wizards/write-plan/screen-form-write-directive-container/screen-form-write-directive-container.component';
 
 
 

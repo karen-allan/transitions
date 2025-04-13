@@ -1,70 +1,90 @@
 <div class="header-detail-image header-book-consultation-image">
-    <div class="quote">
+    <div class="header-quote">
         &#8220;{{quote}}&#8220;
     </div>
-    <div class="author">
+    <div class="header-author">
         {{author}}
     </div>
 </div>
 
-<div class="content-title">
+<div class="content-title pad-top">
     <h1>{{title}}</h1>
 </div>
 
-<div class="consult-menu-block">
-    <div class="consult-menu-heading">
-        <p>I WOULD LIKE TO DISCUSS:</p>
+<div class="sub-form-menu-block">
+    <div class="sub-form-menu-heading">
+        <div class="content-title pad-top">
+            <h3><b>I WOULD LIKE TO DISCUSS:</b></h3>
+        </div>
     </div>
 
-    <ul class="consult-menu">
-        <div class="consult-menu-item">
+    <ul class="sub-form-menu">
+        <div class="sub-form-menu-item">
             <li *ngIf="showPlanningEditor">
-                <span>How to Plan for my Future Care</span>
+                <div class="content-title">
+                    <h4>{{consult1.toUpperCase()}}</h4>
+                </div>
             </li>
             <li *ngIf="!showPlanningEditor">
-                <a (click)="toggleEditor('planning')">How to Plan for my Future Care</a>
+                <div class="content-title">
+                    <h4><a (click)="toggleEditor('planning')">{{consult1.toUpperCase()}}</a></h4>
+                </div>
             </li>
         </div>
 
-        <div class="consult-menu-item">
+        <div class="sub-form-menu-item">
             <li *ngIf="showCaregiverEditor">
-                <span>My Need for Support as Caregiver</span>
+                <div class="content-title">
+                    <h4>{{consult2.toUpperCase()}}</h4>
+                </div>
             </li>
             <li *ngIf="!showCaregiverEditor">
-                <a (click)="toggleEditor('caregiver')">My Need for Support as Caregiver</a>
+                <div class="content-title">
+                    <h4><a (click)="toggleEditor('caregiver')">{{consult2.toUpperCase()}}</a></h4>
+                </div>
             </li>
         </div>
 
-        <div class="consult-menu-item">
+        <div class="sub-form-menu-item">
             <li *ngIf="showPatientEditor">
-                <span>My Need for Support as Patient</span>
+                <div class="content-title">
+                    <h4>{{consult3.toUpperCase()}}</h4>
+                </div>
             </li>
             <li *ngIf="!showPatientEditor">
-                <a (click)="toggleEditor('patient')">My Need for Support as Patient</a>
+                <div class="content-title">
+                    <h4><a (click)="toggleEditor('patient')">{{consult3.toUpperCase()}}</a></h4>
+                </div>
             </li>
         </div>
     </ul>
 </div>
 
 <ng-container *ngIf="showPlanningEditor">
-    <div class="consult-menu-text">
-        How to Plan for my Future Care
+    <div class="sub-form-menu-prompt-block">
+        <div class="content-title">
+            <h5>{{consult1.toUpperCase()}}</h5>
+        </div>
     </div>
 </ng-container>
 
 <ng-container *ngIf="showCaregiverEditor">
-    <div class="consult-menu-text">
-        My Need for Support as Caregiver
+    <div class="sub-form-menu-prompt-block">
+        <div class="content-title">
+            <h5>{{consult2.toUpperCase()}}</h5>
+        </div>
     </div>
 </ng-container>
 
 <ng-container *ngIf="showPatientEditor">
-    <div class="consult-menu-text">
-        My Need for Support as Patient
+    <div class="sub-form-menu-prompt-block">
+        <div class="content-title">
+            <h5>{{consult3.toUpperCase()}}</h5>
+        </div>
     </div>
 </ng-container>
 
-<div class="consult-intro">
+<div class="content-dark-copy">
     <p>
         Please note the information your provide on this form is confidential. You can either print it and bring it with you at our
         first

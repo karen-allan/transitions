@@ -1,0 +1,86 @@
+<!--  ******************************* SUPPORT FOR CAREGIVER ****************************   -->
+<div class="print-title">
+    <h1>Your Concerns and Goals as a Caregiver</h1>
+</div>
+
+<div class="print-form-question">
+    As Caregiver, these are your main areas of focus for seeking a consultation:
+</div>
+
+<ng-container *ngIf="client.eolCaregiverFocus1">
+    <div class="print-form-response">
+        I am overwhelmed with all the decisions I need to make.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolCaregiverFocus2">
+    <div class="print-form-response">
+        I am exhausted and burned out and need emotional support.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolCaregiverFocus3">
+    <div class="print-form-response">
+        I am physically unable to care for my loved one adequately.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolCaregiverFocus4">
+    <div class="print-form-response">
+        My loved one is angry and lashing out at me and I don't feel safe.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolCaregiverFocus5">
+    <div class="print-form-response">
+        I am having conflicts with my extended family's opinions on care, even though I am the main caregiver.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolCaregiverFocus6">
+    <div class="print-form-response">
+        I need to ensure their last wishes and requests are respected.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolCaregiverFocus7">
+    <div class="print-form-response">
+        I need to discuss these issues with an impartial advocate.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolCaregiverFocus8">
+    <div class="print-form-response">
+        I am having difficulties with my loved one's health care team.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolCaregiverFocus9">
+    <div class="print-form-response">
+        My loved one will not discuss any end of life issues with me and I need to get things in order.
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolCaregiverFocus10">
+    <div class="print-form-response">
+        They want care in one place (hospital, hospice or home) that I am unable to organize on my own.
+    </div>
+</ng-container>
+
+<div class="print-form-question">
+    These are your additional details on why assistance is needed for you in your caregiver role:
+</div>
+
+<ng-container *ngIf="client.eolCaregiverDetails.length > 0">
+    <div class="print-form-response">
+        {{ client.eolCaregiverDetails }}
+    </div>
+</ng-container>
+
+<ng-container *ngIf="client.eolCaregiverDetails.length == 0">
+    &nbsp;<div class="print-solid-underline">
+</div>
+</ng-container>
+
+
+

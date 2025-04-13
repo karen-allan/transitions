@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {PathObject} from "../../../ts-files/pathObject";
 
 @Component({
   selector: 'app-check-off-tasks-list-overview',
@@ -10,9 +11,7 @@ export class CheckOffTasksListOverviewComponent {
   @Input() title:string='';
   @Input() quote:string='';
   @Input() author:string='';
-  @Input() lookupParent:string='';
-  @Input() lookupChild1:string='';
-  @Input() lookupChild2:string='';
-  @Input() lookupChild3:string='';
+
+  @Input() pathObject: PathObject;
 
 }

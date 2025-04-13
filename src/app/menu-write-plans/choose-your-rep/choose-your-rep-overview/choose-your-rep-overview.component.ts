@@ -1,7 +1,8 @@
 import {Component, Input, Output} from '@angular/core';
 import {RepNine} from "../../../ts-files/rep-nine";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
-import {DialogRepsComponent} from "../../../dialogs/dialog-reps/dialog-reps.component";
+import {DialogRepsComponent} from "../../../screen-forms/wizards/dialogs/dialog-reps/dialog-reps.component";
+import {PathObject} from "../../../ts-files/pathObject";
 
 @Component({
   selector: 'app-choose-your-rep-overview',
@@ -14,11 +15,8 @@ export class ChooseYourRepOverviewComponent {
   @Input() title:string='';
   @Input() quote:string='';
   @Input() author:string='';
-  @Input() lookupParent1:string='';
-  @Input() lookupChild1:string='';
-  @Input() lookupParent2:string='';
-  @Input() lookupChild2:string='';
 
+  @Input() pathObject:PathObject;
   @Input() @Output() rep:RepNine;
 
   printForm:boolean=false;
@@ -30,9 +28,10 @@ export class ChooseYourRepOverviewComponent {
     const dialogConfig = new MatDialogConfig();
     // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = false;
-    dialogConfig.id = "choose-rep-nine-modal";
+    dialogConfig.id = "choose-rep-modal";
     dialogConfig.maxWidth='1024px'
     dialogConfig.minWidth='960px'
+    dialogConfig.height='850px'
 
     /* named and defined in wizard.css */
     let modalDialog = this.matDialog.open(DialogRepsComponent, dialogConfig);

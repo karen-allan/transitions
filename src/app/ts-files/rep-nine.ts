@@ -5,7 +5,7 @@ export class RepNine {
         public client_address:string,
         public client_city:string,
         public client_postal:string,
-        public global_province: 'B.C.',
+        public global_province: 'British Columbia',
         public client_dob:string,
         public client_phn:string,
 
@@ -35,8 +35,8 @@ export class RepNine {
         public witness_two_postal:string,
         public witness_two_province:string,
 
-        public witness_lawyer:boolean,
-        public witness_notary:boolean,
+        // public witness_lawyer:boolean,
+        public witness_type:string,
         public choose_alternate:string,
     )
     {}

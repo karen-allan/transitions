@@ -1,17 +1,17 @@
 <div class="header-detail-image header-consider-advocates-image">
-    <div class="quote">
+    <div class="header-quote">
         &#8220;{{quote}}&#8220;
     </div>
-    <div class="author">
+    <div class="header-author">
         {{author}}
     </div>
 </div>
 
 <div class="content-title">
-    <h1>{{title}}</h1>
+    <h1>{{title.toUpperCase()}}</h1>
 </div>
 
-<div class="content-dark-copy">
+<div class="content-dark-copy pad-top">
     <p>
         Let's say you are in an accident or suffer a critical illness and end up in Emergency and are incapable of
         answering for yourself. When you arrive at the hospital - a health care team member must contact your
@@ -21,7 +21,8 @@
 </div>
 
 <div class="content-title">
-    <h3>Option 1: You did not choose anyone to advocate for you so will let the health care team decide.</h3>
+    <h4>Option 1:<br>
+        You did not choose anyone to advocate for you.</h4>
 </div>
 
 <div class="content-dark-copy">
@@ -68,21 +69,21 @@
     </ul>
 </div>
 
-<div class="content-title">
+<div class="content-title pad-bottom">
     <div *ngIf="sectionSelected === 'triggeredSection1'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(0)">
                 Close the TSDM Form: &#x25BC;
             </a>
-        </h3>
+        </h6>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection1'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(1)">
                 See the TSDM Form: &#x25B6;
             </a>
-        </h3>
+        </h6>
     </div>
 </div>
 
@@ -114,7 +115,8 @@
 </div>
 
 <div class="content-title">
-    <h3>Option 2: You took action and assigned the people you trust the most to advocate for you.</h3>
+    <h4>Option 2:<br>
+        You took action and assigned people you trust to advocate for you.</h4>
 </div>
 
 <div class="content-dark-copy">
@@ -135,12 +137,12 @@
     </p>
 </div>
 
-<div class="content-images">
+<div class="content-images pad-top">
     <img src="assets/images/details/getHelp/bookConsult/subwaySleeper.jpg" alt="subway Sleeper" title="subway Sleeper">
 </div>
 
 <div class="content-title">
-    <h3>What care can an advocate provide?</h3>
+    <h4>What care can an advocate provide?</h4>
 </div>
 
 <div class="content-dark-copy">
@@ -199,9 +201,9 @@
 </div>
 
 <div class="content-title">
-    <h3>
+    <h4>
         The Duties of a Representative:
-    </h3>
+    </h4>
 </div>
 
 <div class="content-dark-copy">
@@ -225,6 +227,14 @@
         Fill out the TSDM form if you want to provide them with phone numbers and addresses of important people, but realize it is not a
         legally binding paper and does not protect you like a Representative Secion 9 does.
     </p>
+</div>
+
+<div class="detail-quote">
+    <p>
+        &#8220;The best index to a person's character is how they treat people who can't do them any good and how they treat people
+        who can't fight back.&#8220;
+    </p>
+    <span>Abigail Van Buren</span>
 </div>
 
 <div class="content-title">
@@ -419,21 +429,21 @@
     </ul>
 </div>
 
-<div class="content-title">
+<div class="content-title pad-bottom">
     <div *ngIf="sectionSelected === 'triggeredSection2'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(0)">
                 Close the Rep 9 Form:&#x25BC;
             </a>
-        </h3>
+        </h6>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection2'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(2)">
                 See the Rep 9 Form:&#x25B6;
             </a>
-        </h3>
+        </h6>
     </div>
 </div>
 
@@ -441,82 +451,32 @@
     <div class="content-images with-dark-border">
         <img alt="Choose a Representative" src="assets/images/details/planAhead/considerAdvocates/sectionNineAll.jpg">
     </div>
-
-    <div class="content-dark-copy">
-        <p>
-            This first section of the Rep 9 form states that this particular document is one of many replications available on the
-            Internet. It reiterates that this form doesn't constitute legal advice, may not be suitable for everyone and can and may be
-            updated at any time.
-            <br><br>
-            <b>SECTION 1</b> is where you fill in your full legal name, full address and the current date. Make sure you fill these in as
-            they are
-            shown on other legal documents such as your drivers license or tax forms.
-            <br><br>
-            <b>SECTION 2</b> relates to any previous Representative Section-9 from you may have written. If this is your first
-            Representative
-            Section-9 agreement, you can disregard this line. If it isn't you need to follow the instructions at the bottom of the page to
-            revoke your original Representative.
-            <br><br>
-            <b>SECTION 3</b> is where you fill in the full legal name and full legal address of your primary Substitute Decision Maker, also
-            known
-            simply as 'Representative'.
-        </p>
-    </div>
-
-    <div class="content-dark-copy">
-        <p>
-            <b>SECTION 4</b> is where you fill in the full legal name and full address of your Alternate Substitute Decision Maker, also
-            known
-            simply as your 'Alternate Representative'. You can choose an Alternate Representative to ensure that you are still protected if
-            your first Representative either dies or resigns him or herself from the position or becomes 'incapable'. It is also to protect
-            yourself should you divorce or separate from your Primary Representative.
-            <br><br>
-            <b>SECTION 5</b> is not relevant to you if you have NOT appointed an Alternate Representative. If you have no Alternate
-            Representative,
-            cross (X) this line out. If you have appointed an Alternate and you wish to substitute them for the Primary Representative you
-            need to
-            fill out the STATUTORY DECLARATON FOR EVIDENCE OF AUTHORITY OF ALTERNATE REPRESENTATIVE found at the bottom of the document.
-            <br><br>
-            <b>SECTION 6</b> states that you give permission for your Representative(s) to present and support your health care wishes to
-            the medical
-            community.
-            <br><br>
-            <b>SECTION 7</b> allows you to write down specific wishes and requests related to your health care. For example if you are
-            suffering
-            from a disease with no cure, you may want to write down your NO CPR directive. If you also fill out an Advanced Care Plan, you
-            are
-            prompted to answer your wishes related to many of the common situations.
-            <br><br>
-            <b>SECTION 8</b> simply states that the agreement becomes valid as of the date signed by you, your Representative(s) and your
-            Witnesses.
-            <br><br>
-            <b>SECTION 9 - ADULT'S SIGNATURE:</b> is where you sign the form, print your name and write the date in front of your Witnesses.
-            <br><br>
-            <b>SECTION 9 - WITNESSES TO ADULT'S SIGNATURE:</b> is where the Witnesses sign, printing out their full name and full legal
-            address. If one of your witnesses is a Lawyer or
-            Notary Public, you only need one witness. If not, you need two Witnesses. They must witness you sign the form here.
-            <br><br>
-            Check below to make sure the witnesses you have chosen meet the criteria set out by law. You will need to obtain two witnesses
-            unless you employ a lawyer or Notary Public in which case only 1 signature is needed. The witnesses must be on hand to watch you
-            sign before they sign.
-            <br><br>
-            <b>SECTION 9 - REPRESENTATIVES SIGNATURES:</b> is where you and your primary and secondary, if
-            applicable, Representative(s) sign the
-            form. They do not have to sign this portion in front of Witnesses.
-            <br><br>
-            This document should be kept with your will, and a copy should be given to the Representative you choose, the alternate if you
-            choose,
-            to have one. You can also leave a copy with your family doctor. Let your family, specifically your Representatives know where
-            you have
-            placed all your important documents. I personally have all of my documents, including the financial information in a fire-proof
-            safe.
-            Paramedics know to look for any kind of directive on or in your fridge.
-        </p>
-    </div>
 </div>
 
 <div class="content-title">
-    <h3>Changing your Representative(s)</h3>
+    <h4>
+        Want to Choose Your Representatives Now?
+    </h4>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        If you have read all about this subject and you know who you want to choose to advocate for you, you can get it done and done
+        fast by running our
+        <b><a target="new" routerLink={{pathObject.child2_url}} > {{pathObject.parent_name}} > {{pathObject.child2_name}}</a></b> wizard.
+        No
+        data is
+        saved
+        and you can run through it as many times as you like. Once you feel good about your choices, print it out. Then once you have
+        your representatives and witness together, get it signed. Store it along with your other important papers.
+    </p>
+</div>
+
+
+
+<!--
+<div class="content-title">
+    <h4>Changing your Representative(s)</h4>
 </div>
 
 <div class="content-dark-copy">
@@ -528,21 +488,22 @@
     </p>
 </div>
 
-<div class="content-title">
+
+<div class="content-title pad-bottom">
     <div *ngIf="sectionSelected === 'triggeredSection3'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(0)">
                 Close Change Your Representative Form:&#x25BC;
             </a>
-        </h3>
+        </h6>
     </div>
 
     <div *ngIf="sectionSelected != 'triggeredSection3'">
-        <h3>
+        <h6>
             <a (click)="this.getTriggeredPromptKey(3)">
-                See the Change Your Representative Form:&#x25B6;
+                See Change Your Representative Form:&#x25B6;
             </a>
-        </h3>
+        </h6>
     </div>
 </div>
 
@@ -551,14 +512,5 @@
         <img alt="Change Your Representative" src="assets/images/details/planAhead/considerAdvocates/changeRepForm.jpg">
     </div>
 </div>
+-->
 
-<div class="quotes">
-    <p>
-        &#8220;The best index to a person's character is how they treat people who can't do them any good and how they treat people
-                who can't fight back.&#8220;
-    </p>
-    <span>Abigail Van Buren</span>
-</div>
-
-<!--        &#8220;Ask for help not because you are weak, but because you want to remain strong.&#8220;-->
-<!--    <span>Les Brown</span>-->

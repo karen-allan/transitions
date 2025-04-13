@@ -1,0 +1,21 @@
+<div class="print-block">
+    <app-print-header [wishes]='wishes' [title] = "title"></app-print-header>
+
+    <div class="print-title">
+        <h1>YOUR INSTRUCTIONS FOR CARE</h1>
+    </div>
+
+    <div class="print-form-wishes-question">
+        <div *ngFor="let question of wishes.questions; let questionIndex=index;">
+            <h2>{{ question.question_num + 1}}.&nbsp;{{ question.question_string }}</h2>
+            <ng-container *ngFor="let response of question.responses;let responseIndex=index;">
+                <ng-container *ngIf="question.selectedAnswer==(responseIndex)">
+                    <p>{{ response.response_string }}</p>
+                </ng-container>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+
+<app-print-footer></app-print-footer>

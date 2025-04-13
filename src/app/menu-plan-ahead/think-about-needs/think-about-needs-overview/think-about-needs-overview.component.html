@@ -1,18 +1,17 @@
 <div class="header-detail-image header-think-about-needs-image">
-    <div class="quote">
+    <div class="header-quote">
         &#8220;{{quote}}&#8220;
     </div>
-    <div class="author">
+    <div class="header-author">
          {{author}}
     </div>
 </div>
 
-
 <div class="content-title">
-    <h1>{{title}}</h1>
+    <h1>{{title.toUpperCase()}}</h1>
 </div>
 
-<div class = "content-dark-copy">
+<div class = "content-dark-copy pad-top">
     <p>
         Death comes to us all. It scares us, intrigues us, angers us and we question the why of it. I am not a ghoul who enjoys
         talking about this subject and I am just another human who shares the same fears. But one thing I feel passionate about in my
@@ -32,7 +31,7 @@
     </p>
 </div>
 
-<div class="quotes">
+<div class="detail-quote">
     <p>
         &#8220;Bravery is the audacity to be unhindered by failures, and to walk with freedom, strength and hope in the face of
         things unknown.&#8221;
@@ -62,7 +61,7 @@
     </p>
 </div>
 
-<div class="quotes">
+<div class="detail-quote">
     <p>
         &#8220;Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened.&#8221;
     </p>
@@ -88,7 +87,7 @@
     </p>
 </div>
 
-<div class="quotes">
+<div class="detail-quote">
     <p>
         &#8220;If you don't stick to your values when they are being tested, they are not values, they're hobbies.&#8221;
     </p>
@@ -123,7 +122,7 @@
     </ul>
 </div>
 
-<div class="content-images">
+<div class="content-images pad-top">
     <img src="../../../../assets/images/details/planAhead/thinkAboutNeeds/beliefInDiety.jpg" title="What do you value?"
          alt="What do you value?">
 </div>
@@ -190,7 +189,7 @@
     </ul>
 </div>
 
-<div class="content-images">
+<div class="content-images pad-top">
     <img src="../../../../assets/images/details/planAhead/thinkAboutNeeds/snowScape.jpg" title="know your beliefs" alt="know your beliefs">
 </div>
 
@@ -254,11 +253,7 @@
     </ul>
 </div>
 
-<div class="content-images">
-    <img src="../../../../assets/images/details/planAhead/thinkAboutNeeds/emptyBench.jpg" title="facing the future" alt="facing the future">
-</div>
-
-<div class="quotes">
+<div class="detail-quote">
     <p>
         &#8220;Woe, destruction, ruin, and decay; The worst is death, and death will have his day.&#8221;
     </p>
@@ -266,4 +261,29 @@
         William Shakespeare
     </span>
 </div>
+
+<div class="content-title">
+    <h4>
+        Write that List Now
+    </h4>
+</div>
+
+<div class="content-dark-copy">
+    <p>
+        Go through our list of 30 questions to get your thinking in depth about the care you would like to receive (and the care you would
+        not) by running our
+        <b><a target="new" routerLink={{pathObject.child1_url}} > {{pathObject.parent_name}} > {{pathObject.child1_name}}</a></b> wizard.
+        No
+        data is
+        saved
+        and you can run through it as many times as you like. Once you feel good about your answers, print it and store it along with
+        your other important papers.
+    </p>
+</div>
+
+<div class="content-images pad-top">
+    <img src="../../../../assets/images/details/planAhead/thinkAboutNeeds/emptyBench.jpg" title="facing the future" alt="facing the future">
+</div>
+
+
 

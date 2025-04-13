@@ -13,7 +13,7 @@ import { InMemoryDataService }  from './service-files/in-memory-data.service';
 import { NgxMaskModule } from 'ngx-mask'
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-//import {MatBottomSheet, MatBottomSheetRef} from '@angular/material';
+
 
 //generating components in full
 /*ng generate component xxx --standalone false */
@@ -28,9 +28,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 /************************************************************* DIALOGS **************************************************************/
 
-import { DialogDirectiveComponent } from './dialogs/dialog-directive/dialog-directive.component';
-import { DialogRepsComponent } from './dialogs/dialog-reps/dialog-reps.component';
-import { DialogWishListComponent } from './dialogs/dialog-wish-list/dialog-wish-list.component';
+import { DialogDirectiveComponent } from './screen-forms/wizards/dialogs/dialog-directive/dialog-directive.component';
+import { DialogRepsComponent } from './screen-forms/wizards/dialogs/dialog-reps/dialog-reps.component';
+import { DialogWishListComponent } from './screen-forms/wizards/dialogs/dialog-wish-list/dialog-wish-list.component';
 
 /************************************************************* GLOBAL FOOTER **************************************************************/
 
@@ -103,41 +103,41 @@ import { WriteAdvanceDirectiveContainerComponent } from './menu-write-plans/writ
 
 /************************************************************* PRINT FORMS ***********************************************************/
 
-import { PrintFormCaregiverConsultComponent } from './print-forms/print-form-caregiver-consult/print-form-caregiver-consult.component';
-import { PrintFormHeadingComponent } from './print-forms/print-form-heading/print-form-heading.component';
-import { PrintFormPatientConsultComponent } from './print-forms/print-form-patient-consult/print-form-patient-consult.component';
-import { PrintFormPlannerConsultComponent } from './print-forms/print-form-planner-consult/print-form-planner-consult.component';
+import { PrintFormCaregiverConsultComponent } from './print-forms/consultations/print-form-caregiver-consult/print-form-caregiver-consult.component';
+
+import { PrintFormPatientConsultComponent } from './print-forms/consultations/print-form-patient-consult/print-form-patient-consult.component';
+import { PrintFormPlannerConsultComponent } from './print-forms/consultations/print-form-planner-consult/print-form-planner-consult.component';
 
 /**********************************************************  SUB FORMS ***********************************************************/
 
-import { PrintSubFormCaregiverComponent } from './print-forms/sub-forms/print-sub-form-caregiver/print-sub-form-caregiver.component';
-import { PrintSubFormDemographicComponent } from './print-forms/sub-forms/print-sub-form-demographic/print-sub-form-demographic.component';
-import { PrintSubFormDisclaimerComponent } from './print-forms/sub-forms/print-sub-form-disclaimer/print-sub-form-disclaimer.component';
-import { PrintSubFormFrailityComponent } from './print-forms/sub-forms/print-sub-form-fraility/print-sub-form-fraility.component';
-import { PrintSubFormMedicalComponent } from './print-forms/sub-forms/print-sub-form-medical/print-sub-form-medical.component';
-import { PrintSubFormPatientComponent } from './print-forms/sub-forms/print-sub-form-patient/print-sub-form-patient.component';
-import { PrintSubFormPlannerComponent } from './print-forms/sub-forms/print-sub-form-planner/print-sub-form-planner.component';
+import { PrintSubFormCaregiverComponent } from './print-forms/consultations/sub-forms/print-sub-form-caregiver/print-sub-form-caregiver.component';
+import { PrintSubFormDemographicComponent } from './print-forms/consultations/sub-forms/print-sub-form-demographic/print-sub-form-demographic.component';
+import { PrintSubFormDisclaimerComponent } from './print-forms/consultations/sub-forms/print-sub-form-disclaimer/print-sub-form-disclaimer.component';
+import { PrintSubFormFrailityComponent } from './print-forms/consultations/sub-forms/print-sub-form-fraility/print-sub-form-fraility.component';
+import { PrintSubFormMedicalComponent } from './print-forms/consultations/sub-forms/print-sub-form-medical/print-sub-form-medical.component';
+import { PrintSubFormPatientComponent } from './print-forms/consultations/sub-forms/print-sub-form-patient/print-sub-form-patient.component';
+import { PrintSubFormPlannerComponent } from './print-forms/consultations/sub-forms/print-sub-form-planner/print-sub-form-planner.component';
 
 /************************************************************* PRINT MODALS ***********************************************************/
 
-import { PrintModalChooseYourRepComponent } from './print-modals/print-modal-choose-your-rep/print-modal-choose-your-rep.component';
-import { PrintModalHeadingComponent } from './print-modals/print-modal-heading/print-modal-heading.component';
-import { PrintModalMakeWishListComponent } from './print-modals/print-modal-make-wish-list/print-modal-make-wish-list.component';
-import { PrintModalWriteAdvanceDirectiveComponent } from './print-modals/print-modal-write-advance-directive/print-modal-write-advance-directive.component';
+import { PrintModalChooseYourRepComponent } from './print-forms/wizards/print-modal-choose-your-rep/print-modal-choose-your-rep.component';
+
+import { PrintModalMakeWishListComponent } from './print-forms/wizards/print-modal-make-wish-list/print-modal-make-wish-list.component';
+import { PrintModalWriteAdvanceDirectiveComponent } from './print-forms/wizards/print-modal-write-advance-directive/print-modal-write-advance-directive.component';
 
 /************************************************************* SCREEN FORMS ***********************************************************/
 import { ScreenFormCaregiverConsultComponent } from './screen-forms/consultations/screen-form-caregiver-consult/screen-form-caregiver-consult.component';
-import { ScreenFormChooseRepContainerComponent } from './screen-forms/wizards/screen-form-choose-rep-container/screen-form-choose-rep-container.component';
-import { ScreenFormChooseRepOverviewComponent } from './screen-forms/wizards/screen-form-choose-rep-overview/screen-form-choose-rep-overview.component';
+import { ScreenFormChooseRepContainerComponent } from './screen-forms/wizards/choose-rep/screen-form-choose-rep-container/screen-form-choose-rep-container.component';
+import { ScreenFormChooseRepOverviewComponent } from './screen-forms/wizards/choose-rep/screen-form-choose-rep-overview/screen-form-choose-rep-overview.component';
 
-import { ScreenFormMakeWishListContainerComponent } from './screen-forms/wizards/screen-form-make-wish-list-container/screen-form-make-wish-list-container.component';
-import { ScreenFormMakeWishListOverviewComponent } from './screen-forms/wizards/screen-form-make-wish-list-overview/screen-form-make-wish-list-overview.component';
+import { ScreenFormMakeWishListContainerComponent } from './screen-forms/wizards/make-wish-list/screen-form-make-wish-list-container/screen-form-make-wish-list-container.component';
+import { ScreenFormMakeWishListOverviewComponent } from './screen-forms/wizards/make-wish-list/screen-form-make-wish-list-overview/screen-form-make-wish-list-overview.component';
 
 import { ScreenFormPatientConsultComponent } from './screen-forms/consultations/screen-form-patient-consult/screen-form-patient-consult.component';
 import { ScreenFormPlannerConsultComponent } from './screen-forms/consultations/screen-form-planner-consult/screen-form-planner-consult.component';
 
-import { ScreenFormWriteDirectiveOverviewComponent } from './screen-forms/wizards/screen-form-write-directive-overview/screen-form-write-directive-overview.component';
-import { ScreenFormWriteDirectiveContainerComponent } from './screen-forms/wizards/screen-form-write-directive-container/screen-form-write-directive-container.component';
+import { ScreenFormWriteDirectiveOverviewComponent } from './screen-forms/wizards/write-plan/screen-form-write-directive-overview/screen-form-write-directive-overview.component';
+import { ScreenFormWriteDirectiveContainerComponent } from './screen-forms/wizards/write-plan/screen-form-write-directive-container/screen-form-write-directive-container.component';
 
 /****************************************************SUB FORMS ***********************************************************/
 import { ScreenSubFormCaregiverComponent } from './screen-forms/consultations/sub-forms/screen-sub-form-caregiver/screen-sub-form-caregiver.component';
@@ -148,14 +148,9 @@ import { ScreenSubFormMedicalComponent } from './screen-forms/consultations/sub-
 import { ScreenSubFormPatientComponent } from './screen-forms/consultations/sub-forms/screen-sub-form-patient/screen-sub-form-patient.component';
 import { ScreenSubFormPlannerComponent } from './screen-forms/consultations/sub-forms/screen-sub-form-planner/screen-sub-form-planner.component';
 
-/************************************************************* SCREEN MODALS ***********************************************************/
-
-
-import { ScreenModalWriteAdvanceDirectiveComponent } from './screen-modals/screen-modal-write-advance-directive/screen-modal-write-advance-directive.component';
-
-
-
-
+import { PrintFooterComponent } from './print-forms/print-footer/print-footer.component';
+import { PrintHeaderComponent } from './print-forms/print-header/print-header.component';
+import { DialogHeaderComponent } from './screen-forms/wizards/dialogs/dialog-header/dialog-header.component';
 
 @NgModule({
     declarations: [
@@ -234,7 +229,7 @@ import { ScreenModalWriteAdvanceDirectiveComponent } from './screen-modals/scree
         PrintModalChooseYourRepComponent,
         PrintModalMakeWishListComponent,
         PrintModalWriteAdvanceDirectiveComponent,
-        PrintModalHeadingComponent,
+
 
 
         /******************************* SCREEN FORMS *******************************/
@@ -249,9 +244,7 @@ import { ScreenModalWriteAdvanceDirectiveComponent } from './screen-modals/scree
         ScreenSubFormPatientComponent,
         ScreenSubFormPlannerComponent,
 
-        ScreenModalWriteAdvanceDirectiveComponent,
 
-        PrintFormHeadingComponent,
         ScreenFormMakeWishListOverviewComponent,
         ScreenFormMakeWishListContainerComponent,
 
@@ -264,6 +257,9 @@ import { ScreenModalWriteAdvanceDirectiveComponent } from './screen-modals/scree
         DialogDirectiveComponent,
         ScreenFormWriteDirectiveOverviewComponent,
         ScreenFormWriteDirectiveContainerComponent,
+        PrintFooterComponent,
+        PrintHeaderComponent,
+        DialogHeaderComponent,
        
 
     ],

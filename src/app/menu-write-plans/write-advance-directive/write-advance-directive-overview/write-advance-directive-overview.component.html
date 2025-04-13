@@ -1,41 +1,45 @@
 <div class="header-detail-image header-write-adv-care-plan-image">
-    <div class="quote">
-        &#8220;{{quote}}&#8220;
+    <div class="header-quote">
+        &#8220;{{ quote }}&#8220;
     </div>
-    <div class="author">
-        {{author}}
+    <div class="header-author">
+        {{ author }}
     </div>
-</div>
-
-<div class="content-title">
-    <h1>{{title}}</h1>
 </div>
 
 <div class="laptopForm">
     <div class="wizard-intro-container">
-        <div class="wizard-image">
+        <div class="wizard-intro-image">
             <a (click)="openModal()">
-                <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWriteAdvancePlan.gif" title="write advance care plan"
+                <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanIntro.jpg" title="write advance care plan"
                      alt="write advance care plan">
             </a>
         </div>
 
-        <div class="wizard-text">
+        <div class="wizard-intro-text">
             <a (click)="openModal()">
-                <h2>{{title}}</h2>
+                <div class="content-title">
+                    <h1>{{ title.toUpperCase() }}</h1>
+                </div>
 
-                <p>
-                    You can take the pain and stress away from your family should they need to make emergency health decisions for you by
-                    running our Advance Care Plan Wizard.
-                    <br><br>
-                    Using this wizard you can note any treatments and procedures you want or do not want. The Representative(s) you choose must
-                    abide by your directives.
-                    <br><br>
-                    If you have already assigned Representative(s) you can feel protected. If you haven't, your health care decisions will be
-                    made from a list that the health care team compiles of your family contacts.
-                    <br><br>
-                    Be proactive.  Print and store these documents and let your family and care givers know you have them.
-                </p>
+                <div class="content-dark-copy text-align-justify">
+                    <p>
+                        <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
+                        as a PDF file. This wizard is only available on an ipad, laptop or desktop.
+                    </p>
+                </div>
+
+                <div class="content-title text-align-center">
+                    <h3>Why Run this Wizard?</h3>
+                </div>
+
+                <div class="content-dark-copy text-align-justify">
+                    <p>
+                        By following this wizard you can easily note note any treatments or procedures you would want or would not want to
+                        receive if in a health emergency situation. By simply taking a few minutes to complete the {{ title }} wizard,
+                        you will feel more protected and your family will be grateful for your considerate action.
+                    </p>
+                </div>
             </a>
         </div>
     </div>
@@ -43,98 +47,89 @@
 
 <div class="mobileForm">
     <div class="wizard-intro-container">
-        <div class="wizard-image">
-            <a routerLink="/callScreenFormMakePlan">
-                <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseReps.gif"
-                     title="choose your reps"
-                     alt="choose your reps">
-            </a>
+        <div class="wizard-intro-image">
+            <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanIntro.jpg"
+                 title="write advance care plan" alt="write advance care plan">
         </div>
 
-        <div class="wizard-text">
-            <a routerLink="/callScreenFormMakePlan">
-                <h2>{{ title }}</h2>
+        <div class="wizard-intro-text">
+            <div class="content-title">
+                <h2>{{ title.toUpperCase() }}</h2>
+            </div>
+
+            <div class="content-dark-copy text-align-justify">
                 <p>
-                    You can take the pain and stress away from your family should they need to make emergency health decisions for you by
-                    running our Advance Care Plan Wizard.
-                    <br><br>
-                    Using this wizard you can note any treatments and procedures you want or do not want. The Representative(s) you choose must
-                    abide by your directives.
-                    <br><br>
-                    If you have already assigned Representative(s) you can feel protected. If you haven't, your health care decisions will be
-                    made from a list that the health care team compiles of your family contacts.
-                    <br><br>
-                    Be proactive.  Print and store these documents and let your family and care givers know you have them.
+                    <b>Please Note:</b> At this time the {{ title }} wizard is only available on ipads, laptops, desktops and up. To
+                    follow this wizard please connect to it via one of these devices.
                 </p>
-            </a>
+            </div>
+
+            <div class="content-title text-align-center">
+                <h3>Why Run this Wizard?</h3>
+            </div>
+
+            <div class="content-dark-copy text-align-justify">
+                <p>
+                    By following this wizard you can easily note note any treatments or procedures you would want or would not want to
+                    receive if in a health emergency situation. By simply taking a few minutes to complete the {{ title }} wizard,
+                    you will feel more protected and your family will be grateful for your considerate action.
+                </p>
+            </div>
         </div>
     </div>
-</div>
 
-<div class = "content-title">
-    <h4>Why Write an Advance Directive?</h4>
-</div>
+    <div class="content-title pad-top-2">
+        <h2>
+            Need to Learn More First?
+        </h2>
+    </div>
 
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
-        <li class="list-item">You want to be in charge of your own health, life and death.</li>
-        <li class="list-item">Your realize that doing so now could lead to less family conflicts later.</li>
-        <li class="list-item">You trust your advocates but want to lessen the burden of them having to make difficult decisions.</li>
-        <li class="list-item">You want to eliminate confusion for your family.</li>
-        <li class="list-item">You decide what medical interventions you accept or decline.</li>
-    </ul>
-</div>
+    <div class="content-dark-copy pad-top-2">
+        <p>
+            To understand more about why you should prepare an Advanced Care Plan at any age or state of health check out our
+            <b><a target="new" routerLink={{pathObject.child3_url}}> {{ pathObject.parent_name }} > {{ pathObject.child3_name }}</a></b>
+            page.
+            <br><br>
+            This step provides you with really thinking about what you do want and what you do not want and although it may not matter much
+            now, it will if and when you need to share this valued information.
+        </p>
+    </div>
 
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">You want to be in charge of your own health, life and death.</li>
-        <li class="list-item">Your realize that doing so now could lead to less family conflicts later.</li>
-        <li class="list-item">You trust your advocates but want to lessen the burden of them having to make difficult decisions.</li>
-        <li class="list-item">You want to eliminate confusion for your family.</li>
-        <li class="list-item">You decide what medical interventions you accept or decline.</li>
-    </ul>
-</div>
+    <!--
+    <div class="mobileForm">
+        <div class="wizard-intro-container">
+            <div class="wizard-intro-image">
+                <a routerLink="/callScreenFormMakePlan">
+                    <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanIntro.jpg"
+                         title="write advance care plan"   alt="write advance care plan">
+                </a>
+            </div>
 
-<div class = "content-title">
-    <h4>Life Support and Medical Interventions Include:</h4>
-</div>
-
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
-        <li class="list-item">Tube Feedings</li>
-        <li class="list-item">Ventilators</li>
-        <li class="list-item">Kidney Dialysis</li>
-        <li class="list-item">Medications</li>
-        <li class="list-item">CPR (Cardio Pulmonary Resuscitation)</li>
-        <li class="list-item">Intubation</li>
-        <li class="list-item">Breathing Machines</li>
-        <li class="list-item">DNR Orders</li>
-    </ul>
-</div>
-
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">Tube Feedings</li>
-        <li class="list-item">Ventilators</li>
-        <li class="list-item">Kidney Dialysis</li>
-        <li class="list-item">Medications</li>
-        <li class="list-item">CPR (Cardio Pulmonary Resuscitation)</li>
-        <li class="list-item">Intubation</li>
-        <li class="list-item">Breathing Machines</li>
-        <li class="list-item">DNR Orders</li>
-    </ul>
-</div>
-
-<div class="content-title">
-    <h3>
-        Need to Learn More First?
-    </h3>
-</div>
-
-<div class="content-dark-copy">
-    <p>
-        For more information check out the <a routerLink="/considerAdvancePlan">{{ lookupParent }} > {{ lookupChild1 }}</a>  page.
-        To quickly set up the advocates you trust, go to our <a routerLink="/chooseReps">{{ lookupParent }} > {{ lookupChild2 }}</a> page
-        to choose your Representative(s).
-    </p>
+            <div class="wizard-intro-text">
+                <a routerLink="/callScreenFormMakePlan">
+                    <div class="content-title">
+                        <h1>{{ title.toUpperCase() }}</h1>
+                    </div>
+                    <div class="content-dark-copy text-align-justify">
+                        <p>
+                            Please Note: At this time the {{title}} wizard is only available on ipads, laptops, desktops and up. To
+                            follow this wizard please connect to it via one of these devices.
+                            <br><br>
+                            You can take the pain and stress away from your family should they need to make emergency health decisions for you by
+                            running our Advance Care Plan Wizard.
+                            <br><br>
+                            Using this wizard you can note any treatments and procedures you want or do not want. The Representative(s) you choose must
+                            abide by your directives.
+                            <br><br>
+                            If you have already assigned Representative(s) you can feel protected. If you haven't, your health care decisions will be
+                            made from a list that the health care team compiles of your family contacts.
+                            <br><br>
+                            Be proactive.  Print and store these documents and let your family and care givers know you have them.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    -->
 </div>

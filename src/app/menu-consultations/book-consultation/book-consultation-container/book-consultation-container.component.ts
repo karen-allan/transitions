@@ -18,6 +18,11 @@ export class BookConsultationContainerComponent {
   quote='Sometimes the greatest adventure is simply a conversation.';
   author='Amadeus Wolfe'
 
+  consult1:string=  "How to Plan for my Future Care";
+  consult2:string=  "My Need for Support as Caregiver";
+  consult3:string=  "My Need for Support as Patient";
+
+
   selectedIntakeForm='';
 
  client= new Client(0, "", "", "", "", "", "B.C.", "",

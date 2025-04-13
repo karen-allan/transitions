@@ -1,0 +1,143 @@
+
+/*******************************************************************************************************************
+ GLOBAL NOW WE ARE IN THE MODAL FORMS - ADJUSTED FOR THE WIZARDS TO EXCLUDE OVERLAPPING BIG TABLETS AND IPADS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px) {
+
+    .modal-inner-block-wishes {
+        height: 540px;
+        width: 100%;
+        background-color: white;
+    }
+
+    .modal-data-block-wishes {
+        height:500px;
+        width: 90%;
+        margin: 0 5%;
+        background-color: white;
+    }
+
+    .modal-wishes-main-title  {
+        padding-top:1em;
+        font-size: var(--form-big-main-title);
+    }
+
+    .modal-wish-list-item {
+        margin-top: 1em;
+        padding-top: .5em;
+        font-size: var(--form-big-list);
+        line-height: 110%;
+    }
+
+    .modal-wishes-name-label {
+        font-size: var(--form-big-sub-title);
+    }
+
+    .modal-wishes-name-value {
+        font-size:var(--form-big-sub-title);
+    }
+
+    .modal-wishes-question-prompt {
+        font-size: var(--form-big-main-title);
+        padding: 1em 0;
+    }
+
+    .modal-wishes-question {
+        font-size: var(--form-question);
+        padding: 1em 0;
+        line-height: 105%;
+    }
+
+    .modal-wishes-radio-answers {
+        grid-column: 1;
+        font-size: var(--form-big-list);
+        padding: 1em 0;
+        line-height: 110%;
+    }
+
+    .modal-wishes-sub-title  {
+        padding-top:1em;
+        font-size: var(--form-big-sub-title);
+    }
+
+    .modal-wishes-copy p {
+        padding-top:2em;
+        font-size: var(--form-copy);
+        line-height: 150%;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL
+*******************************************************************************************************************/
+@media only screen {
+
+    /*
+    modal-wishes-main-title
+    modal-wish-list-item
+    modal-wishes-question-prompt
+    modal-wishes-question
+    modal-wishes-radio-answers
+    modal-wishes-copy
+    modal-wishes-name-label, .modal-wishes-name-value
+     */
+
+    .modal-wishes-main-title, .modal-wishes-question-prompt {
+        display: block;
+        float: left;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        color: var(--color-dark-blue);
+        font-family: var(--family-title);
+    }
+
+    .modal-wish-list-item, .modal-wishes-question, .modal-wishes-radio-answers {
+        width: 100%;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        text-align: left;
+    }
+
+    .modal-wishes-copy {
+        width: 90%;
+        margin:auto;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        text-align: justify;
+    }
+
+    .modal-wishes-radio-answers {
+        border: 1px dashed var(--color-dark-blue);
+    }
+
+    .modal-twenty-eighty-block {
+        display: inline-grid;
+        grid-template-columns: 20% 80%;
+        width: 95%;
+        margin-right:5%;
+        text-align: left;
+    }
+
+    .modal-wishes-name-label, .modal-wishes-name-value {
+        display: grid;
+        width: 100%;
+        color: var(--color-dark-blue);
+        font-family: var(--family-forms);
+        text-align: left;
+    }
+
+    .modal-wishes-name-label {
+        grid-column: 1;
+        margin-top:1em;
+    }
+
+    .modal-wishes-name-value {
+        grid-column: 2;
+        padding-top:.4em;
+        margin-top:.2em;
+    }
+
+}

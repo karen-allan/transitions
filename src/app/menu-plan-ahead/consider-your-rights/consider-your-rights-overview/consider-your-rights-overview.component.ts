@@ -1,4 +1,6 @@
 import {Component, Input} from '@angular/core';
+import {PathObject} from "../../../ts-files/pathObject";
+
 
 @Component({
   selector: 'app-consider-your-rights-overview',
@@ -10,6 +12,7 @@ export class ConsiderYourRightsOverviewComponent {
   @Input() title='';
   @Input() quote='';
   @Input() author='';
+  @Input() pathObject:PathObject;
 
   sectionSelected: string ='';
 

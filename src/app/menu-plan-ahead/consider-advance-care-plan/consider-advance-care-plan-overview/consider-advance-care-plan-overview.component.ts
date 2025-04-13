@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {PathObject} from "../../../ts-files/pathObject";
 
 @Component({
   selector: 'app-consider-advance-care-plan-overview',
@@ -10,6 +11,8 @@ export class ConsiderAdvanceCarePlanOverviewComponent {
   @Input() title='';
   @Input() quote='';
   @Input() author='';
+
+  @Input() pathObject:PathObject;
 
   sectionSelected: string ='';
 

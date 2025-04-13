@@ -1,0 +1,255 @@
+
+/*******************************************************************************************************************
+  GLOBAL MODAL FORMS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px) {
+
+    /************************************************** WIZARD DIALOG HEADERS *************************************/
+    .wizard-modal-header {
+        display: inline-grid;
+        grid-template-columns: 30% 70%;
+        width: 100%;
+        margin:0;
+        background-color: white;
+        align-content: center;
+    }
+
+    .wizard-modal-logo {
+        display: grid;
+        grid-column: 1;
+        margin: auto;
+        cursor: pointer;
+        justify-content: flex-end;
+    }
+
+    .wizard-modal-text {
+        display: grid;
+        width:100%;
+        grid-column: 2;
+        justify-content: center;
+        align-content:center;
+        color: var(--color-dark-blue);
+        font-family: var(--family-copy);
+        text-align: left;
+        font-size:1.5em;
+    }
+
+    .wizard-modal-logo img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    /************************************************** MAT DIALOG BOXES *************************************/
+    mat-dialog-container#make-wishes-modal,  mat-dialog-container#choose-rep-modal, mat-dialog-container#advance-directive-modal  {
+        display: block;
+        float: left;
+        width: var(--wizard-width);
+        margin: auto;
+        border: 3px solid var(--color-soft-blue);
+        background-color: var(--color-soft-blue);
+        border-radius: 2em!important;
+    }
+
+    /************************************************** INNER BLOCKS *************************************/
+    .modal-inner-block-wishes, .modal-inner-block-rep, .modal-inner-block-plan  {
+        display: grid;
+        float: left;
+        align-content:flex-start;
+    }
+
+    .modal-data-block-wishes, .modal-data-block-rep, .modal-data-block-plan  {
+        display: grid;
+        float: left;
+        align-content:flex-start;
+        color: var(--color-dark-blue);
+        position: relative;
+    }
+
+    /************************************************** FULL AND INLINE BLOCKS *************************************/
+    .modal-full-margined-block {
+        display: block;
+        float: left;
+        width: 95%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+
+    .modal-full-listing-block {
+        display: block;
+        padding-right: 2em;
+        margin-top: 0;
+        margin-bottom: 0;
+        list-style: square;
+    }
+
+    .modal-three-thirty-block, .modal-seventy-thirty-block, .modal-name-label-value-block, .modal-sixty-forty-block,
+    .modal-forty-sixty-block, .modal-two-fifty-block, .modal-three-radio-block, .modal-eighty-twenty-block  {
+        width: 100%;
+        text-align: left;
+        padding:.8em 0;
+    }
+
+    .modal-three-thirty-block {
+        display: inline-grid;
+        grid-template-columns: 30% 30% 40%;
+    }
+
+    .modal-three-radio-block {
+        display: inline-grid;
+        grid-template-columns: 30% 30% 40%;
+    }
+
+    .modal-forty-sixty-block {
+        display: inline-grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .modal-seventy-thirty-block {
+        display: inline-grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .modal-eighty-twenty-block {
+        display: inline-grid;
+        grid-template-columns: 80% 20%;
+    }
+
+    .modal-two-fifty-block {
+        display: inline-grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .modal-sixty-forty-block {
+        display: inline-grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    /********************************************* FORM LABELS AND VALUES *************************************/
+    .modal-first-col-label, .modal-second-col-label, .modal-third-col-label, .modal-forth-col-label,
+    .modal-first-col-value, .modal-second-col-value, .modal-third-col-value, .modal-forth-col-value,
+    .modal-both-first-col-label, .modal-both-second-col-label, .modal-both-third-col-label,
+    .modal-both-first-col-value, .modal-both-second-col-value, .modal-both-third-col-value {
+        display: grid;
+        width: 100%;
+        color: var(--color-dark-blue);
+        font-family: var(--family-forms);
+        text-align: left;
+        font-size: var(--form-label-value);
+    }
+
+    .modal-both-first-col-label,  .modal-both-first-col-value {
+        grid-column:1;
+    }
+
+    .modal-both-second-col-label,  .modal-both-second-col-value {
+        grid-column:2;
+    }
+
+    .modal-both-third-col-label,  .modal-both-third-col-value {
+        grid-column:3;
+    }
+
+    .modal-first-col-label, .modal-first-col-value {
+        grid-column: 1;
+    }
+
+    .modal-second-col-label, .modal-second-col-value {
+        grid-column: 2;
+    }
+
+    .modal-third-col-label, .modal-third-col-value {
+        grid-column: 3;
+    }
+
+    .modal-forth-col-label, .modal-forth-col-value {
+        grid-column: 4;
+    }
+
+    .modal-first-col-label, .modal-second-col-label, .modal-third-col-label, .modal-forth-col-label {
+        align-content: center;
+    }
+
+    .modal-first-col-value, .modal-second-col-value, .modal-third-col-value, .modal-forth-col-value {
+        padding:.4em 0;
+    }
+
+    /********************************************* BUTTON CONTAINERS *************************************/
+    .modal-two-buttons-row {
+        display: grid;
+        width: 100%;
+        justify-content: flex-end;
+        position: absolute;
+        bottom: 0;
+        grid-template-columns: repeat(2, 100px);
+        grid-column-gap: 10px;
+    }
+
+    .modal-three-buttons-row {
+        display: grid;
+        width: 100%;
+        justify-content: flex-end;
+        position: absolute;
+        bottom: 0;
+        grid-template-columns: repeat(3, 100px);
+        grid-column-gap: 10px;
+    }
+
+    /********************************************* BUTTONS *************************************/
+    .modal-start-button, .modal-cancel-start-button, .modal-next-button, .modal-previous-button,
+    .modal-cancel-button, .modal-print-button, .modal-cancel-print-button {
+        display: grid;
+        color: var(--color-white);
+        background-color: var(--color-dark-blue);
+        border-radius: 1em;
+        text-align: center;
+        align-content: center;
+        font-size: var(--form-buttons);
+        width: 100px;
+        height: 50px;
+    }
+
+    .modal-start-button, .modal-next-button, .modal-print-button {
+        grid-column: 1;
+    }
+
+    .modal-cancel-start-button, .modal-previous-button {
+        grid-column: 2;
+    }
+
+    .modal-cancel-button, .modal-cancel-print-button {
+        grid-column: 3;
+    }
+
+    /************************************************** ERROR *******************************************************/
+    .modal-error-message-block {
+        display: block;
+        width: 100%;
+        float: left;
+        text-align: left;
+    }
+
+    .modal-error-message {
+        font-weight: 800;
+        color: var(--color-red);
+        line-height: 90%;
+        font-family: var(--family-forms);
+        font-size: var(--p-laptop);
+    }
+
+}
+
+/*******************************************************************************************************************
+   GLOBAL
+*******************************************************************************************************************/
+@media only screen {
+}
+
+
+@media screen {
+    .print-modal-make-wish-list, .print-modal-choose-your-rep, .print-modal-write-advance-directive,
+    .print-form-caregiver-consult-component, .print-form-patient-consult-component, .print-form-planner-consult-component,
+    .print-header, .print-footer, .print-form-copyright {
+        display: none;
+    }
+}

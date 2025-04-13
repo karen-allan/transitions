@@ -1,0 +1,627 @@
+/*******************************************************************************************************************
+
+REPORTS UNDER 600 IN WIDTH, ALL ONE COLUMN EXCEPT FOR CHECKBOXES
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 600px) {
+
+    .screen-forms-mobile, .screen-forms-both {
+        display:block;
+    }
+
+    .screen-forms-desktop  {
+        display: none;
+    }
+
+    .sub-form-menu-block, .sub-form-block, .sub-form-disclaimer-block {
+        width:var(--media-less-than-content-width);
+    }
+
+    .sub-form-two-checkboxes-block {
+        display: inline-grid;
+        grid-template-columns: 50% 50%;
+        width: 99%;
+    }
+
+    .sub-form-first-check-col {
+        grid-column: 1;
+    }
+
+    .sub-form-second-check-col   {
+        grid-column: 2;
+    }
+
+    .sub-form-print-button {
+        width:70px;
+        height:35px;
+        border-radius: .7em;
+    }
+
+
+
+}
+
+/*******************************************************************************************************************
+REPORTS OVER 640 IN WIDTH TO 896, MAKE SURE THERE IS SPACE ON EITHER SIDE
+*******************************************************************************************************************/
+@media only screen
+and (min-width:640px)
+and (max-width:896px) {
+
+    .sub-form-menu-block, .sub-form-block, .sub-form-disclaimer-block {
+        width:var(--media-less-than-content-width);
+    }
+}
+
+/*******************************************************************************************************************
+
+REPORTS OVER 960 IN WIDTH (OVER CONTENT WIDTH 0F 900 SO MAKES THEIR OWN SPACES ON EITHER SIDE
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width:960px) {
+
+    .sub-form-menu-block, .sub-form-block, .sub-form-disclaimer-block {
+        width:var(--media-more-than-content-width);
+    }
+}
+
+/*******************************************************************************************************************
+
+REPORTS OVER 640 IN WIDTH
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width:640px)   {
+
+    .screen-forms-mobile {
+        display:none;
+    }
+
+    .screen-forms-desktop, .screen-forms-both {
+        display: block;
+    }
+
+    .sub-form-two-checkboxes-block {
+        display: inline-grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .sub-form_three-medical-block {
+        display: inline-grid;
+        grid-template-columns: repeat(3, 33.3%);
+    }
+
+    .sub-form-name-phone-block {
+        display: inline-grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .sub-form-city-prov-post-block {
+        display: inline-grid;
+        grid-template-columns: 35% 25% 40%;
+    }
+
+    .sub-form-bdate-occup-referred-block {
+        display: inline-grid;
+        grid-template-columns: 20% 40% 40%;
+    }
+
+    .sub-form-contact-phone-relation-block {
+        display: inline-grid;
+        grid-template-columns: 35% 30% 35%;
+    }
+
+    .sub-form-first-check-col, .sub-form-first-col-value, .sub-form-first-col-label   {
+        grid-column: 1;
+    }
+
+    .sub-form-second-check-col, .sub-form-second-col-value, .sub-form-second-col-label {
+        grid-column: 2;
+    }
+
+    .sub-form-third-check-col, .sub-form-third-col-value, .sub-form-third-col-label {
+        grid-column: 3;
+    }
+
+    .sub-form-print-button {
+        width:110px;
+        height:50px;
+        border-radius: 1.0em;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BANANAS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: portrait) {
+
+    /* the questions/prompts*/
+    .sub-form-full-block p, .sub-form-text-area  {
+        font-size: var(--p-banana-port);
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--p-banana-port);
+    }
+
+    .sub-form-print-button {
+        font-size:var(--p-banana-port);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BANANAS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: landscape) {
+
+    /* the questions/prompts*/
+    .sub-form-full-block p, .sub-form-text-area  {
+        font-size: var(--p-banana-land);
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--p-banana-land);
+    }
+
+    .sub-form-print-button {
+        font-size:var(--p-banana-land);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: portrait) {
+
+    /* the questions/prompts*/
+    .sub-form-full-block p, .sub-form-text-area  {
+        font-size: var(--p-small-mobile-port);
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--p-small-mobile-port);
+    }
+
+    .sub-form-print-button {
+        font-size:var(--p-small-mobile-port);
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 360px)
+and (max-width: 414px)
+and (orientation: landscape) {
+
+    /* the questions/prompts*/
+    .sub-form-full-block p, .sub-form-text-area  {
+        font-size: var(--p-small-mobile-land);
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--p-small-mobile-land);
+    }
+
+    .sub-form-print-button {
+        font-size:var(--p-small-mobile-land);
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 600px)
+and (max-width: 800px)
+and (orientation: portrait) {
+
+    /* the questions/prompts*/
+    .sub-form-full-block p, .sub-form-text-area  {
+        font-size: var(--p-small-tablet-port);
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--p-small-tablet-port);
+    }
+
+    .sub-form-print-button {
+        font-size:var(--p-small-tablet-port);
+    }
+
+}
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width:600px)
+and (max-width:800px)
+and (orientation:landscape) {
+
+    /* the questions/prompts*/
+    .sub-form-full-block p, .sub-form-text-area  {
+        font-size: var(--p-small-tablet-land);
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--p-small-tablet-land);
+    }
+
+    .sub-form-print-button {
+        font-size:var(--p-small-tablet-land);
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 640px)
+and (max-width: 896px)
+and (orientation: portrait) {
+
+    /* the questions/prompts*/
+    .sub-form-full-block p, .sub-form-text-area  {
+        font-size: var(--p-big-mobile-port);
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--p-big-mobile-port);
+    }
+
+    .sub-form-print-button {
+        font-size:var(--p-big-mobile-port);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 640px)
+and (max-width: 896px)
+and (orientation: landscape) {
+
+    /* the questions/prompts*/
+    .sub-form-full-block p, .sub-form-text-area  {
+        font-size: var(--p-big-mobile-land);
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--p-big-mobile-land);
+    }
+
+    .sub-form-print-button {
+        font-size:var(--p-big-mobile-land);
+    }
+}
+
+/*!*******************************************************************************************************************
+ GLOBAL BIG TABLETS - PORTRAIT and IPAD PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px)
+and (max-width: 1366px)
+and (orientation: portrait) {
+
+    /* the questions/prompts*/
+    .sub-form-full-block p, .sub-form-text-area  {
+        font-size: var(--p-big-tablet-ipad-port);
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--p-big-tablet-ipad-port);
+    }
+
+    .sub-form-print-button {
+        font-size:var(--p-big-tablet-ipad-port);
+    }
+
+}
+
+/*******************************************************************************************************************
+ GLOBAL BIG TABLETS - LANDSCAPE and IPAD LANDSCAPE
+******************************************************************************************************************/
+@media only screen
+and (min-width: 960px)
+and (max-width: 1366px)
+and (orientation: landscape) {
+
+    /* the questions/prompts*/
+    .sub-form-full-block p, .sub-form-text-area  {
+        font-size: var(--p-big-tablet-ipad-land);
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--p-big-tablet-ipad-land);
+    }
+
+    .sub-form-print-button {
+        font-size:var(--p-big-tablet-ipad-land);
+    }
+}
+
+/*******************************************************************************************************************
+ GLOBAL LAPTOPS
+******************************************************************************************************************/
+@media only screen
+and (min-width: 1440px)
+and (max-width:1919px) {
+
+    /* the questions/prompts*/
+    .sub-form-full-block p, .sub-form-text-area  {
+        font-size: var(--p-laptop);
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--p-laptop);
+    }
+
+    .sub-form-print-button {
+        font-size:var(--p-laptop);
+    }
+}
+
+/*******************************************************************************************************************
+  DESKTOPS
+******************************************************************************************************************/
+@media only screen
+and (min-width: 1920px) {
+
+    /* the questions/prompts*/
+    .sub-form-full-block p, .sub-form-text-area  {
+        font-size: var(--p-desktop);
+    }
+
+    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--p-desktop);
+    }
+
+    .sub-form-print-button {
+        font-size:var(--p-desktop);
+    }
+
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media only screen {
+
+    /* USERS DATA ENTRY FORM CHOICES MENU: */
+    .sub-form-menu-block {
+        display: block;
+        max-width: var(--content-width);
+        margin:auto;
+        padding:1em 0;
+        border-top:dashed thin var(--color-grey);
+        border-bottom:dashed thin var(--color-grey);
+    }
+
+    /* USERS FORM MENU -  I WOULD LIKE TO DISCUSS: */
+    .sub-form-menu-heading  {
+        width:98%;
+        padding-left: 2%;
+        padding-bottom:.5em;
+        background-color: white;
+    }
+
+    .sub-form-menu {
+        max-width: var(--content-width);
+        margin:0;
+        width:95%;
+        padding-left:5%;
+    }
+
+    .sub-form-menu-item {
+        text-align: left;
+        line-height:200%;;
+        padding:.5em 0;
+    }
+
+    .sub-form-menu-prompt-block  {
+        display:grid;
+        height: 70px;
+        background-color: var(--color-dark-green);
+        color: var(--color-white);
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+        line-height: 110%;
+        max-width: var(--content-width);
+        margin:auto;
+    }
+
+    /* NOW INTO THE FORMS
+    ALL SUB FORMs are CONTAINED BY THIS BLOCK */
+    .sub-form-block {
+        display: block;
+        max-width: var(--content-width);
+        margin:auto;
+        border:solid thin var(--color-grey);
+    }
+
+    .sub-form-title {
+        display:grid;
+        height: 50px;
+        background-color: var(--color-dark-green);
+        color: var(--color-white);
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        line-height: 110%;
+        max-width: var(--content-width);
+        margin:auto;
+    }
+
+    .sub-form-full-block, .sub-form_three-medical-block, .sub-form-bdate-occup-referred-block, .sub-form-two-checkboxes-block,
+    .sub-form-name-phone-block, .sub-form-city-prov-post-block, .sub-form-contact-phone-relation-block  {
+        width: 99%;
+    }
+
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col   {
+        display:inline;
+        border:1px dashed var(--color-dark-blue);
+        margin-bottom:1em;
+        text-align:left;
+
+        line-height: 110%;
+        padding: 1em;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+    }
+
+    .sub-form-full-radio-col  {
+        width:98%;
+        padding: 1em 1%;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        border:1px dashed var(--color-dark-blue);
+        margin-bottom:1em;
+        text-align:left;
+        line-height: 110%;
+    }
+
+    .sub-form-full-col-value, .sub-form-full-col-label, .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
+    .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label  {
+        display: grid;
+        padding: 1em 0;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        width:100%;
+    }
+
+    .sub-form-full-col-label, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label  {
+        border-left:thin solid var(--color-dark-blue);
+    }
+
+    .sub-form-full-block {
+        display:grid;
+    }
+
+    .sub-form-full-col-value, .sub-form-full-col-label   {
+        grid-column: 1/-1;
+    }
+
+    .sub-form-full-block p {
+        display:block;
+        font-weight: 600;
+        padding: 1em;
+        font-family: var(--family-copy);
+        font-style: italic;
+        text-align: left;
+        color: var(--color-dark-blue);
+        line-height:100%;
+    }
+
+    .sub-form-text-area {
+        display: block;
+        width:100%;
+        padding: 1em 0;
+        font-weight: 600;
+        color: var(--color-dark-blue);
+        font-family: var(--family-copy);
+        text-align: left;
+        line-height: 105%;
+        overflow-y: scroll;
+        scrollbar-color: red orange;
+        scrollbar-width: thin;
+    }
+    
+    /* DISCLAIMER */
+    .sub-form-disclaimer-block {
+        color:var(--color-dark-blue);
+        display:block;
+        margin:auto;
+        max-width: var(--content-width);
+    }
+
+    .sub-form-disclaimer-title  {
+        display:block;
+        float:left;
+        width:100%;
+        text-align: left;
+        font-family:var(--family-title);
+    }
+
+    .sub-form-disclaimer-text {
+        font-size: 1em;
+        font-family: var(--family-copy);
+        border: #878787 dashed 1px;
+        padding:1em;
+    }
+
+    .sub-form-button-container {
+        width:100%;
+        justify-content: flex-end;
+        display:grid;
+        margin-top:2em;
+    }
+
+    .sub-form-print-button {
+        display:grid;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        background-color: var(--color-off-white);
+        align-content: center;
+        justify-content: center;
+        padding: .5em 0;
+    }
+}
+
+@media screen {
+     .print-block,  .print-header, .print-footer, .print-form-copyright    {
+        display:none;
+    }
+}
