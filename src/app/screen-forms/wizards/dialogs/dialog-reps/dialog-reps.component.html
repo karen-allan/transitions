@@ -1,0 +1,13 @@
+<ng-container *ngIf="modal">
+    <app-dialog-header
+        [rep]='rep'
+        [title]='title'
+        [modal]='modal'>
+    </app-dialog-header>
+
+    <app-screen-form-choose-rep-overview
+        [event]="event"
+        [rep]="rep"
+        [modal]="modal">
+    </app-screen-form-choose-rep-overview>
+</ng-container>

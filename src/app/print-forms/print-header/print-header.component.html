@@ -1,0 +1,122 @@
+<ng-container *ngIf="patient || caregiver || planner">
+    <div class="print-header">
+        <div class="print-header-logo">
+            <img src="../../../assets/images/details/consultations/bookConsultation/transitionsInEnergyPrinted.jpg"
+                 title="consultation support"
+                 alt="consultation support">
+        </div>
+
+        <div class="print-header-text">
+            <ng-container *ngIf="planner">
+                <h1>
+                    {{consult1}}<br>
+                    {{ now }}
+                </h1>
+            </ng-container>
+
+            <ng-container *ngIf="caregiver">
+                <h1>
+                    {{consult2}}<br>
+                    {{ now }}
+                </h1>
+            </ng-container>
+
+            <ng-container *ngIf="patient">
+                <h1>
+                    {{consult3}}<br>
+                    {{ now }}
+                </h1>
+            </ng-container>
+
+            <ng-container *ngIf="client.name.length > 0 && client.name != ''">
+                <h2>{{promptConsult}}
+                    for<br>
+                    {{ client.name }}
+                </h2>
+            </ng-container>
+
+            <ng-container *ngIf="client.name.length == 0 && client.name == ''">
+                <h2>{{promptConsult}}</h2>
+            </ng-container>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="wishes">
+    <div class="print-header">
+        <div class="print-header-logo">
+            <img src="../../../assets/images/details/takeAction/writeNeedsDown/wizardActionWishListDialog.jpg" alt="logo">
+        </div>
+
+        <div class="print-header-text">
+            <h1>
+                {{ title }}
+            </h1>
+
+            <ng-container *ngIf="wishes.client_name.length > 0 && wishes.client_name != ''">
+                <h2>
+                    {{ wishes.client_name }}<br>
+                    {{ now }}
+                </h2>
+            </ng-container>
+
+            <ng-container *ngIf="wishes.client_name.length == 0">
+                <h2>
+                    {{ now }}
+                </h2>
+            </ng-container>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="rep">
+    <div class="print-header">
+        <div class="print-header-logo">
+            <img src="../../../assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsDialog.jpg" alt="logo">
+        </div>
+
+        <div class="print-header-text">
+            <h1>
+                {{ title }}
+            </h1>
+
+            <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name != ''">
+                <h2>
+                    {{ rep.client_name }}<br>
+                    {{ now }}
+                </h2>
+            </ng-container>
+
+            <ng-container *ngIf="rep.client_name.length == 0">
+                {{ now }}
+            </ng-container>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="directive">
+    <div class="print-header">
+        <div class="print-header-logo">
+            <img src="../../../assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanDialog.jpg" alt="logo">
+        </div>
+
+        <div class="print-header-text">
+            <h1>
+                {{ title }}
+            </h1>
+
+            <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name != ''">
+                <h2>
+                    {{ directive.client_name }}<br>
+                    {{ now }}
+                </h2>
+            </ng-container>
+
+            <ng-container *ngIf="directive.client_name.length == 0">
+                <h2>
+                    {{ now }}
+                </h2>
+            </ng-container>
+        </div>
+    </div>
+</ng-container>

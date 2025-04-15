@@ -1,0 +1,11 @@
+<app-global-menu [menuItemId]='menuItemId' [subMenuItemId]='subMenuItemId'></app-global-menu>
+
+<ng-container *ngIf=!modal>
+    <div class="modal-mock-dialog-plan">
+        <app-screen-form-choose-rep-overview  [rep]="rep" [modal]="modal"></app-screen-form-choose-rep-overview>
+    </div>
+</ng-container>
+
+<app-global-footer></app-global-footer>
+
+<app-print-modal-choose-your-rep [rep]="rep"></app-print-modal-choose-your-rep>

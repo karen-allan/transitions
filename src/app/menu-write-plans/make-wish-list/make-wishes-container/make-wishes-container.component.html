@@ -1,0 +1,12 @@
+<app-global-menu [menuItemId]='menuItemId' [subMenuItemId]='subMenuItemId'></app-global-menu>
+
+<app-make-wishes-overview [title]="title"
+                          [quote]="quote"
+                          [author]="author"
+                          [wishes]="wishes"
+                          [pathObject] = "pathObject">
+</app-make-wishes-overview>
+
+<app-global-footer></app-global-footer>
+
+<app-print-modal-make-wish-list [wishes]="wishes"></app-print-modal-make-wish-list>

@@ -1,0 +1,14 @@
+<app-global-menu [menuItemId]='menuItemId' [subMenuItemId]='subMenuItemId'></app-global-menu>
+
+<!-- this is only called when the screen is in mobile mode as they do not use the dialog container  - mobile up to 959-->
+<ng-container *ngIf="!modal">
+    <div class="modal-mock-dialog-wishes">
+        <app-dialog-header [wishes]='wishes' [title]='title' [modal]='modal'></app-dialog-header>
+        <app-screen-form-make-wish-list-overview [wishes]="wishes" [modal]="modal"> </app-screen-form-make-wish-list-overview>
+    </div>
+</ng-container>
+
+<app-global-footer></app-global-footer>
+
+<app-print-modal-make-wish-list [wishes]="wishes"></app-print-modal-make-wish-list>
+

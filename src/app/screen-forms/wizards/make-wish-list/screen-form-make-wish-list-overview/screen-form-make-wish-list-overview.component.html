@@ -1,0 +1,95 @@
+<div class="modal-inner-block-wishes">
+    <div class="modal-data-block-wishes">
+        <ng-container *ngIf="page === 0">
+            <div class="modal-wishes-main-title">
+                Write a Wish List to:
+            </div>
+
+            <form #wizardForm="ngForm" novalidate>
+                <ul class="modal-full-listing-block">
+                    <li class="modal-wish-list-item">understand your needs better.</li>
+                    <li class="modal-wish-list-item">be able to state your wishes clearly.</li>
+                    <li class="modal-wish-list-item">leave nothing to chance.</li>
+                    <li class="modal-wish-list-item">use this as part of your legal advance care plan.</li>
+                    <li class="modal-wish-list-item">know your wishes making life easier for your family.</li>
+                </ul>
+
+                <div class="modal-error-message-block">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="modal-error-message">{{ errorMessage }}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="modal-error-message">&nbsp;</div>
+                    </ng-container>
+                </div>
+
+                <div class="modal-twenty-eighty-block">
+                    <label class="modal-wishes-name-label"><b>Your Name:</b></label>
+                    <input type="text" class="modal-wishes-name-value" [(ngModel)]="wishes.client_name" id="name"
+                           name="name">
+                </div>
+            </form>
+
+            <div class="modal-two-buttons-row">
+                <button class="modal-start-button " (click)="checkClientName()">START</button>
+                <button class="modal-cancel-start-button" (click)="checkFormToCancel(modal)">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page > 0 && page <= 30">
+            <div class="modal-full-margined-block">
+                <div class="modal-wishes-question-prompt">
+                    Question {{ page }} / {{ finalPage }}:
+                </div>
+
+                <div class="modal-wishes-question">
+                    {{ selectedQuestion.question_string }}
+                </div>
+
+                <div class="modal-full-margined-block" *ngFor="let response of selectedQuestion.responses">
+                    <div class="modal-wishes-radio-answers">
+                        <input type="radio" [value]="response.response_num" [ngModel]="selectedQuestion.selectedAnswer"
+                               name="question"
+                               (ngModelChange)="onAnswerChanged($event)">
+                        <label>
+                            {{ response.response_string }}
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-three-buttons-row">
+                <button class="modal-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="modal-cancel-button" (click)="checkFormToCancel(modal)">CANCEL</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="page === 31">
+            <div class="modal-wishes-sub-title">
+                Congratulations, you're done!
+            </div>
+
+            <div class="modal-wishes-copy">
+                <p>
+                    Please press PRINT to get a hard copy or while on the print screen choose to save it as a PDF on your own
+                    computer and print at a later date. Store this document with your other end of life documents.
+                    <br><br>
+                    This wish list is a great start to let your family know what you truly hope for should you need care in the
+                    future or if you need it now. It lets you communicate clearly without pressure from others or awkward
+                    conversations.
+                    <br><br>
+                    And remember, you can book a consultation either over zoom or in person for more help on a huge variety of
+                    topics around end-of-life choices and care options.
+                </p>
+            </div>
+
+            <div class="modal-two-buttons-row">
+                <button class="modal-print-button" (click)="checkFormToPrint(modal)">PRINT</button>
+                <button class="modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="modal-cancel-print-button" (click)="checkFormToCancel(modal)">CANCEL</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
+

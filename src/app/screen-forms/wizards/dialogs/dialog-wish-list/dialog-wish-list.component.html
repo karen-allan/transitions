@@ -1,0 +1,16 @@
+<!-- this is only called when the screen is laptop or above because this size uses the modal dialog while mobiles do not -->
+<ng-container *ngIf="modal">
+    <app-dialog-header
+        [wishes]='wishes'
+        [title]='title'
+        [modal]='modal'>
+    </app-dialog-header>
+
+    <app-screen-form-make-wish-list-overview
+        [event]="event"
+        [wishes]="wishes"
+        [modal]="modal">
+    </app-screen-form-make-wish-list-overview>
+</ng-container>
+
+
