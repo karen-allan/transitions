@@ -442,7 +442,8 @@ and (min-width: 1920px) {
     /* USERS DATA ENTRY FORM CHOICES MENU: */
     .sub-form-menu-block {
         display: block;
-        max-width: var(--content-width);
+        float:left;
+        max-width: var(--ipad-width);
         margin:auto;
         padding:1em 0;
         border-top:dashed thin var(--color-grey);
@@ -458,7 +459,7 @@ and (min-width: 1920px) {
     }
 
     .sub-form-menu {
-        max-width: var(--content-width);
+        max-width: var(--ipad-width);
         margin:0;
         width:95%;
         padding-left:5%;
@@ -479,7 +480,7 @@ and (min-width: 1920px) {
         text-align: center;
         align-content: center;
         line-height: 110%;
-        max-width: var(--content-width);
+        max-width: var(--ipad-width);
         margin:auto;
     }
 
@@ -487,7 +488,7 @@ and (min-width: 1920px) {
     ALL SUB FORMs are CONTAINED BY THIS BLOCK */
     .sub-form-block {
         display: block;
-        max-width: var(--content-width);
+        max-width: var(--ipad-width);
         margin:auto;
         border:solid thin var(--color-grey);
     }
@@ -501,7 +502,7 @@ and (min-width: 1920px) {
         align-content: center;
         text-align: center;
         line-height: 110%;
-        max-width: var(--content-width);
+        max-width: var(--ipad-width);
         margin:auto;
     }
 

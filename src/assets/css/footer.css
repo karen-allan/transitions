@@ -146,14 +146,16 @@ and (min-width: 1024px) {
     /* row 4 copyright  */
     .footer-email, .footer-name, .footer-socials, .footer-copyright {
         display:block;
+        float:left;
         text-align: center;
         width:100%;
-        margin-left:auto;
-        margin-right:auto;
+
     }
 
     .footer-copyright {
         margin-bottom:2em;
+        margin-left:auto;
+        margin-right:auto;
     }
 
     .footer-email-icon img {
@@ -163,10 +165,14 @@ and (min-width: 1024px) {
 
     .footer-email {
         padding-top: 1em;
+        margin-left:auto;
+        margin-right:auto;
     }
 
     .footer-socials {
         padding: .5em 0;
+        margin-left:auto;
+        margin-right:auto;
     }
 
     .grid-socials {

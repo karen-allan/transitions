@@ -23,7 +23,7 @@
     --color-titles: #5A9F9F;
     --color-hyperlink: #3c7070;
 
-    --color-background-quotes: #9f5a7d;
+    --color-background-quotes: #c088a4;
     --color-dark-green: #264c4c;
     --color-brown: #5a3714;
 
@@ -41,6 +41,7 @@
     --laptop-dialog-header-height: 150px;
 
     --print-width: 625px;
+    --list-width: 720px;
     --menu-width: 840px;
     --content-width: 900px;
     --wizard-width: 960px;

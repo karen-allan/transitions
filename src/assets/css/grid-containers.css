@@ -9,7 +9,7 @@
 /********************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 599px) {
+and (max-width: 600px) {
 
     .mobile-columns {
         display:block;
@@ -21,7 +21,7 @@ and (max-width: 599px) {
 
     /* HOME PAGE FACTS */
     .home-facts-container {
-        /*width:var(--media-less-than-content-width);*/
+        width:var(--media-less-than-content-width);
         display: grid;
         align-content: center;
         justify-content: center;
@@ -36,7 +36,7 @@ and (max-width: 599px) {
         align-content: center;
     }
 
-    .facts-inline-text  {
+    .facts-inline-text-white-bkgrnd, .facts-block-text {
         display:grid;
         grid-column:1;
         justify-content: center;
@@ -44,13 +44,16 @@ and (max-width: 599px) {
     }
 
     .facts-block-text {
-        /*width:var(--media-less-than-content-width);*/
+        width:var(--media-less-than-content-width);
+        margin-bottom:.5em;
     }
 
-    /* HOME PAGE BOOKING LINK */
-    a .booking-link-grid {
-        /*width: var(--media-less-than-content-width);*/
+    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
+        line-height:110%;
+        padding-top:1em;
     }
+
+
 
     /* ABOUT PAGE FACTS */
     /* because this container uses content title and copy pages which are already using media less than content width */
@@ -89,6 +92,7 @@ and (max-width: 599px) {
         align-content: center;
         justify-content: center;
         border-radius: 10px;
+        margin:1em 0;
     }
 
     .wizard-intro-image {
@@ -99,11 +103,26 @@ and (max-width: 599px) {
     .wizard-intro-text {
         display: grid;
         grid-column: 1;
+        padding:1em 1em 0 1em;
+        line-height:110%;
+    }
+
+    .wizard-intro-text h3 {
+        padding-top:.5em;
+        line-height:110%;
     }
 
     /* TESTIMONIALS */
     .charges-grid, .testimonials-grid  {
         /*width:var(--media-less-than-content-width);*/
+    }
+
+    .charges-grid {
+        padding:.5em;
+    }
+
+    .testimonial-row-1, .testimonial-row-2, .testimonial-row-3, .testimonial-row-4, .testimonial-row-5, .testimonial-row-6, .testimonial-row-7  {
+        padding:.5em;
     }
 
     .bevelled-edges {
@@ -119,7 +138,7 @@ and (max-width: 599px) {
 
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 600px) {
+and (min-width: 800px) {
 
     .mobile-columns {
         display:none;
@@ -136,6 +155,8 @@ and (min-width: 600px) {
         display: inline-grid;
         grid-template-columns: 49% 51%;
         background-color: #363233;
+        margin:1em; align-content: center;
+        height:500px;
     }
 
     .facts-inline-image {
@@ -145,20 +166,20 @@ and (min-width: 600px) {
         align-content: center;
     }
 
-    .facts-inline-text {
-        display:grid;
+    .facts-inline-text-dark-bkgrnd {
         padding:0 1em;
     }
 
     .facts-block-text {
         width:var(--media-more-than-content-width);
-        margin-bottom:2em;
     }
 
-    /* HOME BOOKING */
-    a .booking-link-grid {
-        width: var(--media-more-than-content-width);
+    .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        line-height:110%;
+        padding-top:1em;
     }
+
+
 
     /* ABOUT US PAGE uses content copy and title which already set the width as more than media */
     .about-us-container {
@@ -197,6 +218,7 @@ and (min-width: 600px) {
         display: inline-grid;
         grid-template-columns: 49% 51%;
         border-radius: 10px 40px 40px 10px;
+        margin:2em 0;
     }
 
     .wizard-intro-image {
@@ -207,6 +229,13 @@ and (min-width: 600px) {
     .wizard-intro-text {
         display: grid;
         grid-column: 2;
+        padding:2em 2em 0 2em;
+        line-height:120%;
+    }
+
+    .wizard-intro-text h3 {
+        padding-top:1em;
+        line-height:120%;
     }
 
     /* TESTIMONIALS */
@@ -214,12 +243,19 @@ and (min-width: 600px) {
         width: var(--media-more-than-content-width);
     }
 
+    .charges-grid {
+        padding:1em;
+    }
+
+    .testimonial-row-1, .testimonial-row-2, .testimonial-row-3, .testimonial-row-4, .testimonial-row-5, .testimonial-row-6, .testimonial-row-7  {
+        padding:1em;
+    }
+
     .bevelled-edges {
         width:70%;
     }
 
 }
-
 
 /*******************************************************************************************************************
   GLOBAL BANANAS - PORTRAIT
@@ -229,21 +265,17 @@ and (min-width: 320px)
 and (max-width: 568px)
 and (orientation: portrait) {
 
-    /*image is 900x450 (90% is 810 by 405 so divide 810/405 to get ratio of 50%  */
-    a .booking-link-grid {
-        height: 160px;
+
+    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        font-size:var(--p-banana-port);
     }
 
     .wizard-intro-text h3 {
         font-size:var(--h3-titles-banana-port);
-        text-align:center;
-        padding-top:1em;
-        line-height:110%;
     }
 
     .wizard-intro-text p {
         font-size:var(--p-banana-port);
-        text-align:justify;
     }
 }
 
@@ -255,21 +287,18 @@ and (min-width: 320px)
 and (max-width: 568px)
 and (orientation: landscape) {
 
-    /*image is 900x450 (booking grid is 900 by 450 so divide 450/900 to get ratio of 50% and 50x360 is 180) */
-    a .booking-link-grid {
-        height: 284px;
+
+
+    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        font-size:var(--p-banana-land);
     }
 
     .wizard-intro-text h3 {
         font-size:var(--h3-titles-banana-land);
-        text-align:center;
-        padding-top:1em;
-        line-height:110%;
     }
 
     .wizard-intro-text p {
         font-size:var(--p-banana-land);
-        text-align:justify;
     }
 }
 
@@ -281,21 +310,18 @@ and (min-width: 360px)
 and (max-width: 414px)
 and (orientation: portrait){
 
-    /*image is 900x450 (booking grid is 900 by 450 so divide 450/900 to get ratio of 50% and 50x360 is 180) */
-    a .booking-link-grid {
-        height: 180px;
+
+
+    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        font-size:var(--p-small-mobile-port);
     }
 
     .wizard-intro-text h3 {
         font-size:var(--h3-titles-small-mobile-port);
-        text-align:center;
-        padding-top:1em;
-        line-height:110%;
     }
 
     .wizard-intro-text p {
         font-size:var(--p-small-mobile-port);
-        text-align:justify;
     }
 
 }
@@ -308,21 +334,18 @@ and (min-width: 360px)
 and (max-width: 414px)
 and (orientation: landscape){
 
-    /*image is 900x450 (booking grid is 900 by 450 so divide 450/900 to get ratio of 50% and 50x414 is 180) */
-    a .booking-link-grid {
-        height: 207px;
+
+
+    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        font-size:var(--p-small-mobile-land);
     }
 
     .wizard-intro-text h3 {
         font-size:var(--h3-titles-small-mobile-land);
-        text-align:center;
-        padding-top:1em;
-        line-height:110%;
     }
 
     .wizard-intro-text p {
         font-size:var(--p-small-mobile-land);
-        text-align:justify;
     }
 
 }
@@ -335,21 +358,18 @@ and (min-width: 600px)
 and (max-width:800px)
 and (orientation: portrait){
 
-    /* image is 450 height x 900 width but and width here is 810 (90% of 900) wide so 450/810 is 55% ratio */
-    a .booking-link-grid {
-        height:300px;
+
+
+    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        font-size:var(--p-small-tablet-port);
     }
 
     .wizard-intro-text h3 {
         font-size:var(--h3-titles-small-tablet-port);
-        text-align:center;
-        padding-top:1em;
-        line-height:110%;
     }
 
     .wizard-intro-text p {
         font-size:var(--p-small-tablet-port);
-        text-align:justify;
     }
 }
 
@@ -365,28 +385,19 @@ and (orientation: landscape){
     /* HOME PAGE */
     .facts-inline-text-dark-bkgrnd {
         height:390px;
-        padding:0 1em;
     }
 
-    .facts-block-text {
-        padding-top:1em;
-        line-height: 130%;
+    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        font-size:var(--p-small-tablet-land);
     }
 
-    a .booking-link-grid {
-        height:400px;
-    }
 
     .wizard-intro-text h3 {
         font-size:var(--h3-titles-small-tablet-land);
-        text-align:center;
-        padding-top:1em;
-        line-height:110%;
     }
 
     .wizard-intro-text p {
         font-size:var(--p-small-tablet-land);
-        text-align:justify;
     }
 
 }
@@ -399,21 +410,18 @@ and (min-width:640px)
 and (max-width:896px)
 and (orientation: portrait){
 
-    /*image is 900x450 (booking grid is 900 by 450 so divide 450/900 to get ratio of 50% and 50x640) */
-    a .booking-link-grid {
-        height: 320px;
+
+
+    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        font-size:var(--p-big-mobile-port);
     }
 
     .wizard-intro-text h3 {
         font-size:var(--h3-titles-big-mobile-port);
-        text-align:center;
-        padding-top:1em;
-        line-height:110%;
     }
 
     .wizard-intro-text p {
         font-size:var(--p-big-mobile-port);
-        text-align:justify;
     }
 
 }
@@ -430,29 +438,18 @@ and (orientation: landscape){
     /* HOME PAGE */
     .facts-inline-text-dark-bkgrnd {
         height:437px;
-        padding:0 1em;
     }
 
-    .facts-block-text {
-        padding-top:1em;
-        line-height: 130%;
-    }
-
-    /*image is 900x450 ( 50% and 50x896) */
-    a .booking-link-grid {
-        height:448px;
+    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        font-size:var(--p-big-mobile-land);
     }
 
     .wizard-intro-text h3 {
         font-size:var(--h3-titles-big-mobile-land);
-        text-align:center;
-        padding-top:1em;
-        line-height:110%;
     }
 
     .wizard-intro-text p {
         font-size:var(--p-big-mobile-land);
-        text-align:justify;
     }
 
 }
@@ -469,28 +466,20 @@ and (orientation: portrait) {
     /* HOME PAGE */
     .facts-inline-text-dark-bkgrnd {
         height:468px;
-        padding:0 1em;
     }
 
-    .facts-block-text {
-        padding-top:1em;
-        line-height: 130%;
+    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        font-size:var(--p-big-tablet-ipad-port);
     }
 
-    a .booking-link-grid {
-        height: 450px;
-    }
+
 
     .wizard-intro-text h3 {
         font-size:var(--h3-titles-big-tablet-ipad-port);
-        text-align:center;
-        padding-top:1em;
-        line-height:110%;
     }
 
     .wizard-intro-text p {
         font-size:var(--p-big-tablet-ipad-port);
-        text-align:justify;
     }
 }
 
@@ -504,28 +493,20 @@ and (orientation: landscape) {
 
     .facts-inline-text-dark-bkgrnd {
         height:468px;
-        padding:0 1em;
     }
 
-    .facts-block-text {
-        padding-top:1em;
-        line-height: 130%;
+    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        font-size:var(--p-big-tablet-ipad-land);
     }
 
-    a .booking-link-grid {
-        height: 450px;
-    }
+
 
     .wizard-intro-text h3 {
         font-size:var(--h3-titles-big-tablet-ipad-land);
-        text-align:center;
-        padding-top:1em;
-        line-height:110%;
     }
 
     .wizard-intro-text p {
         font-size:var(--p-big-tablet-ipad-land);
-        text-align:justify;
     }
 }
 
@@ -540,33 +521,20 @@ and (max-width:1919px) {
     /* HOME PAGE */
     .facts-inline-text-dark-bkgrnd {
         height:500px;
-        padding:0 1em;
     }
 
-    .facts-block-text {
-        padding-top:1em;
-        line-height: 130%;
+    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        font-size:var(--p-laptop);
     }
 
-    /* IMAGE IS 450x900 so no shrinkage needed */
-    a .booking-link-grid {
-        width: var(--media-more-than-content-width);
-    }
 
-    a .booking-link-grid {
-        height: 450px;
-    }
 
     .wizard-intro-text h3 {
         font-size:var(--h3-titles-laptop);
-        text-align:center;
-        padding-top:1em;
-        line-height:110%;
     }
 
     .wizard-intro-text p {
         font-size:var(--p-laptop);
-        text-align:justify;
     }
 }
 /*******************************************************************************************************************
@@ -578,28 +546,20 @@ and (min-width: 1024px) {
     /* HOME PAGE */
     .facts-inline-text-dark-bkgrnd {
         height:500px;
-        padding:0 1em;
     }
 
-    .facts-block-text {
-        padding-top:1em;
+    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+        font-size:var(--p-desktop);
     }
 
-    /* IMAGE IS 450x900 so no shrinkage needed */
-    a .booking-link-grid {
-        height: 450px;
-    }
+
 
     .wizard-intro-text h3 {
         font-size:var(--h3-titles-desktop);
-        text-align:center;
-        padding-top:1em;
-        line-height:110%;
     }
 
     .wizard-intro-text p {
         font-size:var(--p-desktop);
-        text-align:justify;
     }
 
 }
@@ -611,6 +571,7 @@ and (min-width: 1024px) {
     .home-facts-container{
         display: grid;
         max-width: var(--ipad-width);
+        font-family:var(--family-copy);
         margin:auto;
     }
 
@@ -624,41 +585,53 @@ and (min-width: 1024px) {
         height:auto;
     }
 
-    .facts-inline-text-dark-bkgrnd  {
+    .facts-inline-text-dark-bkgrnd, .facts-inline-text-white-bkgrnd  {
         display: grid;
         justify-content: center;
-        align-content:center;
-        text-align: justify;
+    }
+
+    .facts-inline-text-dark-bkgrnd {
         background: var(--color-dark-green);
+        align-content:center;
+    }
+
+    .facts-inline-text-dark-bkgrnd a {
+        color:white;
+        text-align: justify;
+    }
+
+    .facts-inline-text-dark-bkgrnd a, .facts-inline-text-white-bkgrnd a, .facts-block-text a {
+        cursor:pointer;
+        text-decoration:none;
+    }
+
+    .facts-inline-text-dark-bkgrnd a:hover, .facts-inline-text-white-bkgrnd a:hover, .facts-block-text a:hover {
+        text-decoration:underline;
     }
 
     .facts-inline-text-white-bkgrnd {
-        padding-top:1em;
-        display: grid;
-        justify-content: center;
+        justify-content: flex-start;
         text-align: left;
         background: #FFFFFF;
+    }
+
+    .facts-inline-text-white-bkgrnd a {
+        color:var(--color-dark-blue);
+        text-align: left;
     }
 
     .facts-block-text {
         display: grid;
         margin-left:auto;
         margin-right:auto;
-        margin-bottom:2em;
+        font-family:var(--family-copy);
         justify-content: center;
         text-align: left;
     }
 
-    /* HOME PAGE BOOKING LINK */
-    a .booking-link-grid {
-        display: grid;
-        max-width: var(--content-width);
-        margin: 1em auto;
-        background-repeat: no-repeat;
-        background-image: url("src/assets/images/details/home/bookSessionText.jpg");
-        background-size: contain;
-        align-content: flex-end;
-        justify-content: center;
+    .facts-block-text a {
+        color:var(--color-dark-blue);
+        text-align: left;
     }
 
     /* ABOUT US PAGE */
@@ -685,8 +658,6 @@ and (min-width: 1024px) {
         background: white;
         border-style: groove;
         border-color: var(--color-soft-blue);
-        margin-top:2em;
-        margin-bottom:2em;
     }
 
     .wizard-intro-image {
@@ -707,17 +678,22 @@ and (min-width: 1024px) {
 
     .wizard-intro-text {
         display:grid;
-        padding:0 2em;
         cursor:none;
         justify-content: center;
         align-content: center;
         text-decoration: none;
         color:var(--color-titles);
         font-family: var(--family-copy);
+        text-align:justify;
     }
 
     .wizard-intro-text a {
         cursor:pointer;
+    }
+
+    /* ? */
+    .wizard-intro-text h3 {
+        text-align: center;
     }
 
     /* TESTIMONIALS AND FEES */
@@ -726,14 +702,35 @@ and (min-width: 1024px) {
         margin:auto;
         max-width:var(--content-width);
         background-color: var(--color-white);
-        padding:1em;
         text-align:center;
     }
+
+    .charges-grid h3 {
+        font-family: var(--family-title);
+        font-size:1.3em;
+        color:var(--color-dark-blue);
+        text-align:center;
+        font-weight: bold;
+    }
+
+    .charges-grid p {
+        font-family: var(--family-title);
+        font-size:1.1em;
+        color:var(--color-dark-blue);
+        text-align:center;
+    }
+
+    .charges-grid span {
+        font-family: var(--family-title);
+        font-size:1.0em;
+        color:var(--color-dark-blue);
+        text-align:center;
+    }
+
 
     .testimonials-grid  {
         display:grid;
         margin:auto;
-        max-width:var(--content-width);
         background-color: white;
     }
 
@@ -742,7 +739,7 @@ and (min-width: 1024px) {
         width:100%;
         margin:auto;
         border:thin dashed var(--color-dark-blue);
-        padding:1em;
+        max-width:var(--content-width);
     }
 
     .testimonial-row-1 {
@@ -768,8 +765,6 @@ and (min-width: 1024px) {
     .testimonial-row-6 {
         grid-row:6;
     }
-
-
 
 }
 

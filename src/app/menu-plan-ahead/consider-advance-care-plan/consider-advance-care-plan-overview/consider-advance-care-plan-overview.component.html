@@ -11,7 +11,7 @@
     <h1>{{title.toUpperCase()}}</h1>
 </div>
 
-<div class="content-dark-copy pad-top">
+<div class="content-dark-copy">
     <p>
         Let's say you are in an accident or suffer a critical illness and end up in Emergency and are incapable of
         answering for yourself. When you arrive at the hospital - a health care team member must contact your
@@ -23,12 +23,12 @@
     </p>
 </div>
 
-<div class="content-title">
-    <h4>Chronic Health Conditions Include:</h4>
-</div>
+<div class="desktop-list">
+    <div class="sub-content-list-title">
+        <h4>Chronic Health Conditions Include:</h4>
+    </div>
 
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
+    <ul class ="sub-content-dark-list yin-yang-big">
         <li class="list-item">Insulin Dependent or Non-Insulin Dependent Diabetes.</li>
         <li class="list-item">Chronic Kidney Disease (CKD).</li>
         <li class="list-item">Heart Diseases such as Angina, Congestive Heart Failure, Heart Attack or Enlarged Heart.</li>
@@ -42,8 +42,12 @@
     </ul>
 </div>
 
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
+<div class="mobile-list">
+    <div class="content-title">
+        <h4>Chronic Health Conditions Include:</h4>
+    </div>
+
+    <ul class ="content-dark-list yin-yang-small">
         <li class="list-item">Insulin Dependent or Non-Insulin Dependent Diabetes.</li>
         <li class="list-item">Chronic Kidney Disease (CKD).</li>
         <li class="list-item">Heart Diseases such as Angina, Congestive Heart Failure, Heart Attack or Enlarged Heart.</li>
@@ -65,58 +69,41 @@
     <p>
         If you have these or any other serious, chronic condition or have been told that you have some kind of time limit to your
         life, it is very important to put an advance care plan together for your family to follow. In addition to selecting the person or
-        persons who will Advocate for you in the event of an emergency (see <a routerLink="/considerAdvocates"> Consider Your Advocates</a>)
-        , an advance care plan allows you to state specific treatments and procedures that you may want to say yes or no to.
+        persons who will Advocate for you in the event of an emergency, an advance care plan allows you to state specific treatments and
+        procedures that you may want to say yes or no to.
         <br><br>
         The plan can be as simple or as detailed as you like and can include Do Not Resuscitate, No CPR orders, or plans for an EDITH
         (Expected Death in the Home).
     </p>
 </div>
 
-<div class = "content-dark-copy">
-    <p>
-        By creating an advance care directive, you can state specifically which treatments and procedures you want or do not want. It
-        provides another vehicle to letting the health care providers know what your wishes are. Your directive will be followed by
-        the health care providers as it pertains directly to the situation at hand.
-        <br><br>
-        An advance care plan becomes the final say - no matter what your advocates promote or try to deny you.
-        If you are concerned that your wishes may not be followed by your advocate, you will need to state in the advance directive
-        that your health care providers may act in accordance with your instructions without the consent of your representative. You can
-        even name the procedures you would like attempted as well as the treatments you would not want.
-    </p>
-</div>
+<div class="desktop-list">
+    <div class = "sub-content-list-title">
+        <h4>Why Write an Advance Directive?</h4>
+    </div>
 
-<div class="content-title">
-    <h4>Life Support and Medical Interventions Include:</h4>
+    <ul class ="sub-content-dark-list yin-yang-big">
+        <li class="list-item">You want to be in charge of your own health, life and death.</li>
+        <li class="list-item">Your realize that doing so now could lead to less family conflicts later.</li>
+        <li class="list-item">You trust your advocates but want to lessen the burden of them having to make difficult decisions.</li>
+        <li class="list-item">You want to eliminate confusion for your family.</li>
+    </ul>
 </div>
 
 <div class="mobile-list">
+    <div class = "content-title">
+        <h4>Why Write an Advance Directive?</h4>
+    </div>
+
     <ul class ="content-dark-list yin-yang-small">
-        <li class="list-item">Tube Feedings</li>
-        <li class="list-item">Ventilators</li>
-        <li class="list-item">Kidney Dialysis</li>
-        <li class="list-item">Medications</li>
-        <li class="list-item">CPR (Cardio Pulmonary Resuscitation)</li>
-        <li class="list-item">Intubation</li>
-        <li class="list-item">Breathing Machines</li>
-        <li class="list-item">DNR Orders</li>
+        <li class="list-item">You want to be in charge of your own health, life and death.</li>
+        <li class="list-item">Your realize that doing so now could lead to less family conflicts later.</li>
+        <li class="list-item">You trust your advocates but want to lessen the burden of them having to make difficult decisions.</li>
+        <li class="list-item">You want to eliminate confusion for your family.</li>
     </ul>
 </div>
 
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">Tube Feedings</li>
-        <li class="list-item">Ventilators</li>
-        <li class="list-item">Kidney Dialysis</li>
-        <li class="list-item">Medications</li>
-        <li class="list-item">CPR (Cardio Pulmonary Resuscitation)</li>
-        <li class="list-item">Intubation</li>
-        <li class="list-item">Breathing Machines</li>
-        <li class="list-item">DNR Orders</li>
-    </ul>
-</div>
-
-<div class="content-title pad-bottom">
+<div class="content-title">
     <div *ngIf="sectionSelected === 'triggeredSection1'">
         <h6>
             <a (click)="this.getTriggeredPromptKey(0)">
@@ -141,27 +128,55 @@
     </div>
 </div>
 
-<div class = "content-title">
-    <h4>Why Write an Advance Directive?</h4>
+<div class = "content-dark-copy">
+    <p>
+        By creating an advance care directive, you can state specifically which treatments and procedures you want or do not want. It
+        provides another vehicle to letting the health care providers know what your wishes are. Your directive will be followed by
+        the health care providers as it pertains directly to the situation at hand.
+        <br><br>
+        An advance care plan becomes the final say - no matter what your advocates promote or try to deny you.
+        If you are concerned that your wishes may not be followed by your advocate, you will need to state in the advance directive
+        that your health care providers may act in accordance with your instructions without the consent of your representative. You can
+        even name the procedures you would like attempted as well as the treatments you would not want.
+    </p>
+</div>
+
+
+<div class="desktop-list">
+    <div class="sub-content-list-title">
+        <h4>Life Support and Medical Interventions Include:</h4>
+    </div>
+
+    <ul class ="sub-content-dark-list yin-yang-big">
+        <li class="list-item">Tube Feedings</li>
+        <li class="list-item">Ventilators</li>
+        <li class="list-item">Kidney Dialysis</li>
+        <li class="list-item">Medications</li>
+        <li class="list-item">CPR (Cardio Pulmonary Resuscitation)</li>
+        <li class="list-item">Intubation</li>
+        <li class="list-item">Breathing Machines</li>
+        <li class="list-item">DNR Orders</li>
+    </ul>
 </div>
 
 <div class="mobile-list">
+    <div class="content-title">
+        <h4>Life Support and Medical Interventions Include:</h4>
+    </div>
+
     <ul class ="content-dark-list yin-yang-small">
-        <li class="list-item">You want to be in charge of your own health, life and death.</li>
-        <li class="list-item">Your realize that doing so now could lead to less family conflicts later.</li>
-        <li class="list-item">You trust your advocates but want to lessen the burden of them having to make difficult decisions.</li>
-        <li class="list-item">You want to eliminate confusion for your family.</li>
+        <li class="list-item">Tube Feedings</li>
+        <li class="list-item">Ventilators</li>
+        <li class="list-item">Kidney Dialysis</li>
+        <li class="list-item">Medications</li>
+        <li class="list-item">CPR (Cardio Pulmonary Resuscitation)</li>
+        <li class="list-item">Intubation</li>
+        <li class="list-item">Breathing Machines</li>
+        <li class="list-item">DNR Orders</li>
     </ul>
 </div>
 
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">You want to be in charge of your own health, life and death.</li>
-        <li class="list-item">Your realize that doing so now could lead to less family conflicts later.</li>
-        <li class="list-item">You trust your advocates but want to lessen the burden of them having to make difficult decisions.</li>
-        <li class="list-item">You want to eliminate confusion for your family.</li>
-    </ul>
-</div>
+
 
 <div class = "content-title">
     <h4>Let your Needs be Known</h4>

@@ -2,19 +2,26 @@
 
 /*******************************************************************************************************************
 
-WIDTH 90% FOR ALL LESS THAN 900px (OUR CONTENT WINDOW)
 
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 896px)    {
+and (max-width: 960px)    {
 
     .header-home-image, .header-detail-image {
         width: var(--media-unaffected-by-content-width);
     }
 
     .content-images {
-        /*width:var(--media-less-than-content-width);*/
+        width:var(--media-less-than-content-width);
+        padding:.5em 0;
+    }
+
+    /* HOME PAGE BOOKING LINK */
+    a .booking-link-grid {
+        padding:.5em;
+        margin: .5em auto;
+        width: var(--media-less-than-content-width);
     }
 
 }
@@ -25,7 +32,7 @@ MAX WIDTH 100% FOR ALL OVER 900px (OUR CONTENT WINDOW)
 
 *******************************************************************************************************************/
 @media only screen
-and (min-width:960px)   {
+and (min-width:1024px)   {
 
     .header-home-image, .header-detail-image {
         width: var(--media-unaffected-by-content-width);
@@ -33,6 +40,14 @@ and (min-width:960px)   {
 
     .content-images {
         width:var(--media-more-than-content-width);
+        padding:1em 0;
+    }
+
+    /* HOME BOOKING */
+    a .booking-link-grid {
+        width: var(--media-more-than-content-width);
+
+        margin: 1em auto;
     }
 
 }
@@ -50,6 +65,12 @@ and (orientation: portrait) {
         height: 161px;
     }
 
+    /*image is 900x450 (90% is 810 by 405 so divide 810/405 to get ratio of 50%  */
+    a .booking-link-grid {
+        height: 160px;
+    }
+
+
 }
 
 /*******************************************************************************************************************
@@ -65,6 +86,11 @@ and (orientation: landscape) {
         height: 277px;
     }
 
+    /*image is 900x450 (booking grid is 900 by 450 so divide 450/900 to get ratio of 50% and 50x360 is 180) */
+    a .booking-link-grid {
+        height: 284px;
+    }
+
 }
 
 /*******************************************************************************************************************
@@ -78,6 +104,11 @@ and (orientation: portrait) {
     /* Images - 500/1024 48.82%  */
     .header-home-image, .header-detail-image {
         height: 175px;
+    }
+
+    /*image is 900x450 (booking grid is 900 by 450 so divide 450/900 to get ratio of 50% and 50x360 is 180) */
+    a .booking-link-grid {
+        height: 180px;
     }
 
 }
@@ -96,6 +127,10 @@ and (orientation: landscape) {
         height: 202px;
     }
 
+    /* IMAGE IS 512x1024 = .5 so no shrinkage needed */
+    a .booking-link-grid {
+        height: 207px;
+    }
 }
 
 /*******************************************************************************************************************
@@ -111,6 +146,10 @@ and (orientation: portrait) {
         height: 292px;
     }
 
+    /* IMAGE IS 512x1024 = .5 so no shrinkage needed */
+    a .booking-link-grid {
+        height:300px;
+    }
 }
 
 /*******************************************************************************************************************
@@ -125,6 +164,11 @@ and (orientation: landscape) {
     /* Images - 500/1024 48.82%  */
     .header-home-image, .header-detail-image {
         height: 390px;
+    }
+
+    /* IMAGE IS 512x1024 = .5 so no shrinkage needed */
+    a .booking-link-grid {
+        height:400px;
     }
 
 }
@@ -142,6 +186,10 @@ and (orientation: portrait) {
         height: 312px;
     }
 
+    /* IMAGE IS 512x1024 = .5 so no shrinkage needed */
+    a .booking-link-grid {
+        height: 320px;
+    }
 }
 
 /*******************************************************************************************************************
@@ -152,9 +200,33 @@ and (min-width: 640px)
 and (max-width: 896px)
 and (orientation: landscape) {
 
-    /* Images - 500/1024 48.82%  */
     .header-home-image, .header-detail-image {
         height: 437px;
+    }
+
+    /* IMAGE IS 512x1024 = .5 so no shrinkage needed */
+    a .booking-link-grid {
+        height:448px;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL TABLET PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 960px)
+and (max-width: 1280px)
+and (orientation: portrait) {
+
+    /* Images - 1024x500 48.82% 0.9375 */
+    .header-home-image, .header-detail-image {
+        height: 468px;
+    }
+
+    /* IMAGE IS 1024 x 512 = .5 so no shrinkage needed */
+    a .booking-link-grid {
+        height:448px;
     }
 
 }
@@ -163,21 +235,23 @@ and (orientation: landscape) {
  GLOBAL BIG TABLETS - PORTRAIT and IPAD PORTRAIT
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 960px)
-and (max-width: 1366px)
-and (orientation: portrait) {
+and (min-width: 1024px) {
 
-    /* Images - 500/1024 48.82%  */
+    /* Images - 1024x500 48.82%  */
     .header-home-image, .header-detail-image {
-        height: 468px;
+        height: 600px;
     }
 
+    /* IMAGE IS 1024x512 = .5 so no shrinkage needed */
+    a .booking-link-grid {
+        height: 512px;
+    }
 }
 
 /*******************************************************************************************************************
  GLOBAL BIG TABLETS - LANDSCAPE and IPAD LANDSCAPE
 *******************************************************************************************************************/
-@media only screen
+/*@media only screen
 and (min-width: 960px)
 and (max-width: 1366px)
 and (orientation: landscape) {
@@ -185,7 +259,12 @@ and (orientation: landscape) {
     .header-home-image, .header-detail-image {
         height: 600px;
     }
-}
+
+    !* IMAGE IS 512x1024 so no shrinkage needed *!
+    a .booking-link-grid {
+        height: 512px;
+    }
+}*/
 
 /*******************************************************************************************************************
  GLOBAL LAPTOPS
@@ -194,33 +273,47 @@ and (orientation: landscape) {
 and (min-width: 1440px)
 and (max-width:1919px) {
 
-    /* Images - 500/1024 SO 100% HERE AND UP  */
+  /*  !* Images - 500/1024 SO 100% HERE AND UP  *!
     .header-home-image, .header-detail-image {
         height: 600px;
     }
 
+    !* IMAGE IS 450x900 so no shrinkage needed *!
+    a .booking-link-grid {
+        height:512px;
+    }
+
+    !* IMAGE IS 512x1024 so no shrinkage needed *!
+    a .booking-link-grid {
+        height: 512px;
+    }*/
 }
 
 /*******************************************************************************************************************
   DESKTOPS
 *******************************************************************************************************************/
-@media only screen
+/*@media only screen
 and (min-width: 1920px) {
 
-    /* Images - 500/1024 SO 100% HERE AND UP  */
     .header-home-image, .header-detail-image {
-        height: 600px;
+        height:600px;
     }
 
-}
+    !* IMAGE IS 512x1024 so no shrinkage needed *!
+    a .booking-link-grid {
+        height: 512px;
+    }
+
+}*/
 
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-    /* 900 wide */
+    /* 1024 wide */
     .content-images, .content-images a   {
         display:grid;
-        max-width:var(--content-width);
+        /*float:left;*/
+        max-width:var(--ipad-width);
         margin:auto;
         justify-content: center;
     }
@@ -248,7 +341,7 @@ and (min-width: 1920px) {
 
     /* PLAN AHEAD */
     .header-think-about-needs-image {
-        background-size: contain;
+        background-size: cover;
         background-image: linear-gradient(transparent 80%, rgba(0, 33, 69, .8) 90%),
         url("src/assets/images/headers/planAhead/headerThinkAboutNeeds.jpg");
     }
@@ -322,4 +415,15 @@ and (min-width: 1920px) {
         url('src/assets/images/headers/consultations/headerBookConsultation.jpg');
     }
 
+    /* HOME PAGE BOOKING LINK */
+    a .booking-link-grid {
+        display: grid;
+        float:left;
+        max-width: var(--ipad-width);
+        background-repeat: no-repeat;
+        background-image: url("src/assets/images/details/home/bookSessionText.jpg");
+        background-size: contain;
+        align-content: flex-end;
+        justify-content: center;
+    }
 }

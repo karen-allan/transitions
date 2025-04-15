@@ -11,7 +11,7 @@
     <h1>{{title.toUpperCase()}}</h1>
 </div>
 
-<div class="content-dark-copy pad-top">
+<div class="content-dark-copy">
     <p>
         Let's say you are in an accident or suffer a critical illness and end up in Emergency and are incapable of
         answering for yourself. When you arrive at the hospital - a health care team member must contact your
@@ -37,11 +37,29 @@
     </p>
 </div>
 
-<div class="content-title">
-    <h4>TSDM List of Next of Kin</h4>
+<div class="desktop-list">
+    <div class="sub-content-list-title">
+        <h4>TSDM List of Next of Kin</h4>
+    </div>
+
+    <ul class ="sub-content-dark-list yin-yang-big">
+        <li class="list-item">Spouse</li>
+        <li class="list-item">Adult Children if any</li>
+        <li class="list-item">Parents</li>
+        <li class="list-item">Siblings</li>
+        <li class="list-item">Grandparents</li>
+        <li class="list-item">Grandchildren</li>
+        <li class="list-item">Others related by birth or adoption</li>
+        <li class="list-item">Close friend(s)</li>
+        <li class="list-item">Others related by marriage</li>
+    </ul>
 </div>
 
 <div class="mobile-list">
+    <div class="content-title">
+        <h4>TSDM List of Next of Kin</h4>
+    </div>
+
     <ul class ="content-dark-list yin-yang-small">
         <li class="list-item">Spouse</li>
         <li class="list-item">Adult Children if any</li>
@@ -55,21 +73,7 @@
     </ul>
 </div>
 
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">Spouse</li>
-        <li class="list-item">Adult Children if any</li>
-        <li class="list-item">Parents</li>
-        <li class="list-item">Siblings</li>
-        <li class="list-item">Grandparents</li>
-        <li class="list-item">Grandchildren</li>
-        <li class="list-item">Others related by birth or adoption</li>
-        <li class="list-item">Close friend(s)</li>
-        <li class="list-item">Others related by marriage</li>
-    </ul>
-</div>
-
-<div class="content-title pad-bottom">
+<div class="content-title">
     <div *ngIf="sectionSelected === 'triggeredSection1'">
         <h6>
             <a (click)="this.getTriggeredPromptKey(0)">
@@ -102,7 +106,19 @@
         highly unlikely that they will work their way down the list to that level. Maybe instead, they will choose your spouse,
         the top person on the list to call. This could be a soon-to-be-ex-spouse who may not have your best interests at heart.
         Your new significant other, who is your true love, may not even show up on the list.
-        <br><br>
+    </p>
+</div>
+
+<div class="detail-quote">
+    <p>
+        &#8220;The best index to a person's character is how they treat people who can't do them any good and how they treat people
+        who can't fight back.&#8220;
+    </p>
+    <span>Abigail Van Buren</span>
+</div>
+
+<div class="content-dark-copy">
+    <p>
         The confusing part about this form is that it implies that you can simply enter the names of your family members and then circle
         the person you want to protect you. But they are under no obligation to pick your chosen person, the one you may have circled in
         other words. All it does is make it easier for the health care team to contact your family members.
@@ -128,7 +144,20 @@
         You do not need to spend money specifying your Representative(s) - no need for a lawyer or notary unless you feel you want to go
         that route. The Representative Section 9 form is considered valid and legal in B.C. as long as it is signed by you, your
         representatives and your witnesses.
-        <br><br>
+    </p>
+</div>
+
+<div class="detail-quote">
+    <p>
+        &#8220;Woe, destruction, ruin, and decay; The worst is death, and death will have his day.&#8221;
+    </p>
+    <span>
+        William Shakespeare
+    </span>
+</div>
+
+<div class="content-dark-copy">
+    <p>
         Before completing the Representative Section 9 form, you should ask the person or persons you want to assign the task first to
         make sure they are willing to take on the task.
         <br><br>
@@ -137,12 +166,8 @@
     </p>
 </div>
 
-<div class="content-images pad-top">
-    <img src="assets/images/details/getHelp/bookConsult/subwaySleeper.jpg" alt="subway Sleeper" title="subway Sleeper">
-</div>
-
 <div class="content-title">
-    <h4>What care can an advocate provide?</h4>
+    <h4>What Care can an Advocate Provide?</h4>
 </div>
 
 <div class="content-dark-copy">
@@ -152,13 +177,28 @@
     </p>
 </div>
 
-<div class="content-title">
-    <h4>
-        Personal Care Decisions your Advocate can Make:
-    </h4>
+<div class="desktop-list">
+    <div class="sub-content-list-title">
+        <h4>
+            Personal Care Decisions your Advocate can Make:
+        </h4>
+    </div>
+
+    <ul class ="sub-content-dark-list yin-yang-big">
+        <li class="list-item">where you will reside when in care (examples are a hospital, home care, hospice etc.)</li>
+        <li class="list-item">your diet (ie alert them to foods you are allergic to, whether vegetarian etc. </li>
+        <li class="list-item">your clothing and hygiene - they can bring you the clothes you like etc.</li>
+        <li class="list-item">who can have contact with you and who should not.</li>
+    </ul>
 </div>
 
 <div class="mobile-list">
+    <div class="content-title">
+        <h4>
+            Personal Care Decisions your Advocate can Make:
+        </h4>
+    </div>
+
     <ul class ="content-dark-list yin-yang-small">
         <li class="list-item">where you will reside when in care (examples are a hospital, home care, hospice etc.)</li>
         <li class="list-item">your diet (ie alert them to foods you are allergic to, whether vegetarian etc. </li>
@@ -168,22 +208,13 @@
 </div>
 
 <div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">where you will reside when in care (examples are a hospital, home care, hospice etc.)</li>
-        <li class="list-item">your diet (ie alert them to foods you are allergic to, whether vegetarian etc. </li>
-        <li class="list-item">your clothing and hygiene - they can bring you the clothes you like etc.</li>
-        <li class="list-item">who can have contact with you and who should not.</li>
-    </ul>
-</div>
+    <div class="sub-content-list-title">
+        <h4>
+            Health care decisions your Advocate can make for you:
+        </h4>
+    </div>
 
-<div class="content-title">
-    <h4>
-        Health care decisions your Advocate can make for you:
-    </h4>
-</div>
-
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
+    <ul class ="sub-content-dark-list yin-yang-big">
         <li class="list-item">agreeing to any tests or examinations.</li>
         <li class="list-item">agreeing to treatments and procedures such as surgery.</li>
         <li class="list-item">agreeing to the giving of medications and vaccines.</li>
@@ -191,8 +222,14 @@
     </ul>
 </div>
 
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
+<div class="mobile-list">
+    <div class="content-title">
+        <h4>
+            Health care decisions your Advocate can make for you:
+        </h4>
+    </div>
+
+    <ul class ="content-dark-list yin-yang-small">
         <li class="list-item">agreeing to any tests or examinations.</li>
         <li class="list-item">agreeing to treatments and procedures such as surgery.</li>
         <li class="list-item">agreeing to the giving of medications and vaccines.</li>
@@ -208,228 +245,12 @@
 
 <div class="content-dark-copy">
     <p>
-        <!--You can leave the choosing of your health advocate up to the health care team by NOT setting up a Representative. They will
-        choose your advocate by following the Temporary Substitute Decision Maker List moving from the top of the list down. They will
-        try to contact the person at the top, if not available they will move down till they find someone who will agree to represent you.
-        <br><br>-->
         This person will now be able to request or deny any health care treatments presented by the health care team as necessary or
         recommended UNLESS you have written an advance care document specifically stating which treatments you reject or accept.
-        <br><br>
-        <!--So it is a bit of a crap shoot in this situation in that who represents you is not chosen by you, yourself, the one who matters
-        in all this.
-        <br><br>-->
-
-        The only way you can actually name your Advocate
-        (in B.C.) is to fill out the Representative Section 9 form and have it witnessed by one or two people (one only if a lawyer or
-        notary) dated and printed. You can use our (free) <a routerLink="/chooseReps">Choose your Representative Wizard</a> to do this
-        now. Print it and store it with your other papers.
-        <br><br>
-        Fill out the TSDM form if you want to provide them with phone numbers and addresses of important people, but realize it is not a
-        legally binding paper and does not protect you like a Representative Secion 9 does.
     </p>
 </div>
 
-<div class="detail-quote">
-    <p>
-        &#8220;The best index to a person's character is how they treat people who can't do them any good and how they treat people
-        who can't fight back.&#8220;
-    </p>
-    <span>Abigail Van Buren</span>
-</div>
-
 <div class="content-title">
-    <h4>Legal Requirements for Assigning a Representative:</h4>
-</div>
-
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
-        <li class="list-item">They must be 19 years of age or older.</li>
-        <li class="list-item">they must not provides personal care or health care services to you for compensation.</li>
-        <li class="list-item">they may not be an employee at a facility where you reside such as a care home (unless they are your child,
-            parent or spouse).
-        </li>
-    </ul>
-</div>
-
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">They must be 19 years of age or older.</li>
-        <li class="list-item">they must not provides personal care or health care services to you for compensation.</li>
-        <li class="list-item">they may not be an employee at a facility where you reside such as a care home (unless they are your child,
-            parent or spouse).
-        </li>
-    </ul>
-</div>
-
-<div class="content-title">
-    <h4>Some of the things to consider:</h4>
-</div>
-
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
-        <li class="list-item">Would they be accountable to you and the health care personnel?</li>
-        <li class="list-item">Would they be able to exercise the duties set out for them?</li>
-        <li class="list-item">Would they act honestly and honorably on your behalf?</li>
-        <li class="list-item">Do they have good communication skills?</li>
-        <li class="list-item">Would they respect and abide by your wishes?</li>
-        <li class="list-item">Are they careful record keepers?</li>
-        <li class="list-item">Are they confident enough to accept sole authority for your care?</li>
-        <li class="list-item">Are they capable of also seeking advice from others?</li>
-        <li class="list-item">Can they keep all information confidential?</li>
-        <li class="list-item">Can they remain calm in a crisis?</li>
-        <li class="list-item">Are they ready and willing to take on the role?</li>
-        <li class="list-item">Do you trust them to make the proper decisions for you?</li>
-        <li class="list-item">Can they make difficult decisions?</li>
-    </ul>
-</div>
-
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">Would they be accountable to you and the health care personnel?</li>
-        <li class="list-item">Would they be able to exercise the duties set out for them?</li>
-        <li class="list-item">Would they act honestly and honorably on your behalf?</li>
-        <li class="list-item">Do they have good communication skills?</li>
-        <li class="list-item">Would they respect and abide by your wishes?</li>
-        <li class="list-item">Are they careful record keepers?</li>
-        <li class="list-item">Are they confident enough to accept sole authority for your care?</li>
-        <li class="list-item">Are they capable of also seeking advice from others?</li>
-        <li class="list-item">Can they keep all information confidential?</li>
-        <li class="list-item">Can they remain calm in a crisis?</li>
-        <li class="list-item">Are they ready and willing to take on the role?</li>
-        <li class="list-item">Do you trust them to make the proper decisions for you?</li>
-        <li class="list-item">Can they make difficult decisions?</li>
-    </ul>
-</div>
-
-<div class="content-title">
-    <h4>Your Representative has the right to:</h4>
-</div>
-
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
-        <li class="list-item">Visit and talk to you as needed with open communication.</li>
-        <li class="list-item">The same medical information you would have access to.</li>
-        <li class="list-item">Ask all reasonable questions about your health and prognosis.</li>
-        <li class="list-item">Be paid for out-of-pocket expenses related to your care (keep receipts).</li>
-        <li class="list-item">Hire help and support to help them carry out your written requests.</li>
-        <li class="list-item">Be protected from liability for any errors or damages that occur.</li>
-        <li class="list-item">Resign from the role at any time.</li>
-        <li class="list-item">Request compassionate leave from work to care for you.</li>
-    </ul>
-</div>
-
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">Visit and talk to you as needed with open communication.</li>
-        <li class="list-item">The same medical information you would have access to.</li>
-        <li class="list-item">Ask all reasonable questions about your health and prognosis.</li>
-        <li class="list-item">Be paid for out-of-pocket expenses related to your care (keep receipts).</li>
-        <li class="list-item">Hire help and support to help them carry out your written requests.</li>
-        <li class="list-item">Be protected from liability for any errors or damages that occur.</li>
-        <li class="list-item">Resign from the role at any time.</li>
-        <li class="list-item">Request compassionate leave from work to care for you.</li>
-    </ul>
-</div>
-
-<div class="content-title">
-    <h4>Your Representative has a duty to:</h4>
-</div>
-
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
-        <li class="list-item">Consider whether your health is likely to be improved by a treatment or not.</li>
-        <li class="list-item">Consider if your well-being will be improved by a proposed treatment.</li>
-        <li class="list-item">Consider if the proposed treatment’s benefits outweigh the risks.</li>
-        <li class="list-item">Investigate whether a less intrusive treatment may be as helpful.</li>
-        <li class="list-item">Resist being pressured into agreeing to any treatment you would not want.</li>
-        <li class="list-item">Review your wishes (ex. once a year) or as your health changes.</li>
-        <li class="list-item">Allow you say should you still have the capability to make partial decisions.</li>
-        <li class="list-item">Follow your wishes no matter how they feel about them.</li>
-        <li class="list-item">Ensure that they have access to all your health records, prescriptions etc.</li>
-        <li class="list-item">Has all advance care documents for easy access.</li>
-    </ul>
-</div>
-
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">Consider whether your health is likely to be improved by a treatment or not.</li>
-        <li class="list-item">Consider if your well-being will be improved by a proposed treatment.</li>
-        <li class="list-item">Consider if the proposed treatment’s benefits outweigh the risks.</li>
-        <li class="list-item">Investigate whether a less intrusive treatment may be as helpful.</li>
-        <li class="list-item">Resist being pressured into agreeing to any treatment you would not want.</li>
-        <li class="list-item">Review your wishes (ex. once a year) or as your health changes.</li>
-        <li class="list-item">Allow you say should you still have the capability to make partial decisions.</li>
-        <li class="list-item">Follow your wishes no matter how they feel about them.</li>
-        <li class="list-item">Ensure that they have access to all your health records, prescriptions etc.</li>
-        <li class="list-item">Has all advance care documents for easy access.</li>
-    </ul>
-</div>
-
-<div class="content-title">
-    <h4>Your Representative can not:</h4>
-</div>
-
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
-        <li class="list-item">Make some decisions related to your mental health.</li>
-        <li class="list-item">Authorize removal of organs.</li>
-        <li class="list-item">Allow for experimental health care practices.</li>
-        <li class="list-item">Authorize abortions or sterilization.</li>
-        <li class="list-item">Take over care and education of your underage (less than 19) children or other dependents.</li>
-        <li class="list-item">Allow for methods that interfere with your religious beliefs.</li>
-        <li class="list-item">Make changes to your Will.</li>
-        <li class="list-item">Give or refuse consent on your behalf to any type of health care prescribed under section 34 (2) (f) of the
-            Health Care (Consent) and Care Facility (Admission) Act.
-        </li>
-    </ul>
-</div>
-
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">Make some decisions related to your mental health.</li>
-        <li class="list-item">Authorize removal of organs.</li>
-        <li class="list-item">Allow for experimental health care practices.</li>
-        <li class="list-item">Authorize abortions or sterilization.</li>
-        <li class="list-item">Take over care and education of your underage (less than 19) children or other dependents.</li>
-        <li class="list-item">Allow for methods that interfere with your religious beliefs.</li>
-        <li class="list-item">Make changes to your Will.</li>
-        <li class="list-item">Give or refuse consent on your behalf to any type of health care prescribed under section 34 (2) (f) of the
-            Health Care (Consent) and Care Facility (Admission) Act.
-        </li>
-    </ul>
-</div>
-
-<div class="content-title">
-    <h4>Witness Criteria - The following persons may not be a Witness:</h4>
-</div>
-
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
-        <li class="list-item">Your primary or alternate Representative.</li>
-        <li class="list-item">A spouse, child, parent or employee of either Representative.</li>
-        <li class="list-item">A person who provides personal care, health care or financial services to you for compensation (other than a
-            Lawyer or Notary Public).
-        </li>
-        <li class="list-item">A person who is under 19 years of age.</li>
-        <li class="list-item">A person who does not understand the type of communication used by you if there is no access to an interpreter.
-        </li>
-    </ul>
-</div>
-
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
-        <li class="list-item">Your primary or alternate Representative.</li>
-        <li class="list-item">A spouse, child, parent or employee of either Representative.</li>
-        <li class="list-item">A person who provides personal care, health care or financial services to you for compensation (other than a
-            Lawyer or Notary Public).
-        </li>
-        <li class="list-item">A person who is under 19 years of age.</li>
-        <li class="list-item">A person who does not understand the type of communication used by you if there is no access to an interpreter.
-        </li>
-    </ul>
-</div>
-
-<div class="content-title pad-bottom">
     <div *ngIf="sectionSelected === 'triggeredSection2'">
         <h6>
             <a (click)="this.getTriggeredPromptKey(0)">
@@ -453,6 +274,232 @@
     </div>
 </div>
 
+<div class="content-dark-copy">
+    <p>
+        The only way you can actually name your Advocate
+        (in B.C.) is to fill out the Representative Section 9 form and have it witnessed by one or two people (one only if a lawyer or
+        notary) dated and printed.
+        <br><br>
+        Fill out the TSDM form if you want to provide them with phone numbers and addresses of important people, but realize it is not a
+        legally binding paper and does not protect you like a Representative Secion 9 does.
+    </p>
+</div>
+
+<div class="desktop-list">
+    <div class="sub-content-list-title">
+        <h4>Legal Requirements for Assigning a Representative:</h4>
+    </div>
+
+    <ul class ="sub-content-dark-list yin-yang-big">
+        <li class="list-item">They must be 19 years of age or older.</li>
+        <li class="list-item">they must not provides personal care or health care services to you for compensation.</li>
+        <li class="list-item">they may not be an employee at a facility where you reside such as a care home (unless they are your child,
+            parent or spouse).
+        </li>
+    </ul>
+</div>
+
+<div class="mobile-list">
+    <div class="content-title">
+        <h4>Legal Requirements for Assigning a Representative:</h4>
+    </div>
+
+    <ul class ="content-dark-list yin-yang-small">
+        <li class="list-item">They must be 19 years of age or older.</li>
+        <li class="list-item">they must not provides personal care or health care services to you for compensation.</li>
+        <li class="list-item">they may not be an employee at a facility where you reside such as a care home (unless they are your child,
+            parent or spouse).
+        </li>
+    </ul>
+</div>
+
+<div class="desktop-list">
+    <div class="sub-content-list-title">
+        <h4>Some of the things to consider:</h4>
+    </div>
+
+    <ul class ="sub-content-dark-list yin-yang-big">
+        <li class="list-item">Would they be accountable to you and the health care personnel?</li>
+        <li class="list-item">Would they be able to exercise the duties set out for them?</li>
+        <li class="list-item">Would they act honestly and honorably on your behalf?</li>
+        <li class="list-item">Do they have good communication skills?</li>
+        <li class="list-item">Would they respect and abide by your wishes?</li>
+        <li class="list-item">Are they careful record keepers?</li>
+        <li class="list-item">Are they confident enough to accept sole authority for your care?</li>
+        <li class="list-item">Are they capable of also seeking advice from others?</li>
+        <li class="list-item">Can they keep all information confidential?</li>
+        <li class="list-item">Can they remain calm in a crisis?</li>
+        <li class="list-item">Are they ready and willing to take on the role?</li>
+        <li class="list-item">Do you trust them to make the proper decisions for you?</li>
+        <li class="list-item">Can they make difficult decisions?</li>
+    </ul>
+</div>
+
+<div class="mobile-list">
+    <div class="content-title">
+        <h4>Some of the things to consider:</h4>
+    </div>
+
+    <ul class ="content-dark-list yin-yang-small">
+        <li class="list-item">Would they be accountable to you and the health care personnel?</li>
+        <li class="list-item">Would they be able to exercise the duties set out for them?</li>
+        <li class="list-item">Would they act honestly and honorably on your behalf?</li>
+        <li class="list-item">Do they have good communication skills?</li>
+        <li class="list-item">Would they respect and abide by your wishes?</li>
+        <li class="list-item">Are they careful record keepers?</li>
+        <li class="list-item">Are they confident enough to accept sole authority for your care?</li>
+        <li class="list-item">Are they capable of also seeking advice from others?</li>
+        <li class="list-item">Can they keep all information confidential?</li>
+        <li class="list-item">Can they remain calm in a crisis?</li>
+        <li class="list-item">Are they ready and willing to take on the role?</li>
+        <li class="list-item">Do you trust them to make the proper decisions for you?</li>
+        <li class="list-item">Can they make difficult decisions?</li>
+    </ul>
+</div>
+
+<div class="desktop-list">
+    <div class="sub-content-list-title">
+        <h4>Your Representative has the right to:</h4>
+    </div>
+
+    <ul class ="sub-content-dark-list yin-yang-big">
+        <li class="list-item">Visit and talk to you as needed with open communication.</li>
+        <li class="list-item">The same medical information you would have access to.</li>
+        <li class="list-item">Ask all reasonable questions about your health and prognosis.</li>
+        <li class="list-item">Be paid for out-of-pocket expenses related to your care (keep receipts).</li>
+        <li class="list-item">Hire help and support to help them carry out your written requests.</li>
+        <li class="list-item">Be protected from liability for any errors or damages that occur.</li>
+        <li class="list-item">Resign from the role at any time.</li>
+        <li class="list-item">Request compassionate leave from work to care for you.</li>
+    </ul>
+</div>
+
+<div class="mobile-list">
+    <div class="content-title">
+        <h4>Your Representative has the right to:</h4>
+    </div>
+
+    <ul class ="content-dark-list yin-yang-small">
+        <li class="list-item">Visit and talk to you as needed with open communication.</li>
+        <li class="list-item">The same medical information you would have access to.</li>
+        <li class="list-item">Ask all reasonable questions about your health and prognosis.</li>
+        <li class="list-item">Be paid for out-of-pocket expenses related to your care (keep receipts).</li>
+        <li class="list-item">Hire help and support to help them carry out your written requests.</li>
+        <li class="list-item">Be protected from liability for any errors or damages that occur.</li>
+        <li class="list-item">Resign from the role at any time.</li>
+        <li class="list-item">Request compassionate leave from work to care for you.</li>
+    </ul>
+</div>
+
+<div class="desktop-list">
+    <div class="sub-content-list-title">
+        <h4>Your Representative has a duty to:</h4>
+    </div>
+    <ul class ="sub-content-dark-list yin-yang-big">
+        <li class="list-item">Consider whether your health is likely to be improved by a treatment or not.</li>
+        <li class="list-item">Consider if your well-being will be improved by a proposed treatment.</li>
+        <li class="list-item">Consider if the proposed treatment’s benefits outweigh the risks.</li>
+        <li class="list-item">Investigate whether a less intrusive treatment may be as helpful.</li>
+        <li class="list-item">Resist being pressured into agreeing to any treatment you would not want.</li>
+        <li class="list-item">Review your wishes (ex. once a year) or as your health changes.</li>
+        <li class="list-item">Allow you say should you still have the capability to make partial decisions.</li>
+        <li class="list-item">Follow your wishes no matter how they feel about them.</li>
+        <li class="list-item">Ensure that they have access to all your health records, prescriptions etc.</li>
+        <li class="list-item">Has all advance care documents for easy access.</li>
+    </ul>
+</div>
+
+<div class="mobile-list">
+    <div class="content-title">
+        <h4>Your Representative has a duty to:</h4>
+    </div>
+
+    <ul class ="content-dark-list yin-yang-small">
+        <li class="list-item">Consider whether your health is likely to be improved by a treatment or not.</li>
+        <li class="list-item">Consider if your well-being will be improved by a proposed treatment.</li>
+        <li class="list-item">Consider if the proposed treatment’s benefits outweigh the risks.</li>
+        <li class="list-item">Investigate whether a less intrusive treatment may be as helpful.</li>
+        <li class="list-item">Resist being pressured into agreeing to any treatment you would not want.</li>
+        <li class="list-item">Review your wishes (ex. once a year) or as your health changes.</li>
+        <li class="list-item">Allow you say should you still have the capability to make partial decisions.</li>
+        <li class="list-item">Follow your wishes no matter how they feel about them.</li>
+        <li class="list-item">Ensure that they have access to all your health records, prescriptions etc.</li>
+        <li class="list-item">Has all advance care documents for easy access.</li>
+    </ul>
+</div>
+
+<div class="desktop-list">
+    <div class="sub-content-list-title">
+        <h4>Your Representative can not:</h4>
+    </div>
+
+    <ul class ="sub-content-dark-list yin-yang-big">
+        <li class="list-item">Make some decisions related to your mental health.</li>
+        <li class="list-item">Authorize removal of organs.</li>
+        <li class="list-item">Allow for experimental health care practices.</li>
+        <li class="list-item">Authorize abortions or sterilization.</li>
+        <li class="list-item">Take over care and education of your underage (less than 19) children or other dependents.</li>
+        <li class="list-item">Allow for methods that interfere with your religious beliefs.</li>
+        <li class="list-item">Make changes to your Will.</li>
+        <li class="list-item">Give or refuse consent on your behalf to any type of health care prescribed under section 34 (2) (f) of the
+            Health Care (Consent) and Care Facility (Admission) Act.
+        </li>
+    </ul>
+</div>
+
+<div class="mobile-list">
+    <div class="content-title">
+        <h4>Your Representative can not:</h4>
+    </div>
+
+    <ul class ="content-dark-list yin-yang-small">
+        <li class="list-item">Make some decisions related to your mental health.</li>
+        <li class="list-item">Authorize removal of organs.</li>
+        <li class="list-item">Allow for experimental health care practices.</li>
+        <li class="list-item">Authorize abortions or sterilization.</li>
+        <li class="list-item">Take over care and education of your underage (less than 19) children or other dependents.</li>
+        <li class="list-item">Allow for methods that interfere with your religious beliefs.</li>
+        <li class="list-item">Make changes to your Will.</li>
+        <li class="list-item">Give or refuse consent on your behalf to any type of health care prescribed under section 34 (2) (f) of the
+            Health Care (Consent) and Care Facility (Admission) Act.
+        </li>
+    </ul>
+</div>
+
+<div class="sub-content-list-title">
+    <div class="sub-content-title">
+        <h4>Witness Criteria - The following persons may not be a Witness:</h4>
+    </div>
+
+    <ul class ="content-dark-list yin-yang-big">
+        <li class="list-item">Your primary or alternate Representative.</li>
+        <li class="list-item">A spouse, child, parent or employee of either Representative.</li>
+        <li class="list-item">A person who provides personal care, health care or financial services to you for compensation (other than a
+            Lawyer or Notary Public).
+        </li>
+        <li class="list-item">A person who is under 19 years of age.</li>
+        <li class="list-item">A person who does not understand the type of communication used by you if there is no access to an interpreter.
+        </li>
+    </ul>
+</div>
+
+<div class="mobile-list">
+    <div class="content-title">
+        <h4>Witness Criteria - The following persons may not be a Witness:</h4>
+    </div>
+
+    <ul class ="content-dark-list yin-yang-small">
+        <li class="list-item">Your primary or alternate Representative.</li>
+        <li class="list-item">A spouse, child, parent or employee of either Representative.</li>
+        <li class="list-item">A person who provides personal care, health care or financial services to you for compensation (other than a
+            Lawyer or Notary Public).
+        </li>
+        <li class="list-item">A person who is under 19 years of age.</li>
+        <li class="list-item">A person who does not understand the type of communication used by you if there is no access to an interpreter.
+        </li>
+    </ul>
+</div>
+
 <div class="content-title">
     <h4>
         Want to Choose Your Representatives Now?
@@ -464,53 +511,9 @@
         If you have read all about this subject and you know who you want to choose to advocate for you, you can get it done and done
         fast by running our
         <b><a target="new" routerLink={{pathObject.child2_url}} > {{pathObject.parent_name}} > {{pathObject.child2_name}}</a></b> wizard.
-        No
-        data is
-        saved
-        and you can run through it as many times as you like. Once you feel good about your choices, print it out. Then once you have
+        No data is saved and you can run through it as many times as you like. Once you feel good about your choices, print it out. Then once you have
         your representatives and witness together, get it signed. Store it along with your other important papers.
     </p>
 </div>
 
-
-
-<!--
-<div class="content-title">
-    <h4>Changing your Representative(s)</h4>
-</div>
-
-<div class="content-dark-copy">
-    <p>
-        If you already have a Representative appointed that you need to remove, you need to give written notice of the revocation to
-        the representative and the alternate representative named in that representation agreement. Revocation of a
-        former Section 9 Representation Agreement is effective when this notice is given, or on a later date stated in the notice. This
-        form must be witnessed by a lawyer or notary public.
-    </p>
-</div>
-
-
-<div class="content-title pad-bottom">
-    <div *ngIf="sectionSelected === 'triggeredSection3'">
-        <h6>
-            <a (click)="this.getTriggeredPromptKey(0)">
-                Close Change Your Representative Form:&#x25BC;
-            </a>
-        </h6>
-    </div>
-
-    <div *ngIf="sectionSelected != 'triggeredSection3'">
-        <h6>
-            <a (click)="this.getTriggeredPromptKey(3)">
-                See Change Your Representative Form:&#x25B6;
-            </a>
-        </h6>
-    </div>
-</div>
-
-<div *ngIf="sectionSelected === 'triggeredSection3'">
-    <div class="content-images with-dark-border">
-        <img alt="Change Your Representative" src="assets/images/details/planAhead/considerAdvocates/changeRepForm.jpg">
-    </div>
-</div>
--->
 

@@ -21,12 +21,12 @@
     <ul class="sub-form-menu">
         <div class="sub-form-menu-item">
             <li *ngIf="showPlanningEditor">
-                <div class="content-title">
+                <div class="sub-content-list-title">
                     <h4>{{consult1.toUpperCase()}}</h4>
                 </div>
             </li>
             <li *ngIf="!showPlanningEditor">
-                <div class="content-title">
+                <div class="sub-content-list-title">
                     <h4><a (click)="toggleEditor('planning')">{{consult1.toUpperCase()}}</a></h4>
                 </div>
             </li>
@@ -34,12 +34,12 @@
 
         <div class="sub-form-menu-item">
             <li *ngIf="showCaregiverEditor">
-                <div class="content-title">
+                <div class="sub-content-list-title">
                     <h4>{{consult2.toUpperCase()}}</h4>
                 </div>
             </li>
             <li *ngIf="!showCaregiverEditor">
-                <div class="content-title">
+                <div class="sub-content-list-title">
                     <h4><a (click)="toggleEditor('caregiver')">{{consult2.toUpperCase()}}</a></h4>
                 </div>
             </li>
@@ -47,12 +47,12 @@
 
         <div class="sub-form-menu-item">
             <li *ngIf="showPatientEditor">
-                <div class="content-title">
+                <div class="sub-content-list-title">
                     <h4>{{consult3.toUpperCase()}}</h4>
                 </div>
             </li>
             <li *ngIf="!showPatientEditor">
-                <div class="content-title">
+                <div class="sub-content-list-title">
                     <h4><a (click)="toggleEditor('patient')">{{consult3.toUpperCase()}}</a></h4>
                 </div>
             </li>
@@ -62,7 +62,7 @@
 
 <ng-container *ngIf="showPlanningEditor">
     <div class="sub-form-menu-prompt-block">
-        <div class="content-title">
+        <div class="sub-content-list-title">
             <h5>{{consult1.toUpperCase()}}</h5>
         </div>
     </div>
@@ -70,7 +70,7 @@
 
 <ng-container *ngIf="showCaregiverEditor">
     <div class="sub-form-menu-prompt-block">
-        <div class="content-title">
+        <div class="sub-content-list-title">
             <h5>{{consult2.toUpperCase()}}</h5>
         </div>
     </div>
@@ -78,7 +78,7 @@
 
 <ng-container *ngIf="showPatientEditor">
     <div class="sub-form-menu-prompt-block">
-        <div class="content-title">
+        <div class="sub-content-list-title">
             <h5>{{consult3.toUpperCase()}}</h5>
         </div>
     </div>

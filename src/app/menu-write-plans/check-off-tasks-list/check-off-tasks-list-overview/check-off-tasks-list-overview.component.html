@@ -1,14 +1,14 @@
 <div class="header-detail-image header-create-checklist-image">
     <div class="header-quote">
-        &#8220;{{quote}}&#8220;
+        &#8220;{{ quote }}&#8220;
     </div>
     <div class="header-author">
-        {{author}}
+        {{ author }}
     </div>
 </div>
 
 <div class="content-title">
-    <h1>{{title.toUpperCase()}}</h1>
+    <h1>{{ title.toUpperCase() }}</h1>
 </div>
 
 <div class="content-title">
@@ -35,17 +35,21 @@
         to put together a Will either through a lawyer or notary public or by purchasing a Will kit to do yourself.
         <br><br>
         To know what your rights are regarding your own life and death so you can be empowered, not left in the dark, check out our
-        <a routerLink={{pathObject.child4_url}} > {{pathObject.parent_name}} > {{pathObject.child4_name}}</a>  page.
+        <b> <a target="new" routerLink={{pathObject.child4_url}}> {{ pathObject.parent_name }} > {{ pathObject.child4_name }}</a> </b> page.
         Here are a few basic things to consider:
     </p>
 </div>
 
-<div class = "content-title">
+<div class="content-title">
     <h4>Step 3: Share your Information with your Advocate(s)</h4>
 </div>
 
-<div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
+<div class="desktop-list">
+    <div class="sub-content-list-title">
+        <h4>Get your Papers Together</h4>
+    </div>
+
+    <ul class="sub-content-dark-list yin-yang-big">
         <li class="list-item">The contact information for your Lawyer or Notary.</li>
         <li class="list-item">Whether you have a will and the location of your Will.</li>
         <li class="list-item">The company that provides your Life Insurance.</li>
@@ -58,8 +62,12 @@
     </ul>
 </div>
 
-<div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
+<div class="mobile-list">
+    <div class="content-title">
+        <h4>Get your Papers Together</h4>
+    </div>
+
+    <ul class="content-dark-list yin-yang-small">
         <li class="list-item">The contact information for your Lawyer or Notary.</li>
         <li class="list-item">Whether you have a will and the location of your Will.</li>
         <li class="list-item">The company that provides your Life Insurance.</li>
@@ -72,12 +80,16 @@
     </ul>
 </div>
 
-<div class = "content-title">
-    <h4>Step 4: Do the Personal Stuff</h4>
+<div class="content-title">
+    <h4>Step 4: Do the Yucky Stuff</h4>
 </div>
 
 <div class="desktop-list">
-    <ul class ="content-dark-list yin-yang-big">
+    <div class="sub-content-list-title">
+        <h4>Be a Step Ahead</h4>
+    </div>
+
+    <ul class="sub-content-dark-list yin-yang-big">
         <li class="list-item">Organ donor permission form (sign up at transplant.bc.ca).</li>
         <li class="list-item">If you have a cemetery plot paid for, the location of it.</li>
         <li class="list-item">The contact information for all relevant people who need to be informed.</li>
@@ -85,46 +97,107 @@
 </div>
 
 <div class="mobile-list">
-    <ul class ="content-dark-list yin-yang-small">
+    <div class="content-title">
+        <h4>Be a Step Ahead</h4>
+    </div>
+
+    <ul class="content-dark-list yin-yang-small">
         <li class="list-item">Organ donor permission form (sign up at transplant.bc.ca).</li>
         <li class="list-item">If you have a cemetery plot paid for, the location of it.</li>
         <li class="list-item">The contact information for all relevant people who need to be informed.</li>
     </ul>
 </div>
 
-<div class = "content-title">
+<div class="content-title">
     <h4>Step 5: Know your Rights</h4>
 </div>
 
-<div class="content-dark-copy">
-    <p>
-        <b>&#x2638;&nbsp;</b>You have more rights than you know. Read about them at
-        <b><a target="new" routerLink={{pathObject.child4_url}}> {{ pathObject.parent_name }} > {{ pathObject.child4_name }}</a> </b>
-        wizard.
-    </p>
+<div class="desktop-list">
+    <div class="sub-content-list-title">
+        <h4>Be Knowledgeable</h4>
+    </div>
+
+    <ul class="sub-content-dark-list yin-yang-big">
+        <li class="list-item">
+            You have more rights than you know. Read about them at
+            <b><a target="new" routerLink={{pathObject.child4_url}}> {{ pathObject.parent_name }} > {{ pathObject.child4_name }}</a> </b>
+            wizard.
+        </li>
+    </ul>
 </div>
 
-<div class = "content-title">
+<div class="mobile-list">
+    <div class="content-title">
+        <h4>Be Knowledgeable</h4>
+    </div>
+
+    <ul class="content-dark-list yin-yang-small">
+        <li class="list-item">
+            You have more rights than you know. Read about them at
+            <b><a target="new" routerLink={{pathObject.child4_url}}> {{ pathObject.parent_name }} > {{ pathObject.child4_name }}</a> </b>
+            wizard.
+        </li>
+    </ul>
+</div>
+
+<div class="content-title">
     <h4>Step 6: Follow our Wizards!</h4>
 </div>
 
-<div class="content-dark-copy">
-    <p>
-        <b>&#x2638;&nbsp;</b>To write down your wishes for end of life care, run our
-        <b><a target="new" routerLink={{pathObject.child1_url}}> {{ pathObject.parent_name }} > {{ pathObject.child1_name }}</a> </b>
-        wizard.
-        <br><br>
-        <b>&#x2638;&nbsp;</b>To nail down your advocates for your care, run our
-        <b><a target="new" routerLink={{pathObject.child2_url}}> {{ pathObject.parent_name }} > {{ pathObject.child2_name }}</a> </b>
-        wizard.
-        <br><br>
-        <b>&#x2638;&nbsp;</b>To write your Advance Care Plan run our
-        <b><a target="new" routerLink={{pathObject.child3_url}}> {{ pathObject.parent_name }} > {{ pathObject.child3_name }}</a> </b>
-        wizard.
-    </p>
+<div class="desktop-list">
+    <div class="sub-content-list-title">
+        <h4>Put Ideas into Action</h4>
+    </div>
+
+    <ul class="sub-content-dark-list yin-yang-big">
+        <li class="list-item">
+            To write down your wishes for end of life care, run our
+            <b><a target="new" routerLink={{pathObject.child1_url}}> {{ pathObject.parent_name }} > {{ pathObject.child1_name }}</a> </b>
+            wizard.
+        </li>
+
+        <li class="list-item">
+            To nail down your advocates for your care, run our
+            <b><a target="new" routerLink={{pathObject.child2_url}}> {{ pathObject.parent_name }} > {{ pathObject.child2_name }}</a> </b>
+            wizard.
+        </li>
+
+        <li class="list-item">
+            To write your Advance Care Plan run our
+            <b><a target="new" routerLink={{pathObject.child3_url}}> {{ pathObject.parent_name }} > {{ pathObject.child3_name }}</a> </b>
+            wizard.
+        </li>
+    </ul>
+</div>
+
+<div class="mobile-list">
+    <div class="content-title">
+        <h4>Put Ideas into Action</h4>
+    </div>
+
+    <ul class="content-dark-list yin-yang-small">
+        <li class="list-item">
+            To write down your wishes for end of life care, run our
+            <b><a target="new" routerLink={{pathObject.child1_url}}> {{ pathObject.parent_name }} > {{ pathObject.child1_name }}</a> </b>
+            wizard.
+        </li>
+
+        <li class="list-item">
+            To nail down your advocates for your care, run our
+            <b><a target="new" routerLink={{pathObject.child2_url}}> {{ pathObject.parent_name }} > {{ pathObject.child2_name }}</a> </b>
+            wizard.
+        </li>
+
+        <li class="list-item">
+            To write your Advance Care Plan run our
+            <b><a target="new" routerLink={{pathObject.child3_url}}> {{ pathObject.parent_name }} > {{ pathObject.child3_name }}</a> </b>
+            wizard.
+        </li>
+    </ul>
 </div>
 
 <div class="content-images">
-    <img src="../../../../assets/images/details/takeAction/putAllTogether/taskChecklist.jpg" title="No CPR Form" alt="No CPR Form"/>
+    <img src="../../../../assets/images/details/takeAction/putAllTogether/taskChecklist.jpg" title="{{ pathObject.parent_name }}"
+         alt="{{ pathObject.parent_name }}"/>
 </div>
 
