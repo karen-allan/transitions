@@ -22,9 +22,13 @@ export class BookConsultationOverviewComponent implements OnInit {
   @Input() quote:string ='';
   @Input() author:string ='';
 
-  @Input() consult1:string="";
-  @Input() consult2:string="";
-  @Input() consult3:string="";
+  @Input() consult1a:string="";
+  @Input() consult2a:string="";
+  @Input() consult3a:string="";
+
+  @Input() consult1b:string="";
+  @Input() consult2b:string="";
+  @Input() consult3b:string="";
 
   metaTitle = 'Book a Consultation | End of Life Support | Care Planning'
   metaDesc='Book a consultation from End of Life doula Karen Allan in person or via Zoom to learn how you can support yourself or your' +

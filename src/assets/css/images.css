@@ -1,53 +1,63 @@
-/*DONE FEB 24/25 and text done too */
-
 /*******************************************************************************************************************
-
-
+  GLOBAL  content is now 1024 so there must be space on either side up to it
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 960px)    {
+and (max-width: 1024px) {
 
     .header-home-image, .header-detail-image {
         width: var(--media-unaffected-by-content-width);
     }
 
-    .content-images {
-        width:var(--media-less-than-content-width);
-        padding:.5em 0;
+    .content-images  {
+        width: var(--media-less-than-or-at-ipad-width);
+        margin-right:5%;
+        margin-left:5%;
+    }
+}
+
+
+/*******************************************************************************************************************
+  GLOBAL
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1280px) {
+
+    .header-home-image, .header-detail-image {
+        width: var(--media-unaffected-by-content-width);
     }
 
-    /* HOME PAGE BOOKING LINK */
-    a .booking-link-grid {
-        padding:.5em;
-        margin: .5em auto;
-        width: var(--media-less-than-content-width);
+    .content-images  {
+        width:var(--media-more-than-ipad-width);
     }
 
 }
 
 /*******************************************************************************************************************
 
-MAX WIDTH 100% FOR ALL OVER 900px (OUR CONTENT WINDOW)
+MOBILES
 
 *******************************************************************************************************************/
 @media only screen
-and (min-width:1024px)   {
-
-    .header-home-image, .header-detail-image {
-        width: var(--media-unaffected-by-content-width);
-    }
+and (min-width: 320px)
+and (max-width: 800px)    {
 
     .content-images {
-        width:var(--media-more-than-content-width);
-        padding:1em 0;
+        padding:.5em 0;
     }
 
-    /* HOME BOOKING */
-    a .booking-link-grid {
-        width: var(--media-more-than-content-width);
+}
 
-        margin: 1em auto;
+/*******************************************************************************************************************
+
+MAX WIDTH 100% FOR ALL OVER 896px (OUR CONTENT WINDOW)
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width:896px)   {
+
+    .content-images {
+        padding:1em 0;
     }
 
 }
@@ -60,16 +70,10 @@ and (min-width: 320px)
 and (max-width: 568px)
 and (orientation: portrait) {
 
-    /* Images - 1160/1920 is 60.41%  */
+    /* Images - 600/1024 58.59%  */
     .header-home-image, .header-detail-image {
-        height: 161px;
+        height: 187px;
     }
-
-    /*image is 900x450 (90% is 810 by 405 so divide 810/405 to get ratio of 50%  */
-    a .booking-link-grid {
-        height: 160px;
-    }
-
 
 }
 
@@ -81,94 +85,9 @@ and (min-width: 320px)
 and (max-width: 568px)
 and (orientation: landscape) {
 
-    /* Images - 500/1024 48.82%  */
+    /* Images - 600/1024 58.59%  */
     .header-home-image, .header-detail-image {
-        height: 277px;
-    }
-
-    /*image is 900x450 (booking grid is 900 by 450 so divide 450/900 to get ratio of 50% and 50x360 is 180) */
-    a .booking-link-grid {
-        height: 284px;
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL MOBILES - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 360px)
-and (max-width: 414px)
-and (orientation: portrait) {
-
-    /* Images - 500/1024 48.82%  */
-    .header-home-image, .header-detail-image {
-        height: 175px;
-    }
-
-    /*image is 900x450 (booking grid is 900 by 450 so divide 450/900 to get ratio of 50% and 50x360 is 180) */
-    a .booking-link-grid {
-        height: 180px;
-    }
-
-}
-
-
-/*******************************************************************************************************************
-  GLOBAL SMALL MOBILES - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 360px)
-and (max-width: 414px)
-and (orientation: landscape) {
-
-    /* Images - 500/1024 48.82%  */
-    .header-home-image, .header-detail-image {
-        height: 202px;
-    }
-
-    /* IMAGE IS 512x1024 = .5 so no shrinkage needed */
-    a .booking-link-grid {
-        height: 207px;
-    }
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL TABLETS - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 600px)
-and (max-width: 800px)
-and (orientation: portrait) {
-
-    /* Images - 500/1024 48.82%  */
-    .header-home-image, .header-detail-image {
-        height: 292px;
-    }
-
-    /* IMAGE IS 512x1024 = .5 so no shrinkage needed */
-    a .booking-link-grid {
-        height:300px;
-    }
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL TABLETS - LANDSCAPE
-*******************************************************************************************************************/
-
-@media only screen
-and (min-width: 600px)
-and (max-width: 800px)
-and (orientation: landscape) {
-
-    /* Images - 500/1024 48.82%  */
-    .header-home-image, .header-detail-image {
-        height: 390px;
-    }
-
-    /* IMAGE IS 512x1024 = .5 so no shrinkage needed */
-    a .booking-link-grid {
-        height:400px;
+        height: 332px;
     }
 
 }
@@ -177,36 +96,28 @@ and (orientation: landscape) {
   GLOBAL BIG MOBILES - PORTRAIT
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 640px)
-and (max-width: 896px)
+and (min-width: 600px)
+and (max-width: 800px)
 and (orientation: portrait) {
 
-    /* Images - 500/1024 48.82%  */
+    /* Images - 600/1024 58.59%  */
     .header-home-image, .header-detail-image {
-        height: 312px;
+        height: 351px;
     }
 
-    /* IMAGE IS 512x1024 = .5 so no shrinkage needed */
-    a .booking-link-grid {
-        height: 320px;
-    }
 }
 
 /*******************************************************************************************************************
   GLOBAL BIG MOBILES - LANDSCAPE
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 640px)
-and (max-width: 896px)
+and (min-width: 600px)
+and (max-width: 800px)
 and (orientation: landscape) {
 
+    /* Images - 1024x600 58.59%  */
     .header-home-image, .header-detail-image {
-        height: 437px;
-    }
-
-    /* IMAGE IS 512x1024 = .5 so no shrinkage needed */
-    a .booking-link-grid {
-        height:448px;
+        height: 468px;
     }
 
 }
@@ -215,18 +126,13 @@ and (orientation: landscape) {
   GLOBAL TABLET PORTRAIT
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 960px)
-and (max-width: 1280px)
+and (min-width: 896px)
+and (max-width: 1023px)
 and (orientation: portrait) {
 
-    /* Images - 1024x500 48.82% 0.9375 */
+    /* Images - 1024x600 58.59%  */
     .header-home-image, .header-detail-image {
-        height: 468px;
-    }
-
-    /* IMAGE IS 1024 x 512 = .5 so no shrinkage needed */
-    a .booking-link-grid {
-        height:448px;
+        height: 524px;
     }
 
 }
@@ -237,74 +143,12 @@ and (orientation: portrait) {
 @media only screen
 and (min-width: 1024px) {
 
-    /* Images - 1024x500 48.82%  */
+    /* Images - 1024x600 58.59%  */
     .header-home-image, .header-detail-image {
         height: 600px;
     }
 
-    /* IMAGE IS 1024x512 = .5 so no shrinkage needed */
-    a .booking-link-grid {
-        height: 512px;
-    }
 }
-
-/*******************************************************************************************************************
- GLOBAL BIG TABLETS - LANDSCAPE and IPAD LANDSCAPE
-*******************************************************************************************************************/
-/*@media only screen
-and (min-width: 960px)
-and (max-width: 1366px)
-and (orientation: landscape) {
-
-    .header-home-image, .header-detail-image {
-        height: 600px;
-    }
-
-    !* IMAGE IS 512x1024 so no shrinkage needed *!
-    a .booking-link-grid {
-        height: 512px;
-    }
-}*/
-
-/*******************************************************************************************************************
- GLOBAL LAPTOPS
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 1440px)
-and (max-width:1919px) {
-
-  /*  !* Images - 500/1024 SO 100% HERE AND UP  *!
-    .header-home-image, .header-detail-image {
-        height: 600px;
-    }
-
-    !* IMAGE IS 450x900 so no shrinkage needed *!
-    a .booking-link-grid {
-        height:512px;
-    }
-
-    !* IMAGE IS 512x1024 so no shrinkage needed *!
-    a .booking-link-grid {
-        height: 512px;
-    }*/
-}
-
-/*******************************************************************************************************************
-  DESKTOPS
-*******************************************************************************************************************/
-/*@media only screen
-and (min-width: 1920px) {
-
-    .header-home-image, .header-detail-image {
-        height:600px;
-    }
-
-    !* IMAGE IS 512x1024 so no shrinkage needed *!
-    a .booking-link-grid {
-        height: 512px;
-    }
-
-}*/
 
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
@@ -415,15 +259,4 @@ and (min-width: 1920px) {
         url('src/assets/images/headers/consultations/headerBookConsultation.jpg');
     }
 
-    /* HOME PAGE BOOKING LINK */
-    a .booking-link-grid {
-        display: grid;
-        float:left;
-        max-width: var(--ipad-width);
-        background-repeat: no-repeat;
-        background-image: url("src/assets/images/details/home/bookSessionText.jpg");
-        background-size: contain;
-        align-content: flex-end;
-        justify-content: center;
-    }
 }

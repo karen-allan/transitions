@@ -14,9 +14,6 @@ export class HomeContainerComponent implements OnInit {
   quote: string='Unable are the loved to die, for love is immortality.';
   author: string='Emily Dickinson';
 
- //
-  //slogan='knowledge is power'
-
   constructor() { }
 
   ngOnInit(): void {

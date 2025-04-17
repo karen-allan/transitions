@@ -17,7 +17,7 @@ import { WriteAdvanceDirectiveContainerComponent } from './menu-write-plans/writ
 import { CheckOffTasksListContainerComponent } from './menu-write-plans/check-off-tasks-list/check-off-tasks-list-container/check-off-tasks-list-container.component';
 
 /* MENU CONSULTATION */
-import { RolesOfConsultantContainerComponent } from './menu-consultations/roles-of-consultant/roles-of-consultant-container/roles-of-consultant-container.component';
+import { TestimonialsFeesContainerComponent } from './menu-consultations/testimonials-fees/testimonials-fees-container/testimonials-fees-container.component';
 import { BookConsultationContainerComponent } from './menu-consultations/book-consultation/book-consultation-container/book-consultation-container.component';
 
 /* MENU ABOUT */
@@ -28,7 +28,6 @@ import { AboutPractitionerContainerComponent } from './menu-about/about-practiti
 import { ScreenFormMakeWishListContainerComponent } from './screen-forms/wizards/make-wish-list/screen-form-make-wish-list-container/screen-form-make-wish-list-container.component';
 import { ScreenFormChooseRepContainerComponent } from './screen-forms/wizards/choose-rep/screen-form-choose-rep-container/screen-form-choose-rep-container.component';
 import { ScreenFormWriteDirectiveContainerComponent } from './screen-forms/wizards/write-plan/screen-form-write-directive-container/screen-form-write-directive-container.component';
-
 
 
 /* AS SHOWN ON MENU */
@@ -49,8 +48,8 @@ const routes: Routes = [
     {path: 'writeCarePlan', component: WriteAdvanceDirectiveContainerComponent},
     {path: 'checkOffList', component: CheckOffTasksListContainerComponent},
 
-    {path: 'menuConsultations', component: RolesOfConsultantContainerComponent},
-    {path: 'rolesOfConsultant', component: RolesOfConsultantContainerComponent},
+    {path: 'menuConsultations', component: TestimonialsFeesContainerComponent},
+    {path: 'testimonials', component: TestimonialsFeesContainerComponent},
     {path: 'bookConsultation', component: BookConsultationContainerComponent},
 
     {path: 'menuAbout', component: AboutPractitionerContainerComponent},

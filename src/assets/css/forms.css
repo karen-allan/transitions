@@ -1,3 +1,31 @@
+
+
+/*******************************************************************************************************************
+  GLOBAL  content is now 1024 so there must be space on either side up to it
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 1024px) {
+
+    .consult-menu-block, .consult-menu-prompt-block, .sub-form-block {
+        width: var(--media-less-than-or-at-ipad-width);
+        margin-right:5%!important;
+        margin-left:5%!important;
+    }
+}
+
+
+/*******************************************************************************************************************
+  GLOBAL
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1280px) {
+
+    .consult-menu-block, .consult-menu-prompt-block, .sub-form-block {
+        width:var(--media-more-than-ipad-width);
+    }
+}
+
 /*******************************************************************************************************************
 
 REPORTS UNDER 600 IN WIDTH, ALL ONE COLUMN EXCEPT FOR CHECKBOXES
@@ -5,7 +33,7 @@ REPORTS UNDER 600 IN WIDTH, ALL ONE COLUMN EXCEPT FOR CHECKBOXES
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 600px) {
+and (max-width: 800px) {
 
     .screen-forms-mobile, .screen-forms-both {
         display:block;
@@ -15,14 +43,47 @@ and (max-width: 600px) {
         display: none;
     }
 
-    .sub-form-menu-block, .sub-form-block, .sub-form-disclaimer-block {
-        width:var(--media-less-than-content-width);
+    .consult-form-menu {
+        padding:0;
+        list-style: none;
+    }
+
+    .consult-mobile-menu-heading  {
+        width:100%;
+        padding-left: 0;
+        padding-bottom:.5em;
+    }
+
+    /* I WOULD LIKE TO DISCUSS */
+    .consult-mobile-menu-heading h3 {
+        color: var(--color-titles);
+        font-family: var(--family-forms);
+        text-align: left;
+        margin:0;
+    }
+
+    /* HOW TO PLAN FOR MY FUTURE etc */
+    .consult-mobile-menu-item  {
+        width:100%;
+        padding-left:0;
+        text-align: left;
+        /*padding:.5em 0;*/
+        font-family: var(--family-title);
+    }
+
+    .sub-form-full-block p   {
+        text-align: justify;
+        padding:0 .5em;
+    }
+
+    .sub-form_three-medical-block, .sub-form-bdate-occup-referred-block,
+    .sub-form-name-phone-block, .sub-form-email-addr-block, .sub-form-city-prov-post-block, .sub-form-contact-phone-relation-block  {
+        display:grid;
     }
 
     .sub-form-two-checkboxes-block {
         display: inline-grid;
         grid-template-columns: 50% 50%;
-        width: 99%;
     }
 
     .sub-form-first-check-col {
@@ -33,48 +94,22 @@ and (max-width: 600px) {
         grid-column: 2;
     }
 
-    .sub-form-print-button {
-        width:70px;
+    .consult-publish-button {
+        width:80px;
         height:35px;
         border-radius: .7em;
+        font-size:.8em;
     }
-
-
 
 }
 
 /*******************************************************************************************************************
-REPORTS OVER 640 IN WIDTH TO 896, MAKE SURE THERE IS SPACE ON EITHER SIDE
-*******************************************************************************************************************/
-@media only screen
-and (min-width:640px)
-and (max-width:896px) {
 
-    .sub-form-menu-block, .sub-form-block, .sub-form-disclaimer-block {
-        width:var(--media-less-than-content-width);
-    }
-}
-
-/*******************************************************************************************************************
-
-REPORTS OVER 960 IN WIDTH (OVER CONTENT WIDTH 0F 900 SO MAKES THEIR OWN SPACES ON EITHER SIDE
+REPORTS OVER 896 IN WIDTH
 
 *******************************************************************************************************************/
 @media only screen
-and (min-width:960px) {
-
-    .sub-form-menu-block, .sub-form-block, .sub-form-disclaimer-block {
-        width:var(--media-more-than-content-width);
-    }
-}
-
-/*******************************************************************************************************************
-
-REPORTS OVER 640 IN WIDTH
-
-*******************************************************************************************************************/
-@media only screen
-and (min-width:640px)   {
+and (min-width:896px)   {
 
     .screen-forms-mobile {
         display:none;
@@ -82,6 +117,41 @@ and (min-width:640px)   {
 
     .screen-forms-desktop, .screen-forms-both {
         display: block;
+    }
+
+    .consult-form-menu  {
+        max-width: var(--ipad-width);
+        margin:0;
+        width:100%;
+    }
+
+    /* USERS FORM MENU -  I WOULD LIKE TO DISCUSS: */
+    .consult-desktop-menu-heading  {
+        width:90%;
+        padding-left: 10%;
+        padding-bottom:.5em;
+        background-color: white;
+    }
+
+    /* I WOULD LIKE TO DISCUSS */
+    .consult-desktop-menu-heading h3 {
+        color: var(--color-titles);
+        font-family: var(--family-forms);
+        text-align: left;
+    }
+
+    /* HOW TO PLAN FOR MY FUTURE etc */
+    .consult-desktop-menu-item  {
+        width:90%;
+        padding-left:10%;
+        text-align: left;
+        /*padding:.5em 0;*/
+        font-family: var(--family-title);
+    }
+
+    .sub-form-full-block p   {
+        text-align: left;
+        padding:0 .5em;
     }
 
     .sub-form-two-checkboxes-block {
@@ -99,9 +169,14 @@ and (min-width:640px)   {
         grid-template-columns: 70% 30%;
     }
 
+    .sub-form-email-addr-block {
+        display: inline-grid;
+        grid-template-columns: 50% 50%;
+    }
+
     .sub-form-city-prov-post-block {
         display: inline-grid;
-        grid-template-columns: 35% 25% 40%;
+        grid-template-columns: 45% 25% 30%;
     }
 
     .sub-form-bdate-occup-referred-block {
@@ -126,86 +201,61 @@ and (min-width:640px)   {
         grid-column: 3;
     }
 
-    .sub-form-print-button {
-        width:110px;
+    .consult-publish-button {
+        width:100px;
         height:50px;
-        border-radius: 1.0em;
+        border-radius: 1em;
+        font-size:.8em;
     }
 
-}
-
-/*******************************************************************************************************************
-  GLOBAL BANANAS - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 320px)
-and (max-width: 568px)
-and (orientation: portrait) {
-
-    /* the questions/prompts*/
-    .sub-form-full-block p, .sub-form-text-area  {
-        font-size: var(--p-banana-port);
-    }
-
-    /* text fields and radio button text all smaller than the prompt p above */
-    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--p-banana-port);
-    }
-
-    .sub-form-print-button {
-        font-size:var(--p-banana-port);
-    }
-}
-
-/*******************************************************************************************************************
-  GLOBAL BANANAS - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 320px)
-and (max-width: 568px)
-and (orientation: landscape) {
-
-    /* the questions/prompts*/
-    .sub-form-full-block p, .sub-form-text-area  {
-        font-size: var(--p-banana-land);
-    }
-
-    /* text fields and radio button text all smaller than the prompt p above */
-    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--p-banana-land);
-    }
-
-    .sub-form-print-button {
-        font-size:var(--p-banana-land);
-    }
 }
 
 /*******************************************************************************************************************
   GLOBAL SMALL MOBILES - PORTRAIT
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 360px)
-and (max-width: 414px)
+and (min-width: 320px)
+and (max-width: 568px)
 and (orientation: portrait) {
 
+    .consult-mobile-menu-heading h3  {
+        font-size: var(--form-small-mobile-prompt-title);
+    }
+
+    .consult-mobile-menu-item h4   {
+        padding-left: 1em;
+        font-size: var(--form-small-mobile-menu-title);
+    }
+
+    .consult-menu-prompt-block h5    {
+        font-size: var(--form-small-mobile-menu-title);
+    }
+
     /* the questions/prompts*/
-    .sub-form-full-block p, .sub-form-text-area  {
-        font-size: var(--p-small-mobile-port);
+    .sub-form-full-block p   {
+        font-size: var(--form-small-mobile-question);
+    }
+
+    .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
+        font-size: var(--form-small-mobile-answer);
     }
 
     /* text fields and radio button text all smaller than the prompt p above */
     .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--p-small-mobile-port);
+    .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
+        font-size: var(--form-small-mobile-copy);
     }
 
-    .sub-form-print-button {
-        font-size:var(--p-small-mobile-port);
+    .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--form-small-mobile-checkbox);
+    }
+
+    .sub-form-text-area  {
+        font-size: var(--form-small-mobile-answer);
+    }
+
+    .consult-disclaimer-title h4 {
+        font-size: var(--form-small-mobile-menu-title);
     }
 
 }
@@ -214,25 +264,50 @@ and (orientation: portrait) {
   GLOBAL SMALL MOBILES - LANDSCAPE
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 360px)
-and (max-width: 414px)
+and (min-width: 320px)
+and (max-width: 568px)
 and (orientation: landscape) {
 
+    .consult-mobile-menu-heading h3  {
+        font-size: var(--form-big-mobile-prompt-title);
+    }
+
+    .consult-mobile-menu-item h4   {
+        padding-left: 1em;
+        font-size: var(--form-big-mobile-menu-title);
+    }
+
+    .consult-menu-prompt-block h5    {
+        font-size: var(--form-big-mobile-menu-title);
+    }
+
     /* the questions/prompts*/
-    .sub-form-full-block p, .sub-form-text-area  {
-        font-size: var(--p-small-mobile-land);
+    .sub-form-full-block p   {
+        font-size: var(--form-big-mobile-question);
     }
 
     /* text fields and radio button text all smaller than the prompt p above */
     .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--p-small-mobile-land);
+    .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
+        font-size: var(--form-big-mobile-copy);
     }
 
-    .sub-form-print-button {
-        font-size:var(--p-small-mobile-land);
+    .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
+        font-size: var(--form-big-mobile-answer);
     }
+
+    .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--form-big-mobile-checkbox);
+    }
+
+    .sub-form-text-area  {
+        font-size: var(--form-big-mobile-answer);
+    }
+
+    .consult-disclaimer-title h4 {
+        font-size: var(--form-big-mobile-prompt-title);
+    }
+
 
 }
 
@@ -241,197 +316,182 @@ and (orientation: landscape) {
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 600px)
-and (max-width: 800px)
+and (max-width:  800px)
 and (orientation: portrait) {
 
+    .consult-mobile-menu-heading h3    {
+        font-size: var(--form-big-mobile-prompt-title);
+    }
+
+    .consult-mobile-menu-item h4 {
+        font-size: var(--form-big-mobile-menu-title);
+    }
+
+    .consult-menu-prompt-block h5    {
+        font-size: var(--form-big-mobile-menu-title);
+    }
+
     /* the questions/prompts*/
-    .sub-form-full-block p, .sub-form-text-area  {
-        font-size: var(--p-small-tablet-port);
+    /* the questions/prompts*/
+    .sub-form-full-block p   {
+        font-size: var(--form-big-mobile-question);
     }
 
     /* text fields and radio button text all smaller than the prompt p above */
     .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--p-small-tablet-port);
+    .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
+        font-size: var(--form-big-mobile-copy);
     }
 
-    .sub-form-print-button {
-        font-size:var(--p-small-tablet-port);
+    .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
+        font-size: var(--form-big-mobile-answer);
     }
 
+    .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--form-big-mobile-checkbox);
+    }
+
+    .sub-form-text-area  {
+        font-size: var(--form-big-mobile-answer);
+    }
+
+    .consult-disclaimer-title h4 {
+        font-size: var(--form-big-mobile-prompt-title);
+    }
 }
+
 /*******************************************************************************************************************
   GLOBAL SMALL TABLETS - LANDSCAPE
 *******************************************************************************************************************/
 @media only screen
-and (min-width:600px)
-and (max-width:800px)
-and (orientation:landscape) {
-
-    /* the questions/prompts*/
-    .sub-form-full-block p, .sub-form-text-area  {
-        font-size: var(--p-small-tablet-land);
-    }
-
-    /* text fields and radio button text all smaller than the prompt p above */
-    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--p-small-tablet-land);
-    }
-
-    .sub-form-print-button {
-        font-size:var(--p-small-tablet-land);
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL BIG MOBILES - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 640px)
-and (max-width: 896px)
-and (orientation: portrait) {
-
-    /* the questions/prompts*/
-    .sub-form-full-block p, .sub-form-text-area  {
-        font-size: var(--p-big-mobile-port);
-    }
-
-    /* text fields and radio button text all smaller than the prompt p above */
-    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--p-big-mobile-port);
-    }
-
-    .sub-form-print-button {
-        font-size:var(--p-big-mobile-port);
-    }
-}
-
-/*******************************************************************************************************************
-  GLOBAL BIG MOBILES - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 640px)
-and (max-width: 896px)
+and (min-width: 600px)
+and (max-width:  800px)
 and (orientation: landscape) {
 
+    .consult-mobile-menu-heading h3  {
+        font-size: var(--form-tablet-prompt-title);
+    }
+
+    .consult-desktop-menu-item h4 {
+        font-size: var(--form-tablet-menu-title);
+    }
+
+    .consult-menu-prompt-block h5    {
+        font-size: var(--form-tablet-menu-title);
+    }
+
     /* the questions/prompts*/
-    .sub-form-full-block p, .sub-form-text-area  {
-        font-size: var(--p-big-mobile-land);
+    .sub-form-full-block p   {
+        font-size: var(--form-tablet-question);
     }
 
     /* text fields and radio button text all smaller than the prompt p above */
     .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--p-big-mobile-land);
+    .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
+        font-size: var(--form-tablet-copy);
     }
 
-    .sub-form-print-button {
-        font-size:var(--p-big-mobile-land);
+    .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
+        font-size: var(--form-tablet-answer);
+    }
+
+    .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--form-tablet-checkbox);
+    }
+
+    .sub-form-text-area  {
+        font-size: var(--form-tablet-answer);
+    }
+
+    .consult-disclaimer-title h4 {
+        font-size: var(--form-tablet-prompt-title);
     }
 }
 
 /*!*******************************************************************************************************************
- GLOBAL BIG TABLETS - PORTRAIT and IPAD PORTRAIT
+ GLOBAL BIG TABLETS - PORTRAIT
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 960px)
-and (max-width: 1366px)
+and (min-width: 896px)
+and (max-width: 1023px)
 and (orientation: portrait) {
 
+    .consult-desktop-menu-heading h3  {
+        font-size: var(--form-laptop-prompt-title);
+    }
+
+    .consult-desktop-menu-item h4, .consult-menu-prompt-block h5    {
+        font-size: var(--form-laptop-menu-title);
+    }
+
     /* the questions/prompts*/
-    .sub-form-full-block p, .sub-form-text-area  {
-        font-size: var(--p-big-tablet-ipad-port);
+    .sub-form-full-block p   {
+        font-size: var(--form-laptop-question);
     }
 
     /* text fields and radio button text all smaller than the prompt p above */
     .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--p-big-tablet-ipad-port);
+    .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
+        font-size: var(--form-laptop-label-value);
     }
 
-    .sub-form-print-button {
-        font-size:var(--p-big-tablet-ipad-port);
+    .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
+        font-size: var(--form-laptop-answer);
+    }
+
+    .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--form-laptop-checkbox);
+    }
+
+    .sub-form-text-area  {
+        font-size: var(--form-laptop-answer);
+    }
+
+    .consult-disclaimer-title h4 {
+        font-size: var(--form-laptop-menu-title);
     }
 
 }
 
 /*******************************************************************************************************************
- GLOBAL BIG TABLETS - LANDSCAPE and IPAD LANDSCAPE
-******************************************************************************************************************/
+ GLOBAL IPADS, LAPTOPS
+*******************************************************************************************************************/
 @media only screen
-and (min-width: 960px)
-and (max-width: 1366px)
-and (orientation: landscape) {
+and (min-width: 1024px) {
+
+    .consult-desktop-menu-heading h3  {
+        font-size: var(--form-laptop-prompt-title);
+    }
+
+    .consult-desktop-menu-item h4, .consult-menu-prompt-block h5    {
+        font-size: var(--form-laptop-menu-title);
+    }
 
     /* the questions/prompts*/
-    .sub-form-full-block p, .sub-form-text-area  {
-        font-size: var(--p-big-tablet-ipad-land);
+    .sub-form-full-block p   {
+        font-size: var(--form-laptop-question);
     }
 
     /* text fields and radio button text all smaller than the prompt p above */
     .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--p-big-tablet-ipad-land);
+    .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
+        font-size: var(--form-laptop-label-value);
     }
 
-    .sub-form-print-button {
-        font-size:var(--p-big-tablet-ipad-land);
-    }
-}
-
-/*******************************************************************************************************************
- GLOBAL LAPTOPS
-******************************************************************************************************************/
-@media only screen
-and (min-width: 1440px)
-and (max-width:1919px) {
-
-    /* the questions/prompts*/
-    .sub-form-full-block p, .sub-form-text-area  {
-        font-size: var(--p-laptop);
+    .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
+        font-size: var(--form-laptop-answer);
     }
 
-    /* text fields and radio button text all smaller than the prompt p above */
-    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--p-laptop);
+    .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
+        font-size: var(--form-laptop-checkbox);
     }
 
-    .sub-form-print-button {
-        font-size:var(--p-laptop);
-    }
-}
-
-/*******************************************************************************************************************
-  DESKTOPS
-******************************************************************************************************************/
-@media only screen
-and (min-width: 1920px) {
-
-    /* the questions/prompts*/
-    .sub-form-full-block p, .sub-form-text-area  {
-        font-size: var(--p-desktop);
+    .sub-form-text-area  {
+        font-size: var(--form-laptop-answer);
     }
 
-    /* text fields and radio button text all smaller than the prompt p above */
-    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-full-radio-col, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label,
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--p-desktop);
-    }
-
-    .sub-form-print-button {
-        font-size:var(--p-desktop);
+    .consult-disclaimer-title h4 {
+        font-size: var(--form-laptop-menu-title);
     }
 
 }
@@ -440,38 +500,33 @@ and (min-width: 1920px) {
 @media only screen {
 
     /* USERS DATA ENTRY FORM CHOICES MENU: */
-    .sub-form-menu-block {
+    .consult-menu-block {
         display: block;
         float:left;
         max-width: var(--ipad-width);
         margin:auto;
         padding:1em 0;
-        border-top:dashed thin var(--color-grey);
-        border-bottom:dashed thin var(--color-grey);
+       /* border-top:dashed thin var(--color-grey);
+        border-bottom:dashed thin var(--color-grey);*/
     }
 
-    /* USERS FORM MENU -  I WOULD LIKE TO DISCUSS: */
-    .sub-form-menu-heading  {
-        width:98%;
-        padding-left: 2%;
-        padding-bottom:.5em;
-        background-color: white;
+    .consult-desktop-menu-item h4, .consult-mobile-menu-item h4  {
+        cursor: default;
+        color: var(--color-purple);
     }
 
-    .sub-form-menu {
-        max-width: var(--ipad-width);
-        margin:0;
-        width:95%;
-        padding-left:5%;
+    .consult-desktop-menu-item h4 a, .consult-mobile-menu-item h4 a {
+        cursor:pointer;
+        text-decoration: none;
+        color: var(--color-titles);
     }
 
-    .sub-form-menu-item {
-        text-align: left;
-        line-height:200%;;
-        padding:.5em 0;
+    .consult-desktop-menu-item h4 a:hover, .consult-mobile-menu-item h4 a:hover {
+        text-decoration: underline;
     }
 
-    .sub-form-menu-prompt-block  {
+    /* HOW TO PLAN FOR YOUR FUTURE etc */
+    .consult-menu-prompt-block  {
         display:grid;
         height: 70px;
         background-color: var(--color-dark-green);
@@ -484,12 +539,20 @@ and (min-width: 1920px) {
         margin:auto;
     }
 
-    /* NOW INTO THE FORMS
-    ALL SUB FORMs are CONTAINED BY THIS BLOCK */
+    .consult-menu-prompt-block h5 {
+        font-family: var(--family-title);
+        margin:auto;
+        color: var(--color-white);
+        text-transform: uppercase;
+        text-align:center;
+    }
+
+        /* NOW INTO THE FORMS
+        ALL SUB FORMs are CONTAINED BY THIS BLOCK */
     .sub-form-block {
         display: block;
+        /*float:left;*/
         max-width: var(--ipad-width);
-        margin:auto;
         border:solid thin var(--color-grey);
     }
 
@@ -506,24 +569,24 @@ and (min-width: 1920px) {
         margin:auto;
     }
 
-    .sub-form-full-block, .sub-form_three-medical-block, .sub-form-bdate-occup-referred-block, .sub-form-two-checkboxes-block,
-    .sub-form-name-phone-block, .sub-form-city-prov-post-block, .sub-form-contact-phone-relation-block  {
-        width: 99%;
+    .sub-form_three-medical-block, .sub-form-bdate-occup-referred-block, .sub-form-two-checkboxes-block,
+    .sub-form-name-phone-block, .sub-form-email-addr-block, .sub-form-city-prov-post-block, .sub-form-contact-phone-relation-block  {
+        width:100%;
     }
 
-    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col   {
+    .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col,
+    .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
         display:inline;
         border:1px dashed var(--color-dark-blue);
         margin-bottom:1em;
         text-align:left;
-
         line-height: 110%;
         padding: 1em;
         font-family: var(--family-copy);
         color: var(--color-dark-blue);
     }
 
-    .sub-form-full-radio-col  {
+    .sub-form-full-radio-col, .sub-form-full-check-col  {
         width:98%;
         padding: 1em 1%;
         font-family: var(--family-copy);
@@ -545,10 +608,12 @@ and (min-width: 1920px) {
 
     .sub-form-full-col-label, .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label  {
         border-left:thin solid var(--color-dark-blue);
+        font-weight: bold;
     }
 
     .sub-form-full-block {
         display:grid;
+        width:100%;
     }
 
     .sub-form-full-col-value, .sub-form-full-col-label   {
@@ -557,11 +622,9 @@ and (min-width: 1920px) {
 
     .sub-form-full-block p {
         display:block;
-        font-weight: 600;
-        padding: 1em;
+        padding-top: 1em;
         font-family: var(--family-copy);
         font-style: italic;
-        text-align: left;
         color: var(--color-dark-blue);
         line-height:100%;
     }
@@ -570,7 +633,6 @@ and (min-width: 1920px) {
         display: block;
         width:100%;
         padding: 1em 0;
-        font-weight: 600;
         color: var(--color-dark-blue);
         font-family: var(--family-copy);
         text-align: left;
@@ -581,36 +643,34 @@ and (min-width: 1920px) {
     }
     
     /* DISCLAIMER */
-    .sub-form-disclaimer-block {
+    .consult-disclaimer-block {
         color:var(--color-dark-blue);
         display:block;
         margin:auto;
-        max-width: var(--content-width);
+        max-width: var(--ipad-width);
+        font-family:var(--family-forms);
     }
 
-    .sub-form-disclaimer-title  {
+    /* this works better than content title */
+    .consult-disclaimer-title h4  {
         display:block;
         float:left;
         width:100%;
         text-align: left;
-        font-family:var(--family-title);
+        padding-top:1em;
+        margin:0;
+        padding-left:1em;
     }
 
-    .sub-form-disclaimer-text {
-        font-size: 1em;
-        font-family: var(--family-copy);
-        border: #878787 dashed 1px;
-        padding:1em;
-    }
-
-    .sub-form-button-container {
-        width:100%;
+    .consult-button-container {
+        width:98%;
+        margin-right:2%;
         justify-content: flex-end;
         display:grid;
         margin-top:2em;
     }
 
-    .sub-form-print-button {
+    .consult-publish-button {
         display:grid;
         font-family: var(--family-copy);
         color: var(--color-dark-blue);

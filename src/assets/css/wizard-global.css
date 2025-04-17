@@ -135,7 +135,7 @@ and (min-width: 960px) {
         color: var(--color-dark-blue);
         font-family: var(--family-forms);
         text-align: left;
-        font-size: var(--form-label-value);
+        font-size: var(--form-wizard-label-value);
     }
 
     .modal-both-first-col-label,  .modal-both-first-col-value {

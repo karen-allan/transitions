@@ -146,25 +146,28 @@ export class DataService {
   }*/
 
   /* *************************************************************************************************************** */
-  checkIfYearStartDateIsValid(dateString:string): Observable<boolean> {
+  checkIfDateIsValid(dateString:string): Observable<boolean> {
     //eg. comes in as 19621123
 
-    let dateError = false;
+    let validDate = false;
 
     const yrstr = dateString.substring(0, 4);   //'1962'
     const mntstr = dateString.substring(4, 6);  //'11'
     const daystr = dateString.substring(6);     //'23'
 
     const formattedDate = yrstr + "/" + mntstr + "/" + daystr; //'1962/11/23'
-    const birthdate = new Date(formattedDate); // Fri Nov 23 1962 00:00:00 GMT-0800 (Pacific Standard Time)
+     alert("client formattedDate is " + formattedDate);
 
-    if (this.isDate(birthdate)) {
-      let dateError = false;
+    const birthdate = new Date(formattedDate); // Fri Nov 23 1962 00:00:00 GMT-0800 (Pacific Standard Time)
+     alert("client birthdate is " + birthdate);
+
+    if (this.isDate(formattedDate)) {
+      let validDate = false;
     } else {
-      let dateError = true;
+      let validDate = true;
     }
 
-    return of(dateError);
+    return of(validDate);
 
   }
 

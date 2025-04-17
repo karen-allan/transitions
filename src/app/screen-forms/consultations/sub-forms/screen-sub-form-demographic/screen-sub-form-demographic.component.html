@@ -16,15 +16,14 @@
                    mask="000-000-0000" class="sub-form-second-col-value" id="cellphone" name="cellPhone" oninput="this.value=value">
         </div>
 
-        <div class="sub-form-full-block">
-            <label class="sub-form-full-col-label" for="email">Email:</label>
-            <input type="text" class="sub-form-full-col-value" [(ngModel)]="client.email" id="email" name="email">
+        <div class="sub-form-email-addr-block">
+            <label class="sub-form-first-col-label" for="email">Email:</label>
+            <label class="sub-form-second-col-label" for="address">Home Address:</label>
+
+            <input type="text" class="sub-form-first-col-value" [(ngModel)]="client.email" id="email" name="email">
+            <input type="text" class="sub-form-second-col-value" [(ngModel)]="client.address" id="address" name="address">
         </div>
 
-        <div class="sub-form-full-block">
-            <label class="sub-form-full-col-label" for="address">Home Address:</label>
-            <input type="text" class="sub-form-full-col-value" [(ngModel)]="client.address" id="address" name="address">
-        </div>
 
         <div class="sub-form-city-prov-post-block">
             <label class="sub-form-first-col-label" for="city">City/Town:</label>

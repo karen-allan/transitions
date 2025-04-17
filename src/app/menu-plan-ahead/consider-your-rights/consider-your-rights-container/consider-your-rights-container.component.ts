@@ -4,7 +4,6 @@ import {PATH_OBJECTS} from "../../../ts-files/pathObjects";
 import {PathObject} from "../../../ts-files/pathObject";
 import {DataService} from "../../../service-files/data.service";
 
-
 @Component({
   selector: 'app-consider-your-rights-container',
   templateUrl: './consider-your-rights-container.component.html',

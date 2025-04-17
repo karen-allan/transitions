@@ -1,9 +1,11 @@
 <div class="header-detail-image header-write-adv-care-plan-image">
-    <div class="header-quote">
-        &#8220;{{ quote }}&#8220;
-    </div>
-    <div class="header-author">
-        {{ author }}
+    <div class="header-quotes">
+        <div class="header-quote">
+            &#8220;{{quote}}&#8220;
+        </div>
+        <div class="header-author">
+            {{author}}
+        </div>
     </div>
 </div>
 
@@ -11,70 +13,46 @@
     <div class="wizard-intro-container">
         <div class="wizard-intro-image">
             <a (click)="openModal()">
-                <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanIntro.jpg" title="write advance care plan"
-                     alt="write advance care plan">
+                <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanIntro.jpg"
+                     title="{{title}}"  alt="{{title}}">
             </a>
         </div>
 
         <div class="wizard-intro-text">
             <a (click)="openModal()">
-                <div class="content-title">
-                    <h1>{{ title.toUpperCase() }}</h1>
-                </div>
-
-                <div class="content-dark-copy text-align-justify">
-                    <p>
-                        <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
-                        as a PDF file. This wizard is only available on an ipad, laptop or desktop.
-                    </p>
-                </div>
-
-                <div class="content-title text-align-center">
-                    <h3>Why Run this Wizard?</h3>
-                </div>
-
-                <div class="content-dark-copy text-align-justify">
-                    <p>
-                        By following this wizard you can easily note note any treatments or procedures you would want or would not want to
-                        receive if in a health emergency situation. By simply taking a few minutes to complete the {{ title }} wizard,
-                        you will feel more protected and your family will be grateful for your considerate action.
-                    </p>
-                </div>
+                <h3>{{ title.toUpperCase() }}</h3>
+                <p>
+                    By following this wizard you can easily note note any treatments or procedures you would want or would not want to
+                    receive if in a health emergency situation. By simply taking a few minutes to complete this <b>{{title}}</b> wizard,
+                    you will feel more protected and your family will be grateful for your considerate action.
+                    <br><br>
+                    <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
+                    as a PDF file. This wizard is only available on an ipad, laptop or desktop.
+                </p>
             </a>
         </div>
     </div>
 </div>
 
 <div class="mobileForm">
+    <div class="separator-block-light"></div>
+
     <div class="wizard-intro-container">
         <div class="wizard-intro-image">
             <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanIntro.jpg"
-                 title="write advance care plan" alt="write advance care plan">
+                 title="{{title}}" alt="{{title}}">
         </div>
 
         <div class="wizard-intro-text">
-            <div class="content-title">
-                <h2>{{ title.toUpperCase() }}</h2>
-            </div>
-
-            <div class="content-dark-copy text-align-justify">
-                <p>
-                    <b>Please Note:</b> At this time the {{ title }} wizard is only available on ipads, laptops, desktops and up. To
-                    follow this wizard please connect to it via one of these devices.
-                </p>
-            </div>
-
-            <div class="content-title text-align-center">
-                <h3>Why Run this Wizard?</h3>
-            </div>
-
-            <div class="content-dark-copy text-align-justify">
-                <p>
-                    By following this wizard you can easily note note any treatments or procedures you would want or would not want to
-                    receive if in a health emergency situation. By simply taking a few minutes to complete the {{ title }} wizard,
-                    you will feel more protected and your family will be grateful for your considerate action.
-                </p>
-            </div>
+            <h3>{{ title.toUpperCase() }}</h3>
+            <p>
+                By following this wizard you can easily note note any treatments or procedures you would want or would not want to
+                receive if in a health emergency situation. By simply taking a few minutes to complete this <b>{{title}}</b> wizard,
+                you will feel more protected and your family will be grateful for your considerate action.
+                <br><br>
+                <b>Please Note:</b> At this time the {{ title }} wizard is only available on ipads, laptops, desktops and up. To
+                follow this wizard please connect to it via one of these devices.
+            </p>
         </div>
     </div>
 </div>
@@ -110,23 +88,6 @@
                 <a routerLink="/callScreenFormMakePlan">
                     <div class="content-title">
                         <h1>{{ title.toUpperCase() }}</h1>
-                    </div>
-                    <div class="content-dark-copy text-align-justify">
-                        <p>
-                            Please Note: At this time the {{title}} wizard is only available on ipads, laptops, desktops and up. To
-                            follow this wizard please connect to it via one of these devices.
-                            <br><br>
-                            You can take the pain and stress away from your family should they need to make emergency health decisions for you by
-                            running our Advance Care Plan Wizard.
-                            <br><br>
-                            Using this wizard you can note any treatments and procedures you want or do not want. The Representative(s) you choose must
-                            abide by your directives.
-                            <br><br>
-                            If you have already assigned Representative(s) you can feel protected. If you haven't, your health care decisions will be
-                            made from a list that the health care team compiles of your family contacts.
-                            <br><br>
-                            Be proactive.  Print and store these documents and let your family and care givers know you have them.
-                        </p>
                     </div>
                 </a>
             </div>

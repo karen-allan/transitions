@@ -10,8 +10,7 @@ export class AboutPractitionerContainerComponent implements OnInit {
   menuItemId:number   = 4;
   subMenuItemId:number = 40;
 
-  detailHeaderName = 'header-about-practitioner'
-  title= Constants.ABOUT_EOL_CAREGIVERS
+  title= Constants.ABOUT_US
   quote: string='The dignity we seek in dying must be found in the dignity we seek in living.';
   author: string='Sherwin B Nuland';
 

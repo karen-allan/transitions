@@ -23,7 +23,7 @@ export class ScreenFormWriteDirectiveOverviewComponent {
   now: string;
 
   updatedValue: string = "";
-  dateError = false;
+  validDate = false;
 
   constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) {
   }
@@ -49,45 +49,49 @@ export class ScreenFormWriteDirectiveOverviewComponent {
   /* *************************************************************************************************************** */
   checkClientName(): void {
 
-    this.errorMessage = "";
-
+    /* These are the only required fields */
     if (this.directive.client_name == '') {
       this.errorMessage = "You must enter your full name here.";
       return;
-    } else {
+    }
+    else {
       this.dataService.splitNames(this.directive.client_name)
           .subscribe(newName => this.updatedValue = newName);
 
       this.directive.client_name = this.updatedValue;
     }
 
-    var error = this.checkForValidDate();
-    if (error != '') {
-      this.errorMessage = error;
-      return;
-    }
+   /* if (this.directive.client_dob != '' && this.directive.client_dob.length > 0) {
+
+      var error = this.checkForValidDate();
+      alert("error " + error)
+      if (error.length > 0 && error != '') {
+        this.errorMessage = error;
+        this.directive.client_dob = "";
+        return;
+      }
+    }*/
 
     this.getNextPage();
+
   }
 
   /* *************************************************************************************************************** */
 
   /* called from the html */
   checkForValidDate(): string {
-
+    var error = "";
     //19621123
     if (this.directive.client_dob != '') {
-      this.dataService.checkIfYearStartDateIsValid(this.directive.client_dob)
-          .subscribe(newVar => this.dateError = newVar);
+      this.dataService.checkIfDateIsValid(this.directive.client_dob)
+          .subscribe(newVar => this.validDate = newVar);
 
-      if (this.dateError) {
-        this.errorMessage = "This is not a valid date."
-      } else {
-        this.errorMessage = "";
+      if (this.validDate == false) {
+        error = "This is not a valid date."
       }
 
     }
-    return (this.errorMessage);
+    return (error);
   }
 
   /* *************************************************************************************************************** */
@@ -177,6 +181,12 @@ export class ScreenFormWriteDirectiveOverviewComponent {
 
   /* *************************************************************************************************************** */
   getPreviousPage() {
+
+    if (this.page == 1 ) {
+      alert("clear error cause page is " + this.page)
+      this.clearErrorMessage();
+    }
+
     this.page = this.page - 1;
   }
 
@@ -265,6 +275,11 @@ export class ScreenFormWriteDirectiveOverviewComponent {
 
     this.directive.choose_section = "chooseSection3";
 
+  }
+
+  /* *************************************************************************************************************** */
+  clearErrorMessage () {
+    this.errorMessage = "";
   }
 
   /* *************************************************************************************************************** */

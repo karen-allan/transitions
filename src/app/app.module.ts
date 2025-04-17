@@ -56,9 +56,9 @@ import { AboutPractitionerOverviewComponent } from './menu-about/about-practitio
 import { BookConsultationContainerComponent } from './menu-consultations/book-consultation/book-consultation-container/book-consultation-container.component';
 import { BookConsultationOverviewComponent } from './menu-consultations/book-consultation/book-consultation-overview/book-consultation-overview.component';
 
-/** ROLES OF CONSULTANT FOLDER **/
-import { RolesOfConsultantContainerComponent } from './menu-consultations/roles-of-consultant/roles-of-consultant-container/roles-of-consultant-container.component';
-import { RolesOfConsultantOverviewComponent } from './menu-consultations/roles-of-consultant/roles-of-consultant-overview/roles-of-consultant-overview.component';
+/** TESTIMONIALS FOLDER **/
+import { TestimonialsFeesContainerComponent } from './menu-consultations/testimonials-fees/testimonials-fees-container/testimonials-fees-container.component';
+import { TestimonialsFeesOverviewComponent } from './menu-consultations/testimonials-fees/testimonials-fees-overview/testimonials-fees-overview.component';
 
 /************************************************************* MENU HOME ******************************************************************/
 
@@ -152,6 +152,7 @@ import { PrintFooterComponent } from './print-forms/print-footer/print-footer.co
 import { PrintHeaderComponent } from './print-forms/print-header/print-header.component';
 import { DialogHeaderComponent } from './screen-forms/wizards/dialogs/dialog-header/dialog-header.component';
 
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -175,9 +176,9 @@ import { DialogHeaderComponent } from './screen-forms/wizards/dialogs/dialog-hea
         BookConsultationContainerComponent,
         BookConsultationOverviewComponent,
 
-        /* ROLES OF CONSULTANT */
-        RolesOfConsultantContainerComponent,
-        RolesOfConsultantOverviewComponent,
+        /* TESTIMONIALS */
+        TestimonialsFeesContainerComponent,
+        TestimonialsFeesOverviewComponent,
 
         /******************************* MENU HOME *******************************/
         HomeContainerComponent,
@@ -260,6 +261,8 @@ import { DialogHeaderComponent } from './screen-forms/wizards/dialogs/dialog-hea
         PrintFooterComponent,
         PrintHeaderComponent,
         DialogHeaderComponent,
+
+
        
 
     ],

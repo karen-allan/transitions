@@ -1,1 +1,670 @@
 
+
+/*******************************************************************************************************************
+
+SMALL BANANA PORTRAIT (320), SMALL MOBILE PORTRAIT (360), SMALL TABLET PORTRAIT (600) AND BIG MOBILE PORTRAIT (640)
+
+*******************************************************************************************************************/
+@media only screen
+
+and (min-width: 320px)
+and (max-width: 800px) {
+
+    .desktop-header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: block;
+        width:var(--media-unaffected-by-content-width);
+        float:left;
+        margin:auto;
+    }
+
+    /* contains the mobile-header-content */
+    .mobile-header-block {
+        display: grid;
+        width:100%;
+        margin:auto;
+    }
+
+    /* ROW 1 The header is 2 grid columns with logo (col 1) and name (col 2) in row 1
+    and slogan in row 2 all cols, with slogan 1 in col 1 and slogan 2 in col 2
+    3rd row is the mobile hamburger menu ROWS AND HEIGHT DEFINED BELOW IN INDIVID. ELEMENTS */
+    .mobile-header-content {
+        display:inline-grid;
+        width:100%;
+        grid-template-columns: 1fr 1fr;
+        padding-top:1em;
+        /*grid-template-columns: 40% 60%;*/
+        align-content: flex-start;
+    }
+
+    /* background position centers vertical */
+    .logo {
+        background-position: center;
+        background-image:url('src/assets/images/menu/transitionsInEnergyLogo.png');
+        background-repeat: no-repeat;
+        margin:0;
+        height:100px;
+    }
+
+    .header-name {
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+    }
+
+    .header-name p, .header-name span {
+        line-height:90%;
+    }
+
+    /* ROW 2 slogan - energy medicine treatments - icon - end of life doula support */
+    .header-slogans {
+        grid-row:2;
+        display:inline-grid;
+        grid-column:1/-1;
+        width:100%;
+        grid-template-columns: 45% 10% 45%;
+        background-color: var(--color-dark-blue);
+    }
+
+    .header-slogans p, .slogans-line, .header-slogans span {
+        display:inline-grid;
+        height:50px;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 100%;
+    }
+
+    .header-slogans p {
+        grid-column: 1;
+        letter-spacing: 2px;
+        padding-left:1em;
+        color:var(--color-white);
+        margin: 0;
+    }
+
+    .slogans-line {
+        grid-column:2;
+        background-size:auto;
+        background: url("src/assets/images/menu/infinityMobile.png") no-repeat center;
+    }
+
+    .header-slogans span {
+        grid-column:3;
+        letter-spacing: 2px;
+        padding-right:1em;
+        color:var(--color-white);
+        text-transform: full-size-kana;
+    }
+
+    /* ROW 3 Eden and email links and menu item bars */
+    .mobile-menu-items {
+        grid-row:3;
+        display:inline-grid;
+        height:45px;
+        width:100%;
+        background-color: var(--color-white);
+    }
+
+    .mobile-eden-icon, .mobile-email-icon,  .mobile-menu-icon {
+        display:inline-grid;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .mobile-eden-icon {
+        grid-column:2;
+    }
+
+    .mobile-email-icon {
+        grid-column:3;
+    }
+
+    .mobile-menu-icon {
+        grid-column:4;
+        cursor: pointer;
+        background-color: var(--color-white);
+    }
+
+    .bar1, .bar2, .bar3 {
+        display:grid;
+        width: 20px;
+        height: 2px;
+        justify-content: center;
+        background-color: var(--color-purple);
+        margin: 2px 0;
+        transition: 0.4s;
+    }
+
+    /* THE MOBILE TOP MENU THAT SLIDES DOWN ON CLICKING and DISPLAYS MOBILE SUB MENU IF SELECTED */
+    .mobile-menu-block {
+        display: grid;
+        grid-row:3;
+        align-content: flex-start;
+        width:100%;
+        margin:auto;
+    }
+
+    .mobile-menu {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        display: grid;
+        align-content: center;
+        height: 50px;
+        width:100%;
+        justify-content: flex-start;
+        padding-left: 1em;
+    }
+
+    .mobile-unselected-top-menu-item a, .mobile-unselected-sub-menu-item a {
+        border-bottom:thin solid white;
+    }
+
+    .mobile-selected-top-menu-item {
+        border-bottom:thin solid var(--color-dark-blue);
+    }
+
+    .mobile-selected-top-menu-item {
+        cursor: default;
+        background-color: var(--color-off-white);
+        color: var(--color-dark-blue);
+    }
+
+    .mobile-unselected-top-menu-item a {
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--color-off-white);
+        background-color: var(--color-dark-blue);
+    }
+
+    /* MOBILE SUB MENU ITEMS */
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        display: grid;
+        width: 100%;
+        align-content: center;
+        justify-content: flex-start;
+        height: 40px;
+        padding-left: 3em;
+    }
+
+    .mobile-selected-sub-menu-item {
+        background-color: var(--color-off-white);
+        color: var(--color-purple);
+    }
+
+    .mobile-unselected-sub-menu-item a {
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--color-off-white);
+        background-color: var(--color-dark-blue);
+    }
+
+}
+
+/*******************************************************************************************************************
+
+    GLOBAL FOR BIG TABLETS, IPADS, LAPTOPS and DESKTOPS
+
+*******************************************************************************************************************/
+
+@media only screen
+and (min-width:896px)    {
+
+    /* header mobile displays in mobile mode and hides in desktop mode */
+    .mobile-header {
+        display: none;
+    }
+
+    /* header desktop displays in desktop mode and hides in mobile mode */
+    .desktop-header {
+        display: block;
+        width:var(--media-unaffected-by-content-width);
+        float:left;
+        margin:auto;
+    }
+
+    /* DESKTOP-CONTENT-BLOCK - ROW 1 - with logo, name and slogans - it is 1280 which is tablet width 1280  */
+    .desktop-content-block {
+        display: grid;
+        max-width:var(--ipad-width);
+        margin:auto;
+    }
+
+    /* DESKTOP-CONTENT - 3 grid columns with header-logo, header-name, header-slogans on right  */
+    .desktop-content {
+        display:inline-grid;
+        width:100%;
+        grid-template-columns: 20% 30% 28% 22%;
+        /*background-color: red;*/
+        height:120px;
+        margin: 0 auto;
+        align-content: flex-start;
+    }
+
+    .header-logo,  .header-name, .header-slogans, .header-socials {
+        display:grid;
+        height:120px;;
+        align-content: center;
+    }
+
+    .header-logo {
+        grid-column: 1;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        background-size: auto;
+        background-position: center;
+        background-image:url('src/assets/images/menu/transitionsInEnergyLogo.png');
+        background-repeat: no-repeat;
+        margin:0;
+    }
+
+    .header-name {
+        grid-column: 2;
+        border-left: 1px solid #f1f1f1;
+        border-right: 1px solid #f1f1f1;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .header-slogans {
+        grid-column: 3;
+        border-right: 1px solid #f1f1f1;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .header-slogans p {
+        letter-spacing: 2px;
+        margin: 0;
+    }
+
+    .slogans-line {
+        background-color:var(--color-purple);
+        height:2px;
+        width:100%;
+    }
+
+    .header-slogans span {
+        letter-spacing: 3px;
+        text-transform: full-size-kana;
+    }
+
+    .header-socials {
+        grid-column: 4;
+        align-content: center;
+        font-family: var(--family-menu-copy);
+    }
+
+    .top-social a, .bottom-social a {
+        display:block;
+        white-space: nowrap;
+        color:var(--color-dark-blue);
+        font-weight:400;
+        text-align: left;
+        text-decoration: none;
+    }
+
+    .bottom-social a  {
+        padding-top: 1em;
+    }
+
+    /* DESKTOP-MENU-BLOCK - ROW 2 - is the top menu for desktop and is full screen banner-width 1920px */
+    .desktop-menu-block {
+        display: grid;
+        width:100%;
+        max-width:var(--ipad-width);
+        overflow: hidden;
+        margin:auto;
+        background-color: var(--color-white);
+        border-top:thin solid #f1f1f1;
+        font-family:var(--family-menu-copy);
+    }
+
+    /* DESKTOP-MENU - max width of 840 so space on either side of smallest width */
+    .desktop-menu {
+        display: inline-grid;
+        align-content: flex-start;
+        margin:auto;
+        grid-template-columns: repeat(4, 25%);
+        height:50px;
+        max-width:var(--menu-width);
+        width:100%;
+    }
+
+    /* example uses dropdown instead of desktop-top-menu-item */
+    .desktop-top-menu-item  {
+        display: grid;
+        overflow: hidden;
+        width:100%;
+        justify-content: center;
+        align-content: center;
+        height:50px;
+        background-color: var(--color-white);
+        font-weight:400;
+    }
+
+    .desktop-top-menu-item span {
+        color:var(--color-soft-blue);
+        cursor:pointer;
+    }
+
+    .desktop-top-menu-item span b {
+        color:#527694;
+        /*var(--color-dark-purple);*/
+        cursor:pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        margin-top:50px;
+        padding: 1.5em 0 2.5em 0;
+        background-color: #fff;
+        box-shadow: rgba(50, 50, 93, 0.25) 0 50px 100px -20px, rgba(0, 0, 0, 0.3) 0 30px 60px -30px, rgba(10, 37, 64, 0.35) 0 -2px 6px 0 inset;
+        z-index: 1;
+    }
+
+    .desktop-top-menu-item:hover .dropdown-content {
+        display: block;
+    }
+
+    /* float none forces text to move down row */
+    .dropdown-content a, .dropdown-content span {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        justify-content: center;
+        align-content: center;
+        padding-top: 1.5em;
+        text-decoration: none;
+        width:300px;
+        margin:auto;
+        background-color:var(--color-white);
+        font-family: var(--family-menu-copy);
+    }
+
+    .dropdown-content a {
+        color: var(--color-dark-blue);
+    }
+
+    .dropdown-content a:hover {
+        text-decoration:underline;
+    }
+
+    .dropdown-content span {
+        color: var(--color-dark-purple);
+        font-weight: bold;
+    }
+
+    .swirl {
+        background-image:url("src/assets/images/menu/intro.gif");
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+        height:15px;
+        padding-top:.2em;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL MOBILES - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: portrait) {
+
+    .header-name p {
+        font-size: var(--header-name-p-small-mobile-port);
+    }
+
+    .header-name span {
+        font-size: var(--header-name-span-small-mobile-port);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--header-slogan-small-mobile-port);
+        letter-spacing: 0;
+    }
+
+    .mobile-menu-items {
+        grid-template-columns: 64% 12% 12% 12%;
+    }
+
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--mobile-main-menu-item-mobile);
+    }
+
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--mobile-sub-menu-item-mobile);
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 568px)
+and (orientation: landscape) {
+
+    .header-name p {
+        font-size: var(--header-name-p-small-mobile-land);
+    }
+
+    .header-name span {
+        font-size: var(--header-name-span-small-mobile-land);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--header-slogan-small-mobile-land);
+        letter-spacing: 0;
+    }
+
+    .mobile-menu-items {
+        grid-template-columns: 82% 6% 6% 6%;
+    }
+
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--mobile-main-menu-item-mobile);
+    }
+
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--mobile-sub-menu-item-mobile);
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL SMALL TABLETS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width:600px)
+and (max-width:800px)
+and (orientation: portrait){
+
+    .header-name p {
+        font-size: var(--header-name-p-small-tablet-port);
+
+    }
+
+    .header-name span {
+        font-size: var(--header-name-span-small-tablet-port);
+
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--header-slogan-small-tablet-port);
+        letter-spacing: 0;
+    }
+
+    .mobile-menu-items {
+        grid-template-columns: 73% 9% 9% 9%;
+    }
+
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--mobile-main-menu-item-mobile);
+    }
+
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--mobile-sub-menu-item-mobile);
+    }
+}
+
+/*******************************************************************************************************************
+   GLOBAL SMALL TABLETS - LANDSCAPE INTO LAPTOP MODE NOW
+*******************************************************************************************************************/
+@media only screen
+and (min-width:600px)
+and (max-width:800px)
+and (orientation: landscape){
+
+    .header-name p {
+        font-size: var(--header-name-p-small-tablet-land);
+    }
+
+    .header-name span {
+        font-size: var(--header-name-span-small-tablet-land);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--header-slogan-small-tablet-land);
+        letter-spacing: 0;
+    }
+
+    .mobile-menu-items {
+        grid-template-columns:88% 4% 4% 4%;
+    }
+
+    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
+        font-size: var(--mobile-main-menu-item-mobile);
+    }
+
+    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
+        font-size: var(--mobile-sub-menu-item-mobile);
+    }
+}
+
+/*******************************************************************************************************************
+ GLOBAL BIG TABLETS - PORTRAIT
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 896px)
+and (max-width: 1023px)
+and (orientation: portrait) {
+
+    .header-name p {
+        font-size: var(--header-name-p-big-tablet-port);
+    }
+
+    .header-name span {
+        font-size: var(--header-name-span-big-tablet-port);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--header-slogan-big-tablet-port);
+    }
+
+    .top-social a, .bottom-social a  {
+        font-size: var(--header-socials-font-size);
+    }
+
+    .desktop-top-menu-item span {
+        font-size: var(--desktop-menu-items-font-size);
+    }
+
+    .dropdown-content a, .dropdown-content span {
+        font-size: var(--desktop-sub-menu-items-font-size);
+    }
+}
+
+
+/*******************************************************************************************************************
+   GLOBAL IPADS, LAPTOPS
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1024px) {
+
+    .header-name p {
+        font-size: var(--header-name-p-laptop);
+    }
+
+    .header-name span {
+        font-size: var(--header-name-span-laptop);
+    }
+
+    .header-slogans p, .header-slogans span {
+        font-size: var(--header-slogan-laptop);
+    }
+
+    .top-social a, .bottom-social a  {
+        font-size: var(--header-socials-font-size);
+    }
+
+    .desktop-top-menu-item span {
+        font-size: var(--desktop-menu-items-font-size);
+    }
+
+    .dropdown-content a, .dropdown-content span {
+        font-size: var(--desktop-sub-menu-items-font-size);
+    }
+}
+
+/* GLOBAL *************************************************************************************************************/
+@media screen {
+    .header-logo {
+        display:grid;
+        grid-column: 1;
+        grid-row:1;
+        align-content: center;
+    }
+
+    .header-slogans, .header-socials a {
+        color: var(--color-purple);
+    }
+
+    .header-socials a:hover {
+        text-decoration: underline;
+    }
+
+    .header-name {
+        display:grid;
+        grid-column: 2;
+        grid-row:1;
+        align-content: center;
+        font-family:var(--family-menu-name);
+        color:var(--color-purple);
+    }
+
+    .header-name p {
+        margin:0;
+        letter-spacing: .1em;
+    }
+
+    .header-name span {
+        letter-spacing: 4px;
+    }
+
+    .header-slogans {
+        text-transform: uppercase;
+        text-align: center;
+        font-family:var(--family-menu-copy);
+    }
+
+    .header-socials {
+        justify-content: center;
+        font-family:var(--family-menu-copy);
+    }
+}
+
+
+

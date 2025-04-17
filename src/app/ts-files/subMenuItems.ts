@@ -15,11 +15,11 @@ export const SUB_MENU_ITEMS: SubMenuItem[] = [
     {id: 22, parent_id: 2, title: Constants.WRITE_ADVANCE_CARE_PLAN.toUpperCase(), url: 'writeCarePlan'},
     {id: 23, parent_id: 2, title: Constants.CREATE_YOUR_CHECK_LIST.toUpperCase(), url: 'checkOffList'},
 
-    {id: 30, parent_id: 3, title: Constants.CONSULTANT_TESTIMONIALS.toUpperCase(), url: 'rolesOfConsultant'},
+    {id: 30, parent_id: 3, title: Constants.CONSULTANT_TESTIMONIALS.toUpperCase(), url: 'testimonials'},
     {id: 31, parent_id: 3, title: Constants.BOOK_CONSULTATION.toUpperCase(), url: 'bookConsultation'},
 
-    {id: 40, parent_id: 4, title: Constants.ABOUT_EOL_CAREGIVERS.toUpperCase(), url: 'aboutPractitioner'},
-    {id: 41, parent_id: 4, title: Constants.ABOUT_HOW_WE_SUPPORT_YOU.toUpperCase(), url: 'aboutEndOfLifeAdvocacy'},
+    {id: 40, parent_id: 4, title: Constants.ABOUT_US.toUpperCase(), url: 'aboutPractitioner'},
+    {id: 41, parent_id: 4, title: Constants.ABOUT_EOL_CAREGIVERS.toUpperCase(), url: 'aboutEndOfLifeAdvocacy'},
 
 
 ];

@@ -11,8 +11,7 @@ export class AboutEolAdvocacyContainerComponent implements OnInit {
   menuItemId:number   = 4;
   subMenuItemId:number = 41;
 
-  detailHeaderName = 'header-about-eol-advocacy';
-  title= Constants.ABOUT_HOW_WE_SUPPORT_YOU
+  title= Constants.ABOUT_EOL_CAREGIVERS
   quote: string='In protecting yourself, others are protected. In protecting others, you are protected.';
   author: string='Gautama Buddha';
 

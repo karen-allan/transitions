@@ -13,15 +13,18 @@ export class BookConsultationContainerComponent {
   menuItemId:number   = 3;
   subMenuItemId:number = 31;
 
-  detailHeaderName = 'header-book-consultation'
   title= BOOK_CONSULTATION;
   quote='Sometimes the greatest adventure is simply a conversation.';
   author='Amadeus Wolfe'
 
-  consult1:string=  "How to Plan for my Future Care";
-  consult2:string=  "My Need for Support as Caregiver";
-  consult3:string=  "My Need for Support as Patient";
+  consult1a:string=  "How to Plan for my Future Care";
+  consult1b:string=  "How to Plan for your Future Care";
 
+  consult2a:string=  "My Need for Support as Caregiver";
+  consult2b:string=  "Your Need for Support as Caregiver";
+
+  consult3a:string=  "My Need for Support as Patient";
+  consult3b:string=  "Your Need for Support as Patient";
 
   selectedIntakeForm='';
 

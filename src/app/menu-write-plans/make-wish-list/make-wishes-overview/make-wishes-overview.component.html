@@ -1,9 +1,11 @@
 <div class="header-detail-image header-write-needs-down-image">
-    <div class="header-quote">
-        &#8220;{{ quote }}&#8220;
-    </div>
-    <div class="header-author">
-        {{ author }}
+    <div class="header-quotes">
+        <div class="header-quote">
+            &#8220;{{quote}}&#8220;
+        </div>
+        <div class="header-author">
+            {{author}}
+        </div>
     </div>
 </div>
 
@@ -18,33 +20,23 @@
 
         <div class="wizard-intro-text">
             <a (click)="openModal()">
-                <div class="content-title">
-                    <h1>{{ title.toUpperCase() }}</h1>
-                </div>
-                <div class="content-dark-copy text-align-justify">
-                    <p>
-                        <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
-                        as a PDF file. This wizard is only available on an ipad, laptop or desktop.
-                    </p>
-                </div>
-
-                <div class="content-title text-align-center">
-                    <h3>Why Run this Wizard?</h3>
-                </div>
-
-                <div class="content-dark-copy text-align-justify">
-                    <p>
-                        Run this wizard to help you explore your ideas, concerns, wishes and thoughts about how you would
-                        like to deal with all those end of life issues. These issues aren't just for those at the end of their lives. They
-                        are concerns everyone should address. The benefit of doing so will provide your family with invaluable input.
-                    </p>
-                </div>
+                <h3>{{ title.toUpperCase() }}</h3>
+                <p>
+                    Run this <b>{{title}}</b> wizard to help you explore your ideas, concerns, wishes and thoughts about how you would
+                    like to deal with all those end of life issues. These issues aren't just for those at the end of their lives. They
+                    are concerns everyone should address. The benefit of doing so will provide your family with invaluable input.
+                    <br><br>
+                    <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
+                    as a PDF file. This wizard is only available on an ipad, laptop or desktop.
+                </p>
             </a>
         </div>
     </div>
 </div>
 
 <div class="mobileForm">
+    <div class="separator-block-light"></div>
+
     <div class="wizard-intro-container">
         <div class="wizard-intro-image">
             <img src="assets/images/details/takeAction/writeNeedsDown/wizardActionWishListIntro.jpg"
@@ -52,27 +44,15 @@
         </div>
 
         <div class="wizard-intro-text">
-            <div class="content-title">
-                <h3>{{ title.toUpperCase() }}</h3>
-            </div>
-            <div class="content-dark-copy text-align-justify">
-                <p>
-                    <b>Please Note:</b> At this time the {{ title }} wizard is only available on ipads, laptops, desktops and up. To
-                    follow this wizard please connect to it via one of these devices.
-                </p>
-            </div>
-
-            <div class="content-title text-align-center">
-                <h3>Why Run this Wizard?</h3>
-            </div>
-
-            <div class="content-dark-copy text-align-justify">
-                <p>
-                    Run this wizard to help you explore your ideas, concerns, wishes and thoughts about how you would
-                    like to deal with all those end of life issues. These issues aren't just for those at the end of their lives. They
-                    are concerns everyone should address. The benefit of doing so will provide your family with invaluable input.
-                </p>
-            </div>
+            <h3>{{ title.toUpperCase() }}</h3>
+            <p>
+                Run this <b>{{title}}</b> wizard to help you explore your ideas, concerns, wishes and thoughts about how you would
+                like to deal with all those end of life issues. These issues aren't just for those at the end of their lives. They
+                are concerns everyone should address. The benefit of doing so will provide your family with invaluable input.
+                <br><br>
+                <b>Please Note:</b> At this time the {{ title }} wizard is only available on ipads, laptops, desktops and up. To
+                follow this wizard please connect to it via one of these devices.
+            </p>
         </div>
     </div>
 </div>

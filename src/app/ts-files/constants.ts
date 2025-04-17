@@ -22,14 +22,14 @@ export const CREATE_YOUR_CHECK_LIST: string ="CREATE YOUR CHECKLIST"
 
 /******************************************** GET HELP */
 
- export const GET_HELP:string = "Get Help"
+ export const BOOK_CONSULT:string = "BOOK CONSULT"
 export const CONSULTANT_TESTIMONIALS: string="TESTIMONIALS AND FEES"
 export const BOOK_CONSULTATION: string="BOOK A CONSULTATION"
 
 /******************************************** ABOUT US */
-export const ABOUT_US:string = "ABOUT US"
-export const ABOUT_EOL_CAREGIVERS: string="ABOUT END OF LIFE CAREGIVERS"
-export const ABOUT_HOW_WE_SUPPORT_YOU: string="HOW WE SUPPORT YOU"
+export const ABOUT:string = "ABOUT"
+export const ABOUT_US: string="ABOUT US"
+export const ABOUT_EOL_CAREGIVERS: string="END OF LIFE SUPPORT"
 
 
 

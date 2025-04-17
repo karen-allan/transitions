@@ -33,7 +33,7 @@ and (min-width: 960px) {
     }
 
     .modal-plan-last-title {
-        font-size: var(--form-last-title);
+        font-size: var(--form-last-plan-title);
         padding: 1em 0;
         line-height: 115%;
     }

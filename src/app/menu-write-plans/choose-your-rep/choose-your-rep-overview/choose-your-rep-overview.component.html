@@ -1,9 +1,11 @@
 <div class="header-detail-image header-choose-your-rep-image">
-    <div class="header-quote">
-        &#8220;{{quote}}&#8220;
-    </div>
-    <div class="header-author">
-        {{author}}
+    <div class="header-quotes">
+        <div class="header-quote">
+            &#8220;{{quote}}&#8220;
+        </div>
+        <div class="header-author">
+            {{author}}
+        </div>
     </div>
 </div>
 
@@ -20,23 +22,21 @@
             <a (click)="openModal()">
                 <h3>{{ title.toUpperCase() }}</h3>
                 <p>
-                    <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
-                    as a PDF file. This wizard is only available on an ipad, laptop or desktop.
-                </p>
-
-                <h3>Why Run this Wizard?</h3>
-                <p>
-                    Filling this wizard out will help you document who you trust to protect, defend and
+                    Completing this <b>{{title}}</b> wizard will help you document who you trust to protect, defend and
                     support you as your Representative. Although there are many versions of this document, this document is valid as long
                     as it is properly filled out and witnessed. No need to pay a lawyer!
+                    <br><br>
+                    <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
+                    as a PDF file. This wizard is only available on an ipad, laptop or desktop.
                 </p>
             </a>
         </div>
     </div>
 </div>
 
-
 <div class="mobileForm">
+    <div class="separator-block-light"></div>
+
     <div class="wizard-intro-container">
         <div class="wizard-intro-image">
             <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsIntro.jpg"
@@ -45,18 +45,13 @@
 
         <div class="wizard-intro-text">
             <h3>{{ title.toUpperCase() }}</h3>
-
             <p>
-                <b>Please Note:</b> At this time the {{ title }} wizard is only available on ipads, laptops, desktops and up. To
-                follow this wizard please connect to it via one of these devices.
-            </p>
-
-            <h3>Why Run this Wizard?</h3>
-
-            <p>
-                Filling this wizard out will help you document who you trust to protect, defend and
+                Completing this <b>{{title}}</b> wizard will help you document who you trust to protect, defend and
                 support you as your Representative. Although there are many versions of this document, this document is valid as long
                 as it is properly filled out and witnessed. No need to pay a lawyer!
+                <br><br>
+                <b>Please Note:</b> At this time the {{ title }} wizard is only available on ipads, laptops, desktops and up. To
+                follow this wizard please connect to it via one of these devices.
             </p>
         </div>
     </div>

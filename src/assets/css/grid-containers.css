@@ -1,31 +1,48 @@
-/*DONE FEB 24/25 for HOME, ABOUT  */
 
+/*******************************************************************************************************************
+  GLOBAL  content is now 1024 so there must be space on either side up to it
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 1024px) {
+
+    .home-facts-container, .wizard-intro-container, .charges-grid, .testimonials-grid  {
+        width: var(--media-less-than-or-at-ipad-width);
+        margin-right:5%;
+        margin-left:5%;
+    }
+
+    .about-us-container {
+        width:100%;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1280px) {
+
+    .home-facts-container, .about-us-container,  .wizard-intro-container, .charges-grid, .testimonials-grid  {
+        width: var(--media-more-than-ipad-width);
+    }
+}
 
 /*******************************************************************************************************************
 
-    SMALL BANANA PORTRAIT (320), SMALL MOBILE PORTRAIT (360), SMALL TABLET PORTRAIT (600) AND BIG MOBILE PORTRAIT (640)
     ie ONE COLUMN
 
 /********************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 600px) {
-
-    .mobile-columns {
-        display:block;
-    }
-
-    .desktop-columns {
-        display:none;
-    }
+and (max-width: 800px) {
 
     /* HOME PAGE FACTS */
     .home-facts-container {
-        width:var(--media-less-than-content-width);
         display: grid;
         align-content: center;
         justify-content: center;
-        margin: auto;
         background-color: #ffffff;
     }
 
@@ -36,63 +53,59 @@ and (max-width: 600px) {
         align-content: center;
     }
 
-    .facts-inline-text-white-bkgrnd, .facts-block-text {
-        display:grid;
+    .facts-inline-text-mobile {
+        display: grid;
         grid-column:1;
-        justify-content: center;
-        align-content: center;
+        align-content:center;
+        justify-content: flex-start;
+        color:var(--color-white);
+        text-align: left;
     }
 
-    .facts-block-text {
-        width:var(--media-less-than-content-width);
-        margin-bottom:.5em;
-    }
-
-    .facts-inline-text-white-bkgrnd a, .facts-block-text a {
+    .facts-inline-text-mobile a {
         line-height:110%;
         padding-top:1em;
     }
 
-
-
-    /* ABOUT PAGE FACTS */
-    /* because this container uses content title and copy pages which are already using media less than content width */
     .about-us-container  {
         display: grid;
         align-content: center;
         justify-content: center;
-        margin: auto;
-        max-width: var(--content-width);
-        /*width: var(--media-less-than-content-width);*/
     }
 
-    .about-image  {
+    .about-us-image  {
         display:grid;
         grid-column:1;
-        justify-content: center;
-        align-content: center;
     }
 
-    .about-text   {
+    .about-us-text {
         display:grid;
         grid-column:1;
-        justify-content: center;
-        align-content: center;
-        text-align:justify;
+        font-family: var(--family-copy);
     }
 
-    .separator-block {
+    .about-us-text h3 {
+        padding-top:1em;
+        text-align:center;
+        margin:0;
+        font-family: var(--family-title);
+    }
+
+    .about-us-text p a {
+        text-align: justify;
+        line-height:120%;
+    }
+
+  /*  .separator-block {
         display: none;
-    }
+    }*/
 
     /* INTRO PAGES INTO WIZARDS */
     .wizard-intro-container {
         display: grid;
-        float:left;
         align-content: center;
         justify-content: center;
         border-radius: 10px;
-        margin:1em 0;
     }
 
     .wizard-intro-image {
@@ -103,20 +116,28 @@ and (max-width: 600px) {
     .wizard-intro-text {
         display: grid;
         grid-column: 1;
-        padding:1em 1em 0 1em;
-        line-height:110%;
+        padding: 1em;
+        font-family: var(--family-copy);
     }
 
-    .wizard-intro-text h3 {
-        padding-top:.5em;
-        line-height:110%;
+    /* mobiles without link */
+    .wizard-intro-text p, .wizard-intro-text h4 {
+        cursor:none;
+    }
+
+    .wizard-intro-text p {
+        text-align: justify;
+        line-height:120%;
+    }
+
+    .wizard-intro-text h4 {
+        padding-top:1em;
+        text-align:center;
+        margin:0;
+        font-family: var(--family-title);
     }
 
     /* TESTIMONIALS */
-    .charges-grid, .testimonials-grid  {
-        /*width:var(--media-less-than-content-width);*/
-    }
-
     .charges-grid {
         padding:.5em;
     }
@@ -133,84 +154,75 @@ and (max-width: 600px) {
 
 /*******************************************************************************************************************
 
-  SMALL TABLETS LANDSCAPE (800) TO  BIG MOBILE LANDSCAPE (896) TO BIG TABLET LANDSCAPE (1280) AND IPAD LAND. (1366) AND UP
-    ie TWO COLUMNS
+    ie TWO COLUMN GRIDS
 
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 800px) {
-
-    .mobile-columns {
-        display:none;
-    }
-
-    .desktop-columns {
-        display:block;
-    }
+/*and (min-width: 800px)*/
+and (min-width: 896px) {
 
     /* HOME PAGE */
     /* images are 500 square which are 49% of ipad width 1024 */
-    .home-facts-container {
-        width:var(--media-more-than-content-width);
+
+    /* HOME PAGE laptop smaller size font */
+     .home-facts-container {
         display: inline-grid;
         grid-template-columns: 49% 51%;
-        background-color: #363233;
-        margin:1em; align-content: center;
-        height:500px;
+        align-content: center;
     }
 
     .facts-inline-image {
         display:grid;
         grid-column:1;
-        justify-content: flex-start;
-        align-content: center;
     }
 
-    .facts-inline-text-dark-bkgrnd {
+    .facts-inline-text-laptop {
+        display: grid;
+        grid-column:2;
+        height:100%;
+        background: var(--color-text-background);
+        align-content:center;
+        justify-content: flex-start;
         padding:0 1em;
     }
 
-    .facts-block-text {
-        width:var(--media-more-than-content-width);
+    .facts-inline-text-laptop a {
+        line-height:100%;
+        padding:1em;
+        color:var(--color-white);
+        text-align: left;
     }
-
-    .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
-        line-height:110%;
-        padding-top:1em;
-    }
-
-
 
     /* ABOUT US PAGE uses content copy and title which already set the width as more than media */
     .about-us-container {
         display: inline-grid;
         grid-template-columns: 49% 51%;
-        max-width: var(--ipad-width);
-        width: var(--media-more-than-content-width);
+        align-content: center;
     }
 
-     .about-image  {
+     .about-us-image  {
          display:grid;
          grid-column:1;
-         justify-content: flex-start;
-         align-content: center;
      }
 
-    .about-text  {
-        display:grid;
-        grid-column:2;
-        padding:0 1em;
-        justify-content: center;
+    /*.about-text  {*/
+    .about-us-text {
+        display: grid;
+        grid-column: 2;
+        padding:0 2em;
         align-content: center;
-        border-right:thin solid #000;
+        font-family: var(--family-copy);
      }
 
-    .separator-block {
-        display:block;
-        float:left;
-        width:100%;
-        height:20px;
-        background: radial-gradient(circle at 100px 100px, #e8edef, #000);
+    .about-us-text h3 {
+        padding-top:1em;
+        text-align:center;
+        font-family: var(--family-title);
+    }
+
+    .about-us-text p, .about-us-text p a {
+        text-align: justify;
+        line-height:120%;
     }
 
     /* WIZARDS INTROS */
@@ -218,7 +230,8 @@ and (min-width: 800px) {
         display: inline-grid;
         grid-template-columns: 49% 51%;
         border-radius: 10px 40px 40px 10px;
-        margin:2em 0;
+        margin-top:2em;
+        align-content: center;
     }
 
     .wizard-intro-image {
@@ -229,20 +242,29 @@ and (min-width: 800px) {
     .wizard-intro-text {
         display: grid;
         grid-column: 2;
-        padding:2em 2em 0 2em;
+        padding:0 2em;
+    }
+
+    /* laptop with link */
+    .wizard-intro-text a h3 {
+        text-align: left;
+    }
+
+    .wizard-intro-text a p {
+        cursor:pointer;
+        text-decoration: none;
+    }
+
+    .wizard-intro-text a p {
+        font-family: var(--family-copy);
         line-height:120%;
     }
 
-    .wizard-intro-text h3 {
-        padding-top:1em;
-        line-height:120%;
+    .wizard-intro-text a h3 {
+        font-family: var(--family-title);
     }
 
     /* TESTIMONIALS */
-    .charges-grid, .testimonials-grid  {
-        width: var(--media-more-than-content-width);
-    }
-
     .charges-grid {
         padding:1em;
     }
@@ -258,7 +280,7 @@ and (min-width: 800px) {
 }
 
 /*******************************************************************************************************************
-  GLOBAL BANANAS - PORTRAIT
+  GLOBAL MOBILES - PORTRAIT
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
@@ -266,111 +288,132 @@ and (max-width: 568px)
 and (orientation: portrait) {
 
 
-    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
-        font-size:var(--p-banana-port);
+    /* ABOUT  */
+    .about-us-text h3 {
+        font-size:var(--h3-small-mobile-port);
     }
 
+    .about-us-text p, .about-us-text p a {
+        font-size:var(--p-small-mobile-port);
+    }
+
+    /* HOME PAGE mobile 1 col  bigger size font */
+    .facts-inline-text-mobile a   {
+        font-size:var(--p-small-mobile-port);
+    }
+
+    /* WIZARD INTRO mobile 1 col  bigger size font */
     .wizard-intro-text h3 {
-        font-size:var(--h3-titles-banana-port);
+        font-size:var(--h3-small-mobile-port);
     }
 
     .wizard-intro-text p {
-        font-size:var(--p-banana-port);
+        font-size:var(--p-small-mobile-port);
     }
+
+    .charges-grid h3 {
+        font-size:var(--h3-small-mobile-port);
+    }
+
+    .charges-grid p {
+        font-size:var(--p-small-mobile-port);
+    }
+
+    .charges-grid-span {
+        font-size:var(--span-small-mobile-port);
+    }
+
 }
 
 /*******************************************************************************************************************
-  GLOBAL BANANAS - LANDSCAPE
+  GLOBAL MOBILES - LANDSCAPE
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
 and (max-width: 568px)
 and (orientation: landscape) {
 
-
-
-    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
-        font-size:var(--p-banana-land);
+    /* ABOUT */
+    .about-us-text h3 {
+        font-size:var(--h3-small-mobile-land);
     }
 
-    .wizard-intro-text h3 {
-        font-size:var(--h3-titles-banana-land);
-    }
-
-    .wizard-intro-text p {
-        font-size:var(--p-banana-land);
-    }
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL MOBILES - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 360px)
-and (max-width: 414px)
-and (orientation: portrait){
-
-
-
-    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
-        font-size:var(--p-small-mobile-port);
-    }
-
-    .wizard-intro-text h3 {
-        font-size:var(--h3-titles-small-mobile-port);
-    }
-
-    .wizard-intro-text p {
-        font-size:var(--p-small-mobile-port);
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL MOBILES - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 360px)
-and (max-width: 414px)
-and (orientation: landscape){
-
-
-
-    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+    .about-us-text p, .about-us-text p a {
         font-size:var(--p-small-mobile-land);
     }
 
+    /* HOME PAGE mobile 1 col  bigger size font */
+    .facts-inline-text-mobile a   {
+        font-size:var(--p-small-mobile-land);
+    }
+
+    /* WIZARD INTRO mobile 1 col  bigger size font */
     .wizard-intro-text h3 {
-        font-size:var(--h3-titles-small-mobile-land);
+        font-size:var(--h3-small-mobile-land);
     }
 
     .wizard-intro-text p {
         font-size:var(--p-small-mobile-land);
     }
 
+    .charges-grid h3 {
+        font-size:var(--h3-small-mobile-land);
+    }
+
+    .charges-grid p {
+        font-size:var(--p-small-mobile-land);
+    }
+
+    .charges-grid-span {
+        font-size:var(--p-small-mobile-land);
+    }
+
 }
+
 
 /*******************************************************************************************************************
  GLOBAL SMALL TABLETS - PORTRAIT
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 600px)
-and (max-width:800px)
+and (max-width:896px)
 and (orientation: portrait){
 
+    /* ABOUT now the text is using the standard copy text sizes that are bigger than the laptop 2 col*/
+    .about-us-text h3 {
+        font-size:var(--h3-small-tablet-port);
+    }
 
-
-    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
+    .about-us-text p, .about-us-text p a {
         font-size:var(--p-small-tablet-port);
     }
 
+    /* HOME PAGE mobile 1 col  bigger size font */
+    .facts-inline-text-mobile a   {
+        font-size:var(--p-small-tablet-port);
+    }
+
+    /* WIZARD INTRO mobile 1 col  bigger size font */
     .wizard-intro-text h3 {
-        font-size:var(--h3-titles-small-tablet-port);
+        font-size:var(--h3-small-tablet-port);
     }
 
     .wizard-intro-text p {
         font-size:var(--p-small-tablet-port);
     }
+
+    .charges-grid h3 {
+        font-size:var(--h3-small-tablet-port);
+    }
+
+    .charges-grid p {
+        font-size:var(--p-small-tablet-port);
+    }
+
+    .charges-grid-span {
+        font-size:var(--span-small-tablet-port);
+    }
+
 }
 
 /*******************************************************************************************************************
@@ -378,189 +421,118 @@ and (orientation: portrait){
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 600px)
-and (max-width:800px)
-and (orientation: landscape){
-
-    /* image is 500x500 - .4882 there is no white background here */
-    /* HOME PAGE */
-    .facts-inline-text-dark-bkgrnd {
-        height:390px;
-    }
-
-    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
-        font-size:var(--p-small-tablet-land);
-    }
-
-
-    .wizard-intro-text h3 {
-        font-size:var(--h3-titles-small-tablet-land);
-    }
-
-    .wizard-intro-text p {
-        font-size:var(--p-small-tablet-land);
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL BIG MOBILES - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width:640px)
-and (max-width:896px)
-and (orientation: portrait){
-
-
-
-    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
-        font-size:var(--p-big-mobile-port);
-    }
-
-    .wizard-intro-text h3 {
-        font-size:var(--h3-titles-big-mobile-port);
-    }
-
-    .wizard-intro-text p {
-        font-size:var(--p-big-mobile-port);
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL BIG MOBILES - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width:640px)
 and (max-width:896px)
 and (orientation: landscape){
 
-    /* image is 500x500 - .4882 there is no white background here */
-    /* HOME PAGE */
-    .facts-inline-text-dark-bkgrnd {
-        height:437px;
+    /* ABOUT now smaller fonts for 2 column grid */
+    .about-us-text h3 {
+        font-size:var(--h3-tablet-grid);
     }
 
-    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
-        font-size:var(--p-big-mobile-land);
+    .about-us-text p, .about-us-text p a {
+        font-size:var(--p-tablet-grid);
     }
 
-    .wizard-intro-text h3 {
-        font-size:var(--h3-titles-big-mobile-land);
+    /* WIZARD INTRO
+    these are for the anchored text which we want smaller than the regular p text */
+    .wizard-intro-text a h3 {
+        font-size:var(--h3-tablet-grid);
     }
 
-    .wizard-intro-text p {
-        font-size:var(--p-big-mobile-land);
+    .wizard-intro-text a p {
+        font-size:var(--p-tablet-grid);
+    }
+
+    .charges-grid h3 {
+        font-size:var(--h3-small-tablet-land);
+    }
+
+    .charges-grid-span {
+        font-size:var(--span-small-tablet-land);
     }
 
 }
 
 /*******************************************************************************************************************
-  GLOBAL BIG TABLETS and IPAD - PORTRAIT
+  GLOBAL BIG TABLETS
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 960px)
-and (max-width: 1366px)
+and (max-width: 1023px)
 and (orientation: portrait) {
 
-    /* image is 500x500 - .4882 there is no white background here */
-    /* HOME PAGE */
-    .facts-inline-text-dark-bkgrnd {
-        height:468px;
+    /* ABOUT */
+    /* ABOUT now smaller fonts for 2 column grid */
+    .about-us-text h3 {
+        font-size:var(--h3-tablet-grid);
     }
 
-    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
-        font-size:var(--p-big-tablet-ipad-port);
+    .about-us-text p, .about-us-text p a {
+        font-size:var(--p-tablet-grid);
     }
 
-
-
-    .wizard-intro-text h3 {
-        font-size:var(--h3-titles-big-tablet-ipad-port);
+    /* WIZARD INTRO
+   these are for the anchored text which we want smaller than the regular p text */
+    .wizard-intro-text a h3 {
+        font-size:var(--h3-tablet-grid);
     }
 
-    .wizard-intro-text p {
-        font-size:var(--p-big-tablet-ipad-port);
+    .wizard-intro-text a p {
+        font-size:var(--p-tablet-grid);
     }
+
+    /* TESTIMONIALS */
+    .charges-grid p {
+        font-size:var(--p-big-tablet-port);
+    }
+
+    .charges-grid-span {
+        font-size:var(--span-big-tablet-port);
+    }
+
 }
 
 /*******************************************************************************************************************
- GLOBAL BIG TABLETS - LANDSCAPE and IPAD LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 960px)
-and (max-width: 1366px)
-and (orientation: landscape) {
-
-    .facts-inline-text-dark-bkgrnd {
-        height:468px;
-    }
-
-    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
-        font-size:var(--p-big-tablet-ipad-land);
-    }
-
-
-
-    .wizard-intro-text h3 {
-        font-size:var(--h3-titles-big-tablet-ipad-land);
-    }
-
-    .wizard-intro-text p {
-        font-size:var(--p-big-tablet-ipad-land);
-    }
-}
-
-
-/*******************************************************************************************************************
- GLOBAL LAPTOPS
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 1440px)
-and (max-width:1919px) {
-
-    /* HOME PAGE */
-    .facts-inline-text-dark-bkgrnd {
-        height:500px;
-    }
-
-    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
-        font-size:var(--p-laptop);
-    }
-
-
-
-    .wizard-intro-text h3 {
-        font-size:var(--h3-titles-laptop);
-    }
-
-    .wizard-intro-text p {
-        font-size:var(--p-laptop);
-    }
-}
-/*******************************************************************************************************************
- GLOBAL BIG TABLETS LANDSCAPE (1280), IPADS LAPTOPS AND UP
+ GLOBAL IPADS, LAPTOPS and UP
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 1024px) {
 
-    /* HOME PAGE */
-    .facts-inline-text-dark-bkgrnd {
-        height:500px;
+    .facts-inline-text-laptop a {
+        font-size:var(--p-laptop-grid);
     }
 
-    .facts-inline-text-white-bkgrnd a, .facts-inline-text-dark-bkgrnd a, .facts-block-text a {
-        font-size:var(--p-desktop);
+    /* ABOUT now smaller fonts for 2 column grid */
+    .about-us-text h3 {
+        font-size:var(--h3-laptop-grid);
     }
 
-
-
-    .wizard-intro-text h3 {
-        font-size:var(--h3-titles-desktop);
+    .about-us-text p, .about-us-text p a {
+        font-size:var(--p-laptop-grid);
     }
 
-    .wizard-intro-text p {
-        font-size:var(--p-desktop);
+    /* WIZARD INTRO
+   these are for the anchored text which we want smaller than the regular p text */
+    .wizard-intro-text a h3 {
+        font-size:var(--h3-laptop-grid);
     }
+
+    .wizard-intro-text a p {
+        font-size:var(--p-laptop-grid);
+    }
+
+    /* TESTIMONIAL AND CHARGES PAGE */
+   .charges-grid h3 {
+       font-size:var(--h3-laptop);
+   }
+
+   .charges-grid p {
+       font-size:var(--p-laptop);
+   }
+
+   .charges-grid-span {
+       font-size:var(--span-laptop);
+   }
 
 }
 
@@ -569,10 +541,8 @@ and (min-width: 1024px) {
 
     /* HOME PAGE FACTS */
     .home-facts-container{
-        display: grid;
         max-width: var(--ipad-width);
         font-family:var(--family-copy);
-        margin:auto;
     }
 
     .facts-inline-image {
@@ -585,69 +555,34 @@ and (min-width: 1024px) {
         height:auto;
     }
 
-    .facts-inline-text-dark-bkgrnd, .facts-inline-text-white-bkgrnd  {
-        display: grid;
-        justify-content: center;
-    }
-
-    .facts-inline-text-dark-bkgrnd {
-        background: var(--color-dark-green);
-        align-content:center;
-    }
-
-    .facts-inline-text-dark-bkgrnd a {
-        color:white;
-        text-align: justify;
-    }
-
-    .facts-inline-text-dark-bkgrnd a, .facts-inline-text-white-bkgrnd a, .facts-block-text a {
+    /* the code for the laptop size text is in the above global size section as it is smaller than regular text */
+    /* the mobile code is in that global size section as well and has the same size text as standard p text */
+    .facts-inline-text-laptop a, .facts-inline-text-mobile a {
         cursor:pointer;
         text-decoration:none;
     }
 
-    .facts-inline-text-dark-bkgrnd a:hover, .facts-inline-text-white-bkgrnd a:hover, .facts-block-text a:hover {
+    .facts-inline-text-laptop a:hover, .facts-inline-text-mobile a:hover {
         text-decoration:underline;
-    }
-
-    .facts-inline-text-white-bkgrnd {
-        justify-content: flex-start;
-        text-align: left;
-        background: #FFFFFF;
-    }
-
-    .facts-inline-text-white-bkgrnd a {
-        color:var(--color-dark-blue);
-        text-align: left;
-    }
-
-    .facts-block-text {
-        display: grid;
-        margin-left:auto;
-        margin-right:auto;
-        font-family:var(--family-copy);
-        justify-content: center;
-        text-align: left;
-    }
-
-    .facts-block-text a {
-        color:var(--color-dark-blue);
-        text-align: left;
     }
 
     /* ABOUT US PAGE */
     .about-us-container   {
         display: grid;
-        margin:auto;
+        /*margin:auto;*/
     }
 
-    .about-image img  {
+    .about-us-image img  {
         max-width: 100%;
         height:auto;
     }
 
-    .about-text {
-        align-content: center;
+    /* different ps and h4 for different sized screens set above in global sizes Anchored for laptops, not for mobiles */
+    .about-us-text {
+        display:grid;
         justify-content: center;
+        align-content: center;
+        color:var(--color-titles);
     }
 
     /*  WIZARD ACTION PLANS */
@@ -676,57 +611,35 @@ and (min-width: 1024px) {
         height:auto;
     }
 
+    /* different ps and h4 for different sized screens set above in global sizes Anchored for laptops, not for mobiles */
     .wizard-intro-text {
         display:grid;
-        cursor:none;
         justify-content: center;
         align-content: center;
-        text-decoration: none;
         color:var(--color-titles);
-        font-family: var(--family-copy);
-        text-align:justify;
-    }
-
-    .wizard-intro-text a {
-        cursor:pointer;
-    }
-
-    /* ? */
-    .wizard-intro-text h3 {
-        text-align: center;
     }
 
     /* TESTIMONIALS AND FEES */
     .charges-grid {
         display:grid;
         margin:auto;
-        max-width:var(--content-width);
+        max-width:var(--ipad-width);
         background-color: var(--color-white);
         text-align:center;
+
     }
 
     .charges-grid h3 {
         font-family: var(--family-title);
-        font-size:1.3em;
-        color:var(--color-dark-blue);
         text-align:center;
-        font-weight: bold;
+        color:var(--color-titles);
     }
 
-    .charges-grid p {
-        font-family: var(--family-title);
-        font-size:1.1em;
-        color:var(--color-dark-blue);
+    .charges-grid p, .charges-grid span {
+        font-family: var(--family-copy);
+        color:var(--color-green);
         text-align:center;
     }
-
-    .charges-grid span {
-        font-family: var(--family-title);
-        font-size:1.0em;
-        color:var(--color-dark-blue);
-        text-align:center;
-    }
-
 
     .testimonials-grid  {
         display:grid;
@@ -739,7 +652,7 @@ and (min-width: 1024px) {
         width:100%;
         margin:auto;
         border:thin dashed var(--color-dark-blue);
-        max-width:var(--content-width);
+        max-width:var(--ipad-width);
     }
 
     .testimonial-row-1 {
@@ -765,6 +678,7 @@ and (min-width: 1024px) {
     .testimonial-row-6 {
         grid-row:6;
     }
+
 
 }
 

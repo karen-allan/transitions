@@ -22,7 +22,7 @@ export class ScreenFormChooseRepOverviewComponent {
   now:string;
 
   updatedValue:string="";
-  dateError = false;
+  validDate = false;
 
   constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) {
   }
@@ -45,7 +45,7 @@ export class ScreenFormChooseRepOverviewComponent {
   /* Function is called from the html page.  r... */
   /* *************************************************************************************************************** */
   checkClientName(): void {
-    this.errorMessage = "";
+
     /* These are the only required fields */
     if (this.rep.client_name == '') {
       this.errorMessage = "You must enter your full name here.";
@@ -58,10 +58,15 @@ export class ScreenFormChooseRepOverviewComponent {
       this.rep.client_name = this.updatedValue;
     }
 
-    var error = this.checkForValidDate();
-    if ( error != '') {
-      this.errorMessage=error;
-      return;
+    if (this.rep.client_dob != '' && this.rep.client_dob.length > 0) {
+
+     /* var error = this.checkForValidDate();
+      alert("error " + error)
+      if (error.length > 0 && error != '') {
+        this.errorMessage = error;
+        this.rep.client_dob = "";
+        return;
+      }*/
     }
 
     this.getNextPage();
@@ -72,11 +77,12 @@ export class ScreenFormChooseRepOverviewComponent {
   checkForValidDate(): string {
     var error = "";
     //19621123
+     alert("client dob is " + this.rep.client_dob);
     if (this.rep.client_dob != '') {
-      this.dataService.checkIfYearStartDateIsValid(this.rep.client_dob)
-          .subscribe(newVar => this.dateError = newVar);
+      this.dataService.checkIfDateIsValid(this.rep.client_dob)
+          .subscribe(newVar => this.validDate = newVar);
 
-      if (this.dateError) {
+      if (this.validDate == false) {
         error = "This is not a valid date."
       }
 
@@ -100,6 +106,11 @@ export class ScreenFormChooseRepOverviewComponent {
     }
 
     this.getNextPage();
+  }
+
+  /* *************************************************************************************************************** */
+  clearErrorMessage () {
+    this.errorMessage = "";
   }
 
   /* *************************************************************************************************************** */
@@ -204,6 +215,12 @@ export class ScreenFormChooseRepOverviewComponent {
 
   /* *************************************************************************************************************** */
   getPreviousPage() {
+
+    if (this.page == 1 ) {
+      alert("clear error cause page is " + this.page)
+      this.clearErrorMessage();
+    }
+
     this.page = this.page - 1;
   }
 
