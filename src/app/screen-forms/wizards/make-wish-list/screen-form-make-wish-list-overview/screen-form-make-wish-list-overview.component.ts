@@ -1,4 +1,4 @@
-import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit} from '@angular/core';
 import {WishesWizard} from "../../../../ts-files/wishes-wizard";
 import {Question} from "../../../../ts-files/question";
 import {DataService} from "../../../../service-files/data.service";
@@ -36,12 +36,14 @@ export class ScreenFormMakeWishListOverviewComponent implements OnInit {
   /* *************************************************************************************************************** */
   ngOnInit(): void {
     this.page = 0;
+  //  this.initializeData();
+    this.clearData()
     this.getCurrentDate();
-    this.setClientDefaults();
+
   }
 
   /* *************************************************************************************************************** */
-  setClientDefaults() {
+  initializeData() {
     this.wishes.client_name="karen gail allan"
   }
 

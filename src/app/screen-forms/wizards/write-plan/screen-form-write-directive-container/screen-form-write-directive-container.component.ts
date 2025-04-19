@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import * as Constants from "../../../../ts-files/constants";
 import {AdvanceDirective} from "../../../../ts-files/advance_directive";
-import {CHOOSE_YOUR_REPS} from "../../../../ts-files/constants";
 
 @Component({
   selector: 'app-screen-form-write-directive-container',

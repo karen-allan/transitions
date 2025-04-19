@@ -30,7 +30,8 @@ export class ScreenFormChooseRepOverviewComponent {
   /* *************************************************************************************************************** */
   ngOnInit(): void {
     this.page = 0;
-    this.initializeData();
+   // this.initializeData();
+    this.clearData();
     this.setCurrentDateForHeader();
   }
 
@@ -47,7 +48,7 @@ export class ScreenFormChooseRepOverviewComponent {
   checkClientName(): void {
 
     /* These are the only required fields */
-    if (this.rep.client_name == '') {
+    if (this.rep.client_name.length == 0) {
       this.errorMessage = "You must enter your full name here.";
       return;
     }
@@ -77,7 +78,7 @@ export class ScreenFormChooseRepOverviewComponent {
   checkForValidDate(): string {
     var error = "";
     //19621123
-     alert("client dob is " + this.rep.client_dob);
+   //  alert("client dob is " + this.rep.client_dob);
     if (this.rep.client_dob != '') {
       this.dataService.checkIfDateIsValid(this.rep.client_dob)
           .subscribe(newVar => this.validDate = newVar);
@@ -92,13 +93,8 @@ export class ScreenFormChooseRepOverviewComponent {
 
   /* *************************************************************************************************************** */
   checkRep1Name(): void {
-    this.errorMessage = "";
-    /* These are the only required fields */
-    if (this.rep.rep_primary_name == '') {
-      this.errorMessage = "You must enter your primary representativ's full name here.";
-      return;
-    }
-    else {
+
+    if (this.rep.rep_primary_name != '') {
       this.dataService.splitNames(this.rep.rep_primary_name)
           .subscribe(newName => this.updatedValue = newName);
 
@@ -115,19 +111,12 @@ export class ScreenFormChooseRepOverviewComponent {
 
   /* *************************************************************************************************************** */
   checkRep2Name(): void {
-    this.errorMessage = "";
-
-    // @ts-ignore
-    if (this.rep.rep_alternate_name == '') {
-      this.errorMessage = "You must enter your alternate representative's name here.";
-      return;
-    }
-    else {
+    if (this.rep.rep_alternate_name != '') {
       this.dataService.splitNames(this.rep.rep_alternate_name)
           .subscribe(newName => this.updatedValue = newName);
-    }
 
-    this.rep.rep_alternate_name = this.updatedValue;
+      this.rep.rep_alternate_name = this.updatedValue;
+    }
 
     this.getNextPage();
 
@@ -135,37 +124,26 @@ export class ScreenFormChooseRepOverviewComponent {
 
   /* *************************************************************************************************************** */
   checkWitness1Name(): void {
-    this.errorMessage = "";
 
-    // @ts-ignore
-    if (this.rep.witness_one_name == '') {
-      this.errorMessage = "You must enter your first witnesses's name here.";
-      return;
-    }
-    else {
+    if (this.rep.witness_one_name != '') {
       this.dataService.splitNames(this.rep.witness_one_name)
           .subscribe(newName => this.updatedValue = newName);
-    }
 
-    this.rep.witness_one_name = this.updatedValue;
+      this.rep.witness_one_name = this.updatedValue;
+    }
 
     this.getNextPage();
   }
 
   /* *************************************************************************************************************** */
   checkWitness2Name(): void {
-    this.errorMessage = "";
 
-    if (this.rep.witness_two_name == '') {
-      this.errorMessage = "You must enter your second witnesses's name here.";
-      return;
-    }
-    else {
+    if (this.rep.witness_two_name != '') {
       this.dataService.splitNames(this.rep.witness_two_name)
           .subscribe(newName => this.updatedValue = newName);
-    }
 
-    this.rep.witness_two_name = this.updatedValue;
+      this.rep.witness_two_name = this.updatedValue;
+    }
 
     this.getNextPage();
   }
@@ -216,8 +194,7 @@ export class ScreenFormChooseRepOverviewComponent {
   /* *************************************************************************************************************** */
   getPreviousPage() {
 
-    if (this.page == 1 ) {
-      alert("clear error cause page is " + this.page)
+     if (this.errorMessage!="") {
       this.clearErrorMessage();
     }
 
@@ -351,6 +328,8 @@ export class ScreenFormChooseRepOverviewComponent {
     this.page = 0;
     this.errorMessage='';
 
+    this.rep.global_province= 'British Columbia';
+
     this.rep.client_name = "";
     this.rep.client_address = "";
     this.rep.client_city = "";
@@ -374,11 +353,12 @@ export class ScreenFormChooseRepOverviewComponent {
     this.rep.witness_one_city='';
     this.rep.witness_one_postal='';
 
+    this.rep.witness_type = "";
     this.rep.witness_two_name='';
     this.rep.witness_two_address=''
     this.rep.witness_two_city='';
     this.rep.witness_two_postal='';
-
+    this.rep.choose_alternate = 'chooseAlternateYes';
     this.rep.instructions_for_reps = "";
   }
 

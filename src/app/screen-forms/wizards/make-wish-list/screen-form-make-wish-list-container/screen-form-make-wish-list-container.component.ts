@@ -1,9 +1,9 @@
-import {Component, EventEmitter, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input} from '@angular/core';
 import {WishesWizard} from "../../../../ts-files/wishes-wizard";
 import {Question} from "../../../../ts-files/question";
 import {QUESTIONS} from "../../../../ts-files/questions";
 import * as Constants from "../../../../ts-files/constants";
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-screen-form-make-wish-list-container',

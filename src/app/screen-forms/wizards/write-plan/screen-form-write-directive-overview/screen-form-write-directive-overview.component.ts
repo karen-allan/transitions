@@ -31,9 +31,9 @@ export class ScreenFormWriteDirectiveOverviewComponent {
   /* *************************************************************************************************************** */
   ngOnInit(): void {
 
-    this.initializeData();
     this.page = 0;
-
+    // this.initializeData();
+    this.clearData();
     this.setCurrentDateForHeader();
 
   }
@@ -97,17 +97,12 @@ export class ScreenFormWriteDirectiveOverviewComponent {
   /* *************************************************************************************************************** */
   checkWitness1Name(): void {
 
-    this.errorMessage = "";
-
-    if (this.directive.witness_one_name == '') {
-      this.errorMessage = "You must enter your first witnesses's name here.";
-      return;
-    } else {
+    if (this.directive.witness_one_name != '') {
       this.dataService.splitNames(this.directive.witness_one_name)
           .subscribe(newName => this.updatedValue = newName);
-    }
 
-    this.directive.witness_one_name = this.updatedValue;
+      this.directive.witness_one_name = this.updatedValue;
+    }
 
     this.getNextPage();
   }
@@ -115,17 +110,12 @@ export class ScreenFormWriteDirectiveOverviewComponent {
   /* *************************************************************************************************************** */
   checkWitness2Name(): void {
 
-    this.errorMessage = "";
-
-    if (this.directive.witness_two_name == '') {
-      this.errorMessage = "You must enter your second witnesses's name here.";
-      return;
-    } else {
+    if (this.directive.witness_two_name != '') {
       this.dataService.splitNames(this.directive.witness_two_name)
           .subscribe(newName => this.updatedValue = newName);
-    }
 
-    this.directive.witness_two_name = this.updatedValue;
+      this.directive.witness_two_name = this.updatedValue;
+    }
 
     this.getNextPage();
 
@@ -182,8 +172,7 @@ export class ScreenFormWriteDirectiveOverviewComponent {
   /* *************************************************************************************************************** */
   getPreviousPage() {
 
-    if (this.page == 1 ) {
-      alert("clear error cause page is " + this.page)
+    if (this.errorMessage!="") {
       this.clearErrorMessage();
     }
 

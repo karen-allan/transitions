@@ -1,7 +1,6 @@
 import {Component, EventEmitter} from '@angular/core';
 import {RepNine} from "../../../../ts-files/rep-nine";
 import * as Constants from "../../../../ts-files/constants";
-import {CHOOSE_YOUR_REPS} from "../../../../ts-files/constants";
 
 @Component({
   selector: 'app-dialog-reps',

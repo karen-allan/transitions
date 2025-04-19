@@ -159,7 +159,7 @@ export class DataService {
      alert("client formattedDate is " + formattedDate);
 
     const birthdate = new Date(formattedDate); // Fri Nov 23 1962 00:00:00 GMT-0800 (Pacific Standard Time)
-     alert("client birthdate is " + birthdate);
+    // alert("client birthdate is " + birthdate);
 
     if (this.isDate(formattedDate)) {
       let validDate = false;

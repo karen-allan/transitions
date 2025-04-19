@@ -47,7 +47,8 @@ export class BookConsultationOverviewComponent implements OnInit {
       {name: "viewport", content: "width=device-width,initial-scale=1"}
     ]);
 
-    this.initializeData();
+   // this.initializeData();
+    this.clearData();
     this.setCurrentDate();
   }
 

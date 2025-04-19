@@ -1,7 +1,6 @@
 import {Component, EventEmitter} from '@angular/core';
 import {AdvanceDirective} from "../../../../ts-files/advance_directive";
 import * as Constants from "../../../../ts-files/constants";
-import {WRITE_ADVANCE_CARE_PLAN} from "../../../../ts-files/constants";
 
 @Component({
   selector: 'app-dialog-directive',

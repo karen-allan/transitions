@@ -1,6 +1,5 @@
 import { MenuItem} from './menuItem';
 import * as Constants from 'src/app/ts-files/constants'
-import {ABOUT, TAKE_ACTION} from "src/app/ts-files/constants";
 
 export const MENU_ITEMS: MenuItem[] = [
   // {id: 0, title: 'HOME', url: 'menuHome'},
