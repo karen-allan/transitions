@@ -208,7 +208,7 @@ export class ScreenFormWriteDirectiveOverviewComponent {
     this.directive.client_postal = "V0E-1M8";
     this.directive.client_dob = "",
         //this.directive.client_phc_number = '',
-        this.directive.client_phn = '9030254245',
+        this.directive.client_phn = '9030254245';
         this.directive.client_organ_donor = 'organDonorNo';
 
     //this.directive.witness_one_name = '';
@@ -243,9 +243,9 @@ export class ScreenFormWriteDirectiveOverviewComponent {
     this.directive.conditions1b = false;
     this.directive.conditions1c = false;
 
-    this.directive.die_at_home = "atHomeYes",
-        this.directive.request_maid = "maidNo",
-        this.directive.consent_maid_notes = "",
+    this.directive.die_at_home = "atHomeYes";
+        this.directive.request_maid = "maidNo";
+        this.directive.consent_maid_notes = "";
 
         this.directive.refusals2a = false;
     this.directive.refusals2b = false;

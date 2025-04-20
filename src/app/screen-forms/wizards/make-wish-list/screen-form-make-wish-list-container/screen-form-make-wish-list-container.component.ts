@@ -3,7 +3,7 @@ import {WishesWizard} from "../../../../ts-files/wishes-wizard";
 import {Question} from "../../../../ts-files/question";
 import {QUESTIONS} from "../../../../ts-files/questions";
 import * as Constants from "../../../../ts-files/constants";
-import { Router, ActivatedRoute} from '@angular/router';
+
 
 @Component({
   selector: 'app-screen-form-make-wish-list-container',
@@ -29,7 +29,7 @@ export class ScreenFormMakeWishListContainerComponent {
   /* Coming from the make-wish-list-overview in mobile non-modal mode */
   modal:boolean=false;
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor() {
 
     QUESTIONS.forEach(question => {
       this.wishesQuestions.push(new Question(question.question_num, question.question_string, question.responses, 0));

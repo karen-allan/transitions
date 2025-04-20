@@ -162,7 +162,7 @@ export class DataService {
     validDate = pattern.test(formattedDate);
     alert("valid date is " + validDate);
 
-    const birthdate = new Date(formattedDate); // Fri Nov 23 1962 00:00:00 GMT-0800 (Pacific Standard Time)
+   // const birthdate = new Date(formattedDate); // Fri Nov 23 1962 00:00:00 GMT-0800 (Pacific Standard Time)
     // alert("client birthdate is " + birthdate);
 
     return of(validDate);
@@ -229,7 +229,7 @@ export class DataService {
     const mntstr = dateString.substring(4, 6);  //'11'
     const daystr = dateString.substring(6);     //'23'
 
-    const formattedDate = yrstr + "/" + mntstr + "/" + daystr; //'1962/11/23'
+    //const formattedDate = yrstr + "/" + mntstr + "/" + daystr; //'1962/11/23'
    // const birthdate = new Date(formattedDate); // Fri Nov 23 1962 00:00:00 GMT-0800 (Pacific Standard Time)
 
     // date is broken down into year, month and day with the /'s > 1962/11/23
