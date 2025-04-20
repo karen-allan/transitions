@@ -158,17 +158,14 @@ export class DataService {
     const formattedDate = yrstr + "/" + mntstr + "/" + daystr; //'1962/11/23'
      alert("client formattedDate is " + formattedDate);
 
+    var pattern = new RegExp(/^\d{4}\/(0[0-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])$/);
+    validDate = pattern.test(formattedDate);
+    alert("valid date is " + validDate);
+
     const birthdate = new Date(formattedDate); // Fri Nov 23 1962 00:00:00 GMT-0800 (Pacific Standard Time)
     // alert("client birthdate is " + birthdate);
 
-    if (this.isDate(formattedDate)) {
-      let validDate = false;
-    } else {
-      let validDate = true;
-    }
-
     return of(validDate);
-
   }
 
   /* *************************************************************************************************************** */

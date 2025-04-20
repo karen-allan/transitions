@@ -19,7 +19,7 @@ export class DialogDirectiveComponent {
 
   /* *************************************************************************************************************** */
   /* Set in  dialog-directive.ts */
-  setDirective(directive:AdvanceDirective, title:string) {
+  setDirective(directive:AdvanceDirective) {
     this.directive = directive;
   }
 }

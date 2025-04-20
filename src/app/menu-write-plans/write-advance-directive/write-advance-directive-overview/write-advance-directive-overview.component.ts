@@ -53,7 +53,7 @@ export class WriteAdvanceDirectiveOverviewComponent {
 
     let modalDialog = this.matDialog.open(DialogDirectiveComponent, dialogConfig);
 
-    modalDialog.componentInstance.setDirective(this.directive, this.title);
+    modalDialog.componentInstance.setDirective(this.directive);
     modalDialog.componentInstance.event.subscribe(directives => {
       this.directive = directives.directive;
       this.printForm = directives.print;

@@ -16,7 +16,7 @@ export class DialogRepsComponent {
 
   /* *************************************************************************************************************** */
   /* Set in dialog-reps.ts */
-  setRep(rep:RepNine, title:string) {
+  setRep(rep:RepNine) {
     this.rep = rep;
   }
 }

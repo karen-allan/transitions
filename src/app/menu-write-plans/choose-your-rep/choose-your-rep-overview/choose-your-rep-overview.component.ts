@@ -54,7 +54,7 @@ export class ChooseYourRepOverviewComponent {
     /* named and defined in wizard.css */
     let modalDialog = this.matDialog.open(DialogRepsComponent, dialogConfig);
 
-    modalDialog.componentInstance.setRep(this.rep, this.title);
+    modalDialog.componentInstance.setRep(this.rep);
     modalDialog.componentInstance.event.subscribe(representative => {
       this.rep = representative.rep;
       this.printForm = representative.print;

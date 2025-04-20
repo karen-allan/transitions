@@ -61,13 +61,11 @@ export class ScreenFormChooseRepOverviewComponent {
 
     if (this.rep.client_dob != '' && this.rep.client_dob.length > 0) {
 
-     /* var error = this.checkForValidDate();
-      alert("error " + error)
+      var error = this.checkForValidDate();
       if (error.length > 0 && error != '') {
         this.errorMessage = error;
-        this.rep.client_dob = "";
         return;
-      }*/
+      }
     }
 
     this.getNextPage();
