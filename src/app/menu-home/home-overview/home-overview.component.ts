@@ -25,7 +25,7 @@ export class HomeOverviewComponent implements OnInit {
     constructor(private titleService: Title, private metaService:Meta) { }
 
     ngOnInit(): void {
-
+      //  alert("metatitle is" + this.metaTitle)
         this.titleService.setTitle(this.metaTitle);
         this.metaService.addTags([
             {name: 'description', content: this.metaDesc},

@@ -3,6 +3,7 @@ import {RepNine} from "../../../ts-files/rep-nine";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {DialogRepsComponent} from "../../../screen-forms/wizards/dialogs/dialog-reps/dialog-reps.component";
 import {PathObject} from "../../../ts-files/pathObject";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-choose-your-rep-overview',
@@ -19,9 +20,26 @@ export class ChooseYourRepOverviewComponent {
   @Input() pathObject:PathObject;
   @Input() @Output() rep:RepNine;
 
+  /* less than 60 */
+  metaTitle='Choose Representative | End of Life Advocate'
+
+  /* less than 160 */
+  metaDesc='Follow our free to use wizard to select who you would most trust to help you and advocate for you in a medical emergency.'
+
   printForm:boolean=false;
 
-  constructor(public matDialog: MatDialog) { }
+  constructor(public matDialog: MatDialog, private titleService: Title, private metaService:Meta) { }
+
+  /*********************************************************************************/
+  ngOnInit(): void {
+    //alert("metatitle is" + this.metaTitle)
+    this.titleService.setTitle(this.metaTitle);
+    this.metaService.addTags([
+      {name: 'description', content: this.metaDesc},
+      {name: 'robots', content: 'index, follow'},
+      {name:"viewport", content:"width=device-width,initial-scale=1" }
+    ]);
+  }
 
   /* *************************************************************************************************************** */
   openModal() {

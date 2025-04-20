@@ -31,12 +31,13 @@ export class BookConsultationOverviewComponent implements OnInit {
   @Input() consult3b:string="";
 
   metaTitle = 'Book a Consultation | End of Life Support | Care Planning'
-  metaDesc='Book a consultation from End of Life doula Karen Allan in person or via Zoom to learn how you can support yourself or your' +
-      ' loved ones about end of life issues';
+  metaDesc='Book a consultation from in person or via Zoom to get can support yourself or your' +
+      ' loved ones regarding end of life issues';
 
   constructor(private _bookConsultationContainerComponent: BookConsultationContainerComponent, private titleService: Title, private metaService: Meta) { }
 
   ngOnInit(): void {
+   // alert("metatitle is" + this.metaTitle)
     this.titleService.setTitle(this.metaTitle);
     this.metaService.addTags([
       {

@@ -3,6 +3,7 @@ import {WishesWizard} from "../../../ts-files/wishes-wizard";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {DialogWishListComponent} from "../../../screen-forms/wizards/dialogs/dialog-wish-list/dialog-wish-list.component";
 import {PathObject} from "../../../ts-files/pathObject";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-make-wishes-overview',
@@ -19,7 +20,25 @@ export class MakeWishesOverviewComponent  {
   @Input() @Output() wishes:WishesWizard;
 
   printForm:boolean=false;
-  constructor(public matDialog: MatDialog) {}
+
+  /* less than 60 */
+  metaTitle='Wishes for Care | End of Life Decisions'
+
+  /* less than 160 */
+  metaDesc='Follow our free to use questionnaire to help guide you in realizing your personal wishes and concerns for end of life care.'
+
+  constructor(public matDialog: MatDialog, private titleService: Title, private metaService:Meta) { }
+
+  /*********************************************************************************/
+  ngOnInit(): void {
+   // alert("metatitle is" + this.metaTitle)
+    this.titleService.setTitle(this.metaTitle);
+    this.metaService.addTags([
+      {name: 'description', content: this.metaDesc},
+      {name: 'robots', content: 'index, follow'},
+      {name:"viewport", content:"width=device-width,initial-scale=1" }
+    ]);
+  }
 
   /* *************************************************************************************************************** */
   openModal() {

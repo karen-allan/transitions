@@ -12,14 +12,15 @@ export class AboutPractitionerOverviewComponent implements OnInit {
   @Input() quote:string='';
   @Input() author:string='';
 
-  metaTitle = 'About End of Life Doulas | Vancouver Based Doula Karen Allan'
-  metaDesc='Learn about End of Life Doula Practitioner Karen Allan and why she became an advocate for End Of Life care for both patients' +
-      ' and caregivers in Vancouver, BC'
+  metaTitle = 'About Karen Allan | End of Life Supporter'
+  metaDesc='Learn about End of Life Practitioner Karen Allan an advocate for End Of Life care for patients' +
+      ' and caregivers in Shuswap, BC'
 
   constructor(private titleService: Title, private metaService: Meta) {
   }
 
   ngOnInit(): void {
+   // alert("metatitle is" + this.metaTitle)
     this.titleService.setTitle(this.metaTitle);
     this.metaService.addTags([
       {

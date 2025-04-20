@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {PathObject} from "../../../ts-files/pathObject";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-consider-advocates-overview',
@@ -17,7 +18,24 @@ export class ConsiderAdvocatesOverviewComponent  {
 
   @Input() pathObject: PathObject;
 
-  constructor() { }
+  metaTitle='Your Advocates for Care | Representatives'
+
+  /* less than 160 */
+  metaDesc='Be proactive and use our free wizard to assign the person you most trust to care for you should you be in a medical emergency' +
+      ' or critical condition.'
+
+  constructor(private titleService: Title, private metaService:Meta) { }
+
+  /*********************************************************************************/
+  ngOnInit(): void {
+ //   alert("metatitle is" + this.metaTitle)
+    this.titleService.setTitle(this.metaTitle);
+    this.metaService.addTags([
+      {name: 'description', content: this.metaDesc},
+      {name: 'robots', content: 'index, follow'},
+      {name:"viewport", content:"width=device-width,initial-scale=1" }
+    ]);
+  }
 
   /*********************************************************************************/
   getTriggeredPromptKey(id: number) {

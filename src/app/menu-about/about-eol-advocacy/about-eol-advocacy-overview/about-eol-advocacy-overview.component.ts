@@ -13,13 +13,14 @@ export class AboutEolAdvocacyOverviewComponent implements OnInit {
   @Input() author:string='';
   @Input() subtitle:string ='';
 
-  metaTitle = 'About End-of-Life Advocacy | End-of-life Doula Help'
-  metaDesc='Learn why it is vital to prepare for your end long before it happens. Learn how end of life Doulas can help you by hearing your concerns and advocating for you'
+  metaTitle = 'About End-of-Life Advocacy | End-of-life Supporters'
+  metaDesc='Learn why it is vital to prepare for your end long before it happens. Learn how end of life support can help you'
 
   constructor(private titleService: Title, private metaService: Meta) {
   }
 
   ngOnInit(): void {
+    //alert("metatitle is" + this.metaTitle)
     this.titleService.setTitle(this.metaTitle);
     this.metaService.addTags([
       {

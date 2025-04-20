@@ -12,12 +12,13 @@ export class TestimonialsFeesOverviewComponent  implements OnInit {
   @Input() quote='';
   @Input() author='';
 
-  metaTitle = 'Testimonials | Fees | Support'
+  metaTitle = 'Testimonials | Fees | End of Life Support'
   metaDesc='Read the testimonials from clients who have benefited from Karens compassion and skills.'
 
   constructor(private titleService: Title, private metaService: Meta) { }
 
   ngOnInit(): void {
+    //alert("metatitle is" + this.metaTitle)
     this.titleService.setTitle(this.metaTitle);
     this.metaService.addTags([
       {
