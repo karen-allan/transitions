@@ -19,7 +19,7 @@
 
         <div class="sub-form_three-medical-block">
             <div class="sub-form-first-check-col">
-                <input type="checkbox" [(ngModel)]="client.heartDisease" name="heartDisease">Heart Disease
+                <input type="checkbox" [(ngModel)]="client.none" name="seizures">Not Listed Here
             </div>
 
             <div class="sub-form-second-check-col">
@@ -49,9 +49,8 @@
             <div class="sub-form-second-check-col">
                 <input type="checkbox" [(ngModel)]="client.autoImmuneDisease" name="autoImmuneDisease">Auto-immune
             </div>
-
             <div class="sub-form-third-check-col">
-                <input type="checkbox" [(ngModel)]="client.seizures" name="seizures">Other
+                <input type="checkbox" [(ngModel)]="client.heartDisease" name="heartDisease">Heart Disease
             </div>
         </div>
 
@@ -86,7 +85,7 @@
 
         <div class="sub-form-two-checkboxes-block">
             <div class="sub-form-first-check-col">
-                <input type="checkbox" [(ngModel)]="client.heartDisease" name="heartDisease">Heart Disease
+                <input type="checkbox" [(ngModel)]="client.none" name="seizures">Not Listed
             </div>
 
             <div class="sub-form-second-check-col">
@@ -118,12 +117,16 @@
             </div>
 
             <div class="sub-form-first-check-col">
-                <input type="checkbox" [(ngModel)]="client.seizures" name="seizures">Other
+                <input type="checkbox" [(ngModel)]="client.seizures" name="seizures">Seizures
+            </div>
+
+            <div class="sub-form-second-check-col">
+                <input type="checkbox" [(ngModel)]="client.heartDisease" name="heartDisease">Heart Disease
             </div>
         </div>
 
         <div class="sub-form-full-block">
-            <p>Please further describe your situation, condition and or illness, if applicable:</p>
+            <p>Please describe your situation, condition and or illness, if applicable:</p>
         </div>
 
         <div class="sub-form-full-block">

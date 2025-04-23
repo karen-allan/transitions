@@ -37,7 +37,7 @@ export class BookConsultationOverviewComponent implements OnInit {
   constructor(private _bookConsultationContainerComponent: BookConsultationContainerComponent, private titleService: Title, private metaService: Meta) { }
 
   ngOnInit(): void {
-   // alert("metatitle is" + this.metaTitle)
+
     this.titleService.setTitle(this.metaTitle);
     this.metaService.addTags([
       {
@@ -114,7 +114,6 @@ export class BookConsultationOverviewComponent implements OnInit {
     this.client.eolPatientDetails="I can not say much as everyone is listening and i am not being paranoid. And you are also listening!"
     this.client.illnessDetails="The details of my illnesses are at best indescribable sorry spelling mistake"
 
-    this.client.eolCaregiverFocus10=true;
     this.client.eolCaregiverFocus5=true;
     this.client.eolCaregiverFocus3=true;
 
@@ -148,31 +147,59 @@ export class BookConsultationOverviewComponent implements OnInit {
     this.client.emergRelation=""
 
     this.client.medsSupplements=""
-    this.client.highBloodPressure=false;
-    this.client.mentalIllness=false;
-    this.client.autoImmuneDisease=false;
-    this.client.eolFrailty="frailtyChart-1"
-    this.client.eolPatientFocus3 = false;
-    this.client.eolPatientFocus5 = false;
-    this.client.eolPatientFocus7 = false;
-    this.client.eolPatientFocus9 = false;
-    this.client.eolPatientFocus10 = false;
 
-    this.client.eolPatientDetails=""
+    this.client.heartDisease=false;
+    this.client.cancer=false;
+    this.client.stroke=false;
+    this.client.highBloodPressure=false;
+    this.client.diabetes=false;
+    this.client.mentalIllness=false;
+    this.client.seizures=false;
+    this.client.autoImmuneDisease=false;
+    this.client.none=true;
     this.client.illnessDetails=""
 
-    this.client.eolCaregiverFocus10=false;
-    this.client.eolCaregiverFocus5=false;
-    this.client.eolCaregiverFocus3=false;
+    this.client.eolFrailty="frailtyChart-1"
 
+    this.client.eolPlanFocus0=false;
+    this.client.eolPlanFocus1=false;
+    this.client.eolPlanFocus2=false;
+    this.client.eolPlanFocus3=false;
+    this.client.eolPlanFocus4=false;
+    this.client.eolPlanFocus5=false;
+    this.client.eolPlanFocus6=false;
+    this.client.eolPlanFocus7=false;
+    this.client.eolPlanFocus8=false;
+    this.client.eolPlanFocus9=false;
+    this.client.eolPlanDetails=""
+
+    this.client.eolPatientFocus0 = false;
+    this.client.eolPatientFocus1 = false;
+    this.client.eolPatientFocus2 = false;
+    this.client.eolPatientFocus3 = false;
+    this.client.eolPatientFocus4 = false;
+    this.client.eolPatientFocus5 = false;
+    this.client.eolPatientFocus6 = false;
+    this.client.eolPatientFocus7 = false;
+    this.client.eolPatientFocus8 = false;
+    this.client.eolPatientFocus9 = false;
+    this.client.eolPatientFocus10 = false;
+    this.client.eolPatientFocus11 = false;
+    this.client.eolPatientDetails=""
+
+    this.client.eolCaregiverFocus0=false;
+    this.client.eolCaregiverFocus1=false;
+    this.client.eolCaregiverFocus2=false;
+    this.client.eolCaregiverFocus3=false;
+    this.client.eolCaregiverFocus4=false;
+    this.client.eolCaregiverFocus5=false;
+    this.client.eolCaregiverFocus6=false;
+    this.client.eolCaregiverFocus7=false;
+    this.client.eolCaregiverFocus8=false;
+    this.client.eolCaregiverFocus9=false;
     this.client.eolCaregiverDetails=""
 
-    this.client.eolPlanFocus2=false;
-    this.client.eolPlanFocus4=false;
-    this.client.eolPlanFocus6=false;
-    this.client.eolPlanFocus8=false;
 
-    this.client.eolPlanDetails=""
   }
 
 

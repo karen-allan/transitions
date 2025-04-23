@@ -1,72 +1,75 @@
+
 <div class="print-title">
     <h1>Your Concerns and Goals for Planning Ahead</h1>
 </div>
 
 <div class="print-form-question">
-    These are your main areas of focus for seeking a consultation:
+    Your main areas of focus for seeking a planning consultation are:
 </div>
+
+<ng-container *ngIf="client.eolPlanFocus0">
+    <div class="print-form-response">
+        {{response.answer0}}
+    </div>
+</ng-container>
 
 <ng-container *ngIf="client.eolPlanFocus1">
     <div class="print-form-response">
-        I want to name a Representative for my future care.
+        {{response.answer1}}
     </div>
 </ng-container>
 
 <ng-container *ngIf="client.eolPlanFocus2">
     <div class="print-form-response">
-        I want to make an in-depth Advanced Care Plan.
+        {{response.answer2}}
     </div>
 </ng-container>
 
 <ng-container *ngIf="client.eolPlanFocus3">
     <div class="print-form-response">
-        I want to arrange my end of life ceremony and/or funeral.
+        {{response.answer3}}
     </div>
 </ng-container>
 
 <ng-container *ngIf="client.eolPlanFocus4">
     <div class="print-form-response">
-        I want to know about the logistics of staying home to die.
+        {{response.answer4}}
     </div>
 </ng-container>
 
 <ng-container *ngIf="client.eolPlanFocus5">
     <div class="print-form-response">
-        I want to ensure my financial and estate plans are in order.
+        {{response.answer5}}
     </div>
 </ng-container>
 
 <ng-container *ngIf="client.eolPlanFocus6">
     <div class="print-form-response">
-        I want help with creating a legacy project.
+        {{response.answer6}}
     </div>
 </ng-container>
 
 <ng-container *ngIf="client.eolPlanFocus7">
     <div class="print-form-response">
-        I need to discuss these issues with an impartial advocate.
+        {{response.answer7}}
     </div>
 </ng-container>
 
 <ng-container *ngIf="client.eolPlanFocus8">
     <div class="print-form-response">
-        I want to know more about care plan safe-keeping and sharing.
+        {{response.answer8}}
     </div>
 </ng-container>
 
-
-<div class="print-form-question">
-    Your additional information regarding seeking a consultation:
-</div>
-
 <ng-container *ngIf="client.eolPlanDetails.length > 0">
+    <div class="print-form-question">
+        The additional details you have provided are:
+    </div>
+
     <div class="print-form-response">
         {{ client.eolPlanDetails }}
     </div>
 </ng-container>
 
-<ng-container *ngIf="client.eolPlanDetails.length == 0">
-    &nbsp;<div class="print-solid-underline"></div>
-</ng-container>
 
 

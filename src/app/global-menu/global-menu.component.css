@@ -642,7 +642,13 @@ and (min-width: 1024px) {
         grid-row:1;
         align-content: center;
         font-family:var(--family-menu-name);
-        color:var(--color-purple);
+        background: linear-gradient(to right, #5a4087, #938ba2,  #bdb9c5,  #b4adbf);
+
+        /*background: linear-gradient(to right, var(--color-white),  #bdb9c5, var(--color-purple),   var(--color-dark-purple));*/
+        -webkit-background-clip: text;
+        color: transparent;
+
+        /*color:#bdb9c5;*/
     }
 
     .header-name p {

@@ -42,19 +42,23 @@
             </div>
 
             <form #repNineForm="ngForm" novalidate>
-                <ng-container *ngIf="errorMessage">
-                    <div class="modal-error-message">{{ errorMessage }}</div>
-                </ng-container>
-                <ng-container *ngIf="!errorMessage">
-                    <div class="modal-error-message">&nbsp;</div>
-                </ng-container>
+                <div class="modal-error-message-block">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="modal-error-message">{{ errorMessage }}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="modal-error-message">&nbsp;</div>
+                    </ng-container>
+                </div>
 
                 <div class="modal-sixty-forty-block">
                     <label class="modal-first-col-label" for="D_name">Full Legal Name of (you) the Adult (required):</label>
-                    <label class="modal-second-col-label" for="D_birth">Date of Birth: (YYYY/MM/DD):</label>
+                    <label class="modal-second-col-label" for="D_birth">Birthdate (YYYY/MM/DD):</label>
 
                     <input class="modal-first-col-value" type="text" [(ngModel)]="rep.client_name" id="D_name" name="DName">
-                    <input [(ngModel)]="rep.client_dob" type="text" class="modal-second-col-value" id="D_birth" name="DBirth" mask="0000/00/00">
+                    <input [(ngModel)]="rep.client_dob" type="text" placeholder="yyyy/mm/dd" class="modal-second-col-value" id="D_birth"
+                    name="DBirth"
+                           mask="0000/00/00">
                 </div>
 
                 <div class="modal-seventy-thirty-block">

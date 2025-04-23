@@ -151,6 +151,8 @@ import { ScreenSubFormPlannerComponent } from './screen-forms/consultations/sub-
 import { PrintFooterComponent } from './print-forms/print-footer/print-footer.component';
 import { PrintHeaderComponent } from './print-forms/print-header/print-header.component';
 import { DialogHeaderComponent } from './screen-forms/wizards/dialogs/dialog-header/dialog-header.component';
+import { ScreenSubFormOptionalComponent } from './screen-forms/consultations/sub-forms/screen-sub-form-optional/screen-sub-form-optional.component';
+import { PrintSubFormOptionalComponent } from './print-forms/consultations/sub-forms/print-sub-form-optional/print-sub-form-optional.component';
 
 
 @NgModule({
@@ -261,6 +263,8 @@ import { DialogHeaderComponent } from './screen-forms/wizards/dialogs/dialog-hea
         PrintFooterComponent,
         PrintHeaderComponent,
         DialogHeaderComponent,
+        ScreenSubFormOptionalComponent,
+        PrintSubFormOptionalComponent,
 
 
        

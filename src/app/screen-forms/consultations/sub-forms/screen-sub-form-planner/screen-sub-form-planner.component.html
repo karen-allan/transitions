@@ -1,69 +1,87 @@
+<!-- DESKTOP -->
 <div class="screen-forms-desktop">
     <div class="sub-form-block">
         <div class="sub-form-full-block">
-            <p>In planning, what would be your main areas of focus for seeking a consultation?</p>
+            <p> As planner, select your main areas of focus for seeking an end of life consultation:</p>
         </div>
 
+<!--         checked does not work unless init'd to true in ts container -->
         <div class="sub-form-two-checkboxes-block">
             <div class="sub-form-first-radio-col">
-                <input type="checkbox" id="primaryFocus1" [(ngModel)]="client.eolPlanFocus1" value="planFocus1">
-                <label for="primaryFocus1">
-                    I want to name a Representative for my future care.
+                <input type="checkbox" id="dPrimaryFocus0"  [(ngModel)]="client.eolPlanFocus0" value="planFocus0" checked>
+                <label for="dPrimaryFocus0">
+                    {{response.answer0}}
                 </label>
             </div>
 
             <div class="sub-form-second-radio-col">
-                <input type="checkbox" id="primaryFocus2" [(ngModel)]="client.eolPlanFocus2" value="planFocus2">
-                <label for="primaryFocus2">
-                    I want to make an in-depth Advanced Care Plan.
-                </label>
-            </div>
-        </div>
-
-        <div class="sub-form-two-checkboxes-block">
-            <div class="sub-form-first-radio-col">
-                <input type="checkbox" id="primaryFocus3" [(ngModel)]="client.eolPlanFocus3" value="planFocus3">
-                <label for="primaryFocus3">
-                    I want to arrange my end of life ceremony and/or funeral.
-                </label>
-            </div>
-
-            <div class="sub-form-second-radio-col">
-                <input type="checkbox" id="primaryFocus4" [(ngModel)]="client.eolPlanFocus4" value="planFocus4">
-                <label for="primaryFocus4">
-                    I want to know about the logistics of staying home to die.
+                <input type="checkbox" id="dPrimaryFocus1" [(ngModel)]="client.eolPlanFocus1" value="planFocus1">
+                <label for="dPrimaryFocus1">
+                    {{response.answer1}}
                 </label>
             </div>
         </div>
 
         <div class="sub-form-two-checkboxes-block">
             <div class="sub-form-first-radio-col">
-                <input type="checkbox" id="primaryFocus5" [(ngModel)]="client.eolPlanFocus5" value="planFocus5">
-                <label for="primaryFocus5">
-                    I want to ensure my financial and estate plans are in order.
+                <input type="checkbox" id="dPrimaryFocus2" [(ngModel)]="client.eolPlanFocus2" value="planFocus2">
+                <label for="dPrimaryFocus2">
+                    {{response.answer2}}
                 </label>
             </div>
 
             <div class="sub-form-second-radio-col">
-                <input type="checkbox" id="primaryFocus6" [(ngModel)]="client.eolPlanFocus6" value="planFocus6">
-                <label for="primaryFocus6">
-                    I want help with creating a legacy project.
+                <input type="checkbox" id="dPrimaryFocus3" [(ngModel)]="client.eolPlanFocus3" value="planFocus3">
+                <label for="dPrimaryFocus3">
+                    {{response.answer3}}
                 </label>
             </div>
         </div>
 
         <div class="sub-form-two-checkboxes-block">
             <div class="sub-form-first-radio-col">
-                <input type="checkbox" id="primaryFocus7" [(ngModel)]="client.eolPlanFocus7" value="planFocus7">
-                <label for="primaryFocus7">
-                    I need to discuss these issues with an impartial advocate.
+                <input type="checkbox" id="dPrimaryFocus4" [(ngModel)]="client.eolPlanFocus4" value="planFocus4">
+                <label for="dPrimaryFocus4">
+                    {{response.answer4}}
                 </label>
             </div>
 
             <div class="sub-form-second-radio-col">
-                <input type="checkbox" id="primaryFocus8" [(ngModel)]="client.eolPlanFocus8" value="planFocus8">
-                <label for="primaryFocus8">
-                    I want to know more about care plan safe-keeping and sharing.
+                <input type="checkbox" id="dPrimaryFocus5" [(ngModel)]="client.eolPlanFocus5" value="planFocus5">
+                <label for="dPrimaryFocus5">
+                    {{response.answer5}}
+                </label>
+            </div>
+        </div>
+
+        <div class="sub-form-two-checkboxes-block">
+            <div class="sub-form-first-radio-col">
+                <input type="checkbox" id="dPrimaryFocus6" [(ngModel)]="client.eolPlanFocus6" value="planFocus6">
+                <label for="dPrimaryFocus6">
+                    {{response.answer6}}
+                </label>
+            </div>
+
+            <div class="sub-form-second-radio-col">
+                <input type="checkbox" id="dPrimaryFocus7" [(ngModel)]="client.eolPlanFocus7" value="planFocus7">
+                <label for="dPrimaryFocus7">
+                    {{response.answer7}}
+                </label>
+            </div>
+        </div>
+
+        <div class="sub-form-two-checkboxes-block">
+            <div class="sub-form-first-radio-col">
+                <input type="checkbox" id="dPrimaryFocus8" [(ngModel)]="client.eolPlanFocus8" value="planFocus8">
+                <label for="dPrimaryFocus8">
+                    {{response.answer8}}
+                </label>
+            </div>
+
+            <div class="sub-form-second-radio-col">
+                <input type="checkbox" id="primaryFocus9" [(ngModel)]="client.eolPlanFocus9" value="planFocus9">
+                <label for="primaryFocus9">
+                    {{response.answer9}}
                 </label>
             </div>
         </div>
@@ -87,58 +105,65 @@
 
         <div class="sub-form-full-block">
             <div class="sub-form-full-radio-col">
-                <input type="checkbox" id="m-primaryFocus1" [(ngModel)]="client.eolPlanFocus1" value="planFocus1">
-                <label for="m-primaryFocus1">
-                    <span>I want to name a Representative for my future care.</span>
+                <input type="checkbox" id="mPrimaryFocus0" [(ngModel)]="client.eolPlanFocus0" value="planFocus0">
+                <label for="mPrimaryFocus0">
+                    {{response.answer0}}
                 </label>
             </div>
 
             <div class="sub-form-full-radio-col">
-                <input type="checkbox" id="m-primaryFocus2" [(ngModel)]="client.eolPlanFocus2" value="planFocus2">
-                <label for="m-primaryFocus2">
-                    I want to make an in-depth Advanced Care Plan.
+                <input type="checkbox" id="mPrimaryFocus1" [(ngModel)]="client.eolPlanFocus1" value="planFocus1">
+                <label for="mPrimaryFocus1">
+                    {{response.answer1}}
                 </label>
             </div>
 
             <div class="sub-form-full-radio-col">
-                <input type="checkbox" id="m-primaryFocus3" [(ngModel)]="client.eolPlanFocus3" value="planFocus3">
-                <label for="m-primaryFocus3">
-                    I want to arrange my end of life ceremony and/or funeral.
+                <input type="checkbox" id="mPrimaryFocus2" [(ngModel)]="client.eolPlanFocus2" value="planFocus2">
+                <label for="mPrimaryFocus2">
+                    {{response.answer2}}
                 </label>
             </div>
 
             <div class="sub-form-full-radio-col">
-                <input type="checkbox" id="m-primaryFocus4" [(ngModel)]="client.eolPlanFocus4" value="planFocus4">
-                <label for="m-primaryFocus4">
-                    I want to know about the logistics of staying home to die.
+                <input type="checkbox" id="mPrimaryFocus3" [(ngModel)]="client.eolPlanFocus3" value="planFocus3">
+                <label for="mPrimaryFocus3">
+                    {{response.answer3}}
                 </label>
             </div>
 
             <div class="sub-form-full-radio-col">
-                <input type="checkbox" id="m-primaryFocus5" [(ngModel)]="client.eolPlanFocus5" value="planFocus5">
-                <label for="m-primaryFocus5">
-                    I want to ensure my financial and estate plans are in order.
+                <input type="checkbox" id="mPrimaryFocus4" [(ngModel)]="client.eolPlanFocus4" value="planFocus4">
+                <label for="mPrimaryFocus4">
+                    {{response.answer4}}
                 </label>
             </div>
 
             <div class="sub-form-full-radio-col">
-                <input type="checkbox" id="m-primaryFocus6" [(ngModel)]="client.eolPlanFocus6" value="planFocus6">
-                <label for="m-primaryFocus6">
-                    I want help with creating a legacy project.
+                <input type="checkbox" id="mPrimaryFocus5" [(ngModel)]="client.eolPlanFocus5" value="planFocus5">
+                <label for="mPrimaryFocus5">
+                    {{response.answer5}}
                 </label>
             </div>
 
             <div class="sub-form-full-radio-col">
-                <input type="checkbox" id="m-primaryFocus7" [(ngModel)]="client.eolPlanFocus7" value="planFocus7">
-                <label for="m-primaryFocus7">
-                    I need to discuss these issues with an impartial advocate.
+                <input type="checkbox" id="mPrimaryFocus6" [(ngModel)]="client.eolPlanFocus6" value="planFocus6">
+                <label for="mPrimaryFocus6">
+                    {{response.answer6}}
                 </label>
             </div>
 
             <div class="sub-form-full-radio-col">
-                <input type="checkbox" id="m-primaryFocus8" [(ngModel)]="client.eolPlanFocus8" value="planFocus8">
-                <label for="m-primaryFocus8">
-                    I want to know more about care plan safe-keeping and sharing.
+                <input type="checkbox" id="mPrimaryFocus7" [(ngModel)]="client.eolPlanFocus7" value="planFocus7">
+                <label for="mPrimaryFocus7">
+                    {{response.answer7}}
+                </label>
+            </div>
+
+            <div class="sub-form-full-radio-col">
+                <input type="checkbox" id="mPrimaryFocus8" [(ngModel)]="client.eolPlanFocus8" value="planFocus8">
+                <label for="mPrimaryFocus8">
+                    {{response.answer8}}
                 </label>
             </div>
         </div>

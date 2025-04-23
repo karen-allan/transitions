@@ -96,7 +96,7 @@
     </ng-container>
 </div>
 
-<div class="print-title">
+<!--<div class="print-title">
     <h1>Emergency Contact</h1>
 </div>
 
@@ -154,7 +154,7 @@
     </ng-container>
 </div>
 
-<!--<div class="page-break-before"></div>-->
+&lt;!&ndash;<div class="page-break-before"></div>&ndash;&gt;
 
 <div class="print-title">
     <h1>Optional Details</h1>
@@ -166,7 +166,7 @@
             Birthdate:
         </div>
         <div class="print-inline-value">
-            {{ client.birthdate | mask: '00-00-0000' }}
+            {{ client.birthdate | mask: '0000/00/00' }}
         </div>
     </ng-container>
 
@@ -212,5 +212,5 @@
         </div>
         <div class="print-inline-line"></div>
     </ng-container>
-</div>
+</div>-->
 

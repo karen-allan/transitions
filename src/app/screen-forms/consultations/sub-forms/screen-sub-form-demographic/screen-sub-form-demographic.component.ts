@@ -10,29 +10,9 @@ import {DataService} from "../../../../service-files/data.service";
 export class ScreenSubFormDemographicComponent {
 
   @Input() @Output() client: Client;
-
   now:string;
-  dateError = false;
 
-  constructor(private dataService: DataService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.checkForValidDate();
-  }
-
-
-  /* *************************************************************************************************************** */
-  checkForValidDate(): void {
-    //19621123
-    if (this.client.birthdate.length > 0 && this.client.birthdate != '') {
-      this.dataService.checkIfMonthStartDateIsValid(this.client.birthdate)
-          .subscribe(newVar => this.dateError = newVar);
-
-      if(this.dateError) {
-        // alert("This is not a valid date.");
-        this.client.birthdate="";
-      }
-    }
-  }
 
 }

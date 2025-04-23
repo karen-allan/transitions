@@ -59,12 +59,12 @@
                     <ng-container *ngIf="modal">
                         <div class="modal-seventy-thirty-block">
                             <label class="modal-first-col-label" for="D_name">Full Legal Name of (you) the Adult (required):</label>
-                            <label class="modal-second-col-label" for="D_birth">Birthdate: (YYYY/MM/DD):</label>
+                            <label class="modal-second-col-label" for="D_birth">Birthdate (YYYY/MM/DD):</label>
 
                             <input class="modal-first-col-value" type="text" [(ngModel)]="directive.client_name" id="D_name"
                                    name="DName">
                             <input [(ngModel)]="directive.client_dob" type="text" class="modal-second-col-value" id="D_birth"
-                                   name="DBirth" mask="0000/00/00">
+                                   name="DBirth"  placeholder="yyyy/mm/dd"  mask="0000/00/00">
                         </div>
 
                         <div class="modal-seventy-thirty-block">

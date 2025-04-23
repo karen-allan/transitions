@@ -1,5 +1,9 @@
 import {Component, Input, Output} from '@angular/core';
 import {Client} from "../../../../ts-files/client";
+import {PlannerResponse} from "../../../../ts-files/planner-response";
+import {PATH_OBJECTS} from "../../../../ts-files/pathObjects";
+import {PathObject} from "../../../../ts-files/pathObject";
+import {PLANNER_RESPONSES} from "../../../../ts-files/planner-responses";
 
 @Component({
   selector: 'app-screen-sub-form-planner',
@@ -9,5 +13,7 @@ import {Client} from "../../../../ts-files/client";
 export class ScreenSubFormPlannerComponent {
 
   @Input() @Output() client:Client;
+  response: PlannerResponse = PLANNER_RESPONSES[0];
+
 
 }

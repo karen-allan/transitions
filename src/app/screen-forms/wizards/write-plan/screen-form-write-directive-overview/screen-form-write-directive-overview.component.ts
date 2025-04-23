@@ -206,7 +206,7 @@ export class ScreenFormWriteDirectiveOverviewComponent {
     this.directive.client_city = "Surrey";
     //this.directive.client_postal = "";
     this.directive.client_postal = "V0E-1M8";
-    this.directive.client_dob = "",
+    this.directive.client_dob = "";
         //this.directive.client_phc_number = '',
         this.directive.client_phn = '9030254245';
         this.directive.client_organ_donor = 'organDonorNo';

@@ -258,6 +258,9 @@ and (orientation: portrait) {
         font-size: var(--form-small-mobile-menu-title);
     }
 
+    .form-error-message {
+        font-size: var(--form-small-mobile-menu-title);
+    }
 }
 
 /*******************************************************************************************************************
@@ -308,6 +311,9 @@ and (orientation: landscape) {
         font-size: var(--form-big-mobile-prompt-title);
     }
 
+    .form-error-message {
+        font-size: var(--form-big-mobile-prompt-title);
+    }
 
 }
 
@@ -358,6 +364,10 @@ and (orientation: portrait) {
     .consult-disclaimer-title h4 {
         font-size: var(--form-big-mobile-prompt-title);
     }
+
+    .form-error-message {
+        font-size: var(--form-big-mobile-prompt-title);
+    }
 }
 
 /*******************************************************************************************************************
@@ -406,6 +416,10 @@ and (orientation: landscape) {
     .consult-disclaimer-title h4 {
         font-size: var(--form-tablet-prompt-title);
     }
+
+    .form-error-message {
+        font-size: var(--form-tablet-prompt-title);
+    }
 }
 
 /*!*******************************************************************************************************************
@@ -451,6 +465,10 @@ and (orientation: portrait) {
         font-size: var(--form-laptop-menu-title);
     }
 
+    .form-error-message {
+        font-size: var(--form-laptop-menu-title);
+    }
+
 }
 
 /*******************************************************************************************************************
@@ -492,6 +510,10 @@ and (min-width: 1024px) {
 
     .consult-disclaimer-title h4 {
         font-size: var(--form-laptop-menu-title);
+    }
+
+    .form-error-message {
+        font-size: var(--p-laptop);
     }
 
 }
@@ -679,6 +701,25 @@ and (min-width: 1024px) {
         justify-content: center;
         padding: .5em 0;
     }
+
+    /************************************************** ERROR *******************************************************/
+    .form-error-message-block {
+        display: block;
+        width: 100%;
+        float: left;
+        text-align: left;
+        background-color: blue;
+    }
+
+    .form-error-message {
+        font-weight: 800;
+        padding-top:1em;
+        color: var(--color-red);
+        line-height: 90%;
+        font-family: var(--family-forms);
+        font-size: var(--p-laptop);
+    }
+
 }
 
 @media screen {

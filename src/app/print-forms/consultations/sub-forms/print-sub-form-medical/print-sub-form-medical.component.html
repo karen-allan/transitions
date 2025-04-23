@@ -2,21 +2,18 @@
     <h1>(Optional) Your Medical History</h1>
 </div>
 
-<div class="print-form-question">
-    These are the medications and supplements that you are currently taking:
-</div>
+<ng-container *ngIf="client.medsSupplements.length > 0">
+    <div class="print-form-question">
+        These are the medications and supplements that you are currently taking:
+    </div>
 
-<div class="print-form-response">
-    <ng-container *ngIf="client.medsSupplements.length > 0">
+    <div class="print-form-response">
         {{ client.medsSupplements }}
-    </ng-container>
-    <ng-container *ngIf="client.medsSupplements.length == 0">
-        &nbsp;
-    </ng-container>
-</div>
+    </div>
+</ng-container>
 
 <div class="print-form-question">
-    These are the health conditions you noted:
+    The health conditions you selected from the list:
 </div>
 
 <ng-container *ngIf="client.heartDisease">
@@ -67,25 +64,20 @@
     </div>
 </ng-container>
 
-<ng-container *ngIf="client.otherDisease">
+<ng-container *ngIf="client.none">
     <div class="print-form-response">
-        Other Illness
+        Not Listed Here
     </div>
 </ng-container>
 
-
-<div class="print-form-question">
-    Your description of your situation, condition and or illness:
-</div>
-
 <ng-container *ngIf="client.illnessDetails.length > 0">
+    <div class="print-form-question">
+        Your description of your situation, condition and or illness:
+    </div>
+
     <div class="print-form-response">
         {{ client.illnessDetails }}
     </div>
-</ng-container>
-
-<ng-container *ngIf="client.illnessDetails.length == 0">
-    <div class="print-solid-underline"></div>
 </ng-container>
 
 

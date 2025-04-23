@@ -90,8 +90,8 @@
     --header-name-p-big-tablet-port: 2.2em;
     --header-name-span-big-tablet-port: 1.3em;
 
-    --header-name-p-laptop: 2.4em;
-    --header-name-span-laptop: 1.5em;
+    --header-name-p-laptop: 2.7em;
+    --header-name-span-laptop: 1.8em;
 
     /* mobile menu white on blue */
     --header-slogan-small-mobile-port: .6em;
@@ -281,7 +281,7 @@ Montserrat*/
     --form-laptop-question: 1.8em;
     --form-laptop-answer: 1.3em;
     --form-laptop-label-value: 1.3em;
-    --form-laptop-checkbox:1.2em;
+    --form-laptop-checkbox:1.3em;
 
     /* small tablet landscape */
     --form-tablet-prompt-title: 1.9em;
@@ -334,7 +334,7 @@ Montserrat*/
     /* WISHES */
     --form-big-main-title:2.0em;
     --form-big-sub-title:1.9em;
-    --form-question:1.8em;
+    --form-question:1.5em;
     --form-big-list: 1.3em;
     --form-big-copy: 1.3em;
 

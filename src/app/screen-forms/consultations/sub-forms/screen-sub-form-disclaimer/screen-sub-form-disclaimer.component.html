@@ -1,6 +1,6 @@
 <div class="consult-disclaimer-block">
     <!-- DISCLAIMER-->
-    <div class="consult-disclaimer-title">
+    <div class="content-title">
         <h4>Please Read:</h4>
     </div>
 
@@ -22,8 +22,17 @@
             not been vaccinated I can still see you via a remote call, for example a Zoom, Google Meet or a phone call.
         </p>
         <form #disclaimerForm="ngForm" class="disclaimer-form" novalidate>
+            <div class="modal-error-message-block">
+                <ng-container *ngIf="errorMessage">
+                    <div class="form-error-message">{{ errorMessage }}</div>
+                </ng-container>
+                <ng-container *ngIf="!errorMessage">
+                    <div class="form-error-message">&nbsp;</div>
+                </ng-container>
+            </div>
+
             <div class="consult-button-container">
-                <button class="consult-publish-button" (click)="printProfile()">PRINT</button>
+                <button class="consult-publish-button" (click)="checkClientName()">PRINT</button>
             </div>
         </form>
     </div>

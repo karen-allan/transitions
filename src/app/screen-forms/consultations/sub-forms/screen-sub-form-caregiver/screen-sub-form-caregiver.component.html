@@ -2,83 +2,83 @@
 <div class="screen-forms-desktop">
     <div class="sub-form-block">
         <div class="sub-form-full-block">
-            <p>As Caregiver, what are your main areas of focus for seeking a consultation?</p>
+            <p>As caregiver of a loved one, select your main areas of focus for seeking a consultation:</p>
         </div>
 
         <div class="sub-form-two-checkboxes-block">
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus1D" [(ngModel)]="client.eolCaregiverFocus1" value="caregiverFocus1">
-                <label for="primaryFocus1D">
-                    I am overwhelmed with all the decisions I need to make.
+                <input type="checkbox" id="dPrimaryFocus0" [(ngModel)]="client.eolCaregiverFocus0" checked value="caregiverFocus0">
+                <label for="dPrimaryFocus0">
+                    {{response.answer0}}
                 </label>
             </div>
 
             <div class="sub-form-second-check-col">
-                <input type="checkbox" id="primaryFocus2D" [(ngModel)]="client.eolCaregiverFocus2" value="caregiverFocus2">
-                <label for="primaryFocus2D">
-                    I am exhausted and burned out and need emotional support.
-                </label>
-            </div>
-        </div>
-
-        <div class="sub-form-two-checkboxes-block">
-            <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus3D" [(ngModel)]="client.eolCaregiverFocus3" value="caregiverFocus3">
-                <label for="primaryFocus3D">
-                    I am physically unable to care for my loved one adequately.
-                </label>
-            </div>
-
-            <div class="sub-form-second-check-col">
-                <input type="checkbox" id="primaryFocus4D" [(ngModel)]="client.eolCaregiverFocus4" value="caregiverFocus4">
-                <label for="primaryFocus4D">
-                    My loved one is angry and lashing out at me and I don't feel safe.
+                <input type="checkbox" id="dPrimaryFocus1" [(ngModel)]="client.eolCaregiverFocus1" value="caregiverFocus1">
+                <label for="dPrimaryFocus1">
+                    {{response.answer1}}
                 </label>
             </div>
         </div>
 
         <div class="sub-form-two-checkboxes-block">
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus5D" [(ngModel)]="client.eolCaregiverFocus5" value="caregiverFocus5">
-                <label for="primaryFocus5D">
-                    I am having conflicts with my extended family's opinions on care, even though I am the main caregiver.
+                <input type="checkbox" id="dPrimaryFocus2" [(ngModel)]="client.eolCaregiverFocus2" value="caregiverFocus2">
+                <label for="dPrimaryFocus2">
+                    {{response.answer2}}
                 </label>
             </div>
 
             <div class="sub-form-second-check-col">
-                <input type="checkbox" id="primaryFocus6D" [(ngModel)]="client.eolCaregiverFocus6" value="caregiverFocus6">
-                <label for="primaryFocus6D">
-                    I need to ensure their last wishes and requests are respected.
+                <input type="checkbox" id="dPrimaryFocus3" [(ngModel)]="client.eolCaregiverFocus3" value="caregiverFocus3">
+                <label for="dPrimaryFocus3">
+                    {{response.answer3}}
                 </label>
             </div>
         </div>
 
         <div class="sub-form-two-checkboxes-block">
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus7D" [(ngModel)]="client.eolCaregiverFocus7" value="caregiverFocus7">
-                <label for="primaryFocus7D">
-                    I need to discuss these issues with an impartial advocate.
+                <input type="checkbox" id="dPrimaryFocus4" [(ngModel)]="client.eolCaregiverFocus4" value="caregiverFocus4">
+                <label for="dPrimaryFocus4">
+                    {{response.answer4}}
                 </label>
             </div>
 
             <div class="sub-form-second-check-col">
-                <input type="checkbox" id="primaryFocus8D" [(ngModel)]="client.eolCaregiverFocus8" value="caregiverFocus8">
-                <label for="primaryFocus8D">
-                    I am having difficulties with my loved one's health care team.
+                <input type="checkbox" id="dPrimaryFocus5" [(ngModel)]="client.eolCaregiverFocus5" value="caregiverFocus5">
+                <label for="dPrimaryFocus5">
+                    {{response.answer5}}
+                </label>
+            </div>
+        </div>
+
+        <div class="sub-form-two-checkboxes-block">
+             <div class="sub-form-first-check-col">
+                <input type="checkbox" id="dPrimaryFocus6" [(ngModel)]="client.eolCaregiverFocus6" value="caregiverFocus6">
+                <label for="dPrimaryFocus6">
+                    {{response.answer6}}
+                </label>
+            </div>
+
+            <div class="sub-form-second-check-col">
+                <input type="checkbox" id="dPrimaryFocus7" [(ngModel)]="client.eolCaregiverFocus7" value="caregiverFocus7">
+                <label for="dPrimaryFocus7">
+                    {{response.answer7}}
                 </label>
             </div>
 
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus9D" [(ngModel)]="client.eolCaregiverFocus9" value="caregiverFocus9">
-                <label for="primaryFocus9D">
-                    My loved one will not discuss any end of life issues with me and I need to get things in order.
+                <input type="checkbox" id="dPrimaryFocus8" [(ngModel)]="client.eolCaregiverFocus8" value="caregiverFocus8">
+                <label for="dPrimaryFocus8">
+                    {{response.answer8}}
                 </label>
             </div>
 
             <div class="sub-form-second-check-col">
-                <input type="checkbox" id="primaryFocus10D" [(ngModel)]="client.eolCaregiverFocus10" value="caregiverFocus10">
-                <label for="primaryFocus10D">
-                    They want care in one place (hospital, hospice or home) that I am unable to organize on my own.
+                <input type="checkbox" id="dPrimaryFocus9" [(ngModel)]="client.eolCaregiverFocus9" value="caregiverFocus9">
+                <label for="dPrimaryFocus9">
+                    {{response.answer9}}
                 </label>
             </div>
         </div>
@@ -102,78 +102,78 @@
 
         <div class="sub-form-full-block">
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus1M" [(ngModel)]="client.eolCaregiverFocus1" value="caregiverFocus1">
-                <label for="primaryFocus1M">
-                    I am overwhelmed with all the decisions I need to make.
+                <input type="checkbox" id="mPrimaryFocus0" [(ngModel)]="client.eolCaregiverFocus0" value="caregiverFocus0">
+                <label for="mPrimaryFocus0">
+                    {{response.answer0}}
                 </label>
             </div>
 
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus2M" [(ngModel)]="client.eolCaregiverFocus2" value="caregiverFocus2">
-                <label for="primaryFocus2M">
-                    I am exhausted and burned out and need emotional support.
+                <input type="checkbox" id="mPrimaryFocus1" [(ngModel)]="client.eolCaregiverFocus1" value="caregiverFocus1">
+                <label for="mPrimaryFocus1">
+                    {{response.answer1}}
                 </label>
             </div>
 
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus3M" [(ngModel)]="client.eolCaregiverFocus3" value="caregiverFocus3">
-                <label for="primaryFocus3M">
-                    I am physically unable to care for my loved one adequately.
+                <input type="checkbox" id="mPrimaryFocus2" [(ngModel)]="client.eolCaregiverFocus2" value="caregiverFocus2">
+                <label for="mPrimaryFocus2">
+                    {{response.answer2}}
                 </label>
             </div>
 
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus4M" [(ngModel)]="client.eolCaregiverFocus4" value="caregiverFocus4">
-                <label for="primaryFocus4M">
-                    My loved one is angry and lashing out at me and I don't feel safe.
+                <input type="checkbox" id="mPrimaryFocus3" [(ngModel)]="client.eolCaregiverFocus3" value="caregiverFocus3">
+                <label for="mPrimaryFocus3">
+                    {{response.answer3}}
                 </label>
             </div>
 
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus5M" [(ngModel)]="client.eolCaregiverFocus5" value="caregiverFocus5">
-                <label for="primaryFocus5M">
-                    I am having conflicts with my extended family's opinions on care, even though I am the main caregiver.
+                <input type="checkbox" id="mPrimaryFocus4" [(ngModel)]="client.eolCaregiverFocus4" value="caregiverFocus4">
+                <label for="mPrimaryFocus4">
+                    {{response.answer4}}
                 </label>
             </div>
 
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus6M" [(ngModel)]="client.eolCaregiverFocus6" value="caregiverFocus6">
-                <label for="primaryFocus6M">
-                    I need to ensure their last wishes and requests are respected.
+                <input type="checkbox" id="mPrimaryFocus5" [(ngModel)]="client.eolCaregiverFocus5" value="caregiverFocus5">
+                <label for="mPrimaryFocus5">
+                    {{response.answer5}}
                 </label>
             </div>
 
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus7M" [(ngModel)]="client.eolCaregiverFocus7" value="caregiverFocus7">
-                <label for="primaryFocus7M">
-                    I need to discuss these issues with an impartial advocate.
+                <input type="checkbox" id="mPrimaryFocus6" [(ngModel)]="client.eolCaregiverFocus6" value="caregiverFocus6">
+                <label for="mPrimaryFocus6">
+                    {{response.answer6}}
                 </label>
             </div>
 
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus8M" [(ngModel)]="client.eolCaregiverFocus8" value="caregiverFocus8">
-                <label for="primaryFocus8M">
-                    I am having difficulties with my loved one's health care team.
+                <input type="checkbox" id="mPrimaryFocus7" [(ngModel)]="client.eolCaregiverFocus7" value="caregiverFocus7">
+                <label for="mPrimaryFocus7">
+                    {{response.answer7}}
                 </label>
             </div>
 
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus9M" [(ngModel)]="client.eolCaregiverFocus9" value="caregiverFocus9">
-                <label for="primaryFocus9M">
-                    My loved one will not discuss any end of life issues with me and I need to get things in order.
+                <input type="checkbox" id="mPrimaryFocus8" [(ngModel)]="client.eolCaregiverFocus8" value="caregiverFocus8">
+                <label for="mPrimaryFocus8">
+                    {{response.answer8}}
                 </label>
             </div>
 
             <div class="sub-form-first-check-col">
-                <input type="checkbox" id="primaryFocus10M" [(ngModel)]="client.eolCaregiverFocus10" value="caregiverFocus10">
-                <label for="primaryFocus10M">
-                    They want care in one place (hospital, hospice or home) that I am unable to organize on my own.
+                <input type="checkbox" id="mPrimaryFocus9" [(ngModel)]="client.eolCaregiverFocus9" value="caregiverFocus9">
+                <label for="mPrimaryFocus9">
+                    {{response.answer9}}
                 </label>
             </div>
         </div>
 
         <div class="sub-form-full-block">
-            <p>Can you expand on what you are looking for related to the above considerations?</p>
+            <p>Can you expand on what you are looking for related to the above answers?</p>
         </div>
 
         <div class="sub-form-full-block">
