@@ -1,0 +1,87 @@
+<!-- OPTIONAL INFO FOR PATIENTS -->
+
+<!-- DESKTOP -->
+<div class="screen-forms-desktop">
+    <div class="sub-form-block">
+        <div class="sub-form-title">
+            OPTIONAL DETAILS
+        </div>
+
+        <div class="sub-form-bdate-occup-referred-block">
+            <label class="sub-form-first-col-label" for="birthdate">Birthdate:</label>
+            <label class="sub-form-second-col-label" for="occupation">Occupation:</label>
+            <label class="sub-form-third-col-label" for="referredBy">Referred By:</label>
+
+            <input type="text" class="form-control sub-form-first-col-value" mask="0000/00/00"
+                   id="birthdate" [(ngModel)]="client.birthdate" name="birthdate"
+                   oninput="this.value=value"  placeholder="yyyy/mm/dd">
+
+            <input type="text" class="form-control sub-form-second-col-value" id="occupation" [(ngModel)]="client.occupation"
+                   name="occupation">
+
+            <input type="text" class="form-control sub-form-third-col-value" id="referredBy" [(ngModel)]="client.referredBy"
+                   name="referredBy">
+        </div>
+
+        <div class="sub-form-title">
+            EMERGENCY CONTACT
+        </div>
+
+        <div class="sub-form-contact-phone-relation-block">
+            <label class="sub-form-first-col-label" for="emergName">Contact:</label>
+            <label class="sub-form-second-col-label" for="emergPhone">Phone:</label>
+            <label class="sub-form-third-col-label" for="emergRelation">Relationship:</label>
+
+            <input type="text" class="sub-form-first-col-value" [(ngModel)]="client.emergName" id="emergName" name="emergName">
+
+            <input [(ngModel)]="client.emergPhone" type="text"
+                   mask="000-000-0000"
+                   class="sub-form-second-col-value" id="emergPhone" name="emergPhone" oninput="this.value=value">
+
+            <input type="text" class="sub-form-third-col-value" [(ngModel)]="client.emergRelation" id="emergRelation" name="emergRelation">
+        </div>
+    </div>
+</div>
+
+<!-- MOBILE -->
+<div class="screen-forms-mobile">
+    <div class="sub-form-block">
+        <div class="sub-form-title">
+            ADDITIONAL DETAILS
+        </div>
+
+        <div class="sub-form-full-block">
+            <label class="sub-form-full-col-label" for="mBirthdate"><b>Birthdate:</b></label>
+
+            <input type="text" class="form-control sub-form-full-col-value" mask="0000/00/00"
+                   id="mBirthdate" [(ngModel)]="client.birthdate" name="birthdate"
+                   oninput="this.value=value" placeholder="yyyy/mm/dd">
+
+            <label class="sub-form-full-col-label" for="mReferredBy"><b>Referred By:</b></label>
+            <input type="text" class="form-control sub-form-full-col-value" id="mReferredBy" [(ngModel)]="client.referredBy"
+                   name="referredBy">
+
+            <label class="sub-form-full-col-label" for="mOccupation"><b>Occupation:</b></label>
+            <input type="text" class="form-control sub-form-full-col-value" id="mOccupation" [(ngModel)]="client.occupation"
+                   name="occupation">
+        </div>
+
+        <div class="sub-form-title">
+            EMERGENCY CONTACT
+        </div>
+
+        <div class="sub-form-full-block">
+            <label class="sub-form-full-col-label" for="emergName2"><b>Contact:</b></label>
+            <input type="text" class="sub-form-full-col-value" [(ngModel)]="client.emergName" id="emergName2" name="emergName">
+
+            <label class="sub-form-full-col-label" for="emergPhone2"><b>Phone:</b></label>
+            <input [(ngModel)]="client.emergPhone" type="text"
+                   mask="000-000-0000"
+                   class="sub-form-full-col-value" id="emergPhone2" name="emergPhone" oninput="this.value=value">
+
+            <label class="sub-form-full-col-label" for="emergRelation2"><b>Relationship:</b></label>
+            <input type="text" class="sub-form-full-col-value" [(ngModel)]="client.emergRelation" id="emergRelation2"
+                   name="emergRelation">
+        </div>
+    </div>
+</div>

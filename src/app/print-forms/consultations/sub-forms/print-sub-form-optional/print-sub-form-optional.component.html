@@ -1,0 +1,118 @@
+
+<div class="print-title">
+    <h1>Emergency Contact</h1>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.emergName.length > 0 && client.emergName != '' ">
+        <div class="print-inline-label">
+            Contact Name:
+        </div>
+        <div class="print-inline-value">
+            {{ client.emergName }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.emergName.length == 0 && client.emergName == '' ">
+        <div class="print-inline-label">
+            Contact Name:
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.emergRelation.length > 0 && client.emergRelation != '' ">
+        <div class="print-inline-label">
+            Relationship:
+        </div>
+        <div class="print-inline-value">
+            {{ client.emergRelation }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.emergRelation.length == 0 && client.emergRelation == '' ">
+        <div class="print-inline-label">
+            Relationship::
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.emergPhone.length > 0 && client.emergPhone != '' ">
+        <div class="print-inline-label">
+            Phone:
+        </div>
+        <div class="print-inline-value">
+            {{ client.emergPhone | mask: '(000) 000-0000' }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.emergPhone.length == 0 && client.emergPhone == '' ">
+        <div class="print-inline-label">
+            Phone::
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-title">
+    <h1>Additional Details</h1>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.birthdate.length > 0 && client.birthdate != '' ">
+        <div class="print-inline-label">
+            Birthdate:
+        </div>
+        <div class="print-inline-value">
+            {{ client.birthdate | mask: '0000/00/00' }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.birthdate.length == 0 && client.birthdate == '' ">
+        <div class="print-inline-label">
+            Birthdate::
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.occupation.length > 0 && client.occupation != '' ">
+        <div class="print-inline-label">
+            Occupation:
+        </div>
+        <div class="print-inline-value">
+            {{ client.occupation }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.occupation.length == 0 && client.occupation == '' ">
+        <div class="print-inline-label">
+            Occupation::
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+<div class="print-inline-label-value">
+    <ng-container *ngIf="client.referredBy.length > 0 && client.referredBy != '' ">
+        <div class="print-inline-label">
+            Referred By:
+        </div>
+        <div class="print-inline-value">
+            {{ client.referredBy }}
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="client.referredBy.length == 0 && client.referredBy == '' ">
+        <div class="print-inline-label">
+            Referred By:
+        </div>
+        <div class="print-inline-line"></div>
+    </ng-container>
+</div>
+
+
