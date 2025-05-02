@@ -48,8 +48,8 @@ export class ChooseYourRepOverviewComponent {
     dialogConfig.disableClose = false;
     dialogConfig.id = "choose-rep-modal";
     dialogConfig.maxWidth='1024px'
-    dialogConfig.minWidth='960px'
-    dialogConfig.height='850px'
+    dialogConfig.minWidth='768px'
+
 
     /* named and defined in wizard.css */
     let modalDialog = this.matDialog.open(DialogRepsComponent, dialogConfig);

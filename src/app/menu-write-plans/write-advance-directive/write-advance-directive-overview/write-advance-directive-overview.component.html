@@ -1,11 +1,12 @@
 <div class="header-detail-image header-write-adv-care-plan-image">
-    <div class="header-quotes">
-        <div class="header-quote">
-            &#8220;{{quote}}&#8220;
-        </div>
-        <div class="header-author">
-            {{author}}
-        </div>
+</div>
+
+<div class="header-quotes">
+    <div class="header-quote">
+        &#8220;{{quote}}&#8220;
+    </div>
+    <div class="header-author">
+        {{author}}
     </div>
 </div>
 
@@ -22,9 +23,9 @@
             <a (click)="openModal()">
                 <h3>{{ title.toUpperCase() }}</h3>
                 <p>
-                    By following this wizard you can easily note note any treatments or procedures you would want or would not want to
-                    receive if in a health emergency situation. By simply taking a few minutes to complete this <b>{{title}}</b> wizard,
-                    you will feel more protected and your family will be grateful for your considerate action.
+                    By following this <b>{{ title }}</b> wizard you can easily note note any procedures you would accept or reject
+                    in a health emergency. You will feel more protected and your family will be grateful for your
+                    thoughtfulness.
                     <br><br>
                     <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
                     as a PDF file. This wizard is only available on an ipad, laptop or desktop.
@@ -35,7 +36,7 @@
 </div>
 
 <div class="mobileForm">
-    <div class="separator-block-light"></div>
+
 
     <div class="wizard-intro-container">
         <div class="wizard-intro-image">
@@ -57,13 +58,15 @@
     </div>
 </div>
 
+
+
 <div class="content-title">
     <h3>
         Need to Learn More First?
     </h3>
 </div>
 
-<div class="content-dark-copy">
+<div class="content-copy">
     <p>
         To understand more about why you should prepare an Advanced Care Plan at any age or state of health check out our
         <b><a target="new" routerLink={{pathObject.child3_url}}> {{ pathObject.parent_name }} > {{ pathObject.child3_name }}</a></b>

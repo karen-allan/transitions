@@ -36,9 +36,8 @@ export const QUESTIONS: Question[] = [
         responses: [
             {response_num: 0, response_string: 'I have a family doctor who I can speak freely with.'},
             {response_num: 1, response_string: 'I have a family doctor who I do not communicate well with.'},
-            {response_num: 2, response_string: 'I don\'t have a family doctor, so must visit walk-ins or emergency when I need help.'},
-            {response_num: 3, response_string: 'I do not have a family doctor, but I get support from home care nurses.' +
-                    ' practitioners.'}
+            {response_num: 2, response_string: 'I don\'t have a family doctor, so must visit walk-ins or emergency.'},
+            {response_num: 3, response_string: 'I do not have a family doctor, but I get support from home care nurses.'},
         ],
         selectedAnswer:0},
 
@@ -66,34 +65,33 @@ export const QUESTIONS: Question[] = [
     {question_num:6,
         question_string: 'What medical interventions would you accept or reject?',
         responses: [
-            {response_num: 0, response_string: 'I would accept any medical interventions in order to stay alive, no matter the cost.'},
-            {response_num: 1, response_string: 'I would want to try all possible alternatives first, before accepting the intervention.'},
+            {response_num: 0, response_string: 'I would accept any medical interventions in order to stay alive.'},
+            {response_num: 1, response_string: 'I would want to try all possible alternatives first, before accepting interventions.'},
             {response_num: 2, response_string: 'If I was terminally ill I would accept interventions for pain control and comfort.'},
-            {response_num: 3, response_string: 'I would not want medical interventions if it means I lose my level of existing comfort.'}
+            {response_num: 3, response_string: 'I would not want interventions if I could lose my level of existing comfort.'}
         ],
         selectedAnswer:0},
 
     {question_num:7,
-        question_string: 'Would you rather be aware with pain or be pain-free but unaware?',
+        question_string: 'Would you choose aware with pain or pain-free but unaware?',
         responses: [
             {response_num: 0, response_string: 'I would rather put up with some pain and be awake and aware.'},
             {response_num: 1, response_string: 'I would rather be given sedating drugs, no matter the consequence.'},
-            {response_num: 2, response_string: 'I would seek out other pain lessening treatments such as massage or energy work.'},
+            {response_num: 2, response_string: 'I would try other pain lessening treatments such as massage or energy work.'},
             {response_num: 3, response_string: 'I would want to be still awake enough to talk with family and friends.'}
         ],
         selectedAnswer:0},
 
     {question_num:8,
-        question_string: 'Do you feel that you could advocate for your own health concerns?',
+        question_string: 'Can you advocate for your own health concerns?',
         responses: [
-            {response_num: 0, response_string: 'I am very confident in my decision making so I think I would advocate well for' +
+            {response_num: 0, response_string: 'I am confident in my decision making so I think I would advocate for' +
                     ' myself' +
                     ' .'},
             {response_num: 1, response_string: 'I am usually good at making decisions but my emotions might get in the' +
                     ' way.'},
-            {response_num: 2, response_string: 'I am often unsure of my decisions so I might leave many up to the health' +
-                    ' care team.'},
-            {response_num: 3, response_string: 'I would let a close family member advocate for me as I don\'t communicate' +
+            {response_num: 2, response_string: 'I am often unsure of my decisions so I might leave it up to the doctors.'},
+            {response_num: 3, response_string: 'I would let a family member advocate for me as I don\'t communicate' +
                     ' well.'}
         ],
         selectedAnswer:0},
@@ -112,19 +110,19 @@ export const QUESTIONS: Question[] = [
         question_string: 'Have you set anyone in charge of your future financial decisions?',
         responses: [
             {response_num: 0, response_string: 'I have a Will with a Power of Attorney for my finances.'},
-            {response_num: 1, response_string: 'I have a Will and have assigned my financial Representative(s) with Rep-Section-7.'},
+            {response_num: 1, response_string: 'I have a Will and have set up Rep-Section-7.'},
             {response_num: 2, response_string: 'I have a Will but have not set anyone up to represent me financially.'},
-            {response_num: 3, response_string: 'I have no Will as yet and no one to manage my finances should I be unable to do so.'}
+            {response_num: 3, response_string: 'I have no Will as yet and no one to manage my finances if I can not.'}
         ],
         selectedAnswer:0},
 
     {question_num:11,
         question_string: 'Would you accept treatments that may affect your looks?',
         responses: [
-            {response_num: 0, response_string: 'I take care to be attractive and would not want any treatments that affect it.'},
-            {response_num: 1, response_string: 'I care about looking attractive, but not at the cost of saving my life or parts of my body.'},
+            {response_num: 0, response_string: 'I take care to be attractive and would not want any altering treatments.'},
+            {response_num: 1, response_string: 'I care about looking attractive, but not at the cost of saving my life.'},
             {response_num: 2, response_string: 'It depends on the area of my body that they want to treat.'},
-            {response_num: 3, response_string: 'I do not have the interest or energy to worry about my physical attractive-ness.'}
+            {response_num: 3, response_string: 'I do not focus on my physical attractive-ness so I would accept them.'}
         ],
         selectedAnswer:0},
 
@@ -141,25 +139,25 @@ export const QUESTIONS: Question[] = [
     {question_num:13,
         question_string: 'What prolonging medical interventions would you disagree with?',
         responses: [
-            {response_num: 0, response_string: 'I would not want to any medical interventions if I became mentally incapacitated.'},
-            {response_num: 1, response_string: 'It is against my religion or other belief system to receive any medical interventions.'},
-            {response_num: 2, response_string: 'I would be open to selecting a trial period for life prolonging medical interventions.'},
-            {response_num: 3, response_string: 'I am open to all medical interventions if I can be kept alive no matter the cost.'}
+            {response_num: 0, response_string: 'I wouldn\'t want any medical interventions if I was mentally incapacitated.'},
+            {response_num: 1, response_string: 'It is against my religion or other belief system to receive medical interventions.'},
+            {response_num: 2, response_string: 'I would select a trial period for life prolonging medical interventions.'},
+            {response_num: 3, response_string: 'I am open to all medical interventions if I can be kept alive.'}
         ],
         selectedAnswer:0},
 
     {question_num:14,
-        question_string: 'How much would you want to know about a diagnosis or treatment?',
+        question_string: 'How much would you want to know about a diagnosis?',
         responses: [
             {response_num: 0, response_string: 'I would want to know absolutely everything, no matter how dire.'},
-            {response_num: 1, response_string: 'I would let my family receive the information and allow them to decide what to tell me.'},
-            {response_num: 2, response_string: 'I rely on family to translate to me as I do not speak English or I can not speak at all.'},
-            {response_num: 3, response_string: 'It would depend on the nature of the diagnosis, whether it was terminal or curable.'}
+            {response_num: 1, response_string: 'I would let my family receive and explain the information at their discretion'},
+            {response_num: 2, response_string: 'I rely on family to translate to me as I do not understand English.'},
+            {response_num: 3, response_string: 'It would depend on the the diagnosis, whether it was terminal or curable.'}
         ],
         selectedAnswer:0},
 
     {question_num:15,
-        question_string: 'Do you keep your will, life insurance and plans securely stored away?',
+        question_string: 'Do you keep your will, life insurance etc. securely stored?',
         responses: [
             {response_num: 0, response_string: 'I have a safe in my home where all these papers are kept.'},
             {response_num: 1, response_string: 'I have not compiled any of this information, but my doctor knows my wishes.'},
@@ -169,7 +167,7 @@ export const QUESTIONS: Question[] = [
         selectedAnswer:0},
 
     {question_num:16,
-        question_string: 'Do you believe that you have fulfilled your life has purpose?',
+        question_string: 'Do you believe that you have fulfilled your life purpose?',
         responses: [
             {response_num: 0, response_string: 'I think I have absolutely fulfilled my purpose.'},
             {response_num: 1, response_string: 'I am still unsure what my life purpose is and and still trying to find meaning.'},
@@ -181,8 +179,8 @@ export const QUESTIONS: Question[] = [
     {question_num:17,
         question_string: 'What would make your life not worth living?',
         responses: [
-            {response_num: 0, response_string: 'No longer being able to carry out my day to day activities without support from others.'},
-            {response_num: 1, response_string: 'Experiencing pain and discomfort much of the time, with drugs no longer helping.'},
+            {response_num: 0, response_string: 'No longer being able to carry out my day to day activities without support.'},
+            {response_num: 1, response_string: 'Experiencing pain and discomfort much of the time, with drugs not helping.'},
             {response_num: 2, response_string: 'Losing my intellectual capabilities, becoming forgetful and confused.'},
             {response_num: 3, response_string: 'Becoming too weak to mentally and physically to take on most challenges.'}
         ],
@@ -201,8 +199,8 @@ export const QUESTIONS: Question[] = [
     {question_num:19,
         question_string: 'Do you know who you would welcome at your bedside?',
         responses: [
-            {response_num: 0, response_string: 'All family members and friends are welcome as long as my comfort level is respected.'},
-            {response_num: 1, response_string: 'I would want all the adults in my family to be able to visit, but not the grandchildren.'},
+            {response_num: 0, response_string: 'All family and friends are welcome as long as my comfort level is respected.'},
+            {response_num: 1, response_string: 'I would want all the adults in my family there, but not the grandchildren.'},
             {response_num: 2, response_string: 'I only want my spouse at my bedside.'},
             {response_num: 3, response_string: 'I only want my priest, rabbi or religious mentor at my bedside.'}
         ],
@@ -229,7 +227,7 @@ export const QUESTIONS: Question[] = [
         selectedAnswer: 0},
 
     {question_num:22,
-        question_string: 'How much would you want to know if your condition was terminal?',
+        question_string: 'Would you want information about a terminal diagnosis?',
         responses: [
             {response_num: 0, response_string: 'I want to know absolutely everything, including time line, treatments etc.'},
             {response_num: 1, response_string: 'I want my family to know the details while I focus on the time I have left.'},
@@ -263,8 +261,8 @@ export const QUESTIONS: Question[] = [
         responses: [
             {response_num: 0, response_string: 'If my condition was curable I would be fine with one.'},
             {response_num: 1, response_string: 'If my condition was incurable I would not want to be put on one.'},
-            {response_num: 2, response_string: 'If terminal, I would be okay with being on one until my family could say their goodbyes.'},
-            {response_num: 3, response_string: 'I have no opinion on this subject.'}
+            {response_num: 2, response_string: 'If terminal, I would accept this but with conditions made by me.'},
+            {response_num: 3, response_string: 'I don\'t know how I would respond to this situation.'}
         ],
         selectedAnswer: 0},
 
@@ -272,9 +270,9 @@ export const QUESTIONS: Question[] = [
         question_string: 'What do you feel about tube feeding?',
         responses: [
             {response_num: 0, response_string: 'If my condition was curable I would be fine with tube feeding.'},
-            {response_num: 1, response_string: 'If my condition was incurable I would not want to be be fed with tube feeding.'},
-            {response_num: 2, response_string: 'If terminal, I would be okay with being on one until my family could say their goodbyes.'},
-            {response_num: 3, response_string: 'I have no opinion on this subject.'}
+            {response_num: 1, response_string: 'If my condition was incurable I would not want tube feeding.'},
+            {response_num: 2, response_string: 'If terminal, I would accept this but with conditions made by myself.'},
+            {response_num: 3, response_string: 'I don\'t know how I would respond to this situation.'}
         ],
         selectedAnswer: 0},
 
@@ -282,7 +280,7 @@ export const QUESTIONS: Question[] = [
         question_string: 'Is there anyone you would not want at your bedside while dying?',
         responses: [
             {response_num: 0, response_string: 'I have written down a list of those who I do not want at my bedside.'},
-            {response_num: 1, response_string: 'I may welcome family but reserve the right to ban anyone if I no longer feel safe.'},
+            {response_num: 1, response_string: 'I may welcome family but reserve the right to ban anyone at any time.'},
             {response_num: 2, response_string: 'I would not want the very young grandchildren to attend.'},
             {response_num: 3, response_string: 'I do not want anyone at my bedside.'},
         ],

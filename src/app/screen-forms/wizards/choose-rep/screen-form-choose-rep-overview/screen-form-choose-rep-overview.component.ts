@@ -68,7 +68,25 @@ export class ScreenFormChooseRepOverviewComponent {
       }
     }
 
+    if (this.rep.client_address.length != 0)  {
+      this.rep.client_address= this.updateAddress(this.rep.client_address);
+    }
+
+    if (this.rep.client_city.length != 0)  {
+      this.rep.client_city= this.updateAddress(this.rep.client_city);
+    }
+
     this.getNextPage();
+  }
+
+  /* *************************************************************************************************************** */
+  updateAddress(addrText): string {
+
+    this.dataService.splitNames(addrText)
+        .subscribe(newName => this.updatedValue = newName);
+
+    return(this.updatedValue);
+
   }
 
   /* *************************************************************************************************************** */
@@ -99,6 +117,14 @@ export class ScreenFormChooseRepOverviewComponent {
       this.rep.rep_primary_name = this.updatedValue;
     }
 
+    if (this.rep.rep_primary_address.length != 0)  {
+      this.rep.rep_primary_address= this.updateAddress(this.rep.rep_primary_address);
+    }
+
+    if (this.rep.rep_primary_city.length != 0)  {
+      this.rep.rep_primary_city= this.updateAddress(this.rep.rep_primary_city);
+    }
+
     this.getNextPage();
   }
 
@@ -116,6 +142,14 @@ export class ScreenFormChooseRepOverviewComponent {
       this.rep.rep_alternate_name = this.updatedValue;
     }
 
+    if (this.rep.rep_alternate_address.length != 0)  {
+      this.rep.rep_alternate_address= this.updateAddress(this.rep.rep_alternate_address);
+    }
+
+    if (this.rep.rep_alternate_city.length != 0)  {
+      this.rep.rep_alternate_city= this.updateAddress(this.rep.rep_alternate_city);
+    }
+
     this.getNextPage();
 
   }
@@ -130,6 +164,14 @@ export class ScreenFormChooseRepOverviewComponent {
       this.rep.witness_one_name = this.updatedValue;
     }
 
+    if (this.rep.witness_one_address.length != 0)  {
+      this.rep.witness_one_address= this.updateAddress(this.rep.witness_one_address);
+    }
+
+    if (this.rep.witness_one_city.length != 0)  {
+      this.rep.witness_one_city= this.updateAddress(this.rep.witness_one_city);
+    }
+
     this.getNextPage();
   }
 
@@ -141,6 +183,14 @@ export class ScreenFormChooseRepOverviewComponent {
           .subscribe(newName => this.updatedValue = newName);
 
       this.rep.witness_two_name = this.updatedValue;
+    }
+
+    if (this.rep.witness_two_address.length != 0)  {
+      this.rep.witness_two_address= this.updateAddress(this.rep.witness_two_address);
+    }
+
+    if (this.rep.witness_two_city.length != 0)  {
+      this.rep.witness_two_city= this.updateAddress(this.rep.witness_two_city);
     }
 
     this.getNextPage();

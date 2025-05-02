@@ -61,18 +61,34 @@ export class ScreenFormWriteDirectiveOverviewComponent {
       this.directive.client_name = this.updatedValue;
     }
 
-   /* if (this.directive.client_dob != '' && this.directive.client_dob.length > 0) {
+    if (this.directive.client_dob != '' && this.directive.client_dob.length > 0) {
 
       var error = this.checkForValidDate();
-      alert("error " + error)
       if (error.length > 0 && error != '') {
         this.errorMessage = error;
-        this.directive.client_dob = "";
         return;
       }
-    }*/
+    }
+
+    if (this.directive.client_address.length != 0)  {
+      this.directive.client_address= this.updateAddress(this.directive.client_address);
+    }
+
+    if (this.directive.client_city.length != 0)  {
+       this.directive.client_city= this.updateAddress(this.directive.client_city);
+    }
 
     this.getNextPage();
+
+  }
+
+  /* *************************************************************************************************************** */
+  updateAddress(addrText): string {
+
+    this.dataService.splitNames(addrText)
+      .subscribe(newName => this.updatedValue = newName);
+
+     return(this.updatedValue);
 
   }
 
@@ -87,7 +103,7 @@ export class ScreenFormWriteDirectiveOverviewComponent {
           .subscribe(newVar => this.validDate = newVar);
 
       if (this.validDate == false) {
-        error = "This is not a valid date."
+        error = "This is not a valid date. Enter as yyyy/mm/dd"
       }
 
     }
@@ -104,6 +120,14 @@ export class ScreenFormWriteDirectiveOverviewComponent {
       this.directive.witness_one_name = this.updatedValue;
     }
 
+    if (this.directive.witness_one_address.length != 0)  {
+      this.directive.witness_one_address= this.updateAddress(this.directive.witness_one_address);
+    }
+
+    if (this.directive.witness_one_city.length != 0)  {
+      this.directive.witness_one_city= this.updateAddress(this.directive.witness_one_city);
+    }
+
     this.getNextPage();
   }
 
@@ -115,6 +139,14 @@ export class ScreenFormWriteDirectiveOverviewComponent {
           .subscribe(newName => this.updatedValue = newName);
 
       this.directive.witness_two_name = this.updatedValue;
+    }
+
+    if (this.directive.witness_two_address.length != 0)  {
+      this.directive.witness_two_address= this.updateAddress(this.directive.witness_two_address);
+    }
+
+    if (this.directive.witness_two_city.length != 0)  {
+      this.directive.witness_two_city= this.updateAddress(this.directive.witness_two_city);
     }
 
     this.getNextPage();
@@ -377,13 +409,13 @@ export class ScreenFormWriteDirectiveOverviewComponent {
       this.directive.witness_one_address = ""
       this.directive.witness_one_city = ""
       this.directive.witness_one_postal = ""
-      this.directive.witness_one_province = ""
+      this.directive.witness_one_province = "B.C."
 
       this.directive.witness_two_name = ""
       this.directive.witness_two_address = ""
       this.directive.witness_two_city = ""
       this.directive.witness_two_postal = ""
-      this.directive.witness_two_province = ""
+      this.directive.witness_two_province = "B.C."
 
       this.directive.witness_type = "";
 

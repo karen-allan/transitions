@@ -17,12 +17,12 @@ import { WriteAdvanceDirectiveContainerComponent } from './menu-write-plans/writ
 import { CheckOffTasksListContainerComponent } from './menu-write-plans/check-off-tasks-list/check-off-tasks-list-container/check-off-tasks-list-container.component';
 
 /* MENU CONSULTATION */
-import { TestimonialsFeesContainerComponent } from './menu-consultations/testimonials-fees/testimonials-fees-container/testimonials-fees-container.component';
-import { BookConsultationContainerComponent } from './menu-consultations/book-consultation/book-consultation-container/book-consultation-container.component';
+import { TestimonialsFeesContainerComponent } from './menu-book/fees/testimonials-fees-container/testimonials-fees-container.component';
+import { BookConsultationContainerComponent } from './menu-book/consultations/book-consultation-container/book-consultation-container.component';
 
 /* MENU ABOUT */
-import { AboutEolAdvocacyContainerComponent } from './menu-about/about-eol-advocacy/about-eol-advocacy-container/about-eol-advocacy-container.component';
-import { AboutPractitionerContainerComponent } from './menu-about/about-practitioner/about-practitioner-container/about-practitioner-container.component';
+import { AboutEolAdvocacyContainerComponent } from './menu-about/support/about-eol-advocacy-container/about-eol-advocacy-container.component';
+import { AboutPractitionerContainerComponent } from './menu-about/us/about-practitioner-container/about-practitioner-container.component';
 
 /* non menu related paths */
 import { ScreenFormMakeWishListContainerComponent } from './screen-forms/wizards/make-wish-list/screen-form-make-wish-list-container/screen-form-make-wish-list-container.component';

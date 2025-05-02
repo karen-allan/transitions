@@ -5,9 +5,9 @@
                 REPRESENTATION AGREEMENT FOR B.C. RESIDENTS
             </div>
 
-            <div class="modal-rep-sub-title">
+     <!--       <div class="modal-rep-sub-title">
                 Please press START to begin the wizard:
-            </div>
+            </div>-->
 
             <div class="modal-rep-copy">
                 <p>
@@ -42,18 +42,9 @@
             </div>
 
             <form #repNineForm="ngForm" novalidate>
-                <div class="modal-error-message-block">
-                    <ng-container *ngIf="errorMessage">
-                        <div class="modal-error-message">{{ errorMessage }}</div>
-                    </ng-container>
-                    <ng-container *ngIf="!errorMessage">
-                        <div class="modal-error-message">&nbsp;</div>
-                    </ng-container>
-                </div>
-
                 <div class="modal-sixty-forty-block">
-                    <label class="modal-first-col-label" for="D_name">Full Legal Name of (you) the Adult (required):</label>
-                    <label class="modal-second-col-label" for="D_birth">Birthdate (YYYY/MM/DD):</label>
+                    <label class="modal-first-col-label" for="D_name">Your Full Legal Name (required):</label>
+                    <label class="modal-second-col-label" for="D_birth">Birthdate (yyyy/mm/dd):</label>
 
                     <input class="modal-first-col-value" type="text" [(ngModel)]="rep.client_name" id="D_name" name="DName">
                     <input [(ngModel)]="rep.client_dob" type="text" placeholder="yyyy/mm/dd" class="modal-second-col-value" id="D_birth"
@@ -80,6 +71,15 @@
                            id="D_prov" name="DProv">
                     <input [(ngModel)]="rep.client_phn" type="text" class="modal-third-col-value" id="D_pn" name="DPn" mask="0000-000-000">
                 </div>
+
+                <div class="modal-error-message-block">
+                    <ng-container *ngIf="errorMessage">
+                        <div class="modal-error-message">{{ errorMessage }}</div>
+                    </ng-container>
+                    <ng-container *ngIf="!errorMessage">
+                        <div class="modal-error-message">&nbsp;</div>
+                    </ng-container>
+                </div>
             </form>
 
             <div class="modal-three-buttons-row">
@@ -105,7 +105,7 @@
                 </ng-container>
             </div>
 
-            <div class="modal-rep-last-title">
+            <div class="modal-rep-sub-title">
                 I know that as a result of making this Representative Section 3 Agreement:
             </div>
 
@@ -134,7 +134,7 @@
                 RULES FOR REPRESENTATIVES
             </div>
 
-            <div class=" modal-rep-last-title">
+            <div class=" modal-rep-sub-title">
                 What a Representative may do:
             </div>
 
@@ -145,7 +145,7 @@
                 </li>
             </ul>
 
-            <div class=" modal-rep-last-title">
+            <div class=" modal-rep-sub-title">
                 What a Representative can not do:
             </div>
 
@@ -266,10 +266,10 @@
 
             <div class="modal-rep-sub-title">
                 <ng-container *ngIf="rep.rep_primary_name.length > 0 && rep.rep_primary_name != ''">
-                    <h3>If my Primary Representative {{ rep.rep_primary_name }}:</h3>
+                    If my Primary Representative {{ rep.rep_primary_name }}:
                 </ng-container>
                 <ng-container *ngIf="rep.rep_primary_name.length == 0 && rep.rep_primary_name == ''">
-                    <h3>If my Primary Representative:</h3>
+                    If my Primary Representative:
                 </ng-container>
             </div>
 
@@ -323,7 +323,7 @@
 
             <form #repNineForm="ngForm" class="wizard-form" novalidate>
                 <div class="modal-sixty-forty-block">
-                    <label class="modal-first-col-label" for="Dalt_name">Full Legal Name of Alternate Representative:</label>
+                    <label class="modal-first-col-label" for="Dalt_name">Full Legal Name of Alternate:</label>
                     <label class="modal-second-col-label" for="Dalt_addr">Address:</label>
 
                     <input class="modal-first-col-value" type="text" [(ngModel)]="rep.rep_alternate_name" id="Dalt_name"  name="DaltName">
@@ -389,7 +389,7 @@
                       <textarea
                           name="instructions"
                           class="modal-rep-text-area"
-                          rows="7"
+                          rows="5"
                           [(ngModel)]="rep.instructions_for_reps"
                           placeholder="Add any instructions you have for your Representative to follow.">
                       </textarea>
@@ -410,7 +410,7 @@
                 INFORMATION FOR WITNESSES
             </div>
 
-            <div class="modal-rep-last-title">
+            <div class="modal-rep-sub-title">
                 (a) The following persons may not be a witness:
             </div>
 
@@ -434,7 +434,7 @@
                 </li>
             </ul>
 
-            <div class="modal-rep-last-title">
+            <div class="modal-rep-sub-title">
                 Only one witness is required if the witness is a lawyer or a member in good standing of the Society of
                 Notaries Public of B.C.
             </div>
@@ -459,7 +459,7 @@
 
             <div class="modal-rep-copy ">
                 <p>
-                    <b>Please Note:</b> Only 1 witness is required if Witness No. 1 is a lawyer or a Notary Public, check here:
+                    <b>Please Note:</b> Only 1 witness is required if Witness No. 1 is a lawyer or notary:
                 </p>
             </div>
 
@@ -580,8 +580,13 @@
         </ng-container>
 
         <ng-container *ngIf="page === 12">
-            <div class="modal-rep-sub-title">
-                Congratulations, you are done!
+            <div class="modal-rep-main-title">
+                <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name !=''">
+                    Congratulations, {{ rep.client_name }} you are done!
+                </ng-container>
+                <ng-container *ngIf="rep.client_name.length == 0 && rep.client_name ==''">
+                    Congratulations, you are done!
+                </ng-container>
             </div>
 
             <div class="modal-rep-copy">

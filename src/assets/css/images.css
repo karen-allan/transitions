@@ -6,11 +6,11 @@ and (min-width: 320px)
 and (max-width: 1024px) {
 
     .header-home-image, .header-detail-image {
-        width: var(--media-unaffected-by-content-width);
+        width: var(--media-unaffected-by-ipad-width);
     }
 
     .content-images  {
-        width: var(--media-less-than-or-at-ipad-width);
+        width: var(--media-less-than-ipad-width);
         margin-right:5%;
         margin-left:5%;
     }
@@ -21,10 +21,10 @@ and (max-width: 1024px) {
   GLOBAL
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 1280px) {
+and (min-width: 1025px) {
 
     .header-home-image, .header-detail-image {
-        width: var(--media-unaffected-by-content-width);
+        width: var(--media-unaffected-by-ipad-width);
     }
 
     .content-images  {
@@ -40,7 +40,7 @@ MOBILES
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 800px)    {
+and (max-width: 767px) {
 
     .content-images {
         padding:.5em 0;
@@ -54,7 +54,7 @@ MAX WIDTH 100% FOR ALL OVER 896px (OUR CONTENT WINDOW)
 
 *******************************************************************************************************************/
 @media only screen
-and (min-width:896px)   {
+and (min-width:768px) {
 
     .content-images {
         padding:1em 0;
@@ -66,13 +66,13 @@ and (min-width:896px)   {
   GLOBAL BANANAS - PORTRAIT
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 320px)
-and (max-width: 568px)
+and (min-width: 360px)
+and (max-width: 767px)
 and (orientation: portrait) {
 
     /* Images - 600/1024 58.59%  */
     .header-home-image, .header-detail-image {
-        height: 187px;
+        height: 210px;
     }
 
 }
@@ -81,43 +81,29 @@ and (orientation: portrait) {
   GLOBAL BANANAS - LANDSCAPE
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 320px)
-and (max-width: 568px)
+and (min-width: 360px)
+and (max-width: 767px)
 and (orientation: landscape) {
 
     /* Images - 600/1024 58.59%  */
     .header-home-image, .header-detail-image {
-        height: 332px;
+        height: 449px;
     }
 
 }
 
+
 /*******************************************************************************************************************
-  GLOBAL BIG MOBILES - PORTRAIT
+  GLOBAL TABLET PORTRAIT
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 600px)
-and (max-width: 800px)
+and (min-width: 768px)
+and (max-width:1023px)
 and (orientation: portrait) {
-
-    /* Images - 600/1024 58.59%  */
-    .header-home-image, .header-detail-image {
-        height: 351px;
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL BIG MOBILES - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 600px)
-and (max-width: 800px)
-and (orientation: landscape) {
 
     /* Images - 1024x600 58.59%  */
     .header-home-image, .header-detail-image {
-        height: 468px;
+        height: 449px;
     }
 
 }
@@ -126,15 +112,14 @@ and (orientation: landscape) {
   GLOBAL TABLET PORTRAIT
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 896px)
-and (max-width: 1023px)
-and (orientation: portrait) {
+and (min-width: 768px)
+and (max-width:1023px)
+and (orientation: landscape) {
 
     /* Images - 1024x600 58.59%  */
     .header-home-image, .header-detail-image {
-        height: 524px;
+        height: 600px;
     }
-
 }
 
 /*******************************************************************************************************************
@@ -156,7 +141,6 @@ and (min-width: 1024px) {
     /* 1024 wide */
     .content-images, .content-images a   {
         display:grid;
-        /*float:left;*/
         max-width:var(--ipad-width);
         margin:auto;
         justify-content: center;

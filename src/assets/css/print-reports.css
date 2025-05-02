@@ -79,6 +79,7 @@
     used by REP, WISHES, PLAN */
     .print-form-province {
         display:block;
+        float:left;
         width:100%;
         margin:auto;
         font-size: var(--form-main-title);
@@ -89,8 +90,8 @@
     /* USED BY ALL */
     .print-title   {
         display:block;
-        width:100%;
         float:left;
+        width:100%;
     }
 
     /* USED BY ALL */
@@ -163,7 +164,7 @@
         width:90%;
         margin-left:5%;
         margin-right:5%;
-        font-size: var(--form-big-list);
+        font-size: var(--form-list-items);
         padding:.4em 0;
         line-height:120%;
         font-style: italic;
@@ -309,7 +310,7 @@
     }
 
     #headers, .desktop-header, .mobile-header, .header-home-image, .header-detail-image, .content-title, .home-facts-container, .detail-quote,
-    .content-images, .content-dark-copy, .booking-link-grid, .citations-container, .content-dark-list, header-quote,
+    .content-images, .content-copy, .booking-link-grid, .citations-container, .content-list, .header-quote, .header-author,
     .about-us-container, .wizard-intro-container, .consult-menu-block, .charges-grid, .testimonials-grid, #footers  {
         display: none;
     }

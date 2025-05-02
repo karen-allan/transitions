@@ -63,7 +63,7 @@ export class ScreenSubFormDisclaimerComponent implements OnInit {
           .subscribe(newVar => this.validDate = newVar);
 
       if (this.validDate == false) {
-        error = "This is not a valid date."
+        error = "This is not a valid date";
       }
 
     }
@@ -78,7 +78,6 @@ export class ScreenSubFormDisclaimerComponent implements OnInit {
   /* *************************************************************************************************************** */
   closeForm(): void {
     this.errorMessage="";
-    this.client=null;
     this.router.navigate([`/bookConsultation`], { relativeTo: this.route });
   }
 }

@@ -1,0 +1,509 @@
+<div class="header-home-image">
+</div>
+
+<div class="header-quotes">
+    <div class="header-quote">
+        &#8220;{{ quote }}&#8220;
+    </div>
+    <div class="header-author">
+        {{ author }}
+    </div>
+</div>
+
+<div class="content-title">
+    <h1>{{ title.toUpperCase() }}</h1>
+</div>
+
+<div class="laptopForm">
+    <div class="home-facts-container">
+        <div class="facts-inline-image">
+            <img src="assets/images/details/home/backgroundFacts.jpg" alt="Facts about dying" title="Facts about dying">
+        </div>
+
+        <div class="facts-inline-text">
+            <a href="https://www150.statcan.gc.ca/n1/pub/11-630-x/11-630-x2016002-eng.htm" target="_blank">
+                <b>&#x2638;</b>
+                In 1920–1922 life expectancy in Canada for men in was 58.8 years, for women, 60.6 years.<sup>1</sup>
+            </a>
+
+            <a href="https://yourhealthsystem.cihi.ca/hsp/inbrief?lang=en#!/indicators/011/life-expectancy-at-birth/;mapC1;mapLevel2;/"
+               target="_blank">
+                <b>&#x2638;</b>
+                In 2017, life expectancy for men in Canada was 80.0 years, for women, 84.1 years.<sup>2</sup>
+            </a>
+
+            <a href="https://www.ncdemography.org/2014/06/16/mortality-and-cause-of-death-1900-v-2010" target="_blank">
+                <b>&#x2638;</b>
+                In 1900 USA, the top causes of death were pneumonia, flu, tb, gi infections and diphtheria.<sup>3</sup>
+            </a>
+
+            <a href="https://www.encyclopedia.com/education/encyclopedias-almanacs-transcripts-and-maps/funeral-and-memorial-practices"
+               target="_blank">
+                <b>&#x2638;&nbsp;</b>
+                People were cared for by family, dying at home with neighbors and friends paying their respects.<sup>4</sup>
+            </a>
+
+            <a href="https://case.edu/ech/articles/f/funeral-homes-and-funeral-practices" target="_blank">
+                <b>&#x2638;&nbsp;</b>
+                With families moving to cities, funerals/wakes were handed over to the emerging funeral industry.<sup>5</sup>
+            </a>
+
+            <a href="https://www.ncbi.nlm.nih.gov/books/NBK221192/" target="_blank">
+                <b>&#x2638;&nbsp;</b>
+                With advances in hygiene and sanitation, antibiotics and vaccines, people put faith in medicine.<sup>6</sup>
+            </a>
+
+            <a href="https://vanierinstitute.ca/wp-content/uploads/2015/12/CFT_2013-11-00_EN.pdf" target="_blank">
+                <b>&#x2638;&nbsp;</b>
+                In 1930, just 30% of Canadians and Americans died in hospital; by 1994, 77.3% died in hospital.<sup>7</sup>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="mobileForm">
+    <div class="content-images">
+        <img src="assets/images/details/home/backgroundFactsMobile.jpg" alt="Facts about dying" title="Facts about dying">
+    </div>
+
+    <ul class="content-list">
+        <li class="list-item square">
+            <a href="https://www150.statcan.gc.ca/n1/pub/11-630-x/11-630-x2016002-eng.htm" target="_blank">
+                In 1920–1922 life expectancy in Canada for men in was 58.8 years, for women it was 60.6 years.<sup>1</sup>
+            </a>
+        </li>
+
+        <li class="list-item square">
+            <a href="https://yourhealthsystem.cihi.ca/hsp/inbrief?lang=en#!/indicators/011/life-expectancy-at-birth/;mapC1;mapLevel2;/"
+               target="_blank">
+                In 2017, life expectancy for men in Canada was 80.0 years, for women it was 84.1 years.
+                <sup>2</sup>
+            </a>
+        </li>
+
+        <li class="list-item square">
+            <a href="https://www.ncdemography.org/2014/06/16/mortality-and-cause-of-death-1900-v-2010" target="_blank">
+                In 1900 USA, the top causes of death were pneumonia, flu, tuberculosis, gi infections and diphtheria.
+               <sup>3</sup>
+            </a>
+        </li>
+
+        <li class="list-item square">
+            <a href="https://www.encyclopedia.com/education/encyclopedias-almanacs-transcripts-and-maps/funeral-and-memorial-practices"
+               target="_blank">
+                People were cared for by family, dying at home with neighbors and friends visiting to pay their respects.
+               <sup>4</sup>
+            </a>
+        </li>
+
+        <li class="list-item square">
+            <a href="https://case.edu/ech/articles/f/funeral-homes-and-funeral-practices" target="_blank">
+                With families dispersing to cities, funerals/wakes were handed over to the emerging funeral industry.
+                <sup>5</sup>
+            </a>
+        </li>
+
+        <li class="list-item square">
+            <a href="https://sjbpublichealth.org/200-years-public-health-doubled-life-expectancy/" target="_blank">
+                With advances in hygiene and sanitation, antibiotics and vaccines, people put more faith in medicine.
+                <sup>6</sup>
+            </a>
+        </li>
+
+        <li class="list-item square">
+            <a href="https://vanierinstitute.ca/wp-content/uploads/2015/12/CFT_2013-11-00_EN.pdf" target="_blank">
+                In 1930, just 30% of Canadians and Americans died in hospital but by 1994, 77.3% died in hospital.
+                <sup>7</sup>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!-- FOR both screens -->
+<ul class="content-list">
+    <li class="list-item square">
+        <a href="https://caregiversns.org/images/uploads/all/DeathDyingAndCanadianFamiliesVanier.pdf" target="_blank">
+            With strict visiting rules up until 2000, including a ban on children visiting, many patients
+            died alone. <sup>7</sup>
+        </a>
+    </li>
+
+    <li class="list-item square">
+        <a href="https://cagh-acsm.org/sites/default/files/resources/2016/10/elmslie.pdf" target="_blank">
+            While death from accidents and infections have decreased, chronic disease now kills 70% of
+            us. <sup>8</sup>
+        </a>
+    </li>
+
+    <li class="list-item square">
+        <a href="https://healthydebate.ca/2020/07/topic/palliative-training-inadequate-in-meeting-need/" target="_blank">
+            A recent study show that most doctors graduate without even basic competencies in palliative
+            care. <sup>9</sup>
+        </a>
+    </li>
+
+    <li class="list-item square">
+        <a href="https://www.cihi.ca/en/access-to-palliative-care-in-canada" target="_blank">
+            75% of Canadians surveyed said that they want to die at home while in reality only 15% died at
+            home.<sup>10</sup>
+        </a>
+    </li>
+
+    <li class="list-item square">
+        <a href="https://maisonstraphael.org/wp-content/uploads/2016/05/Fact_Sheet_HPC_in_Canada-Spring-2014-Final.pdf"
+           target="_blank">
+            Only 16 to 30% of dying Canadians can access and/or receive hospice, palliative or end-of-life
+            care.<sup>11</sup>
+        </a>
+    </li>
+
+    <li class="list-item square">
+        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2898768/" target="_blank">
+            In 2007 the Canadian government disbanded the Secretariat on Palliative and End-of-Life
+            Care. <sup>12</sup>
+        </a>
+    </li>
+
+    <li class="list-item square">
+        <a href="https://www.canada.ca/en/health-canada/services/home-continuing-care/home-community-care.html"
+           target="_blank">
+            Under the Canada Health Act, home and continuing care are not covered as insurable
+            services.<sup>13</sup>
+        </a>
+    </li>
+
+    <li class="list-item square">
+        <a href="https://nationalseniorsstrategy.ca/the-four-pillars/pillar-4/financial-support-caregivers/" target="_blank">
+            Unpaid Canadian caregivers provided $9 billion of care in 2019, estimating to $27 billion by
+            2050.<sup>14</sup>
+        </a>
+    </li>
+
+    <li class="list-item square">
+        <a href="https://cagh-acsm.org/sites/default/files/resources/2016/10/elmslie.pdf" target="_blank">
+            Chronic disease rates are increasing faster among those aged 35-64 years than those 65 years
+            plus.<sup>8</sup>
+        </a>
+    </li>
+
+    <li class="list-item square">
+        <a href="https://vanierinstitute.ca/wp-content/uploads/2015/12/CFT_2013-11-00_EN.pdf" target="_blank">
+            Almost 60% died in hospitals after receiving “pointless, often stressful measures to prevent
+            death.”<sup>7</sup>
+        </a>
+    </li>
+
+    <li class="list-item square">
+        <a href="https://www.researchgate.net/publication/347838632_Describing_the_end-of-life_doula_role_and_practices_of_care_perspectives_from_four_countries/"
+           target="_blank">
+            Review: End-of-life Doulas offer a promising way to ‘suture’ the division of health and death
+            care.<sup>15</sup>
+        </a>
+    </li>
+
+    <li class="list-item square">
+        <a href="https://www.mcmasteroptimalaging.org/blog/detail/blog/2021/04/07/end-of-life-doulas-providing-care-and-comfort-to-the-dying-and-their-loved-ones"
+           target="_blank">
+            Review: End-of-life carers may represent a new direction for the dying to personalize
+            their care.<sup>16</sup>
+        </a>
+    </li>
+</ul>
+
+
+<div class="content-title">
+    <h2>How do we control our destinies?</h2>
+</div>
+
+<div class="content-copy">
+    <p>
+        After looking at the facts, we have to realize that it is vitally important is to be in charge of your own impending death
+        as
+        much as possible. The fact is 100% of us will die, and of course we would rather not think about it. But this new
+        world is bringing up changes in how we view just about everything. Sexual and gender orientation definitions are changing.
+        Respect
+        for our
+        Indigenous cultures is increasing. Equality for people of color is making huge strides. The prejudice around aging is also
+        being
+        challenged. The way we choose to die is changing as well.
+
+    </p>
+</div>
+
+
+<div class="detail-quotes">
+    <div class="detail-quote">
+        &#8220;Hospitals were never meant to be the place we go when we are dying - it was never meant to be a place where people
+        live out their last days on Earth.&#8221;
+    </div>
+
+    <!--    , surrounded by strangers-->
+    <div class="detail-author">
+        anon
+    </div>
+</div>
+
+<div class="content-copy">
+    <p>
+        Not so long ago, we all died at home, being cared for by our family and neighbors. It was a sad event of course, but it was
+        considered just another part of the life experience. Family cared for the ill and dying and after death, loved ones and
+        people in
+        the community would gather at the home to pay their respects. The viewing allowed people to grieve and more importantly, to
+        bear
+        witness to the deceased. Food, music and celebrations honoring the person would follow. Burial was often in the family plot
+        if
+        they lived in the country or at the local church cemetery if they lived in the city.
+    </p>
+</div>
+
+<div class="content-images">
+    <img src="assets/images/details/home/helpOurselves.jpg" alt="How do we help ourselves?" title="How do we help ourselves?">
+</div>
+
+<div class="content-copy">
+    <p>
+        The handling of death today is often a very different experience. In my work as an energy medicine practitioner and
+        end-of-life
+        consultant I have heard countless stories of frustrated and angry relatives who were unable to provide a graceful death for
+        their
+        loved one. It isn't that the hospitals are failing necessarily, it is that because of the infinite ways in which a person
+        can be
+        'saved' a terminal person can be dragged back to life whether they want to or not.
+    </p>
+</div>
+
+<div class="detail-quotes">
+    <div class="detail-quote">
+        &#8220;It is not the length of life, but the depth.&#8221;
+    </div>
+
+    <div class="detail-author">
+        Ralph Waldo Emerson
+    </div>
+</div>
+
+<div class="content-copy">
+    <p>
+        What it comes down to is - as with taxes and life insurance and all those awful things, planning for your inevitable death
+        is
+        deemed essential by the members of the health care community. They don't like having to be in the position of making life
+        changing decisions on your behalf, especially because, after all, they are strangers.
+    </p>
+</div>
+
+<div class="content-title">
+    <h2>Keeping our integrity</h2>
+</div>
+
+<div class="content-copy">
+    <p>
+        Did you know that most funeral homes are owned by mega-corporations and that cemetery plots are often flipped for profit? Or
+        that a
+        traditional burial or cremation is terrible for the environment? If you spent your life advocating for the working class, or
+        if you
+        care about climate change - doesn't it make sense to make decisions and have an positive impact even after you leave this
+        Earth?
+        <br><br>
+        Planning for your future care is not only essential for the baby boomer generation but is also so important that the
+        Canadian
+        government urges everyone over 19 to make an advance care plan. Accidents happen at any age and taking the time to put
+        together
+        your wishes and beliefs shows compassion for your family who may have to make big decisions on your behalf.
+    </p>
+</div>
+
+<div class="detail-quotes">
+    <div class="detail-quote">
+        &#8220;To live in the hearts we leave behind is not to die.&#8221;
+    </div>
+
+    <div class="detail-author">
+        Thomas Campbell
+    </div>
+</div>
+
+<div class="content-copy">
+    <p>
+        In our rapidly evolving world, we often feel like we have lost control. But we can plan ahead to maintain our integrity, our
+        self-respect, our wisdom and our courage. When it is time for us to go, and our energy transforms into something that no one
+        else
+        can see, prove or disprove, we can take back control of the sacred transition when leaving this Earth for whatever lies
+        ahead.
+    </p>
+</div>
+
+<div class="separator-block-light"></div>
+
+
+<a routerLink="/bookConsultation" style="cursor:pointer; text-decoration:none">
+    <div class="content-images">
+        <img src="assets/images/details/home/bookSessionText.jpg" alt="Book a session" title="Book a session">
+    </div>
+</a>
+
+<!--
+<ul class="content-list yin-yang-big">
+    <div class="content-title">
+        <h2>Death Positive<sup>17</sup></h2>
+    </div>
+    <li class="list-item">
+        We believe that by hiding death and dying behind closed doors we do more harm than good to our society.
+    </li>
+
+    <li class="list-item">
+        We believe that the culture of silence around death should be broken through discussion, gatherings, art, innovation,
+        and
+        scholarship.
+    </li>
+
+    <li class="list-item">
+        We believe that talking about and engaging with your inevitable death is not morbid, but displays a natural curiosity
+        about the
+        human condition.
+    </li>
+
+    <li class="list-item">
+        We believe that the dead body is not dangerous, and that everyone should be empowered (should they wish to be) to be
+        involved in
+        care for their own dead.
+    </li>
+
+    <li class="list-item">
+        We believe that the laws that govern death, dying and end-of-life care should ensure that a person’s wishes are honored,
+        regardless of sexual, gender, racial or religious identity.
+    </li>
+
+    <li class="list-item">
+        We believe that your death should be handled in a way that does not do great harm to the environment.
+    </li>
+
+    <li class="list-item">
+        We believe that your family and friends should know your end-of-life wishes, and that you should have the necessary
+        paperwork to
+        back-up those wishes.
+    </li>
+
+    <li class="list-item">
+        We believe that your open, honest advocacy around death can make a difference, and can change the culture.
+    </li>
+</ul>
+-->
+
+<div class="content-copy">
+    <div *ngIf="sectionSelected === 'triggeredSection1'">
+        <p>
+            <a (click)="this.getTriggeredPromptKey(0)">
+                Close the Citations: &#x25BC;
+            </a>
+        </p>
+    </div>
+
+    <div *ngIf="sectionSelected != 'triggeredSection1'">
+        <p>
+            <a (click)="this.getTriggeredPromptKey(1)">
+                See the Citations: &#x25B6;
+            </a>
+        </p>
+    </div>
+</div>
+
+<div *ngIf="sectionSelected === 'triggeredSection1'">
+    <ul class="content-list">
+        <li class="list-item">
+            <a href="https://www150.statcan.gc.ca/n1/pub/11-630-x/11-630-x2016002-eng.htm" target="_blank">
+                1: Stats Canada: Life expectancy, 1920–1922 to 2009–2011</a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://yourhealthsystem.cihi.ca/hsp/inbrief?lang=en#!/indicators/011/life-expectancy-at-birth/;mapC1;mapLevel2;/"
+               target="_blank">
+                2: Canadian Institute for Health Information: Canada's Life Expectancy at Birth</a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://www.ncdemography.org/2014/06/16/mortality-and-cause-of-death-1900-v-2010" target="_blank">
+                3: Carolina Demography: Mortality and Cause of Death, 1900 v. 2010</a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://www.encyclopedia.com/education/encyclopedias-almanacs-transcripts-and-maps/funeral-and-memorial-practices"
+               target="_blank">
+                4: Encyclopedia.com: Funeral and Memorial Practices</a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://case.edu/ech/articles/f/funeral-homes-and-funeral-practices" target="_blank">
+                5: Case Western Reserve University: Funeral Homes and Funeral Practices.</a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://www.ncbi.nlm.nih.gov/books/NBK221192/" target="_blank">
+                 6. National Library of Medicine: Who will keep the public healthy? </a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://caregiversns.org/images/uploads/all/DeathDyingAndCanadianFamiliesVanier.pdf" target="_blank">
+                <b>  7: Death, Dying and Canadian Families by Dr. Katherine Arnup (page 8/9) </b></a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://cagh-acsm.org/sites/default/files/resources/2016/10/elmslie.pdf" target="_blank">
+                8: Kimberly Elmslie: Director General, Centre for Chronic Disease Prevention</a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://healthydebate.ca/2020/07/topic/palliative-training-inadequate-in-meeting-need/" target="_blank">
+                9. Healthy Debate:Dr. Darren Cargill:Palliative care training ‘woefully inadequate’</a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://www.cihi.ca/en/access-to-palliative-care-in-canada" target="_blank">
+                10: Canadian Institute for Health Information: Access to Palliative Care in Canada</a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://maisonstraphael.org/wp-content/uploads/2016/05/Fact_Sheet_HPC_in_Canada-Spring-2014-Final.pdf"
+               target="_blank">
+                11: Canadian Hospice Palliative Care Association: Fact Sheet</a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2898768/" target="_blank">
+                12. Tracking the evolution of hospice palliative care in Canada</a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://www.canada.ca/en/health-canada/services/home-continuing-care/home-community-care.html"
+               target="_blank">
+                13. Home and community health care</a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://nationalseniorsstrategy.ca/the-four-pillars/pillar-4/financial-support-caregivers/" target="_blank">
+                14: Ensuring Unpaid Caregivers Aren't Unnecessarily Financially Penalized for Caregiving
+            </a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://www.researchgate.net/publication/347838632_Describing_the_end-of-life_doula_role_and_practices_of_care_perspectives_from_four_countries/"
+               target="_blank">
+                15: Describing end-of-life doula role and practices: perspectives from four countries.</a>
+        </li>
+
+        <li class="list-item">
+            <a href="https://www.mcmasteroptimalaging.org/blog/detail/blog/2021/04/07/end-of-life-doulas-providing-care-and-comfort-to-the-dying-and-their-loved-ones"
+               target="_blank">
+                16: McMaster University - Optimal Aging Portal</a>
+        </li>
+
+    <!--    <li class="list-item margin-bottom-1">
+            <a href="https://www.orderofthegooddeath.com/" target="_blank">
+                17: The Order of the Good Death</a>
+        </li>-->
+    </ul>
+</div>
+
+
+
+
+

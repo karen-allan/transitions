@@ -2,7 +2,6 @@
 export interface PathObject {
     id: number;
     parent_name: string;
-    // parent_url?:string;
     child1_name?:string;
     child1_url?:string;
     child2_name?:string;

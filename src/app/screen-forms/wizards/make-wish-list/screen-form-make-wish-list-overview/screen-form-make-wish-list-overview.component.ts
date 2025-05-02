@@ -36,7 +36,7 @@ export class ScreenFormMakeWishListOverviewComponent implements OnInit {
   /* *************************************************************************************************************** */
   ngOnInit(): void {
     this.page = 0;
-  //  this.initializeData();
+   // this.initializeData();
     this.clearData()
     this.getCurrentDate();
 
@@ -44,7 +44,7 @@ export class ScreenFormMakeWishListOverviewComponent implements OnInit {
 
   /* *************************************************************************************************************** */
   initializeData() {
-    this.wishes.client_name="karen gail allan"
+    this.wishes.client_name="glory mogas gonzales allan"
   }
 
   /* *************************************************************************************************************** */

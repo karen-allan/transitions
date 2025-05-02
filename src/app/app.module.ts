@@ -43,22 +43,22 @@ import { GlobalMenuComponent } from './global-menu/global-menu.component';
 /************************************************************* MENU ABOUT *****************************************************************/
 
 /** ABOUT EOL ADVOCACY FOLDER **/
-import { AboutEolAdvocacyContainerComponent } from './menu-about/about-eol-advocacy/about-eol-advocacy-container/about-eol-advocacy-container.component';
-import { AboutEolAdvocacyOverviewComponent } from './menu-about/about-eol-advocacy/about-eol-advocacy-overview/about-eol-advocacy-overview.component';
+import { AboutEolAdvocacyContainerComponent } from './menu-about/support/about-eol-advocacy-container/about-eol-advocacy-container.component';
+import { AboutEolAdvocacyOverviewComponent } from './menu-about/support/about-eol-advocacy-overview/about-eol-advocacy-overview.component';
 
 /** ABOUT PRACTITIONER FOLDER **/
-import { AboutPractitionerContainerComponent } from './menu-about/about-practitioner/about-practitioner-container/about-practitioner-container.component';
-import { AboutPractitionerOverviewComponent } from './menu-about/about-practitioner/about-practitioner-overview/about-practitioner-overview.component';
+import { AboutPractitionerContainerComponent } from './menu-about/us/about-practitioner-container/about-practitioner-container.component';
+import { AboutPractitionerOverviewComponent } from './menu-about/us/about-practitioner-overview/about-practitioner-overview.component';
 
 /************************************************************* MENU CONSULTATIONS  ********************************************************/
 
 /** BOOK CONSULTATION FOLDER **/
-import { BookConsultationContainerComponent } from './menu-consultations/book-consultation/book-consultation-container/book-consultation-container.component';
-import { BookConsultationOverviewComponent } from './menu-consultations/book-consultation/book-consultation-overview/book-consultation-overview.component';
+import { BookConsultationContainerComponent } from './menu-book/consultations/book-consultation-container/book-consultation-container.component';
+import { BookConsultationOverviewComponent } from './menu-book/consultations/book-consultation-overview/book-consultation-overview.component';
 
 /** TESTIMONIALS FOLDER **/
-import { TestimonialsFeesContainerComponent } from './menu-consultations/testimonials-fees/testimonials-fees-container/testimonials-fees-container.component';
-import { TestimonialsFeesOverviewComponent } from './menu-consultations/testimonials-fees/testimonials-fees-overview/testimonials-fees-overview.component';
+import { TestimonialsFeesContainerComponent } from './menu-book/fees/testimonials-fees-container/testimonials-fees-container.component';
+import { TestimonialsFeesOverviewComponent } from './menu-book/fees/testimonials-fees-overview/testimonials-fees-overview.component';
 
 /************************************************************* MENU HOME ******************************************************************/
 

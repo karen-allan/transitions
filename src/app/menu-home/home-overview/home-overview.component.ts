@@ -1,5 +1,9 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import {CITATIONS} from "../../ts-files/citations";
+import {FACTS} from "../../ts-files/facts";
+import {DataService} from "../../service-files/data.service";
+
 
 
 @Component({
@@ -9,11 +13,15 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class HomeOverviewComponent implements OnInit {
 
-   @Input() title:string =''
+    @Input() title:string =''
     @Input() quote='';
     @Input() author='';
 
+    citations = CITATIONS;
+    facts = FACTS;
+
     sectionSelected: string ='';
+  //  factObj: { id: number, text: string} = { id: 0, text: "" };
 
     /* less than 60 */
     metaTitle='End-of-life Support in Shuswap B.C. | End of life Planning'
@@ -22,16 +30,16 @@ export class HomeOverviewComponent implements OnInit {
     metaDesc='Get help with end-of-life planning, know the documents you need to sign. ' +
         'Get patient and caregiver support from Practitioner Karen Allan based in the Shuswap, BC'
 
-    constructor(private titleService: Title, private metaService:Meta) { }
+    constructor(private titleService: Title, private metaService:Meta, private dataService: DataService) { }
 
     ngOnInit(): void {
-      //  alert("metatitle is" + this.metaTitle)
         this.titleService.setTitle(this.metaTitle);
         this.metaService.addTags([
             {name: 'description', content: this.metaDesc},
             {name: 'robots', content: 'index, follow'},
             {name:"viewport", content:"width=device-width,initial-scale=1" }
         ]);
+
     }
 
     /*********************************************************************************/
@@ -43,14 +51,7 @@ export class HomeOverviewComponent implements OnInit {
         if (id == 1) {
             this.sectionSelected = "triggeredSection1"
         }
-     /*   if (id == 2) {
-            this.sectionSelected = "triggeredSection2"
-        }
-        if (id == 3) {
-            this.sectionSelected = "triggeredSection3"
-        }
-        if (id == 4) {
-            this.sectionSelected = "triggeredSection4"
-        }*/
+
     }
+
 }

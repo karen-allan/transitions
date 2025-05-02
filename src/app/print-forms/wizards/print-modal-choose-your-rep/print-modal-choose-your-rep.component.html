@@ -56,7 +56,7 @@
 
         <ng-container *ngIf="rep.client_postal.length > 0 && rep.client_postal != ''">
             <div class="print-inline-value">
-                {{ rep.client_postal }}
+                {{ rep.client_postal | mask: "U0U-0U0"}}
             </div>
         </ng-container>
 
@@ -173,7 +173,7 @@
 
         <ng-container *ngIf="rep.rep_primary_postal.length > 0 && rep.rep_primary_postal != ''">
             <div class="print-inline-value">
-                {{ rep.rep_primary_postal }}
+                {{ rep.rep_primary_postal | mask: "U0U-0U0"}}
             </div>
         </ng-container>
 
@@ -256,7 +256,7 @@
 
         <ng-container *ngIf="rep.rep_alternate_postal.length > 0 && rep.rep_alternate_postal != ''">
             <div class="print-inline-value">
-                {{ rep.rep_alternate_postal }}
+                {{ rep.rep_alternate_postal | mask: "U0U-0U0"}}
             </div>
         </ng-container>
 

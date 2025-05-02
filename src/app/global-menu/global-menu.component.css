@@ -8,7 +8,7 @@ SMALL BANANA PORTRAIT (320), SMALL MOBILE PORTRAIT (360), SMALL TABLET PORTRAIT 
 @media only screen
 
 and (min-width: 320px)
-and (max-width: 800px) {
+and (max-width: 767px) {
 
     .desktop-header {
         display: none;
@@ -16,7 +16,7 @@ and (max-width: 800px) {
 
     .mobile-header {
         display: block;
-        width:var(--media-unaffected-by-content-width);
+        width:var(--media-unaffected-by-ipad-width);
         float:left;
         margin:auto;
     }
@@ -34,9 +34,9 @@ and (max-width: 800px) {
     .mobile-header-content {
         display:inline-grid;
         width:100%;
+        /*height:var(--dialog-header-mobile-height);*/
         grid-template-columns: 1fr 1fr;
         padding-top:1em;
-        /*grid-template-columns: 40% 60%;*/
         align-content: flex-start;
     }
 
@@ -46,13 +46,14 @@ and (max-width: 800px) {
         background-image:url('src/assets/images/menu/transitionsInEnergyLogo.png');
         background-repeat: no-repeat;
         margin:0;
-        height:100px;
+        height:var(--dialog-header-mobile-height);
     }
 
     .header-name {
         justify-content: center;
         text-align: center;
         align-content: center;
+        background: linear-gradient(to right, #6137a8, #9076c1);
     }
 
     .header-name p, .header-name span {
@@ -100,33 +101,33 @@ and (max-width: 800px) {
         text-transform: full-size-kana;
     }
 
-    /* ROW 3 Eden and email links and menu item bars */
+    /* ROW 3 Email links and menu item bars */
     .mobile-menu-items {
         grid-row:3;
         display:inline-grid;
+        grid-template-columns: 5% 45% 45% 5%;
         height:45px;
         width:100%;
         background-color: var(--color-white);
     }
 
-    .mobile-eden-icon, .mobile-email-icon,  .mobile-menu-icon {
+    .mobile-email-icon,  .mobile-menu-icon {
         display:inline-grid;
         align-content: center;
         justify-content: center;
-    }
-
-    .mobile-eden-icon {
-        grid-column:2;
+        cursor: pointer;
     }
 
     .mobile-email-icon {
-        grid-column:3;
+        grid-column:2;
+        justify-content: flex-start;
     }
 
     .mobile-menu-icon {
-        grid-column:4;
-        cursor: pointer;
+        grid-column:3;
+
         background-color: var(--color-white);
+        justify-content: flex-end;
     }
 
     .bar1, .bar2, .bar3 {
@@ -214,7 +215,7 @@ and (max-width: 800px) {
 *******************************************************************************************************************/
 
 @media only screen
-and (min-width:896px)    {
+and (min-width:768px)    {
 
     /* header mobile displays in mobile mode and hides in desktop mode */
     .mobile-header {
@@ -224,7 +225,7 @@ and (min-width:896px)    {
     /* header desktop displays in desktop mode and hides in mobile mode */
     .desktop-header {
         display: block;
-        width:var(--media-unaffected-by-content-width);
+        width:var(--media-unaffected-by-ipad-width);
         float:left;
         margin:auto;
     }
@@ -240,17 +241,20 @@ and (min-width:896px)    {
     .desktop-content {
         display:inline-grid;
         width:100%;
-        grid-template-columns: 20% 30% 28% 22%;
-        /*background-color: red;*/
-        height:120px;
+        grid-template-columns: 20% 30% 40% 10%;
+        height:var(--dialog-header-laptop-height);
         margin: 0 auto;
         align-content: flex-start;
     }
 
-    .header-logo,  .header-name, .header-slogans, .header-socials {
+    .header-logo,  .header-name, .header-slogans {
         display:grid;
-        height:120px;;
+        height:var(--dialog-header-laptop-height);
         align-content: center;
+    }
+
+    .header-slogans {
+        color: #726a6a;
     }
 
     .header-logo {
@@ -271,7 +275,9 @@ and (min-width:896px)    {
         border-left: 1px solid #f1f1f1;
         border-right: 1px solid #f1f1f1;
         justify-content: center;
+        line-height: 200%;
         text-align: center;
+        background: linear-gradient(to right, #423e3e, #6d6464,  #8f8888,  #b5aeae);
     }
 
     .header-slogans {
@@ -299,21 +305,9 @@ and (min-width:896px)    {
 
     .header-socials {
         grid-column: 4;
-        align-content: center;
-        font-family: var(--family-menu-copy);
-    }
-
-    .top-social a, .bottom-social a {
-        display:block;
-        white-space: nowrap;
-        color:var(--color-dark-blue);
-        font-weight:400;
-        text-align: left;
-        text-decoration: none;
-    }
-
-    .bottom-social a  {
-        padding-top: 1em;
+        height:inherit;
+        align-content: flex-end;
+        text-align: center;
     }
 
     /* DESKTOP-MENU-BLOCK - ROW 2 - is the top menu for desktop and is full screen banner-width 1920px */
@@ -352,15 +346,14 @@ and (min-width:896px)    {
     }
 
     .desktop-top-menu-item span {
-        color:var(--color-soft-blue);
+        color:#4b4747;
         cursor:pointer;
     }
 
-    .desktop-top-menu-item span b {
+ /*   .desktop-top-menu-item span b {
         color:#527694;
-        /*var(--color-dark-purple);*/
         cursor:pointer;
-    }
+    }*/
 
     .dropdown-content {
         display: none;
@@ -391,7 +384,8 @@ and (min-width:896px)    {
     }
 
     .dropdown-content a {
-        color: var(--color-dark-blue);
+        color: #4b4747;
+        /*var(--color-dark-blue);*/
     }
 
     .dropdown-content a:hover {
@@ -415,175 +409,60 @@ and (min-width:896px)    {
 }
 
 /*******************************************************************************************************************
-  GLOBAL MOBILES - PORTRAIT
+  GLOBAL MOBILES
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 568px)
-and (orientation: portrait) {
+and (max-width: 767px) {
 
     .header-name p {
-        font-size: var(--header-name-p-small-mobile-port);
+        font-size: var(--header-name-p-mobile);
     }
 
     .header-name span {
-        font-size: var(--header-name-span-small-mobile-port);
+        font-size: var(--header-name-span-mobile);
     }
 
     .header-slogans p, .header-slogans span {
-        font-size: var(--header-slogan-small-mobile-port);
+        font-size: var(--header-slogan-mobile);
         letter-spacing: 0;
     }
 
-    .mobile-menu-items {
-        grid-template-columns: 64% 12% 12% 12%;
-    }
-
     .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
-        font-size: var(--mobile-main-menu-item-mobile);
+        font-size: var(--menu-item-mobile);
     }
 
     .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
-        font-size: var(--mobile-sub-menu-item-mobile);
+        font-size: var(--menu-sub-item-mobile);
     }
 
 }
 
 /*******************************************************************************************************************
-  GLOBAL MOBILES - LANDSCAPE
+ GLOBAL TABLETS
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 320px)
-and (max-width: 568px)
-and (orientation: landscape) {
+and (min-width: 768px)
+and (max-width: 1023px) {
 
     .header-name p {
-        font-size: var(--header-name-p-small-mobile-land);
+        font-size: var(--header-name-p-tablet);
     }
 
     .header-name span {
-        font-size: var(--header-name-span-small-mobile-land);
+        font-size: var(--header-name-span-tablet);
     }
 
     .header-slogans p, .header-slogans span {
-        font-size: var(--header-slogan-small-mobile-land);
-        letter-spacing: 0;
-    }
-
-    .mobile-menu-items {
-        grid-template-columns: 82% 6% 6% 6%;
-    }
-
-    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
-        font-size: var(--mobile-main-menu-item-mobile);
-    }
-
-    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
-        font-size: var(--mobile-sub-menu-item-mobile);
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL TABLETS - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width:600px)
-and (max-width:800px)
-and (orientation: portrait){
-
-    .header-name p {
-        font-size: var(--header-name-p-small-tablet-port);
-
-    }
-
-    .header-name span {
-        font-size: var(--header-name-span-small-tablet-port);
-
-    }
-
-    .header-slogans p, .header-slogans span {
-        font-size: var(--header-slogan-small-tablet-port);
-        letter-spacing: 0;
-    }
-
-    .mobile-menu-items {
-        grid-template-columns: 73% 9% 9% 9%;
-    }
-
-    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
-        font-size: var(--mobile-main-menu-item-mobile);
-    }
-
-    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
-        font-size: var(--mobile-sub-menu-item-mobile);
-    }
-}
-
-/*******************************************************************************************************************
-   GLOBAL SMALL TABLETS - LANDSCAPE INTO LAPTOP MODE NOW
-*******************************************************************************************************************/
-@media only screen
-and (min-width:600px)
-and (max-width:800px)
-and (orientation: landscape){
-
-    .header-name p {
-        font-size: var(--header-name-p-small-tablet-land);
-    }
-
-    .header-name span {
-        font-size: var(--header-name-span-small-tablet-land);
-    }
-
-    .header-slogans p, .header-slogans span {
-        font-size: var(--header-slogan-small-tablet-land);
-        letter-spacing: 0;
-    }
-
-    .mobile-menu-items {
-        grid-template-columns:88% 4% 4% 4%;
-    }
-
-    .mobile-selected-top-menu-item, .mobile-unselected-top-menu-item a {
-        font-size: var(--mobile-main-menu-item-mobile);
-    }
-
-    .mobile-selected-sub-menu-item, .mobile-unselected-sub-menu-item a {
-        font-size: var(--mobile-sub-menu-item-mobile);
-    }
-}
-
-/*******************************************************************************************************************
- GLOBAL BIG TABLETS - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 896px)
-and (max-width: 1023px)
-and (orientation: portrait) {
-
-    .header-name p {
-        font-size: var(--header-name-p-big-tablet-port);
-    }
-
-    .header-name span {
-        font-size: var(--header-name-span-big-tablet-port);
-    }
-
-    .header-slogans p, .header-slogans span {
-        font-size: var(--header-slogan-big-tablet-port);
-    }
-
-    .top-social a, .bottom-social a  {
-        font-size: var(--header-socials-font-size);
+        font-size: var(--header-slogan-tablet);
     }
 
     .desktop-top-menu-item span {
-        font-size: var(--desktop-menu-items-font-size);
+        font-size: var(--menu-items-tablet);
     }
 
     .dropdown-content a, .dropdown-content span {
-        font-size: var(--desktop-sub-menu-items-font-size);
+        font-size: var(--sub-menu-items-tablet);
     }
 }
 
@@ -606,16 +485,12 @@ and (min-width: 1024px) {
         font-size: var(--header-slogan-laptop);
     }
 
-    .top-social a, .bottom-social a  {
-        font-size: var(--header-socials-font-size);
-    }
-
     .desktop-top-menu-item span {
-        font-size: var(--desktop-menu-items-font-size);
+        font-size: var(--menu-items-laptop-);
     }
 
     .dropdown-content a, .dropdown-content span {
-        font-size: var(--desktop-sub-menu-items-font-size);
+        font-size: var(--sub-menu-items-laptop);
     }
 }
 
@@ -628,27 +503,15 @@ and (min-width: 1024px) {
         align-content: center;
     }
 
-    .header-slogans, .header-socials a {
-        color: var(--color-purple);
-    }
-
-    .header-socials a:hover {
-        text-decoration: underline;
-    }
-
     .header-name {
         display:grid;
         grid-column: 2;
         grid-row:1;
         align-content: center;
         font-family:var(--family-menu-name);
-        background: linear-gradient(to right, #5a4087, #938ba2,  #bdb9c5,  #b4adbf);
 
-        /*background: linear-gradient(to right, var(--color-white),  #bdb9c5, var(--color-purple),   var(--color-dark-purple));*/
-        -webkit-background-clip: text;
+       -webkit-background-clip: text;
         color: transparent;
-
-        /*color:#bdb9c5;*/
     }
 
     .header-name p {
@@ -666,10 +529,6 @@ and (min-width: 1024px) {
         font-family:var(--family-menu-copy);
     }
 
-    .header-socials {
-        justify-content: center;
-        font-family:var(--family-menu-copy);
-    }
 }
 
 

@@ -6,33 +6,38 @@
 and (min-width: 320px)
 and (max-width: 1024px) {
 
-    .content-title, .content-dark-copy, .content-light-copy, .content-white-copy, .detail-quotes,
-    .content-list, .content-dark-list, .content-light-list    {
-        width: var(--media-less-than-or-at-ipad-width);
+    .content-title, .content-copy, .detail-quotes, .content-list {
+        width: var(--media-less-than-ipad-width);
         margin-right:5%;
         margin-left:5%;
     }
 
+    .content-list {
+        list-style-position: inside;
+        padding-left: 0;
+    }
+
 }
 
 /*******************************************************************************************************************
-  GLOBAL
+  GLOBAL anything 900 plus space on either side
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 1280px) {
+and (min-width: 1025px) {
 
-    .content-title, .content-dark-copy, .content-light-copy, .content-white-copy, .detail-quotes,
-    .content-list, .content-dark-list, .content-light-list    {
-        width: var(--media-more-than-or-at-ipad-width);
+    .content-title, .content-copy, .detail-quotes, .content-list    {
+        width: var(--media-more-than-ipad-width);
     }
+
+
 }
 
 /*******************************************************************************************************************
-  GLOBAL BANANAS- MOBILES, SMALL TABLETS - under 1024 (ipad) width so need 10% space on either side of content
+  GLOBAL MOBILES, SMALL TABLETS -
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 800px) {
+and (max-width: 767px) {
 
     /* TITLES */
     .content-title h1, .content-title h2, .content-title h3, .content-title h4, .content-title h5 {
@@ -40,17 +45,17 @@ and (max-width: 800px) {
         padding-top:.5em;
     }
 
+    .content-title h2, .content-title h4 {
+        padding-top:1em;
+    }
+
     .content-title h6 {
         padding-top:.5em;
     }
 
     /* COPY */
-    .content-dark-copy, .content-light-copy, .content-white-copy  {
+    .content-copy p, .detail-quote {
         line-height: 150%;
-    }
-
-    .content-white-copy {
-        padding:.5em 0;
     }
 
     .detail-quote {
@@ -70,24 +75,13 @@ and (max-width: 800px) {
         display:none;
     }
 
-    .content-list, .content-dark-list, .content-light-list {
-        padding: .7em 0;
-    }
-
-    .list-item, .list-item a, .green-list-item, .green-list-item a, .blue-list-item, .blue-list-item a, .white-list-item, .white-list-item a  {
-        padding-top:1em;
-    }
-
-    .header-author {
-        padding-bottom:.5em;
-    }
 }
 
 /*******************************************************************************************************************
-  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS (over 900 so don't need to have space on either side of content)
+  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS
 *******************************************************************************************************************/
 @media only screen
-and (min-width:896px) {
+and (min-width:768px) {
 
     /* TITLES */
     .content-title h1, .content-title h2, .content-title h3, .content-title h4, .content-title h5 {
@@ -100,12 +94,8 @@ and (min-width:896px) {
     }
 
     /* COPY */
-    .content-dark-copy, .content-light-copy, .content-white-copy  {
+    .content-copy p {
         line-height: 150%;
-    }
-
-    .content-white-copy {
-        padding:.5em 0;
     }
 
     /* always ensure that detail quotes have text on top and on bottom of them */
@@ -126,335 +116,177 @@ and (min-width:896px) {
         display:block;
     }
 
-    .content-list, .content-dark-list, .content-light-list {
+    .content-list {
         padding: 1em 0;
     }
 
-    .list-item, .green-list-item, .blue-list-item, .white-list-item {
-        /*line-height: 150%;*/
-        padding-top:1em;
-    }
-
-    .header-author {
-        padding-bottom:.5em;
-    }
-
-    .sub-content-list {
-        width:95%;
-        margin:0 0 0 5%;
+    .list-item {
         padding-top:1em;
     }
 
 }
 
 /*******************************************************************************************************************
-  GLOBAL SMALL MOBILES - PORTRAIT
+  GLOBAL MOBILES
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 568px)
-and (orientation: portrait) {
+and (max-width: 767px) {
 
     /* TITLES */
     .content-title h1 {
-        font-size: var(--h1-small-mobile-port);
+        font-size: var(--h1-mobile);
     }
 
     .content-title h2,  .content-light-title h2 {
-        font-size: var(--h2-small-mobile-port);
+        font-size: var(--h2-mobile);
     }
 
-    .content-title h3 {
-        font-size: var(--h3-small-mobile-port);
+    .content-title h3, .content-title h6 a {
+        font-size: var(--h3-mobile);
     }
 
     .content-title h4, .content-title h4 a,  .content-title h5   {
-        font-size: var(--h4-small-mobile-port);
+        font-size: var(--h4-mobile);
     }
 
     /* COPY */
-    .content-dark-copy, .content-light-copy, .content-white-copy {
-        font-size: var(--p-small-mobile-port);
+    .content-copy p {
+        font-size: var(--p-mobile);
     }
 
-    .content-dark-copy span, .content-light-copy span {
-        font-size: var(--span-small-mobile-port);
-    }
-
-    /* HEADER QUOTES */
-    .header-quote {
-        font-size: var(--quote-small-mobile-port-header);
-    }
-
-    .header-author {
-        font-size: var(--author-small-mobile-port-header);
+    .content-copy span {
+        font-size: var(--span-mobile);
     }
 
     /* DETAIL QUOTES */
     .detail-quote  {
-        font-size: var(--quote-small-mobile-port-detail);
+        font-size: var(--quote-mobile);
     }
 
     .detail-author  {
-        font-size: var(--author-small-mobile-port-detail);
+        font-size: var(--author-mobile);
     }
 
     /* LISTS  */
-    .list-item, .green-list-item, .blue-list-item, .white-list-item {
-        font-size: var(--p-small-mobile-port);
-        line-height: 100%;
+    .list-item {
+        font-size: var(--p-mobile);
+
     }
 
 }
 
 /*******************************************************************************************************************
-  GLOBAL SMALL MOBILES - LANDSCAPE
+  GLOBAL MOBILES - PORTRAIT
 *******************************************************************************************************************/
-@media only screen
-and (min-width: 320px)
-and (max-width: 568px)
-and (orientation: landscape) {
+    @media only screen
+    and (min-width: 320px)
+    and (max-width: 767px)
+    and (orientation: portrait) {
 
-    /* TITLES */
-    .content-title h1 {
-        font-size: var(--h1-small-mobile-land);
-    }
-
-    .content-title h2,  .content-light-title h2 {
-        font-size: var(--h2-small-mobile-land);
-    }
-
-    .content-title h3  {
-        font-size: var(--h3-small-mobile-land);
-    }
-
-    .content-title h4, .content-title h4 a,  .content-title h5   {
-        font-size: var(--h4-small-mobile-land);
-    }
-
-    /* COPY */
-    .content-dark-copy, .content-light-copy, .content-white-copy {
-        font-size: var(--p-small-mobile-land);
-    }
-
-    .content-dark-copy span, .content-light-copy span {
-        font-size: var(--span-small-mobile-land);
-    }
-
-    /* HEADER QUOTES */
-    .header-quote {
-        font-size: var(--quote-small-mobile-land-header);
-    }
-
-    .header-author {
-        font-size: var(--author-small-mobile-land-header);
-    }
-
-    /* DETAIL QUOTES */
-    .detail-quote {
-        font-size: var(--quote-small-mobile-land-detail);
-    }
-
-    .detail-author   {
-        font-size: var(--author-small-mobile-land-detail);
-    }
-
-    /* LISTS  */
-    .list-item, .green-list-item, .blue-list-item, .white-list-item {
-        font-size: var(--p-small-mobile-land);
-        line-height: 100%;
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL TABLETS - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 600px)
-and (max-width:  800px)
-and (orientation: portrait) {
-
-    /* TITLES */
-    .content-title h1 {
-        font-size:var(--h1-small-tablet-port);
-    }
-
-    .content-title h2,  .content-light-title h2 {
-        font-size: var(--h2-small-tablet-port);
-    }
-
-    .content-title h3  {
-        font-size: var(--h3-small-tablet-port);
-    }
-
-    .content-title h4, .content-title h4 a,  .content-title h5   {
-        font-size: var(--h4-small-tablet-port);
-    }
-
-    /* COPY */
-    .content-dark-copy, .content-light-copy, .content-white-copy {
-        font-size: var(--p-small-tablet-port);
-    }
-
-    .content-dark-copy span, .content-light-copy span {
-        font-size: var(--span-small-tablet-port);
-    }
-
-    /* HEADER QUOTES */
-    .header-quote {
-        font-size: var(--quote-small-tablet-port-header);
-    }
-
-    .header-author {
-        font-size: var(--author-small-tablet-port-header);
-    }
-
-    /* DETAIL QUOTES */
-    .detail-quote  {
-        font-size: var(--quote-small-tablet-port-detail);
-    }
-
-    .detail-author  {
-        font-size: var(--author-small-tablet-port-detail);
-    }
-
-    /* LISTS  */
-    .list-item, .green-list-item, .blue-list-item, .white-list-item {
-        font-size: var(--p-small-tablet-port);
-        line-height: 110%;
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL TABLETS - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 600px)
-and (max-width:  800px)
-and (orientation: landscape) {
-
-    /* TITLES */
-    .content-title h1 {
-        font-size:var(--h1-small-tablet-land);
-    }
-
-    .content-title h2,  .content-light-title h2 {
-        font-size: var(--h2-small-tablet-land);
-    }
-
-    .content-title h3  {
-        font-size: var(--h3-small-tablet-land);
-    }
-
-    .content-title h4, .content-title h4 a,  .content-title h5   {
-        font-size: var(--h4-small-tablet-land);
-    }
-
-    /* COPY */
-    .content-dark-copy, .content-light-copy, .content-white-copy {
-        font-size: var(--p-small-tablet-land);
-    }
-
-    .content-dark-copy span, .content-light-copy span {
-        font-size: var(--span-small-tablet-land);
-    }
-
-    /* HEADER QUOTES */
-    .header-quote {
-        font-size: var(--quote-small-tablet-land-header);
-    }
-
-    .header-author {
-        font-size: var(--author-small-tablet-land-header);
-    }
-
-    /* DETAIL QUOTES */
-    .detail-quote  {
-        font-size: var(--quote-small-tablet-land-detail);
-    }
-
-    .detail-author  {
-        font-size: var(--author-small-tablet-land-detail);
-    }
-
-    /* LISTS  */
-    .list-item, .green-list-item, .blue-list-item, .white-list-item {
-        font-size: var(--p-small-tablet-land);
-        line-height: 100%;
-    }
-
-}
-
-/*******************************************************************************************************************
- GLOBAL BIG TABLETS - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 896px)
-and (max-width: 1023px)
-and (orientation: portrait) {
-
-    /* TITLES */
-    .content-title h1 {
-        font-size: var(--h1-big-tablet-port);
-    }
-
-    .content-title h2,  .content-light-title h2 {
-        font-size: var(--h2-big-tablet-port);
-    }
-
-    .content-title h3  {
-        font-size: var(--h3-big-tablet-port);
-    }
-
-    .content-title h4, .content-title h4 a,  .content-title h5   {
-        font-size: var(--h4-big-tablet-port);
-    }
-
-    /* COPY */
-    .content-dark-copy, .content-light-copy, .content-white-copy {
-        font-size: var(--p-big-tablet-port);
-    }
-
-    .content-white-copy {
-        line-height: 120%;
-        padding:.5em 0;
-    }
-
-    .content-dark-copy span, .content-light-copy span {
-        font-size: var(--span-big-tablet-port);
+    .list-item {
         line-height: 150%;
+        padding-top:1em;
     }
 
     /* HEADER QUOTES */
     .header-quote {
-        font-size: var(--quote-big-tablet-ipad-port-header);
+        font-size: var(--header-quote-mobile-port);
+        padding:0 .2em;
     }
 
     .header-author {
-        font-size: var(--author-big-tablet-ipad-port-header);
+        font-size: var(--header-author-mobile-port);
+        padding:0 .2em;
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL MOBILES - LANDSCAPE
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 320px)
+and (max-width: 767px)
+and (orientation: landscape) {
+
+    .list-item {
+        line-height: 110%;
+        padding-top:.5em;
+    }
+
+    /* HEADER QUOTES */
+    .header-quote {
+        font-size: var(--header-quote-mobile-land);
+    }
+
+    .header-author {
+        font-size: var(--header-author-mobile-land);
+    }
+}
+
+/*******************************************************************************************************************
+  GLOBAL BIG TABLETS
+*******************************************************************************************************************/
+    @media only screen
+    and (min-width: 768px)
+    and (max-width: 1023px) {
+
+    /* TITLES */
+    .content-title h1 {
+        font-size:var(--h1-tablet);
+    }
+
+    .content-title h2,  .content-light-title h2 {
+        font-size: var(--h2-tablet);
+    }
+
+    .content-title h3, .content-title h6 a {
+        font-size: 2em;
+    }
+    /*var(--h3-big-tablet-port);*/
+
+    .content-title h4, .content-title h4 a,  .content-title h5   {
+        font-size: var(--h4-tablet);
+    }
+
+    /* COPY */
+    .content-copy {
+        font-size: var(--p-tablet);
+    }
+
+    .content-copy span {
+        font-size: var(--span-tablet);
+    }
+
+    /* HEADER QUOTES */
+    .header-quote {
+        font-size: var(--header-quote-tablet-);
+    }
+
+    .header-author {
+        font-size: var(--header-author-tablet-);
     }
 
     /* DETAIL QUOTES */
     .detail-quote  {
-        font-size: var(--quote-big-tablet-ipad-port-detail);
+        font-size: var(--quote-tablet);
     }
 
-    .detail-author   {
-        font-size: var(--author-big-tablet-ipad-port-detail);
+    .detail-author  {
+        font-size: var(--author-tablet);
     }
 
     /* LISTS  */
-    .list-item, .green-list-item, .blue-list-item, .white-list-item {
-        font-size: var(--p-big-tablet-port);
+    .list-item {
+        font-size: var(--p-tablet);
         line-height: 110%;
     }
 
 }
 
 /*******************************************************************************************************************
- GLOBAL IPADS, LAPTOPS
+ GLOBAL IPADS
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 1024px) {
@@ -477,44 +309,39 @@ and (min-width: 1024px) {
     }
 
     /* COPY */
-    .content-dark-copy, .content-light-copy, .content-white-copy {
+    .content-copy p {
         font-size: var(--p-laptop);
     }
 
-    .content-dark-copy, .content-light-copy {
+    .content-copy p {
         line-height: 150%;
     }
 
-    .content-white-copy {
-        line-height: 120%;
-        padding:.5em 0;
-    }
-
-    .content-dark-copy span, .content-light-copy span {
+    .content-copy span {
         font-size: var(--span-laptop);
         line-height: 150%;
     }
 
     /* HEADER QUOTES */
     .header-quote {
-        font-size: var(--quote-laptop-header);
+        font-size: var(--header-quote-laptop);
     }
 
     .header-author {
-        font-size: var(--author-laptop-header);
+        font-size: var(--header-author-laptop);
     }
 
     /* DETAIL QUOTES */
     .detail-quote  {
-        font-size: var(--quote-laptop-detail);
+        font-size: var(--quote-laptop);
     }
 
     .detail-author   {
-        font-size: var(--author-laptop-detail);
+        font-size: var(--author-laptop);
     }
 
     /* LISTS  */
-    .list-item, .green-list-item, .blue-list-item, .white-list-item {
+    .list-item {
         font-size:var(--p-laptop);
         line-height: 115%;
     }
@@ -527,7 +354,7 @@ and (min-width: 1024px) {
 @media only screen {
 
     /* TITLES */
-    .content-title,  .content-dark-copy, .content-light-copy, .content-white-copy,   .header-quotes  {
+    .content-title {
         max-width:var(--ipad-width);
         display:block;
         float:left;
@@ -539,7 +366,7 @@ and (min-width: 1024px) {
         margin:auto;
     }
 
-    .content-title h1, .content-title h2, .content-title h3, .content-title h4   {
+    .content-title h1, .content-title h2, .content-title h3, .content-title h4, .content-title h5   {
         color: var(--color-titles);
     }
 
@@ -549,7 +376,6 @@ and (min-width: 1024px) {
 
     /* ONLY report menu for consultations headings */
     .content-title h5 {
-        color: var(--color-white);
         text-transform: uppercase;
         text-align:center;
     }
@@ -572,128 +398,99 @@ and (min-width: 1024px) {
     }
 
     /* COPY */
-    .content-dark-copy, .content-light-copy, .content-white-copy {
-        /*border:thin solid red;*/
+    .content-copy {
+        max-width:var(--ipad-width);
+        display:block;
+        float:left;
         font-family: var(--family-copy);
     }
 
-    .content-dark-copy p, .content-dark-copy span {
-        display:block;
+    .content-copy p, .content-copy span {
         margin:auto;
-        color: var(--color-dark-blue);
+        color: var(--color-copy-blue);
     }
 
-    .content-dark-copy a, .content-dark-copy p a {
+    .content-copy a, .content-copy p a {
         color: var(--color-hyperlink);
     }
 
-    .content-light-copy p, .content-light-copy p a, .content-light-copy a, .content-light-copy span, .content-white-copy a {
-        color: var(--color-white);
-    }
-
-    .content-dark-copy p a, .content-dark-copy a, .content-light-copy p a, .content-light-copy a, .content-white-copy a {
+    .content-copy p a, .content-copy a {
         cursor: pointer;
         text-decoration: none;
     }
 
-    .content-dark-copy p a:hover, .content-dark-copy a:hover, .content-light-copy p a:hover, .content-light-copy a:hover, .content-white-copy a:hover {
+    .content-copy p a:hover, .content-copy a:hover {
         text-decoration: underline;
     }
 
-    .content-dark-copy span a, .content-light-copy span a {
+    .content-copy span a {
         font-weight: normal;
         cursor: pointer;
     }
 
     /* HEADER QUOTES */
     .header-quotes {
+        max-width:var(--ipad-width);
         display:block;
-        margin:auto;
+        float:left;
+        font-family: var(--family-quotes);
+        font-style: italic;
+        color:white;
+        background-color: black;
+        width:100%;
+        border-top:thick solid gold;
+        border-bottom:thick solid gold;
+        padding:2em 0;
+        text-align: center;
     }
 
     .header-quote, .header-author {
-        font-family: var(--family-quotes);
         font-style: italic;
         font-weight: 400;
-        align-content: flex-end;
         line-height: 100%;
     }
 
-    .header-author {
-        display: block;
-    }
-
-    /* DETAIL QUOTES */
+    /* DETAIL QUOTES float left adds about a 1em top margin */
     .detail-quotes {
-        display:grid;
+        display:block;
+        float:left;
         max-width:var(--ipad-width);
         font-family: var(--family-quotes);
+        text-align: center;
+        padding-bottom:1.0em;
+    }
+
+    .detail-quote, .detail-author   {
+        font-weight: bold;
         font-style: italic;
+        line-height:100%;
         color:var(--color-background-quotes);
-        justify-content: center;
     }
 
-    .detail-quote  {
-        font-weight: bold;
-        text-align: left;
-        line-height:100%;
-    }
-
-    .detail-author {
-        text-align:right;
-        font-weight: bold;
-        padding-right: 1em;
-        line-height:100%;
+    .detail-author   {
+        padding-top:.5em;
     }
 
     /* LISTS  */
-    /* Indented lists */
-    .sub-content-list  {
-        display: block;
-        float:left;
-        max-width: var(--content-width);
-    }
-
-    /* Regular lists - no colors set here */
-    .content-list, .content-dark-list, .content-light-list {
+    .content-list {
         display: block;
         float:left;
         max-width: var(--ipad-width);
-        /*border:thin solid blue;*/
         list-style: none;
     }
 
-    .list-item, .list-item a,
-    .green-list-item, .green-list-item a,
-    .blue-list-item, .blue-list-item a,
-    .white-list-item, .white-list-item a {
+    .list-item, .list-item a {
         font-family: var(--family-copy);
         text-align: left;
+        color:var(--color-green);
     }
 
-    .green-list-item, .green-list-item a {
-        color: #4c7676;
-        /*var(--color-dark-green);*/
-    }
-
-    .blue-list-item, .blue-list-item a {
-        color: var(--color-dark-blue);
-    }
-
-    .list-item, .list-item a {
-        color: var(--color-dark-blue);
-    }
-
-    .white-list-item, .white-list-item a {
-        color: var(--color-white);
-    }
-
-    .list-item a, .green-list-item a, .blue-list-item a, .white-list-item a  {
+    .list-item a  {
         text-decoration: none;
         cursor: pointer;
     }
 
-    .list-item a:hover, .green-list-item a:hover, .blue-list-item a:hover, .white-list-item a:hover  {
+    .list-item a:hover  {
         text-decoration: underline;
     }
 

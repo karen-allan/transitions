@@ -1,86 +1,115 @@
 
 /*******************************************************************************************************************
- GLOBAL NOW WE ARE IN THE MODAL FORMS - ADJUSTED FOR THE WIZARDS TO EXCLUDE OVERLAPPING BIG TABLETS AND IPADS
+FOR BOTH TABLETS AND IPADS AND UP
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 960px) {
-
-    .modal-inner-block-plan {
-        height: 540px;
-        width: 100%;
-        /*background-color: green;*/
-        background-color: white;
-    }
-
-    .modal-data-block-plan {
-        height:520px;
-        width: 90%;
-        margin: 0 5%;
-        /*background-color: gold;*/
-        background-color: white;
-    }
+and (min-width: 768px) {
 
     .modal-plan-main-title {
-        font-size: var(--form-small-main-title);
-        padding-top: 1em;
-        margin-top: 1em;
+        font-size: var(--plan-form-title);
+        padding-top: .5em;
+        margin-top: .5em;
     }
 
     .modal-plan-sub-title {
-        font-size: var(--form-small-sub-title);
-        padding: .8em 0;
-        line-height: 115%;
-    }
-
-    .modal-plan-last-title {
-        font-size: var(--form-last-plan-title);
-        padding: 1em 0;
+        font-size: var(--plan-form-sub-title);
+        padding: .5em 0;
         line-height: 115%;
     }
 
     .modal-plan-copy p {
         padding-top:1em;
-        font-size: var(--form-copy);
+        font-size: var(--plan-form-copy);
         line-height: 150%;
     }
 
     .modal-plan-list-item {
         margin: 0;
         padding: .4em;
-        font-size: var(--form-small-list);
+        font-size: var(--plan-form-list);
         line-height: 105%;
     }
 
     .modal-plan-text-area {
-        font-size: var(--form-copy);
+        font-size: var(--plan-form-copy);
         line-height: 140%;
     }
 
     .modal-plan-radio-conditions-item  {
-        padding: 1em 0;
-        font-size: var(--form-radio);
-        margin-bottom: .7em;
+        padding: .5em 0;
+        font-size: var(--plan-form-radio);
+        /*margin-bottom: .7em;*/
     }
 
     .modal-plan-radio-sedation-item {
         padding: .5em 0;
-        font-size: var(--form-radio);
+        font-size: var(--plan-form-radio);
         border:thin dotted var(--color-soft-blue);
     }
 
     .modal-plan-radio-legal-item {
         padding: .5em 0;
-        font-size: var(--form-radio);
+        font-size: var(--plan-form-radio);
     }
 
     .modal-plan-conditions-checkbox {
         padding: .5em 0;
-        font-size: var(--form-checkbox);
-        /*margin-bottom: .5em;*/
+        font-size: var(--plan-form-checkbox);
+    }
+
+}
+/*******************************************************************************************************************
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 768px)
+and (max-width:1023px) {
+
+    mat-dialog-container#advance-directive-modal {
+        height: 780px;
+        width:768px;
+    }
+
+    .modal-inner-block-plan {
+        height: 500px;
+        width: 100%;
+        background-color: white;
+    }
+
+    .modal-data-block-plan {
+        height:480px;
+        width: 90%;
+        margin: 0 5%;
+        background-color: white;
     }
 
 }
 
+/*******************************************************************************************************************
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1024px) {
+
+    mat-dialog-container#advance-directive-modal {
+        height: 800px;
+        width:1024px;
+    }
+
+    .modal-inner-block-plan {
+        height: 485px;
+        width: 100%;
+        background-color: white;
+    }
+
+    .modal-data-block-plan {
+        height:465px;
+        width: 90%;
+        margin: 0 5%;
+        background-color: white;
+    }
+
+}
 
 /*******************************************************************************************************************
    GLOBAL
@@ -88,10 +117,8 @@ and (min-width: 960px) {
 @media only screen {
 
 /*
-
     .modal-plan-main-title
     .modal-plan-sub-title
-    .modal-plan-last-title
     .modal-plan-conditions-checkbox
     .modal-plan-radio-legal-item
     .modal-plan-radio-conditions-item,
@@ -101,7 +128,7 @@ and (min-width: 960px) {
     .modal-plan-text-area
  */
     .modal-plan-conditions-checkbox, .modal-plan-radio-legal-item, .modal-plan-radio-conditions-item, .modal-radio-sedation-plan-inline,
-    .modal-plan-list-item, .modal-plan-copy, .modal-plan-text-area,   .modal-plan-title h2, .modal-plan-title h3, .modal-plan-title h4  {
+    .modal-plan-list-item, .modal-plan-copy, .modal-plan-text-area {
         width: 100%;
         font-family: var(--family-forms);
         color: var(--color-dark-blue);

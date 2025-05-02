@@ -4,6 +4,8 @@ import {SUB_MENU_ITEMS} from "../ts-files/subMenuItems";
 import {SubMenuItem} from "../ts-files/subMenuItem";
 import {PathObject} from "../ts-files/pathObject";
 import {PATH_OBJECTS} from "../ts-files/pathObjects";
+import {FactObject} from "../ts-files/fact";
+import {FACTS} from "../ts-files/facts";
 
 
 @Injectable({
@@ -57,6 +59,20 @@ export class DataService {
       return of(foundObject);
     }
 
+  // ******************** GET FACT *************************
+ /* getFacts(): Observable<FactObject> {
+    var foundObject = FACTS[0];
+
+    for (var obj of FACTS) {
+      if ((obj.id == id) ) {
+        foundObject = obj;
+      }
+    }
+
+    return of(foundObject);
+  }
+*/
+
   // ******************** GET QUESTION *************************
  /* getQuestion(id: number): Observable<Question> {
     var foundQuestion = QUESTIONS[0];
@@ -83,32 +99,20 @@ export class DataService {
 
   /* *************************************************************************************************************** */
   splitNames(name:string): Observable<string> {
-   // alert("name is " + name);
+
     const resultArray: string[] = name.split(" ");
-    let firstName = "";
-    let middleName = "";
-    let lastName = "";
+    let cappedName:string="";
 
-    //greater than 0 so it has at least 1 so that is first name
-    if (resultArray.length > 0) {
-      firstName = this.capitalizeName(resultArray[0]);
-      name = firstName;
+    for (let arrayNum=0; arrayNum < resultArray.length; arrayNum++) {
+       if (resultArray[arrayNum] != "") {
+         let testName= this.capitalizeName(resultArray[arrayNum]);
+         cappedName = cappedName + " " + testName;
+       }
     }
 
-    //if only 2 elements then first name and last name only
-    if (resultArray.length == 2) {
-      lastName = this.capitalizeName(resultArray[1]);
-      name = firstName + ' ' + lastName;
-    }
+    //alert("name is " + cappedName);
 
-    //if 3  elements then first name, middle name and last name
-    else if ( (resultArray.length > 2) && (resultArray.length < 4) ) {
-      middleName = this.capitalizeName(resultArray[1]);
-      lastName = this.capitalizeName(resultArray[2]);
-      name = firstName + ' ' + middleName + ' ' + lastName;
-    }
-   // alert("name is " + name);
-    return of(name);
+    return of(cappedName);
   }
 
   /* *************************************************************************************************************** */

@@ -18,11 +18,6 @@
                         advice
                         of a health care provider about the possible implications of this Advance Directive, and your choices
                         about the types of health care for which you might give or refuse consent under this Advance Directive.
-                        <br><br>
-                        Note that the effect of this Advance Directive and the giving and refusing of consent under
-                        it is subject to the limitations set out in Sections 19.2 (2), 19.3 (1) and 19.8 of the Health Care (Consent)
-                        and
-                        Care Facility (Admission) Act.
                     </p>
                 </div>
 
@@ -40,26 +35,15 @@
                 </div>
 
                 <div class="modal-plan-sub-title">
-                    Enter your full legal name. Birthdate and PHN are optional. Your full legal address is required.
+                    Please enter your full legal name. Everything else you can fill in later once printed.
                 </div>
-
-                <!-- this is the relative parent to the absolute button rows which must be within it -->
                 <form #adultDirectiveForm="ngForm" novalidate>
-                    <div class="modal-error-message-block">
-                        <ng-container *ngIf="errorMessage">
-                            <div class="modal-error-message">
-                                {{ errorMessage }}
-                            </div>
-                        </ng-container>
-                        <ng-container *ngIf="!errorMessage">
-                            <div class="modal-error-message">&nbsp;</div>
-                        </ng-container>
-                    </div>
+
 
                     <ng-container *ngIf="modal">
                         <div class="modal-seventy-thirty-block">
                             <label class="modal-first-col-label" for="D_name">Full Legal Name of (you) the Adult (required):</label>
-                            <label class="modal-second-col-label" for="D_birth">Birthdate (YYYY/MM/DD):</label>
+                            <label class="modal-second-col-label" for="D_birth">Birthdate:</label>
 
                             <input class="modal-first-col-value" type="text" [(ngModel)]="directive.client_name" id="D_name"
                                    name="DName">
@@ -80,7 +64,7 @@
                             <label class="modal-third-col-label" for="D_phn">PHC Number:</label>
 
                             <input class="modal-first-col-value" type="text" [(ngModel)]="directive.client_postal" id="D_post"
-                                   name="DPost">
+                                   name="DPost" mask="L0L-0L0">
                             <input class="modal-second-col-value" type="text" readonly [(ngModel)]="directive.global_province" id="D_prov"
                                    name="DProv">
                             <input [(ngModel)]="directive.client_phn" type="text" class="modal-third-col-value" id="D_phn"
@@ -93,7 +77,7 @@
                             <label class="modal-first-col-label" for="M_name">Full Legal Name of (you) the Adult (required):</label>
                             <input class="modal-first-col-value" type="text" [(ngModel)]="directive.client_name" id="M_name" name="MName">
 
-                            <label class="modal-first-col-label" for="M_birth">Birthdate:(YYYY/MM/DD):</label>
+                            <label class="modal-first-col-label" for="M_birth">Birthdate:</label>
                             <input [(ngModel)]="directive.client_dob" type="text" class="modal-first-col-value" id="M_birth"
                                    name="MBirth" mask="0000/00/00">
                         </div>
@@ -120,6 +104,18 @@
                                    name="Mphn" mask="0000-000-000">
                         </div>
                     </ng-container>
+
+                    <div class="modal-error-message-block">
+                        <ng-container *ngIf="errorMessage">
+                            <div class="modal-error-message">
+                                {{ errorMessage }}
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="!errorMessage">
+                            <div class="modal-error-message">&nbsp;</div>
+                        </ng-container>
+                    </div>
+
                 </form>
 
                 <div class="modal-three-buttons-row">
@@ -143,11 +139,11 @@
                     <ng-container *ngIf="directive.client_name.length == 0 && directive.client_name == ''">
                         I revoke all previous Advance Directives made by me,
                     </ng-container>
-                </div>
-
-                <div class="modal-plan-sub-title">
+                    <br><br>
                     I know that as a result of making this Advance Directive:
                 </div>
+
+
 
                 <ul class="modal-full-listing-block">
                     <li class="modal-plan-list-item">
@@ -174,14 +170,16 @@
                     YOUR ADVANCE DIRECTIVE DECISIONS:
                 </div>
 
+                <div class="modal-plan-sub-title">
+                    This directive will prompt you to decide what kind of care you would want when faced with serious injury or
+                    illness. It lets you think ahead and provide answers to possible future health issues.
+                </div>
+
                 <div class="modal-plan-copy">
                     <p>
-                        This directive will prompt you to decide what kind of care you would want when faced with serious injury or
-                        illness. It lets you think ahead and provide answers to possible future health issues.
-                        <br><br>
                         Choose <b>SECTION 3: CONDITIONS FOR HEALTH CARE</b> if you think you would
                         want to limit medical interventions (eg: you are diagnosed as terminal).
-                        <br> <br>
+                        <br><br>
                         Choose <b>SECTION 4: HEALTH CARE CONSENT FOR ALL TREATMENTS</b> if you would want all possible medical interventions
                         no matter the consequences.
                     </p>
@@ -364,7 +362,7 @@
                    CONDITIONS FOR HEALTH CARE:
                 </div>
 
-                <div class="modal-plan-last-title">
+                <div class="modal-plan-sub-title">
                     In this Advance Directive, I specifically direct the following regarding palliative care:
                 </div>
                 <form #wizardForm="ngForm" novalidate>
@@ -387,14 +385,14 @@
                         <div class="modal-plan-conditions-checkbox">
                             <input type="radio" [(ngModel)]="directive.die_at_home" value="atHomeYes" id="homeYes" name="location">
                             <label for="homeYes">
-                                3c. I would like to die in my home.
+                                3c. I would prefer to die in my home.
                             </label>
                         </div>
 
                         <div class="modal-plan-conditions-checkbox">
                             <input type="radio" [(ngModel)]="directive.die_at_home" value="atHomeNo" id="homeNo" name="location">
                             <label for="homeNo">
-                                3c. I would like to die in a hospice.
+                                3c. I would prefer to die in a hospice or hospital.
                             </label>
                         </div>
                     </div>
@@ -420,7 +418,7 @@
                 </div>
 
                 <div class="modal-plan-tile">
-                    <h3>I refuse to consent to the following health care:</h3>
+                    I refuse to consent to the following health care:
                 </div>
 
                 <form #wizardForm="ngForm" novalidate>
@@ -699,18 +697,17 @@
 
                 <ul class="modal-full-listing-block">
                     <li class="modal-plan-list-item">
-                        A person who provides personal care, health care or financial services to the adult for compensation, other
+                        A person who provides personal care, health care or financial services to you, other
                         than a lawyer or a notary public;
                     </li>
                     <li class="modal-plan-list-item">
-                        A spouse, child, parent, employee or agent of a person described in paragraph (a);
+                        Your spouse, child, parent, employee or agent.
                     </li>
                     <li class="modal-plan-list-item">
-                        A person who is under 19 years of age
+                        A person who is under 19 years of age.
                     </li>
                     <li class="modal-plan-list-item">
-                        A person who does not understand the communication used by the adult unless the person receives
-                        interpretive assistance.
+                        A person who does not understand your method of communication.
                     </li>
                 </ul>
 
@@ -724,7 +721,7 @@
                     </li>
 
                     <li class="modal-plan-list-item">
-                        Fraud, undue pressure or some form of abuse or neglect was used to induce the Adult to change or revoke the Advance
+                        Fraud or undue pressure was used to induce them to change or revoke their Advance
                         Directive.
                     </li>
                 </ul>
@@ -744,12 +741,12 @@
                 </div>
 
                 <div class="modal-plan-sub-title">
-                    WITNESS 1 must sign in the presence of the Adult and Witness No.2.
+                    WITNESS 1 must sign in the presence of the Adult and Witness No.2 (if applicable).
                 </div>
 
                 <div class="modal-plan-copy ">
                     <p>
-                        <b>Please Note:</b> Only 1 witness is required if Witness No. 1 is a lawyer or a Notary Public, check here:
+                        <b>Check Here:</b> if Witness No. 1 is a lawyer or a Notary Public:
                     </p>
                 </div>
 
@@ -935,7 +932,7 @@
             </ng-container>
 
             <ng-container *ngIf="page === 16">
-                <div class="modal-plan-sub-title">
+                <div class="modal-plan-main-title">
                     <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name !=''">
                         Congratulations, {{ directive.client_name }} you are done!
                     </ng-container>

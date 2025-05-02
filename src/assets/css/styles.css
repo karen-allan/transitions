@@ -32,9 +32,14 @@
     --color-hyperlink: #3c7070;
 
     --color-background-quotes: #c088a4;
-    --color-foreground-quotes: #c088a4;
+    --color-sel-form-menu-item: #9162e4;
 
     --color-dark-green: #264c4c;
+
+    --color-list-green: #4c7676;
+    --color-copy-blue: #738aa0;
+    --color-list-light: #ffffff;
+
     --color-text-background: #264c4c;
 
     --color-brown: #5a3714;
@@ -43,239 +48,141 @@
     /**********************************************************************************************
      CONTENT WIDTHS (leaving space on either side for any content under 900
     ***********************************************************************************************/
-    --media-less-than-or-at-ipad-width: 90%;
-    --media-more-than-or-at-ipad-width: 100%;
-
-
-    --media-less-than-content-width: 90%;
-    --media-more-than-content-width: 100%;
+    --media-less-than-ipad-width: 90%;
     --media-more-than-ipad-width: 100%;
+    --media-unaffected-by-ipad-width: 100%;
 
-    --media-unaffected-by-content-width: 100%;
 
-    --desktop-dialog-width: 1024px;
-    --banana-dialog-header-height: 100px;
-    --mobile-dialog-header-height: 150px;
-    --laptop-dialog-header-height: 150px;
+    --dialog-header-mobile-height: 100px;
+    --dialog-header-laptop-height: 120px;
 
     --print-width: 625px;
-    --list-width: 720px;
     --menu-width: 840px;
-    --content-width: 900px;
-    --wizard-width: 960px;
     --ipad-width: 1024px;
-    --ipad-width-less-border: 1000px;
-    --desktop-width: 1920px;
 
     /**********************************************************************************************
          HEADER FONTS
     ***********************************************************************************************/
-    --family-menu-copy: 'Montserrat';
+    --family-menu-copy: 'Montserrat', 'sans-serif';
+    /*--family-menu-copy: 'Montserrat';*/
     --family-menu-name: 'Tw Cen MT';
 
-    /* mobile menu */
-    --header-name-p-small-mobile-port: 1.8em;
-    --header-name-span-small-mobile-port: 1.0em;
+    /* mobile menu white on blue */
+    --header-name-p-mobile: 1.8em;
+    --header-name-span-mobile: 1.0em;
+    --header-slogan-mobile: .7em;
 
-    --header-name-p-small-mobile-land : 1.9em;
-    --header-name-span-small-mobile-land: 1.1em;
+    --menu-item-mobile : .8em;
+    --menu-sub-item-mobile: .7em;
 
-    --header-name-p-small-tablet-port: 1.5em;
-    --header-name-span-small-tablet-port: 1.1em;
-
-    /* now desktop menu starts */
-    --header-name-p-small-tablet-land: 2.0em;
-    --header-name-span-small-tablet-land: 1.1em;
-
-    --header-name-p-big-tablet-port: 2.2em;
-    --header-name-span-big-tablet-port: 1.3em;
+    /* desktop menu */
+    --header-name-p-tablet: 2.2em;
+    --header-name-span-tablet: 1.3em;
 
     --header-name-p-laptop: 2.7em;
     --header-name-span-laptop: 1.8em;
 
-    /* mobile menu white on blue */
-    --header-slogan-small-mobile-port: .6em;
-    --header-slogan-small-mobile-land: .7em;
-     --header-slogan-small-tablet-port : .8em;
-    --header-slogan-small-tablet-land : .9em;
+    --header-slogan-tablet: 1.1em;
+    --header-slogan-laptop:  1.5em;
 
-    /* now desktop menu starts */
-    --header-slogan-big-tablet-port: .8em;
-    --header-slogan-laptop:  .9em;
+    --menu-items-tablet: 1.0em;
+    --sub-menu-items-tablet: .7em;
 
-    /* socials in mobile are just icons but on desktop are text as well */
-    --header-socials-font-size: .8em;
-
-    /* DESKTOP MENU and SUB-MENU ITEMS  */
-    --desktop-menu-items-font-size: 1.4em;
-    --desktop-sub-menu-items-font-size: .8em;
-
-    /* MOBILE MENU and SUB-MENU ITEMS  */
-    --mobile-main-menu-item-mobile : .8em;
-    --mobile-sub-menu-item-mobile: .7em;
+    --menu-items-laptop-: 1.1em;
+    --sub-menu-items-laptop: .8em;
 
     /**********************************************************************************************
-         COPY FONTS
+         COPY FONTS and DETAIL QUOTES
     ***********************************************************************************************/
     --family-copy: 'Calibri';
+    --family-quotes: 'Goudy Old Style';
 
-    --p-small-mobile-port: .9em;
-    --span-small-mobile-port: .7em;
+    --p-mobile: 1.1em;
+    --span-mobile: .9em;
 
-    --p-small-mobile-land: 1.1em;
-    --span-small-mobile-land: .7em;
-
-    --p-small-tablet-port: 1.1em;
-    --span-small-tablet-port: 0.7em;
-
-    --p-small-tablet-land: 1.2em;
-    --span-small-tablet-land: 0.8em;
-
-    --p-big-tablet-port: 1.2em;
-    --span-big-tablet-port: 0.8em;
-
-    --p-big-tablet-land: 1.4em;
-    --span-big-tablet-land: 1.0em;
-
-    --p-big-tablet-ipad-port: 1.3em;
-    --span-big-tablet-ipad-port: 0.9em;
-
-    --p-big-tablet-ipad-land: 1.5em;
-    --span-big-tablet-ipad-land: 1.1em;
+    --p-tablet: 1.2em;
+    --span-tablet: 0.8em;
 
     --p-laptop: 1.3em;
     --span-laptop: 0.9em;
 
-    --p-desktop: 1.3em;
-    --span-desktop: 0.9em;
+    --quote-mobile: 1.3em;
+    --author-mobile: 0.9em;
 
-    --p-prompt: 1.4em;
+    --quote-tablet: 1.5em;
+    --author-tablet: 1.1em;
+
+    --quote-laptop: 1.7em;
+    --author-laptop: 1.3em;
+
 
 /**********************************************************************************************
         GRID TEXTS are for 2 column grids where we want the text smaller, not used by 1 col mobiles
-        where text can be standard p text
+        or full width text
 ***********************************************************************************************/
 
-    --h3-laptop-grid: 1.8em;
-    --h4-laptop-grid: 1.5em;
-    --p-laptop-grid: 1.1em;
-    --span-laptop-grid: 1em;
+    --h3-tablet-facts-grid: 2.0em;
+    --p-tablet-facts-grid: .8em;
 
-    --h3-tablet-grid: 2.5em;
-    --h4-tablet-grid: 1.1em;
+    --h3-tablet-grid: 2.0em;
     --p-tablet-grid: 1em;
-    --span-tablet-grid: 0.8em;
 
-    /**********************************************************************************************
-         QUOTE FONTS FOR DETAIL PAGES
-         -family-header-quotes: 'Eras Light ITC';
-    ***********************************************************************************************/
-    --family-quotes: 'Goudy Old Style';
+    --h3-laptop-grid: 1.8em;
+    --p-laptop-grid: 1.1em;
 
-    --quote-banana-port-detail: .8em;
-    --author-banana-port-detail: .5em;
-
-    --quote-banana-land-detail: 1.0em;
-    --author-banana-land-detail: 0.7em;
-
-    --quote-small-mobile-port-detail: .9em;
-    --author-small-mobile-port-detail: .6em;
-
-    --quote-small-mobile-land-detail: 1em;
-    --author-small-mobile-land-detail: .7em;
-
-    --quote-small-tablet-port-detail: 1em;
-    --author-small-tablet-port-detail: 0.7em;
-
-    --quote-small-tablet-land-detail: 1.1em;
-    --author-small-tablet-land-detail: 0.8em;
-
-    --quote-big-mobile-port-detail: 1em;
-    --author-big-mobile-port-detail: 0.7em;
-
-    --quote-big-mobile-land-detail: 1.2em;
-    --author-big-mobile-land-detail: 0.9em;
-
-    --quote-big-tablet-ipad-port-detail: 1.3em;
-    --author-big-tablet-ipad-port-detail: 1.0em;
-
-    --quote-big-tablet-ipad-land-detail: 1.4em;
-    --author-big-tablet-ipad-land-detail: 1.1em;
-
-    --quote-laptop-detail: 1.4em;
-    --author-laptop-detail: 1.1em;
 
     /**********************************************************************************************
              QUOTE FONTS FOR HEADER PAGES
     ***********************************************************************************************/
-    --quote-small-mobile-port-header: 1.1em;
-    --author-small-mobile-port-header: .7em;
+    --family-header-quotes: 'Eras Light ITC';
 
-    --quote-small-mobile-land-header: 1.2em;
-    --author-small-mobile-land-header: .8em;
+    --header-quote-mobile-port: 1.1em;
+    --header-author-mobile-port: .7em;
 
-    --quote-small-tablet-port-header: 1.3em;
-    --author-small-tablet-port-header: .9em;
+    --header-quote-mobile-land: 1.6em;
+    --header-author-mobile-land: 1.2em;
 
-    --quote-small-tablet-land-header: 1.4em;
-    --author-small-tablet-land-header: 1em;
+    --header-quote-tablet-: 1.4em;
+    --header-author-tablet-: 1em;
 
-    --quote-big-tablet-ipad-port-header: 1.5em;
-    --author-big-tablet-ipad-port-header: 1.1em;
-
-    --quote-laptop-header: 1.6em;
-    --author-laptop-header: 1.2em;
+    --header-quote-laptop: 1.6em;
+    --header-author-laptop: 1.2em;
 
     /**********************************************************************************************
                  ALL HEADINGS -
     ***********************************************************************************************/
     --family-title: 'Century Gothic';
-    /*'Montserrat';*/
-/*'Microsoft Yi Baiti';
-Montserrat*/
+
+    --h1-mobile: 1.6em;
+    --h2-mobile: 1.4em;
+    --h3-mobile: 1.2em;
+    --h4-mobile: 1.0em;
+
+    --h1-tablet: 1.8em;
+    --h2-tablet: 1.5em;
+    --h3-tablet: 1.4em;
+    --h4-tablet: 1.3em;
+
     --h1-laptop: 2.0em;
     --h2-laptop: 1.7em;
     --h3-laptop: 1.6em;
     --h4-laptop: 1.5em;
-    --h4-sub-laptop: 1.4em;
-
-    --h1-big-tablet-port: 2.2em;
-    --h2-big-tablet-port: 1.8em;
-    --h3-big-tablet-port: 1.6em;
-    --h4-big-tablet-port: 1.5em;
-    --h4-sub-tablet-port: 1.4em;
-
-    --h1-small-tablet-land: 2.1em;
-    --h2-small-tablet-land: 1.7em;
-    --h3-small-tablet-land: 1.5em;
-    --h4-small-tablet-land: 1.4em;
-    --h4-sub-tablet-land: 1.3em;
-
-    --h1-small-tablet-port: 1.9em;
-    --h2-small-tablet-port: 1.5em;
-    --h3-small-tablet-port: 1.3em;
-    --h4-small-tablet-port: 1.2em;
-    --h4-sub-tablet-port: 1.1em;
-
-    --h1-small-mobile-land: 2.1em;
-    --h2-small-mobile-land: 1.7em;
-    --h3-small-mobile-land: 1.5em;
-    --h4-small-mobile-land: 1.4em;
-    --h4-sub-mobile-land: 1.3em;
-
-    --h1-small-mobile-port: 1.8em;
-    --h2-small-mobile-port: 1.4em;
-    --h3-small-mobile-port: 1.2em;
-    --h4-small-mobile-port: 1.1em;
-    --h4-sub-mobile-port: 1.0em;
 
     /**************************************** FOR FORMS****************************************/
-
     --family-forms: 'Sans Serif';
 
     /* FOR SCREEN FORMS */
     /* Consultations */
     /* laptop and big tablets */
+
+    /* Consultations Menu*/
+    --form-mobile-prompt-title: 1.6em;
+    --form-mobile-menu-title: 0.9em;
+    --form-mobile-question:  1.4em;
+    --form-mobile-answer:  0.9em;
+    --form-mobile-copy:  0.9em;
+    --form-mobile-checkbox:0.8em;
+
     --form-laptop-prompt-title: 2em;
     --form-laptop-menu-title: 1.3em;
     --form-laptop-question: 1.8em;
@@ -283,29 +190,39 @@ Montserrat*/
     --form-laptop-label-value: 1.3em;
     --form-laptop-checkbox:1.3em;
 
-    /* small tablet landscape */
-    --form-tablet-prompt-title: 1.9em;
-    --form-tablet-menu-title: 1.2em;
-    --form-tablet-question:  1.7em;
-    --form-tablet-answer:  1.2em;
-    --form-tablet-copy: 1.2em;
-    --form-tablet-checkbox:1.1em;
+    /* FOR SCREEN FORMS */
+    /* Wizards */
 
-     /* small tablet portrait and mobile landscape */
-    --form-big-mobile-prompt-title: 1.7em;
-    --form-big-mobile-menu-title: 1.0em;
-    --form-big-mobile-question:  1.5em;
-    --form-big-mobile-answer:  1.0em;
-    --form-big-mobile-copy: 1.0em;
-    --form-big-mobile-checkbox:0.9em;
+    /* REPS */
+    --rep-form-main-title: 1.4em;
+    --rep-form-sub-title: 1.2em;
+    --rep-form-list: 1.1em;
+    --rep-form-radio: 1.0em;
+    --rep-form-copy:1.2em;
 
-    /* small mobile portrait */
-    --form-small-mobile-prompt-title: 1.6em;
-    --form-small-mobile-menu-title: 0.9em;
-    --form-small-mobile-question:  1.4em;
-    --form-small-mobile-answer:  0.9em;
-    --form-small-mobile-copy:  0.9em;
-    --form-small-mobile-checkbox:0.8em;
+    /* WISHES */
+    --wishes-form-main-title:1.4em;
+    --wishes-form-small-list: 1.1em;
+    --wishes-form-big-list: 1.3em;
+    --wishes-form-prompt-value:1.5em;
+    --wishes-form-question-number:1.6em;
+    --wishes-form-question:1.5em;
+    --wishes-form-big-answers:1.4em;
+    --wishes-form-small-answers:1.1em;
+    --wishes-form-copy: 1.2em;
+
+
+    /* PLANS */
+    --plan-form-title: 1.4em;
+    --plan-form-sub-title: 1.0em;
+    --plan-form-list: 1.2em;
+    --plan-form-checkbox: 1.0em;
+    --plan-form-radio: 0.9em;
+    --plan-form-copy: 1.2em;
+
+    /* GLOBAL WIZ */
+    --form-wizard-label-value: 1.4em;
+    --form-buttons: 1.0em;
 
     /* FOR PRINT FORMS */
     --form-main-title: 1.7em;
@@ -315,39 +232,7 @@ Montserrat*/
     --form-p:1.5em;
     --form-span:1.3em;
     --form-list-items:1.5em;
-
-    /* FOR SCREEN ONLY */
-    /* WIZARDS */
-
-    /* Plans and Reps */
-    --form-radio: 1.1em;
-
-    /* All wizards */
-    --form-copy: 1.2em;
-
-    /* REPS */
-    --form-main-rep-title: 1.7em;
-    --form-sub-rep-title: 1.4em;
-    --form-last-rep-title: 1.3em;
-    --form-list: 1.2em;
-
-    /* WISHES */
-    --form-big-main-title:2.0em;
-    --form-big-sub-title:1.9em;
-    --form-question:1.5em;
-    --form-big-list: 1.3em;
-    --form-big-copy: 1.3em;
-
-    /* PLANS */
-    --form-small-main-title: 1.5em;
-    --form-small-sub-title: 1.2em;
-    --form-small-list: 1.0em;
-    --form-last-plan-title: 1.3em;
-    --form-checkbox: 1.0em;
-
-    /* GLOBAL WIZ */
-    --form-wizard-label-value: 1.4em;
-    --form-buttons: 1.0em;
+    --form-question: 1.6em;
 
     /*******************************************************************************************************************
 
@@ -401,13 +286,13 @@ Montserrat*/
         }
 
         /* <div class= "separator-block-light"></div> */
-        .separator-block-light {
+     /*   .separator-block-light {
             display:block;
             float:left;
             width:100%;
-            height:30px;
-            background: white;
-        }
+            height:5px;
+            background:white
+        }*/
 
         .align-center {
             align-content: center;
@@ -456,10 +341,6 @@ Montserrat*/
 
         .pad-top-none {
             padding-top:0;
-        }
-
-        .dark-green-copy {
-            color:var(--color-dark-green);
         }
 
         .background-blue {

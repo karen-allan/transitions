@@ -8,7 +8,7 @@ and (min-width: 320px)
 and (max-width: 1024px) {
 
     .consult-menu-block, .consult-menu-prompt-block, .sub-form-block {
-        width: var(--media-less-than-or-at-ipad-width);
+        width: var(--media-less-than-ipad-width);
         margin-right:5%!important;
         margin-left:5%!important;
     }
@@ -19,7 +19,7 @@ and (max-width: 1024px) {
   GLOBAL
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 1280px) {
+and (min-width: 1025px) {
 
     .consult-menu-block, .consult-menu-prompt-block, .sub-form-block {
         width:var(--media-more-than-ipad-width);
@@ -33,7 +33,7 @@ REPORTS UNDER 600 IN WIDTH, ALL ONE COLUMN EXCEPT FOR CHECKBOXES
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 800px) {
+and (max-width: 767px) {
 
     .screen-forms-mobile, .screen-forms-both {
         display:block;
@@ -67,13 +67,12 @@ and (max-width: 800px) {
         width:100%;
         padding-left:0;
         text-align: left;
-        /*padding:.5em 0;*/
         font-family: var(--family-title);
     }
 
     .sub-form-full-block p   {
         text-align: justify;
-        padding:0 .5em;
+
     }
 
     .sub-form_three-medical-block, .sub-form-bdate-occup-referred-block,
@@ -105,11 +104,11 @@ and (max-width: 800px) {
 
 /*******************************************************************************************************************
 
-REPORTS OVER 896 IN WIDTH
+REPORTS OVER 768 IN WIDTH
 
 *******************************************************************************************************************/
 @media only screen
-and (min-width:896px)   {
+and (min-width:768px)   {
 
     .screen-forms-mobile {
         display:none;
@@ -127,10 +126,11 @@ and (min-width:896px)   {
 
     /* USERS FORM MENU -  I WOULD LIKE TO DISCUSS: */
     .consult-desktop-menu-heading  {
+        display:block;
+        float:left;
         width:90%;
         padding-left: 10%;
         padding-bottom:.5em;
-        background-color: white;
     }
 
     /* I WOULD LIKE TO DISCUSS */
@@ -142,16 +142,17 @@ and (min-width:896px)   {
 
     /* HOW TO PLAN FOR MY FUTURE etc */
     .consult-desktop-menu-item  {
+        display:block;
+        float:left;
         width:90%;
         padding-left:10%;
         text-align: left;
-        /*padding:.5em 0;*/
         font-family: var(--family-title);
     }
 
     .sub-form-full-block p   {
         text-align: left;
-        padding:0 .5em;
+
     }
 
     .sub-form-two-checkboxes-block {
@@ -205,7 +206,7 @@ and (min-width:896px)   {
         width:100px;
         height:50px;
         border-radius: 1em;
-        font-size:.8em;
+        font-size:1em;
     }
 
 }
@@ -215,210 +216,50 @@ and (min-width:896px)   {
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width: 568px)
-and (orientation: portrait) {
+and (max-width:767px) {
 
     .consult-mobile-menu-heading h3  {
-        font-size: var(--form-small-mobile-prompt-title);
+        font-size: var(--form-mobile-prompt-title);
     }
 
     .consult-mobile-menu-item h4   {
         padding-left: 1em;
-        font-size: var(--form-small-mobile-menu-title);
+        font-size: var(--form-mobile-menu-title);
     }
 
     .consult-menu-prompt-block h5    {
-        font-size: var(--form-small-mobile-menu-title);
+        font-size: var(--form-mobile-menu-title);
     }
 
     /* the questions/prompts*/
     .sub-form-full-block p   {
-        font-size: var(--form-small-mobile-question);
+        font-size: var(--form-mobile-question);
     }
 
     .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
-        font-size: var(--form-small-mobile-answer);
+        font-size: var(--form-mobile-answer);
     }
 
     /* text fields and radio button text all smaller than the prompt p above */
     .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
     .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
-        font-size: var(--form-small-mobile-copy);
+        font-size: var(--form-mobile-copy);
     }
 
     .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--form-small-mobile-checkbox);
+        font-size: var(--form-mobile-checkbox);
     }
 
     .sub-form-text-area  {
-        font-size: var(--form-small-mobile-answer);
+        font-size: var(--form-mobile-answer);
     }
 
     .consult-disclaimer-title h4 {
-        font-size: var(--form-small-mobile-menu-title);
+        font-size: var(--form-mobile-menu-title);
     }
 
     .form-error-message {
-        font-size: var(--form-small-mobile-menu-title);
-    }
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL MOBILES - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 320px)
-and (max-width: 568px)
-and (orientation: landscape) {
-
-    .consult-mobile-menu-heading h3  {
-        font-size: var(--form-big-mobile-prompt-title);
-    }
-
-    .consult-mobile-menu-item h4   {
-        padding-left: 1em;
-        font-size: var(--form-big-mobile-menu-title);
-    }
-
-    .consult-menu-prompt-block h5    {
-        font-size: var(--form-big-mobile-menu-title);
-    }
-
-    /* the questions/prompts*/
-    .sub-form-full-block p   {
-        font-size: var(--form-big-mobile-question);
-    }
-
-    /* text fields and radio button text all smaller than the prompt p above */
-    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
-        font-size: var(--form-big-mobile-copy);
-    }
-
-    .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
-        font-size: var(--form-big-mobile-answer);
-    }
-
-    .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--form-big-mobile-checkbox);
-    }
-
-    .sub-form-text-area  {
-        font-size: var(--form-big-mobile-answer);
-    }
-
-    .consult-disclaimer-title h4 {
-        font-size: var(--form-big-mobile-prompt-title);
-    }
-
-    .form-error-message {
-        font-size: var(--form-big-mobile-prompt-title);
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL TABLETS - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 600px)
-and (max-width:  800px)
-and (orientation: portrait) {
-
-    .consult-mobile-menu-heading h3    {
-        font-size: var(--form-big-mobile-prompt-title);
-    }
-
-    .consult-mobile-menu-item h4 {
-        font-size: var(--form-big-mobile-menu-title);
-    }
-
-    .consult-menu-prompt-block h5    {
-        font-size: var(--form-big-mobile-menu-title);
-    }
-
-    /* the questions/prompts*/
-    /* the questions/prompts*/
-    .sub-form-full-block p   {
-        font-size: var(--form-big-mobile-question);
-    }
-
-    /* text fields and radio button text all smaller than the prompt p above */
-    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
-        font-size: var(--form-big-mobile-copy);
-    }
-
-    .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
-        font-size: var(--form-big-mobile-answer);
-    }
-
-    .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--form-big-mobile-checkbox);
-    }
-
-    .sub-form-text-area  {
-        font-size: var(--form-big-mobile-answer);
-    }
-
-    .consult-disclaimer-title h4 {
-        font-size: var(--form-big-mobile-prompt-title);
-    }
-
-    .form-error-message {
-        font-size: var(--form-big-mobile-prompt-title);
-    }
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL TABLETS - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 600px)
-and (max-width:  800px)
-and (orientation: landscape) {
-
-    .consult-mobile-menu-heading h3  {
-        font-size: var(--form-tablet-prompt-title);
-    }
-
-    .consult-desktop-menu-item h4 {
-        font-size: var(--form-tablet-menu-title);
-    }
-
-    .consult-menu-prompt-block h5    {
-        font-size: var(--form-tablet-menu-title);
-    }
-
-    /* the questions/prompts*/
-    .sub-form-full-block p   {
-        font-size: var(--form-tablet-question);
-    }
-
-    /* text fields and radio button text all smaller than the prompt p above */
-    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
-        font-size: var(--form-tablet-copy);
-    }
-
-    .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
-        font-size: var(--form-tablet-answer);
-    }
-
-    .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--form-tablet-checkbox);
-    }
-
-    .sub-form-text-area  {
-        font-size: var(--form-tablet-answer);
-    }
-
-    .consult-disclaimer-title h4 {
-        font-size: var(--form-tablet-prompt-title);
-    }
-
-    .form-error-message {
-        font-size: var(--form-tablet-prompt-title);
+        font-size: var(--form-mobile-menu-title);
     }
 }
 
@@ -426,9 +267,8 @@ and (orientation: landscape) {
  GLOBAL BIG TABLETS - PORTRAIT
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 896px)
-and (max-width: 1023px)
-and (orientation: portrait) {
+and (min-width: 768px)
+and (max-width:1023px) {
 
     .consult-desktop-menu-heading h3  {
         font-size: var(--form-laptop-prompt-title);
@@ -528,13 +368,12 @@ and (min-width: 1024px) {
         max-width: var(--ipad-width);
         margin:auto;
         padding:1em 0;
-       /* border-top:dashed thin var(--color-grey);
-        border-bottom:dashed thin var(--color-grey);*/
+        border-top:dashed thin var(--color-grey);
     }
 
     .consult-desktop-menu-item h4, .consult-mobile-menu-item h4  {
         cursor: default;
-        color: var(--color-purple);
+        color: var(--color-sel-form-menu-item);
     }
 
     .consult-desktop-menu-item h4 a, .consult-mobile-menu-item h4 a {
@@ -573,7 +412,7 @@ and (min-width: 1024px) {
         ALL SUB FORMs are CONTAINED BY THIS BLOCK */
     .sub-form-block {
         display: block;
-        /*float:left;*/
+        float:left;
         max-width: var(--ipad-width);
         border:solid thin var(--color-grey);
     }
@@ -634,7 +473,8 @@ and (min-width: 1024px) {
     }
 
     .sub-form-full-block {
-        display:grid;
+        display:block;
+        float:left;
         width:100%;
     }
 
@@ -643,8 +483,8 @@ and (min-width: 1024px) {
     }
 
     .sub-form-full-block p {
-        display:block;
-        padding-top: 1em;
+        /*display:block;*/
+        padding: 1em .5em 0 .5em;
         font-family: var(--family-copy);
         font-style: italic;
         color: var(--color-dark-blue);
@@ -652,7 +492,7 @@ and (min-width: 1024px) {
     }
 
     .sub-form-text-area {
-        display: block;
+        /*display: block;*/
         width:100%;
         padding: 1em 0;
         color: var(--color-dark-blue);
@@ -666,8 +506,10 @@ and (min-width: 1024px) {
     
     /* DISCLAIMER */
     .consult-disclaimer-block {
-        color:var(--color-dark-blue);
         display:block;
+        float:left;
+        width:100%;
+        color:var(--color-dark-blue);
         margin:auto;
         max-width: var(--ipad-width);
         font-family:var(--family-forms);
@@ -675,9 +517,9 @@ and (min-width: 1024px) {
 
     /* this works better than content title */
     .consult-disclaimer-title h4  {
-        display:block;
-        float:left;
-        width:100%;
+       /* display:block;
+        float:left;*/
+
         text-align: left;
         padding-top:1em;
         margin:0;
@@ -685,10 +527,11 @@ and (min-width: 1024px) {
     }
 
     .consult-button-container {
+        display:grid;
+        float:left;
         width:98%;
         margin-right:2%;
         justify-content: flex-end;
-        display:grid;
         margin-top:2em;
     }
 
@@ -705,8 +548,8 @@ and (min-width: 1024px) {
     /************************************************** ERROR *******************************************************/
     .form-error-message-block {
         display: block;
-        width: 100%;
         float: left;
+        width: 100%;
         text-align: left;
         background-color: blue;
     }

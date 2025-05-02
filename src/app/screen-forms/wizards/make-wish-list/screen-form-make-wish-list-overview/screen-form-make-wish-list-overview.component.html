@@ -14,6 +14,12 @@
                     <li class="modal-wish-list-item">know your wishes making life easier for your family.</li>
                 </ul>
 
+                <div class="modal-twenty-eighty-block">
+                    <label class="modal-wishes-name-label">Your Name:</label>
+                    <input type="text" class="modal-wishes-name-value" [(ngModel)]="wishes.client_name" id="name"
+                           name="name">
+                </div>
+
                 <div class="modal-error-message-block">
                     <ng-container *ngIf="errorMessage">
                         <div class="modal-error-message">{{ errorMessage }}</div>
@@ -21,12 +27,6 @@
                     <ng-container *ngIf="!errorMessage">
                         <div class="modal-error-message">&nbsp;</div>
                     </ng-container>
-                </div>
-
-                <div class="modal-twenty-eighty-block">
-                    <label class="modal-wishes-name-label"><b>Your Name:</b></label>
-                    <input type="text" class="modal-wishes-name-value" [(ngModel)]="wishes.client_name" id="name"
-                           name="name">
                 </div>
             </form>
 
@@ -66,8 +66,13 @@
         </ng-container>
 
         <ng-container *ngIf="page === 31">
-            <div class="modal-wishes-sub-title">
-                Congratulations, you're done!
+            <div class="modal-wishes-main-title">
+                <ng-container *ngIf="wishes.client_name.length > 0 && wishes.client_name !=''">
+                    Congratulations, {{ wishes.client_name }} you are done!
+                </ng-container>
+                <ng-container *ngIf="wishes.client_name.length == 0 && wishes.client_name ==''">
+                    Congratulations, you are done!
+                </ng-container>
             </div>
 
             <div class="modal-wishes-copy">
@@ -78,9 +83,6 @@
                     This wish list is a great start to let your family know what you truly hope for should you need care in the
                     future or if you need it now. It lets you communicate clearly without pressure from others or awkward
                     conversations.
-                    <br><br>
-                    And remember, you can book a consultation either over zoom or in person for more help on a huge variety of
-                    topics around end-of-life choices and care options.
                 </p>
             </div>
 

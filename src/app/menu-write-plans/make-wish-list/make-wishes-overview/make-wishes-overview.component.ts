@@ -47,8 +47,7 @@ export class MakeWishesOverviewComponent  {
     dialogConfig.disableClose = false;
     dialogConfig.id = "make-wishes-modal";
     dialogConfig.maxWidth='1024px'
-    dialogConfig.minWidth='960px'
-    dialogConfig.height='850px'
+    dialogConfig.minWidth='768px'
 
     /* named and defined in wizard.css */
     let modalDialog = this.matDialog.open(DialogWishListComponent, dialogConfig);

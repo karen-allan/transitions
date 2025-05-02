@@ -161,7 +161,7 @@ export class BookConsultationOverviewComponent implements OnInit {
 
     this.client.eolFrailty="frailtyChart-1"
 
-    this.client.eolPlanFocus0=false;
+    this.client.eolPlanFocus0=true;
     this.client.eolPlanFocus1=false;
     this.client.eolPlanFocus2=false;
     this.client.eolPlanFocus3=false;
@@ -173,7 +173,7 @@ export class BookConsultationOverviewComponent implements OnInit {
     this.client.eolPlanFocus9=false;
     this.client.eolPlanDetails=""
 
-    this.client.eolPatientFocus0 = false;
+    this.client.eolPatientFocus0 = true;
     this.client.eolPatientFocus1 = false;
     this.client.eolPatientFocus2 = false;
     this.client.eolPatientFocus3 = false;
@@ -187,7 +187,7 @@ export class BookConsultationOverviewComponent implements OnInit {
     this.client.eolPatientFocus11 = false;
     this.client.eolPatientDetails=""
 
-    this.client.eolCaregiverFocus0=false;
+    this.client.eolCaregiverFocus0=true;
     this.client.eolCaregiverFocus1=false;
     this.client.eolCaregiverFocus2=false;
     this.client.eolCaregiverFocus3=false;

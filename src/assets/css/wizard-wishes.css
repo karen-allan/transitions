@@ -1,70 +1,121 @@
 
 /*******************************************************************************************************************
- GLOBAL NOW WE ARE IN THE MODAL FORMS - ADJUSTED FOR THE WIZARDS TO EXCLUDE OVERLAPPING BIG TABLETS AND IPADS
+FOR BOTH TABLETS AND IPADS AND UP
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 960px) {
-
-    .modal-inner-block-wishes {
-        height: 540px;
-        width: 100%;
-        background-color: white;
-    }
-
-    .modal-data-block-wishes {
-        height:500px;
-        width: 90%;
-        margin: 0 5%;
-        background-color: white;
-    }
+and (min-width: 768px) {
 
     .modal-wishes-main-title  {
         padding-top:1em;
-        font-size: var(--form-big-main-title);
+        font-size: var(--wishes-form-main-title);
     }
 
     .modal-wish-list-item {
         margin-top: 1em;
-        padding-top: .5em;
-        font-size: var(--form-big-list);
+        padding-top: .2em;
+        /*font-size: var(--wishes-form-list);*/
         line-height: 110%;
     }
 
     .modal-wishes-name-label {
-        font-size: var(--form-big-sub-title);
+        font-size: var(--wishes-form-prompt-value);
+        margin-top:3em;
     }
 
     .modal-wishes-name-value {
-        font-size:var(--form-big-sub-title);
+        font-size:var(--wishes-form-prompt-value);
+        margin-top:2em;
+        padding:.4em 0;
     }
 
     .modal-wishes-question-prompt {
-        font-size: var(--form-big-main-title);
-        padding: 1em 0;
+        font-size: var(--wishes-form-question-number);
+        padding: .5em 0;
     }
 
     .modal-wishes-question {
-        font-size: var(--form-question);
+        font-size: var(--wishes-form-question);
         padding: 1em 0;
         line-height: 105%;
     }
 
     .modal-wishes-radio-answers {
         grid-column: 1;
-        font-size: var(--form-big-list);
         padding: 1em 0;
         line-height: 110%;
     }
 
-    .modal-wishes-sub-title  {
-        padding-top:1em;
-        font-size: var(--form-big-sub-title);
-    }
-
     .modal-wishes-copy p {
         padding-top:2em;
-        font-size: var(--form-copy);
+        font-size: var(--wishes-form-copy);
         line-height: 150%;
+    }
+}
+/*******************************************************************************************************************
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 768px)
+and (max-width:1023px) {
+
+    mat-dialog-container#make-wishes-modal {
+        height: 700px;
+        width:768px;
+    }
+
+    .modal-inner-block-wishes {
+        height: 420px;
+        width: 100%;
+        background-color: white;
+    }
+
+    .modal-data-block-wishes {
+        height:400px;
+        width: 90%;
+        margin: 0 5%;
+        background-color: white;
+    }
+
+    .modal-wish-list-item {
+        font-size: var(--wishes-form-small-list);
+    }
+
+    .modal-wishes-radio-answers {
+        font-size: var(--wishes-form-small-answers);
+    }
+
+}
+
+/*******************************************************************************************************************
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 1024px) {
+
+    mat-dialog-container#make-wishes-modal {
+        height: 770px;
+        width:1024px;
+    }
+
+    .modal-inner-block-wishes {
+        height: 460px;
+        width: 100%;
+        background-color: white;
+    }
+
+    .modal-data-block-wishes {
+        height:440px;
+        width: 90%;
+        margin: 0 5%;
+        background-color: white;
+    }
+
+    .modal-wish-list-item {
+        font-size: var(--wishes-form-big-list);
+    }
+
+    .modal-wishes-radio-answers {
+        font-size: var(--wishes-form-big-answers);
     }
 
 }
@@ -131,13 +182,10 @@ and (min-width: 960px) {
 
     .modal-wishes-name-label {
         grid-column: 1;
-        margin-top:1em;
     }
 
     .modal-wishes-name-value {
         grid-column: 2;
-        padding-top:.4em;
-        margin-top:.2em;
     }
 
 }

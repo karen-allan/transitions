@@ -55,7 +55,7 @@
 
         <ng-container *ngIf="directive.client_postal.length > 0 && directive.client_postal != ''">
             <div class="print-inline-value">
-                {{ directive.client_postal }}
+                {{ directive.client_postal | mask: "U0U-0U0"}}
             </div>
         </ng-container>
 
@@ -68,20 +68,19 @@
         <h2>in the Province of British Columbia</h2>
     </div>
 
-
     <div class="print-title">
         <h2>PERSONAL INFORMATION:</h2>
     </div>
 
     <ng-container *ngIf="directive.client_dob.length > 0 && directive.client_dob != '' ">
         <div class="print-form-text-block">
-            <p>Birthdate: {{ directive.client_dob }}</p>
+            <p>Birthdate: {{ directive.client_dob}}</p>
         </div>
     </ng-container>
 
     <ng-container *ngIf="directive.client_phn.length > 0 && directive.client_phn != ''">
         <div class="print-form-text-block">
-            <p>Personal Care Number: {{ directive.client_phn }}</p>
+            <p>Personal Care Number: {{ directive.client_phn | mask: '000-000-000' }}</p>
         </div>
     </ng-container>
 
@@ -111,30 +110,13 @@
 
     <ul class="print-form-list-block">
         <li class="print-form-list-item">
-            a.) I will not be provided with any health care for which I refuse consent in this Advance Directive, and
+            I will not be provided with any health care for which I refuse consent in this Advance Directive, and
         </li>
         <li class="print-form-list-item">
-            b.) No one will be chosen to make decisions on my behalf in respect of any health care matters for which I give or
+            No one will be chosen to make decisions on my behalf in respect of any health care matters for which I give or
             refuse consent in this Advance Directive.
         </li>
     </ul>
-
-    <!--  <ng-container *ngIf='directive.choose_section === "chooseSection3"'>
-          <div class="print-title">
-              <h4>Your directive is based on your selection of answers you gave under Section 3. You can re-run this wizard as many times as
-                  you like, try switching to Section 4 to see all questions provided under Section 4.
-              </h4>
-          </div>
-      </ng-container>
-
-      <ng-container *ngIf='directive.choose_section === "chooseSection4"'>
-          <div class="print-title">
-              <h4>Your directive is based on your selection of answers you gave under Section 4. You can re-run this wizard as many times as
-                  you like, try switching to Section 3 to see all questions provided under Section 3.
-              </h4>
-          </div>
-      </ng-container>
-  -->
 
     <ng-container *ngIf='directive.choose_section === "chooseSection3"'>
         <div class="print-title">
@@ -143,20 +125,20 @@
 
         <div class="print-form-text-block">
             <p>
-                3.0. If I am sedated and unable to communicate, I would like the sedation lifted so that I can
+                If I am sedated and unable to communicate, I would like the sedation lifted so that I can
                 rationally consider my situation and decide for myself to accept or refuse a particular therapy:
             </p>
         </div>
 
         <ng-container *ngIf='directive.lift_sedation === "liftSedationYes"'>
             <ul class="print-form-list-block">
-                <li class="print-form-list-item">3.0a. Yes, lift my sedation.</li>
+                <li class="print-form-list-item">Yes, lift my sedation.</li>
             </ul>
         </ng-container>
 
         <ng-container *ngIf='directive.lift_sedation === "liftSedationNo"'>
             <ul class="print-form-list-block">
-                <li class="print-form-list-item">3.0b. No, do not lift my sedation.</li>
+                <li class="print-form-list-item">No, do not lift my sedation.</li>
             </ul>
         </ng-container>
 
@@ -165,7 +147,7 @@
         <ng-container *ngIf="directive.conditions1a || directive.conditions1b || directive.conditions1c">
             <div class="print-form-text-block">
                 <p>
-                    3.1. I direct that I receive only such care as will keep me comfortable and
+                    I direct that I receive only such care as will keep me comfortable and
                     pain free, and that my dying not be prolonged should any of the following circumstances occur:
                 </p>
             </div>
@@ -174,7 +156,7 @@
             <ng-container *ngIf="directive.conditions1a">
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3.1a. An acute life-threatening illness of an irreversible nature.
+                        An acute life-threatening illness of an irreversible nature.
                     </li>
                 </ul>
             </ng-container>
@@ -182,7 +164,7 @@
             <ng-container *ngIf="directive.conditions1b">
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3.1b. Chronic debilitating suffering of a permanent nature.
+                        Chronic debilitating suffering of a permanent nature.
                     </li>
                 </ul>
             </ng-container>
@@ -190,7 +172,7 @@
             <ng-container *ngIf="directive.conditions1c">
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3.1c. Advanced dementia.
+                        Advanced dementia.
                     </li>
                 </ul>
             </ng-container>
@@ -202,7 +184,7 @@
             directive.refusals2d || directive.refusals2e || directive.refusals2f || directive.refusals2g ">
             <div class="print-form-text-block">
                 <p>
-                    3.2. I direct that I receive only such care as will keep me comfortable and
+                    I direct that I receive only such care as will keep me comfortable and
                     pain free, and that my dying not be prolonged should any of the following circumstances occur:
                 </p>
             </div>
@@ -210,7 +192,7 @@
             <ng-container *ngIf="directive.refusals2a">
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3.2a. Electrical, mechanical or other artificial stimulation of my heart.
+                        Electrical, mechanical or other artificial stimulation of my heart.
                     </li>
                 </ul>
             </ng-container>
@@ -218,7 +200,7 @@
             <ng-container *ngIf="directive.refusals2b">
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3.2b. Respirator or ventilator.
+                        Respirator or ventilator.
                     </li>
                 </ul>
             </ng-container>
@@ -226,7 +208,7 @@
             <ng-container *ngIf="directive.refusals2c">
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3.2c. Artificial feeding e.g. G tube, NG tube, or central intravenous line.
+                        Artificial feeding e.g. G tube, NG tube, or central intravenous line.
                     </li>
                 </ul>
             </ng-container>
@@ -234,7 +216,7 @@
             <ng-container *ngIf="directive.refusals2d">
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3.2d. Being fed should I no longer be able to feed myself.
+                        Being fed should I no longer be able to feed myself.
                     </li>
                 </ul>
             </ng-container>
@@ -242,7 +224,7 @@
             <ng-container *ngIf="directive.refusals2e">
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3.2e. Artificial hydration by intravenous line.
+                        Artificial hydration by intravenous line.
                     </li>
                 </ul>
             </ng-container>
@@ -250,7 +232,7 @@
             <ng-container *ngIf="directive.refusals2f">
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3.2f. Antibiotics.
+                        Antibiotics.
                     </li>
                 </ul>
             </ng-container>
@@ -258,7 +240,7 @@
             <ng-container *ngIf="directive.refusals2g">
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3.2g. Transfer to an intensive care unit or similar facility.
+                        Transfer to an intensive care unit or similar facility.
                     </li>
                 </ul>
             </ng-container>
@@ -269,14 +251,14 @@
         <ng-container *ngIf="directive.palliative3a || directive.palliative3b">
             <div class="print-form-text-block">
                 <p>
-                    3.1. In this Advance Directive, I specifically direct the following regarding palliative care:
+                    In this Advance Directive, I specifically direct the following regarding palliative care:
                 </p>
             </div>
 
             <ng-container *ngIf="directive.palliative3a">
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3a. Provide necessary medication to control my pain and symptoms even if such
+                        Provide necessary medication to control my pain and symptoms even if such
                         medication might shorten my life.
                     </li>
                 </ul>
@@ -285,7 +267,7 @@
             <ng-container *ngIf="directive.palliative3b">
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3b. Provide me with palliative care.
+                        Provide me with palliative care.
                     </li>
                 </ul>
             </ng-container>
@@ -293,7 +275,7 @@
             <ng-container *ngIf='directive.die_at_home === "atHomeYes"'>
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3.3c. I would like to die in my home.
+                        I would like to die in my home.
                     </li>
                 </ul>
             </ng-container>
@@ -301,7 +283,7 @@
             <ng-container *ngIf='directive.die_at_home === "atHomeNo"'>
                 <ul class="print-form-list-block">
                     <li class="print-form-list-item">
-                        3.3c. I would like to die in a hospice.
+                        I would like to die in a hospice.
                     </li>
                 </ul>
             </ng-container>
@@ -338,12 +320,10 @@
                 <div class="black-full-line"></div>
             </ng-container>
             <ng-container *ngIf="directive.consent_given_notes.length == 0 && directive.consent_given_notes == ''">
-                <!--                <div class="print-instructions">-->
                 <div class="black-full-line"></div>
                 <div class="black-full-line"></div>
                 <div class="black-full-line"></div>
                 <div class="black-full-line"></div>
-                <!--                </div>-->
             </ng-container>
         </div>
     </ng-container>
@@ -353,7 +333,7 @@
             <h2>YOUR DIRECTIVES REGARDING MAID (Medically Assisted Death):</h2>
         </div>
         <div class="print-form-text-block">
-            <p>3d. I would like to provide my requests regarding MAID (Medically Assisted Death).</p>
+            <p>I would like to provide my requests regarding MAID (Medically Assisted Death).</p>
         </div>
 
         <div class="print-form-instructions">
@@ -362,12 +342,10 @@
                 <div class="black-full-line"></div>
             </ng-container>
             <ng-container *ngIf="directive.consent_maid_notes.length == 0 && directive.consent_maid_notes == ''">
-                <!--                <div class="print-instructions">-->
                 <div class="black-full-line"></div>
                 <div class="black-full-line"></div>
                 <div class="black-full-line"></div>
                 <div class="black-full-line"></div>
-                <!--                </div>-->
             </ng-container>
         </div>
     </ng-container>
@@ -565,6 +543,22 @@
 
     <div class="print-inline-label-value">
         <div class="print-inline-label">
+            Postal Code:
+        </div>
+
+        <ng-container *ngIf="directive.witness_one_postal.length > 0 && directive.witness_one_postal != ''">
+            <div class="print-inline-value">
+                {{ directive.witness_one_postal | mask: "U0U-0U0"}}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="directive.witness_one_postal.length == 0 && directive.witness_one_postal == ''">
+            <div class="print-inline-line"></div>
+        </ng-container>
+    </div>
+
+    <div class="print-inline-label-value">
+        <div class="print-inline-label">
             Signature:
         </div>
         <div class="print-inline-line"></div>
@@ -645,6 +639,22 @@
         </ng-container>
 
         <ng-container *ngIf="directive.witness_two_province.length == 0 && directive.witness_two_province  == '' ">
+            <div class="print-inline-line"></div>
+        </ng-container>
+    </div>
+
+    <div class="print-inline-label-value">
+        <div class="print-inline-label">
+            Postal Code:
+        </div>
+
+        <ng-container *ngIf="directive.witness_two_postal.length > 0 && directive.witness_two_postal != ''">
+            <div class="print-inline-value">
+                {{ directive.witness_two_postal | mask: "U0U-0U0"}}
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="directive.witness_two_postal.length == 0 && directive.witness_two_postal == ''">
             <div class="print-inline-line"></div>
         </ng-container>
     </div>

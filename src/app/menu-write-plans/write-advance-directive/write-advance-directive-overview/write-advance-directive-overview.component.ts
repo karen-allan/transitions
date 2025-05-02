@@ -32,7 +32,7 @@ export class WriteAdvanceDirectiveOverviewComponent {
 
   /*********************************************************************************/
   ngOnInit(): void {
-//alert("metatitle is" + this.metaTitle)
+
     this.titleService.setTitle(this.metaTitle);
     this.metaService.addTags([
       {name: 'description', content: this.metaDesc},
@@ -48,8 +48,7 @@ export class WriteAdvanceDirectiveOverviewComponent {
     dialogConfig.disableClose = false;
     dialogConfig.id = "advance-directive-modal";
     dialogConfig.maxWidth='1024px'
-    dialogConfig.minWidth='960px'
-    dialogConfig.height='870px'
+    dialogConfig.minWidth='768px'
 
     let modalDialog = this.matDialog.open(DialogDirectiveComponent, dialogConfig);
 
