@@ -4,17 +4,13 @@ import {SUB_MENU_ITEMS} from "../ts-files/subMenuItems";
 import {SubMenuItem} from "../ts-files/subMenuItem";
 import {PathObject} from "../ts-files/pathObject";
 import {PATH_OBJECTS} from "../ts-files/pathObjects";
-import {FactObject} from "../ts-files/fact";
-import {FACTS} from "../ts-files/facts";
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-
-  //selectedQuestion = Question;
- // provinces = PROVINCES;
 
   invokeFirstComponentFunction=new EventEmitter();
   subsVar:Subscription

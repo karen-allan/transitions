@@ -176,7 +176,7 @@ and (min-width: 768px) {
     }
 
     .facts-list-item:first-child {
-        padding-top:0em;
+        padding-top:0;
     }
 
     .facts-list-item a {

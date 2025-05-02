@@ -2,9 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import {CITATIONS} from "../../ts-files/citations";
 import {FACTS} from "../../ts-files/facts";
-import {DataService} from "../../service-files/data.service";
-
-
 
 @Component({
   selector: 'app-home-overview',
@@ -30,7 +27,7 @@ export class HomeOverviewComponent implements OnInit {
     metaDesc='Get help with end-of-life planning, know the documents you need to sign. ' +
         'Get patient and caregiver support from Practitioner Karen Allan based in the Shuswap, BC'
 
-    constructor(private titleService: Title, private metaService:Meta, private dataService: DataService) { }
+    constructor(private titleService: Title, private metaService:Meta) { }
 
     ngOnInit(): void {
         this.titleService.setTitle(this.metaTitle);

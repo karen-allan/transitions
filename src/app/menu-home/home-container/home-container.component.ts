@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FactObject} from "../../ts-files/fact";
-import {FACTS} from "../../ts-files/facts";
-import {DataService} from "../../service-files/data.service";
+
 
 @Component({
   selector: 'app-home-container',

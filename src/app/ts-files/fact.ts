@@ -1,5 +1,3 @@
-import {CitationObject} from "./citation";
-
 
 export interface FactObject {
     id:number;
@@ -7,5 +5,4 @@ export interface FactObject {
     url:string;
     citation:string;
     sup:number;
-    // citation:CitationObject;
 }

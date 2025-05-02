@@ -1,6 +1,6 @@
 import {Component, Input, Output} from '@angular/core';
 import {Client} from "../../../../ts-files/client";
-import {DataService} from "../../../../service-files/data.service";
+
 
 @Component({
   selector: 'app-screen-sub-form-demographic',
