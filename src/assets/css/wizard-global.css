@@ -3,13 +3,16 @@
   GLOBAL MODAL FORMS
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 768px) {
+and (min-width:360px)
+and (max-width:767px) {
     /************************************************** WIZARD DIALOG HEADERS *************************************/
     .wizard-modal-header {
         display: inline-grid;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 25% 75%;
         width: 100%;
         margin:0;
+        border-top:thin solid var(--color-dark-blue);
+        border-bottom:thin solid var(--color-dark-blue);
         background-color: white;
         align-content: center;
     }
@@ -32,7 +35,7 @@ and (min-width: 768px) {
         font-family: var(--family-copy);
         text-align: left;
         line-height:120%;
-        font-size:2em;
+        font-size:1.3em;
     }
 
     .wizard-modal-logo img {
@@ -185,8 +188,8 @@ and (min-width: 768px) {
         justify-content: flex-end;
         position: absolute;
         bottom: 0;
-        grid-template-columns: repeat(2, 100px);
-        grid-column-gap: 10px;
+        grid-template-columns: repeat(2, 70px);
+        grid-column-gap: 2px;
     }
 
     .modal-three-buttons-row {
@@ -209,8 +212,8 @@ and (min-width: 768px) {
         text-align: center;
         align-content: center;
         font-size: var(--form-buttons);
-        width: 100px;
-        height: 50px;
+        width: 70px;
+        height: 40px;
     }
 
     .modal-start-button, .modal-next-button, .modal-print-button {

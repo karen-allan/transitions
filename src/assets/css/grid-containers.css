@@ -3,7 +3,7 @@
   GLOBAL  content is now 1024 so there must be space on either side up to it
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 320px)
+and (min-width: 360px)
 and (max-width: 1024px) {
 
     .home-facts-container, .wizard-intro-container, .charges-grid, .testimonials-grid  {
@@ -35,7 +35,7 @@ and (min-width: 1025px) {
 
 /********************************************************************************************************************/
 @media only screen
-and (min-width: 320px)
+and (min-width: 360px)
 and (max-width: 767px) {
 
     /* HOME PAGE FACTS */
@@ -131,6 +131,42 @@ and (max-width: 767px) {
 
     .bevelled-edges {
         width:80%;
+    }
+
+    /* HOME FACTS
+  .facts-inline-text a {
+      Does not exist in mobile
+  }
+  */
+
+    /* ABOUT  */
+    .about-us-text h3 {
+        font-size:var(--h3-mobile);
+    }
+
+    .about-us-text p, .about-us-text p a {
+        font-size:var(--p-mobile);
+    }
+
+    /* WIZARD INTRO mobile 1 col  bigger size font */
+    .wizard-intro-text h3 {
+        font-size:var(--h3-mobile);
+    }
+
+    .wizard-intro-text p {
+        font-size:var(--p-mobile);
+    }
+
+    .charges-grid h3 {
+        font-size:var(--h3-mobile);
+    }
+
+    .charges-grid p {
+        font-size:var(--p-mobile);
+    }
+
+    .charges-grid-span {
+        font-size:var(--span-mobile);
     }
 
 }
@@ -276,50 +312,6 @@ and (min-width: 768px) {
 
 }
 
-/*******************************************************************************************************************
-  GLOBAL MOBILES - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 320px)
-and (max-width: 767px) {
-
-    /* HOME FACTS
-    .facts-inline-text a {
-        Does not exist in mobile
-    }
-    */
-
-    /* ABOUT  */
-    .about-us-text h3 {
-        font-size:var(--h3-mobile);
-    }
-
-    .about-us-text p, .about-us-text p a {
-        font-size:var(--p-mobile);
-    }
-
-    /* WIZARD INTRO mobile 1 col  bigger size font */
-    .wizard-intro-text h3 {
-        font-size:var(--h3-mobile);
-    }
-
-    .wizard-intro-text p {
-        font-size:var(--p-mobile);
-    }
-
-    .charges-grid h3 {
-        font-size:var(--h3-mobile);
-    }
-
-    .charges-grid p {
-        font-size:var(--p-mobile);
-    }
-
-    .charges-grid-span {
-        font-size:var(--span-mobile);
-    }
-
-}
 
 /*******************************************************************************************************************
   GLOBAL BIG TABLETS

@@ -1,4 +1,6 @@
-<div class="header-detail-image header-write-adv-care-plan-image">
+
+<div class="header-detail-image">
+    <img src="assets/images/headers/takeAction/headerWriteCarePlan.jpg"  title={{title}}   alt={{title}}>
 </div>
 
 <div class="header-quotes">
@@ -36,64 +38,20 @@
 </div>
 
 <div class="mobileForm">
-
-
     <div class="wizard-intro-container">
         <div class="wizard-intro-image">
-            <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanIntro.jpg"
-                 title="{{title}}" alt="{{title}}">
+            <a routerLink="/callScreenFormMakePlan">
+                <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanIntro.jpg"
+                     title="write advance care plan"   alt="write advance care plan">
+            </a>
         </div>
 
         <div class="wizard-intro-text">
-            <h3>{{ title.toUpperCase() }}</h3>
-            <p>
-                By following this wizard you can easily note note any treatments or procedures you would want or would not want to
-                receive if in a health emergency situation. By simply taking a few minutes to complete this <b>{{title}}</b> wizard,
-                you will feel more protected and your family will be grateful for your considerate action.
-                <br><br>
-                <b>Please Note:</b> At this time the {{ title }} wizard is only available on ipads, laptops, desktops and up. To
-                follow this wizard please connect to it via one of these devices.
-            </p>
+            <a routerLink="/callScreenFormMakePlan">
+                <div class="content-title">
+                    <h1>{{ title.toUpperCase() }}</h1>
+                </div>
+            </a>
         </div>
     </div>
 </div>
-
-
-
-<div class="content-title">
-    <h3>
-        Need to Learn More First?
-    </h3>
-</div>
-
-<div class="content-copy">
-    <p>
-        To understand more about why you should prepare an Advanced Care Plan at any age or state of health check out our
-        <b><a target="new" routerLink={{pathObject.child3_url}}> {{ pathObject.parent_name }} > {{ pathObject.child3_name }}</a></b>
-        page.
-        <br><br>
-        This step provides you with really thinking about what you do want and what you do not want and although it may not matter much
-        now, it will if and when you need to share this valued information.
-    </p>
-</div>
-
-    <!--
-    <div class="mobileForm">
-        <div class="wizard-intro-container">
-            <div class="wizard-intro-image">
-                <a routerLink="/callScreenFormMakePlan">
-                    <img src="assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanIntro.jpg"
-                         title="write advance care plan"   alt="write advance care plan">
-                </a>
-            </div>
-
-            <div class="wizard-intro-text">
-                <a routerLink="/callScreenFormMakePlan">
-                    <div class="content-title">
-                        <h1>{{ title.toUpperCase() }}</h1>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    -->

@@ -3,7 +3,7 @@
   GLOBAL  content is now 1024 so there must be space on either side up to it
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 320px)
+and (min-width: 360px)
 and (max-width: 1024px) {
 
     .content-title, .content-copy, .detail-quotes, .content-list {
@@ -29,14 +29,13 @@ and (min-width: 1025px) {
         width: var(--media-more-than-ipad-width);
     }
 
-
 }
 
 /*******************************************************************************************************************
   GLOBAL MOBILES, SMALL TABLETS -
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 320px)
+and (min-width: 360px)
 and (max-width: 767px) {
 
     /* TITLES */
@@ -75,6 +74,46 @@ and (max-width: 767px) {
         display:none;
     }
 
+    /* TITLES */
+    .content-title h1 {
+        font-size: var(--h1-mobile);
+    }
+
+    .content-title h2,  .content-light-title h2 {
+        font-size: var(--h2-mobile);
+    }
+
+    .content-title h3, .content-title h6 a {
+        font-size: var(--h3-mobile);
+    }
+
+    .content-title h4, .content-title h4 a,  .content-title h5   {
+        font-size: var(--h4-mobile);
+    }
+
+    /* COPY */
+    .content-copy p {
+        font-size: var(--p-mobile);
+    }
+
+    .content-copy span {
+        font-size: var(--span-mobile);
+    }
+
+    /* DETAIL QUOTES */
+    .detail-quote  {
+        font-size: var(--quote-mobile);
+    }
+
+    .detail-author  {
+        font-size: var(--author-mobile);
+    }
+
+    /* LISTS  */
+    .list-item {
+        font-size: var(--p-mobile);
+
+    }
 }
 
 /*******************************************************************************************************************
@@ -124,105 +163,6 @@ and (min-width:768px) {
         padding-top:1em;
     }
 
-}
-
-/*******************************************************************************************************************
-  GLOBAL MOBILES
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 320px)
-and (max-width: 767px) {
-
-    /* TITLES */
-    .content-title h1 {
-        font-size: var(--h1-mobile);
-    }
-
-    .content-title h2,  .content-light-title h2 {
-        font-size: var(--h2-mobile);
-    }
-
-    .content-title h3, .content-title h6 a {
-        font-size: var(--h3-mobile);
-    }
-
-    .content-title h4, .content-title h4 a,  .content-title h5   {
-        font-size: var(--h4-mobile);
-    }
-
-    /* COPY */
-    .content-copy p {
-        font-size: var(--p-mobile);
-    }
-
-    .content-copy span {
-        font-size: var(--span-mobile);
-    }
-
-    /* DETAIL QUOTES */
-    .detail-quote  {
-        font-size: var(--quote-mobile);
-    }
-
-    .detail-author  {
-        font-size: var(--author-mobile);
-    }
-
-    /* LISTS  */
-    .list-item {
-        font-size: var(--p-mobile);
-
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL MOBILES - PORTRAIT
-*******************************************************************************************************************/
-    @media only screen
-    and (min-width: 320px)
-    and (max-width: 767px)
-    and (orientation: portrait) {
-
-    .list-item {
-        line-height: 150%;
-        padding-top:1em;
-    }
-
-    /* HEADER QUOTES */
-    .header-quote {
-        font-size: var(--header-quote-mobile-port);
-        padding:0 .2em;
-    }
-
-    .header-author {
-        font-size: var(--header-author-mobile-port);
-        padding:0 .2em;
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL MOBILES - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 320px)
-and (max-width: 767px)
-and (orientation: landscape) {
-
-    .list-item {
-        line-height: 110%;
-        padding-top:.5em;
-    }
-
-    /* HEADER QUOTES */
-    .header-quote {
-        font-size: var(--header-quote-mobile-land);
-    }
-
-    .header-author {
-        font-size: var(--header-author-mobile-land);
-    }
 }
 
 /*******************************************************************************************************************
@@ -374,6 +314,10 @@ and (min-width: 1024px) {
         text-align:center;
     }
 
+    .content-title h2 {
+        font-weight: 700;
+    }
+
     /* ONLY report menu for consultations headings */
     .content-title h5 {
         text-transform: uppercase;
@@ -482,7 +426,7 @@ and (min-width: 1024px) {
     .list-item, .list-item a {
         font-family: var(--family-copy);
         text-align: left;
-        color:var(--color-green);
+        color:var(--color-copy-blue);
     }
 
     .list-item a  {

@@ -2,10 +2,10 @@
   GLOBAL  content is now 1024 so there must be space on either side up to it
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 320px)
-and (max-width: 1024px) {
+and (min-width: 360px)
+and (max-width: 1023px) {
 
-    .header-home-image, .header-detail-image {
+    .header-detail-image {
         width: var(--media-unaffected-by-ipad-width);
     }
 
@@ -13,6 +13,7 @@ and (max-width: 1024px) {
         width: var(--media-less-than-ipad-width);
         margin-right:5%;
         margin-left:5%;
+        background-color: red;
     }
 }
 
@@ -21,14 +22,15 @@ and (max-width: 1024px) {
   GLOBAL
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 1025px) {
+and (min-width: 1024px) {
 
-    .header-home-image, .header-detail-image {
+    .header-detail-image {
         width: var(--media-unaffected-by-ipad-width);
     }
 
     .content-images  {
         width:var(--media-more-than-ipad-width);
+        background-color: blue
     }
 
 }
@@ -39,8 +41,9 @@ MOBILES
 
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 320px)
-and (max-width: 767px) {
+and (min-width: 360px)
+and (max-width: 767px)
+and (orientation:portrait) {
 
     .content-images {
         padding:.5em 0;
@@ -50,7 +53,7 @@ and (max-width: 767px) {
 
 /*******************************************************************************************************************
 
-MAX WIDTH 100% FOR ALL OVER 896px (OUR CONTENT WINDOW)
+MAX WIDTH 100% FOR ALL OVER MOBILE
 
 *******************************************************************************************************************/
 @media only screen
@@ -62,185 +65,104 @@ and (min-width:768px) {
 
 }
 
-/*******************************************************************************************************************
-  GLOBAL BANANAS - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 360px)
-and (max-width: 767px)
-and (orientation: portrait) {
-
-    /* Images - 600/1024 58.59%  */
-    .header-home-image, .header-detail-image {
-        height: 210px;
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL BANANAS - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 360px)
-and (max-width: 767px)
-and (orientation: landscape) {
-
-    /* Images - 600/1024 58.59%  */
-    .header-home-image, .header-detail-image {
-        height: 449px;
-    }
-
-}
-
-
-/*******************************************************************************************************************
-  GLOBAL TABLET PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 768px)
-and (max-width:1023px)
-and (orientation: portrait) {
-
-    /* Images - 1024x600 58.59%  */
-    .header-home-image, .header-detail-image {
-        height: 449px;
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL TABLET PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 768px)
-and (max-width:1023px)
-and (orientation: landscape) {
-
-    /* Images - 1024x600 58.59%  */
-    .header-home-image, .header-detail-image {
-        height: 600px;
-    }
-}
-
-/*******************************************************************************************************************
- GLOBAL BIG TABLETS - PORTRAIT and IPAD PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 1024px) {
-
-    /* Images - 1024x600 58.59%  */
-    .header-home-image, .header-detail-image {
-        height: 600px;
-    }
-
-}
-
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
     /* 1024 wide */
-    .content-images, .content-images a   {
+    .content-images, .content-images a, .header-detail-image   {
         display:grid;
         max-width:var(--ipad-width);
         margin:auto;
         justify-content: center;
     }
 
-    .content-images img {
+    .content-images img, .header-detail-image img {
         max-width:100%;
         height:auto;
     }
 
-    .header-home-image, .header-detail-image {
-        display: grid;
-        float: left;
-        text-align: center;
-        align-content: flex-end;
-        justify-content: center;
-        color: var(--color-white);
-    }
 
     /* HOME  */
-    .header-home-image {
+  /*  .header-home-image {
         background-size: cover;
         background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 80%),
         url('src/assets/images/headers/home/headerHome.jpg');
-    }
+    }*/
 
     /* PLAN AHEAD */
-    .header-think-about-needs-image {
+  /*  .header-think-about-needs-image {
         background-size: cover;
         background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
         url("src/assets/images/headers/planAhead/headerThinkAboutNeeds.jpg");
-    }
+    }*/
 
-    .header-consider-advocates-image {
+  /*  .header-consider-advocates-image {
         background-size: cover;
         background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
         url('src/assets/images/headers/planAhead/headerConsiderAdvocates.jpg');
-    }
+    }*/
 
-    .header-understand-care-plan-image {
+   /* .header-understand-care-plan-image {
         background-size: cover;
         background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
         url("src/assets/images/headers/planAhead/headerUnderstandAdvancePlans.jpg");
-    }
+    }*/
 
-    .header-know-rights-image {
+  /*  .header-know-rights-image {
         background-size: cover;
         background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 80%),
         url("src/assets/images/headers/planAhead/headerKnowYourRights.jpg");
-    }
+    }*/
 
     /* TAKE ACTION */
-    .header-write-needs-down-image {
+  /*  .header-write-needs-down-image {
         background-size: cover;
         background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 80%),
         url("src/assets/images/headers/takeAction/headerWriteNeedsDown.jpg");
-    }
+    }*/
 
-    .header-choose-your-rep-image {
+ /*   .header-choose-your-rep-image {
         background-size: cover;
         background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
         url("src/assets/images/headers/takeAction/headerChooseReprentatives.jpg");
-    }
+    }*/
 
-    .header-write-adv-care-plan-image {
+ /*   .header-write-adv-care-plan-image {
         background-size: cover;
         background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
         url("src/assets/images/headers/takeAction/headerWriteCarePlan.jpg");
-    }
+    }*/
 
-    .header-create-checklist-image {
+  /*  .header-create-checklist-image {
         background-size: cover;
         background-image: linear-gradient(transparent 30%, rgba(0, 33, 69, .8) 90%),
         url("src/assets/images/headers/takeAction/headerCreateCheckList.jpg");
-    }
+    }*/
 
     /* ABOUT  */
-    .header-about-eol-advocacy-image {
+ /*   .header-about-eol-advocacy-image {
         background-size: cover;
         background-image: linear-gradient(transparent 100%, rgba(0, 33, 69, .8) 10%),
         url('src/assets/images/headers/about/headerAboutAdvocacy.jpg');
-    }
+    }*/
 
-    .header-about-pract-image {
+  /*  .header-about-pract-image {
         background-size: cover;
         background-image: linear-gradient(transparent 40%, rgba(0, 33, 69, .8) 90%),
         url('src/assets/images/headers/about/headerAboutPractitioner.jpg');
-    }
+    }*/
 
     /* BOOK CONSULTATION  */
-    .header-testimonials-image {
+   /* .header-testimonials-image {
         background-size: cover;
         background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
         url('src/assets/images/headers/consultations/headerTestimonials2.jpg');
     }
-
-    .header-book-consultation-image {
+*/
+    /*.header-book-consultation-image {
         background-size: cover;
         background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
         url('src/assets/images/headers/consultations/headerBookConsultation.jpg');
-    }
+    }*/
 
 }

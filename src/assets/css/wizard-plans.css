@@ -3,7 +3,8 @@
 FOR BOTH TABLETS AND IPADS AND UP
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 768px) {
+and (min-width:360px)
+and (max-width:767px) {
 
     .modal-plan-main-title {
         font-size: var(--plan-form-title);

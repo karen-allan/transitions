@@ -79,17 +79,24 @@
     --header-name-p-tablet: 2.2em;
     --header-name-span-tablet: 1.3em;
 
+    --header-name-p-ipad: 2.4em;
+    --header-name-span-ipad: 1.5em;
+
     --header-name-p-laptop: 2.7em;
     --header-name-span-laptop: 1.8em;
 
     --header-slogan-tablet: 1.1em;
+    --header-slogan-ipad:  1.4em;
     --header-slogan-laptop:  1.5em;
 
     --menu-items-tablet: 1.0em;
     --sub-menu-items-tablet: .7em;
 
-    --menu-items-laptop-: 1.1em;
-    --sub-menu-items-laptop: .8em;
+    --menu-items-ipad-: 1.1em;
+    --sub-menu-items-ipad: .8em;
+
+    --menu-items-laptop-: 1.2em;
+    --sub-menu-items-laptop: .9em;
 
     /**********************************************************************************************
          COPY FONTS and DETAIL QUOTES

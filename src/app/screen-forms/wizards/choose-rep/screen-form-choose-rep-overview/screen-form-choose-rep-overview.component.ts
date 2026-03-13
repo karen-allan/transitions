@@ -350,11 +350,11 @@ export class ScreenFormChooseRepOverviewComponent {
   checkFormToCancel(modal: boolean) {
 
     if (modal) {
-     // alert("this is a modal  form " + modal)
+      alert("this is a modal  form " + modal)
       this.cancelDialogForm();
     }
     if (!modal) {
-    //  alert("this is NOT a modal  form " + modal)
+      alert("this is NOT a modal  form " + modal)
       this.cancelRegularForm();
     }
   }
