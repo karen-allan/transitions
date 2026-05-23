@@ -17,6 +17,7 @@ export class DialogHeaderComponent {
   @Input() directive: AdvanceDirective;
   @Input() modal:boolean;
 
+
   now:string;
   name:string;
 

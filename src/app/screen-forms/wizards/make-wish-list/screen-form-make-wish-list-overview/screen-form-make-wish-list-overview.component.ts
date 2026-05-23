@@ -26,9 +26,7 @@ export class ScreenFormMakeWishListOverviewComponent implements OnInit {
   selectedQuestion:Question;
   now:string;
   updatedValue:string="";
-//  printForm:boolean=false;
-
-
+  firstNameValue:string=";"
 
   constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute ) {
   }
@@ -36,8 +34,9 @@ export class ScreenFormMakeWishListOverviewComponent implements OnInit {
   /* *************************************************************************************************************** */
   ngOnInit(): void {
     this.page = 0;
-   // this.initializeData();
+    //
     this.clearData()
+    //this.initializeData();
     this.getCurrentDate();
 
   }
@@ -55,7 +54,7 @@ export class ScreenFormMakeWishListOverviewComponent implements OnInit {
   /* *************************************************************************************************************** */
   checkClientName(): void {
     if (this.wishes.client_name.length == 0 && this.wishes.client_name == "")  {
-      this.errorMessage = "Please enter your name here.";
+      this.errorMessage = "You must enter your full name below.";
       return;
     }
     else {
@@ -65,6 +64,12 @@ export class ScreenFormMakeWishListOverviewComponent implements OnInit {
           .subscribe(newName => this.updatedValue = newName);
 
       this.wishes.client_name = this.updatedValue;
+    //  alert("cappedName is " + this.wishes.client_name);
+
+      this.dataService.getFirstName(this.wishes.client_name)
+          .subscribe(firstName => this.updatedValue = firstName);
+      this.wishes.client_first_name = this.updatedValue;
+     // alert("first Name is " + this.wishes.client_first_name);
 
       this.getNextPage();
     }
@@ -125,9 +130,12 @@ export class ScreenFormMakeWishListOverviewComponent implements OnInit {
 
   /* *************************************************************************************************************** */
   checkFormToPrint(modal: boolean) {
-    if (modal) {
+
+    // alert("BOO and modal is " + modal);
+     if (modal) {
       this.printDialogForm();
     }
+
     if (!modal) {
       this.printRegularForm();
     }
@@ -135,7 +143,7 @@ export class ScreenFormMakeWishListOverviewComponent implements OnInit {
 
   /* *************************************************************************************************************** */
   printRegularForm(){
-    window.print()
+      window.print()
   }
 
   /* *************************************************************************************************************** */

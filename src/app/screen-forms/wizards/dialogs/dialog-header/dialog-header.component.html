@@ -1,68 +1,147 @@
 <ng-container *ngIf="wishes">
-    <div class="wizard-modal-header">
-        <div class="wizard-modal-logo">
-            <img src="../../../../../assets/images/details/takeAction/writeNeedsDown/wizardActionWishListDialog.jpg"
-                 title="{{title}}"  alt="{{title}}">
-        </div>
+    <div *ngIf="modal">
+        <div class="wizard-modal-header">
+            <div class="wizard-modal-logo">
+                <img src="../../../../../assets/images/details/takeAction/writeNeedsDown/wizardActionWishListDialog.jpg"
+                     title="{{title}}"  alt="{{title}}">
+            </div>
 
-        <div class="wizard-modal-text">
-            <ng-container *ngIf="wishes.client_name.length > 0 && wishes.client_name != ''">
-                {{title}}<br>
-                    dated {{ now }}<br>
-                    for {{ wishes.client_name }}
+            <div class="wizard-modal-text">
+                <ng-container *ngIf="wishes.client_name.length > 0 && wishes.client_name != ''">
+                    {{title}}<br>
+                        dated {{ now }}<br>
+                        for {{ wishes.client_first_name }}
+                </ng-container>
 
-            </ng-container>
-
-            <ng-container *ngIf="wishes.client_name.length == 0">
-               {{title}}<br>
-                    dated {{ now }}
-            </ng-container>
+                <ng-container *ngIf="wishes.client_name.length == 0">
+                   {{title}}<br>
+                        dated {{ now }}
+                    <br>
+                    &nbsp;
+                </ng-container>
+            </div>
         </div>
     </div>
+    <div *ngIf="!modal">
+        <div class="wizard-form-header">
+            <div class="wizard-form-logo">
+                <img src="../../../../../assets/images/details/takeAction/writeNeedsDown/wizardActionWishListDialog.jpg"
+                     title="{{title}}"  alt="{{title}}">
+            </div>
+
+            <div class="wizard-form-text">
+                <ng-container *ngIf="wishes.client_name.length > 0 && wishes.client_name != ''">
+                    {{title}}<br>
+                    dated {{ now }}<br>
+                    for {{ wishes.client_first_name }}
+                </ng-container>
+
+                <ng-container *ngIf="wishes.client_name.length == 0">
+                    {{title}}<br>
+                    dated {{ now }}
+                    <br>
+                    &nbsp;
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
 </ng-container>
 
 <ng-container *ngIf="rep">
-    <div class="wizard-modal-header">
-        <div class="wizard-modal-logo">
-            <img src="../../../../../assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsDialog.jpg"
-                 title="{{title}}" alt="{{title}}">
-        </div>
+    <div *ngIf="modal">
+        <div class="wizard-modal-header">
+            <div class="wizard-modal-logo">
+                <img src="../../../../../assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsDialog.jpg"
+                     title="{{title}}" alt="{{title}}">
+            </div>
 
-        <div class="wizard-modal-text">
-            <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name != ''">
-                <h3>{{title}}<br>
-                    dated {{ now }}<br>
-                    for {{ rep.client_name }}
-                </h3>
-            </ng-container>
-            <ng-container *ngIf="rep.client_name.length == 0">
-                <h3>{{title}}<br>
-                    dated {{ now }}
-                </h3>
-            </ng-container>
+            <div class="wizard-modal-text">
+                <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name != ''">
+                    {{title}}<br>
+                        dated {{ now }}<br>
+                        for {{ rep.client_first_name }}
+                </ng-container>
+                <ng-container *ngIf="rep.client_name.length == 0">
+                    {{title}}<br>
+                        dated {{ now }}
+                        <br>
+                        &nbsp;
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!modal">
+        <div class="wizard-form-header">
+            <div class="wizard-form-logo">
+                <img src="../../../../../assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsDialog.jpg"
+                     title="{{title}}" alt="{{title}}">
+            </div>
+
+            <div class="wizard-form-text">
+                <ng-container *ngIf="rep.client_name.length > 0 && rep.client_name != ''">
+                    <h2>{{title}}<br>
+                        dated {{ now }}<br>
+                        for {{ rep.client_name }}
+                    </h2>
+                </ng-container>
+                <ng-container *ngIf="rep.client_name.length == 0">
+                    <h2>{{title}}<br>
+                        dated {{ now }}
+                    </h2>
+                </ng-container>
+            </div>
         </div>
     </div>
 </ng-container>
 
 <ng-container *ngIf="directive">
-    <div class="wizard-modal-header">
-        <div class="wizard-modal-logo">
-            <img src="../../../../../assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanDialog.jpg" title="{{title}}"
-             alt="{{title}}">
-        </div>
+    <div *ngIf="modal">
+        <div class="wizard-modal-header">
+            <div class="wizard-modal-logo">
+                <img src="../../../../../assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanDialog.jpg" title="{{title}}"
+                 alt="{{title}}">
+            </div>
 
-        <div class="wizard-modal-text">
-            <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name != ''">
-                <h3>{{title}}<br>
-                    dated {{ now }}<br>
-                    for {{ directive.client_name }}
-                </h3>
-            </ng-container>
-            <ng-container *ngIf="directive.client_name.length == 0">
-                <h3>{{title}}<br>
-                    dated {{ now }}
-                </h3>
-            </ng-container>
+            <div class="wizard-modal-text">
+                <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name != ''">
+                    {{title}}<br>
+                        dated {{ now }}<br>
+                        for {{ directive.client_first_name }}
+                </ng-container>
+                <ng-container *ngIf="directive.client_name.length == 0">
+                    {{title}}<br>
+                        dated {{ now }}
+                        <br>
+                        &nbsp;
+                </ng-container>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="!modal">
+        <div class="wizard-form-header">
+            <div class="wizard-form-logo">
+                <img src="../../../../../assets/images/details/takeAction/writeCarePlan/wizardActionWritePlanDialog.jpg" title="{{title}}"
+                     alt="{{title}}">
+            </div>
+
+            <div class="wizard-form-text">
+                <ng-container *ngIf="directive.client_name.length > 0 && directive.client_name != ''">
+                    <h2>{{title}}<br>
+                        dated {{ now }}<br>
+                        for {{ directive.client_first_name }}
+                    </h2>
+                </ng-container>
+                <ng-container *ngIf="directive.client_name.length == 0">
+                    <h2>{{title}}<br>
+                        dated {{ now }}
+                        <br>
+                        &nbsp;
+                    </h2>
+                </ng-container>
+            </div>
         </div>
     </div>
 </ng-container>

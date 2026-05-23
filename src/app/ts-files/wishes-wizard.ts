@@ -6,6 +6,7 @@ export class WishesWizard {
     constructor(
         public id: number,
         public client_name: string,
+        public client_first_name:string,
         public questions:Question[]=QUESTIONS,
         public signing_date:string
     )

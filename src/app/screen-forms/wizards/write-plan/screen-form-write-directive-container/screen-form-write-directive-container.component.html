@@ -1,12 +1,19 @@
-<app-global-menu [menuItemId]='menuItemId' [subMenuItemId]='subMenuItemId'></app-global-menu>
 
-<!-- this is only called when the screen is in mobile mode as they do not use the dialog container -->
+<!-- this is only called when the screen is in mobile mode as they do not use the modal dialog container-->
+
 <ng-container *ngIf="!modal">
-    <div class="modal-mock-dialog-plan">
-        <app-screen-form-write-directive-overview  [directive]="directive" [modal]="modal"></app-screen-form-write-directive-overview>
+    <app-dialog-header
+        [directive]='directive'
+        [title]='title'
+        [modal]='modal'>
+    </app-dialog-header>
+
+    <div class="form-inner-block-plan">
+        <app-screen-form-write-directive-overview
+            [directive]="directive"
+            [modal]="modal">
+        </app-screen-form-write-directive-overview>
     </div>
 </ng-container>
-
-<app-global-footer></app-global-footer>
 
 <app-print-modal-write-advance-directive [directive]="directive"></app-print-modal-write-advance-directive>

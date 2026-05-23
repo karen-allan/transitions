@@ -1,194 +1,182 @@
 
 /*******************************************************************************************************************
 
+MOBILE
 *******************************************************************************************************************/
 @media only screen
-and (min-width:360px)
+and (min-width: 360px)
 and (max-width:767px) {
 
-    .modal-wishes-main-title  {
-        padding-top:1em;
-        font-size: var(--wishes-form-main-title);
+    .form-inner-block-wishes {
+        display:block;
+        float:left;
+        border-left:thick solid var(--color-white);
+        border-right:thick solid var(--color-white);
+        border-bottom:thick solid var(--color-white);
     }
 
-    .modal-wish-list-item {
-        margin-top: 1em;
-        padding-top: .2em;
-        /*font-size: var(--wishes-form-list);*/
-        line-height: 110%;
+    .data-block-wishes {
+        width: 90%;
+        margin: 0 5% 1em 5%;
+        background-color: white;
     }
 
-    .modal-wishes-name-label {
-        font-size: var(--wishes-form-prompt-value);
-        margin-top:.3em;
+    .form-wish-main-title, .form-wish-write-list, .form-wish-name-prompt, .form-wish-name-value, .form-wish-question-prompt,
+    .form-wish-question, .form-wish-answers {
+        display: block;
+        float: left;
+        width: 100%;
+        font-family: var(--family-copy);
+        color: var(--color-hyperlink);
+        text-align: left;
     }
 
-    .modal-wishes-name-value {
-        font-size:var(--wishes-form-prompt-value);
-        margin-top:1em;
-        margin-left:1em;
-        padding:.4em 0;
+    .form-wish-main-title {
+        padding-top: 1em;
+        font-size: var(--form-wish-main-title);
+        margin: 0;
     }
 
-    .modal-wishes-question-prompt {
-        font-size: var(--wishes-form-question-number);
-        padding: .5em 0;
+    .form-wish-write-list {
+        font-size: var(--form-wish-write-list);
+        padding-top: .6em;
     }
 
-    .modal-wishes-question {
-        font-size: var(--wishes-form-question);
-        padding: 1em 0;
-        line-height: 105%;
+    .form-wish-name-prompt {
+        font-size: var(--form-wish-name-prompt);
     }
 
-    .modal-wishes-radio-answers {
-        grid-column: 1;
-        padding: 1em 0;
-        line-height: 110%;
+    .form-wish-name-value {
+        font-size: var(--form-wish-name-value);
+        padding-top: .5em;
     }
 
-    .modal-wishes-copy p {
-        padding-top:2em;
-        font-size: var(--wishes-form-copy);
-        line-height: 150%;
+    .form-wish-question-prompt {
+        padding-top: 1em;
+        font-size: var(--form-wish-question-prompt);
+        font-weight: bold;
+    }
+
+    .form-wish-question {
+        padding-bottom: 1em;
+        font-size: var(--form-wish-question);
+    }
+
+    .form-wish-answers {
+        font-size: var(--form-wish-answers);
+        border: 1px dashed var(--color-dark-blue);
+        padding-top: 1em;
+
+    }
+
+    .form-wish-copy {
+        width: 90%;
+        margin: auto;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        line-height: 135%;
+        text-align: justify;
+        font-size: var(--form-wish-copy);
+        padding-top:1.4em;
     }
 }
+
 /*******************************************************************************************************************
 
+Modal views laptops etc with fixed modal screens
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 768px)
-and (max-width:1023px) {
+and (min-width: 768px) {
 
     mat-dialog-container#make-wishes-modal {
-        height: 700px;
+        height: 730px;
         width:768px;
     }
 
     .modal-inner-block-wishes {
-        height: 420px;
+        height: 475px;
         width: 100%;
         background-color: white;
     }
 
-    .modal-data-block-wishes {
-        height:400px;
+    .data-block-wishes {
+        height:445px;
         width: 90%;
         margin: 0 5%;
         background-color: white;
     }
 
-    .modal-wish-list-item {
-        font-size: var(--wishes-form-small-list);
-    }
-
-    .modal-wishes-radio-answers {
-        font-size: var(--wishes-form-small-answers);
-    }
-
-}
-
-/*******************************************************************************************************************
-
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 1024px) {
-
-    mat-dialog-container#make-wishes-modal {
-        height: 770px;
-        width:1024px;
-    }
-
-    .modal-inner-block-wishes {
-        height: 460px;
-        width: 100%;
-        background-color: white;
-    }
-
-    .modal-data-block-wishes {
-        height:440px;
-        width: 90%;
-        margin: 0 5%;
-        background-color: white;
-    }
-
-    .modal-wish-list-item {
-        font-size: var(--wishes-form-big-list);
-    }
-
-    .modal-wishes-radio-answers {
-        font-size: var(--wishes-form-big-answers);
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL
-*******************************************************************************************************************/
-@media only screen {
-
-    /*
-    modal-wishes-main-title
-    modal-wish-list-item
-    modal-wishes-question-prompt
-    modal-wishes-question
-    modal-wishes-radio-answers
-    modal-wishes-copy
-    modal-wishes-name-label, .modal-wishes-name-value
-     */
-
-    .modal-wishes-main-title, .modal-wishes-question-prompt {
+    .modal-wish-main-title, .modal-wish-write-list,  .modal-wish-name-prompt, .modal-wish-name-value, .modal-wish-question-prompt,
+    .modal-wish-question, .modal-wish-answers  {
         display: block;
         float: left;
-        padding-left:.5em;
-
-        text-align: left;
-        margin: 0;
-        color: var(--color-dark-blue);
-        font-family: var(--family-title);
-    }
-
-    .modal-wish-list-item, .modal-wishes-question, .modal-wishes-radio-answers {
-        width: 100%;
+        width:100%;
         font-family: var(--family-copy);
         color: var(--color-dark-blue);
         text-align: left;
     }
 
-    .modal-wishes-copy {
+    .modal-wish-main-title  {
+        padding:.8em 0;
+        font-size: var(--modal-wish-main-title);
+        margin-top: 1em;
+    }
+
+    .modal-wish-write-list  {
+        font-size: var(--modal-wish-write-list);
+        padding:.2em 0;
+        /*list-style: square;*/
+    }
+
+    .modal-wish-name-prompt  {
+        font-size: var(--modal-wish-name-prompt);
+        padding:.3em 0;
+    }
+
+    .modal-wish-name-value {
+        font-size: var(--modal-wish-name-value);
+        padding:.5em 0 0 0;
+    }
+
+    .modal-wish-question-prompt {
+        padding:1em 0;
+        font-weight: bold;
+        font-size: var(--modal-wish-question-prompt);
+    }
+
+    .modal-wish-question {
+        padding:1em 0;
+        font-size: var(--modal-wish-question);
+    }
+
+    .modal-wish-answers {
+        font-size: var(--modal-wish-answers);
+        border: 1px dashed var(--color-dark-blue);
+        padding:.8em 0;
+    }
+
+    .modal-wish-copy {
         width: 90%;
         margin:auto;
         font-family: var(--family-copy);
         color: var(--color-dark-blue);
+        line-height:120%;
         text-align: justify;
+        font-size: var(--modal-wish-copy);
     }
 
-    .modal-wishes-radio-answers {
-        border: 1px dashed var(--color-dark-blue);
-    }
+    /*******************************************************************************************************************
+      GLOBAL
+    *******************************************************************************************************************/
+    @media only screen {
 
-    .modal-twenty-eighty-block {
-        display: inline-grid;
-        grid-template-columns: 20% 80%;
-        width: 95%;
-        margin-right:5%;
-        text-align: left;
+        .data-block-wishes {
+            display: block;
+            float: left;
+            color: var(--color-dark-blue);
+            position: relative;
+        }
     }
-
-    .modal-wishes-name-label, .modal-wishes-name-value {
-        display: grid;
-        width: 100%;
-        color: var(--color-dark-blue);
-        font-family: var(--family-forms);
-        text-align: left;
-    }
-
-    .modal-wishes-name-label {
-        grid-column: 1;
-    }
-
-    .modal-wishes-name-value {
-        grid-column: 2;
-    }
-
 }
+
+

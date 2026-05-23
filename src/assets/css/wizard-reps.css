@@ -1,122 +1,25 @@
 /*******************************************************************************************************************
-FOR BOTH TABLET AND IPAD AND UP
+FOR MOBILES
 *******************************************************************************************************************/
 @media only screen
 and (min-width:360px)
 and (max-width:767px) {
 
-    .modal-rep-main-title {
-        font-size: var(--rep-form-main-title);
-        padding-top: 1em;
-        margin-top: 1em;
+    .form-inner-block-rep {
+        display:block;
+        float:left;
+        border-left:thick solid var(--color-dark-blue);
+        border-right:thick solid var(--color-dark-blue);
+        border-bottom:thick solid var(--color-dark-blue);
     }
 
-    .modal-rep-sub-title {
-        font-size: var(--rep-form-sub-title);
-        padding: .5em 0;
-        line-height: 115%;
-    }
-
-    .modal-rep-list-item {
-        margin: 0;
-        padding: .3em;
-        font-size: var(--rep-form-list);
-        line-height: 100%;
-    }
-
-    .modal-rep-alt-radio-item {
-        font-size: var(--rep-form-radio);
-        padding: 1em 0;
-        line-height: 110%;
-        margin-top:1em;
-    }
-
-    .modal-rep-text-area {
-        font-size: var(--rep-form-copy);
-        line-height: 140%;
-    }
-
-    .modal-rep-legal-radio-item {
-        font-size: var(--rep-form-radio);
-    }
-
-    .modal-rep-copy p {
-        padding-top:1em;
-        font-size: var(--rep-form-copy);
-        line-height: 150%;
-    }
-}
-
-/*******************************************************************************************************************
-
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 768px)
-and (max-width:1023px) {
-
-    mat-dialog-container#choose-rep-modal {
-        height: 790px;
-        width:768px;
-    }
-
-    .modal-inner-block-rep   {
-        height: 510px;
-        width: 100%;
-        background-color: white;
-    }
-
-    .modal-data-block-rep {
-        height:490px;
+    .data-block-rep {
         width: 90%;
-        margin: 0 5%;
-        background-color: white;
+        margin: 0 5% 1em 5%;
     }
 
-}
-
-/*******************************************************************************************************************
-
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 1024px) {
-
-    mat-dialog-container#choose-rep-modal {
-        height: 780px;
-        width:1024px;
-    }
-
-    .modal-inner-block-rep   {
-        height: 470px;
-        width: 100%;
-        background-color: white;
-    }
-
-    .modal-data-block-rep {
-        height:450px;
-        width: 90%;
-        margin: 0 5%;
-        background-color: white;
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL
-*******************************************************************************************************************/
-@media only screen {
-
-    /*
-     modal-rep-main-title
-     modal-rep-sub-title
-     modal-rep-list-item
-     modal-rep-alt-radio-item
-     modal-rep-legal-radio-item
-     modal-rep-copy p
-     modal-rep-text-area
-     */
-
-    .modal-rep-main-title,
-    .modal-rep-sub-title {
+    .form-rep-main-title,
+    .form-rep-sub-title {
         display: block;
         float: left;
         width: 100%;
@@ -126,15 +29,112 @@ and (min-width: 1024px) {
         font-family: var(--family-title);
     }
 
-    .modal-rep-list-item, .modal-rep-alt-radio-item, .modal-rep-legal-radio-item, .modal-rep-copy, .modal-rep-text-area {
+    .form-rep-main-title {
+        margin:1em 0;
+        font-size:var(--form-rep-main-title);
+    }
+
+    .form-rep-sub-title {
+        font-size:var(--form-rep-sub-title);
+    }
+
+    .form-rep-big-list-item, .form-rep-small-list-item, .form-rep-alt-radio-item, .form-rep-legal-radio-item, .form-rep-copy, .form-rep-text-area {
         font-family: var(--family-copy);
         color: var(--color-dark-blue);
         text-align: left;
     }
 
-    .modal-rep-alt-radio-item, .modal-rep-legal-radio-item {
+    .form-rep-alt-radio-item, .form-rep-legal-radio-item {
         border: 1px dashed var(--color-dark-blue);
         width: 100%;
+        padding:.8em 0;
+    }
+
+    .form-rep-text-area {
+        display: block;
+        float: left;
+        width: 100%;
+        overflow-y: scroll;
+        scrollbar-color: red orange;
+        scrollbar-width: thin;
+    }
+
+    .form-rep-big-list-item {
+        font-size:var(--form-rep-big-list);
+        padding-top:.8em;
+    }
+
+    .form-rep-small-list-item {
+        font-size:var(--form-rep-small-list)
+    }
+
+    .form-rep-copy {
+        display: grid;
+        width: 100%;
+        font-size:var(--form-rep-copy)
+    }
+}
+
+/*******************************************************************************************************************
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 768px) {
+
+    mat-dialog-container#choose-rep-modal {
+        height: 730px;
+        width:768px;
+    }
+
+    .modal-inner-block-rep {
+        height: 475px;
+        width: 100%;
+        background-color: white;
+    }
+
+    .data-block-rep {
+        height:445px;
+        width: 90%;
+        margin: 0 5%;
+        background-color: white;
+    }
+
+    .modal-rep-main-title,
+    .modal-rep-sub-title {
+        display: block;
+        float: left;
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        color: var(--color-dark-blue);
+        font-family: var(--family-copy);
+    }
+
+    .modal-rep-main-title {
+        margin:1em 0;
+        font-size:var(--modal-rep-main-title);
+    }
+
+    .modal-rep-sub-title {
+        font-size:var(--modal-rep-sub-title);
+    }
+
+    .modal-rep-big-list-item, .modal-rep-small-list-item, .modal-rep-alt-radio-item, .modal-rep-legal-radio-item, .modal-rep-copy, .modal-rep-text-area {
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        text-align: left;
+    }
+
+    .modal-rep-alt-radio-item  {
+        border: 1px dashed var(--color-dark-blue);
+        width: 100%;
+        padding:.8em 0;
+    }
+
+    .modal-rep-legal-radio-item {
+        border: 1px dashed var(--color-dark-blue);
+        width: 100%;
+        padding:.5em 0;
     }
 
     .modal-rep-text-area {
@@ -146,9 +146,33 @@ and (min-width: 1024px) {
         scrollbar-width: thin;
     }
 
+    .modal-rep-big-list-item {
+        font-size:var(--modal-rep-big-list);
+        padding-top:.8em;
+    }
+
+    .modal-rep-small-list-item {
+        font-size:var(--modal-rep-small-list)
+    }
+
     .modal-rep-copy {
         display: grid;
         width: 100%;
+        font-size:var(--modal-rep-copy)
+    }
+
+}
+
+/*******************************************************************************************************************
+  GLOBAL
+*******************************************************************************************************************/
+@media only screen {
+
+    .data-block-rep {
+        display: block;
+        float: left;
+        color: var(--color-dark-blue);
+        position: relative;
     }
 
 }

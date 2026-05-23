@@ -14,6 +14,7 @@ export class DataService {
 
   invokeFirstComponentFunction=new EventEmitter();
   subsVar:Subscription
+  testName:string='';
 
   constructor() { }
 
@@ -95,21 +96,29 @@ export class DataService {
 
   /* *************************************************************************************************************** */
   splitNames(name:string): Observable<string> {
-
     const resultArray: string[] = name.split(" ");
     let cappedName:string="";
 
     for (let arrayNum=0; arrayNum < resultArray.length; arrayNum++) {
        if (resultArray[arrayNum] != "") {
-         let testName= this.capitalizeName(resultArray[arrayNum]);
+         var testName= this.capitalizeName(resultArray[arrayNum]);
+
          cappedName = cappedName + " " + testName;
        }
     }
 
-    //alert("name is " + cappedName);
-
     return of(cappedName);
   }
+
+  /* *************************************************************************************************************** */
+  getFirstName(name:string): Observable<string> {
+    const resultArray: string[] = name.trim().split(" ");
+    let firstName:string = "";
+    firstName = this.capitalizeName(resultArray[0]);
+    return of(firstName);
+  }
+
+  /* *************************************************************************************************************** */
 
   /* *************************************************************************************************************** */
   capitalizeName(name:string): string {

@@ -46,8 +46,8 @@ export class MakeWishesOverviewComponent  {
     // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = false;
     dialogConfig.id = "make-wishes-modal";
-    dialogConfig.maxWidth='1024px'
-    dialogConfig.minWidth='768px'
+    dialogConfig.width='768px'
+
 
     /* named and defined in wizard.css */
     let modalDialog = this.matDialog.open(DialogWishListComponent, dialogConfig);

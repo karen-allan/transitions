@@ -1,56 +1,18 @@
 
 /*******************************************************************************************************************
-  MOBILES (320) to TABLETS (768) to IPADS (1024)
+  MOBILES (320)
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 320px)
-and (max-width:1023px) {
+and (max-width:767px) {
 
-    .mobile-footer {
-        display:block;
-        width: var(--media-unaffected-by-ipad-width);
-      /*  margin-right:5%;
-        margin-left:5%;*/
+    .footer-email p, .footer-name p {
+        font-size:var(--p-mobile);
     }
 
-    .laptop-footer {
-        display:none;
+    .footer-copyright p, .footer-disclaimer span {
+        font-size:var(--span-mobile);
     }
-
-    .footer-eden-icon img, .footer-canadian-icon img, .footer-mw-energy-icon img {
-        height:20px;
-    }
-
-}
-
-/*******************************************************************************************************************
-  LAPTOPS AND UP
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 1024px) {
-
-    .mobile-footer {
-        display:none;
-    }
-
-    .laptop-footer {
-        display:block;
-        width: var(--media-more-than-ipad-width);
-    }
-
-    .footer-eden-icon img, .footer-canadian-icon img, .footer-mw-energy-icon img {
-        height: 25px;
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL MOBILES - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 320px)
-and (max-width: 767px)
-and (orientation: portrait) {
 
     .grid-socials {
         width:30%;
@@ -59,56 +21,17 @@ and (orientation: portrait) {
 }
 
 /*******************************************************************************************************************
-  GLOBAL MOBILES - LANDSCAPE
-*******************************************************************************************************************/
-
-@media only screen
-and (min-width: 320px)
-and (max-width: 767px)
-and (orientation: landscape) {
-
-    .grid-socials {
-        width:20%;
-    }
-
-}
-
-/*******************************************************************************************************************
  GLOBAL TABLETS - PORTRAIT
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 768px)
-and (max-width: 1023px)
-and (orientation: portrait) {
+and (min-width: 768px) {
 
-    /*row 1  */
-    .grid-socials {
-        width: 12%;
+    .footer-email p, .footer-name p {
+        font-size:var(--p-laptop);
     }
-}
 
-/*******************************************************************************************************************
- GLOBAL TABLETS - LANDSCAPE
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 768px)
-and (max-width: 1023px)
-and (orientation: landscape) {
-
-    /*row 1  */
-    .grid-socials {
-        width: 12%;
-    }
-}
-
-/*******************************************************************************************************************
-  IPADS, LAPTOPS AND UP
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 1024px) {
-
-    .grid-socials {
-        width:12%;
+    .footer-copyright p, .footer-disclaimer span {
+        font-size:var(--span-laptop);
     }
 
 }
@@ -120,25 +43,76 @@ and (min-width: 1024px) {
         display: block;
         float:left;
         width:100%;
-        max-width: var(--ipad-width);
-        margin-left:auto;
-        margin-right:auto;
+        max-width: var(--desktop-width);
         margin-top:2em;
-        background: white;
+        background: var(--color-white);
         border-top: thin dashed var(--color-dark-blue);
     }
 
-    /* 4 rows of footer content */
-    /* row 1 footer email  */
-    /* row 2 footer name */
-    /* row 3 footer socials with grid socials and icons */
-    /* row 4 copyright  */
-    .footer-email, .footer-name, .footer-socials, .footer-copyright {
-        display:block;
-        float:left;
+    .footer-content {
+        display:grid;
+        max-width:var(--min-laptop-width);
+        margin:auto;
+        font-family:var(--family-copy);
+    }
+
+    .footer-email, .footer-name, .footer-disclaimer, .footer-copyright {
+        display:grid;
+        justify-content: center;
+        align-content: center;
         text-align: center;
         width:100%;
+        color:var(--color-dark-blue);
+    }
 
+    .footer-email {
+        padding-top: 1em;
+    }
+
+    .footer-email a {
+        text-decoration: none;
+        color:var(--color-dark-blue);
+    }
+
+    .footer-email a:hover {
+        text-decoration: underline;
+    }
+
+    .footer-socials {
+        display:grid;
+        padding: .5em 0;
+        margin:auto;
+        background-color: white;
+        width:100%;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .grid-socials {
+        display: inline-grid;
+        width:100%;
+        grid-template-columns: repeat(3, 33%);
+
+    }
+
+    .footer-eden-icon, .footer-canadian-icon, .footer-mw-energy-icon {
+        display:grid;
+        align-content: center;
+    }
+
+    .footer-eden-icon {
+        grid-column: 1;
+        justify-content: flex-start;
+    }
+
+    .footer-canadian-icon {
+        grid-column: 2;
+        justify-content: center;
+    }
+
+    .footer-mw-energy-icon {
+        grid-column: 3;
+        justify-content: flex-end;
     }
 
     .footer-copyright {
@@ -146,61 +120,6 @@ and (min-width: 1024px) {
         margin-left:auto;
         margin-right:auto;
         line-height:100%;
-        color:var(--color-dark-blue);
-        font-family: var(--family-copy);
-    }
-
-    .footer-copyright p {
-        font-size:1em;
-    }
-
-    .footer-copyright span {
-        font-size:.7em;
-    }
-
-    .footer-email-icon img {
-        max-width: 100%;
-        height:auto;
-    }
-
-    .footer-email {
-        padding-top: 1em;
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .footer-socials {
-        padding: .5em 0;
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .grid-socials {
-        display: inline-grid;
-        grid-template-columns: repeat(3, 33%);
-        align-content: center;
-        margin:auto;
-    }
-
-    .footer-email-icon, .footer-eden-icon, .footer-canadian-icon, .footer-mw-energy-icon {
-        display:grid;
-        justify-content: center;
-        align-content: center;
-    }
-
-    .footer-eden-icon {
-        grid-column: 1;
-        width:100%;
-    }
-
-    .footer-canadian-icon {
-        grid-column: 2;
-        width:100%;
-    }
-
-    .footer-mw-energy-icon {
-        grid-column: 3;
-        width:100%;
     }
 
 }

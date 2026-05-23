@@ -30,8 +30,9 @@ export class ScreenFormChooseRepOverviewComponent {
   /* *************************************************************************************************************** */
   ngOnInit(): void {
     this.page = 0;
-   // this.initializeData();
     this.clearData();
+   // this.initializeData();
+
     this.setCurrentDateForHeader();
   }
 
@@ -49,15 +50,19 @@ export class ScreenFormChooseRepOverviewComponent {
 
     /* These are the only required fields */
     if (this.rep.client_name.length == 0) {
-      this.errorMessage = "You must enter your full name here.";
+      this.errorMessage = "You must enter your full name below.";
       return;
     }
-    else {
-      this.dataService.splitNames(this.rep.client_name)
-          .subscribe(newName => this.updatedValue = newName);
+    this.dataService.splitNames(this.rep.client_name)
+        .subscribe(newName => this.updatedValue = newName);
 
-      this.rep.client_name = this.updatedValue;
-    }
+    this.rep.client_name = this.updatedValue;
+   // alert("cappedName is " + this.rep.client_name);
+
+    this.dataService.getFirstName(this.rep.client_name)
+        .subscribe(firstName => this.updatedValue = firstName);
+    this.rep.client_first_name = this.updatedValue;
+   // alert("first Name is " + this.rep.client_first_name);
 
     if (this.rep.client_dob != '' && this.rep.client_dob.length > 0) {
 
@@ -307,6 +312,7 @@ export class ScreenFormChooseRepOverviewComponent {
     this.rep.client_postal = "V0E-1M8";
     this.rep.global_province= 'British Columbia';
     this.rep.client_dob = "19621123";
+    this.rep.client_phn= '90210';
 
     this.rep.rep_primary_name='marcus liam allan';
     this.rep.rep_primary_address='207-6911 Salisbury Avenue';
@@ -350,11 +356,11 @@ export class ScreenFormChooseRepOverviewComponent {
   checkFormToCancel(modal: boolean) {
 
     if (modal) {
-      alert("this is a modal  form " + modal)
+    //  alert("this is a modal  form " + modal)
       this.cancelDialogForm();
     }
     if (!modal) {
-      alert("this is NOT a modal  form " + modal)
+    //  alert("this is NOT a modal  form " + modal)
       this.cancelRegularForm();
     }
   }

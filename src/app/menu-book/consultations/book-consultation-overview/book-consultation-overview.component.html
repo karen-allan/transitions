@@ -1,138 +1,139 @@
-
-<div class="header-detail-image">
-    <img src="assets/images/headers/consultations/headerBookConsultation.jpg"  title={{title}}   alt={{title}}>
-</div>
-
-<div class="header-quotes">
-    <div class="header-quote">
-        &#8220;{{ quote }}&#8220;
+<div class="header-detail-image-container">
+    <div class="header-detail-image">
+        <img src="assets/images/headers/consultations/headerBookConsultation.jpg"  title={{title}}   alt={{title}}>
     </div>
-    <div class="header-author">
-        {{ author }}
-    </div>
-</div>
 
-<div class="content-title pad-top">
-    <h1>{{ title }}</h1>
-</div>
-
-<div class="content-copy text-align-left">
-    <p>
-        Please note the information your provide on this form is confidential. You can either print it and bring it with you at our
-        first
-        meeting or - to give me a heads up about your concerns and needs - you can send it beforehand. You can scan it, take
-        screenshots, or
-        ideally save it as a pdf file and attach it in an email. To book an appointment email me at:
-        <a href="mailto:karen@transitionsInEnergy.com">karen&#64;transitionsInEnergy.com</a>.
-    </p>
-</div>
-
-<div class="screen-forms-desktop">
-    <div class="consult-menu-block">
-        <div class="consult-desktop-menu-heading">
-            <h3>I WOULD LIKE TO DISCUSS:</h3>
+    <div class="header-detail-image-quotes">
+        <div class="header-detail-image-quote">
+            &#8220;{{ quote }}&#8220;
         </div>
-
-        <ul class="consult-form-menu">
-            <div class="consult-desktop-menu-item">
-                <li *ngIf="showPlanningEditor">
-                    <h4>{{ consult1a.toUpperCase() }}</h4>
-                </li>
-                <li *ngIf="!showPlanningEditor">
-                    <h4><a (click)="toggleEditor('planning')">{{ consult1a.toUpperCase() }}</a></h4>
-                </li>
-            </div>
-
-            <div class="consult-desktop-menu-item">
-                <li *ngIf="showCaregiverEditor">
-                    <h4>{{ consult2a.toUpperCase() }}</h4>
-                </li>
-                <li *ngIf="!showCaregiverEditor">
-                    <h4><a (click)="toggleEditor('caregiver')">{{ consult2a.toUpperCase() }}</a></h4>
-                </li>
-            </div>
-
-            <div class="consult-desktop-menu-item">
-                <li *ngIf="showPatientEditor">
-                    <h4>{{ consult3a.toUpperCase() }}</h4>
-                </li>
-                <li *ngIf="!showPatientEditor">
-                    <h4><a (click)="toggleEditor('patient')">{{ consult3a.toUpperCase() }}</a></h4>
-                </li>
-            </div>
-        </ul>
-    </div>
-</div>
-
-<div class="screen-forms-mobile">
-    <div class="consult-menu-block">
-        <div class="consult-mobile-menu-heading">
-            <h3>I WOULD LIKE TO DISCUSS:</h3>
+        <div class="header-detail-image-author">
+            {{ author }}
         </div>
-
-        <ul class="consult-form-menu">
-            <div class="consult-mobile-menu-item">
-                <li *ngIf="showPlanningEditor">
-                    <h4> {{ consult1a.toUpperCase() }} </h4>
-                </li>
-                <li *ngIf="!showPlanningEditor">
-                    <h4> <a (click)="toggleEditor('planning')">{{ consult1a.toUpperCase() }}</a></h4>
-                </li>
-            </div>
-
-            <div class="consult-mobile-menu-item">
-                <li *ngIf="showCaregiverEditor">
-                    <h4> {{ consult2a.toUpperCase() }}</h4>
-                </li>
-                <li *ngIf="!showCaregiverEditor">
-                    <h4><a (click)="toggleEditor('caregiver')">{{ consult2a.toUpperCase() }}</a></h4>
-                </li>
-            </div>
-
-            <div class="consult-mobile-menu-item">
-                <li *ngIf="showPatientEditor">
-                    <h4> {{ consult3a.toUpperCase() }} </h4>
-                </li>
-                <li *ngIf="!showPatientEditor">
-                    <h4><a (click)="toggleEditor('patient')">{{ consult3a.toUpperCase() }}</a></h4>
-                </li>
-            </div>
-        </ul>
     </div>
 </div>
 
-<ng-container *ngIf="showPlanningEditor">
-    <div class="consult-menu-prompt-block">
-        <h5>{{ consult1b.toUpperCase() }}</h5>
+<div class="content-container">
+    <div class="content-title pad-top">
+        <h1>{{ title }}</h1>
     </div>
-</ng-container>
 
-<ng-container *ngIf="showCaregiverEditor">
-    <div class="consult-menu-prompt-block">
-        <h5>{{ consult2b.toUpperCase() }}</h5>
+    <div class="content-copy">
+        <p>
+            Please note the information your provide on this form is confidential. You can either print it and bring it with you at our
+            first
+            meeting or - to give me a heads up about your concerns and needs - you can send it beforehand. You can scan it, take
+            screenshots, or
+            ideally save it as a pdf file and attach it in an email. To book an appointment email me at:
+            <a href="mailto:karen@transitionsInEnergy.com">karen&#64;transitionsInEnergy.com</a>.
+        </p>
     </div>
-</ng-container>
 
-<ng-container *ngIf="showPatientEditor">
-    <div class="consult-menu-prompt-block">
-        <h5>{{ consult3b.toUpperCase() }}</h5>
+    <div class="screen-forms-desktop">
+        <div class="consult-menu-block">
+            <div class="consult-desktop-menu-heading">
+                <h2>I WOULD LIKE TO DISCUSS:</h2>
+            </div>
+
+            <ul class="consult-form-menu">
+                <div class="consult-desktop-menu-item">
+                    <li *ngIf="showPlanningEditor">
+                        {{ consult1a.toUpperCase() }}
+                    </li>
+                    <li *ngIf="!showPlanningEditor">
+                        <a (click)="toggleEditor('planning')">{{ consult1a.toUpperCase() }}</a>
+                    </li>
+                </div>
+
+                <div class="consult-desktop-menu-item">
+                    <li *ngIf="showCaregiverEditor">
+                        {{ consult2a.toUpperCase() }}
+                    </li>
+                    <li *ngIf="!showCaregiverEditor">
+                        <a (click)="toggleEditor('caregiver')">{{ consult2a.toUpperCase() }}</a>
+                    </li>
+                </div>
+
+                <div class="consult-desktop-menu-item">
+                    <li *ngIf="showPatientEditor">
+                        {{ consult3a.toUpperCase() }}
+                    </li>
+                    <li *ngIf="!showPatientEditor">
+                        <a (click)="toggleEditor('patient')">{{ consult3a.toUpperCase() }}</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
     </div>
-</ng-container>
 
+    <div class="screen-forms-mobile">
+        <div class="consult-menu-block">
+            <div class="consult-mobile-menu-heading">
+                <h2>I WOULD LIKE TO DISCUSS:</h2>
+            </div>
 
-<ng-container *ngIf="showPlanningEditor">
-    <app-screen-form-planner-consult [client]="client"></app-screen-form-planner-consult>
-</ng-container>
+            <ul class="consult-form-menu">
+                <div class="consult-mobile-menu-item">
+                    <li *ngIf="showPlanningEditor">
+                         {{ consult1a.toUpperCase() }}
+                    </li>
+                    <li *ngIf="!showPlanningEditor">
+                         <a (click)="toggleEditor('planning')">{{ consult1a.toUpperCase() }}</a>
+                    </li>
+                </div>
 
-<ng-container *ngIf="showCaregiverEditor">
-    <app-screen-form-caregiver-consult [client]="client"></app-screen-form-caregiver-consult>
-</ng-container>
+                <div class="consult-mobile-menu-item">
+                    <li *ngIf="showCaregiverEditor">
+                        {{ consult2a.toUpperCase() }}
+                    </li>
+                    <li *ngIf="!showCaregiverEditor">
+                        <a (click)="toggleEditor('caregiver')">{{ consult2a.toUpperCase() }}</a>
+                    </li>
+                </div>
 
-<ng-container *ngIf="showPatientEditor">
-    <app-screen-form-patient-consult [client]="client"></app-screen-form-patient-consult>
-</ng-container>
+                <div class="consult-mobile-menu-item">
+                    <li *ngIf="showPatientEditor">
+                        {{ consult3a.toUpperCase() }}
+                    </li>
+                    <li *ngIf="!showPatientEditor">
+                       <a (click)="toggleEditor('patient')">{{ consult3a.toUpperCase() }}</a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
 
+    <ng-container *ngIf="showPlanningEditor">
+        <div class="consult-menu-prompt-block">
+           <p> {{ consult1b.toUpperCase() }}</p>
+        </div>
+    </ng-container>
 
+    <ng-container *ngIf="showCaregiverEditor">
+        <div class="consult-menu-prompt-block">
+            <p>{{ consult2b.toUpperCase() }}</p>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="showPatientEditor">
+        <div class="consult-menu-prompt-block">
+            <p>{{ consult3b.toUpperCase() }}</p>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="showPlanningEditor">
+        <app-screen-form-planner-consult [client]="client"></app-screen-form-planner-consult>
+    </ng-container>
+
+    <ng-container *ngIf="showCaregiverEditor">
+        <app-screen-form-caregiver-consult [client]="client"></app-screen-form-caregiver-consult>
+    </ng-container>
+
+    <ng-container *ngIf="showPatientEditor">
+        <app-screen-form-patient-consult [client]="client"></app-screen-form-patient-consult>
+    </ng-container>
+
+</div>
 
 
 

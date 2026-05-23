@@ -1,32 +1,26 @@
-
-/*******************************************************************************************************************
-  GLOBAL  content is now 1024 so there must be space on either side up to it
-*******************************************************************************************************************/
+/********************************************************************************************************************/
+/* Put at 90% so there is 5% space on either side as content is 900 max
+/********************************************************************************************************************/
 @media only screen
 and (min-width: 360px)
 and (max-width: 1024px) {
 
-    .content-title, .content-copy, .detail-quotes, .content-list {
-        width: var(--media-less-than-ipad-width);
-        margin-right:5%;
-        margin-left:5%;
-    }
-
-    .content-list {
-        list-style-position: inside;
-        padding-left: 0;
+    .content-container  {
+        width:var(--media-less-than-content-width);
+        margin:auto;
     }
 
 }
 
-/*******************************************************************************************************************
-  GLOBAL anything 900 plus space on either side
-*******************************************************************************************************************/
+/*******************************************************************************************************************/
+/* Over 1024 so can be at 100%
+/*******************************************************************************************************************/
 @media only screen
-and (min-width: 1025px) {
+and (min-width: 1025px)  {
 
-    .content-title, .content-copy, .detail-quotes, .content-list    {
-        width: var(--media-more-than-ipad-width);
+    .content-container  {
+        width:var(--media-more-than-content-width);
+        margin:auto;
     }
 
 }
@@ -38,34 +32,7 @@ and (min-width: 1025px) {
 and (min-width: 360px)
 and (max-width: 767px) {
 
-    /* TITLES */
-    .content-title h1, .content-title h2, .content-title h3, .content-title h4, .content-title h5 {
-        line-height: 100%;
-        padding-top:.5em;
-    }
-
-    .content-title h2, .content-title h4 {
-        padding-top:1em;
-    }
-
-    .content-title h6 {
-        padding-top:.5em;
-    }
-
-    /* COPY */
-    .content-copy p, .detail-quote {
-        line-height: 150%;
-    }
-
-    .detail-quote {
-        padding-top:.5em;
-    }
-
-    .detail-author, .heading-author {
-        padding-bottom:.5em;
-    }
-
-    /* LISTS  */
+    /*Lists*/
     .mobile-list {
         display:block;
     }
@@ -74,21 +41,54 @@ and (max-width: 767px) {
         display:none;
     }
 
-    /* TITLES */
-    .content-title h1 {
-        font-size: var(--h1-mobile);
+    .content-list {
+        list-style-position: inside;
+        padding: 0 .5em;
     }
 
-    .content-title h2,  .content-light-title h2 {
+    /* TITLES */
+    /* main headings and report headings (h5)*/
+    .content-title h1 {
+        padding-top:1em;
+        line-height: 100%;
+        font-size: var(--h1-mobile);
+        text-align:center;
+    }
+
+    .content-title h2 {
+        padding-top:1em;
+        line-height: 100%;
+        font-weight: bold;
         font-size: var(--h2-mobile);
     }
 
-    .content-title h3, .content-title h6 a {
-        font-size: var(--h3-mobile);
+    .content-title h3 {
+        padding-top:1em;
+        line-height: 100%;
+        font-weight: bold;
+        font-size: var(--h2-mobile);
     }
 
-    .content-title h4, .content-title h4 a,  .content-title h5   {
+    .content-title h4 {
         font-size: var(--h4-mobile);
+    }
+
+    .content-title h5 {
+        text-align: left;
+        padding-top:.5em;
+        line-height: 100%;
+        font-size: var(--h4-mobile);
+    }
+
+    .content-title h6 {
+        padding-top:.5em;
+        font-weight: bold;
+        font-size: var(--h2-mobile);
+    }
+
+    /* COPY */
+    .content-copy p, .detail-quote {
+        line-height: 150%;
     }
 
     /* COPY */
@@ -101,132 +101,116 @@ and (max-width: 767px) {
     }
 
     /* DETAIL QUOTES */
-    .detail-quote  {
+    .content-quote  {
         font-size: var(--quote-mobile);
     }
 
-    .detail-author  {
+    .content-author  {
         font-size: var(--author-mobile);
     }
 
     /* LISTS  */
-    .list-item {
+    .list-item, .list-item-white {
         font-size: var(--p-mobile);
+        padding:.5em 0;
 
     }
 }
 
 /*******************************************************************************************************************
-  GLOBAL BIG TABLETS, IPADS, LAPTOPS, DESKTOPS
+  GLOBAL MOBILES, SMALL TABLETS -
 *******************************************************************************************************************/
 @media only screen
-and (min-width:768px) {
+and (min-width: 768px)
+and (max-width: 1023px) {
 
-    /* TITLES */
-    .content-title h1, .content-title h2, .content-title h3, .content-title h4, .content-title h5 {
-        line-height: 110%;
-        padding-top:1em;
-    }
-
-    .content-title h6 {
-        padding-top:1em;
-    }
-
-    /* COPY */
-    .content-copy p {
-        line-height: 150%;
-    }
-
-    /* always ensure that detail quotes have text on top and on bottom of them */
-    .detail-quote {
-        padding-top:1em;
-    }
-
-    .detail-author {
-        padding-bottom:1em;
-    }
-
-    /* LISTS  */
+    /*Lists*/
     .mobile-list {
-        display:none;
-    }
-
-    .desktop-list {
         display:block;
     }
 
+    .desktop-list {
+        display:none;
+    }
+
     .content-list {
-        padding: 1em 0;
+        list-style-position: inside;
+        padding: 0 .5em;
     }
-
-    .list-item {
-        padding-top:1em;
-    }
-
-}
-
-/*******************************************************************************************************************
-  GLOBAL BIG TABLETS
-*******************************************************************************************************************/
-    @media only screen
-    and (min-width: 768px)
-    and (max-width: 1023px) {
 
     /* TITLES */
+    /* main headings and report headings (h5)*/
     .content-title h1 {
-        font-size:var(--h1-tablet);
+        padding-top:1em;
+        line-height: 100%;
+        font-size: var(--h1-mobile);
+        text-align:center;
     }
 
-    .content-title h2,  .content-light-title h2 {
-        font-size: var(--h2-tablet);
+    .content-title h2 {
+        padding-top:1em;
+        line-height: 100%;
+        font-weight: bold;
+        font-size: var(--h2-mobile);
     }
 
-    .content-title h3, .content-title h6 a {
-        font-size: 2em;
+    .content-title h3 {
+        padding-top:1em;
+        line-height: 100%;
+        font-weight: bold;
+        font-size: var(--h2-mobile);
     }
-    /*var(--h3-big-tablet-port);*/
 
-    .content-title h4, .content-title h4 a,  .content-title h5   {
-        font-size: var(--h4-tablet);
+    .content-title h4 {
+        font-size: var(--h4-mobile);
+    }
+
+    .content-title h5 {
+        text-align: left;
+        padding-top:.5em;
+        line-height: 100%;
+        font-size: var(--h4-mobile);
+    }
+
+    .content-title h6 {
+        padding-top:.5em;
+        font-weight: bold;
+        font-size: var(--h2-mobile);
     }
 
     /* COPY */
-    .content-copy {
-        font-size: var(--p-tablet);
+    .content-copy p, .detail-quote {
+        line-height: 150%;
+    }
+
+     /* COPY */
+    .content-copy p {
+        font-size: var(--p-mobile);
     }
 
     .content-copy span {
-        font-size: var(--span-tablet);
-    }
-
-    /* HEADER QUOTES */
-    .header-quote {
-        font-size: var(--header-quote-tablet-);
-    }
-
-    .header-author {
-        font-size: var(--header-author-tablet-);
+        font-size: var(--span-mobile);
     }
 
     /* DETAIL QUOTES */
-    .detail-quote  {
+    .content-quote  {
         font-size: var(--quote-tablet);
     }
 
-    .detail-author  {
+    .content-author  {
         font-size: var(--author-tablet);
     }
 
     /* LISTS  */
-    .list-item {
-        font-size: var(--p-tablet);
-        line-height: 110%;
-    }
+    .list-item, .list-item-white {
+        font-size: var(--p-mobile);
+        padding:.5em 0;
 
+    }
 }
 
 /*******************************************************************************************************************
- GLOBAL IPADS
+ GLOBAL LAPTOPS
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 1024px) {
@@ -234,18 +218,17 @@ and (min-width: 1024px) {
     /* TITLES */
     .content-title h1 {
         font-size:var(--h1-laptop);
+        padding-top:.5em;
     }
 
-    .content-title h2,  .content-light-title h2 {
+    .content-title h2 {
+        padding-top:1em;
         font-size: var(--h2-laptop);
     }
 
-    .content-title h3, .content-title h6 a {
+    .content-title h3 {
         font-size: var(--h3-laptop);
-    }
-
-    .content-title h4, .content-title h4 a,  .content-title h5   {
-        font-size: var(--h4-laptop);
+        padding-top: 1em;
     }
 
     /* COPY */
@@ -262,28 +245,25 @@ and (min-width: 1024px) {
         line-height: 150%;
     }
 
-    /* HEADER QUOTES */
-    .header-quote {
-        font-size: var(--header-quote-laptop);
-    }
-
-    .header-author {
-        font-size: var(--header-author-laptop);
-    }
-
-    /* DETAIL QUOTES */
-    .detail-quote  {
-        font-size: var(--quote-laptop);
-    }
-
-    .detail-author   {
-        font-size: var(--author-laptop);
-    }
-
     /* LISTS  */
     .list-item {
         font-size:var(--p-laptop);
         line-height: 115%;
+    }
+
+    .list-item-small {
+        font-size:1.2em;
+        line-height: 115%;
+    }
+
+    .content-quote {
+        font-size: var(--quote-laptop);
+        line-height: 150%;
+    }
+
+    .content-author {
+        font-size: var(--author-laptop);
+        line-height: 150%;
     }
 
 }
@@ -293,60 +273,57 @@ and (min-width: 1024px) {
 *************************************************************************************************************/
 @media only screen {
 
-    /* TITLES */
-    .content-title {
-        max-width:var(--ipad-width);
+    /* this container sets the max width for the 3 different size ranges and all content goes within it */
+    .content-container {
         display:block;
-        float:left;
+        margin:auto;
+        max-width: var(--ipad-width);
     }
 
-    .content-title h1, .content-title h2, .content-title h3, .content-title h4,
-    .content-title h5, .content-title h6 a {
+    /* TITLES */
+    .content-title  {
+        display:block;
+        float:left;
+        width:100%;
+        margin:auto;
+    }
+
+    /*H1 is one on each page, not linkable. H2 is the smaller heading, not linkable*/
+    .content-title h1, .content-title h2     {
+        color: var(--color-copy-blue);
+    }
+
+    /* H3 is ONLY for close or read forms triggeredSection1 etc and both are linkable */
+    .content-title h3 a {
+        color: var(--color-purple);
+    }
+
+    .content-title h1, .content-title h2, .content-title h3 {
+        transform:scaleY(110%);
+        letter-spacing:2px;
+        text-transform: uppercase;
         font-family: var(--family-title);
         margin:auto;
     }
 
-    .content-title h1, .content-title h2, .content-title h3, .content-title h4, .content-title h5   {
-        color: var(--color-titles);
-    }
-
-    .content-title h1  {
+    .content-title h1 {
+        font-family: var(--family-title);
+        font-weight:bold;
         text-align:center;
     }
 
-    .content-title h2 {
-        font-weight: 700;
-    }
-
-    /* ONLY report menu for consultations headings */
-    .content-title h5 {
-        text-transform: uppercase;
-        text-align:center;
-    }
-
-    /* ONLY close or read forms triggeredSection1 etc */
-    .content-title h6 {
-        color: var(--color-hyperlink);
-        font-weight: bold;
-        text-align:left;
-    }
-
-    .content-title h1 a, .content-title h2 a, .content-title h3 a, .content-title h4 a, .content-title h5 a, .content-title h6 a {
+    .content-title h3 a {
         cursor: pointer;
         text-decoration: none;
     }
 
-    .content-title h1 a:hover, .content-title h2 a:hover, .content-title h3 a:hover, .content-title h4 a:hover,
-    .content-title h5 a:hover, .content-title h6 a:hover {
-        text-decoration: underline;
-    }
-
     /* COPY */
     .content-copy {
-        max-width:var(--ipad-width);
+        width:100%;
         display:block;
         float:left;
         font-family: var(--family-copy);
+        margin:auto;
     }
 
     .content-copy p, .content-copy span {
@@ -372,70 +349,64 @@ and (min-width: 1024px) {
         cursor: pointer;
     }
 
-    /* HEADER QUOTES */
-    .header-quotes {
-        max-width:var(--ipad-width);
+    /* LISTS  */
+    .content-list {
         display:block;
         float:left;
-        font-family: var(--family-quotes);
-        font-style: italic;
-        color:white;
-        background-color: black;
+        margin:auto;
         width:100%;
-        border-top:thick solid gold;
-        border-bottom:thick solid gold;
-        padding:2em 0;
-        text-align: center;
+        list-style-position: initial;
     }
 
-    .header-quote, .header-author {
-        font-style: italic;
-        font-weight: 400;
-        line-height: 100%;
+    .list-item, .list-item-small  {
+        padding-top:1em;
     }
 
-    /* DETAIL QUOTES float left adds about a 1em top margin */
-    .detail-quotes {
+    .list-item-small  {
+        font-weight: bold;
+    }
+
+    .list-item, .list-item a, .list-item-small, .list-item-small a {
+        font-family: var(--family-copy);
+        text-align: left;
+        color:var(--color-copy-blue);
+    }
+
+    .list-item a, .list-item-small a {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .list-item a:hover, .list-item-small a:hover {
+        text-decoration: underline;
+    }
+
+    .content-quotes {
         display:block;
         float:left;
-        max-width:var(--ipad-width);
+        width:100%;
         font-family: var(--family-quotes);
-        text-align: center;
-        padding-bottom:1.0em;
+        padding:1em 0;
     }
 
-    .detail-quote, .detail-author   {
+    .content-quote, .content-author   {
+        display:inline;
         font-weight: bold;
         font-style: italic;
         line-height:100%;
         color:var(--color-background-quotes);
     }
 
-    .detail-author   {
-        padding-top:.5em;
-    }
-
-    /* LISTS  */
-    .content-list {
-        display: block;
+    .content-images, .content-images a   {
+        display:block;
         float:left;
-        max-width: var(--ipad-width);
-        list-style: none;
+        margin:auto;
+        padding:1em 0;
     }
 
-    .list-item, .list-item a {
-        font-family: var(--family-copy);
-        text-align: left;
-        color:var(--color-copy-blue);
-    }
-
-    .list-item a  {
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .list-item a:hover  {
-        text-decoration: underline;
+    .content-images img  {
+        max-width:100%;
+        height:auto;
     }
 
 }

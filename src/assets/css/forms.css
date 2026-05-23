@@ -55,7 +55,7 @@ and (max-width: 767px) {
     }
 
     /* I WOULD LIKE TO DISCUSS */
-    .consult-mobile-menu-heading h3 {
+    .consult-mobile-menu-heading h2 {
         color: var(--color-titles);
         font-family: var(--family-forms);
         text-align: left;
@@ -100,7 +100,7 @@ and (max-width: 767px) {
         font-size:.8em;
     }
 
-    .consult-mobile-menu-heading h3  {
+    .consult-mobile-menu-heading h2  {
         font-size: var(--form-mobile-prompt-title);
     }
 
@@ -125,7 +125,7 @@ and (max-width: 767px) {
     /* text fields and radio button text all smaller than the prompt p above */
     .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
     .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
-        font-size: var(--form-mobile-copy);
+        font-size: var(--form-mobile-label-value);
     }
 
     .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
@@ -173,11 +173,11 @@ and (min-width:768px)   {
         float:left;
         width:90%;
         padding-left: 10%;
-        padding-bottom:.5em;
+        /*padding-bottom:.5em;*/
     }
 
     /* I WOULD LIKE TO DISCUSS */
-    .consult-desktop-menu-heading h3 {
+    .consult-desktop-menu-heading h2 {
         color: var(--color-titles);
         font-family: var(--family-forms);
         text-align: left;
@@ -190,7 +190,14 @@ and (min-width:768px)   {
         width:90%;
         padding-left:10%;
         text-align: left;
-        font-family: var(--family-title);
+        font-family: var(--family-forms);
+        color: var(--color-titles);
+        line-height: 100%;
+    }
+
+    .consult-desktop-menu-item a {
+        text-decoration:underline ;
+        cursor:pointer;
     }
 
     .sub-form-full-block p   {
@@ -252,132 +259,31 @@ and (min-width:768px)   {
         font-size:1em;
     }
 
-}
-
-/*******************************************************************************************************************
-  GLOBAL SMALL MOBILES - PORTRAIT
-*******************************************************************************************************************/
-/*@media only screen
-and (min-width: 320px)
-and (max-width:767px) {*/
-
-   /* .consult-mobile-menu-heading h3  {
-        font-size: var(--form-mobile-prompt-title);
-    }
-
-    .consult-mobile-menu-item h4   {
-        padding-left: 1em;
-        font-size: var(--form-mobile-menu-title);
-    }
-
-    .consult-menu-prompt-block h5    {
-        font-size: var(--form-mobile-menu-title);
-    }
-
-    !* the questions/prompts*!
-    .sub-form-full-block p   {
-        font-size: var(--form-mobile-question);
-    }
-
-    .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
-        font-size: var(--form-mobile-answer);
-    }
-
-    !* text fields and radio button text all smaller than the prompt p above *!
-    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
-        font-size: var(--form-mobile-copy);
-    }
-
-    .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--form-mobile-checkbox);
-    }
-
-    .sub-form-text-area  {
-        font-size: var(--form-mobile-answer);
-    }
-
-    .consult-disclaimer-title h4 {
-        font-size: var(--form-mobile-menu-title);
-    }
-
-    .form-error-message {
-        font-size: var(--form-mobile-menu-title);
-    }*/
-
-
-/*!*******************************************************************************************************************
- GLOBAL BIG TABLETS - PORTRAIT
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 768px)
-and (max-width:1023px) {
-
-    .consult-desktop-menu-heading h3  {
+    .consult-desktop-menu-heading h2  {
         font-size: var(--form-laptop-prompt-title);
     }
 
-    .consult-desktop-menu-item h4, .consult-menu-prompt-block h5    {
+    .consult-desktop-menu-item     {
+        font-size: var(--form-laptop-menu-title);
+        padding-top:1em;
+    }
+
+    .consult-menu-prompt-block p {
         font-size: var(--form-laptop-menu-title);
     }
 
-    /* the questions/prompts*/
     .sub-form-full-block p   {
         font-size: var(--form-laptop-question);
     }
 
-    /* text fields and radio button text all smaller than the prompt p above */
+    .sub-form-title p   {
+        font-size: var(--form-laptop-menu-title);
+    }
+
     .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
     .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
-        font-size: var(--form-laptop-label-value);
-    }
-
-    .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
-        font-size: var(--form-laptop-answer);
-    }
-
-    .sub-form-full-check-col, .sub-form-first-check-col, .sub-form-second-check-col, .sub-form-third-check-col  {
-        font-size: var(--form-laptop-checkbox);
-    }
-
-    .sub-form-text-area  {
-        font-size: var(--form-laptop-answer);
-    }
-
-    .consult-disclaimer-title h4 {
-        font-size: var(--form-laptop-menu-title);
-    }
-
-    .form-error-message {
-        font-size: var(--form-laptop-menu-title);
-    }
-
+    font-size: var(--form-laptop-label-value);
 }
-
-/*******************************************************************************************************************
- GLOBAL IPADS, LAPTOPS
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 1024px) {
-
-    .consult-desktop-menu-heading h3  {
-        font-size: var(--form-laptop-prompt-title);
-    }
-
-    .consult-desktop-menu-item h4, .consult-menu-prompt-block h5    {
-        font-size: var(--form-laptop-menu-title);
-    }
-
-    /* the questions/prompts*/
-    .sub-form-full-block p   {
-        font-size: var(--form-laptop-question);
-    }
-
-    /* text fields and radio button text all smaller than the prompt p above */
-    .sub-form-full-col-value, .sub-form-full-col-label,  .sub-form-first-col-value, .sub-form-second-col-value, .sub-form-third-col-value,
-    .sub-form-first-col-label, .sub-form-second-col-label, .sub-form-third-col-label   {
-        font-size: var(--form-laptop-label-value);
-    }
 
     .sub-form-full-radio-col, .sub-form-first-radio-col, .sub-form-second-radio-col, .sub-form-third-radio-col {
         font-size: var(--form-laptop-answer);
@@ -414,18 +320,18 @@ and (min-width: 1024px) {
         border-top:dashed thin var(--color-grey);
     }
 
-    .consult-desktop-menu-item h4, .consult-mobile-menu-item h4  {
+    .consult-desktop-menu-item {
         cursor: default;
         color: var(--color-sel-form-menu-item);
     }
 
-    .consult-desktop-menu-item h4 a, .consult-mobile-menu-item h4 a {
+    .consult-desktop-menu-item a {
         cursor:pointer;
         text-decoration: none;
         color: var(--color-titles);
     }
 
-    .consult-desktop-menu-item h4 a:hover, .consult-mobile-menu-item h4 a:hover {
+    .consult-desktop-menu-item a:hover, .consult-mobile-menu-item a:hover {
         text-decoration: underline;
     }
 
@@ -443,7 +349,7 @@ and (min-width: 1024px) {
         margin:auto;
     }
 
-    .consult-menu-prompt-block h5 {
+    .consult-menu-prompt-block p {
         font-family: var(--family-title);
         margin:auto;
         color: var(--color-white);
@@ -526,7 +432,7 @@ and (min-width: 1024px) {
     }
 
     .sub-form-full-block p {
-        /*display:block;*/
+        margin:0;
         padding: 1em .5em 0 .5em;
         font-family: var(--family-copy);
         font-style: italic;

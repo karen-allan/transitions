@@ -79,8 +79,8 @@ export const FACTS: FactObject[] = [
 
     {
         id:9,
-        copy:"A 2020 study noted that of Canada’s 17 medical schools, undergraduate palliative care rotations were only mandatory at two" +
-            " schools.",
+        copy:"A 2020 study noted that in only 2 of Canada’s 17 medical schools, undergraduate palliative care rotations were mandatory",
+
         url: "https://healthydebate.ca/2024/10/topic/mandatory-palliative-care-clinical-rotations/",
         citation:"The case for mandatory palliative care clinical rotations’",
         sup:10,
@@ -140,7 +140,7 @@ export const FACTS: FactObject[] = [
 
     {
         id:16,
-        copy:"70% of elderly patients, asked doctors for comfort measures only, however 54% were admitted to ICUs where they died alone.",
+        copy:"70% of elderly patients, asked doctors for comfort measures only, however 54% were admitted to solitary ICUs.",
         url: "https://www.cahs-acss.ca/wp-content/uploads/2013/08/End-of-Life-Care-in-Canada.pdf",
         citation:"Dept. of Medicine: Toronto - End-of-Life Care in Canada",
         sup:17,

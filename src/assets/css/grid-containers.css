@@ -6,14 +6,8 @@
 and (min-width: 360px)
 and (max-width: 1024px) {
 
-    .home-facts-container, .wizard-intro-container, .charges-grid, .testimonials-grid  {
-        width: var(--media-less-than-ipad-width);
-        margin-right:5%;
-        margin-left:5%;
-    }
-
-    .about-us-container {
-        width:100%;
+    .home-facts-container, .about-us-container,  .wizard-intro-container, .charges-grid, .testimonials-grid  {
+        width: var(--media-unaffected-by-content-width);
     }
 
 }
@@ -25,8 +19,12 @@ and (max-width: 1024px) {
 and (min-width: 1025px) {
 
     .home-facts-container, .about-us-container,  .wizard-intro-container, .charges-grid, .testimonials-grid  {
-        width: var(--media-more-than-ipad-width);
+        width: var(--media-unaffected-by-content-width);
     }
+
+  /*  .wizard-intro-container, .charges-grid, .testimonials-grid,   .about-us-container,   {
+        width: var(--media-more-than-content-width);
+    }*/
 }
 
 /*******************************************************************************************************************
@@ -39,18 +37,30 @@ and (min-width: 360px)
 and (max-width: 767px) {
 
     /* HOME PAGE FACTS */
-    .home-facts-container {
-        display: grid;
-        align-content: center;
-        justify-content: center;
-        background-color: #ffffff;
+    .home-facts-block {
+        max-width: var(--phone-width);
     }
 
-    .facts-inline-image {
-        display:grid;
-        grid-column:1;
-        justify-content: center;
-        align-content: center;
+    .facts-block-list {
+        display: block;
+        /*max-width:var(--min-laptop-width);*/
+        list-style: none;
+        margin:auto;
+    }
+
+    .facts-block-list-item {
+        padding-top:.8em;
+        float:left;
+    }
+
+    .facts-block-list-item a {
+        color:var(--color-dark-blue);
+        text-decoration: none;
+        text-align: left;
+    }
+
+    .facts-block-list-item a:hover {
+        text-decoration: underline;
     }
 
     .about-us-container  {
@@ -70,7 +80,7 @@ and (max-width: 767px) {
         font-family: var(--family-copy);
     }
 
-    .about-us-text h3 {
+    .about-us-text h2 {
         padding-top:1em;
         text-align:center;
         margin:0;
@@ -140,8 +150,8 @@ and (max-width: 767px) {
   */
 
     /* ABOUT  */
-    .about-us-text h3 {
-        font-size:var(--h3-mobile);
+    .about-us-text h2 {
+        font-size:var(--h2-mobile);
     }
 
     .about-us-text p, .about-us-text p a {
@@ -149,16 +159,16 @@ and (max-width: 767px) {
     }
 
     /* WIZARD INTRO mobile 1 col  bigger size font */
-    .wizard-intro-text h3 {
-        font-size:var(--h3-mobile);
+    .wizard-intro-text h2 {
+        font-size:var(--h2-mobile);
     }
 
     .wizard-intro-text p {
         font-size:var(--p-mobile);
     }
 
-    .charges-grid h3 {
-        font-size:var(--h3-mobile);
+    .charges-grid h2 {
+        font-size:var(--h2-mobile);
     }
 
     .charges-grid p {
@@ -177,53 +187,63 @@ and (max-width: 767px) {
 
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 768px) {
-
-    /* HOME PAGE */
-    /* images are 500 square which are 49% of ipad width 1024 */
+and (min-width: 768px)
+and (max-width:1024px) {
 
     /* HOME PAGE laptop smaller size font */
+    .home-facts-block {
+        max-width: var(--tablet-width);
+    }
+
      .home-facts-container {
         display: inline-grid;
         grid-template-columns: 49% 51%;
-        align-content: center;
+        /*max-width:var(--min-laptop-width);*/
+        margin:auto;
     }
 
     .facts-inline-image {
         display:grid;
         grid-column:1;
+        text-align: center;
+        margin:auto;
+    }
+
+    .facts-inline-image img  {
+        max-width: 100%;
+        height:auto;
     }
 
     .facts-inline-text {
         display: grid;
         grid-column:2;
-        /*height:100%;*/
-        background: var(--color-text-background);
+        background-color: var(--color-black);
         align-content:center;
         justify-content: flex-start;
+        border-right: thin dotted white;
     }
 
     .facts-inline-list {
         display: block;
         float:left;
         list-style: none;
-        padding-left: 1em;
-        padding-right:1em;
     }
 
-    .facts-list-item:first-child {
-        padding-top:0;
+    .facts-inline-list-item {
+        padding-top:.5em;
+        padding-right:.5em;
     }
 
-    .facts-list-item a {
+    .facts-inline-list-item a {
         color:var(--color-white);
         text-decoration: none;
         text-align: left;
     }
 
-    .facts-list-item a:hover {
+    .facts-inline-list-item a:hover {
         text-decoration: underline;
     }
+
 
     /* ABOUT US PAGE uses content copy and title which already set the width as more than media */
     .about-us-container {
@@ -248,7 +268,7 @@ and (min-width: 768px) {
         /*radial-gradient(circle at 100px 100px, #e8edef, #000);*/
      }
 
-    .about-us-text h3 {
+    .about-us-text h2 {
         padding-top:1em;
         text-align:center;
         font-family: var(--family-title);
@@ -280,7 +300,7 @@ and (min-width: 768px) {
     }
 
     /* laptop with link */
-    .wizard-intro-text a h3 {
+    .wizard-intro-text a h2 {
         text-align: left;
     }
 
@@ -293,7 +313,7 @@ and (min-width: 768px) {
         font-family: var(--family-copy);
     }
 
-    .wizard-intro-text a h3 {
+    .wizard-intro-text a h2 {
         font-family: var(--family-title);
     }
 
@@ -312,119 +332,28 @@ and (min-width: 768px) {
 
 }
 
-
 /*******************************************************************************************************************
-  GLOBAL BIG TABLETS
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 768px)
-and (max-width: 1023px) {
 
-    /* HOME FACTS */
-    .facts-list-item {
-        line-height: 90%;
-    }
+    ie TWO COLUMN GRIDS
 
-
-
-    .facts-list-item {
-        padding-top:1em;
-    }
-
-    .facts-list-item a {
-        font-size:var(--p-tablet-facts-grid);
-    }
-
-    /* ABOUT */
-    .about-us-text h3 {
-        font-size:var(--h3-tablet-grid);
-    }
-
-    .about-us-text p, .about-us-text p a {
-        font-size:var(--p-tablet-grid);
-    }
-
-    /* WIZARD INTRO
-   these are for the anchored text which we want smaller than the regular p text */
-    .wizard-intro-text a h3 {
-        font-size:var(--h3-tablet-grid);
-    }
-
-    .wizard-intro-text a p {
-        font-size:var(--p-tablet-grid);
-    }
-
-    /* TESTIMONIALS */
-    .charges-grid p {
-        font-size:var(--p-tablet);
-    }
-
-    .charges-grid-span {
-        font-size:var(--span-tablet);
-    }
-
-}
-
-/*******************************************************************************************************************
- GLOBAL IPADS, LAPTOPS and UP
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 1024px) {
 
-    /* HOME FACTS */
-    .facts-list-item {
-        padding-top:1em;
+    .home-facts-block {
+        max-width:var(--ipad-width);
     }
 
-    .facts-list-item a {
-        font-size:var(--p-laptop-grid);
-        /*line-height:100%;*/
-
-    }
-
-    /* ABOUT  */
-    .about-us-text h3 {
-        font-size:var(--h3-laptop-grid);
-    }
-
-    .about-us-text p, .about-us-text p a {
-        font-size:var(--p-laptop-grid);
-    }
-
-    /* WIZARD INTRO */
-    .wizard-intro-text a h3 {
-        font-size:var(--h3-laptop-grid);
-    }
-
-    .wizard-intro-text a p {
-        font-size:var(--p-laptop-grid);
-    }
-
-    /* TESTIMONIAL AND CHARGES PAGE */
-   .charges-grid h3 {
-       font-size:var(--h3-laptop);
-   }
-
-   .charges-grid p {
-       font-size:var(--p-laptop);
-   }
-
-   .charges-grid-span {
-       font-size:var(--span-laptop);
-   }
-
-}
-
-/* GLOBAL ****************************************************************************************************/
-@media only screen {
-
-    /* HOME PAGE FACTS */
-    .home-facts-container{
-        max-width: var(--ipad-width);
-        font-family:var(--family-copy);
+    .home-facts-container {
+        display: inline-grid;
+        grid-template-columns: 49% 51%;
+        /*max-width:var(--ipad-width);*/
+        margin:auto;
     }
 
     .facts-inline-image {
+        display:grid;
+        grid-column:1;
         text-align: center;
         margin:auto;
     }
@@ -432,6 +361,137 @@ and (min-width: 1024px) {
     .facts-inline-image img  {
         max-width: 100%;
         height:auto;
+    }
+
+    .facts-inline-text {
+        display: grid;
+        grid-column:2;
+        background-color: var(--color-black);
+        align-content:center;
+        justify-content: flex-start;
+        border-right: thin dotted white;
+    }
+
+    .facts-inline-list {
+        display: block;
+        float:left;
+        list-style: none;
+    }
+
+    .facts-inline-list-item {
+        padding-top:.5em;
+        padding-right:.5em;
+    }
+
+    .facts-inline-list-item a {
+        color:var(--color-white);
+        text-decoration: none;
+        text-align: left;
+    }
+
+    .facts-inline-list-item a:hover {
+        text-decoration: underline;
+    }
+
+
+    /* ABOUT US PAGE uses content copy and title which already set the width as more than media */
+    .about-us-container {
+        display: inline-grid;
+        grid-template-columns: 49% 51%;
+        align-content: center;
+    }
+
+    .about-us-image  {
+        display:grid;
+        grid-column:1;
+    }
+
+    /*.about-text  {*/
+    .about-us-text {
+        display: grid;
+        grid-column: 2;
+        padding:0 2em;
+        align-content: center;
+        font-family: var(--family-copy);
+        background-color: #5a5d5e
+        /*radial-gradient(circle at 100px 100px, #e8edef, #000);*/
+    }
+
+    .about-us-text h2 {
+        padding-top:1em;
+        text-align:center;
+        font-family: var(--family-title);
+    }
+
+    .about-us-text p, .about-us-text p a {
+        text-align: justify;
+        line-height:120%;
+    }
+
+    /* WIZARDS INTROS */
+    .wizard-intro-container {
+        display: inline-grid;
+        grid-template-columns: 49% 51%;
+        border-radius: 10px 40px 40px 10px;
+        margin-top:2em;
+        align-content: center;
+    }
+
+    .wizard-intro-image {
+        display: grid;
+        grid-column:1;
+    }
+
+    .wizard-intro-text {
+        display: grid;
+        grid-column: 2;
+        padding:0 2em;
+    }
+
+    /* laptop with link */
+    .wizard-intro-text a h2 {
+        text-align: left;
+    }
+
+    .wizard-intro-text a p {
+        cursor:pointer;
+        text-decoration: none;
+    }
+
+    .wizard-intro-text a p {
+        font-family: var(--family-copy);
+    }
+
+    .wizard-intro-text a h2 {
+        font-family: var(--family-title);
+    }
+
+    /* TESTIMONIALS */
+    .charges-grid {
+        padding:1em;
+    }
+
+    .testimonial-row-1, .testimonial-row-2, .testimonial-row-3, .testimonial-row-4, .testimonial-row-5, .testimonial-row-6, .testimonial-row-7  {
+        padding:1em;
+    }
+
+    .bevelled-edges {
+        width:70%;
+    }
+
+}
+
+/* GLOBAL ****************************************************************************************************/
+@media only screen {
+
+    /* HOME PAGE FACTS */
+    .home-facts-block {
+        display:block;
+        margin:auto;
+    }
+
+    .home-facts-container {
+        margin:auto;
     }
 
     /* ABOUT US PAGE */
@@ -505,7 +565,7 @@ and (min-width: 1024px) {
         text-align:center;
     }
 
-    .charges-grid h3 {
+    .charges-grid h2 {
         font-family: var(--family-title);
         text-align:center;
         color:var(--color-titles);

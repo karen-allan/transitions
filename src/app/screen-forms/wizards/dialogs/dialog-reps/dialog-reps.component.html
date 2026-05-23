@@ -5,9 +5,11 @@
         [modal]='modal'>
     </app-dialog-header>
 
-    <app-screen-form-choose-rep-overview
-        [event]="event"
-        [rep]="rep"
-        [modal]="modal">
-    </app-screen-form-choose-rep-overview>
+    <div class="modal-inner-block-rep">
+        <app-screen-form-choose-rep-overview
+            [event]="event"
+            [rep]="rep"
+            [modal]="modal">
+        </app-screen-form-choose-rep-overview>
+    </div>
 </ng-container>

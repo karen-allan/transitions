@@ -40,6 +40,7 @@
         align-content: center;
         grid-template-columns: 40% 60%;
         width: 100%;
+        /*background-color: red;*/
     }
 
     .print-header-logo {
@@ -106,7 +107,7 @@
         font-weight:normal;
     }
 
-    .print-title h3  {
+    .print-title h2  {
         font-size: var(--form-last-title);
         margin-top:.5em;
     }

@@ -1,110 +1,94 @@
 
-
-<div class="header-detail-image">
-    <img src="assets/images/headers/takeAction/headerChooseReprentatives.jpg"  title={{title}}   alt={{title}}>
-</div>
-
-<div class="header-quotes">
-    <div class="header-quote">
-        &#8220;{{quote}}&#8220;
+<div class="header-detail-image-container">
+    <div class="header-detail-image">
+        <img src="assets/images/headers/takeAction/headerChooseRepresentatives.jpg"  title={{title}}   alt={{title}}>
     </div>
-    <div class="header-author">
-        {{author}}
-    </div>
-</div>
 
-<div class="laptopForm">
-    <div class="wizard-intro-container">
-        <div class="wizard-intro-image">
-            <a (click)="openModal()">
-                <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsIntro.jpg"
-                title="{{title}}" alt= "{{title}}">
-            </a>
+    <div class="header-detail-image-quotes">
+        <div class="header-detail-image-quote">
+            &#8220;{{ quote }}&#8220;
         </div>
-
-        <div class="wizard-intro-text">
-            <a (click)="openModal()">
-                <h3>{{ title.toUpperCase() }}</h3>
-                <p>
-                    Completing this <b>{{title}}</b> wizard will help you document who you trust to protect, defend and
-                    support you as your Representative. This document is valid as long
-                    as it is signed and witnessed. No need to pay a lawyer!
-                    <br><br>
-                    <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
-                    as a PDF file. This wizard is only available on an ipad, laptop or desktop.
-                </p>
-            </a>
+        <div class="header-detail-image-author">
+            {{ author }}
         </div>
     </div>
 </div>
 
-<div class="mobileForm">
-    <div class="wizard-intro-container">
-        <div class="wizard-intro-image">
-            <a routerLink="/callScreenFormChooseReps">
-                <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsIntro.jpg"
-                     title="choose your reps"
-                     alt="choose your reps">
-            </a>
-        </div>
+<div class="content-container">
+    <div class="laptopForm">
+        <div class="wizard-intro-container">
+            <div class="wizard-intro-image">
+                <a (click)="openModal()">
+                    <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsIntro.jpg"
+                    title="{{title}}" alt= "{{title}}">
+                </a>
+            </div>
 
-        <div class="wizard-intro-text">
-            <a routerLink="/callScreenFormChooseReps">
-                <div class="content-title">
-                    <h1>{{ title.toUpperCase() }}</h1>
-                </div>
-                <div class="content-copy text-align-justify">
+            <div class="wizard-intro-text">
+                <a (click)="openModal()">
+                    <h2>{{ title.toUpperCase() }}</h2>
                     <p>
                         Completing this <b>{{title}}</b> wizard will help you document who you trust to protect, defend and
                         support you as your Representative. This document is valid as long
                         as it is signed and witnessed. No need to pay a lawyer!
                         <br><br>
                         <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
-                        as a PDF file. This wizard is only available on an ipad, laptop or desktop.
+                        as a PDF file. Once you close without printing, all that hard work is lost so make sure to save or print your
+                        report.
                     </p>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
+    </div>
+
+    <div class="mobileForm">
+        <div class="wizard-intro-container">
+            <div class="wizard-intro-image">
+                <a routerLink="/callScreenFormChooseReps">
+                    <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsIntro.jpg"
+                         title="choose your reps"
+                         alt="choose your reps">
+                </a>
+            </div>
+
+            <div class="wizard-intro-text">
+                <a routerLink="/callScreenFormChooseReps">
+                    <div class="content-title">
+                        <h1>{{ title }}</h1>
+                    </div>
+                    <div class="content-copy text-align-justify">
+                        <p>
+                            Completing this <b>{{title}}</b> wizard will help you document who you trust to protect, defend and
+                            support you as your Representative. This document is valid as long
+                            as it is signed and witnessed. No need to pay a lawyer!
+                            <br><br>
+                            <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
+                            as a PDF file. Once you close without printing, all that hard work is lost so make sure to save or print your
+                            report.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-title">
+        <h2>
+            Need to Learn More First?
+        </h2>
+    </div>
+
+    <div class="content-copy">
+        <p>
+            If you are unsure about the need to nail down one or two trusted advocates to represent you should you need them in the future,
+            please read more about this important subject on our
+            <b><a target="new" routerLink={{pathObject.child2_url}} > {{pathObject.parent_name}} > {{pathObject.child2_name}}</a></b> page.
+            <br><br>
+            Preparing is smart, it is thoughtful and it is the mature thing to do, no matter how uncomfortable. And once done, you will feel a
+            sense of relief!
+        </p>
     </div>
 </div>
 
 
-<!--<div class="content-title">
-    <h3>
-        Need to Learn More First?
-    </h3>
-</div>
 
-<div class="content-copy">
-    <p>
-        If you are unsure about the need to nail down one or two trusted advocates to represent you should you need them in the future,
-        please read more about this important subject on our
-        <b><a target="new" routerLink={{pathObject.child2_url}} > {{pathObject.parent_name}} > {{pathObject.child2_name}}</a></b> page.
-        <br><br>
-        Preparing is smart, it is thoughtful and it is the mature thing to do, no matter how uncomfortable. And once done, you will feel a
-        sense of relief!
-    </p>
-</div>-->
-
-
-
-<!--<div class="mobileForm">
-    <div class="wizard-intro-container">
-        <div class="wizard-intro-image">
-            <img src="assets/images/details/takeAction/chooseRepresentatives/wizardActionChooseRepsIntro.jpg"
-                 title="{{title}}" alt= "{{title}}">
-        </div>
-
-        <div class="wizard-intro-text">
-            <h3>{{ title.toUpperCase() }}</h3>
-            <p>
-                Completing this <b>{{title}}</b> wizard will help you document who you trust to protect, defend and
-                support you as your Representative. Although there are many versions of this document, this document is valid as long
-                as it is signed and witnessed. No need to pay a lawyer!
-                <br><br>
-                <b>Please Note:</b> At this time the {{ title }} wizard is only available on ipads, laptops, desktops and up. To
-                follow this wizard please connect to it via one of these devices.
-            </p>
-        </div>
-    </div>
-</div>-->

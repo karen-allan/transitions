@@ -47,8 +47,7 @@ export class WriteAdvanceDirectiveOverviewComponent {
     // The user can't close the dialog by clicking outside its body
     dialogConfig.disableClose = false;
     dialogConfig.id = "advance-directive-modal";
-    dialogConfig.maxWidth='1024px'
-    dialogConfig.minWidth='768px'
+    dialogConfig.maxWidth='768px'
 
     let modalDialog = this.matDialog.open(DialogDirectiveComponent, dialogConfig);
 

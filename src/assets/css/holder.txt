@@ -9,14 +9,10 @@ and (max-width:767px) {
     /*************************************** WIZARD DIALOG HEADER FOR MOBILES *************************************/
     .wizard-form-header {
         display: grid;
-        /*width: 100%;*/
+        width: 100%;
         border-bottom:thin solid var(--color-dark-blue);
-
+        background-color: white;
         align-content: center;
-        border-top:thick solid var(--color-dark-blue);
-        border-left:thick solid var(--color-dark-blue);
-        border-right:thick solid var(--color-dark-blue);
-        /*border-top-right-radius: 20%;*/
     }
 
     .wizard-form-logo {
@@ -53,6 +49,7 @@ and (max-width:767px) {
         align-content: flex-end;
         grid-template-columns: repeat(2, 100px);
         grid-column-gap: 2px;
+        /*background-color: red;*/
     }
 
     .form-three-buttons-row {
@@ -63,8 +60,12 @@ and (max-width:767px) {
         align-content: flex-end;
         grid-template-columns: repeat(3, 100px);
         grid-column-gap: 2px;
+
     }
 
+    .red {
+        color:red;
+    }
     .form-start-button, .form-cancel-start-button, .form-next-button, .form-previous-button,
     .form-cancel-button, .form-print-button, .form-cancel-print-button {
         display: block;
@@ -72,7 +73,8 @@ and (max-width:767px) {
         background-color: var(--color-dark-blue);
         border-radius: 1em;
         text-align: center;
-        font-size: var(--form-buttons);
+        font-size: var(--big-buttons);
+        /*width: 120px;*/
         height: 40px;
         cursor: pointer;
     }
@@ -89,16 +91,168 @@ and (max-width:767px) {
         grid-column: 3;
     }
 
-    /******************************************** FORM LABELS AND VALUES *************************************/
+ /*   .form-three-thirty-block, .form-seventy-thirty-block, .form-name-label-value-block, .form-sixty-forty-block,
+    .form-forty-sixty-block, .form-two-fifty-block, .form-three-radio-block, .form-eighty-twenty-block  {
+        width: 100%;
+        text-align: left;
+        padding:.8em 0;
+    }
+
+    .form-three-thirty-block {
+        display: inline-grid;
+        grid-template-columns: 30% 30% 40%;
+    }
+
+    .form-three-radio-block {
+        display: inline-grid;
+        grid-template-columns: 30% 30% 40%;
+    }
+
+    .form-forty-sixty-block {
+        display: inline-grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .form-seventy-thirty-block {
+        display: inline-grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .form-eighty-twenty-block {
+        display: inline-grid;
+        grid-template-columns: 80% 20%;
+    }
+
+    .form-twenty-eighty-block {
+        display: inline-grid;
+        grid-template-columns: 20% 80%;
+    }
+
+    .form-two-fifty-block {
+        display: inline-grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .form-sixty-forty-block {
+        display: inline-grid;
+        grid-template-columns: 60% 40%;
+    }
+
+    !********************************************* FORM LABELS AND VALUES *************************************/
+
     .form-one-col-label, .form-one-col-value {
         display: grid;
         width: 100%;
         color: var(--color-dark-blue);
         font-family: var(--family-forms);
         text-align: left;
-        font-size: var(--form-label);
+        font-size: var(--form-wizard-label-value);
         padding-top:1em;
     }
+
+
+
+    /*
+    .form-first-col-label, .form-second-col-label, .form-third-col-label, .form-forth-col-label,
+    .form-first-col-value, .form-second-col-value, .form-third-col-value, .form-forth-col-value,
+    .form-both-first-col-label, .form-both-second-col-label, .form-both-third-col-label,
+    .form-both-first-col-value, .form-both-second-col-value, .form-both-third-col-value {
+        display: grid;
+        width: 100%;
+        color: var(--color-dark-blue);
+        font-family: var(--family-forms);
+        text-align: left;
+        font-size: var(--form-wizard-label-value);
+    }
+
+
+    .form-both-first-col-label,  .form-both-first-col-value {
+        grid-column:1;
+    }
+
+    .form-both-second-col-label,  .form-both-second-col-value {
+        grid-column:2;
+    }
+
+    .form-both-third-col-label,  .form-both-third-col-value {
+        grid-column:3;
+    }
+
+    .form-first-col-label, .form-first-col-value {
+        grid-column: 1;
+    }
+
+    .form-second-col-label, .form-second-col-value {
+        grid-column: 2;
+    }
+
+    .form-third-col-label, .form-third-col-value {
+        grid-column: 3;
+    }
+
+    .form-forth-col-label, .form-forth-col-value {
+        grid-column: 4;
+    }
+
+    .form-first-col-label, .form-second-col-label, .form-third-col-label, .form-forth-col-label {
+        align-content: center;
+    }
+
+    .form-first-col-value, .form-second-col-value, .form-third-col-value, .form-forth-col-value {
+        padding:.1em 0;
+    }
+*/
+    /********************************************* BUTTON CONTAINERS *************************************/
+   /* .form-two-buttons-row {
+        display: inline-grid;
+        width: 100%;
+        height:40px;
+        justify-content: flex-end;
+        align-content: flex-end;
+        grid-template-columns: repeat(2, 70px);
+        grid-column-gap: 2px;
+        margin-top:1em;
+    }
+
+    .form-three-buttons-row {
+        display: inline-grid;
+        width: 100%;
+        height:40px;
+        justify-content: flex-end;
+        align-content: flex-end;
+        grid-template-columns: repeat(3, 70px);
+        grid-column-gap: 2px;
+        margin-top:1em;
+    }*/
+
+    /********************************************* BUTTONS *************************************/
+   /* .form-start-button, .form-cancel-start-button, .form-next-button, .form-previous-button,
+    .form-cancel-button, .form-print-button, .form-cancel-print-button {
+        display: grid;
+        color: var(--color-white);
+        background-color: var(--color-dark-blue);
+        border-radius: 1em;
+        text-align: center;
+        align-content: center;
+        font-size: var(--small-buttons);
+        width: 70px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .form-start-button, .form-next-button, .form-print-button {
+        grid-column: 1;
+    }
+
+    .form-cancel-start-button, .form-previous-button {
+        grid-column: 2;
+    }
+
+    .form-cancel-button, .form-cancel-print-button {
+        grid-column: 3;
+    }*/
+
+
 
 }
 
@@ -109,17 +263,6 @@ and (max-width:767px) {
 and (min-width:768px) {
 
 /************************************************** WIZARD DIALOG HEADERS ************************************/
-    .wizard-modal-overlay {
-        display: block;
-        float:left;
-        width: 100%;
-        margin:0;
-        border-top:thick solid var(--color-dark-blue);
-        border-bottom:thick solid var(--color-dark-blue);
-        background-color: pink;
-        /*align-items: flex-start;*/
-    }
-
     .wizard-modal-header {
         display: inline-grid;
         grid-template-columns: 25% 75%;
@@ -128,7 +271,7 @@ and (min-width:768px) {
         border-top:thick solid var(--color-dark-blue);
         border-bottom:thick solid var(--color-dark-blue);
         background-color: white;
-        /*align-items: flex-start;*/
+        align-content: center;
     }
 
     .wizard-modal-logo {
@@ -158,48 +301,27 @@ and (min-width:768px) {
 
 /************************************************** MAT DIALOG BOXES *************************************/
     mat-dialog-container#make-wishes-modal,  mat-dialog-container#choose-rep-modal, mat-dialog-container#advance-directive-modal  {
-        /*display: block;*/
-        /*float: left;*/
-        /*margin: auto;*/
-        /*width:100%;*/
-        /*border: 3px solid var(--color-soft-blue);*/
-        /*background-color: var(--color-soft-blue);*/
-        /*border-radius: 2em!important;*/
-
-     /*   position: fixed;
-        inset: 0; !* Shorthand for top, bottom, left, right: 0 *!
-        display: grid;
-        place-items: center; !* Centers both ways *!
-        background: rgba(0, 0, 0, 0.5);*/
-    }
-
-    .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background: rgba(144, 0, 0, 0.5); /* Dimmed background */
-
-        /* The magic: */
-        display: flex;
-        justify-content: center; /* Horizontal center */
-        align-items: center;     /* Vertical center */
+        display: block;
+        float: left;
+        margin: auto;
+        width:100%;
+        border: 3px solid var(--color-soft-blue);
+        background-color: var(--color-soft-blue);
+        border-radius: 2em!important;
     }
 
 /************************************************** INNER BLOCKS *************************************/
     .modal-inner-block-wishes, .modal-inner-block-rep, .modal-inner-block-plan  {
-        display: block;
+        display: grid;
         float: left;
-        /*align-content:flex-start;*/
-        /*border-bottom-left-radius: 3px solid var(--color-soft-blue);*/
-        /*background-color: var(--color-soft-blue);*/
-        border-bottom: 3px solid var(--color-soft-blue);
+        align-content:flex-start;
     }
 
+
+
     /************************************************** INLINE BLOCKS *************************************/
-    .modal-three-thirty-block, .modal-seventy-thirty-block, .modal-sixty-forty-block,
-    .modal-forty-sixty-block, .modal-two-fifty-block, .modal-three-radio-block {
+    .modal-three-thirty-block, .modal-seventy-thirty-block, .modal-name-label-value-block, .modal-sixty-forty-block,
+    .modal-forty-sixty-block, .modal-two-fifty-block, .modal-three-radio-block, .modal-eighty-twenty-block  {
         width: 100%;
         text-align: left;
         padding:.8em 0;
@@ -225,6 +347,16 @@ and (min-width:768px) {
         grid-template-columns: 70% 30%;
     }
 
+    .modal-eighty-twenty-block {
+        display: inline-grid;
+        grid-template-columns: 80% 20%;
+    }
+
+    .modal-twenty-eighty-block {
+        display: inline-grid;
+        grid-template-columns: 20% 80%;
+    }
+
     .modal-two-fifty-block {
         display: inline-grid;
         grid-template-columns: 50% 50%;
@@ -236,14 +368,30 @@ and (min-width:768px) {
     }
 
     /********************************************* FORM LABELS AND VALUES *************************************/
-    .modal-first-col-label, .modal-second-col-label, .modal-third-col-label,
-    .modal-first-col-value, .modal-second-col-value, .modal-third-col-value {
+    .modal-first-col-label, .modal-second-col-label, .modal-third-col-label, .modal-forth-col-label,
+    .modal-first-col-value, .modal-second-col-value, .modal-third-col-value, .modal-forth-col-value,
+    .modal-both-first-col-label, .modal-both-second-col-label, .modal-both-third-col-label,
+    .modal-both-first-col-value, .modal-both-second-col-value, .modal-both-third-col-value {
         display: grid;
         width: 100%;
         color: var(--color-dark-blue);
         font-family: var(--family-forms);
         text-align: left;
-        font-size: var(--form-label);
+        font-size: var(--form-wizard-label-value);
+    }
+
+
+
+    .modal-both-first-col-label,  .modal-both-first-col-value {
+        grid-column:1;
+    }
+
+    .modal-both-second-col-label,  .modal-both-second-col-value {
+        grid-column:2;
+    }
+
+    .modal-both-third-col-label,  .modal-both-third-col-value {
+        grid-column:3;
     }
 
     .modal-first-col-label, .modal-first-col-value {
@@ -258,11 +406,15 @@ and (min-width:768px) {
         grid-column: 3;
     }
 
-    .modal-first-col-label, .modal-second-col-label, .modal-third-col-label {
+    .modal-forth-col-label, .modal-forth-col-value {
+        grid-column: 4;
+    }
+
+    .modal-first-col-label, .modal-second-col-label, .modal-third-col-label, .modal-forth-col-label {
         align-content: center;
     }
 
-    .modal-first-col-value, .modal-second-col-value, .modal-third-col-value {
+    .modal-first-col-value, .modal-second-col-value, .modal-third-col-value, .modal-forth-col-value {
         padding:.1em 0;
     }
 
@@ -272,10 +424,10 @@ and (min-width:768px) {
         position:absolute;
         bottom:0;
         width: 100%;
-        height:60px;
+        height:50px;
         justify-content: flex-end;
         align-content: flex-end;
-        grid-template-columns: repeat(2, 120px);
+        grid-template-columns: repeat(2, 100px);
         grid-column-gap: 2px;
     }
 
@@ -284,10 +436,10 @@ and (min-width:768px) {
         position:absolute;
         bottom:0;
         width: 100%;
-        height:60px;
+        height:50px;
         justify-content: flex-end;
         align-content: flex-end;
-        grid-template-columns: repeat(3, 120px);
+        grid-template-columns: repeat(3, 100px);
         grid-column-gap: 2px;
     }
 
@@ -299,8 +451,8 @@ and (min-width:768px) {
         background-color: var(--color-dark-blue);
         border-radius: 1em;
         text-align: center;
-        font-size: var(--modal-buttons);
-        width: 120px;
+        font-size: var(--big-buttons);
+        width: 100px;
         height: 40px;
         cursor: pointer;
     }
@@ -317,12 +469,47 @@ and (min-width:768px) {
         grid-column: 3;
     }
 
+
+
 }
 
 /*******************************************************************************************************************
    GLOBAL
 *******************************************************************************************************************/
 @media only screen {
+
+    .data-block-wishes {
+        width: 90%;
+        margin: 0 5% 1em 5%;
+        background-color: white;
+        display: grid;
+        float: left;
+        align-content:flex-start;
+        color: var(--color-dark-blue);
+        position: relative;
+    }
+
+    .data-block-rep {
+        width: 90%;
+        margin: 0 5% 1em 5%;
+        background-color: white;
+        display: grid;
+        float: left;
+        align-content:flex-start;
+        color: var(--color-dark-blue);
+        position: relative;
+    }
+
+    .data-block-plan  {
+        width: 90%;
+        margin: 0 5% 1em 5%;
+        background-color: white;
+        display: grid;
+        float: left;
+        align-content:flex-start;
+        color: var(--color-dark-blue);
+        position: relative;
+    }
 
     /************************************************** FULL AND INLINE BLOCKS *************************************/
     .full-margined-block {
@@ -331,15 +518,7 @@ and (min-width:768px) {
         width: 95%;
         margin-left: 2.5%;
         margin-right: 2.5%;
-    }
-
-    .full-margin-padded-block {
-        display: block;
-        float: left;
-        width: 95%;
-        margin-left: 2.5%;
-        margin-right: 2.5%;
-        padding-top:2em;
+        /*background-color: #dfe3e6;*/
     }
 
     .full-list-block {
@@ -348,34 +527,20 @@ and (min-width:768px) {
         padding-right: 2em;
     }
 
-    .forty-sixty-block  {
-        width: 100%;
-        text-align: left;
-        /*padding:.8em 0;*/
-        display: inline-grid;
-        grid-template-columns: 40% 60%;
-    }
-
-
     /************************************************** ERROR *******************************************************/
     .error-message-block {
         display: block;
         width: 100%;
         float: left;
         text-align: left;
-        padding:1em 0 0 1em;
-    }
-
-    .error-message-inline {
-        display: inline-block;
-        text-align: right;
     }
 
     .error-message {
         font-weight: 800;
         color: var(--color-red);
+        /*line-height: 300%;*/
         font-family: var(--family-forms);
-        font-size: 0.9em;
+        font-size: var(--p-laptop);
     }
 
     .print-modal-make-wish-list, .print-modal-choose-your-rep, .print-modal-write-advance-directive,

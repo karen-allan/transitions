@@ -6,108 +6,204 @@ FOR BOTH TABLETS AND IPADS AND UP
 and (min-width:360px)
 and (max-width:767px) {
 
+    .form-inner-block-plan {
+        display:block;
+        float:left;
+        border-left:thick solid var(--color-dark-blue);
+        border-right:thick solid var(--color-dark-blue);
+        border-bottom:thick solid var(--color-dark-blue);
+    }
+
+    .data-block-plan {
+        width: 90%;
+        margin: 0 5% 1em 5%;
+    }
+
+    .form-plan-main-title, .form-plan-sub-title, .form-plan-big-copy, form-plan-small-copy, .form-plan-list-item,
+    .form-plan-list-item, .form-plan-text-area {
+        display: block;
+        float: left;
+        width: 100%;
+        font-family: var(--family-forms);
+        color: var(--color-dark-blue);
+        text-align: left;
+    }
+
+    .form-plan-main-title {
+        font-size: var(--form-plan-main-title);
+        padding-top: .5em;
+        margin-top: .5em;
+    }
+
+    .form-plan-sub-title {
+        font-size: var(--form-plan-sub-title);
+        padding: .5em 0;
+        line-height: 115%;
+    }
+
+    .form-plan-big-copy p {
+        padding-top:1em;
+        font-size: var(--form-plan-big-copy);
+        line-height: 150%;
+    }
+
+    .form-plan-small-copy p {
+        padding-top:1em;
+        font-size: var(--form-plan-small-copy);
+    }
+
+    .form-plan-list-item {
+        margin: 0;
+        padding: .4em;
+        font-size: var(--form-plan-list);
+        line-height: 105%;
+    }
+
+    .form-plan-text-area {
+        font-size: var(--form-plan-small-copy);
+        line-height: 140%;
+        width:100%;
+    }
+
+    .form-plan-radio-conditions-item  {
+        padding: .5em 0;
+        font-size: var(--form-plan-choice);
+        /*margin-bottom: .7em;*/
+    }
+
+    .form-plan-radio-sedation-item {
+        padding: .5em 0;
+        font-size: var(--form-plan-choice);
+        border:thin dotted var(--color-soft-blue);
+    }
+
+    .form-plan-radio-legal-item {
+        padding: .5em 0;
+        font-size: var(--form-plan-small-list);
+    }
+
+    .form-plan-conditions-checkbox {
+        padding: .5em 0;
+        font-size: var(--form-plan-choice);
+    }
+
+}
+/*******************************************************************************************************************
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width: 768px) {
+
+    mat-dialog-container#advance-directive-modal {
+        height: 730px;
+        width:768px;
+    }
+
+    .modal-inner-block-plan {
+        height: 475px;
+        width: 100%;
+        background-color: white;
+    }
+
+    .data-block-plan {
+        height:445px;
+        width: 90%;
+        margin: 0 5%;
+        background-color: white;
+    }
+
+    .modal-plan-main-title, .modal-plan-sub-title, .modal-plan-big-copy, modal-plan-small-copy, .modal-plan-big-list-item,
+    .modal-plan-small-list-item, .modal-plan-text-area {
+        display: block;
+        float: left;
+        width: 100%;
+        font-family: var(--family-copy);
+        color: var(--color-dark-blue);
+        text-align: left;
+    }
+
     .modal-plan-main-title {
-        font-size: var(--plan-form-title);
+        font-size: var(--modal-plan-main-title);
         padding-top: .5em;
         margin-top: .5em;
     }
 
     .modal-plan-sub-title {
-        font-size: var(--plan-form-sub-title);
+        font-size: var(--modal-plan-sub-title);
         padding: .5em 0;
-        line-height: 115%;
     }
 
-    .modal-plan-copy p {
+    .modal-plan-big-copy p {
         padding-top:1em;
-        font-size: var(--plan-form-copy);
-        line-height: 150%;
+        font-size: var(--modal-plan-big-copy);
+        line-height: 170%;
     }
 
-    .modal-plan-list-item {
+    .modal-plan-small-copy p {
+        padding-top:1em;
+        font-size: var(--modal-plan-small-copy);
+    }
+
+    .modal-plan-big-list-item {
         margin: 0;
         padding: .4em;
-        font-size: var(--plan-form-list);
+        font-size: var(--modal-plan-big-list);
+        line-height: 105%;
+    }
+
+    .modal-plan-small-list-item {
+        margin: 0;
+        padding: .4em;
+        font-size: var(--modal-plan-small-list);
         line-height: 105%;
     }
 
     .modal-plan-text-area {
-        font-size: var(--plan-form-copy);
+        font-size: var(--modal-plan-big-copy);
         line-height: 140%;
+        overflow-y: scroll;
+        scrollbar-color: red orange;
+        scrollbar-width: thin;
     }
 
-    .modal-plan-radio-conditions-item  {
-        padding: .5em 0;
-        font-size: var(--plan-form-radio);
-        /*margin-bottom: .7em;*/
-    }
-
-    .modal-plan-radio-sedation-item {
-        padding: .5em 0;
-        font-size: var(--plan-form-radio);
+    .modal-plan-choice-item-sec1 {
+        font-family: var(--family-forms);
+        color: var(--color-dark-blue);
+        padding: .25em 0;
         border:thin dotted var(--color-soft-blue);
+        font-size: var(--form-plan-choice);
     }
 
-    .modal-plan-radio-legal-item {
-        padding: .5em 0;
-        font-size: var(--plan-form-radio);
+    .modal-plan-choice-item-sec2 {
+        font-family: var(--family-forms);
+        color: var(--color-dark-blue);
+        padding: .4em 0;
+        border:thin dotted var(--color-soft-blue);
+        font-size: var(--form-plan-choice);
     }
 
-    .modal-plan-conditions-checkbox {
-        padding: .5em 0;
-        font-size: var(--plan-form-checkbox);
+    .modal-plan-choice-item-sec3 {
+        font-family: var(--family-forms);
+        color: var(--color-dark-blue);
+        padding: .6em 0;
+        border:thin dotted var(--color-soft-blue);
+        font-size: var(--form-plan-choice);
     }
 
-}
-/*******************************************************************************************************************
-
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 768px)
-and (max-width:1023px) {
-
-    mat-dialog-container#advance-directive-modal {
-        height: 780px;
-        width:768px;
+    .modal-plan-maid {
+        font-family: var(--family-forms);
+        color: var(--color-dark-blue);
+        padding: .8em 0;
+        border:thin dotted var(--color-soft-blue);
+        font-size: var(--form-plan-choice);
     }
 
-    .modal-inner-block-plan {
-        height: 500px;
-        width: 100%;
-        background-color: white;
-    }
-
-    .modal-data-block-plan {
-        height:480px;
-        width: 90%;
-        margin: 0 5%;
-        background-color: white;
-    }
-
-}
-
-/*******************************************************************************************************************
-
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 1024px) {
-
-    mat-dialog-container#advance-directive-modal {
-        height: 800px;
-        width:1024px;
-    }
-
-    .modal-inner-block-plan {
-        height: 485px;
-        width: 100%;
-        background-color: white;
-    }
-
-    .modal-data-block-plan {
-        height:465px;
-        width: 90%;
-        margin: 0 5%;
-        background-color: white;
+    .modal-plan-directions {
+        font-family: var(--family-forms);
+        color: var(--color-dark-blue);
+        padding: .8em 0;
+        border:thin dotted var(--color-soft-blue);
+        font-size: var(--form-plan-choice);
     }
 
 }
@@ -117,52 +213,14 @@ and (min-width: 1024px) {
 *******************************************************************************************************************/
 @media only screen {
 
-/*
-    .modal-plan-main-title
-    .modal-plan-sub-title
-    .modal-plan-conditions-checkbox
-    .modal-plan-radio-legal-item
-    .modal-plan-radio-conditions-item,
-    .modal-plan-radio-sedation-item
-    .modal-plan-list-item
-     .modal-plan-copy
-    .modal-plan-text-area
- */
-    .modal-plan-conditions-checkbox, .modal-plan-radio-legal-item, .modal-plan-radio-conditions-item, .modal-radio-sedation-plan-inline,
-    .modal-plan-list-item, .modal-plan-copy, .modal-plan-text-area {
-        width: 100%;
-        font-family: var(--family-forms);
+    .data-block-plan {
+        background-color: white;
+        display: block;
+        float: left;
         color: var(--color-dark-blue);
-        text-align: left;
+        position: relative;
     }
 
-    .modal-plan-conditions-checkbox {
-        border: 1px dashed var(--color-dark-blue);
-    }
 
-    .modal-plan-radio-legal-item {
-        border: 1px dashed var(--color-dark-blue);
-    }
-
-    .modal-plan-radio-conditions-item, .modal-radio-sedation-plan-inline {
-        border: 1px dashed var(--color-dark-blue);
-    }
-
-    .modal-plan-text-area {
-        display: block;
-        float: left;
-        line-height: 105%;
-        overflow-y: scroll;
-        scrollbar-color: red orange;
-        scrollbar-width: thin;
-    }
-
-    .modal-plan-title h2,
-    .modal-plan-title h3,
-    .modal-plan-title h4 {
-        display: block;
-        float: left;
-        margin: 0;
-    }
 
 }

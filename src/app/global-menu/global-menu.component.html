@@ -4,9 +4,12 @@
         <!-- LOGO, NAME, SLOGANS ROW 1  -->
         <div class="desktop-content-block">
             <div class="desktop-content">
-                <a routerLink="/menuHome">
-                    <div class="header-logo logo"></div>
-                </a>
+                <div class="header-logo">
+                    <a routerLink="/menuHome">
+                        <img src="assets/images/menu/transitionsInEnergyLogo.gif" title="end of life help"
+                        alt="end of life help">
+                    </a>
+                </div>
 
                 <div class="header-name">
                     <p>TRANSITIONS</p>
@@ -15,18 +18,21 @@
 
                 <div class="header-slogans">
                     <p>END OF LIFE PLANNING</p>
-                    <div class="slogans-line">&nbsp;</div>
+                    <div class="slogans-line"></div>
                     <span>PATIENT & CAREGIVER SUPPORT</span>
                 </div>
 
                 <div class="header-socials">
-                   <!-- <a href="https://practitioner.edenmethod.com/listing/karen-gail-allan/" target="_blank">
-                        <img src="assets/images/menu/edenLink.png" title="EEM" alt="EEM">
-                    </a>
--->
-                    <a href="mailto:karen@transitionsInEnergy.com"  target="_blank">
-                        <img src="assets/images/menu/emailLink.png" title="email" alt="email">
-                    </a>
+                    <div class="social-email">
+                        <a href="mailto:karen@transitionsInEnergy.com"  target="_blank">
+                            <img src="assets/images/menu/emailLinkLaptop.gif" title="email" alt="email">
+                        </a>
+                    </div>
+                    <div class="social-phone">
+                        <a routerLink="/aboutPractitioner">
+                            <img src="assets/images/menu/phoneLinkLaptop.gif" title="phone" alt="phone">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,7 +46,7 @@
                             <span><b>{{ menuItem.title }}&#x25BC;&nbsp;</b></span>
                         </ng-container>
                         <ng-container *ngIf="menuItem.id != menuItemId">
-                            <span>{{ menuItem.title }}&#x25BC;&nbsp;</span>
+                              <span>{{ menuItem.title }}&#x25BC;&nbsp;</span>
                         </ng-container>
                         <div class="dropdown-content">
                             <ng-container *ngFor="let subMenuItem of menuItem.submenuItems">
@@ -72,7 +78,8 @@
                 </a>
 
                 <div class="header-name">
-                    <p>Transitions</p> <span>in energy</span>
+                    <p>TRANSITIONS</p>
+                    <span>in energy</span>
                 </div>
 
                 <div class="header-slogans">
@@ -86,15 +93,14 @@
 
             <div class="mobile-header-bottom-row ">
                 <div class="mobile-menu-items">
-                   <!-- <div class="mobile-eden-icon">
-                        <a href="https://practitioner.edenmethod.com/listing/karen-gail-allan/" target="_blank">
-                            <img src="assets/images/menu/edenLink.png" title="EEM" alt="EEM">
-                        </a>
-                    </div>-->
-
                     <div class="mobile-email-icon">
                         <a href="mailto:karen@transitionsInEnergy.com"  target="_blank">
-                            <img src="assets/images/menu/emailLink.png" title="email" alt="email">
+                            <img src="assets/images/menu/emailLinkMobile.gif" title="email" alt="email">
+                        </a>
+                    </div>
+                    <div class="mobile-phone-icon">
+                        <a routerLink="/aboutPractitioner">
+                            <img src="assets/images/menu/phoneLinkMobile.gif" title="phone" alt="phone">
                         </a>
                     </div>
 

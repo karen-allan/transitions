@@ -11,9 +11,13 @@
     /**********************************************************************************************
      FONT COLORS in use
     ***********************************************************************************************/
-    --overlay-color: rgba(244, 239, 251, 0.95);
-    /* global colors */
-    --color-black: #000;
+    /*--overlay-color: rgba(244, 239, 251, 0.95);*/
+    --overlay-color: #0d3b63, #3d6383, #6389ab, #ffffff;
+
+    --header-quotes-color: #ffffff, #666161, #878787, #666161, #ffffff;
+
+    /* global colors  */
+
     --color-red: #FF0000;
     --color-purple: #8773aa;
 
@@ -21,82 +25,67 @@
     --color-off-white: #f7efef;
     --color-white: #ffffff;
     --color-grey: #666161;
-    --color-dark-purple: #4a333b;
-    --color-hyperlink-two: #5a3714;
-
+    --color-dark-purple: #4f6af1;
     --color-dark-blue: #5a7d9f;
     --color-titles: #298282;
     --color-green: #298282;
-
-    /*#5A9F9F;*/
     --color-hyperlink: #3c7070;
-
     --color-background-quotes: #c088a4;
     --color-sel-form-menu-item: #9162e4;
-
     --color-dark-green: #264c4c;
-
-    --color-list-green: #4c7676;
     --color-copy-blue: #738aa0;
-    --color-list-light: #ffffff;
-
-    --color-text-background: #264c4c;
-
-    --color-brown: #5a3714;
-
+    --color-black: #201d1d;
+    --color-text-background: #513a12;
 
     /**********************************************************************************************
      CONTENT WIDTHS (leaving space on either side for any content under 900
     ***********************************************************************************************/
-    --media-less-than-ipad-width: 90%;
-    --media-more-than-ipad-width: 100%;
-    --media-unaffected-by-ipad-width: 100%;
+    --media-less-than-content-width: 90%;
+    --media-more-than-content-width: 100%;
+    --media-unaffected-by-content-width: 100%;
 
-
-    --dialog-header-mobile-height: 100px;
-    --dialog-header-laptop-height: 120px;
+    --mobile-header-height: 100px;
+    --laptop-header-height: 120px;
 
     --print-width: 625px;
-    --menu-width: 840px;
-    --ipad-width: 1024px;
+
+    --top-menu-height: 120px;
+
+    --min-laptop-width: 768px;
+    --menu-width: 768px;
+    --list-width: 800px;
+    --content-width: 900px;
+    --ipad-width:1024px;
+    --tablet-width:768px;
+    --phone-width:360px;
+    --desktop-width:1920px;
 
     /**********************************************************************************************
          HEADER FONTS
     ***********************************************************************************************/
     --family-menu-copy: 'Montserrat', 'sans-serif';
-    /*--family-menu-copy: 'Montserrat';*/
     --family-menu-name: 'Tw Cen MT';
+    --family-header-name: 'Montserrat';
+    --family-slogan-name: 'Corbel';
 
-    /* mobile menu white on blue */
+    /* desktop menu */
+    --header-name-p-laptop: 2.4em;
+    --header-name-span-laptop: 1.5em;
+    --header-slogan-laptop:  1.0em;
+
     --header-name-p-mobile: 1.8em;
     --header-name-span-mobile: 1.0em;
-    --header-slogan-mobile: .7em;
+    --header-slogan-mobile: .6em;
 
     --menu-item-mobile : .8em;
     --menu-sub-item-mobile: .7em;
 
-    /* desktop menu */
-    --header-name-p-tablet: 2.2em;
-    --header-name-span-tablet: 1.3em;
-
-    --header-name-p-ipad: 2.4em;
-    --header-name-span-ipad: 1.5em;
-
-    --header-name-p-laptop: 2.7em;
-    --header-name-span-laptop: 1.8em;
-
-    --header-slogan-tablet: 1.1em;
-    --header-slogan-ipad:  1.4em;
-    --header-slogan-laptop:  1.5em;
-
-    --menu-items-tablet: 1.0em;
-    --sub-menu-items-tablet: .7em;
-
-    --menu-items-ipad-: 1.1em;
-    --sub-menu-items-ipad: .8em;
-
     --menu-items-laptop-: 1.2em;
     --sub-menu-items-laptop: .9em;
+
+    --menu-items-dropdown: 1.0em;
+
+
 
     /**********************************************************************************************
          COPY FONTS and DETAIL QUOTES
@@ -104,92 +93,59 @@
     --family-copy: 'Calibri';
     --family-quotes: 'Goudy Old Style';
 
+    --p-laptop: 1.2em;
+    --span-laptop: 0.9em;
+
     --p-mobile: 1.1em;
     --span-mobile: .9em;
 
-    --p-tablet: 1.2em;
-    --span-tablet: 0.8em;
+    --quote-laptop: 1.2em;
+    --author-laptop: 0.9em;
 
-    --p-laptop: 1.3em;
-    --span-laptop: 0.9em;
+    --quote-tablet: 1.1em;
+    --author-tablet: 0.8em;
 
-    --quote-mobile: 1.3em;
-    --author-mobile: 0.9em;
-
-    --quote-tablet: 1.5em;
-    --author-tablet: 1.1em;
-
-    --quote-laptop: 1.7em;
-    --author-laptop: 1.3em;
-
-
-/**********************************************************************************************
-        GRID TEXTS are for 2 column grids where we want the text smaller, not used by 1 col mobiles
-        or full width text
-***********************************************************************************************/
-
-    --h3-tablet-facts-grid: 2.0em;
-    --p-tablet-facts-grid: .8em;
-
-    --h3-tablet-grid: 2.0em;
-    --p-tablet-grid: 1em;
-
-    --h3-laptop-grid: 1.8em;
-    --p-laptop-grid: 1.1em;
-
+    --quote-mobile: 1.0em;
+    --author-mobile: 0.7em;
 
     /**********************************************************************************************
              QUOTE FONTS FOR HEADER PAGES
     ***********************************************************************************************/
     --family-header-quotes: 'Eras Light ITC';
 
-    --header-quote-mobile-port: 1.1em;
-    --header-author-mobile-port: .7em;
-
-    --header-quote-mobile-land: 1.6em;
-    --header-author-mobile-land: 1.2em;
+    --header-quote-mobile: 1.1em;
+    --header-author-mobile: .7em;
 
     --header-quote-tablet-: 1.4em;
-    --header-author-tablet-: 1em;
+    --header-author-tablet: 1em;
 
     --header-quote-laptop: 1.6em;
     --header-author-laptop: 1.2em;
 
+
+
     /**********************************************************************************************
                  ALL HEADINGS -
     ***********************************************************************************************/
-    --family-title: 'Century Gothic';
+    --family-title: 'corbel';
 
     --h1-mobile: 1.6em;
-    --h2-mobile: 1.4em;
+    --h2-mobile: 1.2em;
     --h3-mobile: 1.2em;
-    --h4-mobile: 1.0em;
-
-    --h1-tablet: 1.8em;
-    --h2-tablet: 1.5em;
-    --h3-tablet: 1.4em;
-    --h4-tablet: 1.3em;
+    --h4-mobile: 1.1em;
 
     --h1-laptop: 2.0em;
-    --h2-laptop: 1.7em;
-    --h3-laptop: 1.6em;
-    --h4-laptop: 1.5em;
+    --h2-laptop: 1.3em;
+    --h3-laptop: 1.3em;
+    --h4-laptop: 1.2em;
 
     /**************************************** FOR FORMS****************************************/
     --family-forms: 'Sans Serif';
 
     /* FOR SCREEN FORMS */
     /* Consultations */
-    /* laptop and big tablets */
 
     /* Consultations Menu*/
-    --form-mobile-prompt-title: 1.6em;
-    --form-mobile-menu-title: 0.9em;
-    --form-mobile-question:  1.4em;
-    --form-mobile-answer:  0.9em;
-    --form-mobile-copy:  0.9em;
-    --form-mobile-checkbox:0.8em;
-
     --form-laptop-prompt-title: 2em;
     --form-laptop-menu-title: 1.3em;
     --form-laptop-question: 1.8em;
@@ -197,39 +153,76 @@
     --form-laptop-label-value: 1.3em;
     --form-laptop-checkbox:1.3em;
 
+    --form-mobile-prompt-title: 1.6em;
+    --form-mobile-menu-title: 0.9em;
+    --form-mobile-question:  1.4em;
+    --form-mobile-answer:  0.9em;
+    --form-mobile-label-value:  0.9em;
+    --form-mobile-checkbox:0.8em;
+
+
     /* FOR SCREEN FORMS */
     /* Wizards */
 
     /* REPS */
-    --rep-form-main-title: 1.4em;
-    --rep-form-sub-title: 1.2em;
-    --rep-form-list: 1.1em;
-    --rep-form-radio: 1.0em;
-    --rep-form-copy:1.2em;
+    --form-rep-main-title: 1.4em;
+    --form-rep-sub-title: 1.2em;
+    --form-rep-big-list: 1.1em;
+    --form-rep-small-list: 0.9em;
+    --form-rep-radio: 1.0em;
+    --form-rep-copy:1.2em;
+
+    --modal-rep-main-title: 1.4em;
+    --modal-rep-sub-title: 1.0em;
+    --modal-rep-big-list: 1.2em;
+    --modal-rep-small-list: 0.9em;
+    --modal-rep-radio: 0.8em;
+    --modal-rep-copy:1.2em;
+
 
     /* WISHES */
-    --wishes-form-main-title:1.4em;
-    --wishes-form-small-list: 1.1em;
-    --wishes-form-big-list: 1.3em;
-    --wishes-form-prompt-value:1.5em;
-    --wishes-form-question-number:1.6em;
-    --wishes-form-question:1.5em;
-    --wishes-form-big-answers:1.4em;
-    --wishes-form-small-answers:1.1em;
-    --wishes-form-copy: 1.2em;
+    --modal-wish-main-title:1.4em;
+    --modal-wish-write-list: 1.3em;
+    --modal-wish-name-prompt:1.5em;
+    --modal-wish-name-value:1.4em;
+    --modal-wish-question-prompt:1.5em;
+    --modal-wish-question:1.4em;
+    --modal-wish-answers:1.3em;
+    --modal-wish-copy: 1.3em;
+
+    --form-wish-main-title:1.4em;
+    --form-wish-write-list: 1.1em;
+    --form-wish-name-prompt:1.3em;
+    --form-wish-name-value:1.2em;
+    --form-wish-question-prompt:1.4em;
+    --form-wish-question:1.3em;
+    --form-wish-answers:1.2em;
+    --form-wish-copy: 1.1em;
 
 
     /* PLANS */
-    --plan-form-title: 1.4em;
-    --plan-form-sub-title: 1.0em;
-    --plan-form-list: 1.2em;
-    --plan-form-checkbox: 1.0em;
-    --plan-form-radio: 0.9em;
-    --plan-form-copy: 1.2em;
+    --modal-plan-main-title: 1.4em;
+    --modal-plan-sub-title: 1.2em;
+    --modal-plan-big-list: 1.3em;
+    --modal-plan-small-list: 0.9em;
+    --modal-plan-checkbox: 1.0em;
+    --modal-plan-radio: 1.0em;
+    --modal-plan-big-copy: 1.2em;
+    --modal-plan-small-copy: 1.0em;
+
+    --form-plan-main-title: 1.2em;
+    --form-plan-sub-title: 1.0em;
+    --form-plan-list: 1.1em;
+    --form-plan-small-list: 0.9em;
+    --form-plan-choice: 0.9em;
+    --form-plan-big-copy: 1.0em;
+    --form-plan-small-copy: 0.9em;
 
     /* GLOBAL WIZ */
-    --form-wizard-label-value: 1.4em;
-    --form-buttons: 1.0em;
+    --form-label: 1.4em;
+
+    --form-buttons: 0.9em;
+    --modal-buttons: 1.1em;
 
     /* FOR PRINT FORMS */
     --form-main-title: 1.7em;
@@ -248,7 +241,6 @@
     *******************************************************************************************************************/
     @media only screen {
         html, body {
-            max-width: var(--ipad-width);
             margin: auto;
         }
 
@@ -261,7 +253,6 @@
             display: block;
             float: left;
             width: 100%;
-            max-width: var(--ipad-width);
             margin: auto;
         }
 
@@ -283,34 +274,12 @@
             background: radial-gradient(circle at 100px 100px, #e8edef, #000);
         }
 
-        /* <div class= "separator-quotes"> </div> */
-        .separator-quotes {
-            display:block;
-            float:left;
-            width:100%;
-            height:10px;
-            background: white;
+        .black {
+            background-color: var(--color-black);
         }
 
-        /* <div class= "separator-block-light"></div> */
-     /*   .separator-block-light {
-            display:block;
-            float:left;
-            width:100%;
-            height:5px;
-            background:white
-        }*/
-
-        .align-center {
-            align-content: center;
-        }
-
-        .align-top {
-            align-content: flex-start;
-        }
-
-        .align-bottom {
-            align-content: flex-end;
+        .white {
+            color: var(--color-white);
         }
 
         .text-align-center {
@@ -329,52 +298,13 @@
             text-align: justify;
         }
 
-        .justify-content-center{
-            justify-content: center;
-        }
-
-        .justify-content-left {
-            justify-content: flex-start;
-        }
-
-        .justify-content-right {
-            justify-content: flex-start;
-        }
-
-        .background-green {
-            background-color:#637e7e;
-                    /*var(--color-dark-green);*/
-        }
-
         .pad-top-none {
             padding-top:0;
         }
 
-        .background-blue {
-            background-color:var(--color-dark-blue);
-        }
-
-        .dark-blue-copy {
-            color:var(--color-dark-blue);
-        }
-
-        .white-copy {
-            color:var(--color-white);
-        }
-
-        .no-margins {
-            margin: 0;
-        }
-
         /* LIST FORMATS */
-        .with-circle {
-            list-style-type: circle;
-            list-style-position: inside;
-        }
-
         .with-disc {
-            list-style-type: disc;
-            list-style-position: inside;
+            list-style: disc inside;
         }
 
         .circle {
@@ -416,7 +346,9 @@
 
         /* BORDERS */
         .with-dark-border {
-            border: thin solid var(--color-soft-blue);
+            width:90%;
+            margin:auto;
+            border-top: thick solid var(--color-soft-blue);
         }
 
         .print-solid-underline {
@@ -435,142 +367,11 @@
             background-color: #dfe3e6;
         }
 
-        /* MARGINS */
-        .no-margin {
-            font-size: 0;
-        }
-
-        .margin-auto {
-            margin: auto;
-        }
-
-        .margin-top, .margin-top-1 {
-            margin-top: 1em;
-        }
-
-        .margin-top-2 {
-            margin-top: 2em;
-        }
-
-        .margin-top-3 {
-            margin-top: 3em;
-        }
-
-        .margin-top-6 {
-            margin-top: 6em;
-        }
-
-        .margin-bottom-1 {
-            margin-bottom: 1em;
-        }
-
-        .margin-bottom-2 {
-            margin-bottom: 2em;
-        }
-
-        .margin-bottom-3 {
-            margin-bottom: 3em;
-        }
-
-        .pad-all-1 {
-            padding: 1em;
-        }
-
-        .pad-all-2 {
-            padding: 2em;
-        }
-
-        .pad-all-3 {
-            padding: 3em;
-        }
-
-        .pad-top-1, .pad-top {
-            padding-top: 1em;
-        }
-
-        .pad-top-2 {
-            padding-top: 2em;
-        }
-
-        .pad-top-3 {
-            padding-top: 3em;
-        }
-
-        .pad-top-6 {
-            padding-top: 6em;
-        }
-
-        .pad-bottom-1, .pad-bottom {
-            padding-bottom: 1em;
-        }
-
-        .pad-bottom-2 {
-            padding-bottom: 2em;
-        }
-
-        .pad-bottom-3 {
-            padding-bottom: 3em;
-        }
-
-        .pad-top-bottom-1 {
-            padding-top: 1em;
-            padding-bottom: 1em;
-        }
-
-        .pad-top-bottom-2 {
-            padding-top: 2em;
-            padding-bottom: 2em;
-        }
-
-        .pad-top-bottom-3 {
-            padding-top: 3em;
-            padding-bottom: 3em;
-        }
-
-        .pad-left {
-            padding-left: 1em;
-        }
-
-        .pad-left-2 {
-            padding-left: 2em;
-        }
-
-        .pad-left-3 {
-            padding-left: 3em;
-        }
-
-        .pad-left-6 {
-            padding-left: 6em;
-        }
-
-        .pad-right {
-            padding-right: 1em;
-        }
-
         .pad-right-2 {
             padding-right: 2em;
         }
 
-        .pad-right-3 {
-            padding-right: 3em;
-        }
 
-        .pad-right-6 {
-            padding-right: 6em;
-        }
-
-
-        .with-faded-background {
-            background-image: linear-gradient(to right, var(--color-soft-blue), var(--color-off-white));
-        }
-
-        .with-underline {
-            border-bottom: dashed thin var(--color-soft-blue);
-        }
-
-        .with-solid-underline {
-            border-bottom: solid thin var(--color-dark-blue);
-        }
 
     }
 }

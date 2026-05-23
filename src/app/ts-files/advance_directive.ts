@@ -2,10 +2,11 @@ export class AdvanceDirective {
 
     constructor(
         public client_name: string,
+        public client_first_name:string,
         public client_address:string,
         public client_city:string,
         public client_postal:string,
-        public global_province: 'B.C.',
+        public global_province: 'British Columbia',
         public client_dob:string,
         public client_phn:string,
         public client_organ_donor:string,
@@ -50,7 +51,7 @@ export class AdvanceDirective {
         public prolong_life4:boolean,
         public follow_acp1:boolean,
         public follow_acp2:boolean,
-        public choose_section:string,
+        public choose_section:string
 
     )
     {}

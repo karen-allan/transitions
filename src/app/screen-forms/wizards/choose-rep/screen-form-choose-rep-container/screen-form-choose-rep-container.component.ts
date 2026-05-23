@@ -22,11 +22,13 @@ export class ScreenFormChooseRepContainerComponent {
 
   constructor() {
 
-    //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
-    this.rep = new RepNine("", "", "", "", "British Columbia",
-        "", "", "", "", "", "", '',
-        "", "", "", "", '', "",
+    //type in new Name - right click and show context actions then Generate Argument stubs
+    this.rep = new RepNine("", "", "", "", "", "British Columbia",
         "", "", "", "", "", "", "",
-        "", "", "", "", "");
+        "", "", "", "", "", "",
+        "", "", "", "", "", "",
+        "", "", "", "", "", "")
+
+
   }
 }

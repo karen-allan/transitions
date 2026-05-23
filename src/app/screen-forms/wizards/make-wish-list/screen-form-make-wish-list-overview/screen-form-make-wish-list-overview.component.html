@@ -1,62 +1,97 @@
-<div class="modal-inner-block-wishes">
-    <div class="modal-data-block-wishes">
-        <ng-container *ngIf="page === 0">
-           <!-- <div class="modal-wishes-main-title">
+<!--    If a laptop (modal) or any over 768px dialog-wish-list component first calls the modal overlay modal-inner-block-wishes
+        If it is mobile, screen-form-make-wish-list-container calls form-data-block-wishes first which is a simple block
+-->
+
+<div class="data-block-wishes">
+    <ng-container *ngIf="page === 0">
+        <div container *ngIf="modal">
+            <div class="modal-wish-main-title">
                 Start your Wish List:
-            </div>-->
-
-            <form #wizardForm="ngForm" novalidate>
-             <!--   <ul class="modal-full-listing-block">
-                    <li class="modal-wish-list-item">understand your needs better.</li>
-                    <li class="modal-wish-list-item">be able to state your wishes clearly.</li>
-                    <li class="modal-wish-list-item">leave nothing to chance.</li>
-                    <li class="modal-wish-list-item">use this as part of your legal advance care plan.</li>
-                    <li class="modal-wish-list-item">know your wishes making life easier for your family.</li>
-                </ul>-->
-
-                <div class="modal-error-message-block">
+                <div class="error-message-inline">
                     <ng-container *ngIf="errorMessage">
-                        <div class="modal-error-message">{{ errorMessage }}</div>
+                        <div class="error-message">&nbsp;&nbsp;&nbsp;{{ errorMessage }}</div>
                     </ng-container>
                     <ng-container *ngIf="!errorMessage">
-                        <div class="modal-error-message">&nbsp;</div>
+                        <div class="error-message">&nbsp;</div>
                     </ng-container>
                 </div>
+            </div>
 
-                <div class="modal-full-margined-block">
-                    <label class="modal-wishes-name-label">Please Enter Your Name:</label>
-                    <input type="text" class="modal-wishes-name-value" [(ngModel)]="wishes.client_name" id="name"
-                           name="name">
-                </div>
+            <div class="full-margined-block">
+                <div class="modal-wish-write-list">&#x25A0;&nbsp;understand your needs better.</div>
+                <div class="modal-wish-write-list">&#x25A0;&nbsp;be able to state your wishes clearly.</div>
+                <div class="modal-wish-write-list">&#x25A0;&nbsp;leave nothing to chance.</div>
+                <div class="modal-wish-write-list">&#x25A0;&nbsp;use this as part of your legal advance care plan.</div>
+                <div class="modal-wish-write-list">&#x25A0;&nbsp;make life easier for your family.</div>
+            </div>
+
+            <div class="full-margin-padded-block">
+                <label class="modal-wish-name-prompt">Please Enter Your Name:</label>
+                <input type="text" class="modal-wish-name-value" [(ngModel)]="wishes.client_name" id="name" name="name">
+            </div>
 
 
-            </form>
 
             <div class="modal-two-buttons-row">
                 <button class="modal-start-button " (click)="checkClientName()">START</button>
                 <button class="modal-cancel-start-button" (click)="checkFormToCancel(modal)">CANCEL</button>
             </div>
-        </ng-container>
+        </div>
 
-        <ng-container *ngIf="page > 0 && page <= 30">
-            <div class="modal-full-margined-block">
-                <div class="modal-wishes-question-prompt">
+        <div container *ngIf="!modal">
+            <div class="form-wish-main-title">
+                Write your Wish List to:
+            </div>
+
+            <div class="full-margined-block">
+                <div class="form-wish-write-list">&#x25A0;&nbsp;understand your needs.</div>
+                <div class="form-wish-write-list">&#x25A0;&nbsp;state your wishes clearly.</div>
+                <div class="form-wish-write-list">&#x25A0;&nbsp;leave nothing to chance.</div>
+                <div class="form-wish-write-list">&#x25A0;&nbsp;add this to your care plan.</div>
+                <div class="form-wish-write-list">&#x25A0;&nbsp;make life easier for your family.</div>
+            </div>
+
+            <div class="full-margin-padded-block">
+                <label class="form-wish-name-prompt">Please Enter Your Name:</label>
+                <input type="text" class="form-wish-name-value" [(ngModel)]="wishes.client_name" id="name2"  name="name">
+            </div>
+
+            <div class="error-message-block">
+                <ng-container *ngIf="errorMessage">
+                    <div class="error-message">{{ errorMessage }}</div>
+                </ng-container>
+                <ng-container *ngIf="!errorMessage">
+                    <div class="error-message">&nbsp;</div>
+                </ng-container>
+            </div>
+
+            <div class="form-two-buttons-row">
+                <button class="form-start-button" (click)="checkClientName()">START</button>
+                <button class="form-cancel-start-button" (click)="checkFormToCancel(modal)">CANCEL</button>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="page > 0 && page <= 30">
+        <div container *ngIf="modal">
+            <div class="full-margined-block">
+                <div class="modal-wish-question-prompt">
                     Question {{ page }} / {{ finalPage }}:
                 </div>
 
-                <div class="modal-wishes-question">
+                <div class="modal-wish-question">
                     {{ selectedQuestion.question_string }}
                 </div>
+            </div>
 
-                <div class="modal-full-margined-block" *ngFor="let response of selectedQuestion.responses">
-                    <div class="modal-wishes-radio-answers">
-                        <input type="radio" [value]="response.response_num" [ngModel]="selectedQuestion.selectedAnswer"
-                               name="question"
-                               (ngModelChange)="onAnswerChanged($event)">
-                        <label>
-                            {{ response.response_string }}
-                        </label>
-                    </div>
+            <div container *ngFor="let response of selectedQuestion.responses">
+                <div class="modal-wish-answers">
+                    <input type="radio" [value]="response.response_num" [ngModel]="selectedQuestion.selectedAnswer"
+                           name="question"
+                           (ngModelChange)="onAnswerChanged($event)">
+                    <label>
+                        {{ response.response_string }}
+                    </label>
                 </div>
             </div>
 
@@ -65,35 +100,88 @@
                 <button class="modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="modal-cancel-button" (click)="checkFormToCancel(modal)">CANCEL</button>
             </div>
-        </ng-container>
+        </div>
 
-        <ng-container *ngIf="page === 31">
-            <div class="modal-wishes-main-title">
-                <ng-container *ngIf="wishes.client_name.length > 0 && wishes.client_name !=''">
-                    Congratulations, {{ wishes.client_name }} you are done!
-                </ng-container>
-                <ng-container *ngIf="wishes.client_name.length == 0 && wishes.client_name ==''">
-                    Congratulations, you are done!
-                </ng-container>
+        <div container *ngIf="!modal">
+            <div class="full-margined-block">
+                <div class="form-wish-question-prompt">
+                    Question {{ page }} / {{ finalPage }}:
+                </div>
+
+                <div class="form-wish-question">
+                    {{ selectedQuestion.question_string }}
+                </div>
             </div>
 
-            <div class="modal-wishes-copy">
+            <div container *ngFor="let response of selectedQuestion.responses">
+                <div class="form-wish-answers">
+                    <input type="radio" [value]="response.response_num" [ngModel]="selectedQuestion.selectedAnswer"
+                           name="question"
+                           (ngModelChange)="onAnswerChanged($event)">
+                    <label>
+                        {{ response.response_string }}
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-three-buttons-row">
+                <button class="form-next-button" (click)="getNextPage()">NEXT</button>
+                <button class="form-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="form-cancel-button" (click)="checkFormToCancel(modal)">CANCEL</button>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="page === 31">
+        <div container *ngIf="modal">
+            <div class="modal-wish-main-title">
+                Congratulations, you are done!
+            </div>
+
+            <div class="modal-wish-copy">
                 <p>
-                    Please press PRINT to get a hard copy or while on the print screen choose to save it as a PDF on your own
-                    computer and print at a later date. Store this document with your other end of life documents.
+                    Please press SAVE to save your answers as a PDF on your own
+                    computer. You can always print at a later date at your convenience.
+                    <br><br>
+                    We do not keep any information on this site so if you don't save it now, all of the information will be gone.
+                    Keep this end of life documents somewhere that your family knows of its' whereabouts.
                     <br><br>
                     This wish list is a great start to let your family know what you truly hope for should you need care in the
                     future or if you need it now. It lets you communicate clearly without pressure from others or awkward
-                    conversations.
+                    conversations. Now get back to living!
                 </p>
             </div>
 
-            <div class="modal-two-buttons-row">
-                <button class="modal-print-button" (click)="checkFormToPrint(modal)">PRINT</button>
+            <div class="modal-three-buttons-row">
+                <button class="modal-print-button" (click)="checkFormToPrint(modal)">SAVE</button>
                 <button class="modal-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
                 <button class="modal-cancel-print-button" (click)="checkFormToCancel(modal)">CANCEL</button>
             </div>
-        </ng-container>
-    </div>
+        </div>
+
+        <div container *ngIf="!modal">
+            <div class="form-wish-main-title">
+                Congratulations, you are done!
+            </div>
+
+            <div class="form-wish-copy">
+                <p>
+                    Please press SAVE to save your answers as a PDF on your own
+                    computer. You can always print at a later date at your convenience.
+                    <br><br>
+                    We do not keep any information on this site so if you don't save it now, all of the information will be gone.
+                    <br><br>
+                    Keep this end of life document somewhere that your family knows of its' whereabouts.
+                    Now get back to living!
+                </p>
+            </div>
+
+            <div class="form-three-buttons-row">
+                <button class="form-print-button" (click)="checkFormToPrint(modal)">SAVE</button>
+                <button class="form-previous-button" (click)="getPreviousPage()">PREVIOUS</button>
+                <button class="form-cancel-print-button" (click)="checkFormToCancel(modal)">CANCEL</button>
+            </div>
+        </div>
+    </ng-container>
 </div>
 

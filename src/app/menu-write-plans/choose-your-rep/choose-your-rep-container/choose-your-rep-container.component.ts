@@ -30,7 +30,7 @@ export class ChooseYourRepContainerComponent implements OnInit {
   constructor(private dataService: DataService) {
 
     //type in new Name ( then space bar and comma, right click and show context actions then Generate Argument stubs
-    this.rep = new RepNine("", "", "", "", "British Columbia",
+    this.rep = new RepNine("", "", "", "", "","British Columbia",
         "", "", "", "", "", "", '',
         "", "", "", "", '', "",
         "", "", "", "", "", "", "",

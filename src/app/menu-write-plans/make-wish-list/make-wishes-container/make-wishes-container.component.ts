@@ -33,7 +33,7 @@ export class MakeWishesContainerComponent implements OnInit {
     QUESTIONS.forEach(question => {
       this.wishesQuestions.push(new Question(question.question_num, question.question_string, question.responses, 0));
     });
-    this.wishes = new WishesWizard(0, '', this.wishesQuestions,'');
+    this.wishes = new WishesWizard(0, '', '', this.wishesQuestions,'');
   }
 
   ngOnInit(): void {

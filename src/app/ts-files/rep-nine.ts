@@ -2,6 +2,7 @@ export class RepNine {
 
     constructor(
         public client_name: string,
+        public client_first_name:string,
         public client_address:string,
         public client_city:string,
         public client_postal:string,
@@ -37,7 +38,7 @@ export class RepNine {
 
         // public witness_lawyer:boolean,
         public witness_type:string,
-        public choose_alternate:string,
+        public choose_alternate:string
     )
     {}
 

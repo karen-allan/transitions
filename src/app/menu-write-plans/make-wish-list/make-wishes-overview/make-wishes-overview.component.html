@@ -1,83 +1,87 @@
-<div class="header-detail-image">
-    <img src="assets/images/headers/takeAction/headerWriteNeedsDown.jpg"  title={{title}}   alt={{title}}>
-</div>
 
-<div class="header-quotes">
-    <div class="header-quote">
-        &#8220;{{quote}}&#8220;
+<div class="header-detail-image-container">
+    <div class="header-detail-image">
+        <img src="assets/images/headers/takeAction/headerWriteNeedsDown.jpg"  title={{title}}   alt={{title}}>
     </div>
-    <div class="header-author">
-        {{author}}
-    </div>
-</div>
 
-<div class="laptopForm"> LAPTOP
-    <div class="wizard-intro-container">
-        <div class="wizard-intro-image">
-            <a (click)="openModal()">
-                <img src="assets/images/details/takeAction/writeNeedsDown/wizardActionWishListIntro.jpg"
-                     title={{title}} alt={{title}}>
-            </a>
+    <div class="header-detail-image-quotes">
+        <div class="header-detail-image-quote">
+            &#8220;{{ quote }}&#8220;
         </div>
-
-        <div class="wizard-intro-text">
-            <a (click)="openModal()">
-                <h3>{{ title.toUpperCase() }}</h3>
-                <p>
-                    Run this <b>{{title}}</b> wizard to help you explore your ideas, concerns, wishes and thoughts about how you would
-                    like to deal with all those end of life issues. The benefit of doing so will provide your family with invaluable input.
-                    <br><br>
-                    <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
-                    as a PDF file. This wizard is only available on an ipad, laptop or desktop.
-                </p>
-            </a>
+        <div class="header-detail-image-author">
+            {{ author }}
         </div>
     </div>
 </div>
 
-<div class="mobileForm"> MOBILE
-    <div class="wizard-intro-container">
-        <div class="wizard-intro-image">
-            <a routerLink="/callScreenFormWishList">
-                <img src="assets/images/details/takeAction/writeNeedsDown/wizardActionWishListIntro.jpg"
-                     title={{title}} alt={{title}}>
-            </a>
-        </div>
+<div class="content-container">
+    <div class="laptopForm">
+        <div class="wizard-intro-container">
+            <div class="wizard-intro-image">
+                <a (click)="openModal()">
+                    <img src="assets/images/details/takeAction/writeNeedsDown/wizardActionWishListIntro.jpg"
+                         title={{title}} alt={{title}}>
+                </a>
+            </div>
 
-        <div class="wizard-intro-text">
-            <a routerLink="/callScreenFormWishList">
-                <div class="content-title">
-                    <h1>{{ title.toUpperCase() }}</h1>
-                </div>
-                <div class="content-copy text-align-justify">
+            <div class="wizard-intro-text">
+                <a (click)="openModal()">
+                    <h1>{{ title }}</h1>
                     <p>
-                        Completing this <b>{{title}}</b> wizard will help you document who you trust to protect, defend and
-                        support you as your Representative. This document is valid as long
-                        as it is signed and witnessed. No need to pay a lawyer!
+                        Run this <b>{{title}}</b> wizard to help you explore your ideas, concerns, wishes and thoughts about how you would
+                        like to deal with all those end of life issues. The benefit of doing so will provide your family with invaluable input.
                         <br><br>
                         <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
-                        as a PDF file. This wizard is only available on an ipad, laptop or desktop.
+                        as a PDF file. Once you close without printing, all that hard work is lost so make sure to save or print your
+                        report.
                     </p>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
+
+    <div class="mobileForm">
+        <div class="wizard-intro-container">
+            <div class="wizard-intro-image">
+                <a routerLink="/callScreenFormWishList">
+                    <img src="assets/images/details/takeAction/writeNeedsDown/wizardActionWishListIntro.jpg"
+                         title={{title}} alt={{title}}>
+                </a>
+            </div>
+
+            <div class="wizard-intro-text">
+                <a routerLink="/callScreenFormWishList">
+                    <div class="content-title">
+                        <h1>{{ title }}</h1>
+                    </div>
+                    <div class="content-copy text-align-justify">
+                        <p>
+                            Run this <b>{{title}}</b> wizard to help you explore your ideas, concerns, wishes and thoughts about how you would
+                            like to deal with all those end of life issues. The benefit of doing so will provide your family with invaluable input.
+                            <br><br>
+                            <b>Please Note:</b> no data is saved, so in order to see your results you must print them or save them
+                            as a PDF file. Once you close without printing, all that hard work is lost so make sure to save or print your
+                            report.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-title">
+        <h2>
+            Need to Learn More First?
+        </h2>
+    </div>
+
+    <div class="content-copy">
+        <p>
+            If you need to understand more about why you should create a wish list for care, check out our
+            <b><a target="new" routerLink={{pathObject.child1_url}} > {{pathObject.parent_name}} > {{pathObject.child1_name}}</a> </b> page.
+            This page will explain why this is so very important to your future well being. It is also a great thing to do for your family.
+            Planning for future events saves stress on everyone, especially you.
+        </p>
+    </div>
+
 </div>
-
-
-
-<!--<div class="content-title">
-    <h3>
-        Need to Learn More First?
-    </h3>
-</div>
-
-<div class="content-copy">
-    <p>
-        If you need to understand more about why you should create a wish list for care, check out our
-        <b><a target="new" routerLink={{pathObject.child1_url}} > {{pathObject.parent_name}} > {{pathObject.child1_name}}</a> </b> page.
-        This page will explain why this is so very important to your future well being. It is also a great thing to do for your family.
-        Planning for future events saves stress on everyone, especially you.
-    </p>
-</div>-->
-

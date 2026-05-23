@@ -101,7 +101,7 @@
     </div>
 
     <div class="print-title">
-        <h3>I revoke any previous Advance Care Directives I have made.</h3>
+        <h2>I revoke any previous Advance Care Directives I have made.</h2>
     </div>
 
     <div class="print-form-text-block">
@@ -118,7 +118,7 @@
         </li>
     </ul>
 
-    <ng-container *ngIf='directive.choose_section === "chooseSection3"'>
+<!--    <ng-container *ngIf='directive.choose_section === "chooseSection3"'>-->
         <div class="print-title">
             <h2>SECTION 3: CONDITIONS FOR HEALTH CARE:</h2>
         </div>
@@ -326,7 +326,7 @@
                 <div class="black-full-line"></div>
             </ng-container>
         </div>
-    </ng-container>
+
 
     <ng-container *ngIf='directive.request_maid === "maidYes"'>
         <div class="print-title">
@@ -350,7 +350,7 @@
         </div>
     </ng-container>
 
-    <ng-container *ngIf='directive.choose_section === "chooseSection4"'>
+    <ng-container *ngIf="directive.prolong_life4">
         <div class="print-title">
             <h2>SECTION 4: HEALTH CARE CONSENT FOR ALL TREATMENTS:</h2>
         </div>
@@ -364,14 +364,12 @@
             </p>
         </div>
 
-        <ng-container *ngIf="directive.prolong_life4">
-            <ul class="print-form-list-block">
-                <li class="print-form-list-item"> 4a. I desire that my life be prolonged, and that I be provided all life-sustaining
-                    treatments
-                    applicable to my medical condition.
-                </li>
-            </ul>
-        </ng-container>
+        <ul class="print-form-list-block">
+            <li class="print-form-list-item"> 4a. I desire that my life be prolonged, and that I be provided all life-sustaining
+                treatments
+                applicable to my medical condition.
+            </li>
+        </ul>
     </ng-container>
 
     <ng-container *ngIf='directive.follow_acp1 || directive.follow_acp2'>
@@ -406,7 +404,7 @@
     </div>
 
     <div class="print-title">
-        <h3>I have signed this Advance Directive in the presence of the witnesses whose names appears below.</h3>
+        <h2>I have signed this Advance Directive in the presence of the witnesses whose names appears below.</h2>
     </div>
 
     <div class="print-title">

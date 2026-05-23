@@ -2,37 +2,17 @@
   GLOBAL  content is now 1024 so there must be space on either side up to it
 *******************************************************************************************************************/
 @media only screen
-and (min-width: 360px)
-and (max-width: 1023px) {
+and (min-width: 360px) {
 
-    .header-detail-image {
-        width: var(--media-unaffected-by-ipad-width);
+
+    /* header home and header detail images are always full screen */
+    .header-home-image-container  {
+        width:var(--media-unaffected-by-content-width);
     }
 
-    .content-images  {
-        width: var(--media-less-than-ipad-width);
-        margin-right:5%;
-        margin-left:5%;
-        background-color: red;
+    .header-detail-image-container {
+        width: var(--media-unaffected-by-content-width);
     }
-}
-
-
-/*******************************************************************************************************************
-  GLOBAL
-*******************************************************************************************************************/
-@media only screen
-and (min-width: 1024px) {
-
-    .header-detail-image {
-        width: var(--media-unaffected-by-ipad-width);
-    }
-
-    .content-images  {
-        width:var(--media-more-than-ipad-width);
-        background-color: blue
-    }
-
 }
 
 /*******************************************************************************************************************
@@ -42,11 +22,23 @@ MOBILES
 *******************************************************************************************************************/
 @media only screen
 and (min-width: 360px)
-and (max-width: 767px)
-and (orientation:portrait) {
+and (max-width: 767px) {
 
-    .content-images {
-        padding:.5em 0;
+    .header-home-image-quote {
+        font-size: var(--header-quote-mobile);
+    }
+
+    .header-home-image-author {
+        font-size: var(--header-author-mobile);
+    }
+
+    /* DETAIL QUOTES */
+    .header-detail-image-quote  {
+        font-size: var(--header-quote-mobile);
+    }
+
+    .header-detail-image-author   {
+        font-size: var(--header-author-mobile);
     }
 
 }
@@ -57,112 +49,128 @@ MAX WIDTH 100% FOR ALL OVER MOBILE
 
 *******************************************************************************************************************/
 @media only screen
-and (min-width:768px) {
+and (min-width:768px)
+and (max-width:1023px) {
 
-    .content-images {
-        padding:1em 0;
+    .header-home-image-quote {
+        font-size: var(--header-quote-tablet-);
     }
 
+    .header-home-image-author {
+        font-size: var(--header-author-tablet);
+    }
+
+    /* DETAIL QUOTES */
+    .header-detail-image-quote {
+        font-size: var(--header-quote-tablet-);
+    }
+
+    .header-detail-image-author {
+        font-size: var(--header-author-tablet);
+    }
+}
+
+/*******************************************************************************************************************
+
+MAX WIDTH 100% FOR ALL OVER MOBILE
+
+*******************************************************************************************************************/
+@media only screen
+and (min-width:1024px) {
+
+    .header-home-image-quote {
+        font-size: var(--header-quote-laptop);
+    }
+
+    .header-home-image-author {
+        font-size: var(--header-author-laptop);
+    }
+
+    /* DETAIL QUOTES */
+    .header-detail-image-quote  {
+        font-size: var(--quote-laptop);
+    }
+
+    .header-detail-image-author   {
+        font-size: var(--author-laptop);
+    }
 }
 
 /* GLOBAL *************************************************************************************************************/
 @media only screen {
 
-    /* 1024 wide */
-    .content-images, .content-images a, .header-detail-image   {
-        display:grid;
-        max-width:var(--ipad-width);
+    /* home image and quotes sit within this container and are always at max width */
+    .header-home-image-container {
+        display:block;
+        max-width: var(--desktop-width);
         margin:auto;
+    }
+
+    .header-home-image  {
+        display:grid;
+        margin:auto;
+        width:100%;
         justify-content: center;
     }
 
-    .content-images img, .header-detail-image img {
+    /* HEADER QUOTES */
+    .header-home-image-quotes {
+        display:block;
+        font-family: var(--family-quotes);
+        font-style: italic;
+        width:100%;
+        padding:2em 0;
+        text-align: center;
+        margin:auto;
+        background: linear-gradient(to right, var(--header-quotes-color));
+    }
+
+    .header-home-image-quote, .header-home-image-author {
+        font-style: italic;
+        font-weight: 400;
+        line-height: 100%;
+        color:var(--color-white);
+    }
+
+    /* all detail header images and quotes sit within this container */
+    .header-detail-image-container {
+        display:block;
+        max-width: var(--desktop-width);
+        background: linear-gradient(to right, var(--header-quotes-color));
+        margin:auto;
+    }
+
+    .header-detail-image   {
+        display:grid;
+        margin:auto;
+        max-width: var(--ipad-width);
+        width:100%;
+        justify-content: center;
+    }
+
+    /* DETAIL QUOTES float left adds about a 1em top margin */
+    .header-detail-image-quotes {
+
+        display:block;
+        font-family: var(--family-quotes);
+        font-style: italic;
+        width:100%;
+        padding:2em 0;
+        text-align: center;
+        margin:auto;
+        background: linear-gradient(to right, var(--header-quotes-color));
+    }
+
+    .header-detail-image-quote, .header-detail-image-author {
+        font-style: italic;
+        font-weight: 400;
+        line-height: 100%;
+        color:var(--color-white);
+    }
+
+    .header-home-image img, .header-detail-image img {
         max-width:100%;
         height:auto;
     }
-
-
-    /* HOME  */
-  /*  .header-home-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 80%),
-        url('src/assets/images/headers/home/headerHome.jpg');
-    }*/
-
-    /* PLAN AHEAD */
-  /*  .header-think-about-needs-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
-        url("src/assets/images/headers/planAhead/headerThinkAboutNeeds.jpg");
-    }*/
-
-  /*  .header-consider-advocates-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
-        url('src/assets/images/headers/planAhead/headerConsiderAdvocates.jpg');
-    }*/
-
-   /* .header-understand-care-plan-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
-        url("src/assets/images/headers/planAhead/headerUnderstandAdvancePlans.jpg");
-    }*/
-
-  /*  .header-know-rights-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 80%),
-        url("src/assets/images/headers/planAhead/headerKnowYourRights.jpg");
-    }*/
-
-    /* TAKE ACTION */
-  /*  .header-write-needs-down-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 80%),
-        url("src/assets/images/headers/takeAction/headerWriteNeedsDown.jpg");
-    }*/
-
- /*   .header-choose-your-rep-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
-        url("src/assets/images/headers/takeAction/headerChooseReprentatives.jpg");
-    }*/
-
- /*   .header-write-adv-care-plan-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
-        url("src/assets/images/headers/takeAction/headerWriteCarePlan.jpg");
-    }*/
-
-  /*  .header-create-checklist-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 30%, rgba(0, 33, 69, .8) 90%),
-        url("src/assets/images/headers/takeAction/headerCreateCheckList.jpg");
-    }*/
-
-    /* ABOUT  */
- /*   .header-about-eol-advocacy-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 100%, rgba(0, 33, 69, .8) 10%),
-        url('src/assets/images/headers/about/headerAboutAdvocacy.jpg');
-    }*/
-
-  /*  .header-about-pract-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 40%, rgba(0, 33, 69, .8) 90%),
-        url('src/assets/images/headers/about/headerAboutPractitioner.jpg');
-    }*/
-
-    /* BOOK CONSULTATION  */
-   /* .header-testimonials-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
-        url('src/assets/images/headers/consultations/headerTestimonials2.jpg');
-    }
-*/
-    /*.header-book-consultation-image {
-        background-size: cover;
-        background-image: linear-gradient(transparent 50%, rgba(0, 33, 69, .8) 90%),
-        url('src/assets/images/headers/consultations/headerBookConsultation.jpg');
-    }*/
 
 }

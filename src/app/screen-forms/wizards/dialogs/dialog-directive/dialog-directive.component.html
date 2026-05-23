@@ -1,3 +1,4 @@
+<!-- this is only called when the screen is laptop or above because this size uses the modal dialog while mobiles do not -->
 <ng-container *ngIf="modal">
     <app-dialog-header
         [directive]="directive"
@@ -5,9 +6,11 @@
         [modal]='modal'>
     </app-dialog-header>
 
-    <app-screen-form-write-directive-overview
-        [event]="event"
-        [directive]="directive"
-        [modal]="modal">
-    </app-screen-form-write-directive-overview>
+    <div class="modal-inner-block-plan">
+        <app-screen-form-write-directive-overview
+            [event]="event"
+            [directive]="directive"
+            [modal]="modal">
+        </app-screen-form-write-directive-overview>
+    </div>
 </ng-container>

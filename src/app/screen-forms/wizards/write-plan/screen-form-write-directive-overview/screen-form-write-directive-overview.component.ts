@@ -25,6 +25,7 @@ export class ScreenFormWriteDirectiveOverviewComponent {
   updatedValue: string = "";
   validDate = false;
 
+  //choseAll: boolean=false;
   constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute) {
   }
 
@@ -32,8 +33,8 @@ export class ScreenFormWriteDirectiveOverviewComponent {
   ngOnInit(): void {
 
     this.page = 0;
-    // this.initializeData();
     this.clearData();
+  //  this.initializeData();
     this.setCurrentDateForHeader();
 
   }
@@ -50,8 +51,8 @@ export class ScreenFormWriteDirectiveOverviewComponent {
   checkClientName(): void {
 
     /* These are the only required fields */
-    if (this.directive.client_name == '') {
-      this.errorMessage = "You must enter your full name here.";
+    if (this.directive.client_name == '' && this.directive.client_name.length==0) {
+      this.errorMessage = "You must enter your full name below.";
       return;
     }
     else {
@@ -59,6 +60,12 @@ export class ScreenFormWriteDirectiveOverviewComponent {
           .subscribe(newName => this.updatedValue = newName);
 
       this.directive.client_name = this.updatedValue;
+      // alert("cappedName is " + this.directive.client_name);
+
+      this.dataService.getFirstName(this.directive.client_name)
+          .subscribe(firstName => this.updatedValue = firstName);
+      this.directive.client_first_name = this.updatedValue;
+       //alert("first Name is " + this.directive.client_first_name);
     }
 
     if (this.directive.client_dob != '' && this.directive.client_dob.length > 0) {
@@ -156,7 +163,7 @@ export class ScreenFormWriteDirectiveOverviewComponent {
   /* ***************************************************************************************************************
   * this is the one where on page 3 where they have chosen either Section 3 or Section 4. If Section 3 they just
   * continue onto next page and since Section 4 is only one page (10) they go directly there. */
-  moveSectionChoiceGoingForward(): void {
+ /* moveSectionChoiceGoingForward(): void {
     if (this.directive.choose_section == "chooseSection3") {
       this.getNextPage();
 
@@ -164,37 +171,51 @@ export class ScreenFormWriteDirectiveOverviewComponent {
       this.skipToPage(10);
     }
 
-  }
+  }*/
+
+   /*setSectionChosen(): void {
+    if (this.directive.choose_section == "chooseSection3") {
+      this.choseAll = false;
+
+    } else if (this.directive.choose_section == "chooseSection4") {
+    //  this.skipToPage(10);
+      this.choseAll = true;
+    }
+
+  //  alert("chosen all is " + this.choseAll)
+     this.getNextPage();
+
+  }*/
 
   /* ***************************************************************************************************************
   * this is the one where on page 10 (and only Section 4 people can be on this page)
   * If they want to go back they go directly back to 3. */
-  moveSection4GoingBackwards(): void {
+ /* moveSection4GoingBackwards(): void {
 
     if (this.directive.choose_section == "chooseSection4") {
       this.skipToPage(3);
     }
 
-  }
+  }*/
 
   /* ***************************************************************************************************************
   * this is the one where on page 9 (and only Section 3 people can be on this page) to move forward they must skip
   * over page 10 which is Section 4s page */
-  moveSection3GoingForwards(): void {
+/*  moveSection3GoingForwards(): void {
     if (this.directive.choose_section == "chooseSection3") {
       this.skipNextPage();
     }
-  }
+  }*/
 
   /* ***************************************************************************************************************
     * this is the one where on page 11 (and both can be on this page) to move backward they must skip
     * over page 10 which is Section 4s page and land back 2 pages back to Section 3 */
-  moveSection3GoingBackwards(): void {
+ /* moveSection3GoingBackwards(): void {
     if (this.directive.choose_section == "chooseSection3") {
       //  alert("skip back 2 pages ")
       this.skipPreviousPage();
     }
-  }
+  }*/
 
   /* *************************************************************************************************************** */
   getNextPage() {
@@ -238,7 +259,8 @@ export class ScreenFormWriteDirectiveOverviewComponent {
     this.directive.client_city = "Surrey";
     //this.directive.client_postal = "";
     this.directive.client_postal = "V0E-1M8";
-    this.directive.client_dob = "";
+   // alert("postal is " + this.directive.client_postal)
+    this.directive.client_dob = "19450911";
         //this.directive.client_phc_number = '',
         this.directive.client_phn = '9030254245';
         this.directive.client_organ_donor = 'organDonorNo';
@@ -269,7 +291,7 @@ export class ScreenFormWriteDirectiveOverviewComponent {
     this.directive.consent_refused_notes = 'I refuse treatments such as cutting off of my limbs. I do not want chemotherapy unless I have' +
         ' a good chance of surviving the disease.'
 
-    this.directive.lift_sedation = 'liftSedationNo';
+    this.directive.lift_sedation = 'liftSedationYes';
 
     this.directive.conditions1a = false;
     this.directive.conditions1b = false;

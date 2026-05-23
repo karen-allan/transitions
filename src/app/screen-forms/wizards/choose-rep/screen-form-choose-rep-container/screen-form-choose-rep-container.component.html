@@ -1,11 +1,18 @@
-<app-global-menu [menuItemId]='menuItemId' [subMenuItemId]='subMenuItemId'></app-global-menu>
 
-<ng-container *ngIf=!modal>
-    <div class="modal-mock-dialog-plan">
-        <app-screen-form-choose-rep-overview  [rep]="rep" [modal]="modal"></app-screen-form-choose-rep-overview>
+<!-- this is only called when the screen is in mobile mode as they do not use the dialog container-->
+<ng-container *ngIf="!modal">
+    <app-dialog-header
+        [rep]='rep'
+        [title]='title'
+        [modal]='modal'>
+    </app-dialog-header>
+
+    <div class="form-inner-block-rep">
+        <app-screen-form-choose-rep-overview
+            [rep]="rep"
+            [modal]="modal">
+        </app-screen-form-choose-rep-overview>
     </div>
 </ng-container>
-
-<app-global-footer></app-global-footer>
 
 <app-print-modal-choose-your-rep [rep]="rep"></app-print-modal-choose-your-rep>
